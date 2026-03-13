@@ -6,6 +6,5 @@ __pycache__/
 _site/
 Gemfile.lock
 
-# 생성 파일 (빌드 시 재생성)
-assets/data/place_data.json
+# 임시 파일
 data/scores/temp/
