@@ -53,7 +53,28 @@
         "시닉월드 통합 입장권에 포함 (무제한 탑승)"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "시닉월드 무료 주차장 이용 (같은 시설). EV 충전 가능",
+      "road_condition": "Cliff Dr - 포장 도로, 양호",
+      "nearby_attractions": "시닉월드(b39fd373) 같은 시설 내. 에코 포인트(ef2de137) 차로 5분. 카툼바 폭포(fdef9085) 도보 10분. 쓰리시스터스(89376ce6) 차로 5분",
+      "peak_times": "시닉월드 전체와 동일 - 주말/방학 혼잡. 5월 비수기 대기 짧음",
+      "public_transport": "시닉월드와 동일"
+    },
+    "experience": {
+      "photo_spots": "64도 경사 하강 중 셀카/영상. 하단 Scenic Walkway 열대우림. 탑승 전후 기념사진",
+      "golden_hour": "시간대 무관 (밸리 하강 체험)",
+      "seasonal_beauty": "5월 가을 - 가을 숲 사이로 내려가는 스릴. 비수기 대기 없이 바로 탑승",
+      "hidden_gems": "Cliffhanger 모드(64도)로 최대 스릴 추천. 1880년대 탄광 역사 연계. Scenic Walkway 열대우림 산책 필수 연계",
+      "sensory_notes": "급경사 하강의 아드레날린, 바퀴 소리, 숲 냄새, 하단에서의 고요함 대비"
+    },
+    "risk_check": {
+      "negative_review_patterns": "시닉월드 통합 입장권만 가능(단독 불가). 탑승 시간 자체 짧음. 가격 대비 만족도 의견 분분",
+      "may_operation": "시닉월드와 동일 - 5월 평일 10am~4pm, 주말 9am~5pm",
+      "safety_issues": "안전 시설 완비. 모든 연령 탑승 가능. 특별한 위험 없음",
+      "weather_impact": "날씨 무관 운행. 악천후 시 운행 중단 가능성 매우 낮음",
+      "quality_trend": "안정적. 세계에서 가장 가파른 케이블 레일웨이 타이틀 유지"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 15,

@@ -51,6 +51,31 @@
         "연간 10만 명 이상 방문"
       ]
     },
+    "logistics": {
+      "parking": "642731d5(코알라 보존 병원)와 동일 장소 — Guulabaa 임시 운영. 무료 주차장, 장애인/버스 주차 가능",
+      "road_condition": "포장도로. Burrawan Forest Drive → Guulabaa Way",
+      "nearby_attractions": [
+        {"name": "The Big Koala (Guulabaa 내)", "distance_km": 0, "drive_min": 0},
+        {"name": "코알라 보존 병원 (같은 시설)", "distance_km": 0, "drive_min": 0},
+        {"name": "Port Macquarie 시내", "distance_km": 12, "drive_min": 15}
+      ],
+      "peak_times": "오전 8:30-9:00 먹이 시간, 오후 3:00 가이드 투어에 집중",
+      "public_transport": "대중교통 접근 어려움. 차량 필수"
+    },
+    "experience": {
+      "photo_spots": ["코알라 먹이 시간 촬영", "야생 코알라 번식 센터 자연 환경"],
+      "golden_hour": "반실내 시설이라 골든아워 무관",
+      "seasonal_beauty": "계절 무관",
+      "hidden_gems": "642731d5와 사실상 같은 기관 — 하나만 방문하면 됨. 아침 8:30에 코알라 먹이 주는 장면 관찰 가능",
+      "sensory_notes": "유칼립투스 냄새, 코알라가 잎을 씹는 소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["원래 위치 폐쇄로 방문 혼란", "입장료 $12.50 부과에 대한 불만"],
+      "may_operation": "2026년 5월 기준 Guulabaa에서 임시 운영 중. 원래 위치 재개발 중 (2026년 크리스마스 재오픈 예정)",
+      "safety_issues": "특별한 안전 이슈 없음",
+      "weather_impact": "우천 시에도 방문 가능",
+      "quality_trend": "시설 재개발로 향후 개선 예정. 임시 운영 중에도 서비스 유지"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

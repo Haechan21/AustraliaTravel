@@ -54,7 +54,33 @@
         "나무 그늘이 많아 쉬기 좋음"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "무료 주차장. 이른 시간 도착 권장 (성수기 혼잡)",
+      "road_condition": "포장도로. 콥스하버에서 남쪽 약 10분",
+      "nearby_attractions": [
+        {"name": "Look At Me Now Headland (룩앳미나우)", "distance_km": 1.5, "drive_min": 3},
+        {"name": "Forest Sky Pier (포레스트 스카이 피어)", "distance_km": 12, "drive_min": 15},
+        {"name": "Muttonbird Island (머튼버드)", "distance_km": 14, "drive_min": 18},
+        {"name": "Boambee Headland (보암비)", "distance_km": 20, "drive_min": 22}
+      ],
+      "peak_times": "이른 아침(캥거루 관찰)과 오후. 주말 다소 혼잡",
+      "public_transport": "콥스하버에서 버스 이용 가능하나 빈도 낮음"
+    },
+    "experience": {
+      "photo_spots": ["풀밭에서 풀 뜯는 동부 회색 캥거루", "Moonee Beach 해안 전망", "Shelly Beach 작은 만 경치"],
+      "golden_hour": "동향 해안이므로 일출 뷰 우수. 일출/일몰 시 캥거루 활동 활발",
+      "seasonal_beauty": "5월 가을 관광객 적어 여유로움. 고래 관찰 시즌 시작. 캥거루 연중 관찰 가능",
+      "hidden_gems": "Look At Me Now Headland 트레일 포함. 반려견 목줄 착용 시 동반 가능 (헤드랜드 트레일 제외)",
+      "sensory_notes": "파도 소리와 새소리. 나무 그늘 아래의 시원한 바람. 캥거루와의 자연스러운 교감"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["특별한 부정 리뷰 없음", "5월 수온 낮아 수영 차가움"],
+      "may_operation": "항상 개방. 정상 운영",
+      "safety_issues": "야생 캥거루 거리 유지 필요. 헤드랜드 트레일에서 반려견 금지",
+      "weather_impact": "우천 시 산책 불편. 그늘 많아 약한 비에도 피할 수 있음",
+      "quality_trend": "4.8/5 최고 평가 유지. 가족 친화적"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 90,

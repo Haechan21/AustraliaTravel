@@ -51,6 +51,31 @@
         "호주 스트리트 아트 어워드 금상 수상 작품"
       ]
     },
+    "logistics": {
+      "parking": "Guulabaa 단지 내 포장 주차장. 만차 시 Guulabaa Way 맞은편 보조 주차장 이용 가능",
+      "road_condition": "포장도로. Oxley Highway → Burrawan Forest Drive → Guulabaa Way (표지판 있음)",
+      "nearby_attractions": [
+        {"name": "코알라 병원 Guulabaa 임시 운영지", "distance_km": 0, "drive_min": 0},
+        {"name": "Port Macquarie 시내", "distance_km": 12, "drive_min": 15},
+        {"name": "Ellenborough Falls", "distance_km": 55, "drive_min": 60}
+      ],
+      "peak_times": "특별한 혼잡 없음. Guulabaa 방문 시 함께 관람",
+      "public_transport": "대중교통 접근 어려움"
+    },
+    "experience": {
+      "photo_spots": ["2.5m 높이 빅 코알라 조각품 앞 기념사진", "31마리 코알라가 조각된 디테일 클로즈업"],
+      "golden_hour": "야외 조각품이라 오전/오후 자연광에서 촬영 최적",
+      "seasonal_beauty": "계절 무관. Hello Koalas 조각 트레일의 88번째 작품",
+      "hidden_gems": "호주 스트리트 아트 어워드 금상 수상작. 31마리 코알라가 정교하게 조각된 디테일",
+      "sensory_notes": "열린 공간의 자연 소리, Guulabaa 단지의 부시랜드 분위기"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["단순 포토스팟으로 오래 머물 필요 없음", "시내에서 다소 떨어진 위치"],
+      "may_operation": "24시간 개방. 5월 정상 관람 가능",
+      "safety_issues": "특별한 안전 이슈 없음",
+      "weather_impact": "야외 조각품이라 우천 시에도 관람 가능하나 사진 촬영에 불리",
+      "quality_trend": "안정적 상태 유지"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

@@ -31,10 +31,11 @@
     }
   },
   "grades": {
-    "S": { "min": 90, "max": 100, "description": "반드시 가야 할 곳" },
-    "A": { "min": 75, "max": 89, "description": "강력 추천" },
-    "B": { "min": 60, "max": 74, "description": "선택적" },
-    "C": { "min": 45, "max": 59, "description": "스킵 권장" },
-    "D": { "min": 0, "max": 44, "description": "비추천" }
+    "method": "percentile",
+    "S": { "percentile": "top 5%", "description": "반드시 가야 할 곳" },
+    "A": { "percentile": "top 5-25%", "description": "강력 추천" },
+    "B": { "percentile": "top 25-60%", "description": "선택적" },
+    "C": { "percentile": "top 60-90%", "description": "스킵 권장" },
+    "D": { "percentile": "bottom 10%", "description": "비추천" }
   }
 }

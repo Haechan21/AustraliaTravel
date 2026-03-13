@@ -52,7 +52,33 @@
         "무료이지만 주차비는 있으므로 동전 준비"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "Carnley Ave 입구: 유료 주차 (반일 $4, 종일 $8). Freyberg St 하단 입구: 무료 주차",
+      "road_condition": "포장도로, 시내에서 접근 용이 (CBD에서 8.5km)",
+      "nearby_attractions": [
+        {"name": "Newcastle Memorial Walk (메모리얼 워크)", "distance_km": 8.5, "drive_min": 15},
+        {"name": "Bogey Hole (보기 홀)", "distance_km": 9, "drive_min": 15},
+        {"name": "Pelican Foreshore Park (펠리칸)", "distance_km": 15, "drive_min": 20},
+        {"name": "Westfield Kotara 쇼핑센터", "distance_km": 1, "drive_min": 3}
+      ],
+      "peak_times": "주말 오전 10시~오후 2시 가장 혼잡. 학교 방학 기간 성수기",
+      "public_transport": "버스 25번 Orchardtown Rd 하차 후 도보 10-15분. Kotara역에서 도보 2.8km"
+    },
+    "experience": {
+      "photo_spots": ["코알라 전시구역에서 근접 촬영", "웜뱃 울타리 앞", "Richley Reserve 메가 어드벤처 놀이터", "유칼립투스 숲 산책로"],
+      "golden_hour": "숲 속이라 직접적 일출/일몰 뷰는 없으나, 오후 늦은 시간 나무 사이 빛이 아름다움",
+      "seasonal_beauty": "5월 가을 선선한 날씨로 산책 최적. 유칼립투스 상록수라 단풍은 없으나 쾌적한 기온",
+      "hidden_gems": "182헥타르 넓은 부지에 9개 산책로. Richley Reserve 메가 어드벤처 놀이터가 최근 신설. 무료 BBQ 시설",
+      "sensory_notes": "새 울음소리가 풍부 (앵무새, 쿠카버라). 유칼립투스 향. 코알라 전시장에서 동물과의 교감"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["동물 울타리가 작다는 의견", "Carnley Ave 주차비 부과", "카페 메뉴 제한적"],
+      "may_operation": "매일 운영. 공원 7AM-7PM, 야생동물 전시 10AM-4:30PM",
+      "safety_issues": "특별한 안전 이슈 없음. 가족 친화적 환경",
+      "weather_impact": "우천 시 야외 산책로 젖으나 야생동물 전시는 지붕 일부 있음. 폭우 시 산책로 진흙",
+      "quality_trend": "꾸준히 높은 평가 (4.6/5). 놀이터 시설 업그레이드로 긍정적 추세"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 120,

@@ -55,7 +55,33 @@
         "Newcastle Memorial Walk와 연계 방문 가능 (도보 거리)"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "King Edward Park 내 York Dr 무료 주차. 여름/주말에 주차 공간 제한적",
+      "road_condition": "포장도로. 주차장에서 가파른 계단으로 내려가야 함",
+      "nearby_attractions": [
+        {"name": "Newcastle Memorial Walk (메모리얼 워크)", "distance_km": 0.5, "drive_min": 2},
+        {"name": "King Edward Park", "distance_km": 0.2, "drive_min": 1},
+        {"name": "Bar Beach", "distance_km": 0.6, "drive_min": 3},
+        {"name": "Blackbutt Reserve (블랙버트)", "distance_km": 9, "drive_min": 15}
+      ],
+      "peak_times": "여름 주말 가장 혼잡. 5월은 비수기라 한적",
+      "public_transport": "뉴캐슬 시내 버스로 접근 가능. King Edward Park 하차 후 도보 5분"
+    },
+    "experience": {
+      "photo_spots": ["절벽 위에서 바라본 암반 수영장과 파도", "수영장 안에서 올려다본 절벽 프레임", "일출 시 바위와 물의 황금빛 반사"],
+      "golden_hour": "동향이므로 일출 뷰 탁월. 아침 골든아워에 바위와 물이 황금빛으로 빛남",
+      "seasonal_beauty": "5월 가을 수온 낮아 수영보다는 경관 감상용. 가을 하늘과 거친 파도의 대비가 드라마틱",
+      "hidden_gems": "1819년 죄수들이 깎아 만든 역사적 해양 수영장. NSW 주 문화유산 등재. 뉴캐슬의 숨은 보석",
+      "sensory_notes": "파도가 암반에 부딪히는 강렬한 소리. 짠 바닷바람. 바위 위 물거품의 촉감"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["가파른 계단 접근 어려움", "파도가 갑자기 들이쳐 위험", "안전 시설 없음", "화장실/탈의실/샤워 없음"],
+      "may_operation": "연중 개방. 2025년 11월 유지보수 완료. 파도 상태에 따라 접근 제한 가능",
+      "safety_issues": "역사적으로 약 10명 사망 사고 발생. 미끄러운 바위, 갑작스러운 파도 위험. 어린이 수영 부적합. 미끄럼방지 신발 필수",
+      "weather_impact": "파도가 높은 날 접근 위험. 우천 시 계단 미끄러움 증가",
+      "quality_trend": "유지보수 후 상태 양호. 자연 시설이라 일관된 품질"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 30,

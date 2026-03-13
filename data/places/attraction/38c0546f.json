@@ -53,7 +53,33 @@
         "어린 아이는 얕은 물 체험으로 충분"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "넓은 무료 주차장 (장애인 주차 3칸 포함). Jessie Rd 진입",
+      "road_condition": "포장도로. Nelson Bay Rd 라운드어바웃에서 Jessie Rd로 우회전. 표지판 잘 되어 있음",
+      "nearby_attractions": [
+        {"name": "Oakfield Ranch Camel Rides (낙타)", "distance_km": 3, "drive_min": 5},
+        {"name": "Stockton Sand Dunes", "distance_km": 3, "drive_min": 5},
+        {"name": "Port Stephens Kangaroo Encounters (캥거루)", "distance_km": 10, "drive_min": 15},
+        {"name": "Toboggan Hill Park (토보건)", "distance_km": 6, "drive_min": 10}
+      ],
+      "peak_times": "학교 방학/주말 가장 혼잡. 오전 개장 직후가 한적",
+      "public_transport": "Anna Bay까지 버스 운행하나 빈도 낮음. 자차 이용 권장"
+    },
+    "experience": {
+      "photo_spots": ["상어/가오리 먹이주기 체험 순간", "라군에서 웻수트 입고 가오리와 함께하는 사진", "입구 대형 상어 조형물 앞"],
+      "golden_hour": "실내 시설이므로 해당 없음. 조명이 잘 설치되어 사진 품질 양호",
+      "seasonal_beauty": "실내 시설이므로 계절 무관. 5월 비수기라 한적하게 체험 가능",
+      "hidden_gems": "디스커버리 패스(웻수트 포함)가 가성비 최고. 90종 이상 740마리 해양 생물. 교육적 가치 높음",
+      "sensory_notes": "상어/가오리 피부의 독특한 촉감. 수족관 물소리. 해양 생물 특유의 냄새"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["기본 입장권만으로는 체험 제한적", "추가 체험 비용 별도", "주차 제한적일 수 있음 (성수기)"],
+      "may_operation": "5월 정상 운영. 실내 시설이므로 날씨 무관",
+      "safety_issues": "안전 관리 철저. 전 시설 휠체어/유모차 접근 가능",
+      "weather_impact": "실내 시설이므로 날씨 영향 없음. 우천 시 대안 활동으로 최적",
+      "quality_trend": "꾸준히 높은 평가 (4.6/5). 다양한 체험 옵션으로 인기"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 120,

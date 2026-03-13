@@ -54,6 +54,32 @@
         "레인자켓과 방한복 준비 필수"
       ]
     },
+    "logistics": {
+      "parking": "Green Mountains 주차장 구비. 주말/방학 시 혼잡. 화장실, 테이블, 전기 BBQ 시설",
+      "road_condition": "Canungra → Green Mountains: 35km, 45분-1시간 소요. 좁고 구불구불한 산악도로 — 일부 편도 구간. 버스/트레일러/캐러밴 부적합",
+      "nearby_attractions": [
+        {"name": "O'Reilly's Rainforest Retreat", "distance_km": 0, "drive_min": 0},
+        {"name": "O'Reilly's Tree Top Walk (무료)", "distance_km": 0, "drive_min": 0},
+        {"name": "Tamborine National Park", "distance_km": 40, "drive_min": 50},
+        {"name": "Burleigh Head National Park", "distance_km": 45, "drive_min": 55}
+      ],
+      "peak_times": "주말과 학교 방학 시 피크닉 에리어 혼잡",
+      "public_transport": "대중교통 없음. 차량 필수. 연료 충분히 채우고 출발"
+    },
+    "experience": {
+      "photo_spots": ["Tree Top Walk에서 우림 캐노피 파노라마", "전망대에서 골드코스트까지 파노라마", "Moran Falls 폭포"],
+      "golden_hour": "오전 안개 걷힌 후 우림에 빛이 비칠 때 환상적",
+      "seasonal_beauty": "5월 가을 하이킹 최적 시기. 여름 비 이후 폭포 수량 풍부. 힌터랜드 기온 낮으니(10-15도) 겹겹이 입기 권장",
+      "hidden_gems": "320km 이상 워킹 트랙. 희귀 조류(크림슨 로젤라, 킹 패럿) 관찰 기회. 비나 버라 롯지 숙박 가능",
+      "sensory_notes": "우림의 습한 공기, 새소리 합창, 폭포 물소리, 이끼 낀 나무의 향기, 안개 속 신비감"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["산악 도로 진입이 험함", "일부 트랙 우천 시 미끄러움", "비나 버라 구역 산불 피해 복구 중"],
+      "may_operation": "24시간 개방. 5월 정상 이용 가능. 단, 2025년 3월 사이클론 알프레드 피해로 일부 트랙/캠핑장 폐쇄 — 방문 전 qld.gov.au 공원 알림 확인 필수",
+      "safety_issues": "산악도로 운전 주의. 우천 시 트랙 미끄러움. 레인자켓/방한복 필수. 연료 충분히 확보",
+      "weather_impact": "우천 시 트랙 미끄러움. 산악 지역이라 기온 급변 가능. 안개 시 도로 시야 제한. 사이클론 피해 복구 확인 필요",
+      "quality_trend": "세계유산 곤드와나 우림으로 높은 평가 유지. 다만 2025 사이클론 알프레드 피해로 일부 복구 중"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

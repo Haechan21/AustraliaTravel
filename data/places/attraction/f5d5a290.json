@@ -1,0 +1,91 @@
+{
+  "id": "f5d5a290",
+  "name": "Old Helensburgh Station (Glow Worm Tunnel)",
+  "name_ko": "옛 헬렌스버그 역 (글로우 웜 터널)",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "Old Helensburgh Station, 2 Vera St, Helensburgh NSW 2508 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.9928185,
+      "lat": -34.1790254
+    },
+    "address": "2 Vera St, Helensburgh NSW 2508, Australia",
+    "region": "로열국립공원/그랜드퍼시픽"
+  },
+  "collected_data": {
+    "rating": 4.3,
+    "total_reviews": 600,
+    "price_level": null,
+    "opening_hours": "24시간 개방 (주거 지역이므로 야간 방문 시 소음 주의)",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": 0,
+        "positive": [
+          "터널 벽면에 수천 마리 반딧불이(글로우 웜)가 만드는 환상적 빛",
+          "1889년 개통된 역사적 철도 터널의 독특한 분위기",
+          "무료 입장으로 가족 나들이에 적합"
+        ],
+        "negative": [
+          "터널 내부 습하고 진흙투성이 — 장화 필수",
+          "야간 방문이 최적이나 주거 지역 소음 민감"
+        ],
+        "seasonal_notes": "5월 가을/겨울 — 습도가 높아 글로우 웜 활동 활발. 어두운 시간 빨라져 일찍 야간 방문 가능."
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": 0,
+        "positive": [
+          "NSW 최고의 글로우 웜 사이트로 평가",
+          "624m 메트로폴리탄 터널의 몰입감 있는 경험",
+          "낮에도 글로우 웜 관찰 가능 (야간이 최적)"
+        ],
+        "negative": [
+          "2018년 이후 펜스/게이트 설치로 접근 제한 가능성",
+          "플래시/벌레퇴치제 사용 금지 엄격 적용"
+        ],
+        "status_notes": "Helensburgh & District Landcare Group이 관리. 수동 레크리에이션·유산·환경 보호 목적."
+      },
+      "tips": [
+        "장화 또는 방수 신발 필수 + 비닐봉지 (신발 보관용)",
+        "손전등 필수, 단 글로우 웜에 직접 비추지 말 것",
+        "플래시 촬영·벌레퇴치제·흡연 금지",
+        "Helensburgh역에서 도보 200m"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "Vera St 노상 주차. 주거 지역이라 소규모. 몇 대 주차 가능.",
+      "road_condition": "주거 도로. Helensburgh역에서 도보 200m.",
+      "nearby_attractions": [
+        {"name": "Stanwell Tops Lookout (8bc91376)", "distance_km": 5, "drive_min": 8},
+        {"name": "Grand Pacific Drive (f97b06e6)", "distance_km": 5, "drive_min": 8},
+        {"name": "Royal National Park (89b09750)", "distance_km": 8, "drive_min": 12}
+      ],
+      "peak_times": "주말 저녁 인기. 평일 야간이 한적.",
+      "public_transport": "Helensburgh역에서 도보 200m — 대중교통 최적 접근"
+    },
+    "experience": {
+      "photo_spots": ["터널 내부 글로우 웜 은하수 (장노출 촬영)", "역사적 터널 입구와 폐역사"],
+      "golden_hour": "야간이 최적. 완전한 어둠에서 글로우 웜 최대 효과.",
+      "seasonal_beauty": "5월 가을/겨울 — 습도 높아 글로우 웜 활동 활발. 일몰 빨라 야간 방문 용이.",
+      "hidden_gems": "80m짜리 짧은 Helensburgh Tunnel도 있음. 메인 624m Metropolitan Tunnel과 별개.",
+      "sensory_notes": "칠흑 같은 어둠, 물 떨어지는 소리, 차가운 습기, 수천 개 작은 빛의 우주적 경험"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["진흙/습기로 옷 더러워짐", "주거 지역 소음 민원", "접근 제한 가능성"],
+      "may_operation": "정상 운영. 5월 습도 조건 양호.",
+      "safety_issues": "터널 내부 매우 미끄러움. 조명 없어 손전등 필수. 머리 부딪힘 주의.",
+      "weather_impact": "우천 시 터널 내부 더 습하나 글로우 웜에는 긍정적. 접근은 가능.",
+      "quality_trend": "Landcare Group 관리로 보존 상태 양호. 반달리즘 방지 노력."
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 60,
+    "cost_aud": 0,
+    "best_time": "야간 (완전한 어둠에서 최적)",
+    "weather_dependent": false,
+    "reservation_required": false
+  }
+}

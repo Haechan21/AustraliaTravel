@@ -5,7 +5,7 @@ layout: default
 # 여행 개요
 
 > **이 문서는**: 여행의 기본 정보와 전제 조건을 기록한다. 항공편, 렌터카, 로드트립 방향, 제약 조건 등 **일정을 짜기 위한 고정된 조건**을 담는다.
-> 날짜별 확정 일정 및 AI 리뷰는 [`ITINERARY.md`](./ITINERARY.md), 딥 리서치 자료는 [`research/`](./research/), 기술 설계는 [`SPEC.md`](./SPEC.md)를 참조.
+> 날짜별 확정 일정 및 AI 리뷰는 [`ITINERARY.md`](./ITINERARY.md), 딥 리서치 자료는 [`research/`](../research/), 기술 설계는 [`SPEC.md`](./SPEC.md)를 참조.
 
 ## 여행 개요
 

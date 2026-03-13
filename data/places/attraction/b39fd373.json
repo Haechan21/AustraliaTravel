@@ -57,7 +57,28 @@
         "Scenic Walkway 열대우림 산책 꼭 할 것"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "무료 주차장 (대규모, EV 충전 가능). 최대 높이 2m(다층 주차). 성수기/주말 혼잡 시 일찍 도착 권장",
+      "road_condition": "Cliff Dr - 포장 도로, 양호. 카툼바 시내에서 차로 5분",
+      "nearby_attractions": "에코 포인트/쓰리시스터스(ef2de137/89376ce6) 차로 5분. 카툼바 폭포(fdef9085) 도보 10분. 시닉 레일웨이(c92d2048) 같은 시설. 서블라임 포인트(04cc52a2) 차로 10분",
+      "peak_times": "주말/학교 방학 극심한 혼잡(1시간 대기 가능). 평일 오전 개장 직후 한적. 5월 비수기로 대기 짧음",
+      "public_transport": "카툼바역에서 도보 30분 또는 택시. 686G 버스 일부 정차"
+    },
+    "experience": {
+      "photo_spots": "Skyway에서 밸리 위 공중 사진. Railway 내부 64도 경사 셀피. Walkway 열대우림 속 사진",
+      "golden_hour": "Skyway에서 일몰 전 밸리 파노라마 최적. 맑은 날 오후 빛이 좋음",
+      "seasonal_beauty": "5월 가을 - 단풍 속 Scenic Walkway 산책 환상적. 비수기 대기 짧음. 선선한 날씨",
+      "hidden_gems": "Beyond Skyway 신규 체험. Scenic Walkway 열대우림 산책은 시닉월드의 진정한 하이라이트. Railway Cliffhanger 모드(64도)",
+      "sensory_notes": "Railway 하강 시 아드레날린, Skyway 유리 바닥의 아찔함, Walkway 열대우림의 고요함과 새소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": "입장료 비쌈($61~62 성인), 피크 시간 1시간+ 대기, 가족 단위 비용 높음, 비/안개 시 Skyway 조망 제한",
+      "may_operation": "5월 평일 10am~4pm (운영시간 짧음), 주말 9am~5pm. 평일 방문 시 시간 관리 필요",
+      "safety_issues": "모든 어트랙션 안전 시설 갖춤. Walkway 트레일 일부 계단. 특별한 위험 없음",
+      "weather_impact": "비/안개 시 Skyway 조망 제한. Railway, Cableway는 날씨 무관 운행. 악천후 시 운행 중단 가능",
+      "quality_trend": "긍정적. Beyond Skyway 등 신규 체험 추가. 연간 100만명 이상 방문. 지속적 시설 투자"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 180,

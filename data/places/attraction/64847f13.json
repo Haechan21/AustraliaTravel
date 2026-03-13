@@ -53,6 +53,31 @@
         "맑은 날 방문이 필수 - 날씨 확인 후 일정 조정"
       ]
     },
+    "logistics": {
+      "parking": "Q1 빌딩 지하 유료 주차 ($8/entry). Centro Surfers Paradise(Hanlan St) 또는 Bruce Bishop 주차장(Beach Rd)도 이용 가능",
+      "road_condition": "서퍼스 파라다이스 시내 — 포장도로, 접근 용이",
+      "nearby_attractions": [
+        {"name": "Surfers Paradise Beach", "distance_km": 0.2, "drive_min": 1},
+        {"name": "Centro Surfers Paradise (쇼핑)", "distance_km": 0.3, "drive_min": 2},
+        {"name": "Burleigh Head National Park", "distance_km": 8, "drive_min": 12}
+      ],
+      "peak_times": "일몰 시간대와 금/토 저녁 가장 혼잡. 평일 오전 한산",
+      "public_transport": "G:Link 트램 Surfers Paradise역에서 6분 도보. 대중교통 최적"
+    },
+    "experience": {
+      "photo_spots": ["Level 77에서 360도 파노라마 (브리즈번~바이런베이)", "일몰 시 골드코스트 스카이라인", "야경 시 도시 불빛"],
+      "golden_hour": "일몰 1-2시간 전 입장하여 낮/야경 모두 감상 추천. 서쪽 힌터랜드로 지는 해 최고",
+      "seasonal_beauty": "5월 맑은 날 많아 전망 우수. 일몰 시간 빨라져(약 5pm) 일찍 입장 가능",
+      "hidden_gems": "하루 종일 이용권으로 낮에 입장 후 나갔다가 야경 때 재입장 가능. 금/토 야간 라운지 바 분위기 우수",
+      "sensory_notes": "230m 높이에서의 개방감, 유리 너머 바람 소리, 야경의 반짝임"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["입장료 비쌈 ($33-41)", "흐린 날 전망 제한", "대기 시간 길 수 있음", "카페/바 메뉴 가격 높음"],
+      "may_operation": "5월 정상 운영. 월~목/일 7:30am-9pm, 금~토 7:30am-11pm",
+      "safety_issues": "특별한 안전 이슈 없음. 실내 시설",
+      "weather_impact": "흐린 날/비 오는 날 전망 제한 — 맑은 날 방문 필수. 날씨 확인 후 일정 조정 권장",
+      "quality_trend": "온라인 사전 예매 시 할인 ($21-33). 일요일 선셋 사운즈 이벤트 인기"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

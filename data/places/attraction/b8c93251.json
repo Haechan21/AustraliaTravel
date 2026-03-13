@@ -11,7 +11,7 @@
       "lat": -34.069760699999996
     },
     "address": "362 Narellan Rd, Mount Annan NSW 2567, Australia",
-    "region": "기타"
+    "region": "시드니"
   },
   "collected_data": {
     "rating": 4.5,
@@ -54,7 +54,28 @@
         "도시락 준비하여 피크닉 추천"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "원내 무료 주차. 충분한 공간. 접근성 주차 별도 제공",
+      "road_condition": "Narellan Rd에서 진입, 양호. 시드니 CBD에서 차로 약 1시간 (M5/M31)",
+      "nearby_attractions": "시드니 도심 장소들과 거리 먼 편 (약 60km). 캠벨타운 시내 차로 15분. 블루마운틴 방면과 동선이 맞지 않음",
+      "peak_times": "주말 오전~오후 놀이터 주변. 평일은 한적",
+      "public_transport": "캠벨타운역까지 열차 후 택시/우버 필요. 대중교통 접근 매우 불편. 차량 필수"
+    },
+    "experience": {
+      "photo_spots": "호수 주변 반영 사진. 호주 자생 식물 컬렉션. 넓은 잔디밭과 하늘",
+      "golden_hour": "넓은 공원이므로 일출/일몰 시 광활한 하늘 배경 사진 가능",
+      "seasonal_beauty": "5월 가을 - 단풍과 함께 산책. 컴벌랜드 평원 우드랜드의 가을 색감. 야생 조류 관찰",
+      "hidden_gems": "416헥타르 호주 최대 식물원. 차량 드라이브 코스 가능. 무료 BBQ 시설",
+      "sensory_notes": "광활한 자연, 새소리, 신선한 공기. 도시를 완전히 벗어난 느낌"
+    },
+    "risk_check": {
+      "negative_review_patterns": "시드니 도심에서 너무 멀다는 불만이 가장 빈번. 카페 메뉴/가격 불만. 넓어서 도보로 일부만 탐방 가능",
+      "may_operation": "5월 운영시간 8:00~17:00 (3~11월 시간). 정상 운영",
+      "safety_issues": "특별한 위험 없음. 가족 친화적. 넓은 부지에서 길 잃지 않도록 지도 확인",
+      "weather_impact": "비 시 야외 활동 불편하나 우산 쓰고 산책 가능. 대부분 야외",
+      "quality_trend": "안정적. 무료 공원으로서 가치 충분. 시설 유지 양호"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 150,

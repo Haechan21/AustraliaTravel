@@ -54,7 +54,33 @@
         "AllTrails 4.7점/155 리뷰"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "에메랄드 비치 주차장 무료. 넉넉한 크기. NPWS 안내판 있음",
+      "road_condition": "포장도로. 콥스하버에서 북쪽 약 15분",
+      "nearby_attractions": [
+        {"name": "Moonee Beach Nature Reserve (무니 비치)", "distance_km": 1.5, "drive_min": 3},
+        {"name": "Forest Sky Pier (포레스트 스카이 피어)", "distance_km": 12, "drive_min": 15},
+        {"name": "Muttonbird Island (머튼버드)", "distance_km": 15, "drive_min": 20},
+        {"name": "Woolgoolga 마을", "distance_km": 8, "drive_min": 10}
+      ],
+      "peak_times": "이른 아침(일출) 캥거루 관찰 시 방문객 있으나 전체적으로 한적",
+      "public_transport": "대중교통 접근 어려움. 자차 필수"
+    },
+    "experience": {
+      "photo_spots": ["풀밭 위 동부 회색 캥거루 무리와 해안 배경", "헤드랜드 정상에서 해안 파노라마", "일출 시 캥거루 실루엣"],
+      "golden_hour": "일출 시 캥거루가 풀밭에서 활발하게 활동하며 동쪽 바다에서 해가 뜨는 장면이 절경. 일몰도 추천",
+      "seasonal_beauty": "5월부터 고래 이동 시즌 시작. 캥거루는 연중 상주. 가을 기온으로 산책 최적",
+      "hidden_gems": "셀피 명소로 유명. 캥거루와 해안이 한 프레임에 담기는 드문 장소. 서퍼들도 에메랄드 비치에서 활동",
+      "sensory_notes": "캥거루가 풀 뜯는 소리. 해풍에 실려오는 파도 소리. 탁 트인 초원과 바다의 개방감"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["특별한 부정 리뷰 없음"],
+      "may_operation": "항상 개방. 정상 운영",
+      "safety_issues": "야생 캥거루 접근 시 거리 유지 (위협 느끼면 공격 가능). 절벽 가장자리 주의",
+      "weather_impact": "우천 시 트레일 미끄러움. 강풍 시 헤드랜드 불편. 맑은 날 방문 권장",
+      "quality_trend": "4.8/5 최상위 평가 유지. 부정 리뷰 거의 없음"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 45,

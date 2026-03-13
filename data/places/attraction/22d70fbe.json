@@ -1,0 +1,88 @@
+{
+  "id": "22d70fbe",
+  "name": "Carrington Falls",
+  "name_ko": "캐링턴 폭포",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "Carrington Falls, National Park, 44-48 Hoddle Street Budderoo, Robertson NSW 2577 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.65473599999999,
+      "lat": -34.623791
+    },
+    "address": "Budderoo National Park, Robertson NSW 2577, Australia",
+    "region": "서던하이랜드/저비스베이"
+  },
+  "collected_data": {
+    "rating": 4.5,
+    "total_reviews": 800,
+    "price_level": null,
+    "opening_hours": "상시 개방 (Budderoo National Park). 악천후 시 일시 폐쇄 가능.",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": 0,
+        "positive": [
+          "50m 이상 낙차의 장관 — Kangaroo River 계곡으로 떨어짐",
+          "여러 전망 플랫폼에서 다양한 각도 관람",
+          "가족 친화적 루프 워크 (짧고 쉬움)"
+        ],
+        "negative": [
+          "휴일에 주차장 혼잡 — 무질서 주차 발생"
+        ],
+        "seasonal_notes": "5월 가을 — 여름비 이후 수량 풍부. 서던 하이랜즈 가을 단풍 시작."
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": 0,
+        "positive": [
+          "무료 주차, 화장실, 피크닉/바비큐 시설 완비",
+          "접근성 좋은 산책로",
+          "Nellies Glen 피크닉 구역에서 수영 가능"
+        ],
+        "negative": [
+          "여름 성수기 매우 혼잡"
+        ],
+        "status_notes": "정상 운영 중"
+      },
+      "tips": [
+        "무료 주차, 무료 입장",
+        "Nellies Glen 피크닉 구역에서 폭포 상류 수영 가능",
+        "Fitzroy Falls(c49e60e1)와 함께 반나절 코스로 연계",
+        "화장실은 주차장 바로 옆"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "무료 주차장. 넉넉하나 휴일/성수기 혼잡. 무질서 주차 발생 가능.",
+      "road_condition": "Robertson에서 접근. 포장 도로. 시드니에서 약 2시간.",
+      "nearby_attractions": [
+        {"name": "Fitzroy Falls (c49e60e1)", "distance_km": 20, "drive_min": 25},
+        {"name": "Blenheim Beach (7d2ee5d0)", "distance_km": 60, "drive_min": 70}
+      ],
+      "peak_times": "여름 주말/휴일 혼잡. 5월은 상대적 한적.",
+      "public_transport": "대중교통 제한적. 차량 필수."
+    },
+    "experience": {
+      "photo_spots": ["전망 플랫폼에서 50m 폭포 + Kangaroo River 계곡", "Nellies Glen 수영장 풍경"],
+      "golden_hour": "오전 중 빛이 계곡을 비추는 시간대",
+      "seasonal_beauty": "5월 가을 — 서던 하이랜즈 단풍 + 풍부한 수량의 폭포",
+      "hidden_gems": "Nellies Glen — 폭포 상류 쪽 자연 수영장. 대부분 전망대만 보고 돌아감.",
+      "sensory_notes": "계곡 아래로 울려 퍼지는 폭포 소리, 유칼립투스 숲의 서늘한 공기, 새소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["휴일 주차 혼잡/무질서 주차"],
+      "may_operation": "정상 운영. 5월은 산불 위험 낮고 날씨 쾌적.",
+      "safety_issues": "전망대 난간 있음. Nellies Glen 수영 시 바위 미끄러움 주의.",
+      "weather_impact": "우천 시 전망 제한 가능. 비 후 수량 풍부로 오히려 장관.",
+      "quality_trend": "시설(화장실, 피크닉, 바비큐) 잘 유지. 안정적."
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 45,
+    "cost_aud": 0,
+    "best_time": "오전 (빛 좋은 시간, 비 후)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

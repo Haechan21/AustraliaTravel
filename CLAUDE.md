@@ -8,25 +8,26 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 핵심 문서 역할
 
-- **`META.md`**: 여행 전제 조건 (항공, 렌터카, 일정 프레임, 제약 조건). 고정된 사실.
-- **`SPEC.md`**: 기술 설계서 (데이터 스키마, Phase별 워크플로우, 평가 기준). 구현 명세.
-- **`ITINERARY.md`**: 확정 일정의 **Single Source of Truth**. 일정 변경은 반드시 여기에 반영.
+- **`docs/META.md`**: 여행 전제 조건 (항공, 렌터카, 일정 프레임, 제약 조건). 고정된 사실.
+- **`docs/SPEC.md`**: 기술 설계서 (데이터 스키마, Phase별 워크플로우, 평가 기준). 구현 명세.
+- **`docs/ITINERARY.md`**: 확정 일정의 **Single Source of Truth**. 일정 변경은 반드시 여기에 반영.
 - **`config/trip.json`**: 일정 생성 설정 (여행 스타일, 우선순위, 필수 포함/제외 장소).
 - **`config/scoring.json`**: 카테고리별 평가 기준 및 가중치.
+- **`docs/CRITIC.md`**: 평가 페르소나 3명(효율 전략가/감성 탐험가/현실주의 비평가)의 정의와 페르소나별 가중치. 평가 워크플로우(리서치 분업→통합→해석 분화→가중합), 기준별 채점 가이드라인 포함.
 
 ## 워크플로우 (5 Phase)
 
 1. **전처리**: `GoogleMaps/*.json` → `data/places/{category}/{id}.json` stub 생성 + `data/regions.json`
 2. **정보 수집**: 웹검색으로 장소별 상세정보·리뷰 수집 → place JSON의 `collected_data` 채움, `research/claude-research/`에 리서치 저장
 3. **평가/등급**: 수집 데이터 기반 S~D 등급 부여 → `data/scores/{category}_scored.json`
-4. **일정 생성**: 대화형으로 일정 구성 → `ITINERARY.md`에 직접 기록
-5. **일정 리뷰**: 확정 일정을 비판적으로 검토 → `research/ai-review/`에 근거 저장, `ITINERARY.md`에 리뷰 반영
+4. **일정 생성**: 대화형으로 일정 구성 → `docs/ITINERARY.md`에 직접 기록
+5. **일정 리뷰**: 확정 일정을 비판적으로 검토 → `research/ai-review/`에 근거 저장, `docs/ITINERARY.md`에 리뷰 반영
 
 ## 현재 진행 상황
 
-- Phase 1 (전처리): ✅ 완료 — 84개 attraction stub 생성
-- Phase 2 (정보 수집): ✅ 완료 — 84개 장소 collected_data 채움, 7개 지역 리서치
-- Phase 3 (평가/등급): ✅ 완료 — 3명 독립 평가 평균, S:2 A:41 B:34 C:7
+- Phase 1 (전처리): ✅ 완료 — 110개 attraction stub (2026-03-13 추가분 26개 포함, 중복 1개)
+- Phase 2 (정보 수집): ✅ 완료 — 109개 장소 collected_data 채움 (중복 7a922fd8 제외), 14개 지역 분류, 7개 지역별 리서치
+- Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 109곳 재평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:10. 논쟁 장소 36곳
 - Phase 4 (일정 생성): 🔄 진행 중 — 5/25~5/30 미정
 - Phase 5 (일정 리뷰): ⬜ 미시작
 - 향후: 음식점·숙소 데이터 수집 및 평가 예정, 관광지 추가도 가능
@@ -39,6 +40,12 @@ python scripts/parse_googlemaps.py
 
 # 변경 감지 리포트만 (파일 생성 없이)
 python scripts/parse_googlemaps.py --diff-only
+
+# Phase 3 이후: 프론트엔드 데이터 + RANKINGS.md 생성
+python scripts/generate_frontend.py            # 전체 (재채점 + RANKINGS + place_data)
+python scripts/generate_frontend.py --rescore  # 등급 재계산만
+python scripts/generate_frontend.py --rank     # RANKINGS.md만
+python scripts/generate_frontend.py --data     # place_data.json만
 ```
 
 외부 의존성 없음. Python 3.11+ 표준 라이브러리만 사용.
@@ -55,7 +62,7 @@ python scripts/parse_googlemaps.py --diff-only
 
 - `research/deep-research/`: 외부 AI(ChatGPT, Gemini) 딥 리서치. 파일명 `{주제}_{출처}.md`
 - `research/claude-research/`: Claude Code 직접 조사. 파일명 `{주제}.md`
-- `research/ai-review/`: ITINERARY.md 리뷰 근거. 파일명 `{날짜}_{주제}.md`
+- `research/ai-review/`: docs/ITINERARY.md 리뷰 근거. 파일명 `{날짜}_{주제}.md`
 
 ## 주요 설계 원칙
 

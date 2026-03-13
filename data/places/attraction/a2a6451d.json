@@ -51,7 +51,28 @@
         "시드니 천문대 투어(수~토) 1시간 소요"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "Watson Rd, Argyle St 미터 주차 ($8/시간). Wilson Clocktower 주차장 이용 가능. 주차 비싸고 제한적",
+      "road_condition": "도심 도로, 양호. 언덕 위 접근 경사 있음",
+      "nearby_attractions": "바랑가루(b484de1d) 도보 10분. 달링하버(f04313c6) 도보 15분. 더 록스(The Rocks) 도보 5분. 서큘러 키 도보 10분",
+      "peak_times": "주말 일몰 시간대. 평일은 비교적 한적",
+      "public_transport": "와이야드역 도보 15분. 서큘러 키역 도보 10분. 버스 다수"
+    },
+    "experience": {
+      "photo_spots": "하버브리지, 루나파크, 하버 전경을 한 프레임에 담을 수 있는 파노라마 포인트",
+      "golden_hour": "북쪽 하버 방향이므로 일몰 시 하버브리지 뒤 황금빛 하늘. 5월 일몰 약 17시",
+      "seasonal_beauty": "5월 가을 - 일몰이 빨라 오후 5시경 아름다운 일몰. 맑은 가을 하늘에 선명한 뷰",
+      "hidden_gems": "시드니 천문대(수~토 투어 1시간). S.H. Ervin Gallery. 더 록스 지역과 연계 탐방",
+      "sensory_notes": "언덕 위 바람, 잔디밭의 평화, 도시 소음이 멀리서 들리는 고요함. 도심 속 오아시스"
+    },
+    "risk_check": {
+      "negative_review_patterns": "언덕 경사로 인한 접근 불편. 공간이 작아 주말 혼잡. 주차 비쌈",
+      "may_operation": "5월 정상 운영. 24시간 개방",
+      "safety_issues": "특별한 위험 없음. 야간에도 비교적 안전한 지역",
+      "weather_impact": "비 시 잔디밭 이용 불편. 맑은 날 전망 극대화",
+      "quality_trend": "안정적. 도심 공원으로서 잘 관리됨"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 45,

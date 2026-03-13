@@ -1,0 +1,92 @@
+{
+  "id": "30097942",
+  "name": "Kiama Blowhole (Blowhole Point)",
+  "name_ko": "키아마 블로우홀 (블로우홀 포인트)",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "블로우 홀 포인트",
+  "location": {
+    "coordinates": {
+      "lng": 150.8658668,
+      "lat": -34.671344399999995
+    },
+    "address": "Blowhole Point, Kiama NSW 2533, Australia",
+    "region": "울릉공/키아마"
+  },
+  "collected_data": {
+    "rating": 4.2,
+    "total_reviews": 5000,
+    "price_level": null,
+    "opening_hours": "상시 개방 (24/7, 무료)",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": 0,
+        "positive": [
+          "세계 최대 블로우홀 — 2.5m 개구부에서 30m 이상 물기둥",
+          "다수 전망 플랫폼에서 다양한 각도 관람",
+          "피크닉 구역·록풀·카페·관광안내소 인접"
+        ],
+        "negative": [
+          "파도 조건 불충족 시 분출 없어 실망",
+          "45분 이상 기다려도 분출 없는 경우 있음"
+        ],
+        "seasonal_notes": "5월 — 남동쪽 파도(south-east swell) 빈도 높아 분출 확률 증가. 가을 관람 적기."
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": 0,
+        "positive": [
+          "키아마의 상징적 관광지로 지속 인기",
+          "Endeavour Lookout과 연계한 해안 전망",
+          "시설 잘 갖춰져 있음 (화장실, 카페, 관광안내소)"
+        ],
+        "negative": [
+          "주말 주차 혼잡 — 아침 일찍 방문 권장",
+          "분출이 기대에 못 미칠 수 있음"
+        ],
+        "status_notes": "정상 운영 중"
+      },
+      "tips": [
+        "강한 남동쪽 파도(south-east swell)에서 최대 분출",
+        "아침 일찍 방문 — 주차 + 인파 회피",
+        "최동단 전망대에서 암석 높이 전체 감상",
+        "리틀 블로우홀(87882b26)과 함께 방문 — 더 안정적 분출"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "Blowhole Point 주변 무료 주차. 주말 혼잡. 아침 일찍 권장.",
+      "road_condition": "키아마 타운센터 접근 포장 양호.",
+      "nearby_attractions": [
+        {"name": "Kiama Lighthouse (dc2795c8)", "distance_km": 0.1, "drive_min": 1},
+        {"name": "Little Blowhole (87882b26)", "distance_km": 2, "drive_min": 4},
+        {"name": "Bombo Headland (a43e5009)", "distance_km": 3, "drive_min": 5},
+        {"name": "Loves Bay (a183bc9a)", "distance_km": 3, "drive_min": 5}
+      ],
+      "peak_times": "주말 오전~오후 가장 혼잡. 주차 대기열 발생.",
+      "public_transport": "키아마역에서 도보 10분"
+    },
+    "experience": {
+      "photo_spots": ["분출 순간 물기둥 (최동단 전망대)", "블로우홀 개구부 클로즈업", "Blowhole Point 해안 파노라마"],
+      "golden_hour": "오전 햇살에 물보라가 무지개 효과. 일출 시 극적.",
+      "seasonal_beauty": "5월 가을 — 남동쪽 파도 강해 분출 확률 높음",
+      "hidden_gems": "Blowhole Point 남쪽 록풀 — 아이들 물놀이 가능",
+      "sensory_notes": "땅을 울리는 쿵 소리, 갑작스러운 물기둥, 얼굴에 튀는 물보라의 짜릿함"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["분출 없이 긴 대기", "과대기대 후 실망", "주차 혼잡"],
+      "may_operation": "정상 운영. 5월 남동쪽 파도 조건 양호.",
+      "safety_issues": "바위 가장자리 미끄러움. 분출 시 물보라에 젖음. 난간 내에서 관람 권장.",
+      "weather_impact": "남동쪽 파도 필수 — 잔잔한 날 분출 없음. 우천 자체는 영향 적으나 파도 조건이 핵심.",
+      "quality_trend": "관광안내소, 전망대 시설 잘 유지. 키아마 대표 관광지로 관리 양호."
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 30,
+    "cost_aud": 0,
+    "best_time": "파도 높은 날 오전 (남동쪽 swell)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

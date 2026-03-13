@@ -1,0 +1,90 @@
+{
+  "id": "87882b26",
+  "name": "Little Blowhole",
+  "name_ko": "리틀 블로우홀",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "리틀 블로우홀 Tingira Cres, Kiama NSW 2533 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.85889939999998,
+      "lat": -34.686800999999996
+    },
+    "address": "Tingira Cres, Kiama NSW 2533, Australia",
+    "region": "울릉공/키아마"
+  },
+  "collected_data": {
+    "rating": 4.3,
+    "total_reviews": 600,
+    "price_level": null,
+    "opening_hours": "상시 개방 (24/7, 무료)",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": 0,
+        "positive": [
+          "큰 블로우홀보다 더 일관적으로 분출",
+          "가까이에서 분출의 힘, 소리, 물줄기를 체감",
+          "주차장에서 전망 플랫폼까지 짧은 산책"
+        ],
+        "negative": [
+          "바람 방향에 따라 물보라에 젖을 수 있음"
+        ],
+        "seasonal_notes": "5월 가을 — 남동쪽 파도 빈도 높아 분출 확률 증가. 북동쪽 파도에 최적."
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": 0,
+        "positive": [
+          "큰 블로우홀 실망 시 '보험'으로 방문 가치 있음",
+          "주차 넉넉하고 혼잡하지 않음",
+          "Endeavour Lookout과 연계 — 해안 전망"
+        ],
+        "negative": [
+          "큰 블로우홀 대비 규모는 작음"
+        ],
+        "status_notes": "정상 운영 중"
+      },
+      "tips": [
+        "큰 블로우홀과 함께 방문 — 리틀이 더 안정적으로 분출",
+        "바람 방향 확인 — 내륙으로 불면 물보라에 젖음",
+        "전망 플랫폼 또는 바위 해안에서 관람 가능",
+        "키아마 타운센터 남쪽 2km, 주거 지역 내"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "충분한 무료 주차. 주거 지역이라 혼잡하지 않음.",
+      "road_condition": "Tingira Cres 주거 도로. 포장 양호.",
+      "nearby_attractions": [
+        {"name": "Kiama Blowhole (30097942)", "distance_km": 2, "drive_min": 4},
+        {"name": "Kiama Lighthouse (dc2795c8)", "distance_km": 2, "drive_min": 4},
+        {"name": "Loves Bay (a183bc9a)", "distance_km": 1.5, "drive_min": 3},
+        {"name": "Bombo Headland (a43e5009)", "distance_km": 5, "drive_min": 7}
+      ],
+      "peak_times": "한적한 편. 주말 오후에도 크게 붐비지 않음.",
+      "public_transport": "키아마역에서 도보 약 25분 또는 버스"
+    },
+    "experience": {
+      "photo_spots": ["분출 순간 물줄기 클로즈업", "Endeavour Lookout에서 해안 파노라마"],
+      "golden_hour": "오전 햇살이 물보라를 비추면 무지개 효과",
+      "seasonal_beauty": "5월 가을 — 파도 강해 분출 확률 높음",
+      "hidden_gems": "Endeavour Lookout에서 남쪽 해안선 조망 — 대부분 블로우홀만 보고 놓침",
+      "sensory_notes": "쿵 하는 분출 소리, 얼굴에 튀는 물보라, 바위 사이로 밀려드는 파도의 힘"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["큰 블로우홀 대비 규모 작음", "물보라에 젖음"],
+      "may_operation": "정상 운영. 5월 파도 조건 양호.",
+      "safety_issues": "바위 해안 가장자리 주의. 파도에 쓸려갈 위험. 전망 플랫폼에서 관람 권장.",
+      "weather_impact": "파도가 높을수록 분출 활발. 잔잔하면 분출 없을 수 있음.",
+      "quality_trend": "자연현상으로 변동 없음. 전망대 시설 관리 양호."
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 20,
+    "cost_aud": 0,
+    "best_time": "파도 높은 날 (북동쪽 파도 최적)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

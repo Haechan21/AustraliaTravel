@@ -1,0 +1,88 @@
+{
+  "id": "f81a1418",
+  "name": "Shark Dive Xtreme",
+  "name_ko": "샤크 다이브 익스트림",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "Shark Dive Xtreme, Aquarium Wharf, Sydney NSW 2000 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 151.20132759999998,
+      "lat": -33.8696266
+    },
+    "address": "SEA LIFE Sydney Aquarium, 1-5 Wheat Rd, Sydney NSW 2000, Australia",
+    "region": "시드니"
+  },
+  "collected_data": {
+    "rating": 4.8,
+    "total_reviews": 300,
+    "price_level": "$$$",
+    "opening_hours": "선택된 날짜에만 운영. 하루 3개 타임슬롯. 사전 예약 필수",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": null,
+        "positive": [
+          "그레이 너스 상어와 케이지 없이 다이빙하는 독특한 체험",
+          "다이빙 경험 없어도 참여 가능 (기본 수영 능력만 필요)",
+          "전문 강사의 친절하고 안전한 안내"
+        ],
+        "negative": [
+          "가격이 높음 ($239 AUD/인)",
+          "세션당 4명 제한으로 예약이 빨리 마감"
+        ],
+        "seasonal_notes": "5월에도 실내 수족관에서 진행되므로 날씨 무관"
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": null,
+        "positive": [
+          "25분간 상어, 가오리와 함께 수중 체험",
+          "수족관 일반 입장권 포함",
+          "수중 사진 촬영 서비스 제공",
+          "직원들의 해양생물 지식이 풍부"
+        ],
+        "negative": [
+          "전체 체험 시간 2.5~3시간 중 실제 다이빙은 25분",
+          "14세 이상만 참여 가능"
+        ],
+        "status_notes": "정상 운영 중. SEA LIFE Sydney Aquarium 내 프리미엄 체험"
+      },
+      "tips": [
+        "온라인 사전 예약 필수 (세션당 4명 제한, 빠르게 매진)",
+        "기본 수영 능력 필요, 다이빙 경험은 불필요",
+        "전체 체험 2.5~3시간 (브리핑 90분 + 다이빙 25분)",
+        "수족관 일반 입장도 포함되므로 다른 전시도 함께 관람 가능"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "달링하버 인근 유료 주차장 이용 ($10~15/시간). Wilson Parking 등 사전 예약 시 할인",
+      "road_condition": "시드니 도심, 교통 혼잡 가능. 대중교통 추천",
+      "nearby_attractions": "달링하버(f04313c6) 내 위치. 해양박물관(b7e6c92f) 도보 5분. 바랑가루(b484de1d) 도보 15분",
+      "peak_times": "주말 타임슬롯이 빠르게 매진. 평일 예약이 수월",
+      "public_transport": "타운홀역 도보 10분, 달링하버 페리 이용 가능. 라이트레일 Convention 정류장 인근"
+    },
+    "experience": {
+      "photo_spots": "수중 촬영 서비스 제공 - 상어와 함께 촬영한 사진/영상 별도 구매 가능",
+      "golden_hour": "실내 체험이므로 시간대 무관",
+      "seasonal_beauty": "계절 무관 실내 체험. 5월에도 동일한 품질",
+      "hidden_gems": "일반 수족관 터널에서는 느낄 수 없는 상어와의 근접 체험. 케이지 없이 상어와 같은 물속에 있는 특별한 경험",
+      "sensory_notes": "수중에서의 고요함, 상어가 옆을 지나가는 압도적 존재감, 물속에서 바라보는 수족관 터널의 관람객들"
+    },
+    "risk_check": {
+      "negative_review_patterns": "가격 대비 실제 다이빙 시간(25분)이 짧다는 불만이 간헐적. 대부분 만족도 높음",
+      "may_operation": "5월 정상 운영. 실내 체험이므로 계절 영향 없음",
+      "safety_issues": "전문 강사 동행으로 안전 관리. 14세 미만/수영 불가자 참여 불가",
+      "weather_impact": "날씨 영향 없음 (실내)",
+      "quality_trend": "긍정적. 리뷰 평점 높고 만족도 일관적"
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 180,
+    "cost_aud": 239,
+    "best_time": "시간대 무관 (예약 타임슬롯에 따름)",
+    "weather_dependent": false,
+    "reservation_required": true
+  }
+}

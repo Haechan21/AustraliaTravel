@@ -4,7 +4,7 @@ layout: default
 
 <div align="center">
 <img src="https://img.shields.io/badge/Phase_4-일정_생성_중-yellow?style=for-the-badge" alt="Status" />
-<img src="https://img.shields.io/badge/관광지-84곳_평가_완료_(추가_예정)-blue?style=for-the-badge" alt="Places" />
+<img src="https://img.shields.io/badge/관광지-109곳_평가_완료-blue?style=for-the-badge" alt="Places" />
 <img src="https://img.shields.io/badge/기간-9일_(활동_7일)-green?style=for-the-badge" alt="Duration" />
 </div>
 
@@ -12,7 +12,7 @@ layout: default
 
 <div align="center" class="cta-links">
 <a href="ITINERARY.html" class="btn">확정 일정</a>
-<a href="data/scores/RANKINGS.html" class="btn">관광지 랭킹</a>
+<a href="rankings.html" class="btn">관광지 랭킹</a>
 <a href="META.html" class="btn">여행 개요</a>
 </div>
 
@@ -29,24 +29,25 @@ layout: default
 | 5/30 (토) | 시드니 시내 · 도보 관광 | 🔄 |
 | 5/31 (일) | 시드니 → 인천 | ✅ |
 
-> ✅ 확정 &nbsp;&nbsp; 🔄 미정 — 상세 일정은 <a href="ITINERARY.html">ITINERARY.md</a> 참조
+> ✅ 확정 &nbsp;&nbsp; 🔄 미정 — 상세 일정은 <a href="docs/ITINERARY.html">ITINERARY.md</a> 참조
 
 <br/>
 
-## 관광지 등급 (84곳)
+## 관광지 등급 (109곳)
 
-구글맵 후보지를 웹 리서치 후 3명의 AI 평가자가 독립 채점, 평균으로 S~C 등급을 부여했다.
+3명의 AI 평가자(효율 전략가 · 감성 탐험가 · 현실주의 비평가)가 독립 채점, 퍼센타일 등급을 부여했다.
 
 | 등급 | 장소 수 | 기준 | 대표 장소 |
 |:----:|--------:|:-----|:----------|
-| **S** | 2곳 | 반드시 방문 | 블루마운틴스 국립공원, 케이프 바이런 등대 |
-| **A** | 41곳 | 강력 추천 | 그랜드 캐니언 트랙, 버레이 헤드 등 |
-| **B** | 34곳 | 선택적 | 오크필드 낙타 라이드, 야마 등대 등 |
-| **C** | 7곳 | 스킵 권장 | 제놀란 동굴(폐쇄), 빅 프론 등 |
+| **S** | 6곳 | 상위 ~5% | 케이프 바이런 등대, 뉴캐슬 메모리얼 워크, 그랜드 퍼시픽 드라이브 |
+| **A** | 22곳 | 상위 5~25% | 그랜드 캐니언 트랙, 블루마운틴스 국립공원, 시 클리프 브릿지 |
+| **B** | 38곳 | 상위 25~60% | 본다이 투 브론테, 포트 스테판스 캥거루 등 |
+| **C** | 33곳 | 상위 60~90% | 빅 프론, 제놀란 동굴 등 |
+| **D** | 10곳 | 하위 10% | 피겨 에잇 풀스(논쟁), 포트맥쿼리 천문대 등 |
 
-> 전체 목록과 상세 점수 → <a href="data/scores/RANKINGS.html">RANKINGS.md</a>
+> 전체 목록과 상세 점수 → <a href="rankings.html">관광지 랭킹</a>
 
-> 📋 음식점·숙소 평가도 추가 예정. 관광지 목록도 계속 확대될 수 있다.
+> 📋 음식점·숙소 평가도 추가 예정.
 
 <br/>
 

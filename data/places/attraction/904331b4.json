@@ -51,6 +51,31 @@
         "유료 주차장 이용 필요"
       ]
     },
+    "logistics": {
+      "parking": "유료 주차 (미터 방식). Park Road와 Governor Phillip Park 방면 미터 주차. 주말 주차 어려움",
+      "road_condition": "포장도로, Ocean Road에서 접근",
+      "nearby_attractions": [
+        {"name": "Barrenjoey Lighthouse", "distance_km": 0.5, "drive_min": 3},
+        {"name": "Palm Beach (수영)", "distance_km": 0, "drive_min": 0},
+        {"name": "Station Beach (핏워터)", "distance_km": 0.5, "drive_min": 3}
+      ],
+      "peak_times": "여름 주말 매우 혼잡. 5월은 비수기로 한산",
+      "public_transport": "L90 버스로 팜비치까지 접근 가능"
+    },
+    "experience": {
+      "photo_spots": ["록풀과 바렌조이 헤드랜드/등대 배경", "해식 암석의 독특한 패턴 클로즈업", "만조 시 록풀에 반사되는 하늘"],
+      "golden_hour": "동쪽 해안이라 일출 시 록풀에 빛이 비침",
+      "seasonal_beauty": "5월은 수온 낮아 수영보다는 산책/사진 촬영에 적합. Home and Away 촬영지로 유명",
+      "hidden_gems": "만조 때 방문하면 깨끗한 바닷물이 채워져 최적. Resolute Beach(핏워터 반대편)도 숨은 명소",
+      "sensory_notes": "파도가 록풀로 밀려오는 소리, 바닷바람, 암석의 질감"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["수온이 차가울 수 있음", "해조류가 많을 때 있음", "주차 유료이며 자리 부족"],
+      "may_operation": "24시간 개방. 5월 정상 이용 가능",
+      "safety_issues": "바위 미끄러움 주의. 파도 주의",
+      "weather_impact": "비 오는 날 방문 가치 감소. 풍랑 시 록풀 위험",
+      "quality_trend": "탈의실, 화장실 등 편의시설 유지. 안정적 상태"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

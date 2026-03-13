@@ -58,7 +58,28 @@
         "오전 일찍 출발 권장 (캐니언 내부 일찍 어두워짐)"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "Grand Canyon 전용 주차장 (Evans Lookout Rd, 100대+ 공간, 버스/접근성 주차 포함). 무료. Evans Lookout 주차장도 이용 가능",
+      "road_condition": "Evans Lookout Rd - 포장 도로, 양호. Great Western Highway에서 Blackheath 진입 후 접근",
+      "nearby_attractions": "고벳츠 리프(86d8f30d) 차로 5분 (Cliff Top Track으로 도보 3km 연계 가능). 블루마운틴 국립공원(68c6f93e) 내 위치. Blackheath 마을 차로 5분",
+      "peak_times": "주말 오전. 평일은 한적. 5월 비수기로 덜 붐빔",
+      "public_transport": "Blackheath역에서 도보 40분+ 또는 택시. 대중교통 접근 불편"
+    },
+    "experience": {
+      "photo_spots": "사암 협곡 내부의 이끼 낀 벽과 양치류. 폭포. 좁은 통로의 드라마틱한 빛과 그림자",
+      "golden_hour": "캐니언 내부라 직사광선 적음. 오전 빛이 캐니언 입구로 비추면 신비로운 분위기",
+      "seasonal_beauty": "5월 가을 - 이끼 낀 사암벽과 양치류의 가을 분위기 최고. 선선한 기온으로 하이킹 최적",
+      "hidden_gems": "1907년부터 이어진 역사적 트레일. 세계유산 지역 내 환상적 협곡. 블루마운틴 최고의 워킹 트랙 중 하나",
+      "sensory_notes": "물 흐르는 소리, 이끼와 흙의 향, 좁은 협곡의 밀폐감, 양치류 터널의 초록빛 세계. 원시림 몰입"
+    },
+    "risk_check": {
+      "negative_review_patterns": "중급 난이도로 체력 필요(984ft 고도차), 비 후 미끄러움, 캐니언 내부 일찍 어두워짐",
+      "may_operation": "5월 정상 운영. 해 짧아져 오전 일찍 출발 권장. 캐니언 내부 빨리 어두워짐",
+      "safety_issues": "비 전/중/후 캐니언 진입 금지(안전). 미끄러운 바위와 계단. 튼튼한 트레킹 신발 필수",
+      "weather_impact": "폭우 후 트레일 폐쇄 가능. 비 시 매우 미끄러움. 날씨 예보와 공원 알림 확인 필수",
+      "quality_trend": "안정적. 잘 관리되는 인기 트레일. 비화장실(non-flush) 시설 있음"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 150,

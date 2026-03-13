@@ -52,7 +52,33 @@
         "장애인 접근성이 제한적"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "피크닉 에어리어 주차장. Trial Bay Gaol 구역 내 위치",
+      "road_condition": "포장도로. Trial Bay Gaol Access Rd 경유",
+      "nearby_attractions": [
+        {"name": "Arakoon NP / Trial Bay Gaol (아라쿤)", "distance_km": 0.5, "drive_min": 2},
+        {"name": "Back Creek Bridge (백 크릭)", "distance_km": 4, "drive_min": 7},
+        {"name": "Monument Hill Walking Track", "distance_km": 1, "drive_min": 3},
+        {"name": "South West Rocks 시내", "distance_km": 3, "drive_min": 5}
+      ],
+      "peak_times": "주말/공휴일 가족 단위 방문 많음. 평일 한적",
+      "public_transport": "대중교통 접근 어려움. 자차 필수"
+    },
+    "experience": {
+      "photo_spots": ["작은 시내가 흐르는 평화로운 피크닉 장소", "동부 회색 캥거루와 왕도마뱀", "해안 경관"],
+      "golden_hour": "오전 빛이 시내와 잔디밭을 비추는 시간. 해안 쪽은 일출 뷰",
+      "seasonal_beauty": "5월 가을 피크닉에 쾌적. 캥거루, 새, 왕도마뱀 등 야생동물 활발",
+      "hidden_gems": "새롭게 리노베이션된 시설. 전기 BBQ, 피크닉 쉘터, 놀이터 구비. 작은 시내가 흐르는 힐링 공간",
+      "sensory_notes": "시내 물소리. 새소리. 잔디밭에서의 평온함. BBQ 향"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["장애인 접근성 부족", "야생동물이 음식 노림"],
+      "may_operation": "일출~일몰 개방. 정상 운영",
+      "safety_issues": "야생동물이 음식을 노리므로 음식 관리 철저. Little Bay 해변은 서프 라이프세이버 미배치, 수영 비추천. 모바일 수신 제한",
+      "weather_impact": "우천 시 피크닉 쉘터 이용 가능. 폭우 시 시내 수위 상승 주의",
+      "quality_trend": "4.7/5 높은 평가. 리노베이션 후 시설 개선"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 60,

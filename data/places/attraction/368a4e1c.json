@@ -53,6 +53,32 @@
         "반나절 정도 계획하면 충분"
       ]
     },
+    "logistics": {
+      "parking": "무료 주차장. 접근 용이한 주차 공간 구비",
+      "road_condition": "Pacific Motorway Exit 89 → Tallebudgera Creek Road → Loman Lane. 포장도로",
+      "nearby_attractions": [
+        {"name": "Burleigh Head National Park", "distance_km": 2, "drive_min": 5},
+        {"name": "Tallebudgera Creek (수영)", "distance_km": 1, "drive_min": 3},
+        {"name": "Burleigh Beach", "distance_km": 2, "drive_min": 5},
+        {"name": "Justins Park", "distance_km": 2, "drive_min": 5}
+      ],
+      "peak_times": "주말 오전에 가이드 투어 참가자로 혼잡",
+      "public_transport": "골드코스트 시내에서 버스 이용 가능"
+    },
+    "experience": {
+      "photo_spots": ["오리너구리(Wally) 관찰 촬영", "화식조 근접 촬영", "부시랜드 산책로"],
+      "golden_hour": "부시랜드 속 시설이라 오전 빛에서 촬영 최적",
+      "seasonal_beauty": "5월 쾌적한 날씨로 야외 관람 최적. 동물들 활발히 활동하는 시기",
+      "hidden_gems": "골드코스트 유일의 오리너구리 관람 장소. Tallebudgera Creek Walking Track(1.4km)으로 Burleigh Head NP까지 연결",
+      "sensory_notes": "부시랜드의 자연 소리, 다양한 새소리, 나무 사이로 비치는 빛"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["커럼빈에 비해 규모 작음", "시설 노후화", "카페/식음 시설 제한적", "주차 공간 협소"],
+      "may_operation": "5월 정상 운영 (매일 9:00-17:00). 크리스마스/ANZAC Day 오전 휴무",
+      "safety_issues": "특별한 안전 이슈 없음",
+      "weather_impact": "야외 위주라 비 오는 날 방문 불편",
+      "quality_trend": "가성비 좋은 입장료. 가이드 투어 품질 유지. 시설은 다소 기본적"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

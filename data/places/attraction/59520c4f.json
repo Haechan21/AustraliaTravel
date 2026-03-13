@@ -51,7 +51,33 @@
         "바나나 농장 투어도 가능"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "무료 주차장 (대형). 입장 자체도 무료",
+      "road_condition": "Pacific Highway 바로 옆. 포장도로. 콥스하버 진입 시 쉽게 발견",
+      "nearby_attractions": [
+        {"name": "Forest Sky Pier (포레스트 스카이 피어)", "distance_km": 3, "drive_min": 5},
+        {"name": "Muttonbird Island (머튼버드)", "distance_km": 6, "drive_min": 10},
+        {"name": "Moonee Beach Nature Reserve (무니 비치)", "distance_km": 10, "drive_min": 12},
+        {"name": "Boambee Headland (보암비)", "distance_km": 10, "drive_min": 12}
+      ],
+      "peak_times": "학교 방학/주말 가장 혼잡. 5월 비수기라 한적할 가능성",
+      "public_transport": "Pacific Highway 인접으로 버스 접근 가능"
+    },
+    "experience": {
+      "photo_spots": ["거대 바나나 조형물 앞 인증샷", "Plantation Coaster 라이딩", "워터파크 (여름 시즌)"],
+      "golden_hour": "실내/야외 혼합 시설. 오전 빛에서 바나나 조형물 사진 좋음",
+      "seasonal_beauty": "5월은 워터파크 시즌 아님. 아이스스케이팅/레이저태그 등 실내 활동 위주",
+      "hidden_gems": "Plantation Coaster 2025년 12월 신규 개장. 바나나 농장 투어도 가능",
+      "sensory_notes": "놀이기구의 스릴과 웃음소리. 바나나 농장의 열대 향. 아이스스케이팅의 차가운 공기"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["개별 어트랙션 가격 비쌈", "올데이 패스 $59-69 비싸다는 의견", "Plantation 투어 실망적", "카페 음식 비싸고 품질 떨어짐"],
+      "may_operation": "매일 9AM-5PM 정상 운영. 모든 시설 이용 가능 (Plantation Coaster 포함)",
+      "safety_issues": "놀이기구 안전 관리 됨. 특별한 이슈 없음",
+      "weather_impact": "실내 활동 (아이스스케이팅, 레이저태그) 우천 시 대안. 야외 활동 일부 영향",
+      "quality_trend": "4.3/5 평가. 최근 Plantation Coaster 신규 개장으로 긍정적. 가격에 대한 불만 지속"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 180,

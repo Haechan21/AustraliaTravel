@@ -54,7 +54,28 @@
         "절벽 가장자리와 폭포 근처 주의"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "차량 입장료 $12/대. West Head 주차장 (아스팔트, 접근성 1대). Bobbin Head, Sphinx Memorial 주차장도 이용 가능",
+      "road_condition": "West Head Rd - 좁고 구불구불한 유칼립투스 숲 속 도로. 자전거 주의. 주의 운전 필요",
+      "nearby_attractions": "시드니 하버 국립공원(010149dd) 차로 40분. 블루스 포인트(1b4d8d4c) 차로 50분. 독립적 반나절~종일 일정으로 계획 필요",
+      "peak_times": "주말 오전. 연간 멀티파크 패스 $65로 할인 가능",
+      "public_transport": "시드니 CBD에서 차로 1시간. 대중교통 매우 불편. 차량 필수"
+    },
+    "experience": {
+      "photo_spots": "West Head Lookout에서 Broken Bay/Pittwater 파노라마. 원주민 암각화 유적",
+      "golden_hour": "동쪽 해안 방향이므로 일출 시 장관. 일몰 시에도 Pittwater 반사광 아름다움",
+      "seasonal_beauty": "5월 가을 - 하이킹 최적 기온(15~20도). 비수기로 한적. 야생동물 관찰 가능성",
+      "hidden_gems": "원주민 암각화 유적지. The Basin 캠핑장. Bobbin Head 피크닉+카페. Spit to Manly Walk 연계",
+      "sensory_notes": "유칼립투스 향, 새소리, 부시워킹의 정취. 시드니 근교에서 만나는 원시 자연"
+    },
+    "risk_check": {
+      "negative_review_patterns": "시드니 도심에서 먼 거리, 대중교통 불편, 좁은 진입 도로",
+      "may_operation": "5월 게이트 시간 6am~6pm (비서머타임). 정상 운영",
+      "safety_issues": "해변 인명구조원 없음. 절벽/폭포 근처 주의. 좁은 도로 운전 주의",
+      "weather_impact": "비 시 트레일 미끄럽고 전망 불가. 맑은 날 필수",
+      "quality_trend": "안정적. 호주 두 번째 오래된 국립공원으로 보존 상태 양호"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 240,

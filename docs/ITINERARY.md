@@ -5,7 +5,7 @@ layout: default
 # 호주여행 확정 일정
 
 > **이 문서는**: 날짜별 확정된 세부 일정을 기록한다. 시간, 장소, 이동 경로 등 **실제 행동 계획**과 그에 대한 **AI 리뷰**를 함께 담는다.
-> 여행 전제 조건(항공, 렌터카 등)은 [`META.md`](./META.md), 기술 설계는 [`SPEC.md`](./SPEC.md), 관광지 평가 랭킹은 [`RANKINGS.md`](./data/scores/RANKINGS.md)를 참조.
+> 여행 전제 조건(항공, 렌터카 등)은 [`META.md`](./META.md), 기술 설계는 [`SPEC.md`](./SPEC.md), 관광지 평가 랭킹은 [`RANKINGS.md`](../data/scores/RANKINGS.md)를 참조.
 
 ---
 
@@ -93,7 +93,7 @@ layout: default
 
 > 각 날짜 일정에 대한 긍정적 의견, 비판적 의견, 대안을 정리한다.
 > 리뷰 프로세스 및 체크리스트는 [SPEC.md Phase 5](./SPEC.md#phase-5-일정-리뷰)를 참조.
-> 근거 자료는 [research/ai-review/](./research/ai-review/)에 보관.
+> 근거 자료는 [research/ai-review/](../research/ai-review/)에 보관.
 
 ## 5월 23일 리뷰
 
