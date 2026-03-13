@@ -53,7 +53,33 @@
         "Little Beach 옆에 위치하여 연계 방문 추천"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "Victoria Parade 무료 주차. 주말에 빨리 차므로 일찍 도착 권장. 시간 제한 없음",
+      "road_condition": "포장도로. Nelson Bay 시내에서 도보 거리",
+      "nearby_attractions": [
+        {"name": "Tomaree Head Summit Walk (토마리 헤드)", "distance_km": 3, "drive_min": 6},
+        {"name": "Port Stephens Kangaroo Encounters (캥거루)", "distance_km": 1.5, "drive_min": 3},
+        {"name": "Little Beach", "distance_km": 0.2, "drive_min": 1},
+        {"name": "Nelson Bay Marina", "distance_km": 1, "drive_min": 3}
+      ],
+      "peak_times": "밀물 시간대 방문객 집중. 주말 오전 혼잡",
+      "public_transport": "넬슨베이 시내에서 도보 접근 가능"
+    },
+    "experience": {
+      "photo_spots": ["수중 스노클링: 스펀지 정원과 블루 그루퍼", "입수 지점 바위 위에서 바라본 만 전경", "Little Beach 연결 해안 경관"],
+      "golden_hour": "동향 만이므로 아침 빛이 수면에 반사. 수중 사진은 맑은 날 정오 전후가 최적",
+      "seasonal_beauty": "5월 수온 하락으로 웻수트 필수. 겨울 어종 관찰 가능. 해수 투명도 양호",
+      "hidden_gems": "1983년부터 보호구역으로 해양 생태계 매우 풍부. 해마, 워비공 상어, 문어 관찰 가능. Little Beach와 연계 방문 추천",
+      "sensory_notes": "수중에서 다양한 해양 생물과 산호 색감. 밀물 시 물속 고요함. 바위 위 파도 소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["장비 대여소가 현장에 없음", "바위가 많아 입수 시 주의 필요", "수영 해변으로는 부적합"],
+      "may_operation": "연중 개방. 스노클링/다이빙 가능",
+      "safety_issues": "바위 바닥이므로 아쿠아슈즈/오리발 필수. 밀물 때만 입수 권장. 저체온증 방지를 위해 웻수트 필수 (5월)",
+      "weather_impact": "파도가 높거나 시야 나쁜 날 스노클링 부적합. 맑은 날 밀물 시간대 최적",
+      "quality_trend": "꾸준히 높은 평가. 보호구역 상태 양호"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 90,

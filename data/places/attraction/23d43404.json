@@ -52,6 +52,31 @@
         "사진 촬영 5분 내외로 충분"
       ]
     },
+    "logistics": {
+      "parking": "Bunnings 주차장 무료 이용. 넓은 주차 공간",
+      "road_condition": "River St(메인 도로) 포장도로. 번닝스 앞 도로 진입이 다소 복잡할 수 있음",
+      "nearby_attractions": [
+        {"name": "Cape Byron Lighthouse (바이런베이)", "distance_km": 30, "drive_min": 30},
+        {"name": "Ballina Fishermen's Co-op", "distance_km": 2, "drive_min": 5},
+        {"name": "Yamba Lighthouse", "distance_km": 80, "drive_min": 70}
+      ],
+      "peak_times": "특별한 혼잡 없음. 로드트립 중 경유 포인트",
+      "public_transport": "발리나 시내 도보 가능 거리"
+    },
+    "experience": {
+      "photo_spots": ["9m 높이 거대 새우 조형물 앞 기념사진", "다양한 각도에서의 유머러스한 포즈 촬영"],
+      "golden_hour": "야외 조형물이라 어느 시간이든 촬영 가능. 아침/오후 빛에서 색감 좋음",
+      "seasonal_beauty": "계절 무관",
+      "hidden_gems": "2013년 $400,000 리모델링으로 꼬리 추가. 길 건너편 해산물 판매점에서 신선한 해산물 구매 가능",
+      "sensory_notes": "도로변 대형 조형물의 유머러스한 분위기"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["5분 이내 볼거리", "별도 관광지로는 부족", "번닝스 앞 도로 진입 복잡"],
+      "may_operation": "24시간 관람 가능 (야외 조형물). 5월 정상",
+      "safety_issues": "도로변이므로 교통 주의",
+      "weather_impact": "우천 시에도 차에서 내려 사진 촬영은 가능하나 불편",
+      "quality_trend": "안정적 상태. 관광 명소로서의 기대치를 낮추면 만족"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

@@ -1,0 +1,91 @@
+{
+  "id": "dc2795c8",
+  "name": "Kiama Lighthouse",
+  "name_ko": "키아마 등대",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "키아마 등대 Blowhole Point Rd, Kiama NSW 2533 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.8626014,
+      "lat": -34.6718161
+    },
+    "address": "Blowhole Point Rd, Kiama NSW 2533, Australia",
+    "region": "울릉공/키아마"
+  },
+  "collected_data": {
+    "rating": 4.3,
+    "total_reviews": 400,
+    "price_level": null,
+    "opening_hours": "상시 개방 (외부). 등대 내부 비공개. Pilots' Cottage Museum 별도.",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": 0,
+        "positive": [
+          "1887년 건립, 해발 36.5m의 역사적 등대",
+          "Blowhole Point에서 바다·새·보트 조망",
+          "큰 블로우홀 바로 옆에 위치하여 연계 방문 편리"
+        ],
+        "negative": [
+          "등대 내부 비공개",
+          "단독 방문 시 체류 시간 매우 짧음"
+        ],
+        "seasonal_notes": "5월 가을 — 맑은 날 해안 전망 좋음. 풍부한 조류 관찰."
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": 0,
+        "positive": [
+          "조용한 분위기로 피크닉과 휴식에 적합",
+          "Pilots' Cottage Museum — 등대 역사 전시",
+          "무료 입장 + 충분한 주차"
+        ],
+        "negative": [
+          "블로우홀이 주인공이라 등대는 부수적"
+        ],
+        "status_notes": "정상 운영 중"
+      },
+      "tips": [
+        "큰 블로우홀(30097942)과 함께 방문 — 같은 Blowhole Point",
+        "Pilots' Cottage Museum에서 등대·해양 역사 학습",
+        "무료 주차, 무료 입장",
+        "키아마역에서 도보 10분"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "Blowhole Point Rd 충분한 무료 주차.",
+      "road_condition": "포장 양호. 키아마 타운센터에서 도보 가능.",
+      "nearby_attractions": [
+        {"name": "Kiama Blowhole (30097942)", "distance_km": 0.1, "drive_min": 1},
+        {"name": "Little Blowhole (87882b26)", "distance_km": 2, "drive_min": 4},
+        {"name": "Bombo Headland (a43e5009)", "distance_km": 3, "drive_min": 5},
+        {"name": "Loves Bay (a183bc9a)", "distance_km": 3, "drive_min": 5}
+      ],
+      "peak_times": "큰 블로우홀과 동일 — 주말 오전~오후 혼잡.",
+      "public_transport": "키아마역에서 도보 10분"
+    },
+    "experience": {
+      "photo_spots": ["등대 + 바다 배경", "Blowhole Point에서 해안선 파노라마"],
+      "golden_hour": "일출 시 동쪽 바다에서 등대를 비추는 따뜻한 빛",
+      "seasonal_beauty": "5월 가을 — 풍부한 해안 조류 관찰. 서늘한 바닷바람.",
+      "hidden_gems": "Pilots' Cottage Museum — 대부분 지나치는 작은 박물관",
+      "sensory_notes": "등대 주변 바닷바람, 갈매기 소리, 근처 블로우홀의 분출 소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["등대 내부 비공개", "단독 방문 시 체류 짧음"],
+      "may_operation": "정상 운영.",
+      "safety_issues": "해안 절벽 가장자리 주의. Blowhole Point 바위 미끄러움.",
+      "weather_impact": "우천 시 전망 제한. 강풍 가능.",
+      "quality_trend": "안정적 유지. 키아마 랜드마크로 관리 양호."
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 20,
+    "cost_aud": 0,
+    "best_time": "오전~오후 (블로우홀 연계)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

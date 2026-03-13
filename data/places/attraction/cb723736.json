@@ -1,0 +1,89 @@
+{
+  "id": "cb723736",
+  "name": "Hassans Walls Lookout",
+  "name_ko": "하산스 월즈 전망대",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "Hassans Walls Lookout, Hassans Walls NSW 2790 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.1511903,
+      "lat": -33.5152831
+    },
+    "address": "Hassans Walls Rd, Hassans Walls NSW 2790, Australia",
+    "region": "블루마운틴"
+  },
+  "collected_data": {
+    "rating": 4.6,
+    "total_reviews": 400,
+    "price_level": null,
+    "opening_hours": "24시간 개방 (무료 입장)",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": null,
+        "positive": [
+          "블루마운틴에서 가장 높은 전망대 (해발 약 1,100m)",
+          "하틀리 밸리와 마운트 윌슨, 마운트 요크까지 장대한 파노라마",
+          "새로 설치된 조셉 쿡 보드워크로 접근성 대폭 향상"
+        ],
+        "negative": [
+          "리스고 외곽에 위치해 블루마운틴 주요 명소와 거리 있음",
+          "비포장 구간 도로가 있을 수 있음"
+        ],
+        "seasonal_notes": "5월 가을에 밸리의 단풍과 롤링 밸리 풍경이 아름다움"
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": null,
+        "positive": [
+          "리스고 카운슬이 보드워크 신설로 1급 관광지로 업그레이드",
+          "휠체어/유모차 접근 가능한 보드워크",
+          "피크닉 테이블, 화장실 등 편의시설 완비",
+          "반려동물 동반 가능"
+        ],
+        "negative": [
+          "리스고에서도 약간 벗어난 위치",
+          "바람이 매우 강할 수 있음"
+        ],
+        "status_notes": "정상 운영 중. 최근 대규모 시설 업그레이드 완료"
+      },
+      "tips": [
+        "무료 주차 및 무료 입장",
+        "보드워크를 따라 절벽 위 180도 전망 감상",
+        "Zig Zag Railway(5808639b)와 함께 리스고 방문 시 연계 추천",
+        "바람이 강하므로 따뜻한 옷과 모자 지참",
+        "역사 안내판이 있어 지역 역사도 학습 가능"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "무료 주차장. 주차장에서 전망대까지 짧은 도보. 충분한 공간",
+      "road_condition": "Hassans Walls Rd - 비포장 구간 있으나 일반 차량 통행 가능. 저속 운행 권장",
+      "nearby_attractions": "지그재그 레일웨이(5808639b) 차로 15분. 제놀란 동굴(36dc1295) 차로 50분(현재 폐쇄). 리스고 타운 차로 10분. 블루마운틴 주요 명소(카툼바) 차로 40분+",
+      "peak_times": "주말 오전~오후. 평일은 매우 한적",
+      "public_transport": "대중교통 접근 불가. 차량 필수"
+    },
+    "experience": {
+      "photo_spots": "보드워크 끝에서 180도 파노라마. 절벽 위에서 롤링 밸리 전경. 일출/일몰 시 드라마틱한 조명",
+      "golden_hour": "서쪽~남서쪽 방향 전망이므로 일몰 시 밸리가 황금빛으로 물듦",
+      "seasonal_beauty": "5월 가을 - 고도가 높아 기온이 낮지만 밸리의 가을 색감이 풍부. 맑은 날 원거리 조망 가능",
+      "hidden_gems": "관광객이 카툼바에 집중되므로 이곳은 한적한 블루마운틴의 숨은 보석. 호주에서 가장 높은 전망대라는 타이틀",
+      "sensory_notes": "강한 바람, 광활한 시야, 고도감에서 오는 경외감. 하늘과 가까이 있는 느낌"
+    },
+    "risk_check": {
+      "negative_review_patterns": "위치가 외곽이라 이동 시간 부담. 바람이 매우 강함. 비포장 도로 일부 불편",
+      "may_operation": "5월 정상 운영. 해발 1,100m로 기온이 낮음 (5~10도 가능) - 방한복 필수",
+      "safety_issues": "절벽 가장자리 보드워크 밖으로 나가지 말 것. 강풍 시 주의. 비포장 도로 야간 운전 주의",
+      "weather_impact": "안개/비/강풍 시 전망 불가 및 위험. 고도가 높아 날씨 변화 급격",
+      "quality_trend": "매우 긍정적. 최근 보드워크 신설로 시설 품질 크게 향상"
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 45,
+    "cost_aud": 0,
+    "best_time": "맑은 날 오후 (일몰 전)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

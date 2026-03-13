@@ -53,6 +53,31 @@
         "5월 방문 시 여분의 옷과 수건 준비 권장"
       ]
     },
+    "logistics": {
+      "parking": "주차장 매우 제한적. 주말 9시 전 도착 필수. 만차 시 도로변 1km 추가 보행. 불법 주차 시 벌금",
+      "road_condition": "Nerang/Canungra에서 접근. 좁은 산악도로 — 버스/트레일러/캐러밴 부적합",
+      "nearby_attractions": [
+        {"name": "Tamborine Mountain (Gallery Walk 쇼핑거리)", "distance_km": 5, "drive_min": 10},
+        {"name": "Lamington National Park", "distance_km": 40, "drive_min": 50},
+        {"name": "Thunderbird Park", "distance_km": 2, "drive_min": 5}
+      ],
+      "peak_times": "주말 매우 혼잡. 평일 오전 권장",
+      "public_transport": "대중교통 접근 어려움. 차량 필수"
+    },
+    "experience": {
+      "photo_spots": ["폭포 전경과 암벽", "록풀 수영 장면", "500m 산책로 중간 전망대"],
+      "golden_hour": "계곡 방향이라 오전 늦은 시간에 빛이 비침",
+      "seasonal_beauty": "5월 가을 수량 줄 수 있으나 폭포 감상 여전히 가능. 수온 낮아 수영은 다소 차가움",
+      "hidden_gems": "록 슬라이드 — 자연 미끄럼틀처럼 바위를 타고 내려갈 수 있는 스팟. 500m 짧은 산책로로 접근 용이",
+      "sensory_notes": "폭포 물소리, 시원한 물안개, 바위의 이끼 질감, 새소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["주말 주차 매우 부족 (만차 시 1km 추가 보행)", "불법 주차 단속 벌금", "우기 시 물살 강해 수영 위험"],
+      "may_operation": "4-9월 운영시간 6am-6pm. 야간 접근 금지. 2025년 3월 악천후 피해로 2026년 6월 30일까지 일부 영향 — 방문 전 공원 알림 확인 필수",
+      "safety_issues": "록풀 수영 시 바위 미끄러움 — 중상/사망 사고 발생 이력. 다이빙 위험. 우기 시 물살 강해 수영 금지",
+      "weather_impact": "우천 시 물살 강해져 수영 위험. 비 후 바위 미끄러움 증가. 악천후 피해 복구 확인 필요",
+      "quality_trend": "무료 입장 가성비 우수하나 주차 문제 지속. 악천후 피해 복구 중"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

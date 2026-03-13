@@ -51,6 +51,31 @@
         "무료 주차 및 BBQ 시설"
       ]
     },
+    "logistics": {
+      "parking": "무료 주차장 및 BBQ 시설 구비",
+      "road_condition": "포장도로, Camden Haven River 인근",
+      "nearby_attractions": [
+        {"name": "Laurieton (강변 타운십)", "distance_km": 5, "drive_min": 8},
+        {"name": "Port Macquarie 시내", "distance_km": 20, "drive_min": 25},
+        {"name": "Ellenborough Falls", "distance_km": 70, "drive_min": 75}
+      ],
+      "peak_times": "주말 오전에 산책/자전거족으로 약간 혼잡. 평일은 한산",
+      "public_transport": "대중교통 접근 어려움"
+    },
+    "experience": {
+      "photo_spots": ["방파제 끝에서 바다/강 양쪽 뷰", "펠리컨과 돌고래 촬영"],
+      "golden_hour": "일몰 시 Camden Haven River에 반사되는 빛이 아름다움",
+      "seasonal_beauty": "5월 가을에도 산책하기 좋은 날씨. 고래 이동 시즌 시작",
+      "hidden_gems": "Camden Haven River를 따라 Laurieton까지 이어지는 산책로. 돌고래 빈번 출몰",
+      "sensory_notes": "파도 소리, 바닷새 소리, 바닷바람, 한적한 분위기"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["특별한 액티비티 없이 단순 산책 명소", "편의시설 외 볼거리 제한"],
+      "may_operation": "24시간 개방. 5월 정상 이용 가능",
+      "safety_issues": "방파제 위 바람 주의. 낚시 시 파도 주의",
+      "weather_impact": "강풍/비 시 방파제 산책 불편",
+      "quality_trend": "새로 포장된 산책로로 시설 상태 양호. 휠체어 접근 가능"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

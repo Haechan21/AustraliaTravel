@@ -54,6 +54,32 @@
         "울리-울리 강 어귀가 수영에 안전"
       ]
     },
+    "logistics": {
+      "parking": "마을 내 무료 노변 주차 충분. 방파제(breakwall)로의 차량 진입 불가",
+      "road_condition": "외진 위치. 그래프턴/야마에서 접근. 포장도로이나 마지막 구간 비포장 가능",
+      "nearby_attractions": [
+        {"name": "Yuraygir National Park", "distance_km": 0, "drive_min": 0},
+        {"name": "Solitary Islands Marine Park", "distance_km": 0, "drive_min": 0},
+        {"name": "Wooli Dive Centre (고래 크루즈)", "distance_km": 0.5, "drive_min": 2},
+        {"name": "Yamba Lighthouse", "distance_km": 60, "drive_min": 55}
+      ],
+      "peak_times": "여름 학교 방학 시 혼잡. 5월 비수기 한산",
+      "public_transport": "대중교통 없음. 차량 필수"
+    },
+    "experience": {
+      "photo_spots": ["강과 바다가 만나는 어귀 풍경", "방파제에서의 낚시 장면", "한적한 해변 전경"],
+      "golden_hour": "동쪽 해안이라 일출 뷰 우수",
+      "seasonal_beauty": "5월 가을 낚시 시즌 — 도미, 납작어 잡기 좋은 시기. 5-11월 고래 관찰 가능. 해수온 아직 괜찮은 편",
+      "hidden_gems": "Yuraygir National Park에 거의 둘러싸여 있어 65km 해안선의 원시 자연. Solitary Islands Marine Park에서 다이빙/스노클링 가능",
+      "sensory_notes": "한적한 어촌 마을의 고요함, 파도 소리, 낚시의 여유, 자연 그대로의 해변"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["편의시설 최소한", "관광 인프라 부족", "접근성 떨어짐 (외진 위치)", "휴대폰 신호 약함"],
+      "may_operation": "24시간 개방. 5월 정상 이용 가능. 낚시 면허 필요 (18세 미만 면제)",
+      "safety_issues": "해변 여름만 순찰. 해양 조건 변화 주의. 식수/식량 충분히 준비. 휴대폰 수신 불안정",
+      "weather_impact": "우천/풍랑 시 낚시/수영 위험. 외진 위치라 기상 악화 시 대피 어려움",
+      "quality_trend": "피크닉 테이블, BBQ, 화장실 시설 유지. 원시 자연 그대로의 매력"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

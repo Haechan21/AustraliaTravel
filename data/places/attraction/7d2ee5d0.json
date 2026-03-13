@@ -1,0 +1,88 @@
+{
+  "id": "7d2ee5d0",
+  "name": "Blenheim Beach",
+  "name_ko": "블렌하임 비치",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "블렌하임 비치, 저비스 베이 Vincentia NSW 2540 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.6913912,
+      "lat": -35.083068
+    },
+    "address": "Blenheim Beach, Vincentia NSW 2540, Australia",
+    "region": "서던하이랜드/저비스베이"
+  },
+  "collected_data": {
+    "rating": 4.7,
+    "total_reviews": 500,
+    "price_level": null,
+    "opening_hours": "상시 개방",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": 0,
+        "positive": [
+          "Hyams Beach의 조용한 대안 — 비슷한 수질에 적은 인파",
+          "놀랍도록 맑고 연한 파란색 물",
+          "깨끗하고 부드러운 백사장"
+        ],
+        "negative": [
+          "수온이 낮아 수영 제한적 (5월)"
+        ],
+        "seasonal_notes": "5월 가을 — 수영하기엔 수온 낮지만 해변 산책과 돌고래 관찰에 적합. 인파 적어 한적."
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": 0,
+        "positive": [
+          "저비스 베이 최고의 스노클링 포인트",
+          "가족 친화적 — 만 안쪽으로 파도 잔잔",
+          "주차장에서 해변까지 가까움 + 놀이터, 화장실, 샤워 시설"
+        ],
+        "negative": [
+          "여름 성수기 혼잡"
+        ],
+        "status_notes": "정상 운영 중"
+      },
+      "tips": [
+        "Hyams Beach 대신 방문 — 비슷한 품질에 적은 인파",
+        "스노클링 장비 지참 (풍부한 해양생물)",
+        "주차장 + 화장실 + 샤워 + 놀이터 완비",
+        "돌고래가 해안 가까이 오므로 주시"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "소규모 무료 주차장. 해변 바로 위. 여름 혼잡하나 5월은 여유.",
+      "road_condition": "Vincentia 주거 도로. 포장 양호. 시드니에서 약 3시간.",
+      "nearby_attractions": [
+        {"name": "Fitzroy Falls (c49e60e1)", "distance_km": 75, "drive_min": 80},
+        {"name": "Carrington Falls (22d70fbe)", "distance_km": 60, "drive_min": 70}
+      ],
+      "peak_times": "여름 주말 혼잡. 5월은 한적.",
+      "public_transport": "Nowra/Bomaderry역에서 버스. 접근 제한적. 차량 권장."
+    },
+    "experience": {
+      "photo_spots": ["백사장 + 청록색 바다 파노라마", "부시에서 해변으로 내려가는 진입로", "수중 스노클링 장면"],
+      "golden_hour": "오전 햇살이 만을 비추면 물색이 가장 맑고 아름다움",
+      "seasonal_beauty": "5월 가을 — 여름 인파 없이 조용한 백사장. 물색은 여전히 아름다움.",
+      "hidden_gems": "해변에서 돌고래가 해안 근처까지 오는 모습 관찰 — 무인도 느낌",
+      "sensory_notes": "부드러운 백사장, 맑은 물, 숲에서 해변으로 전환되는 공간, 잔잔한 파도 소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["5월 수온 낮음", "여름 혼잡"],
+      "may_operation": "정상 운영. 한적한 비수기.",
+      "safety_issues": "잔잔한 만이라 안전한 편. 구조대 없으므로 수영 시 주의.",
+      "weather_impact": "우천 시 해변 매력 감소. 바람 강하면 불쾌. 수온 낮음(약 18°C).",
+      "quality_trend": "Hyams Beach 대안으로 인지도 상승 추세. 시설 양호."
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 60,
+    "cost_aud": 0,
+    "best_time": "오전~오후 (맑은 날)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

@@ -55,7 +55,28 @@
         "Honeymoon Bridge까지 계단 내려가기 가능"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "에코 포인트 유료 주차장 (시간당 $4, 접근성 5대). 주말 혼잡 시 600m 떨어진 노상 주차 필요. 무료 주차 없음",
+      "road_condition": "Echo Point Rd - 포장 도로, 양호. 카툼바 시내에서 접근 용이",
+      "nearby_attractions": "에코 포인트(ef2de137) 같은 위치. 시닉월드(b39fd373) 도보 20분/차로 5분. 카툼바 폭포(fdef9085) 도보 15분. 시닉 레일웨이(c92d2048) 차로 5분",
+      "peak_times": "오전 10시~오후 4시 관광버스 단체객으로 극심한 혼잡. 오후 5시 이후 또는 이른 아침 추천",
+      "public_transport": "카툼바역에서 686G 버스 20분. 도보 30분"
+    },
+    "experience": {
+      "photo_spots": "에코 포인트 다단계 전망 플랫폼에서 각기 다른 앵글. Honeymoon Bridge에서 올려보는 앵글",
+      "golden_hour": "동쪽 밸리 방향이므로 오후 늦게 석양에 물든 암석이 황금빛/주황빛으로 변하며 장관",
+      "seasonal_beauty": "5월 가을 - 단풍 배경의 쓰리시스터스. 가을 빛에 물든 암석 색감 특히 아름다움",
+      "hidden_gems": "원주민 전설이 깃든 문화적 가치. Three Sisters Walk로 직접 다가갈 수 있음. Honeymoon Bridge까지 계단 하강",
+      "sensory_notes": "바람, 광활한 밸리의 깊이감, 유칼립투스 향. 블루마운틴의 상징적 존재감"
+    },
+    "risk_check": {
+      "negative_review_patterns": "극심한 혼잡(관광버스 단체), 주차 어려움과 비싼 주차비, 안개 시 전망 불가, 바람 강함",
+      "may_operation": "5월 정상 운영. 24시간 개방",
+      "safety_issues": "Three Sisters Walk 계단 다소 가파름. Honeymoon Bridge 구간 주의. 절벽 가장자리 안전 울타리 있음",
+      "weather_impact": "안개 빈도 증가(특히 아침). 비/강풍 시 전망 불가. 바람 강해 체감온도 낮음",
+      "quality_trend": "안정적. 블루마운틴 대표 랜드마크로 지속적 관리. 시설 양호"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 45,

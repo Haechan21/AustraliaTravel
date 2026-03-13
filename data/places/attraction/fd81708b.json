@@ -54,7 +54,28 @@
         "온라인 사전 예매 시 할인 적용"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "종일 $24 (Zoo Friends $12). 90분 이내 무료. 최대 높이 2.1m. 공간 충분",
+      "road_condition": "Bradleys Head Rd - 좁은 구간 있으나 양호",
+      "nearby_attractions": "시드니 하버 국립공원(010149dd) 인접. 블루스 포인트(1b4d8d4c) 페리+도보 30분. 루나파크(3e54b21c) 페리로 접근",
+      "peak_times": "주말 오전~오후, 학교 방학 기간. 5월 비수기로 비교적 한적",
+      "public_transport": "서큘러 키에서 페리 12분 (추천). 100번 버스(Mosman~City). 238번 버스(Balmoral~페리와프)"
+    },
+    "experience": {
+      "photo_spots": "동물원 내에서 시드니 하버+오페라하우스 배경 사진. 코알라/캥거루와 함께 촬영",
+      "golden_hour": "하버 방향 서쪽이므로 오후 늦은 시간 하버 배경 역광 사진 아름다움",
+      "seasonal_beauty": "5월 가을 - 겨울 시즌 시작으로 동물 관람에 쾌적한 기온. 비수기 한적",
+      "hidden_gems": "무료 키퍼토크와 야생동물 프레젠테이션. 페리로 가면서 하버 경치 보너스. 호주 고유 동물 집중 구역",
+      "sensory_notes": "동물 소리, 유칼립투스 향, 하버 바람. 자연과 도시가 만나는 독특한 경험"
+    },
+    "risk_check": {
+      "negative_review_patterns": "입장료 비쌈($51+), 일부 동물 안 보임, 스카이 사파리 케이블카 공사 중, 언덕 많아 체력 소모",
+      "may_operation": "5월 겨울 시즌 - 9:30~16:30 (1시간 일찍 폐장). 정상 운영",
+      "safety_issues": "특별한 위험 없음. 언덕이 많아 체력 관리 필요. 유모차/휠체어 경사 구간 있음",
+      "weather_impact": "비 시에도 관람 가능하나 야외 동물 활동 감소. 맑은 날 하버 뷰 극대화",
+      "quality_trend": "안정적이나 스카이 사파리 공사로 일부 불편. 교체 완료 시 개선 예상"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 240,

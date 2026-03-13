@@ -53,7 +53,28 @@
         "갭 공원(The Gap)과 함께 묶어서 방문 추천"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "Craig Ave 노상 무료 주차. 접근성 주차 1대. 공간 매우 제한적",
+      "road_condition": "주택가 도로, 양호. 좁은 골목",
+      "nearby_attractions": "갭 공원(472d62b4) 차로 5분/도보 20분 - 해안 산책로 연계 가능. 본다이~브론테(034f4322) 차로 10분",
+      "peak_times": "주말 오후. 규모가 작아 소수 인원으로도 붐비는 느낌",
+      "public_transport": "인근 버스 정류장에서 도보 거리. 325번 버스 등 이용 가능"
+    },
+    "experience": {
+      "photo_spots": "보드워크에서 절벽과 바다 파노라마. Sydney Heads 원경. 드라마틱한 해안 절벽 클로즈업",
+      "golden_hour": "동쪽 해안이므로 일출 시 최적. 맑은 날 오후에도 해안선이 선명",
+      "seasonal_beauty": "5월 가을 - 맑은 하늘에 해안 절벽 전망 특히 아름다움. 돌고래 관찰 가능성",
+      "hidden_gems": "숨겨진 보석 같은 절벽 전망 명소. 반려견 동반 가능(목줄 필수, 별도 오프리시 구역). 해안 산책로로 갭 공원까지 연계",
+      "sensory_notes": "바다 바람, 파도 소리, 절벽 아래 부서지는 파도의 하얀 물거품. 소규모 공간의 친밀함"
+    },
+    "risk_check": {
+      "negative_review_patterns": "규모 작아 오래 머물기 어려움, 주차 제한적",
+      "may_operation": "5월 정상 운영. 24시간 개방",
+      "safety_issues": "절벽 가장자리 펜스 너머로 가지 말 것. 보드워크 밖 위험",
+      "weather_impact": "비/강풍 시 해안 절벽 위험. 맑은 날에만 전망 가치",
+      "quality_trend": "안정적. 2004년 보드워크 설치 이후 잘 관리됨"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 30,

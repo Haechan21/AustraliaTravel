@@ -54,7 +54,33 @@
         "투어 시작 시간 전에 여유 있게 도착할 것"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "현장 주차 가능. 2130 Nelson Bay Rd에 위치",
+      "road_condition": "포장도로 (Nelson Bay Rd). 시설 내부는 비포장 오프로드",
+      "nearby_attractions": [
+        {"name": "Oakfield Ranch Camel Rides (낙타)", "distance_km": 15, "drive_min": 18},
+        {"name": "Stockton Sand Dunes", "distance_km": 10, "drive_min": 15},
+        {"name": "Irukandji Shark & Ray (이루칸지)", "distance_km": 12, "drive_min": 15},
+        {"name": "Toboggan Hill Park (토보건)", "distance_km": 20, "drive_min": 25}
+      ],
+      "peak_times": "주말/공휴일 예약 빨리 참. 평일이 한적",
+      "public_transport": "대중교통 접근 어려움. 자차 필수"
+    },
+    "experience": {
+      "photo_spots": ["사구 위에서 쿼드바이크 라이딩 액션샷", "모래언덕 정상에서 파노라마 전망", "투어 중 자연 속 오프로드 체험"],
+      "golden_hour": "오전 투어(9AM)가 아침 빛에서 좋은 사진 촬영 기회",
+      "seasonal_beauty": "5월 가을 날씨로 오프로드 체험에 쾌적. 비 온 후 진흙길이 더 재미있다는 후기",
+      "hidden_gems": "1.5시간 사파리+4WD 체험이 알찬 구성. 원주민 문화 체험 포함 투어도 있음",
+      "sensory_notes": "쿼드바이크 엔진 진동. 모래/진흙 튀기는 스릴. 바람을 가르는 속도감"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["전화 예약 시 응대 느림", "시설 노후 의견", "화장실 시설 없다는 불만", "광고와 실제 체험 차이 의견 일부"],
+      "may_operation": "매일 9AM-4PM 정상 운영",
+      "safety_issues": "긴 바지와 닫힌 신발 착용 필수. 안전 브리핑 후 체험. 미성년자 보호자 동반 필요",
+      "weather_impact": "비 오는 날에도 운영 (진흙 코스). 극심한 악천후 시 취소 가능",
+      "quality_trend": "7000건 이상 리뷰. 전반적 높은 평가(4.5/5)이나 일부 부정 리뷰 존재"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 105,

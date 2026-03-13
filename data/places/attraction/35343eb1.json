@@ -1,0 +1,87 @@
+{
+  "id": "35343eb1",
+  "name": "Chang Lai Yuan Chinese Gardens",
+  "name_ko": "창 라이 위안 중국식 정원",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "창 라이 위안 가든스 Knox Rd, Doonside NSW 2767 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.86046919999998,
+      "lat": -33.7641221
+    },
+    "address": "Nurragingy Reserve, Knox Rd, Doonside NSW 2767, Australia",
+    "region": "시드니"
+  },
+  "collected_data": {
+    "rating": 4.3,
+    "total_reviews": 150,
+    "price_level": null,
+    "opening_hours": "매일 8:00~17:00 (서머타임 기간 8:00~19:00). Nurragingy Reserve 내 위치",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": null,
+        "positive": [
+          "명/청 왕조 스타일의 정교한 중국식 건축물",
+          "시드니 서부에서 색다른 문화 체험 가능",
+          "조용하고 평화로운 분위기"
+        ],
+        "negative": [
+          "시드니 도심에서 먼 서부 외곽 위치",
+          "규모가 크지 않아 방문 시간이 짧을 수 있음"
+        ],
+        "seasonal_notes": "5월 가을에 정원의 단풍과 함께 산책하기 좋은 시기"
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": null,
+        "positive": [
+          "무료 입장으로 부담 없는 방문",
+          "7개 아치 석교(샤먼 화강암), 폭포 정자 등 포토 스팟 풍부",
+          "Nurragingy Reserve 내 넓은 공원과 함께 즐길 수 있음"
+        ],
+        "negative": [
+          "대중교통 접근 불편",
+          "주변에 다른 관광 명소가 부족"
+        ],
+        "status_notes": "정상 운영 중. 블랙타운 시의회와 중국 랴오청시의 자매도시 우호 상징으로 조성"
+      },
+      "tips": [
+        "Nurragingy Reserve 내 주차장 이용 (무료, 충분한 공간)",
+        "정원과 함께 Nurragingy Reserve 전체를 산책하면 반나절 소요",
+        "사진 촬영에 좋은 장소 - 7개 아치 석교가 특히 인기",
+        "도심 관광과 동선이 맞지 않으므로 블루마운틴 이동 시 경유 고려"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "Nurragingy Reserve 내 무료 주차장 충분. 대형차 가능",
+      "road_condition": "일반 시내 도로, 양호. M4 모터웨이에서 접근 용이",
+      "nearby_attractions": "시드니 도심 장소들과 거리 먼 편. 블루마운틴 방면 이동 시 경유 가능 (M4 경유). 마운트 아난 보태닉 가든(b8c93251)과 동선 유사하지 않음",
+      "peak_times": "주말 오전~오후. 평일은 한적",
+      "public_transport": "Doonside역에서 도보 20분+. 대중교통 접근 불편하여 차량 필수"
+    },
+    "experience": {
+      "photo_spots": "7개 아치 석교, 폭포 정자, 게이트웨이 입구가 주요 포토 스팟. 연못에 비치는 반영 사진 가능",
+      "golden_hour": "오후 늦은 시간 석양이 정원 건축물에 비추면 아름다움",
+      "seasonal_beauty": "5월 가을 - 정원 내 나무들의 단풍과 중국식 건축물의 조화",
+      "hidden_gems": "서시드니에서 동양적 분위기를 느낄 수 있는 유일한 장소. 호주-중국 문화 융합의 독특한 공간",
+      "sensory_notes": "물 흐르는 소리, 새소리, 돌다리 위 발걸음. 도시를 벗어난 듯한 평화로움"
+    },
+    "risk_check": {
+      "negative_review_patterns": "위치가 외곽이라 접근성 불만. 규모가 작다는 평가. 관리 상태에 대한 간헐적 불만",
+      "may_operation": "5월 정상 운영. 동절기 시간(8:00~17:00) 적용",
+      "safety_issues": "특별한 안전 이슈 없음. 가족 친화적 환경",
+      "weather_impact": "비 시 야외 산책 불편하나 정자에서 비를 피할 수 있음",
+      "quality_trend": "안정적. 시의회 관리하에 유지되고 있으나 대규모 업그레이드는 없음"
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 60,
+    "cost_aud": 0,
+    "best_time": "오전~오후 (맑은 날)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

@@ -51,6 +51,31 @@
         "우천 시에도 보드워크 이용 가능하여 비 오는 날 대안으로 좋음"
       ]
     },
+    "logistics": {
+      "parking": "아스팔트 주차장, 장애인 주차 2면 포함. 충분한 주차 공간",
+      "road_condition": "Pacific Drive, 포장도로 접근 용이",
+      "nearby_attractions": [
+        {"name": "Tacking Point Lighthouse", "distance_km": 2.0, "drive_min": 5},
+        {"name": "Port Macquarie Coastal Walk (Shelly Beach 구간)", "distance_km": 0.5, "drive_min": 2},
+        {"name": "Port Macquarie Camel Safaris", "distance_km": 2.5, "drive_min": 5}
+      ],
+      "peak_times": "주말 오전에 약간 혼잡. 평일은 한산",
+      "public_transport": "포트맥쿼리 시내에서 버스 가능하나 빈도 낮음"
+    },
+    "experience": {
+      "photo_spots": ["1.3km 보드워크 위 열대우림 캐노피", "Hello Koala 조각 트레일"],
+      "golden_hour": "우림 내부라 직사광선 적음. 오전 빛이 캐노피를 통해 들어올 때 아름다움",
+      "seasonal_beauty": "5월에도 열대우림이라 초록빛 유지. 비 오는 날 우림의 촉촉한 분위기가 특별한 매력",
+      "hidden_gems": "카페에서 양질의 식사 가능. 선물가게에서 환경 제품 구매. 원주민 문화 전시 볼거리 풍부",
+      "sensory_notes": "새소리, 습한 우림의 흙냄새, 보드워크 위 나무 향기, 선선한 공기"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["입장료가 다소 비싸다는 의견", "규모가 크지 않아 빠르게 끝남"],
+      "may_operation": "5월 정상 운영 (매일 9:00-16:30)",
+      "safety_issues": "보드워크로 되어있어 안전. 미끄럼 주의",
+      "weather_impact": "보드워크라 비 오는 날에도 이용 가능 — 우천 시 대안으로 우수",
+      "quality_trend": "안정적 운영 유지. 시설 관리 양호"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

@@ -1,0 +1,88 @@
+{
+  "id": "7e886049",
+  "name": "Everglades House & Gardens",
+  "name_ko": "에버글라데스 하우스 & 가든스",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "에버글라데스 하우스 & 가든스 37 Everglades Ave, Leura NSW 2780 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.3383116,
+      "lat": -33.7212619
+    },
+    "address": "37 Everglades Ave, Leura NSW 2780, Australia",
+    "region": "블루마운틴"
+  },
+  "collected_data": {
+    "rating": 4.4,
+    "total_reviews": 500,
+    "price_level": "$",
+    "opening_hours": "수~월 10:00~16:00 (마지막 입장 15:00), 화요일 휴무. 티룸: 목~일 11:00~15:00",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": null,
+        "positive": [
+          "호주에서 가장 아름다운 전간기(1930년대) 정원 중 하나",
+          "가을 단풍과 아트데코 건축의 조화가 인상적",
+          "제이미슨 밸리 전망이 정원과 하우스에서 모두 보임"
+        ],
+        "negative": [
+          "바닥이 고르지 않아 보행 주의 필요",
+          "규모에 비해 입장료가 다소 비싸다는 의견"
+        ],
+        "seasonal_notes": "5월 가을은 정원의 단풍이 아름다운 시기. 쿨 클라이밋 가든의 특성상 가을 색감이 특히 좋음"
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": null,
+        "positive": [
+          "폴 소렌슨이 설계한 역사적 정원의 예술적 가치",
+          "내셔널 트러스트(NSW)가 관리하는 잘 보존된 헤리티지",
+          "데번셔 티를 즐기며 여유로운 시간 가능",
+          "다양한 테라스 정원에서 각기 다른 풍경 감상"
+        ],
+        "negative": [
+          "화요일 휴무로 일정 계획 시 주의",
+          "마지막 입장 15시로 오후 늦게 방문 불가"
+        ],
+        "status_notes": "정상 운영 중. Leura 지역 3위 관광지"
+      },
+      "tips": [
+        "최소 2~2.5시간 여유를 두고 방문 추천",
+        "바닥이 고르지 않으므로 편한 운동화 착용",
+        "티룸에서 데번셔 티(스콘+크림+잼) 체험 추천",
+        "피크닉 도시락 가져와 잔디밭에서 즐길 수 있음"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "Everglades Ave에 무료 노상 주차 가능. 주말 혼잡할 수 있음",
+      "road_condition": "Leura 시내 일반 도로, 양호. Great Western Highway에서 쉽게 접근",
+      "nearby_attractions": "서블라임 포인트 전망대(04cc52a2) 차로 5분. 에코 포인트/쓰리시스터스(ef2de137/89376ce6) 차로 10분. 시닉월드(b39fd373) 차로 8분. 카툼바 폭포(fdef9085) 차로 10분",
+      "peak_times": "주말 오전 11시~오후 2시. 평일은 한적",
+      "public_transport": "Leura역에서 도보 15분. 카툼바역에서 버스 이용 가능"
+    },
+    "experience": {
+      "photo_spots": "테라스 정원에서 제이미슨 밸리 배경 사진. 아트데코 하우스 외관. 연못과 반영 사진",
+      "golden_hour": "오후 늦은 시간 정원에 드리우는 석양빛이 따뜻한 분위기 연출",
+      "seasonal_beauty": "5월 가을 - 쿨 클라이밋 가든의 단풍 절정. 낙엽 진 정원길이 로맨틱",
+      "hidden_gems": "폴 소렌슨의 정원 설계 미학을 느낄 수 있는 문화적 깊이. 잘 알려지지 않은 블루마운틴의 보석",
+      "sensory_notes": "새소리, 바람에 흔들리는 나뭇잎, 스콘과 차의 향. 1930년대로 시간 여행하는 듯한 분위기"
+    },
+    "risk_check": {
+      "negative_review_patterns": "바닥 고르지 않음(노약자 주의), 입장료 대비 규모 작다는 의견, 화요일 휴무 몰랐다는 불만",
+      "may_operation": "5월 정상 운영 (수~월). 화요일 휴무 주의",
+      "safety_issues": "고르지 않은 지면 - 보행 불편자 주의. 특별한 위험 요소 없음",
+      "weather_impact": "비 시 야외 정원 산책 불편. 하우스 내부와 티룸은 실내",
+      "quality_trend": "안정적. 내셔널 트러스트 관리하에 잘 보존됨"
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 120,
+    "cost_aud": 17,
+    "best_time": "오전~오후 (맑은 날)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

@@ -55,7 +55,33 @@
         "닫힌 신발 착용 필수"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "넓은 무료 주차장. 16 Aquatic Close 진입",
+      "road_condition": "포장도로. Nelson Bay 시내에서 가까움",
+      "nearby_attractions": [
+        {"name": "Tomaree Head Summit Walk (토마리 헤드)", "distance_km": 8, "drive_min": 12},
+        {"name": "Port Stephens Kangaroo Encounters (캥거루)", "distance_km": 5, "drive_min": 8},
+        {"name": "Irukandji Shark & Ray (이루칸지)", "distance_km": 6, "drive_min": 10},
+        {"name": "Fly Point Aquatic Reserve (플라이 포인트)", "distance_km": 6, "drive_min": 10}
+      ],
+      "peak_times": "주말/학교 방학 대기시간 1-3시간. 평일 대기 크게 줄어듦",
+      "public_transport": "넬슨베이 시내에서 버스 또는 도보 가능"
+    },
+    "experience": {
+      "photo_spots": ["1km 토보건 트랙 11개 커브 라이딩 액션샷", "자연 숲 속 어드벤처 파크 풍경", "아이스스케이팅/암벽등반 체험"],
+      "golden_hour": "숲 속이라 직접적 일출/일몰 뷰 없음. 오후 빛이 숲 사이로 들어오는 분위기",
+      "seasonal_beauty": "5월 비수기라 대기시간 짧아 오히려 좋음. 실내 활동 포함",
+      "hidden_gems": "트랙터 라이드와 미로도 숨은 재미. 비동행자도 입장료 $10에 무료 액티비티 1장 포함",
+      "sensory_notes": "토보건 내리막 속도감과 바람. 숲 속 공기. 아이스스케이팅의 차가운 공기"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["라이드별 별도 요금으로 비용 누적", "주말/방학 대기 1-3시간", "시설 노후", "가격이 비싸다는 의견", "안전 관리 부실 의견 (브레이크 고장, 감독 부재)"],
+      "may_operation": "수~금 10AM-3PM, 토~일 10AM-4PM. 학교 방학 중 매일 운영",
+      "safety_issues": "일부 안전 관리 우려 리뷰 (브레이크 고장, 충돌 사고 보고). 닫힌 신발 착용 필수",
+      "weather_impact": "야외 활동 우천 시 영향. 일부 실내 활동 가능. 젖은 트랙에서 충돌 사고 보고 있음",
+      "quality_trend": "3.8/5로 다소 낮은 편. 가격 대비 만족도와 안전에 대한 비판 지속"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 120,

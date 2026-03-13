@@ -52,6 +52,32 @@
         "선크림과 모자 필수"
       ]
     },
+    "logistics": {
+      "parking": "Governor Phillip Park 유료 주차 ($8-10/시간). 무료 주차 약간 있으나 시간 제한. 주말 주차 경쟁 치열",
+      "road_condition": "포장도로. 팜비치까지 접근 용이하나 등대까지는 차량 진입 불가 — 도보만 가능",
+      "nearby_attractions": [
+        {"name": "Palm Beach Rockpool", "distance_km": 0.5, "drive_min": 3},
+        {"name": "Palm Beach (수영)", "distance_km": 0.3, "drive_min": 2},
+        {"name": "Station Beach (핏워터 쪽)", "distance_km": 0.5, "drive_min": 3},
+        {"name": "Bouddi National Park", "distance_km": 15, "drive_min": 25}
+      ],
+      "peak_times": "여름 성수기 매우 혼잡. 5월은 비수기라 여유. 일요일 가이드 투어 시간에 집중",
+      "public_transport": "시드니에서 L90 버스로 팜비치까지 접근 가능"
+    },
+    "experience": {
+      "photo_spots": ["등대와 태평양 배경 파노라마", "핏워터와 쿠링가이 국립공원 360도 뷰", "일몰 시 등대 실루엣"],
+      "golden_hour": "일몰 시 환상적 풍경. 서쪽(핏워터)으로 지는 해가 황금빛으로 물듦",
+      "seasonal_beauty": "5월 선선한 기온으로 하이킹 최적. 고래 이동 시즌 시작(5-9월). 가을 빛이 아름다움",
+      "hidden_gems": "Smugglers Track (400m 짧지만 가파른 루트)과 Access Trail (더 긴 완만한 루트) 선택 가능. 일요일에만 등대 내부 가이드 투어",
+      "sensory_notes": "가파른 오르막의 성취감, 정상에서의 바람, 360도로 펼쳐지는 바다와 내수면의 대비"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["약 1km 가파른 오르막 도보 필요", "차량 접근 불가", "여름 성수기 주차 극심"],
+      "may_operation": "5월 정상 이용 가능. 외부 연중 개방. 일요일 가이드 투어 유지",
+      "safety_issues": "가파른 오르막 — 중간 이상 체력 필요. Smugglers Track은 Grade 3 난이도. 선크림과 모자 필수",
+      "weather_impact": "비 오는 날 트랙 미끄러움. 흐린 날 전망 제한",
+      "quality_trend": "화장실, 음수대 등 편의시설 완비. 시설 관리 양호"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

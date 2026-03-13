@@ -5,3 +5,7 @@ __pycache__/
 *.egg-info/
 _site/
 Gemfile.lock
+
+# 생성 파일 (빌드 시 재생성)
+assets/data/place_data.json
+data/scores/temp/

@@ -54,7 +54,34 @@
         "5월에는 고래 이동 시즌 시작 가능성 있음"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "Zenith Beach 상/하단 주차장 무료. 혼잡 시 Shoal Bay Rd 노상주차. 시간 제한 없음",
+      "road_condition": "포장도로. Shoal Bay에서 접근 용이",
+      "nearby_attractions": [
+        {"name": "Fly Point Aquatic Reserve (플라이 포인트)", "distance_km": 3, "drive_min": 6},
+        {"name": "Port Stephens Kangaroo Encounters (캥거루)", "distance_km": 4, "drive_min": 8},
+        {"name": "Zenith Beach", "distance_km": 0.3, "drive_min": 1},
+        {"name": "Shoal Bay Beach", "distance_km": 2, "drive_min": 5},
+        {"name": "Toboggan Hill Park (토보건)", "distance_km": 8, "drive_min": 12}
+      ],
+      "peak_times": "일출/일몰 시간대 가장 혼잡. 주말 오전도 인기. 평일은 한적",
+      "public_transport": "넬슨베이에서 버스로 Shoal Bay까지 가능, 이후 도보"
+    },
+    "experience": {
+      "photo_spots": ["북쪽 전망대: Yacaaba Head, Cabbage Tree Island, Broughton Island 파노라마", "남쪽 전망대: Zenith Beach, Wreck Beach, Box Beach, Fingal Island", "정상에서 360도 파노라마"],
+      "golden_hour": "일출/일몰 모두 탁월. 동쪽 바다에서 일출, 서쪽 항만 쪽 일몰. 일몰 강력 추천",
+      "seasonal_beauty": "5월 가을은 걷기 최적 시기. 여름보다 시원하고 쾌적. 5월 고래 이동 시즌 시작으로 정상에서 고래 관측 가능성",
+      "hidden_gems": "Wreck Beach 산책로와 Morna Point 산책로도 연결. Zenith Beach는 인적 드문 숨은 해변",
+      "sensory_notes": "정상에서 강한 해풍. 360도 탁 트인 시야에서의 해방감. 파도 소리가 발 아래서 울려퍼짐"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["경사가 급하고 계단 많아 체력 필요", "성수기 혼잡", "슬리퍼로 올라오는 방문객 있어 위험"],
+      "may_operation": "연중 개방. 정상 운영",
+      "safety_issues": "급경사 계단 구간. 편한 운동화 필수 (슬리퍼 불가). 물 지참 필수. 강풍 주의",
+      "weather_impact": "우천/강풍 시 위험. 안개 시 전망 제한. 맑은 날 방문 권장",
+      "quality_trend": "NSW 최고 전망 중 하나로 꾸준한 최상위 평가 (4.8/5)"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 60,

@@ -86,7 +86,7 @@ GoogleMaps/
 | `"호주음식"` | `restaurant` | 음식점, 카페 |
 | `"호주숙소"` | `accommodation` | 숙소 |
 
-> **현재 상태**: GoogleMaps 데이터에는 `"호주여행"` (관광지, 84개 항목)만 존재한다. `"호주음식"`, `"호주숙소"` 데이터는 향후 추가 예정이며, 관광지도 계속 늘어날 수 있다.
+> **현재 상태**: GoogleMaps 데이터에는 `"호주여행"` (관광지, 110개 항목 — 2026-03-13 추가분 26개 포함)만 존재한다. `"호주음식"`, `"호주숙소"` 데이터는 향후 추가 예정이며, 관광지도 계속 늘어날 수 있다.
 
 > 새 카테고리가 필요하면 구글맵에서 새 리스트명으로 저장하고, 매핑 규칙을 추가한다.
 
@@ -94,7 +94,7 @@ GoogleMaps/
 
 ### 3.2 가공 데이터: data/
 
-> **현재 상태**: `data/places/attraction/`에 84개 JSON이 생성되어 있다 (좌표, address 원문, 지역 할당 완료). Phase 2 완료로 `name`, `name_ko`, `collected_data`가 모두 채워진 상태.
+> **현재 상태**: `data/places/attraction/`에 110개 JSON이 생성되어 있다 (중복 1개 포함, 좌표, address 원문, 지역 할당 완료). Phase 2 완료로 `name`, `name_ko`, `collected_data`가 모두 채워진 상태.
 
 #### 장소 정보 (`data/places/{category}/{id}.json`)
 
@@ -161,28 +161,55 @@ GoogleMaps/
 
 ```json
 {
+  "generated_at": "2026-03-13",
   "category": "attraction",
-  "scoring_criteria": "config에 정의된 기준 버전 참조",
-  "scored_at": "ISO8601",
-  "results": [
+  "total_places": 109,
+  "grading_method": "percentile",
+  "grading_cutoffs": { "S": "1~6위", "A": "7~28위", "B": "29~66위", "C": "67~99위", "D": "100~109위" },
+  "grade_distribution": { "S": 6, "A": 22, "B": 38, "C": 33, "D": 10 },
+  "controversial_count": 36,
+  "scores": [
     {
       "id": "string",
       "name_ko": "string",
       "region": "string",
-      "total_score": 82,
-      "grade": "A",
-      "breakdown": {
-        "criteria_1": { "score": 9, "max": 10, "reason": "string" },
-        "criteria_2": { "score": 7, "max": 10, "reason": "string" }
-      }
+      "scores": { "A": 75.0, "B": 95.5, "C": 86.0 },
+      "average_score": 85.5,
+      "spread": 20.5,
+      "controversial": true,
+      "grade": "S"
+    }
+  ]
+}
+```
+
+#### 개별 평가자 결과 (`data/scores/scorer_{A,B,C}.json`)
+
+페르소나별 독립 채점 결과. 항목별 점수와 판단 근거를 포함한다.
+
+```json
+{
+  "scorer": "A",
+  "persona": "효율 전략가",
+  "weights": { "google_rating": 15, "review_count": 10, "..." : "..." },
+  "scores": [
+    {
+      "id": "string",
+      "name_ko": "string",
+      "region": "string",
+      "raw_scores": {
+        "google_rating": { "score": 8, "reason": "string" },
+        "review_count": { "score": 7, "reason": "string" }
+      },
+      "total_score": 75.0
     }
   ]
 }
 ```
 
 **설계 원칙**:
-- `breakdown`에 항목별 점수와 **판단 근거(reason)**를 반드시 포함. 블랙박스 평가를 방지한다.
-- 평가 기준이 변경되면 전체 재평가. `scoring_criteria` 필드로 어떤 기준이 적용되었는지 추적.
+- `raw_scores`에 항목별 점수와 **판단 근거(reason)**를 반드시 포함. 블랙박스 평가를 방지한다.
+- 평가 기준이 변경되면 전체 재평가. 등급은 퍼센타일 기반으로 `config/scoring.json`에서 관리.
 
 #### 지역 분류 (`data/regions.json`)
 
@@ -227,7 +254,7 @@ GoogleMaps 원본 데이터를 좌표 기반으로 처리한다. **장소명 확
 
 > **설계 결정**: `address` 필드는 한국어명+영문명+주소가 혼합된 비정형 문자열이므로, 프로그래밍으로 장소명을 정확히 파싱하기 어렵다. 좌표를 기반으로 웹검색하여 확인하는 것이 더 정확하다.
 
-> **현재 상태**: GoogleMaps에는 `"호주여행"` (관광지, 84개) 데이터가 있다. `"호주음식"`, `"호주숙소"` 데이터는 사용자가 구글맵에 장소를 추가한 후 내보내면 처리할 수 있다.
+> **현재 상태**: GoogleMaps에는 `"호주여행"` (관광지, 110개) 데이터가 있다. `"호주음식"`, `"호주숙소"` 데이터는 사용자가 구글맵에 장소를 추가한 후 내보내면 처리할 수 있다.
 
 ### Phase 2: 정보 수집
 
@@ -236,7 +263,7 @@ GoogleMaps 원본 데이터를 좌표 기반으로 처리한다. **장소명 확
 
 Claude Code가 대화형으로 장소별 정보를 웹 검색하고, 결과를 JSON 또는 리서치 파일에 저장한다. 조사 과정에서 생산한 리서치 결과는 `research/claude-research/`에, 외부 AI 딥 리서치(`research/deep-research/`)도 참고 소스로 활용한다.
 
-> **현재 상태**: ✅ Phase 2 완료. `data/places/attraction/` 84개 파일에 `collected_data`가 채워짐. `research/claude-research/places/`에 7개 지역별 리서치 요약 생성 완료. 날씨 조사(지역별 7개 파일), 로드트립 경로 리서치, 여행 환경 조사 등도 `research/claude-research/`에 완료되어 있다.
+> **현재 상태**: ✅ Phase 2 완료. `data/places/attraction/` 109개 장소(중복 제외)에 `collected_data`가 채워짐. `research/claude-research/places/`에 7개 지역별 리서치 요약 생성 완료. 날씨 조사(지역별 7개 파일), 로드트립 경로 리서치, 여행 환경 조사 등도 `research/claude-research/`에 완료되어 있다.
 
 #### 리뷰 수집 전략: 시기 기반 2구간
 
@@ -295,13 +322,13 @@ Claude Code가 대화형으로 장소별 정보를 웹 검색하고, 결과를 J
 
 #### 등급 체계 (전 카테고리 공통)
 
-| 등급 | 점수 | 의미 |
-|------|------|------|
-| **S** | 90-100 | 반드시 가야 할 곳. 일정의 핵심 |
-| **A** | 75-89 | 강력 추천. 가능하면 포함 |
-| **B** | 60-74 | 선택적 |
-| **C** | 45-59 | 스킵 권장 |
-| **D** | 0-44 | 비추천 |
+| 등급 | 퍼센타일 | 의미 |
+|------|----------|------|
+| **S** | 상위 ~5% | 반드시 가야 할 곳. 일정의 핵심 |
+| **A** | 상위 5~25% | 강력 추천. 가능하면 포함 |
+| **B** | 상위 25~60% | 선택적 |
+| **C** | 상위 60~90% | 스킵 권장 |
+| **D** | 하위 ~10% | 비추천 |
 
 #### 카테고리별 평가 기준
 
@@ -341,15 +368,34 @@ Claude Code가 대화형으로 장소별 정보를 웹 검색하고, 결과를 J
 | 위치 | 20% | 주변 관광지/음식점 접근성 |
 | 호스트 응대 | 10% | AI 리뷰 분석 |
 
-#### 평가 방식: 정량 + AI 판단 하이브리드
+#### 평가 방식: 3인 분업 평가 (CRITIC.md 기반)
 
-- **정량 항목** (평점, 리뷰 수): 공식으로 자동 계산
-- **AI 판단 항목** (유니크함, 음식 퀄리티 등): Claude Code가 수집된 리뷰 데이터를 읽고 0-10점 채점 + 근거 서술
-- 두 결과를 합산하여 최종 점수 산출
+3명의 평가 페르소나가 독립적으로 채점하고, 가중 평균으로 종합 점수를 산출한다. 페르소나 정의, 개별 가중치, 채점 가이드의 상세 내용은 [`docs/CRITIC.md`](./CRITIC.md)에 정의되어 있다.
 
-> **재현성 보장**: AI 판단 결과도 `breakdown.reason`에 근거를 기록하므로, 나중에 기준을 조정하거나 재평가할 때 참고할 수 있다.
+| 페르소나 | 역할 |
+|----------|------|
+| **효율 전략가 (A)** | 시간 대비 효율, 접근성, 비용 중심 평가 |
+| **감성 탐험가 (B)** | 경치, 유니크함, 감성적 가치 중심 평가 |
+| **현실주의 비평가 (C)** | 리뷰 분석, 실제 만족도, 리스크 중심 평가 |
 
-> **현재 상태**: ✅ Phase 3 완료. `data/scores/attraction_scored.json`에 84개 장소 평가 완료. 3명 독립 평가자 평균. 등급 분포: S:2, A:41, B:34, C:7, D:0. `data/scores/RANKINGS.md`에 사람이 읽을 수 있는 랭킹 문서 자동 생성 (`scripts/generate_rankings.py`).
+**4단계 워크플로우**:
+
+1. **리서치 분업**: 각 페르소나가 자신의 관점에서 수집 데이터를 분석
+2. **해석 (독립 채점)**: 각 페르소나가 독립적으로 0-10점 채점 + 근거 서술 → `data/scores/scorer_{A,B,C}.json`
+3. **가중합**: 페르소나별 가중치로 항목 점수를 합산하여 개인 총점 산출
+4. **종합**: 3명 평균 → 퍼센타일 기반 등급 부여 → `data/scores/attraction_scored.json`
+
+**논쟁 장소**: 3명 간 점수 차이(spread)가 15점 이상인 장소는 `controversial`로 표시. 해당 장소는 일정 편성 시 추가 검토가 필요하다.
+
+**출력 파일**:
+- `data/scores/scorer_{A,B,C}.json`: 개별 평가자 결과
+- `data/scores/attraction_scored.json`: 종합 결과 (3명 평균 + 등급)
+- `data/scores/RANKINGS.md`: 사람이 읽을 수 있는 랭킹 문서 (자동 생성)
+- `rankings.html` + `assets/js/rankings.js` + `assets/data/place_data.json`: 프론트엔드 (자동 생성)
+
+> **재현성 보장**: 모든 채점에 `reason` 필드로 판단 근거를 기록하므로, 나중에 기준을 조정하거나 재평가할 때 참고할 수 있다.
+
+> **현재 상태**: ✅ Phase 3 완료. `data/scores/attraction_scored.json`에 109곳 평가 완료(중복 1개 제외). CRITIC.md 페르소나 기반 3인 독립 평가 + 퍼센타일 등급. 등급 분포: S:6 A:22 B:38 C:33 D:10. 논쟁 장소 36곳. `data/scores/RANKINGS.md`에 랭킹 문서 자동 생성 (`scripts/generate_frontend.py`).
 
 ### Phase 4: 여행 일정 생성
 
@@ -506,12 +552,22 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 
 ```
 호주여행/
-├── SPEC.md                     # 기술 설계서 (이 문서)
-├── META.md                     # 여행 전제 조건 (항공, 렌터카, 로드트립 방향, 제약 조건)
-├── ITINERARY.md                # 날짜별 확정 일정 + AI 리뷰 (Single Source of Truth)
+├── docs/
+│   ├── SPEC.md                 # 기술 설계서 (이 문서)
+│   ├── CRITIC.md               # 평가 페르소나 3명 정의 및 채점 가이드
+│   ├── META.md                 # 여행 전제 조건 (항공, 렌터카, 로드트립 방향, 제약 조건)
+│   └── ITINERARY.md            # 날짜별 확정 일정 + AI 리뷰 (Single Source of Truth)
 ├── CLAUDE.md                   # Claude Code 작업 가이드
 ├── .gitignore
-├── requirements.txt
+│
+├── _layouts/                   # Jekyll 레이아웃 템플릿
+│   └── default.html
+├── rankings.html               # 관광지 랭킹 페이지 (GitHub Pages)
+├── index.md                    # 사이트 인덱스
+├── assets/
+│   ├── css/style.scss          #   스타일시트
+│   ├── js/rankings.js          #   랭킹 페이지 인터랙션
+│   └── data/place_data.json    #   프론트엔드용 장소 데이터 (자동 생성)
 │
 ├── research/                   # 리서치 자료 및 AI 리뷰 근거
 │   ├── deep-research/          #   ChatGPT, Gemini 등 외부 AI 딥 리서치 결과
@@ -527,21 +583,21 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 │   └── {YYYY-MM-DD}.json      # 날짜 기반 파일명, 모든 카테고리 혼합
 │
 ├── config/                     # 설정
-│   ├── scoring.json            #   카테고리별 평가 기준 & 가중치
+│   ├── scoring.json            #   카테고리별 평가 기준 & 가중치 + 퍼센타일 등급 커트라인
 │   └── trip.json               #   여행 일정 생성 설정
 │
 ├── data/                       # 수집/분석 데이터
 │   ├── places/
 │   │   └── {category}/{id}.json  # Phase 1에서 stub 생성, Phase 2에서 정보 채움
 │   ├── scores/
-│   │   ├── {category}_scored.json
+│   │   ├── {category}_scored.json  # 종합 평가 결과 (3명 평균 + 등급)
 │   │   ├── scorer_A.json, scorer_B.json, scorer_C.json  # 개별 평가자 결과
 │   │   └── RANKINGS.md         #   사람이 읽을 수 있는 랭킹 문서 (자동 생성)
 │   └── regions.json            # 좌표 기반 지역 할당 결과
 │
 └── scripts/                    # 자동화 스크립트
     ├── parse_googlemaps.py     #   Phase 1: GoogleMaps 변경 감지 + 좌표 기반 처리
-    ├── generate_rankings.py    #   Phase 3 결과 → RANKINGS.md 자동 생성
+    ├── generate_frontend.py    #   평가 결과 → 등급 재계산 + RANKINGS.md + place_data.json 생성
     └── utils/
         ├── __init__.py
         └── geo.py              #   좌표/거리 계산, 지역 할당, 중복 탐지
@@ -566,6 +622,8 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 | 정보 수집 | Claude Code WebSearch / WebFetch | 시기 기반 리뷰 및 장소 상세정보 수집 |
 | 자동화 (보조) | Python 3.11+ | 전처리, 좌표 계산 등 반복 연산 |
 | 좌표 계산 | scripts/utils/geo.py (자체 구현) | 장소 간 거리 계산, 지역 할당 |
+| 사이트 | Jekyll + GitHub Pages (jekyll-theme-cayman) | 관광지 랭킹 등 사용자 인터페이스 |
+| 프론트엔드 | Vanilla JS · SCSS · JSON fetch | 랭킹 페이지 인터랙션 |
 | 데이터 포맷 | JSON | 모든 구조화 데이터 |
 | 버전 관리 | Git | 설정/일정 이력 관리 |
 

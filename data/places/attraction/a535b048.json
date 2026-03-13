@@ -52,6 +52,31 @@
         "기부금은 자율이나 운영 지원을 위해 소액 기부 권장"
       ]
     },
+    "logistics": {
+      "parking": "Memorial Park 주변 무료 주차. 충분한 공간",
+      "road_condition": "포장도로, Marine Parade 접근 용이",
+      "nearby_attractions": [
+        {"name": "The Entrance Waterfront (쇼핑/카페)", "distance_km": 0, "drive_min": 0},
+        {"name": "Norah Head Lighthouse", "distance_km": 15, "drive_min": 20},
+        {"name": "Australian Reptile Park", "distance_km": 20, "drive_min": 22}
+      ],
+      "peak_times": "매일 3:30pm 펠리컨 피딩 시간에 집중. 학교 방학 시 매우 혼잡. 15분 전 도착 권장",
+      "public_transport": "센트럴코스트 버스 이용 가능"
+    },
+    "experience": {
+      "photo_spots": ["대형 펠리컨 가까이서 촬영", "해변가 피딩 장면 전경", "Tuggerah Lake 배경의 펠리컨"],
+      "golden_hour": "피딩 시간(3:30pm)이 오후라 서쪽 빛이 좋은 시간",
+      "seasonal_beauty": "5월은 비수기로 혼잡도 낮아 관람 쾌적",
+      "hidden_gems": "Marine Wildlife Rescue 자원봉사자들의 펠리컨/야생동물 지식 해설. 주변 보드워크와 서프 라이프세이빙 클럽까지 산책 가능",
+      "sensory_notes": "펠리컨의 거대한 부리와 날갯짓, 바닷바람, 아이들의 환호 소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["자연스러움 부족하다는 의견", "기부금 모금 압박감", "성수기 매우 혼잡"],
+      "may_operation": "매일 3:30pm 피딩. 단, 2026년 기준 토/일/공휴일/학교방학만 운영으로 변경 가능성 확인 필요",
+      "safety_issues": "새를 함부로 만지지 말 것. 아이 동반 시 거리 유지 지도",
+      "weather_impact": "우천 시 피딩 취소 가능성. 야외 행사",
+      "quality_trend": "오랜 전통의 무료 이벤트. 교육적 해설 유지"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

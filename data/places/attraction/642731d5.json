@@ -51,6 +51,32 @@
         "669a240e (매쿼리 자연보호구역)와 같은 기관이나 현재 Guulabaa에서 운영"
       ]
     },
+    "logistics": {
+      "parking": "현재 원래 Lord St 위치 폐쇄. Guulabaa(임시 운영지)에 무료 주차장, 장애인 주차, 버스 주차, 화장실 구비. 만차 시 정문 맞은편 보조 주차장 이용 가능",
+      "road_condition": "Guulabaa까지 포장도로. Oxley Highway에서 Burrawan Forest Drive로 진입",
+      "nearby_attractions": [
+        {"name": "The Big Koala (Guulabaa 내)", "distance_km": 0, "drive_min": 0},
+        {"name": "Guulabaa - Place of Koala", "distance_km": 0, "drive_min": 0},
+        {"name": "Tacking Point Lighthouse", "distance_km": 15, "drive_min": 20},
+        {"name": "Sea Acres Rainforest Centre", "distance_km": 12, "drive_min": 15}
+      ],
+      "peak_times": "오후 3시 무료 가이드 투어 시간에 방문객 집중",
+      "public_transport": "대중교통 접근 어려움. 차량 필수"
+    },
+    "experience": {
+      "photo_spots": ["치료 중인 코알라 관찰 구역", "Guulabaa 단지 내 자연 환경"],
+      "golden_hour": "실내/반실내 시설이라 골든아워 무관",
+      "seasonal_beauty": "계절 무관. 5월에도 정상 운영",
+      "hidden_gems": "Guulabaa 단지 내 야생 코알라 번식 센터 함께 방문 가능. The Big Koala 조각품도 같은 단지에 위치",
+      "sensory_notes": "유칼립투스 향기, 코알라의 조용한 움직임, 자연 소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["원래 위치 폐쇄로 혼란", "입장료 $12.50 도입에 대한 불만"],
+      "may_operation": "2026년 5월 기준 원래 Lord St 위치 재개발 중 (2026년 크리스마스 재오픈 예정). Guulabaa에서 임시 운영 중",
+      "safety_issues": "특별한 안전 이슈 없음",
+      "weather_impact": "실내/반실내 시설이라 우천 시에도 방문 가능",
+      "quality_trend": "재개발 공사 중이나 Guulabaa 임시 운영으로 서비스 유지"
+    },
     "collected_at": "2026-03-12T00:00:00Z"
   },
   "metadata": {

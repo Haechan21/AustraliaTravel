@@ -1,0 +1,92 @@
+{
+  "id": "a43e5009",
+  "name": "Bombo Headland Quarry",
+  "name_ko": "봄보 헤드랜드 채석장",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "Bombo Headland Quarry, Darien Ave, Bombo NSW 2533 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.8624175,
+      "lat": -34.6514592
+    },
+    "address": "Darien Ave, Bombo NSW 2533, Australia",
+    "region": "울릉공/키아마"
+  },
+  "collected_data": {
+    "rating": 4.5,
+    "total_reviews": 800,
+    "price_level": null,
+    "opening_hours": "상시 개방 (야외 자연 명소). 일출 시간 방문 권장.",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": 0,
+        "positive": [
+          "북아일랜드 자이언트 코즈웨이를 닮은 현무암 기둥 지형",
+          "사진작가들의 성지 — TV 광고/포토슈트 촬영지",
+          "무료 입장 + 무료 주차"
+        ],
+        "negative": [
+          "한낮에는 빛이 거칠어 사진 질 저하",
+          "바위 날카롭고 미끄러워 주의 필요"
+        ],
+        "seasonal_notes": "5월 가을 일출 — 구름이 동쪽 수평선에 걸릴 때 극적인 색감. 서늘한 날씨에 쾌적한 방문."
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": 0,
+        "positive": [
+          "1999년 NSW 주립유산 등록 — 지질학적 중요성",
+          "1880-1940년 채석 역사와 자연의 조합",
+          "Boneyard Beach 인접 — 추가 해안 경관"
+        ],
+        "negative": [
+          "찾기 어렵다는 의견 — 표지판 부족",
+          "바위 위 기어오르기 유혹적이나 위험"
+        ],
+        "status_notes": "정상 운영 중"
+      },
+      "tips": [
+        "일출 전 도착하여 골든아워 촬영 추천",
+        "삼각대, ND 그라드 필터, 광각 렌즈, 헤드랜턴 지참",
+        "적절한 신발 착용 (젖은 바위 미끄러움)",
+        "Bombo Beach 북쪽 끝 주차장에서 도보 10분"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "Bombo Headland에 무료 주차장 2곳. 채석장 근처 + Boneyard Beach 근처.",
+      "road_condition": "Darien Ave 포장. Bombo역에서 도보 가능.",
+      "nearby_attractions": [
+        {"name": "Kiama Lighthouse (dc2795c8)", "distance_km": 3, "drive_min": 5},
+        {"name": "Kiama Blowhole (30097942)", "distance_km": 3, "drive_min": 5},
+        {"name": "Little Blowhole (87882b26)", "distance_km": 5, "drive_min": 7},
+        {"name": "Bushrangers Bay (5254b0bc)", "distance_km": 8, "drive_min": 12}
+      ],
+      "peak_times": "일출 시간에 사진작가들 집중. 한낮에는 한적.",
+      "public_transport": "Bombo역에서 도보 접근 가능"
+    },
+    "experience": {
+      "photo_spots": ["현무암 기둥 군집 + 파도 (일출 골든아워)", "Boneyard 해안의 바위 질감", "항공 드론 촬영 — 기하학적 패턴"],
+      "golden_hour": "일출이 절대적 최적. 동쪽 태평양 수평선에서 빛이 현무암을 비춤. 일몰도 좋으나 역광.",
+      "seasonal_beauty": "5월 가을 — 구름과 일출의 드라마틱한 색감. 서늘하고 바람 적당.",
+      "hidden_gems": "Boneyard Beach — 채석장 남쪽 숨은 해안으로 독특한 바위 질감",
+      "sensory_notes": "파도가 현무암 기둥 사이로 부서지는 소리, 바위의 거친 질감, 새벽 차가운 바닷바람"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["찾기 어려움/표지판 부족", "바위 위 미끄러짐", "한낮 사진 질 저하"],
+      "may_operation": "정상 운영. 날씨 무관.",
+      "safety_issues": "날카로운 바위 모서리, 미끄러운 표면. 돌발 파도(rogue waves) 위험. 절대 바위 가장자리에 서지 말 것.",
+      "weather_impact": "강풍 시 파도 높아 바위 위 위험 증가. 우천 시 미끄러움 극대화.",
+      "quality_trend": "자연 보존 상태 양호. 유산 등록 이후 관리 지속."
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 45,
+    "cost_aud": 0,
+    "best_time": "일출",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

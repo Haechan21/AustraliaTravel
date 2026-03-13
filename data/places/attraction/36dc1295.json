@@ -50,7 +50,28 @@
         "동굴 내부 서늘하므로 겉옷 지참"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "재개장 시 방문자 주차장 업그레이드 예정. 기존 주차 무료",
+      "road_condition": "Jenolan Caves Rd - 2024년 홍수 피해로 현재 폐쇄/보수 중. Hampton 구간 2차선 복구 완료. Two Mile 구간 18개월 보수 진행 중",
+      "nearby_attractions": "하산스 월즈(cb723736) 차로 50분. 지그재그 레일웨이(5808639b) 차로 40분. 카툼바 에코 포인트(ef2de137) 차로 1.5시간",
+      "peak_times": "재개장 초기 인기 예상. 사전 예약 필수가 될 전망",
+      "public_transport": "대중교통 접근 불가. 차량 필수. 도로 상태 확인 후 방문"
+    },
+    "experience": {
+      "photo_spots": "석회암 동굴 내부의 종유석/석순. 새로 건설되는 Blue Lake Boardwalk",
+      "golden_hour": "동굴 내부이므로 시간대 무관",
+      "seasonal_beauty": "동굴 내부 연중 일정 온도(약 15도). 5월 외부 기온에 관계없이 쾌적",
+      "hidden_gems": "호주에서 가장 유명한 석회암 동굴 시스템. 재개장 시 새로운 시설과 함께 방문 가능",
+      "sensory_notes": "동굴 내부의 서늘한 공기, 물방울 떨어지는 소리, 어둠 속 조명에 빛나는 석회석의 신비로움"
+    },
+    "risk_check": {
+      "negative_review_patterns": "2024년 4월 홍수로 폐쇄 중. 재개장 시기 불확실",
+      "may_operation": "2026년 5월 기준 폐쇄 상태일 가능성 높음. 중반 제한적 재개장 목표이나 확정 아님. 반드시 공식 웹사이트(jenolancaves.org.au) 확인 필수",
+      "safety_issues": "투어 시 900~1000 계단. 동굴 내 서늘하므로 겉옷 필요. 도로 보수 구간 운전 주의",
+      "weather_impact": "동굴 내부 날씨 무관. 접근 도로가 폭우 시 위험할 수 있음",
+      "quality_trend": "폐쇄 중이나 대규모 리뉴얼(Caves House, 보드워크, 트레일) 진행 중. 재개장 시 품질 향상 예상"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 120,

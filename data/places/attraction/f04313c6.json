@@ -53,7 +53,28 @@
         "Cockle Bay, King Street Wharf 구역 레스토랑 추천"
       ]
     },
-    "collected_at": "2026-03-12T00:00:00Z"
+    "collected_at": "2026-03-12T00:00:00Z",
+    "logistics": {
+      "parking": "달링하버 인근 상업 주차장 다수. $10~15/시간, 사전 예약 시 $20~35/일. ICC 주차장 대규모",
+      "road_condition": "도심 도로, 혼잡 가능. 주차보다 대중교통 추천",
+      "nearby_attractions": "해양박물관(b7e6c92f) 내 위치. 샤크 다이브(f81a1418) 도보 5분. 바랑가루(b484de1d) 도보 15분. 옵저버토리 힐(a2a6451d) 도보 15분. 차이니즈 가든 인접",
+      "peak_times": "주말 오후~저녁. 대형 이벤트 시 극도 혼잡. 평일은 여유",
+      "public_transport": "타운홀역 도보 10분. 라이트레일 Convention/Exhibition 정류장. 달링하버 페리"
+    },
+    "experience": {
+      "photo_spots": "워터프론트에서 야경 사진. Cockle Bay 반영. King Street Wharf 레스토랑 거리",
+      "golden_hour": "일몰 후 야경이 진가. 워터프론트 조명이 수면에 반사되어 아름다움",
+      "seasonal_beauty": "5월 가을 - 비수기로 덜 붐빔. 야외 카페에서 편안한 식사. 쾌적한 산책",
+      "hidden_gems": "중국 우의의 정원(Chinese Garden of Friendship). 무료 어린이 놀이터. Tumbalong Park 이벤트",
+      "sensory_notes": "물가의 활기, 레스토랑 음식 향, 야간 조명의 화려함. 도시의 에너지"
+    },
+    "risk_check": {
+      "negative_review_patterns": "관광지 물가 비쌈, 주말 혼잡, 일부 식당 가격 높음",
+      "may_operation": "5월 정상 운영. 개별 시설별 영업시간 상이",
+      "safety_issues": "도심 관광지로 소매치기 주의. 야간에도 비교적 안전",
+      "weather_impact": "비 시 야외 산책 불편하나 실내 시설(수족관, 박물관 등) 이용 가능",
+      "quality_trend": "안정적. 시드니 상위 3대 관광 명소로 지속적 투자"
+    }
   },
   "metadata": {
     "estimated_visit_duration_min": 180,

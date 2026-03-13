@@ -1,0 +1,91 @@
+{
+  "id": "8bc91376",
+  "name": "Stanwell Tops Lookout",
+  "name_ko": "스탠웰 탑스 전망대",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "Stanwell Tops Lookout, Longview Crescent, Stanwell Tops NSW 2508 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.9974825,
+      "lat": -34.2237322
+    },
+    "address": "Longview Crescent, Stanwell Tops NSW 2508, Australia",
+    "region": "로열국립공원/그랜드퍼시픽"
+  },
+  "collected_data": {
+    "rating": 4.5,
+    "total_reviews": 500,
+    "price_level": null,
+    "opening_hours": "상시 개방",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": 0,
+        "positive": [
+          "Sea Cliff Bridge를 포함한 해안선 파노라마 전망",
+          "Bald Hill 전망대와 함께 이 지역 최고의 뷰포인트",
+          "행글라이딩 관람 가능"
+        ],
+        "negative": [
+          "주차장이 작아 항상 만차",
+          "전망 외 할 것이 많지 않아 짧은 체류"
+        ],
+        "seasonal_notes": "5월 가을 맑은 날 해안 조망 선명. 바람 강할 수 있음."
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": 0,
+        "positive": [
+          "무료 주차 및 화장실 시설 구비",
+          "Grand Pacific Drive 경유 시 필수 정차 스팟",
+          "평화로운 분위기와 아름다운 경관"
+        ],
+        "negative": [
+          "주말 혼잡하나 회전율은 높음"
+        ],
+        "status_notes": "정상 운영 중"
+      },
+      "tips": [
+        "무료 주차, 화장실 있음",
+        "Bald Hill Lookout과 함께 방문 추천 (차로 3분)",
+        "Grand Pacific Drive 시작점 부근",
+        "Stanwell Park역에서 도보 접근 가능"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "무료 주차. 소규모이나 회전율 높음. 주말에도 잠시 대기하면 자리 남.",
+      "road_condition": "Longview Crescent 주거 도로. 포장 양호.",
+      "nearby_attractions": [
+        {"name": "Grand Pacific Drive (f97b06e6)", "distance_km": 0.5, "drive_min": 1},
+        {"name": "Old Helensburgh Station (f5d5a290)", "distance_km": 5, "drive_min": 8},
+        {"name": "Sea Cliff Bridge (96da6ea2)", "distance_km": 4, "drive_min": 6},
+        {"name": "Figure Eight Pools (32918380)", "distance_km": 5, "drive_min": 10}
+      ],
+      "peak_times": "주말 오전~오후 내내 혼잡. 평일은 한적.",
+      "public_transport": "Stanwell Park역에서 도보 접근 가능"
+    },
+    "experience": {
+      "photo_spots": ["Sea Cliff Bridge + 해안선 파노라마", "절벽 위에서 내려다보는 해안 마을"],
+      "golden_hour": "서쪽 절벽 방향으로 일몰 시 드라마틱한 조명",
+      "seasonal_beauty": "5월 가을 — 맑은 하늘에 먼 해안선까지 선명한 시야",
+      "hidden_gems": "전망대에서 보이는 Sea Cliff Bridge를 실제로 걸어볼 수 있는 연계 코스",
+      "sensory_notes": "높은 절벽 위의 강한 바람, 탁 트인 시야의 해방감, 아래로 보이는 파도"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["주차 부족", "체류 시간 짧음"],
+      "may_operation": "정상 운영. 날씨 영향 거의 없음.",
+      "safety_issues": "절벽 가장자리 안전 난간 있으나 주의 필요.",
+      "weather_impact": "우천/안개 시 전망 제한. 바람 강할 수 있음.",
+      "quality_trend": "안정적 유지. 시설 양호."
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 20,
+    "cost_aud": 0,
+    "best_time": "오전~오후 (맑은 날)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

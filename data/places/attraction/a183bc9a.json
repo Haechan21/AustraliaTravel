@@ -1,0 +1,90 @@
+{
+  "id": "a183bc9a",
+  "name": "Loves Bay",
+  "name_ko": "러브스 베이",
+  "category": "attraction",
+  "source_file": "2026-03-13.json",
+  "address_raw": "Loves Bay, Kiama Heights NSW 2533 오스트레일리아",
+  "location": {
+    "coordinates": {
+      "lng": 150.8517865,
+      "lat": -34.6976975
+    },
+    "address": "Loves Bay, Kiama Heights NSW 2533, Australia",
+    "region": "울릉공/키아마"
+  },
+  "collected_data": {
+    "rating": 4.4,
+    "total_reviews": 300,
+    "price_level": null,
+    "opening_hours": "상시 개방",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": 0,
+        "positive": [
+          "태평양 전망의 아름다운 자갈 해변",
+          "키아마 코스탈 워크의 일부",
+          "반려견 동반 가능 (리드 착용)"
+        ],
+        "negative": [
+          "모래 해변이 아닌 자갈/조약돌 해변",
+          "주차장이 빨리 차는 편"
+        ],
+        "seasonal_notes": "5월 가을 — 서늘한 날씨에 해안 산책 최적. 수영에는 수온 낮음."
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": 0,
+        "positive": [
+          "가족 단위 방문객과 반려견 동반에 인기",
+          "코스탈 워크에서 바위와 조약돌 해안의 자연미",
+          "한적하고 평화로운 분위기"
+        ],
+        "negative": [
+          "비 온 후 일부 산책로 진흙탕"
+        ],
+        "status_notes": "정상 운영 중"
+      },
+      "tips": [
+        "키아마 코스탈 워크와 연계하여 방문",
+        "적절한 신발 착용 (바위/진흙 구간)",
+        "인근 Kiama Blowhole, Little Blowhole와 함께 방문",
+        "노상 주차 또는 인근 주차장 이용"
+      ]
+    },
+    "collected_at": "2026-03-13T00:00:00Z",
+    "logistics": {
+      "parking": "소규모 주차장 + 노상 주차. 빨리 차는 편.",
+      "road_condition": "Kiama Heights 주거 도로. 포장 양호.",
+      "nearby_attractions": [
+        {"name": "Little Blowhole (87882b26)", "distance_km": 1.5, "drive_min": 3},
+        {"name": "Kiama Lighthouse (dc2795c8)", "distance_km": 3, "drive_min": 5},
+        {"name": "Kiama Blowhole (30097942)", "distance_km": 3, "drive_min": 5}
+      ],
+      "peak_times": "주말 오전. 평일은 한적.",
+      "public_transport": "키아마역에서 도보 또는 버스"
+    },
+    "experience": {
+      "photo_spots": ["자갈 해변과 태평양 파노라마", "해안 절벽에서 내려다보는 만"],
+      "golden_hour": "일출 시 동쪽 바다에서 빛이 만을 비춤",
+      "seasonal_beauty": "5월 가을 — 서늘한 바닷바람과 한적한 해변의 고요함",
+      "hidden_gems": "코스탈 워크를 따라 남쪽으로 이어지는 숨은 해안선",
+      "sensory_notes": "자갈 위로 밀려오는 파도의 달그락 소리, 바닷바람, 개의 발자국 소리"
+    },
+    "risk_check": {
+      "negative_review_patterns": ["자갈 해변이라 수영/일광욕 불편", "주차 부족"],
+      "may_operation": "정상 운영.",
+      "safety_issues": "자갈/바위 미끄러움. 파도 높을 때 해안 가장자리 주의.",
+      "weather_impact": "우천 시 산책로 진흙탕. 바람 강할 수 있음.",
+      "quality_trend": "변함없이 유지. 조용한 지역 명소."
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 30,
+    "cost_aud": 0,
+    "best_time": "오전~오후 (코스탈 워크 연계)",
+    "weather_dependent": true,
+    "reservation_required": false
+  }
+}

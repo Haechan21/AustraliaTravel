@@ -46,6 +46,9 @@ KNOWN_REGIONS = [
     {"name_ko": "바이런베이", "center": [153.60, -28.65], "match_radius_km": 35},
     {"name_ko": "골드코스트", "center": [153.40, -28.00], "match_radius_km": 35},
     {"name_ko": "블루마운틴", "center": [150.31, -33.72], "match_radius_km": 40},
+    {"name_ko": "로열국립공원/그랜드퍼시픽", "center": [151.06, -34.15], "match_radius_km": 25},
+    {"name_ko": "울릉공/키아마", "center": [150.89, -34.58], "match_radius_km": 38},
+    {"name_ko": "서던하이랜드/저비스베이", "center": [150.61, -34.78], "match_radius_km": 35},
 ]
 
 
