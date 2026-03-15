@@ -629,11 +629,12 @@
 .score-bar {
   display: flex;
   flex-direction: column;
-  gap: 0.35em;
+  gap: 0.4em;
   margin-bottom: 1em;
-  padding: 0.8em;
+  padding: 0.8em 1em;
   background: #f6f8fa;
-  border-radius: 8px;
+  border-radius: 10px;
+  border: 1px solid #e1e4e8;
 }
 
 .score-bar-header {
@@ -651,9 +652,12 @@
   align-items: center;
   gap: 0;
   cursor: pointer;
-  transition: opacity 0.15s;
+  transition: transform 0.15s, opacity 0.15s;
 
-  &:hover { opacity: 0.8; }
+  &:hover {
+    opacity: 0.85;
+    transform: scaleY(1.08);
+  }
 }
 
 .score-label {
@@ -667,8 +671,8 @@
 }
 
 .score-break {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
   position: relative;
   overflow: hidden;
@@ -678,16 +682,16 @@
 
 .score-track {
   flex: 1;
-  height: 18px;
+  height: 24px;
   background: #e9ecef;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 6px 6px 0;
   overflow: hidden;
   margin-right: 0.5em;
 }
 
 .score-fill {
   height: 100%;
-  border-radius: 0 4px 4px 0;
+  border-radius: 0 6px 6px 0;
   transition: width 0.5s ease;
 }
 
@@ -729,16 +733,17 @@
 
 .route-stats {
   display: flex;
-  gap: 1.2em;
+  gap: 0.8em;
   margin-bottom: 0.8em;
 
   span {
-    font-size: 0.88em;
-    background: #f6f8fa;
-    padding: 0.2em 0.7em;
-    border-radius: 4px;
-    color: #586069;
+    font-size: 0.85em;
+    background: #eef2f7;
+    padding: 0.3em 0.8em;
+    border-radius: 20px;
+    color: #3d5170;
     font-weight: 600;
+    border: 1px solid #d6dee8;
   }
 }
 
@@ -750,13 +755,23 @@
 
 .day-item {
   border: 1px solid #e1e4e8;
-  border-radius: 6px;
-  padding: 0.6em 0.8em;
+  border-radius: 8px;
+  padding: 0.8em 1em;
   cursor: pointer;
-  transition: all 0.15s;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
 
-  &:hover { border-color: #888; background: #fafbfc; }
-  &.active { border-color: #159957; background: #f0fff4; }
+  &:hover {
+    border-color: #888;
+    background: #fafbfc;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+  &.active {
+    border-color: #159957;
+    background: #f0fff4;
+    box-shadow: 0 2px 6px rgba(21,153,87,0.15);
+  }
 }
 
 .day-header {
@@ -772,14 +787,24 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.3em;
+  align-items: center;
 }
 
 .stop-row {
   font-size: 0.8em;
   color: #586069;
   background: #f6f8fa;
-  padding: 0.15em 0.5em;
-  border-radius: 3px;
+  padding: 0.2em 0.6em;
+  border-radius: 4px;
+  border: 1px solid #e9ecef;
+}
+
+.stop-arrow {
+  font-size: 0.85em;
+  color: #b0b8c1;
+  align-self: center;
+  font-weight: 600;
+  user-select: none;
 }
 
 .stop-row .grade-badge {
@@ -854,14 +879,23 @@
 }
 
 .plan-card {
-  padding: 0.8em;
+  padding: 1em 1.2em;
+  border: 1px solid #e1e4e8;
   border-left: 4px solid transparent;
-  border-radius: 4px;
-  transition: border-color 0.2s, background 0.2s;
+  border-radius: 8px;
+  transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+  margin-bottom: 0.6em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+
+  &:hover {
+    border-color: #c8ced6;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
 
   &.active {
     border-left-color: #159957;
     background: #f0faf4;
+    box-shadow: 0 2px 8px rgba(21,153,87,0.1);
   }
 
   h2 {

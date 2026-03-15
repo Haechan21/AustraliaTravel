@@ -8,8 +8,8 @@
   /* ── 동적 스타일 주입 ── */
   var styleEl = document.createElement('style');
   styleEl.textContent =
-    '.stop-dist { color: #888; font-size: 0.8em; margin-left: 4px; }' +
-    '.day-km { background: #f0f0f0; padding: 1px 6px; border-radius: 8px; font-weight: 600; }';
+    '.stop-dist { color: #5b8cb5; font-size: 0.75em; font-weight: 600; }' +
+    '.day-km { background: #1a73e8; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.78em; font-weight: 600; margin-left: 6px; vertical-align: middle; }';
   document.head.appendChild(styleEl);
 
   /* ── 색상/아이콘 설정 ── */
@@ -211,15 +211,25 @@
     html += '<div class="day-list">';
     route.days.forEach(function (day) {
       html += '<div class="day-item" data-day="' + day.day + '">';
-      html += '<div class="day-header">Day ' + day.day + ' <small>(' + day.date + ')</small> — ' + day.label + (day.day_km ? ' <small class="day-km">' + day.day_km + 'km</small>' : '') + '</div>';
+      html += '<div class="day-header">Day ' + day.day + ' <small>(' + day.date + ')</small> — ' + day.label;
+      if (day.day_km) html += ' <span class="day-km">' + day.day_km + 'km</span>';
+      html += '</div>';
       html += '<div class="day-stops">';
-      day.stops.forEach(function (stop) {
+      day.stops.forEach(function (stop, idx) {
+        // 첫 번째 stop이 아니면 화살표와 거리 표시
+        if (idx > 0) {
+          var distText = (stop.distance_km && stop.distance_km > 0) ? stop.distance_km + 'km' : '';
+          html += '<span class="stop-arrow">';
+          if (distText) {
+            html += '<span class="stop-dist">' + distText + '</span> ';
+          }
+          html += '\u2192</span>';
+        }
         var badge = '';
         if (stop.grade) badge = '<span class="grade-badge grade-' + stop.grade + '">' + stop.grade + '</span> ';
         if (stop.type === 'stay') badge = '<span class="grade-badge stay-badge">숙박</span> ';
         if (stop.type === 'start' || stop.type === 'end') badge = '<span class="grade-badge start-badge">출발</span> ';
-        var distHtml = (stop.distance_km && stop.distance_km > 0) ? '<span class="stop-dist">\u2192 ' + stop.distance_km + 'km</span>' : '';
-        html += '<div class="stop-row">' + badge + stop.name + distHtml + '</div>';
+        html += '<div class="stop-row">' + badge + stop.name + '</div>';
       });
       html += '</div></div>';
     });
