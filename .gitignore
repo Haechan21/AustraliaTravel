@@ -9,6 +9,9 @@ Gemfile.lock
 # 임시 파일
 data/scores/temp/
 
+# Claude Code
+.claude/
+
 # 로컬 프리뷰
 routes-preview.html
 route-plans-preview.html
