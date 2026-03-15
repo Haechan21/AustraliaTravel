@@ -431,6 +431,10 @@
       if (pn === sn) return p;
       // substring match
       if (sn.indexOf(pn) >= 0 || pn.indexOf(sn) >= 0) return p;
+      // no-space match (룩앳미나우 vs 룩 앳 미 나우)
+      var snNoSp = sn.replace(/\s+/g, '');
+      var pnNoSp = pn.replace(/\s+/g, '');
+      if (snNoSp.indexOf(pnNoSp) >= 0 || pnNoSp.indexOf(snNoSp) >= 0) return p;
       // word overlap: split by spaces and count matching words
       var sWords = sn.split(/\s+/);
       var pWords = pn.split(/\s+/);
