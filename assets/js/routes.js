@@ -208,59 +208,99 @@
       return;
     }
     var route = routeData[key];
+
+    // 헤더
     var html = '<h3 style="color:' + ROUTE_COLORS[key] + '">' + route.name + '</h3>';
     html += '<div class="route-stats">';
     html += '<span>총 ' + route.total_km + 'km</span>';
     html += '<span>평가 ' + route.score + '점</span>';
     html += '</div>';
-    html += '<div class="day-list">';
-    route.days.forEach(function (day) {
-      html += '<div class="day-item" data-day="' + day.day + '">';
-      html += '<div class="day-header">Day ' + day.day + ' <small>(' + day.date + ')</small> — ' + day.label;
-      if (day.day_km) html += ' <span class="day-km">' + day.day_km + 'km</span>';
-      html += '</div>';
-      html += '<div class="day-stops">';
-      day.stops.forEach(function (stop, idx) {
-        // 첫 번째 stop이 아니면 화살표와 거리 표시
-        if (idx > 0) {
-          var distText = (stop.distance_km && stop.distance_km > 0) ? stop.distance_km + 'km' : '';
-          html += '<span class="stop-arrow">';
-          if (distText) {
-            html += '<span class="stop-dist">' + distText + '</span> ';
-          }
-          html += '\u2192</span>';
-        }
-        var badge = '';
-        if (stop.grade) badge = '<span class="grade-badge grade-' + stop.grade + '">' + stop.grade + '</span> ';
-        if (stop.type === 'stay') badge = '<span class="grade-badge stay-badge">숙박</span> ';
-        if (stop.type === 'start' || stop.type === 'end') badge = '<span class="grade-badge start-badge">출발</span> ';
-        var clickable = stop.grade ? ' stop-clickable" data-stop-name="' + stop.name : '';
-        html += '<div class="stop-row' + clickable + '">' + badge + stop.name + '</div>';
-      });
-      html += '</div></div>';
+
+    // Day 미니탭
+    html += '<div class="day-mini-tabs" id="dayMiniTabs">';
+    route.days.forEach(function(day) {
+      var activeClass = day.day === 1 ? ' active' : '';
+      html += '<button class="day-mini-tab' + activeClass + '" data-day="' + day.day + '">';
+      html += 'D' + day.day;
+      if (day.day_km) html += ' <small style="opacity:0.7">' + day.day_km + '</small>';
+      html += '</button>';
     });
     html += '</div>';
+
+    // Day 콘텐츠 컨테이너
+    html += '<div id="dayContent"></div>';
+
     panel.innerHTML = html;
 
-    // Click day items to zoom
-    panel.querySelectorAll('.day-item').forEach(function (el) {
-      el.addEventListener('click', function () {
-        var d = parseInt(this.getAttribute('data-day'));
-        showRouteDay(key, d);
-        // Highlight active day
-        panel.querySelectorAll('.day-item').forEach(function (e) { e.classList.remove('active'); });
+    // Day 미니탭 이벤트
+    var currentRouteKey = key;
+    panel.querySelectorAll('.day-mini-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        panel.querySelectorAll('.day-mini-tab').forEach(function(t) { t.classList.remove('active'); });
         this.classList.add('active');
-        // Update day buttons
+        var dayNum = parseInt(this.getAttribute('data-day'));
+        renderDayContent(currentRouteKey, dayNum);
+        showRouteDay(currentRouteKey, dayNum);
+
+        // 상단 Day 필터 동기화
         var dayBtns = document.querySelectorAll('#dayButtons .day-btn');
-        dayBtns.forEach(function (b) { b.classList.remove('active'); });
-        var matchBtn = document.querySelector('#dayButtons .day-btn[data-day="' + d + '"]');
+        dayBtns.forEach(function(b) { b.classList.remove('active'); });
+        var matchBtn = document.querySelector('#dayButtons .day-btn[data-day="' + dayNum + '"]');
         if (matchBtn) matchBtn.classList.add('active');
       });
     });
 
-    // 등급이 있는 stop 클릭 시 모달 오픈
-    panel.querySelectorAll('.stop-row[data-stop-name]').forEach(function (el) {
-      el.addEventListener('click', function (e) {
+    // 최초 Day 1 렌더링
+    renderDayContent(key, 1);
+  }
+
+  function renderDayContent(routeKey, dayNum) {
+    var container = document.getElementById('dayContent');
+    if (!container) return;
+    var route = routeData[routeKey];
+    var day = null;
+    for (var i = 0; i < route.days.length; i++) {
+      if (route.days[i].day === dayNum) { day = route.days[i]; break; }
+    }
+    if (!day) { container.innerHTML = ''; return; }
+
+    var html = '<div class="day-header">';
+    html += 'Day ' + day.day + ' <small>(' + day.date + ')</small> — ' + day.label;
+    if (day.day_km) html += ' <span class="day-km">' + day.day_km + 'km</span>';
+    html += '</div>';
+
+    html += '<div class="day-stops">';
+
+    day.stops.forEach(function(stop, idx) {
+      // 거리 커넥터
+      if (idx > 0) {
+        html += '<div class="stop-connector">';
+        if (stop.distance_km && stop.distance_km > 0) {
+          html += '↓ <span class="connector-dist">' + stop.distance_km + 'km</span>';
+        } else {
+          html += '↓';
+        }
+        html += '</div>';
+      }
+
+      // Stop 행
+      var badge = '';
+      if (stop.grade) badge = '<span class="grade-badge grade-' + stop.grade + '">' + stop.grade + '</span> ';
+      else if (stop.type === 'stay') badge = '<span class="grade-badge stay-badge">숙박</span> ';
+      else if (stop.type === 'start' || stop.type === 'end') badge = '<span class="grade-badge start-badge">출발</span> ';
+
+      var gradeAttr = stop.grade ? ' data-grade="' + stop.grade + '"' : '';
+      var clickClass = stop.grade ? ' stop-clickable' : '';
+      var clickAttr = stop.grade ? ' data-stop-name="' + stop.name + '"' : '';
+      html += '<div class="stop-row' + clickClass + '"' + gradeAttr + clickAttr + '>' + badge + stop.name + '</div>';
+    });
+
+    html += '</div>';
+    container.innerHTML = html;
+
+    // 등급 stop 클릭 → 모달
+    container.querySelectorAll('.stop-clickable[data-stop-name]').forEach(function(el) {
+      el.addEventListener('click', function(e) {
         e.stopPropagation();
         var name = this.dataset.stopName;
         var place = findPlaceByName(name);
@@ -293,6 +333,19 @@
           showRoute(key);
         } else {
           showRouteDay(key, parseInt(d));
+        }
+        // 패널 미니탭 동기화
+        var miniTabs = document.querySelectorAll('#dayMiniTabs .day-mini-tab');
+        miniTabs.forEach(function(t) { t.classList.remove('active'); });
+        if (d !== 'all') {
+          var matchMini = document.querySelector('#dayMiniTabs .day-mini-tab[data-day="' + d + '"]');
+          if (matchMini) matchMini.classList.add('active');
+          renderDayContent(activeRoute, parseInt(d));
+        } else {
+          // 전체 선택 시 Day 1 기본 표시
+          var firstMini = document.querySelector('#dayMiniTabs .day-mini-tab[data-day="1"]');
+          if (firstMini) firstMini.classList.add('active');
+          renderDayContent(activeRoute, 1);
         }
       });
     });
