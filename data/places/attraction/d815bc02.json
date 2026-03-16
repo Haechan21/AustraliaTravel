@@ -1,0 +1,94 @@
+{
+  "id": "d815bc02",
+  "name": "Glow Worm Tunnel (Wollemi National Park)",
+  "name_ko": "Lithgow 글로우 웜 터널",
+  "category": "attraction",
+  "source_file": "manual-add",
+  "address_raw": "Glow Worm Tunnel Road, Lithgow NSW 2790, Australia",
+  "location": {
+    "coordinates": {
+      "lng": 150.115,
+      "lat": -33.388
+    },
+    "address": "Glow Worm Tunnel Road, Newnes, NSW 2790, Australia",
+    "region": "블루마운틴"
+  },
+  "collected_data": {
+    "rating": 4.4,
+    "total_reviews": 450,
+    "price_level": null,
+    "opening_hours": "매일 09:00~16:30 (크리스마스 제외)",
+    "collected_at": "2026-03-16T00:00:00Z",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": null,
+        "positive": [
+          "터널 내부 수천 마리 반딧불이가 '별 천장'을 만드는 감동적 경험",
+          "비수기(5월)라 관광객이 적어 오히려 조용하고 몰입 가능",
+          "낮에도 터널 내부가 완전 암흑이라 계절 무관 관람",
+          "2024년 트랙 업그레이드(시멘트 워크웨이+핸드레일)로 안전성 대폭 개선"
+        ],
+        "negative": [
+          "30km 비포장도로가 울퉁불퉁(corrugated)하고 포트홀 있음",
+          "비 온 후에는 4WD 필수, 일반 세단 진입 위험",
+          "터널 바닥 물 고임 — 장화 없으면 발 젖음"
+        ],
+        "seasonal_notes": "5월은 가을/초겨울이지만 터널 내부 습도·온도가 안정적이라 반딧불이 수량에 큰 차이 없음. 외부 기온 낮아(최저 2~5도) 방한복 필수"
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": null,
+        "positive": [
+          "2024년 트랙 보수 후 도보 난이도 대폭 하락",
+          "어둠 적응 5~10분 후 터널 천장이 별하늘처럼 빛나는 장관",
+          "무료 입장 + 주차비 없음 — 가성비 최고",
+          "왕복 2.9km 워킹 트랙 자체도 경치 좋음 (사암 절벽, 숲)"
+        ],
+        "negative": [
+          "Google Maps 내비가 잘못된 경로로 안내하는 경우 있음 — NPWS 안내 따를 것",
+          "주말 주차장 포화 (10시 이전 도착 권장)",
+          "2026년 3~4월 도로 보수 공사 진행 — 5월 전 도로 상태 NPWS 전화 확인 필요(1300 072 757)"
+        ],
+        "status_notes": "정상 운영 중. 2024 트랙 업그레이드 완료. 2026년 초 접근 도로 보수 공사 진행 중이나 5월 방문 전 완료 예상"
+      },
+      "tips": [
+        "레드라이트 헤드램프 필수 — 일반 화이트라이트는 반딧불이에 해로움",
+        "방수 등산화 또는 장화 착용 (터널 바닥 물 고임, 수심 최대 발목~무릎)",
+        "어둠 적응 5~10분 필수 — 토치 끄고 가만히 기다리면 수천 마리가 보임",
+        "플래시 촬영 금지 (삼각대 + 장노출만 가능)",
+        "평일 오전 방문 시 거의 독점 가능",
+        "비포장도로 상태 사전 확인: NPWS 1300 072 757"
+      ]
+    },
+    "logistics": {
+      "parking": "무료 주차장 (Newnes Junction). 약 20대 수용. 주말 10시 이후 포화 가능",
+      "road_condition": "마지막 30km 비포장(Glow Worm Tunnel Road). 건조 시 2WD 가능, 비 후 4WD 권장. Corrugated surface + 포트홀 주의",
+      "nearby_attractions": "블루마운틴 국립공원 (카툼바 에코포인트에서 차로 1.5시간), Zig Zag Railway(차로 30분)",
+      "peak_times": "주말 10~14시 혼잡. 평일 오전은 거의 독점",
+      "public_transport": "없음 — 차량 필수"
+    },
+    "experience": {
+      "photo_spots": "터널 입구 사암 아치 실루엣 사진, 터널 내부 반딧불이 장노출(삼각대 필수, ISO 3200+, 30초+), 워킹 트랙 도중 사암 절벽 전망",
+      "golden_hour": "해당 없음 — 터널 내부라 시간대 무관. 낮에도 완전 암흑",
+      "seasonal_beauty": "연중 동일 (터널 내부 환경 안정). 5월은 외부 가을 단풍 + 비수기 한적함이 보너스",
+      "hidden_gems": "터널 중앙부(200m 지점)에서 토치를 끄고 5분 이상 기다리면, 눈 적응 후 천장 전체가 푸른 별하늘처럼 빛남. '오스트레일리아의 숨은 별하늘'이라 불림",
+      "sensory_notes": "완전한 어둠 속 고요함, 터널 내 물방울 떨어지는 소리, 서늘한 공기(터널 내부 연중 약 15도), 축축한 흙냄새"
+    },
+    "risk_check": {
+      "negative_review_patterns": "비포장도로 상태 불만이 전체 부정 리뷰의 70%+. 터널 자체에 대한 불만은 거의 없음. 장비 미준비(장화, 레드라이트) 시 불편 호소",
+      "may_operation": "정상 운영 (매일 09:00~16:30). 터널형이라 계절/날씨 무관",
+      "safety_issues": "터널 내 불규칙 지면, 낮은 천장 일부 구간(머리 주의), 바닥 물 고임. 2024 업그레이드로 핸드레일 설치되어 안전성 개선",
+      "weather_impact": "터널 내부는 날씨 무관. 단, 비 후 접근 도로(비포장)가 위험해질 수 있음. 폭우 직후에는 방문 자제",
+      "quality_trend": "상승. 2024 트랙 업그레이드로 접근성·안전성 대폭 개선. 리뷰 평점도 상승 추세"
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 120,
+    "cost_aud": 0,
+    "best_time": "오전 (비수기 평일 = 거의 독점)",
+    "weather_dependent": false,
+    "reservation_required": false
+  },
+  "google_maps_url": "https://www.google.com/maps/search/Glow+Worm+Tunnel+Lithgow+NSW"
+}

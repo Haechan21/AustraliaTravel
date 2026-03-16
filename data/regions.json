@@ -9,7 +9,7 @@
         "lat": -33.7018
       },
       "radius_km": 32.3,
-      "place_count": 16,
+      "place_count": 17,
       "place_ids": [
         "04cc52a2",
         "1a05deb4",
@@ -26,7 +26,8 @@
         "c92d2048",
         "cb723736",
         "ef2de137",
-        "fdef9085"
+        "fdef9085",
+        "d815bc02"
       ]
     },
     {

@@ -3934,6 +3934,42 @@
         }
       },
       "total_score": 70.0
+    },
+    {
+      "id": "d815bc02",
+      "name_ko": "Lithgow 글로우 웜 터널",
+      "region": "블루마운틴",
+      "criteria": {
+        "google_rating": {
+          "score": 6,
+          "reason": "평점은 참고만. 4.4면 경고 수준 아님"
+        },
+        "review_count": {
+          "score": 7,
+          "reason": "450개면 충분. 숨은 명소치고는 잘 알려진 편"
+        },
+        "scenery": {
+          "score": 9,
+          "reason": "수천 마리 반딧불이가 만드는 푸른 별 천장 — 숨이 멎을 정도의 자연 절경"
+        },
+        "accessibility": {
+          "score": 6,
+          "reason": "비포장도로가 모험의 일부. 가는 과정에서 Newnes 고원의 사암 절벽도 볼 수 있음"
+        },
+        "value_for_money": {
+          "score": 10,
+          "reason": "무료이면서 '인생 경험'이라는 리뷰 다수. 돈을 초월하는 경험"
+        },
+        "time_efficiency": {
+          "score": 7,
+          "reason": "2시간 체험의 몰입감이 높다. 시간이 오래 걸려도 감동이 크면 가치"
+        },
+        "uniqueness": {
+          "score": 10,
+          "reason": "한국에서 절대 불가능. 호주에서도 이런 터널은 Lithgow와 Helensburgh뿐. 5월도 가능한 건 터널이라"
+        }
+      },
+      "total_score": 90.0
     }
   ]
 }

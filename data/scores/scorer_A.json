@@ -3934,6 +3934,42 @@
         }
       },
       "total_score": 62.0
+    },
+    {
+      "id": "d815bc02",
+      "name_ko": "Lithgow 글로우 웜 터널",
+      "region": "블루마운틴",
+      "criteria": {
+        "google_rating": {
+          "score": 7,
+          "reason": "TripAdvisor 4.0~4.5, AllTrails ~4.5. 접근도로 불만이 평점 낮추는 요인이지 터널 자체 평가는 높음"
+        },
+        "review_count": {
+          "score": 5,
+          "reason": "450개는 중간 수준. 충분히 검증되었으나 5000+ 명소 대비 낮음"
+        },
+        "scenery": {
+          "score": 7,
+          "reason": "터널 내부 반딧불이는 '경치'라기보다 '체험'. 워킹 트랙의 사암 절벽은 보너스"
+        },
+        "accessibility": {
+          "score": 4,
+          "reason": "비포장 30km + 카툼바에서 1.5시간. 동선 비효율. 비 후 4WD 필수"
+        },
+        "value_for_money": {
+          "score": 9,
+          "reason": "무료! 시간 대비 가성비만 따지면 왕복 5시간에 체험 2시간이지만, 비용은 0원"
+        },
+        "time_efficiency": {
+          "score": 3,
+          "reason": "왕복 3시간 이동 + 2시간 체험 = 5시간 소요. 분당 효율 매우 낮음"
+        },
+        "uniqueness": {
+          "score": 9,
+          "reason": "호주 고유 glow worm 터널. 접근만 편하면 10점이지만 비포장이 깎음"
+        }
+      },
+      "total_score": 51.5
     }
   ]
 }

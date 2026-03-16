@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-03-13",
   "category": "attraction",
-  "total_places": 109,
+  "total_places": 110,
   "grading_method": "percentile",
   "grading_cutoffs": {
     "S": "1~6위",
@@ -13,7 +13,7 @@
   "grade_distribution": {
     "S": 6,
     "A": 22,
-    "B": 38,
+    "B": 39,
     "C": 33,
     "D": 10
   },
@@ -619,6 +619,20 @@
       "average_score": 71.5,
       "spread": 7.5,
       "controversial": false,
+      "grade": "B"
+    },
+    {
+      "id": "d815bc02",
+      "name_ko": "Lithgow 글로우 웜 터널",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 51.5,
+        "B": 90.0,
+        "C": 73.0
+      },
+      "average_score": 71.5,
+      "spread": 38.5,
+      "controversial": true,
       "grade": "B"
     },
     {
