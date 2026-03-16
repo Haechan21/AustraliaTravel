@@ -163,11 +163,12 @@ GoogleMaps/
 {
   "generated_at": "2026-03-13",
   "category": "attraction",
-  "total_places": 109,
+  "total_places": 110,
   "grading_method": "percentile",
-  "grading_cutoffs": { "S": "1~6위", "A": "7~28위", "B": "29~66위", "C": "67~99위", "D": "100~109위" },
-  "grade_distribution": { "S": 6, "A": 22, "B": 38, "C": 33, "D": 10 },
-  "controversial_count": 36,
+  "grading_note": "grade는 may_adjusted_score(5월 계절 보정) 기준 퍼센타일 등급",
+  "grading_cutoffs": { "S": "1~6위", "A": "7~28위", "B": "29~66위", "C": "67~99위", "D": "100~110위" },
+  "grade_distribution": { "S": 6, "A": 22, "B": 38, "C": 33, "D": 11 },
+  "controversial_count": 37,
   "scores": [
     {
       "id": "string",
@@ -177,11 +178,15 @@ GoogleMaps/
       "average_score": 85.5,
       "spread": 20.5,
       "controversial": true,
-      "grade": "S"
+      "grade": "S",
+      "seasonal_adjustment": 5,
+      "may_adjusted_score": 90.5
     }
   ]
 }
 ```
+
+> **등급 기준**: `grade`는 `may_adjusted_score`(5월 계절 보정 후) 기준 퍼센타일 등급. 프로젝트 전체에서 이 단일 등급을 사용한다. 보정 전 원점수는 `average_score`에 보존되어 있으며, 보정값은 `seasonal_adjustment` 필드로 추적 가능.
 
 #### 개별 평가자 결과 (`data/scores/scorer_{A,B,C}.json`)
 
@@ -395,7 +400,7 @@ Claude Code가 대화형으로 장소별 정보를 웹 검색하고, 결과를 J
 
 > **재현성 보장**: 모든 채점에 `reason` 필드로 판단 근거를 기록하므로, 나중에 기준을 조정하거나 재평가할 때 참고할 수 있다.
 
-> **현재 상태**: ✅ Phase 3 완료. `data/scores/attraction_scored.json`에 109곳 평가 완료(중복 1개 제외). CRITIC.md 페르소나 기반 3인 독립 평가 + 퍼센타일 등급. 등급 분포: S:6 A:22 B:38 C:33 D:10. 논쟁 장소 36곳. `data/scores/RANKINGS.md`에 랭킹 문서 자동 생성 (`scripts/generate_frontend.py`).
+> **현재 상태**: ✅ Phase 3 완료. `data/scores/attraction_scored.json`에 110곳 평가 완료(Lithgow 글로우웜 터널 추가, 중복 1개 제외). CRITIC.md 페르소나 기반 3인 독립 평가 + 퍼센타일 등급 + 5월 계절 보정 적용. 등급 분포: S:6 A:22 B:38 C:33 D:11 (`may_adjusted_score` 기준 단일 `grade`). 논쟁 장소 37곳. `data/scores/RANKINGS.md`에 랭킹 문서 자동 생성 (`scripts/generate_frontend.py`).
 
 ### Phase 4: 여행 일정 생성
 
@@ -404,7 +409,32 @@ Claude Code가 대화형으로 장소별 정보를 웹 검색하고, 결과를 J
 
 여행 일정은 **사용자와 Claude Code의 대화**를 통해 생성된다. 리서치 자료, 평가 결과, 지리적 제약, 사용자 선호를 종합하여 일정을 구성하고, 결과를 `ITINERARY.md`에 직접 기록한다.
 
-> **현재 상태**: 🔄 Phase 4 진행 중. 6개 루트 후보(1~6조) 완성, routes.html 비교 페이지 구축 완료. ITINERARY.md 최종 반영 대기 중.
+> **현재 상태**: 🔄 Phase 4 진행 중. 9개 루트 후보(1~9조) 완성, routes.html 비교 페이지 구축 완료. CRITIC_ROUTE.md 루트 전용 평가 프레임워크 도입 + 5월 계절 보정 반영. ITINERARY.md 최종 반영 대기 중.
+
+#### 루트 파일 점수 정합성 유지
+
+루트 파일(`research/route-plans/*.md`)에는 각 장소의 등급과 점수가 포함된다. Phase 3에서 계절 보정이나 재평가가 발생하면 루트 파일의 점수가 `attraction_scored.json`과 불일치할 수 있다.
+
+**검증/수정 스크립트**:
+```bash
+# 불일치 리포트만 (dry-run)
+python scripts/update_route_scores.py
+
+# 실제 수정
+python scripts/update_route_scores.py --fix
+
+# 상세 로그 포함
+python scripts/update_route_scores.py --fix --verbose
+```
+
+**자동화 범위**: 스크립트는 장소명이 같은 줄에 있는 점수를 `may_adjusted_score`로 교체한다. 등급 레이블(S/A/B/C/D) 변경, S등급 개수 집계, 텍스트 설명 문맥은 자동화되지 않으므로 **에이전트가 수동으로 처리**해야 한다.
+
+**재평가 후 체크리스트** (에이전트 작업):
+1. `python scripts/update_route_scores.py --fix` 실행 → 점수 일괄 업데이트
+2. `grade` 변경 장소 확인 → 등급 레이블 수동 수정
+3. 각 루트의 S등급 방문 수 재계산 → 헤더/요약 수정
+4. `README.md` 종합 순위표 S등급 열 수정
+5. `CLAUDE.md` 진행 상황 갱신
 
 #### 일정 생성 시 고려사항
 
@@ -412,7 +442,7 @@ Claude Code가 대화형으로 장소별 정보를 웹 검색하고, 결과를 J
 2. **지역 그룹핑**: 같은 지역 장소를 하루에 묶어 이동 최소화
 3. **지역 순서 결정**: 지역 간 이동거리를 최소화하는 순서 결정
 4. **일별 배분**: 하루 활동 가능 시간 내에서 장소 배치
-   - 이동시간 (좌표 간 직선거리 → 예상 운전시간 환산)
+   - 이동거리: OSRM API 기반 실제 도로 주행 거리 사용 (직선거리·근사값 금지)
    - 체류시간 (`estimated_visit_duration_min`)
    - 식사 시간 슬롯 (점심/저녁)
 5. **매칭**: 각 일정에 가까운 고평가 음식점/숙소를 연결
@@ -583,7 +613,7 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 │   │   ├── 호주-5월-여행환경.md
 │   │   └── ...
 │   ├── ai-review/              #   ITINERARY.md 리뷰 작성 시 수집한 근거
-│   └── route-plans/            #   6개 루트 후보 상세 일정 + CRITIC 토론 문서
+│   └── route-plans/            #   10개 루트 후보 상세 일정 + CRITIC 토론 문서
 │
 ├── GoogleMaps/                 # 구글맵 내보내기 원본 (입력, 수정 금지)
 │   └── {YYYY-MM-DD}.json      # 날짜 기반 파일명, 모든 카테고리 혼합

@@ -3939,7 +3939,8 @@
       "id": "d815bc02",
       "name_ko": "Lithgow 글로우 웜 터널",
       "region": "블루마운틴",
-      "criteria": {
+      "total_score": 73.0,
+      "raw_scores": {
         "google_rating": {
           "score": 7,
           "reason": "리뷰 수 450개로 데이터 충분. 평점 4.4는 양호하나 접근도로 불만이 반영됨"
@@ -3968,8 +3969,7 @@
           "score": 8,
           "reason": "'인생 경험', '꼭 가야 한다' 리뷰 다수. 유니크함의 실제 체감도 높음"
         }
-      },
-      "total_score": 73.0
+      }
     }
   ]
 }

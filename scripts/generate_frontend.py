@@ -83,29 +83,32 @@ def load_all_data():
     return scored, scorers, place_files
 
 
-def assign_grades(scores):
-    """퍼센타일 기반 등급 부여. scores는 average_score 내림차순 정렬되어 있어야 함."""
-    n = len(scores)
-    cutoffs = []
-    for grade, pct in GRADE_PERCENTILES:
-        cutoffs.append((grade, math.ceil(n * pct)))
+def get_score(item):
+    """장소의 대표 점수 반환 (may_adjusted_score 우선)."""
+    return item.get("may_adjusted_score", item["average_score"])
 
-    for i, item in enumerate(scores):
-        rank = i + 1
-        for grade, cut in cutoffs:
-            if rank <= cut:
-                item["grade"] = grade
-                break
 
-    return scores
+def get_grade(item):
+    """장소의 등급 반환."""
+    return item["grade"]
 
 
 def build_scored(scored, scorers):
-    """scorer 파일들로부터 attraction_scored.json 재생성."""
+    """scorer 파일들로부터 attraction_scored.json 재생성.
+
+    기존 scored 파일에 seasonal_adjustment가 있으면 보존하고,
+    may_adjusted_score 기준으로 등급을 부여한다.
+    """
     scorer_by_id = {
         s: {p["id"]: p for p in data["scores"]}
         for s, data in scorers.items()
     }
+
+    # 기존 계절 보정 데이터 보존
+    seasonal_map = {}
+    for s in scored.get("scores", []):
+        if "seasonal_adjustment" in s:
+            seasonal_map[s["id"]] = s["seasonal_adjustment"]
 
     combined = []
     for s_key in ["A", "B", "C"]:
@@ -125,11 +128,26 @@ def build_scored(scored, scorers):
         item["spread"] = spread
         item["controversial"] = spread >= 15
 
-    # 점수 내림차순 정렬
-    combined.sort(key=lambda x: x["average_score"], reverse=True)
+        # 계절 보정 적용
+        adj = seasonal_map.get(pid, 0)
+        item["seasonal_adjustment"] = adj
+        item["may_adjusted_score"] = round(avg + adj, 1)
 
-    # 퍼센타일 등급 부여
-    assign_grades(combined)
+    # may_adjusted_score 내림차순 정렬
+    combined.sort(key=lambda x: x["may_adjusted_score"], reverse=True)
+
+    # 퍼센타일 등급 부여 (may_adjusted_score 기준)
+    n = len(combined)
+    cutoffs = []
+    for grade, pct in GRADE_PERCENTILES:
+        cutoffs.append((grade, math.ceil(n * pct)))
+
+    for i, item in enumerate(combined):
+        rank = i + 1
+        for grade, cut in cutoffs:
+            if rank <= cut:
+                item["grade"] = grade
+                break
 
     # 등급 분포
     grade_dist = {}
@@ -137,7 +155,6 @@ def build_scored(scored, scorers):
         g = item["grade"]
         grade_dist[g] = grade_dist.get(g, 0) + 1
 
-    n = len(combined)
     cutoff_desc = {}
     prev = 0
     for grade, pct in GRADE_PERCENTILES:
@@ -150,6 +167,7 @@ def build_scored(scored, scorers):
         "category": "attraction",
         "total_places": len(combined),
         "grading_method": "percentile",
+        "grading_note": "grade는 may_adjusted_score(5월 계절 보정) 기준 퍼센타일 등급",
         "grading_cutoffs": cutoff_desc,
         "grade_distribution": grade_dist,
         "controversial_count": sum(1 for c in combined if c["controversial"]),
@@ -198,7 +216,7 @@ def generate_rankings(scored):
             rank = scores.index(p) + 1
             flag = "논쟁" if p["controversial"] else ""
             lines.append(
-                f"| {rank} | {p['average_score']:.1f} | {p['scores']['A']:.1f} "
+                f"| {rank} | {get_score(p):.1f} | {p['scores']['A']:.1f} "
                 f"| {p['scores']['B']:.1f} | {p['scores']['C']:.1f} "
                 f"| {p['name_ko']} | {p['region']} | {flag} |"
             )
@@ -217,7 +235,7 @@ def generate_rankings(scored):
             lines.append(
                 f"| {p['spread']:.1f} | {p['name_ko']} | {p['scores']['A']:.1f} "
                 f"| {p['scores']['B']:.1f} | {p['scores']['C']:.1f} "
-                f"| {p['average_score']:.1f} | {p['grade']}등급 |"
+                f"| {get_score(p):.1f} | {get_grade(p)}등급 |"
             )
         lines.append("")
 
@@ -228,13 +246,13 @@ def generate_rankings(scored):
 
     lines.append("## 지역별 랭킹")
     lines.append("")
-    for region, places in sorted(regions.items(), key=lambda x: -max(p["average_score"] for p in x[1])):
-        places.sort(key=lambda x: -x["average_score"])
+    for region, places in sorted(regions.items(), key=lambda x: -max(p.get("may_adjusted_score", p["average_score"]) for p in x[1])):
+        places.sort(key=lambda x: -x.get("may_adjusted_score", x["average_score"]))
         lines.append(f"### {region} ({len(places)}곳)")
         lines.append("")
         for p in places:
             flag = " *" if p["controversial"] else ""
-            lines.append(f"- **{p['grade']}등급** {p['average_score']:.1f} — {p['name_ko']}{flag}")
+            lines.append(f"- **{get_grade(p)}등급** {get_score(p):.1f} — {p['name_ko']}{flag}")
         lines.append("")
 
     with open(RANKINGS_OUT, "w", encoding="utf-8") as f:
@@ -287,8 +305,8 @@ def generate_place_data(scored, scorers, place_files):
             "name_ko": item["name_ko"],
             "name": place.get("name", ""),
             "region": item["region"],
-            "grade": item["grade"],
-            "average_score": item["average_score"],
+            "grade": get_grade(item),
+            "average_score": get_score(item),
             "scores": item["scores"],
             "spread": item["spread"],
             "controversial": item["controversial"],
