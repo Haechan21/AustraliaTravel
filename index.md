@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div align="center">
-<img src="https://img.shields.io/badge/Phase_4-루트_후보_5개_비교_중-yellow?style=for-the-badge" alt="Status" />
+<img src="https://img.shields.io/badge/Phase_4-루트_후보_6개_비교_중-yellow?style=for-the-badge" alt="Status" />
 <img src="https://img.shields.io/badge/관광지-109곳_평가_완료-blue?style=for-the-badge" alt="Places" />
 <img src="https://img.shields.io/badge/기간-9일_(활동_7일)-green?style=for-the-badge" alt="Duration" />
 </div>
@@ -34,10 +34,11 @@ layout: default
 
 <br/>
 
-## 루트 후보 (5개 안 비교 중)
+## 루트 후보 (6개 안 비교 중)
 
 | 순위 | 안 | 점수 | 이동거리 | 특징 |
 |:----:|:---|-----:|-------:|:-----|
+| - | **6조** 바이런직행+블루마운틴 | **87.0** | 2,085km | GC 포기, S등급 6곳 올클리어, 골든아워 3회 |
 | 1 | **4조** 오션앤마운틴 그랜드루프 | **83.0** | 2,604km | S등급 6곳 올클리어 |
 | 2 | **2조** 남쪽해안+블루마운틴 | **82.7** | 549km | 바다→산→도시, Vivid Sydney 4일 |
 | 3 | **3조** 해안+내륙 폭포 루프 | **82.3** | 2,109km | Waterfall Way 열대우림, S등급 4곳 |
