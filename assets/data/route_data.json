@@ -519,7 +519,8 @@
           "stops": [
             { "name": "카툼바", "lng": 150.312, "lat": -33.714, "type": "start", "distance_km": 0 },
             { "name": "그랜드 캐니언 워킹 트랙", "lng": 150.324, "lat": -33.660, "type": "attraction", "grade": "A", "distance_km": 3 },
-            { "name": "스탠웰 탑스 전망대", "lng": 150.979, "lat": -34.223, "type": "attraction", "grade": "A", "distance_km": 130 },
+            { "name": "그랜드 퍼시픽 드라이브", "lng": 150.979, "lat": -34.230, "type": "attraction", "grade": "S", "distance_km": 127 },
+            { "name": "스탠웰 탑스 전망대", "lng": 150.979, "lat": -34.223, "type": "attraction", "grade": "A", "distance_km": 1 },
             { "name": "시 클리프 브릿지", "lng": 150.963, "lat": -34.255, "type": "attraction", "grade": "A", "distance_km": 3 },
             { "name": "봄보 헤드랜드 채석장", "lng": 150.862, "lat": -34.651, "type": "attraction", "grade": "A", "distance_km": 55 },
             { "name": "키아마 블로우홀", "lng": 150.854, "lat": -34.672, "type": "attraction", "grade": "B", "distance_km": 2 },

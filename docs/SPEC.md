@@ -556,18 +556,23 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 │   ├── SPEC.md                 # 기술 설계서 (이 문서)
 │   ├── CRITIC.md               # 평가 페르소나 3명 정의 및 채점 가이드
 │   ├── META.md                 # 여행 전제 조건 (항공, 렌터카, 로드트립 방향, 제약 조건)
-│   └── ITINERARY.md            # 날짜별 확정 일정 + AI 리뷰 (Single Source of Truth)
+│   ├── ITINERARY.md            # 날짜별 확정 일정 + AI 리뷰 (Single Source of Truth)
+│   └── TRAVELER_PROFILE.md     # 여행자 프로필 & 선호도 설문 (운전 내성, 여행 스타일 등)
 ├── CLAUDE.md                   # Claude Code 작업 가이드
 ├── .gitignore
 │
 ├── _layouts/                   # Jekyll 레이아웃 템플릿
 │   └── default.html
 ├── rankings.html               # 관광지 랭킹 페이지 (GitHub Pages)
+├── routes.html                 # 루트 비교 페이지 (지도 + 상세 평가)
 ├── index.md                    # 사이트 인덱스
 ├── assets/
 │   ├── css/style.scss          #   스타일시트
 │   ├── js/rankings.js          #   랭킹 페이지 인터랙션
-│   └── data/place_data.json    #   프론트엔드용 장소 데이터 (자동 생성)
+│   ├── js/routes.js            #   루트 비교 페이지 인터랙션 (Leaflet.js)
+│   └── data/
+│       ├── place_data.json     #   프론트엔드용 장소 데이터 (자동 생성)
+│       └── route_data.json     #   루트 비교용 경유지·좌표 데이터
 │
 ├── research/                   # 리서치 자료 및 AI 리뷰 근거
 │   ├── deep-research/          #   ChatGPT, Gemini 등 외부 AI 딥 리서치 결과
@@ -577,7 +582,8 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 │   │   ├── 6일-로드트립-리서치.md
 │   │   ├── 호주-5월-여행환경.md
 │   │   └── ...
-│   └── ai-review/              #   ITINERARY.md 리뷰 작성 시 수집한 근거
+│   ├── ai-review/              #   ITINERARY.md 리뷰 작성 시 수집한 근거
+│   └── route-plans/            #   6개 루트 후보 상세 일정 + CRITIC 토론 문서
 │
 ├── GoogleMaps/                 # 구글맵 내보내기 원본 (입력, 수정 금지)
 │   └── {YYYY-MM-DD}.json      # 날짜 기반 파일명, 모든 카테고리 혼합
