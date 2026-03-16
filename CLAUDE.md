@@ -25,12 +25,27 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 현재 진행 상황
 
-- Phase 1 (전처리): ✅ 완료 — 110개 attraction stub (2026-03-13 추가분 26개 포함, 중복 1개)
-- Phase 2 (정보 수집): ✅ 완료 — 109개 장소 collected_data 채움 (중복 7a922fd8 제외), 14개 지역 분류, 7개 지역별 리서치
-- Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 109곳 재평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:10. 논쟁 장소 36곳
-- Phase 4 (일정 생성): 🔄 진행 중 — 10개 루트 후보 완성 (1~10조), ITINERARY.md 최종 반영 미완
+- Phase 1 (전처리): ✅ 완료 — 111개 attraction stub (2026-03-13 추가분 26개 포함, 중복 1개)
+- Phase 2 (정보 수집): ✅ 완료 — 110개 장소 collected_data 채움 (중복 7a922fd8 제외), 14개 지역 분류, 주제별·지역별 리서치 30건+
+- Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 110곳 평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:11 (may_adjusted_score 기준 단일 `grade`). 논쟁 장소 37곳
+- Phase 4 (일정 생성): 🔄 진행 중 — 9개 루트 후보 완성 (1~9조), ITINERARY.md 최종 반영 미완
 - Phase 5 (일정 리뷰): ⬜ 미시작
 - 향후: 음식점·숙소 데이터 수집 및 평가 예정, 관광지 추가도 가능
+
+## 에이전트 작업 체크리스트
+
+> Phase 3 재평가나 계절 보정 변경 시 수행해야 할 작업. 자동화 가능한 부분은 스크립트로, 나머지는 에이전트가 수동 처리.
+
+### 재평가 후 루트 파일 동기화
+1. `python scripts/update_route_scores.py --fix` — 점수 일괄 업데이트 (자동)
+2. `grade` 변경 장소 확인 → 등급 레이블(S/A/B 등) 수동 수정 (에이전트)
+3. 각 루트의 S등급 방문 수 재계산 → 헤더/요약/테이블 수정 (에이전트)
+4. `research/route-plans/README.md` 종합 순위표 S등급 열 수정 (에이전트)
+5. 이 파일(`CLAUDE.md`) 진행 상황 갱신
+
+### Phase 4→5 전환 시
+- [ ] 9개 루트 중 최종 선택 → `docs/ITINERARY.md`에 반영
+- [ ] Phase 5 리뷰 시작 → `research/ai-review/` 근거 저장
 
 ## 스크립트 실행
 
@@ -46,6 +61,10 @@ python scripts/generate_frontend.py            # 전체 (재채점 + RANKINGS + 
 python scripts/generate_frontend.py --rescore  # 등급 재계산만
 python scripts/generate_frontend.py --rank     # RANKINGS.md만
 python scripts/generate_frontend.py --data     # place_data.json만
+
+# 루트 파일 점수 정합성 검증/수정
+python scripts/update_route_scores.py            # 불일치 리포트만 (dry-run)
+python scripts/update_route_scores.py --fix      # 실제 수정
 ```
 
 외부 의존성 없음. Python 3.11+ 표준 라이브러리만 사용.
@@ -57,6 +76,8 @@ python scripts/generate_frontend.py --data     # place_data.json만
 - `collected_data`가 `null`이면 미수집 장소 (Phase 2 필요)
 - 리뷰 수집은 **작년 동월**(`same_month_last_year`)과 **최근 6개월**(`recent_6_months`) 2구간으로 분리
 - 좌표 형식: `[lng, lat]` (GeoJSON 표준)
+- **등급은 단일 `grade`**: `may_adjusted_score`(5월 계절 보정 후) 기준 퍼센타일 등급. 프로젝트 전체에서 이 등급만 사용
+- **이동거리는 실제 도로 거리**: OSRM API로 산출한 실제 도로 주행 거리를 사용. 직선거리나 근사값(~) 사용 금지
 
 ## 리서치 파일 구조
 

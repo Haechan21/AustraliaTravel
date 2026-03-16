@@ -3939,7 +3939,8 @@
       "id": "d815bc02",
       "name_ko": "Lithgow 글로우 웜 터널",
       "region": "블루마운틴",
-      "criteria": {
+      "total_score": 51.5,
+      "raw_scores": {
         "google_rating": {
           "score": 7,
           "reason": "TripAdvisor 4.0~4.5, AllTrails ~4.5. 접근도로 불만이 평점 낮추는 요인이지 터널 자체 평가는 높음"
@@ -3968,8 +3969,7 @@
           "score": 9,
           "reason": "호주 고유 glow worm 터널. 접근만 편하면 10점이지만 비포장이 깎음"
         }
-      },
-      "total_score": 51.5
+      }
     }
   ]
 }
