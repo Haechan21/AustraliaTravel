@@ -2811,8 +2811,8 @@
     "10": {
       "name": "10조: 반딧불이 + 블루마운틴 (6조 변형)",
       "color": "#d35400",
-      "total_km": 1985,
-      "score": 81.3,
+      "total_km": 2085,
+      "score": 84.0,
       "days": [
         {
           "day": 1,
@@ -3081,8 +3081,8 @@
         {
           "day": 6,
           "date": "5/29",
-          "label": "Lithgow 반딧불이→그랜드캐니언→시드니",
-          "day_km": 210,
+          "label": "Lithgow 반딧불이→그랜드캐니언→GP드라이브→시드니",
+          "day_km": 285,
           "stops": [
             {
               "name": "카툼바",
@@ -3107,11 +3107,35 @@
               "distance_km": 50
             },
             {
+              "name": "스탠웰 탑스 전망대",
+              "lng": 150.979,
+              "lat": -34.223,
+              "type": "attraction",
+              "grade": "A",
+              "distance_km": 130
+            },
+            {
+              "name": "그랜드 퍼시픽 드라이브",
+              "lng": 150.979,
+              "lat": -34.23,
+              "type": "attraction",
+              "grade": "S",
+              "distance_km": 1
+            },
+            {
+              "name": "시 클리프 브릿지",
+              "lng": 150.963,
+              "lat": -34.255,
+              "type": "attraction",
+              "grade": "A",
+              "distance_km": 3
+            },
+            {
               "name": "시드니공항 (반납)",
               "lng": 151.1772,
               "lat": -33.9461,
               "type": "end",
-              "distance_km": 110
+              "distance_km": 55
             }
           ]
         }
