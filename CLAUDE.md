@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 프로젝트 개요
 
-호주 시드니↔골드코스트 해안 로드트립(2026년 5월) 여행 플래너. 구글맵에서 내보낸 후보지 데이터를 전처리하고, AI가 정보 수집·평가·일정 생성·리뷰를 수행한다. 대부분의 작업은 Claude Code 대화형으로 진행되며, Python 스크립트는 반복 연산 보조용.
+호주 시드니↔NSW 북부 해안 로드트립(2026년 5월) 여행 플래너. 구글맵에서 내보낸 후보지 데이터를 전처리하고, AI가 정보 수집·평가·일정 생성·리뷰를 수행한다. 대부분의 작업은 Claude Code 대화형으로 진행되며, Python 스크립트는 반복 연산 보조용.
 
 ## 핵심 문서 역할
 
@@ -28,7 +28,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Phase 1 (전처리): ✅ 완료 — 110개 attraction stub (2026-03-13 추가분 26개 포함, 중복 1개)
 - Phase 2 (정보 수집): ✅ 완료 — 109개 장소 collected_data 채움 (중복 7a922fd8 제외), 14개 지역 분류, 7개 지역별 리서치
 - Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 109곳 재평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:10. 논쟁 장소 36곳
-- Phase 4 (일정 생성): 🔄 진행 중 — 5/25~5/30 미정
+- Phase 4 (일정 생성): 🔄 진행 중 — 6개 루트 후보 완성 (1~6조), ITINERARY.md 최종 반영 미완
 - Phase 5 (일정 리뷰): ⬜ 미시작
 - 향후: 음식점·숙소 데이터 수집 및 평가 예정, 관광지 추가도 가능
 
