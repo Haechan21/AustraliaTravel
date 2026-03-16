@@ -4,7 +4,7 @@
       "name": "1조: GC직행 + 남하해안",
       "color": "#e74c3c",
       "total_km": 2013,
-      "score": 64.2,
+      "score": 60.7,
       "days": [
         {
           "day": 1,
@@ -281,7 +281,7 @@
       "name": "2조: 남쪽해안 + 블루마운틴",
       "color": "#3498db",
       "total_km": 549,
-      "score": 76.0,
+      "score": 77.5,
       "days": [
         {
           "day": 1,
@@ -556,7 +556,7 @@
       "name": "3조: 해안+내륙 폭포 루프",
       "color": "#2ecc71",
       "total_km": 2109,
-      "score": 67.2,
+      "score": 61.3,
       "days": [
         {
           "day": 1,
@@ -841,7 +841,7 @@
       "name": "4조: 오션앤마운틴 그랜드루프",
       "color": "#f1c40f",
       "total_km": 2604,
-      "score": 64.8,
+      "score": 57.3,
       "days": [
         {
           "day": 1,
@@ -1166,7 +1166,7 @@
       "name": "5조: 풀 스윙 (개선)",
       "color": "#9b59b6",
       "total_km": 1999,
-      "score": 61.2,
+      "score": 60.5,
       "days": [
         {
           "day": 1,
@@ -1434,7 +1434,7 @@
       "name": "6조: 바이런직행 + 블루마운틴",
       "color": "#e67e22",
       "total_km": 2085,
-      "score": 83.5,
+      "score": 79.0,
       "days": [
         {
           "day": 1,
@@ -1776,7 +1776,7 @@
       "name": "7조: 안전첫날 + S올클리어",
       "color": "#1abc9c",
       "total_km": 2000,
-      "score": 74.3,
+      "score": 69.3,
       "days": [
         {
           "day": 1,
@@ -2104,7 +2104,7 @@
       "name": "8조: 바이런 연박 감성 루트",
       "color": "#16a085",
       "total_km": 2087,
-      "score": 80.3,
+      "score": 75.8,
       "days": [
         {
           "day": 1,
@@ -2454,7 +2454,7 @@
       "name": "9조: GC포함 밸런스 (4조 완성형)",
       "color": "#c0392b",
       "total_km": 2277,
-      "score": 75.7,
+      "score": 69.3,
       "days": [
         {
           "day": 1,
@@ -2811,8 +2811,8 @@
     "10": {
       "name": "10조: 반딧불이 + 블루마운틴 (6조 변형)",
       "color": "#d35400",
-      "total_km": 2085,
-      "score": 84.0,
+      "total_km": 2140,
+      "score": 73.0,
       "days": [
         {
           "day": 1,
@@ -3081,8 +3081,8 @@
         {
           "day": 6,
           "date": "5/29",
-          "label": "Lithgow 반딧불이→그랜드캐니언→GP드라이브→시드니",
-          "day_km": 285,
+          "label": "Lithgow 반딧불이→그랜드캐니언→GP전구간→시드니",
+          "day_km": 340,
           "stops": [
             {
               "name": "카툼바",
@@ -3131,11 +3131,27 @@
               "distance_km": 3
             },
             {
+              "name": "봄보 헤드랜드 채석장",
+              "lng": 150.862,
+              "lat": -34.651,
+              "type": "attraction",
+              "grade": "A",
+              "distance_km": 55
+            },
+            {
+              "name": "키아마 블로우홀",
+              "lng": 150.854,
+              "lat": -34.672,
+              "type": "attraction",
+              "grade": "A",
+              "distance_km": 2
+            },
+            {
               "name": "시드니공항 (반납)",
               "lng": 151.1772,
               "lat": -33.9461,
               "type": "end",
-              "distance_km": 55
+              "distance_km": 117
             }
           ]
         }

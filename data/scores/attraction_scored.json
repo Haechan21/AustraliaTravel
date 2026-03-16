@@ -31,7 +31,10 @@
       "average_score": 85.5,
       "spread": 20.5,
       "controversial": true,
-      "grade": "S"
+      "grade": "S",
+      "may_adjusted_score": 90.5,
+      "seasonal_adjustment": 5,
+      "may_grade": "S"
     },
     {
       "id": "e16a2fe5",
@@ -45,7 +48,10 @@
       "average_score": 85.3,
       "spread": 14.5,
       "controversial": false,
-      "grade": "S"
+      "grade": "S",
+      "may_adjusted_score": 88.3,
+      "seasonal_adjustment": 3,
+      "may_grade": "S"
     },
     {
       "id": "98dc14f5",
@@ -59,49 +65,10 @@
       "average_score": 85.0,
       "spread": 9.5,
       "controversial": false,
-      "grade": "S"
-    },
-    {
-      "id": "86d8f30d",
-      "name_ko": "고벳츠 리프 전망대",
-      "region": "블루마운틴",
-      "scores": {
-        "A": 79.0,
-        "B": 85.0,
-        "C": 83.5
-      },
-      "average_score": 82.5,
-      "spread": 6.0,
-      "controversial": false,
-      "grade": "S"
-    },
-    {
-      "id": "f97b06e6",
-      "name_ko": "그랜드 퍼시픽 드라이브",
-      "region": "로열국립공원/그랜드퍼시픽",
-      "scores": {
-        "A": 79.5,
-        "B": 85.0,
-        "C": 82.5
-      },
-      "average_score": 82.3,
-      "spread": 5.5,
-      "controversial": false,
-      "grade": "S"
-    },
-    {
-      "id": "7c98c2bd",
-      "name_ko": "토마리 헤드 정상 산책로",
-      "region": "뉴캐슬/포트스테판스",
-      "scores": {
-        "A": 75.0,
-        "B": 87.0,
-        "C": 83.0
-      },
-      "average_score": 81.7,
-      "spread": 12.0,
-      "controversial": false,
-      "grade": "S"
+      "grade": "S",
+      "may_adjusted_score": 87.0,
+      "seasonal_adjustment": 2,
+      "may_grade": "S"
     },
     {
       "id": "c7c5e692",
@@ -115,35 +82,27 @@
       "average_score": 81.3,
       "spread": 27.0,
       "controversial": true,
-      "grade": "A"
+      "grade": "A",
+      "may_adjusted_score": 86.3,
+      "seasonal_adjustment": 5,
+      "may_grade": "S"
     },
     {
-      "id": "04cc52a2",
-      "name_ko": "서블라임 포인트 전망대",
-      "region": "블루마운틴",
+      "id": "f97b06e6",
+      "name_ko": "그랜드 퍼시픽 드라이브",
+      "region": "로열국립공원/그랜드퍼시픽",
       "scores": {
-        "A": 76.0,
-        "B": 84.0,
-        "C": 81.0
+        "A": 79.5,
+        "B": 85.0,
+        "C": 82.5
       },
-      "average_score": 80.3,
-      "spread": 8.0,
+      "average_score": 82.3,
+      "spread": 5.5,
       "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "df63cd08",
-      "name_ko": "케이프 바이런 워킹 트랙",
-      "region": "바이런베이",
-      "scores": {
-        "A": 66.5,
-        "B": 93.0,
-        "C": 81.5
-      },
-      "average_score": 80.3,
-      "spread": 26.5,
-      "controversial": true,
-      "grade": "A"
+      "grade": "S",
+      "may_adjusted_score": 85.3,
+      "seasonal_adjustment": 3,
+      "may_grade": "S"
     },
     {
       "id": "fdef9085",
@@ -157,7 +116,10 @@
       "average_score": 80.3,
       "spread": 3.5,
       "controversial": false,
-      "grade": "A"
+      "grade": "A",
+      "may_adjusted_score": 85.3,
+      "seasonal_adjustment": 5,
+      "may_grade": "S"
     },
     {
       "id": "68c6f93e",
@@ -171,7 +133,78 @@
       "average_score": 80.0,
       "spread": 26.5,
       "controversial": true,
-      "grade": "A"
+      "grade": "A",
+      "may_adjusted_score": 85.0,
+      "seasonal_adjustment": 5,
+      "may_grade": "A"
+    },
+    {
+      "id": "7c98c2bd",
+      "name_ko": "토마리 헤드 정상 산책로",
+      "region": "뉴캐슬/포트스테판스",
+      "scores": {
+        "A": 75.0,
+        "B": 87.0,
+        "C": 83.0
+      },
+      "average_score": 81.7,
+      "spread": 12.0,
+      "controversial": false,
+      "grade": "S",
+      "may_adjusted_score": 84.7,
+      "seasonal_adjustment": 3,
+      "may_grade": "A"
+    },
+    {
+      "id": "86d8f30d",
+      "name_ko": "고벳츠 리프 전망대",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 79.0,
+        "B": 85.0,
+        "C": 83.5
+      },
+      "average_score": 82.5,
+      "spread": 6.0,
+      "controversial": false,
+      "grade": "S",
+      "may_adjusted_score": 83.5,
+      "seasonal_adjustment": 1,
+      "may_grade": "A"
+    },
+    {
+      "id": "df63cd08",
+      "name_ko": "케이프 바이런 워킹 트랙",
+      "region": "바이런베이",
+      "scores": {
+        "A": 66.5,
+        "B": 93.0,
+        "C": 81.5
+      },
+      "average_score": 80.3,
+      "spread": 26.5,
+      "controversial": true,
+      "grade": "A",
+      "may_adjusted_score": 83.3,
+      "seasonal_adjustment": 3,
+      "may_grade": "A"
+    },
+    {
+      "id": "04cc52a2",
+      "name_ko": "서블라임 포인트 전망대",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 76.0,
+        "B": 84.0,
+        "C": 81.0
+      },
+      "average_score": 80.3,
+      "spread": 8.0,
+      "controversial": false,
+      "grade": "A",
+      "may_adjusted_score": 82.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
     },
     {
       "id": "89376ce6",
@@ -185,7 +218,10 @@
       "average_score": 79.3,
       "spread": 7.5,
       "controversial": false,
-      "grade": "A"
+      "grade": "A",
+      "may_adjusted_score": 81.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
     },
     {
       "id": "96da6ea2",
@@ -199,7 +235,10 @@
       "average_score": 79.3,
       "spread": 9.5,
       "controversial": false,
-      "grade": "A"
+      "grade": "A",
+      "may_adjusted_score": 81.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
     },
     {
       "id": "ef2de137",
@@ -213,7 +252,10 @@
       "average_score": 79.3,
       "spread": 4.0,
       "controversial": false,
-      "grade": "A"
+      "grade": "A",
+      "may_adjusted_score": 81.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
     },
     {
       "id": "ff4c6964",
@@ -227,21 +269,10 @@
       "average_score": 78.8,
       "spread": 2.0,
       "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "a43e5009",
-      "name_ko": "봄보 헤드랜드 채석장",
-      "region": "울릉공/키아마",
-      "scores": {
-        "A": 74.5,
-        "B": 86.0,
-        "C": 73.5
-      },
-      "average_score": 78.0,
-      "spread": 12.5,
-      "controversial": false,
-      "grade": "A"
+      "grade": "A",
+      "may_adjusted_score": 80.8,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
     },
     {
       "id": "54678851",
@@ -255,7 +286,27 @@
       "average_score": 77.5,
       "spread": 1.5,
       "controversial": false,
-      "grade": "A"
+      "grade": "A",
+      "may_adjusted_score": 80.5,
+      "seasonal_adjustment": 3,
+      "may_grade": "A"
+    },
+    {
+      "id": "a43e5009",
+      "name_ko": "봄보 헤드랜드 채석장",
+      "region": "울릉공/키아마",
+      "scores": {
+        "A": 74.5,
+        "B": 86.0,
+        "C": 73.5
+      },
+      "average_score": 78.0,
+      "spread": 12.5,
+      "controversial": false,
+      "grade": "A",
+      "may_adjusted_score": 80.0,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
     },
     {
       "id": "047c109a",
@@ -269,343 +320,10 @@
       "average_score": 77.2,
       "spread": 5.0,
       "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "bbf82d69",
-      "name_ko": "머튼버드 아일랜드 자연보호지역",
-      "region": "콥스하버",
-      "scores": {
-        "A": 76.5,
-        "B": 77.5,
-        "C": 75.0
-      },
-      "average_score": 76.3,
-      "spread": 2.5,
-      "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "1d375b4d",
-      "name_ko": "웬트워스 폴스 전망대",
-      "region": "블루마운틴",
-      "scores": {
-        "A": 71.5,
-        "B": 83.5,
-        "C": 71.5
-      },
-      "average_score": 75.5,
-      "spread": 12.0,
-      "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "54422111",
-      "name_ko": "태킹 포인트 등대",
-      "region": "포트맥쿼리",
-      "scores": {
-        "A": 82.5,
-        "B": 67.5,
-        "C": 75.5
-      },
-      "average_score": 75.2,
-      "spread": 15.0,
-      "controversial": true,
-      "grade": "A"
-    },
-    {
-      "id": "8bc91376",
-      "name_ko": "스탠웰 탑스 전망대",
-      "region": "로열국립공원/그랜드퍼시픽",
-      "scores": {
-        "A": 78.5,
-        "B": 76.0,
-        "C": 70.5
-      },
-      "average_score": 75.0,
-      "spread": 8.0,
-      "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "bfa60aeb",
-      "name_ko": "보기 홀",
-      "region": "뉴캐슬/포트스테판스",
-      "scores": {
-        "A": 70.0,
-        "B": 80.5,
-        "C": 73.0
-      },
-      "average_score": 74.5,
-      "spread": 10.5,
-      "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "472d62b4",
-      "name_ko": "갭 공원 (더 갭)",
-      "region": "시드니",
-      "scores": {
-        "A": 71.5,
-        "B": 73.5,
-        "C": 78.0
-      },
-      "average_score": 74.3,
-      "spread": 6.5,
-      "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "034f4322",
-      "name_ko": "본다이 투 브론테 해안 산책로",
-      "region": "시드니",
-      "scores": {
-        "A": 69.5,
-        "B": 74.0,
-        "C": 78.5
-      },
-      "average_score": 74.0,
-      "spread": 9.0,
-      "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "efa3e922",
-      "name_ko": "다이아몬드 베이 보호지역",
-      "region": "시드니",
-      "scores": {
-        "A": 75.0,
-        "B": 74.0,
-        "C": 72.5
-      },
-      "average_score": 73.8,
-      "spread": 2.5,
-      "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "40947a39",
-      "name_ko": "무니 비치 자연보호지역",
-      "region": "콥스하버",
-      "scores": {
-        "A": 66.0,
-        "B": 76.5,
-        "C": 78.5
-      },
-      "average_score": 73.7,
-      "spread": 12.5,
-      "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "0020c012",
-      "name_ko": "포트 스테판스 캥거루 인카운터스",
-      "region": "뉴캐슬/포트스테판스",
-      "scores": {
-        "A": 71.0,
-        "B": 75.5,
-        "C": 73.5
-      },
-      "average_score": 73.3,
-      "spread": 4.5,
-      "controversial": false,
-      "grade": "A"
-    },
-    {
-      "id": "05bd5b67",
-      "name_ko": "에보르 폭포",
-      "region": "콥스하버",
-      "scores": {
-        "A": 73.0,
-        "B": 76.0,
-        "C": 71.0
-      },
-      "average_score": 73.3,
-      "spread": 5.0,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "d3a4be59",
-      "name_ko": "포트맥쿼리 해안 산책로",
-      "region": "포트맥쿼리",
-      "scores": {
-        "A": 56.5,
-        "B": 83.5,
-        "C": 80.0
-      },
-      "average_score": 73.3,
-      "spread": 27.0,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "14d198ac",
-      "name_ko": "보암비 헤드랜드 전망대",
-      "region": "콥스하버",
-      "scores": {
-        "A": 71.5,
-        "B": 76.0,
-        "C": 72.0
-      },
-      "average_score": 73.2,
-      "spread": 4.5,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "d7b4e922",
-      "name_ko": "크라우디 헤드 등대",
-      "region": "포스터/해링턴",
-      "scores": {
-        "A": 71.5,
-        "B": 76.5,
-        "C": 71.5
-      },
-      "average_score": 73.2,
-      "spread": 5.0,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "1a05deb4",
-      "name_ko": "링컨스 록",
-      "region": "블루마운틴",
-      "scores": {
-        "A": 69.5,
-        "B": 80.5,
-        "C": 68.5
-      },
-      "average_score": 72.8,
-      "spread": 12.0,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "30c337cf",
-      "name_ko": "크리스탈 샤워 폭포",
-      "region": "콥스하버",
-      "scores": {
-        "A": 62.0,
-        "B": 80.0,
-        "C": 76.5
-      },
-      "average_score": 72.8,
-      "spread": 18.0,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "9ba192a2",
-      "name_ko": "엠프레스 폭포",
-      "region": "블루마운틴",
-      "scores": {
-        "A": 62.5,
-        "B": 82.0,
-        "C": 74.0
-      },
-      "average_score": 72.8,
-      "spread": 19.5,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "611a9b90",
-      "name_ko": "베넷츠 헤드 전망대",
-      "region": "포스터/해링턴",
-      "scores": {
-        "A": 75.5,
-        "B": 75.0,
-        "C": 67.5
-      },
-      "average_score": 72.7,
-      "spread": 8.0,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "c49e60e1",
-      "name_ko": "피츠로이 폭포 전망대",
-      "region": "서던하이랜드/저비스베이",
-      "scores": {
-        "A": 71.5,
-        "B": 79.0,
-        "C": 67.5
-      },
-      "average_score": 72.7,
-      "spread": 11.5,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "579eb092",
-      "name_ko": "플래그스태프 포인트 등대 (울릉공 헤드)",
-      "region": "울릉공/키아마",
-      "scores": {
-        "A": 80.0,
-        "B": 66.5,
-        "C": 70.5
-      },
-      "average_score": 72.3,
-      "spread": 13.5,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "89b09750",
-      "name_ko": "로열 국립공원",
-      "region": "로열국립공원/그랜드퍼시픽",
-      "scores": {
-        "A": 56.5,
-        "B": 80.5,
-        "C": 79.0
-      },
-      "average_score": 72.0,
-      "spread": 24.0,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "795b5f58",
-      "name_ko": "아라쿤 국립공원 (트라이얼 베이 교도소)",
-      "region": "사우스웨스트록스/켐시",
-      "scores": {
-        "A": 62.5,
-        "B": 79.0,
-        "C": 74.0
-      },
-      "average_score": 71.8,
-      "spread": 16.5,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "cb723736",
-      "name_ko": "하산스 월즈 전망대",
-      "region": "블루마운틴",
-      "scores": {
-        "A": 63.0,
-        "B": 78.0,
-        "C": 74.5
-      },
-      "average_score": 71.8,
-      "spread": 15.0,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "152a7cf4",
-      "name_ko": "케이프 솔랜더 전망대",
-      "region": "로열국립공원/그랜드퍼시픽",
-      "scores": {
-        "A": 68.5,
-        "B": 77.5,
-        "C": 69.0
-      },
-      "average_score": 71.7,
-      "spread": 9.0,
-      "controversial": false,
-      "grade": "B"
+      "grade": "A",
+      "may_adjusted_score": 79.2,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
     },
     {
       "id": "30097942",
@@ -619,217 +337,401 @@
       "average_score": 71.5,
       "spread": 7.5,
       "controversial": false,
-      "grade": "B"
+      "grade": "B",
+      "may_adjusted_score": 78.5,
+      "seasonal_adjustment": 7,
+      "may_grade": "A"
     },
     {
-      "id": "d815bc02",
-      "name_ko": "Lithgow 글로우 웜 터널",
-      "region": "블루마운틴",
+      "id": "bbf82d69",
+      "name_ko": "머튼버드 아일랜드 자연보호지역",
+      "region": "콥스하버",
       "scores": {
-        "A": 51.5,
-        "B": 90.0,
-        "C": 73.0
-      },
-      "average_score": 71.5,
-      "spread": 38.5,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "7d2ee5d0",
-      "name_ko": "블렌하임 비치",
-      "region": "서던하이랜드/저비스베이",
-      "scores": {
-        "A": 61.5,
-        "B": 76.0,
-        "C": 76.0
-      },
-      "average_score": 71.2,
-      "spread": 14.5,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "9e5bff5c",
-      "name_ko": "오크필드 랜치 낙타 라이드",
-      "region": "뉴캐슬/포트스테판스",
-      "scores": {
-        "A": 67.5,
-        "B": 76.5,
-        "C": 69.0
-      },
-      "average_score": 71.0,
-      "spread": 9.0,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "c8f5dd58",
-      "name_ko": "쿠링가이 체이스 국립공원",
-      "region": "시드니",
-      "scores": {
-        "A": 56.5,
+        "A": 76.5,
         "B": 77.5,
-        "C": 78.5
+        "C": 75.0
       },
-      "average_score": 70.8,
-      "spread": 22.0,
-      "controversial": true,
-      "grade": "B"
+      "average_score": 76.3,
+      "spread": 2.5,
+      "controversial": false,
+      "grade": "A",
+      "may_adjusted_score": 78.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
     },
     {
-      "id": "71c9aea1",
-      "name_ko": "야마 등대 (클래런스 리버 라이트)",
-      "region": "야마/그래프턴",
+      "id": "05bd5b67",
+      "name_ko": "에보르 폭포",
+      "region": "콥스하버",
       "scores": {
-        "A": 77.5,
-        "B": 67.0,
+        "A": 73.0,
+        "B": 76.0,
+        "C": 71.0
+      },
+      "average_score": 73.3,
+      "spread": 5.0,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 78.3,
+      "seasonal_adjustment": 5,
+      "may_grade": "A"
+    },
+    {
+      "id": "54422111",
+      "name_ko": "태킹 포인트 등대",
+      "region": "포트맥쿼리",
+      "scores": {
+        "A": 82.5,
+        "B": 67.5,
+        "C": 75.5
+      },
+      "average_score": 75.2,
+      "spread": 15.0,
+      "controversial": true,
+      "grade": "A",
+      "may_adjusted_score": 78.2,
+      "seasonal_adjustment": 3,
+      "may_grade": "A"
+    },
+    {
+      "id": "30c337cf",
+      "name_ko": "크리스탈 샤워 폭포",
+      "region": "콥스하버",
+      "scores": {
+        "A": 62.0,
+        "B": 80.0,
+        "C": 76.5
+      },
+      "average_score": 72.8,
+      "spread": 18.0,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 77.8,
+      "seasonal_adjustment": 5,
+      "may_grade": "A"
+    },
+    {
+      "id": "611a9b90",
+      "name_ko": "베넷츠 헤드 전망대",
+      "region": "포스터/해링턴",
+      "scores": {
+        "A": 75.5,
+        "B": 75.0,
         "C": 67.5
       },
-      "average_score": 70.7,
-      "spread": 10.5,
+      "average_score": 72.7,
+      "spread": 8.0,
       "controversial": false,
-      "grade": "B"
+      "grade": "B",
+      "may_adjusted_score": 77.7,
+      "seasonal_adjustment": 5,
+      "may_grade": "A"
     },
     {
-      "id": "a2a6451d",
-      "name_ko": "옵저버토리 힐 공원",
+      "id": "c49e60e1",
+      "name_ko": "피츠로이 폭포 전망대",
+      "region": "서던하이랜드/저비스베이",
+      "scores": {
+        "A": 71.5,
+        "B": 79.0,
+        "C": 67.5
+      },
+      "average_score": 72.7,
+      "spread": 11.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 77.7,
+      "seasonal_adjustment": 5,
+      "may_grade": "A"
+    },
+    {
+      "id": "1d375b4d",
+      "name_ko": "웬트워스 폴스 전망대",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 71.5,
+        "B": 83.5,
+        "C": 71.5
+      },
+      "average_score": 75.5,
+      "spread": 12.0,
+      "controversial": false,
+      "grade": "A",
+      "may_adjusted_score": 77.5,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
+    },
+    {
+      "id": "8bc91376",
+      "name_ko": "스탠웰 탑스 전망대",
+      "region": "로열국립공원/그랜드퍼시픽",
+      "scores": {
+        "A": 78.5,
+        "B": 76.0,
+        "C": 70.5
+      },
+      "average_score": 75.0,
+      "spread": 8.0,
+      "controversial": false,
+      "grade": "A",
+      "may_adjusted_score": 77.0,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
+    },
+    {
+      "id": "472d62b4",
+      "name_ko": "갭 공원 (더 갭)",
       "region": "시드니",
       "scores": {
         "A": 71.5,
-        "B": 65.5,
-        "C": 75.0
+        "B": 73.5,
+        "C": 78.0
       },
-      "average_score": 70.7,
-      "spread": 9.5,
+      "average_score": 74.3,
+      "spread": 6.5,
       "controversial": false,
-      "grade": "B"
+      "grade": "A",
+      "may_adjusted_score": 76.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "A"
     },
     {
-      "id": "010149dd",
-      "name_ko": "시드니 하버 국립공원",
+      "id": "034f4322",
+      "name_ko": "본다이 투 브론테 해안 산책로",
       "region": "시드니",
       "scores": {
-        "A": 55.0,
-        "B": 76.5,
-        "C": 80.0
-      },
-      "average_score": 70.5,
-      "spread": 25.0,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "2228124c",
-      "name_ko": "이글 록 전망대",
-      "region": "로열국립공원/그랜드퍼시픽",
-      "scores": {
-        "A": 52.5,
-        "B": 80.5,
+        "A": 69.5,
+        "B": 74.0,
         "C": 78.5
       },
-      "average_score": 70.5,
-      "spread": 28.0,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "c92d2048",
-      "name_ko": "시닉 레일웨이",
-      "region": "블루마운틴",
-      "scores": {
-        "A": 77.0,
-        "B": 65.5,
-        "C": 69.0
-      },
-      "average_score": 70.5,
-      "spread": 11.5,
+      "average_score": 74.0,
+      "spread": 9.0,
       "controversial": false,
-      "grade": "B"
+      "grade": "A",
+      "may_adjusted_score": 76.0,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
     },
     {
-      "id": "3a3e43cf",
-      "name_ko": "레밍턴 국립공원",
-      "region": "골드코스트",
-      "scores": {
-        "A": 51.0,
-        "B": 84.5,
-        "C": 75.5
-      },
-      "average_score": 70.3,
-      "spread": 33.5,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "523a0b70",
-      "name_ko": "플라이 포인트 다이브 사이트",
-      "region": "뉴캐슬/포트스테판스",
-      "scores": {
-        "A": 63.0,
-        "B": 72.5,
-        "C": 73.5
-      },
-      "average_score": 69.7,
-      "spread": 10.5,
-      "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "621b0bb4",
-      "name_ko": "바렌조이 등대",
-      "region": "센트럴코스트",
-      "scores": {
-        "A": 53.0,
-        "B": 78.5,
-        "C": 75.0
-      },
-      "average_score": 68.8,
-      "spread": 25.5,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "b484de1d",
-      "name_ko": "바랑가루 보호지역",
+      "id": "efa3e922",
+      "name_ko": "다이아몬드 베이 보호지역",
       "region": "시드니",
       "scores": {
-        "A": 70.5,
-        "B": 60.5,
-        "C": 75.5
+        "A": 75.0,
+        "B": 74.0,
+        "C": 72.5
       },
-      "average_score": 68.8,
-      "spread": 15.0,
-      "controversial": true,
-      "grade": "B"
-    },
-    {
-      "id": "58a28bc3",
-      "name_ko": "노라 헤드 등대",
-      "region": "센트럴코스트",
-      "scores": {
-        "A": 67.0,
-        "B": 68.5,
-        "C": 69.5
-      },
-      "average_score": 68.3,
+      "average_score": 73.8,
       "spread": 2.5,
       "controversial": false,
-      "grade": "B"
+      "grade": "A",
+      "may_adjusted_score": 75.8,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
     },
     {
-      "id": "fff3a505",
-      "name_ko": "블랙버트 자연보호지역",
+      "id": "40947a39",
+      "name_ko": "무니 비치 자연보호지역",
+      "region": "콥스하버",
+      "scores": {
+        "A": 66.0,
+        "B": 76.5,
+        "C": 78.5
+      },
+      "average_score": 73.7,
+      "spread": 12.5,
+      "controversial": false,
+      "grade": "A",
+      "may_adjusted_score": 75.7,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "bfa60aeb",
+      "name_ko": "보기 홀",
       "region": "뉴캐슬/포트스테판스",
       "scores": {
-        "A": 62.0,
-        "B": 70.0,
+        "A": 70.0,
+        "B": 80.5,
         "C": 73.0
       },
-      "average_score": 68.3,
-      "spread": 11.0,
+      "average_score": 74.5,
+      "spread": 10.5,
       "controversial": false,
-      "grade": "B"
+      "grade": "A",
+      "may_adjusted_score": 75.5,
+      "seasonal_adjustment": 1,
+      "may_grade": "B"
+    },
+    {
+      "id": "d3a4be59",
+      "name_ko": "포트맥쿼리 해안 산책로",
+      "region": "포트맥쿼리",
+      "scores": {
+        "A": 56.5,
+        "B": 83.5,
+        "C": 80.0
+      },
+      "average_score": 73.3,
+      "spread": 27.0,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 75.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "14d198ac",
+      "name_ko": "보암비 헤드랜드 전망대",
+      "region": "콥스하버",
+      "scores": {
+        "A": 71.5,
+        "B": 76.0,
+        "C": 72.0
+      },
+      "average_score": 73.2,
+      "spread": 4.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 75.2,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "d7b4e922",
+      "name_ko": "크라우디 헤드 등대",
+      "region": "포스터/해링턴",
+      "scores": {
+        "A": 71.5,
+        "B": 76.5,
+        "C": 71.5
+      },
+      "average_score": 73.2,
+      "spread": 5.0,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 75.2,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "9ba192a2",
+      "name_ko": "엠프레스 폭포",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 62.5,
+        "B": 82.0,
+        "C": 74.0
+      },
+      "average_score": 72.8,
+      "spread": 19.5,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 74.8,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "152a7cf4",
+      "name_ko": "케이프 솔랜더 전망대",
+      "region": "로열국립공원/그랜드퍼시픽",
+      "scores": {
+        "A": 68.5,
+        "B": 77.5,
+        "C": 69.0
+      },
+      "average_score": 71.7,
+      "spread": 9.0,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 74.7,
+      "seasonal_adjustment": 3,
+      "may_grade": "B"
+    },
+    {
+      "id": "579eb092",
+      "name_ko": "플래그스태프 포인트 등대 (울릉공 헤드)",
+      "region": "울릉공/키아마",
+      "scores": {
+        "A": 80.0,
+        "B": 66.5,
+        "C": 70.5
+      },
+      "average_score": 72.3,
+      "spread": 13.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 74.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "89b09750",
+      "name_ko": "로열 국립공원",
+      "region": "로열국립공원/그랜드퍼시픽",
+      "scores": {
+        "A": 56.5,
+        "B": 80.5,
+        "C": 79.0
+      },
+      "average_score": 72.0,
+      "spread": 24.0,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 74.0,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "1a05deb4",
+      "name_ko": "링컨스 록",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 69.5,
+        "B": 80.5,
+        "C": 68.5
+      },
+      "average_score": 72.8,
+      "spread": 12.0,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 73.8,
+      "seasonal_adjustment": 1,
+      "may_grade": "B"
+    },
+    {
+      "id": "795b5f58",
+      "name_ko": "아라쿤 국립공원 (트라이얼 베이 교도소)",
+      "region": "사우스웨스트록스/켐시",
+      "scores": {
+        "A": 62.5,
+        "B": 79.0,
+        "C": 74.0
+      },
+      "average_score": 71.8,
+      "spread": 16.5,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 73.8,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "0020c012",
+      "name_ko": "포트 스테판스 캥거루 인카운터스",
+      "region": "뉴캐슬/포트스테판스",
+      "scores": {
+        "A": 71.0,
+        "B": 75.5,
+        "C": 73.5
+      },
+      "average_score": 73.3,
+      "spread": 4.5,
+      "controversial": false,
+      "grade": "A",
+      "may_adjusted_score": 73.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "B"
     },
     {
       "id": "87882b26",
@@ -843,21 +745,61 @@
       "average_score": 68.2,
       "spread": 10.5,
       "controversial": false,
-      "grade": "B"
+      "grade": "B",
+      "may_adjusted_score": 73.2,
+      "seasonal_adjustment": 5,
+      "may_grade": "B"
     },
     {
-      "id": "1b4d8d4c",
-      "name_ko": "블루스 포인트 보호지역",
+      "id": "cb723736",
+      "name_ko": "하산스 월즈 전망대",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 63.0,
+        "B": 78.0,
+        "C": 74.5
+      },
+      "average_score": 71.8,
+      "spread": 15.0,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 72.8,
+      "seasonal_adjustment": 1,
+      "may_grade": "B"
+    },
+    {
+      "id": "c8f5dd58",
+      "name_ko": "쿠링가이 체이스 국립공원",
       "region": "시드니",
       "scores": {
-        "A": 66.5,
-        "B": 65.5,
-        "C": 72.0
+        "A": 56.5,
+        "B": 77.5,
+        "C": 78.5
       },
-      "average_score": 68.0,
-      "spread": 6.5,
+      "average_score": 70.8,
+      "spread": 22.0,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 72.8,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "71c9aea1",
+      "name_ko": "야마 등대 (클래런스 리버 라이트)",
+      "region": "야마/그래프턴",
+      "scores": {
+        "A": 77.5,
+        "B": 67.0,
+        "C": 67.5
+      },
+      "average_score": 70.7,
+      "spread": 10.5,
       "controversial": false,
-      "grade": "B"
+      "grade": "B",
+      "may_adjusted_score": 72.7,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
     },
     {
       "id": "f5d5a290",
@@ -871,7 +813,61 @@
       "average_score": 67.7,
       "spread": 25.0,
       "controversial": true,
-      "grade": "B"
+      "grade": "B",
+      "may_adjusted_score": 72.7,
+      "seasonal_adjustment": 5,
+      "may_grade": "B"
+    },
+    {
+      "id": "010149dd",
+      "name_ko": "시드니 하버 국립공원",
+      "region": "시드니",
+      "scores": {
+        "A": 55.0,
+        "B": 76.5,
+        "C": 80.0
+      },
+      "average_score": 70.5,
+      "spread": 25.0,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 72.5,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "2228124c",
+      "name_ko": "이글 록 전망대",
+      "region": "로열국립공원/그랜드퍼시픽",
+      "scores": {
+        "A": 52.5,
+        "B": 80.5,
+        "C": 78.5
+      },
+      "average_score": 70.5,
+      "spread": 28.0,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 72.5,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "3a3e43cf",
+      "name_ko": "레밍턴 국립공원",
+      "region": "골드코스트",
+      "scores": {
+        "A": 51.0,
+        "B": 84.5,
+        "C": 75.5
+      },
+      "average_score": 70.3,
+      "spread": 33.5,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 72.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
     },
     {
       "id": "22d70fbe",
@@ -885,49 +881,180 @@
       "average_score": 67.3,
       "spread": 6.0,
       "controversial": false,
-      "grade": "B"
+      "grade": "B",
+      "may_adjusted_score": 72.3,
+      "seasonal_adjustment": 5,
+      "may_grade": "B"
     },
     {
-      "id": "642731d5",
-      "name_ko": "코알라 보존 병원 포트맥쿼리",
-      "region": "포트맥쿼리",
+      "id": "d815bc02",
+      "name_ko": "Lithgow 글로우 웜 터널",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 51.5,
+        "B": 90.0,
+        "C": 73.0
+      },
+      "average_score": 71.5,
+      "spread": 38.5,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 71.5,
+      "seasonal_adjustment": 0,
+      "may_grade": "B"
+    },
+    {
+      "id": "c92d2048",
+      "name_ko": "시닉 레일웨이",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 77.0,
+        "B": 65.5,
+        "C": 69.0
+      },
+      "average_score": 70.5,
+      "spread": 11.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 71.5,
+      "seasonal_adjustment": 1,
+      "may_grade": "B"
+    },
+    {
+      "id": "621b0bb4",
+      "name_ko": "바렌조이 등대",
+      "region": "센트럴코스트",
+      "scores": {
+        "A": 53.0,
+        "B": 78.5,
+        "C": 75.0
+      },
+      "average_score": 68.8,
+      "spread": 25.5,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 70.8,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "a2a6451d",
+      "name_ko": "옵저버토리 힐 공원",
+      "region": "시드니",
+      "scores": {
+        "A": 71.5,
+        "B": 65.5,
+        "C": 75.0
+      },
+      "average_score": 70.7,
+      "spread": 9.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 70.7,
+      "seasonal_adjustment": 0,
+      "may_grade": "B"
+    },
+    {
+      "id": "58a28bc3",
+      "name_ko": "노라 헤드 등대",
+      "region": "센트럴코스트",
+      "scores": {
+        "A": 67.0,
+        "B": 68.5,
+        "C": 69.5
+      },
+      "average_score": 68.3,
+      "spread": 2.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 70.3,
+      "seasonal_adjustment": 2,
+      "may_grade": "B"
+    },
+    {
+      "id": "9e5bff5c",
+      "name_ko": "오크필드 랜치 낙타 라이드",
+      "region": "뉴캐슬/포트스테판스",
       "scores": {
         "A": 67.5,
-        "B": 64.5,
-        "C": 70.0
+        "B": 76.5,
+        "C": 69.0
       },
-      "average_score": 67.3,
-      "spread": 5.5,
+      "average_score": 71.0,
+      "spread": 9.0,
       "controversial": false,
-      "grade": "B"
+      "grade": "B",
+      "may_adjusted_score": 70.0,
+      "seasonal_adjustment": -1,
+      "may_grade": "B"
     },
     {
-      "id": "669a240e",
-      "name_ko": "코알라 병원 (매쿼리 자연보호구역)",
-      "region": "포트맥쿼리",
+      "id": "b484de1d",
+      "name_ko": "바랑가루 보호지역",
+      "region": "시드니",
       "scores": {
-        "A": 67.5,
-        "B": 64.5,
-        "C": 70.0
+        "A": 70.5,
+        "B": 60.5,
+        "C": 75.5
       },
-      "average_score": 67.3,
-      "spread": 5.5,
-      "controversial": false,
-      "grade": "B"
+      "average_score": 68.8,
+      "spread": 15.0,
+      "controversial": true,
+      "grade": "B",
+      "may_adjusted_score": 68.8,
+      "seasonal_adjustment": 0,
+      "may_grade": "B"
     },
     {
-      "id": "c62c960b",
-      "name_ko": "포트맥쿼리 낙타 사파리",
-      "region": "포트맥쿼리",
+      "id": "fff3a505",
+      "name_ko": "블랙버트 자연보호지역",
+      "region": "뉴캐슬/포트스테판스",
       "scores": {
-        "A": 63.5,
-        "B": 71.5,
-        "C": 67.0
+        "A": 62.0,
+        "B": 70.0,
+        "C": 73.0
       },
-      "average_score": 67.3,
-      "spread": 8.0,
+      "average_score": 68.3,
+      "spread": 11.0,
       "controversial": false,
-      "grade": "B"
+      "grade": "B",
+      "may_adjusted_score": 68.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "B"
+    },
+    {
+      "id": "7d2ee5d0",
+      "name_ko": "블렌하임 비치",
+      "region": "서던하이랜드/저비스베이",
+      "scores": {
+        "A": 61.5,
+        "B": 76.0,
+        "C": 76.0
+      },
+      "average_score": 71.2,
+      "spread": 14.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 68.2,
+      "seasonal_adjustment": -3,
+      "may_grade": "B"
+    },
+    {
+      "id": "1b4d8d4c",
+      "name_ko": "블루스 포인트 보호지역",
+      "region": "시드니",
+      "scores": {
+        "A": 66.5,
+        "B": 65.5,
+        "C": 72.0
+      },
+      "average_score": 68.0,
+      "spread": 6.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 68.0,
+      "seasonal_adjustment": 0,
+      "may_grade": "B"
     },
     {
       "id": "123aac43",
@@ -941,7 +1068,61 @@
       "average_score": 67.0,
       "spread": 35.5,
       "controversial": true,
-      "grade": "B"
+      "grade": "B",
+      "may_adjusted_score": 68.0,
+      "seasonal_adjustment": 1,
+      "may_grade": "B"
+    },
+    {
+      "id": "523a0b70",
+      "name_ko": "플라이 포인트 다이브 사이트",
+      "region": "뉴캐슬/포트스테판스",
+      "scores": {
+        "A": 63.0,
+        "B": 72.5,
+        "C": 73.5
+      },
+      "average_score": 69.7,
+      "spread": 10.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 67.7,
+      "seasonal_adjustment": -2,
+      "may_grade": "B"
+    },
+    {
+      "id": "642731d5",
+      "name_ko": "코알라 보존 병원 포트맥쿼리",
+      "region": "포트맥쿼리",
+      "scores": {
+        "A": 67.5,
+        "B": 64.5,
+        "C": 70.0
+      },
+      "average_score": 67.3,
+      "spread": 5.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 67.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "B"
+    },
+    {
+      "id": "669a240e",
+      "name_ko": "코알라 병원 (매쿼리 자연보호구역)",
+      "region": "포트맥쿼리",
+      "scores": {
+        "A": 67.5,
+        "B": 64.5,
+        "C": 70.0
+      },
+      "average_score": 67.3,
+      "spread": 5.5,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 67.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "B"
     },
     {
       "id": "b6b6c774",
@@ -955,245 +1136,10 @@
       "average_score": 67.0,
       "spread": 9.5,
       "controversial": false,
-      "grade": "B"
-    },
-    {
-      "id": "d5fa343f",
-      "name_ko": "우룬가 웨트랜즈 보드웍",
-      "region": "콥스하버",
-      "scores": {
-        "A": 69.0,
-        "B": 61.0,
-        "C": 66.5
-      },
-      "average_score": 65.5,
-      "spread": 8.0,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "640b85a3",
-      "name_ko": "부디 국립공원 - 메이틀랜드 베이 트랙",
-      "region": "센트럴코스트",
-      "scores": {
-        "A": 55.0,
-        "B": 72.5,
-        "C": 68.5
-      },
-      "average_score": 65.3,
-      "spread": 17.5,
-      "controversial": true,
-      "grade": "C"
-    },
-    {
-      "id": "367b080f",
-      "name_ko": "펠리칸 포쇼어 파크",
-      "region": "뉴캐슬/포트스테판스",
-      "scores": {
-        "A": 66.5,
-        "B": 61.5,
-        "C": 67.5
-      },
-      "average_score": 65.2,
-      "spread": 6.0,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "6c37b64f",
-      "name_ko": "시 에이커스 레인포레스트 센터",
-      "region": "포트맥쿼리",
-      "scores": {
-        "A": 64.0,
-        "B": 68.5,
-        "C": 63.0
-      },
-      "average_score": 65.2,
-      "spread": 5.5,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "edbb0857",
-      "name_ko": "리틀 베이 피크닉 에어리어",
-      "region": "사우스웨스트록스/켐시",
-      "scores": {
-        "A": 64.0,
-        "B": 64.5,
-        "C": 67.0
-      },
-      "average_score": 65.2,
-      "spread": 3.0,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "b39fd373",
-      "name_ko": "시닉월드",
-      "region": "블루마운틴",
-      "scores": {
-        "A": 57.5,
-        "B": 70.5,
-        "C": 65.5
-      },
-      "average_score": 64.5,
-      "spread": 13.0,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "dc92c808",
-      "name_ko": "노스 헤이븐 방파제",
-      "region": "포트맥쿼리",
-      "scores": {
-        "A": 68.0,
-        "B": 60.5,
-        "C": 65.0
-      },
-      "average_score": 64.5,
-      "spread": 7.5,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "4d611b52",
-      "name_ko": "탬보린 국립공원 (시더 크릭 폭포)",
-      "region": "골드코스트",
-      "scores": {
-        "A": 56.0,
-        "B": 69.0,
-        "C": 67.5
-      },
-      "average_score": 64.2,
-      "spread": 13.0,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "64847f13",
-      "name_ko": "스카이포인트 전망대",
-      "region": "골드코스트",
-      "scores": {
-        "A": 65.0,
-        "B": 57.5,
-        "C": 70.0
-      },
-      "average_score": 64.2,
-      "spread": 12.5,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "dec35b06",
-      "name_ko": "브리즈번 워터 국립공원 - 불간드리 원주민 암각화",
-      "region": "센트럴코스트",
-      "scores": {
-        "A": 53.0,
-        "B": 70.0,
-        "C": 68.0
-      },
-      "average_score": 63.7,
-      "spread": 17.0,
-      "controversial": true,
-      "grade": "C"
-    },
-    {
-      "id": "5254b0bc",
-      "name_ko": "부시랭거스 베이 수중 보호구역",
-      "region": "울릉공/키아마",
-      "scores": {
-        "A": 55.0,
-        "B": 68.0,
-        "C": 67.5
-      },
-      "average_score": 63.5,
-      "spread": 13.0,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "f81a1418",
-      "name_ko": "샤크 다이브 익스트림",
-      "region": "시드니",
-      "scores": {
-        "A": 47.5,
-        "B": 64.0,
-        "C": 78.5
-      },
-      "average_score": 63.3,
-      "spread": 31.0,
-      "controversial": true,
-      "grade": "C"
-    },
-    {
-      "id": "fd81708b",
-      "name_ko": "타롱가 동물원 시드니",
-      "region": "시드니",
-      "scores": {
-        "A": 56.5,
-        "B": 64.0,
-        "C": 69.0
-      },
-      "average_score": 63.2,
-      "spread": 12.5,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "38c0546f",
-      "name_ko": "이루칸지 샤크 & 레이 인카운터스",
-      "region": "뉴캐슬/포트스테판스",
-      "scores": {
-        "A": 61.0,
-        "B": 54.0,
-        "C": 72.0
-      },
-      "average_score": 62.3,
-      "spread": 18.0,
-      "controversial": true,
-      "grade": "C"
-    },
-    {
-      "id": "b8c93251",
-      "name_ko": "오스트레일리안 보태닉 가든 마운트 아난",
-      "region": "시드니",
-      "scores": {
-        "A": 54.0,
-        "B": 65.5,
-        "C": 67.5
-      },
-      "average_score": 62.3,
-      "spread": 13.5,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "dc2795c8",
-      "name_ko": "키아마 등대",
-      "region": "울릉공/키아마",
-      "scores": {
-        "A": 71.0,
-        "B": 54.5,
-        "C": 59.0
-      },
-      "average_score": 61.5,
-      "spread": 16.5,
-      "controversial": true,
-      "grade": "C"
-    },
-    {
-      "id": "a535b048",
-      "name_ko": "디 엔트런스 메모리얼 공원 (펠리컨 피딩)",
-      "region": "센트럴코스트",
-      "scores": {
-        "A": 63.5,
-        "B": 58.0,
-        "C": 62.0
-      },
-      "average_score": 61.2,
-      "spread": 5.5,
-      "controversial": false,
-      "grade": "C"
+      "grade": "B",
+      "may_adjusted_score": 67.0,
+      "seasonal_adjustment": 0,
+      "may_grade": "B"
     },
     {
       "id": "7e886049",
@@ -1207,35 +1153,282 @@
       "average_score": 60.8,
       "spread": 11.0,
       "controversial": false,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 66.8,
+      "seasonal_adjustment": 6,
+      "may_grade": "C"
     },
     {
-      "id": "6ad0213c",
-      "name_ko": "다크 포인트 워킹 트랙",
-      "region": "뉴캐슬/포트스테판스",
+      "id": "d5fa343f",
+      "name_ko": "우룬가 웨트랜즈 보드웍",
+      "region": "콥스하버",
       "scores": {
-        "A": 47.0,
-        "B": 72.0,
-        "C": 63.0
+        "A": 69.0,
+        "B": 61.0,
+        "C": 66.5
       },
-      "average_score": 60.7,
-      "spread": 25.0,
+      "average_score": 65.5,
+      "spread": 8.0,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 66.5,
+      "seasonal_adjustment": 1,
+      "may_grade": "C"
+    },
+    {
+      "id": "c62c960b",
+      "name_ko": "포트맥쿼리 낙타 사파리",
+      "region": "포트맥쿼리",
+      "scores": {
+        "A": 63.5,
+        "B": 71.5,
+        "C": 67.0
+      },
+      "average_score": 67.3,
+      "spread": 8.0,
+      "controversial": false,
+      "grade": "B",
+      "may_adjusted_score": 66.3,
+      "seasonal_adjustment": -1,
+      "may_grade": "C"
+    },
+    {
+      "id": "640b85a3",
+      "name_ko": "부디 국립공원 - 메이틀랜드 베이 트랙",
+      "region": "센트럴코스트",
+      "scores": {
+        "A": 55.0,
+        "B": 72.5,
+        "C": 68.5
+      },
+      "average_score": 65.3,
+      "spread": 17.5,
       "controversial": true,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 66.3,
+      "seasonal_adjustment": 1,
+      "may_grade": "C"
     },
     {
-      "id": "fa50dcb3",
-      "name_ko": "백 크릭 다리",
-      "region": "사우스웨스트록스/켐시",
+      "id": "b39fd373",
+      "name_ko": "시닉월드",
+      "region": "블루마운틴",
       "scores": {
-        "A": 63.0,
-        "B": 55.5,
-        "C": 62.5
+        "A": 57.5,
+        "B": 70.5,
+        "C": 65.5
       },
-      "average_score": 60.3,
+      "average_score": 64.5,
+      "spread": 13.0,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 65.5,
+      "seasonal_adjustment": 1,
+      "may_grade": "C"
+    },
+    {
+      "id": "dc92c808",
+      "name_ko": "노스 헤이븐 방파제",
+      "region": "포트맥쿼리",
+      "scores": {
+        "A": 68.0,
+        "B": 60.5,
+        "C": 65.0
+      },
+      "average_score": 64.5,
       "spread": 7.5,
       "controversial": false,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 65.5,
+      "seasonal_adjustment": 1,
+      "may_grade": "C"
+    },
+    {
+      "id": "367b080f",
+      "name_ko": "펠리칸 포쇼어 파크",
+      "region": "뉴캐슬/포트스테판스",
+      "scores": {
+        "A": 66.5,
+        "B": 61.5,
+        "C": 67.5
+      },
+      "average_score": 65.2,
+      "spread": 6.0,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 65.2,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "edbb0857",
+      "name_ko": "리틀 베이 피크닉 에어리어",
+      "region": "사우스웨스트록스/켐시",
+      "scores": {
+        "A": 64.0,
+        "B": 64.5,
+        "C": 67.0
+      },
+      "average_score": 65.2,
+      "spread": 3.0,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 65.2,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "dec35b06",
+      "name_ko": "브리즈번 워터 국립공원 - 불간드리 원주민 암각화",
+      "region": "센트럴코스트",
+      "scores": {
+        "A": 53.0,
+        "B": 70.0,
+        "C": 68.0
+      },
+      "average_score": 63.7,
+      "spread": 17.0,
+      "controversial": true,
+      "grade": "C",
+      "may_adjusted_score": 64.7,
+      "seasonal_adjustment": 1,
+      "may_grade": "C"
+    },
+    {
+      "id": "6c37b64f",
+      "name_ko": "시 에이커스 레인포레스트 센터",
+      "region": "포트맥쿼리",
+      "scores": {
+        "A": 64.0,
+        "B": 68.5,
+        "C": 63.0
+      },
+      "average_score": 65.2,
+      "spread": 5.5,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 64.2,
+      "seasonal_adjustment": -1,
+      "may_grade": "C"
+    },
+    {
+      "id": "4d611b52",
+      "name_ko": "탬보린 국립공원 (시더 크릭 폭포)",
+      "region": "골드코스트",
+      "scores": {
+        "A": 56.0,
+        "B": 69.0,
+        "C": 67.5
+      },
+      "average_score": 64.2,
+      "spread": 13.0,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 64.2,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "f81a1418",
+      "name_ko": "샤크 다이브 익스트림",
+      "region": "시드니",
+      "scores": {
+        "A": 47.5,
+        "B": 64.0,
+        "C": 78.5
+      },
+      "average_score": 63.3,
+      "spread": 31.0,
+      "controversial": true,
+      "grade": "C",
+      "may_adjusted_score": 63.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "64847f13",
+      "name_ko": "스카이포인트 전망대",
+      "region": "골드코스트",
+      "scores": {
+        "A": 65.0,
+        "B": 57.5,
+        "C": 70.0
+      },
+      "average_score": 64.2,
+      "spread": 12.5,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 63.2,
+      "seasonal_adjustment": -1,
+      "may_grade": "C"
+    },
+    {
+      "id": "dc2795c8",
+      "name_ko": "키아마 등대",
+      "region": "울릉공/키아마",
+      "scores": {
+        "A": 71.0,
+        "B": 54.5,
+        "C": 59.0
+      },
+      "average_score": 61.5,
+      "spread": 16.5,
+      "controversial": true,
+      "grade": "C",
+      "may_adjusted_score": 62.5,
+      "seasonal_adjustment": 1,
+      "may_grade": "C"
+    },
+    {
+      "id": "38c0546f",
+      "name_ko": "이루칸지 샤크 & 레이 인카운터스",
+      "region": "뉴캐슬/포트스테판스",
+      "scores": {
+        "A": 61.0,
+        "B": 54.0,
+        "C": 72.0
+      },
+      "average_score": 62.3,
+      "spread": 18.0,
+      "controversial": true,
+      "grade": "C",
+      "may_adjusted_score": 62.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "b8c93251",
+      "name_ko": "오스트레일리안 보태닉 가든 마운트 아난",
+      "region": "시드니",
+      "scores": {
+        "A": 54.0,
+        "B": 65.5,
+        "C": 67.5
+      },
+      "average_score": 62.3,
+      "spread": 13.5,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 62.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "fd81708b",
+      "name_ko": "타롱가 동물원 시드니",
+      "region": "시드니",
+      "scores": {
+        "A": 56.5,
+        "B": 64.0,
+        "C": 69.0
+      },
+      "average_score": 63.2,
+      "spread": 12.5,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 61.2,
+      "seasonal_adjustment": -2,
+      "may_grade": "C"
     },
     {
       "id": "a5b06982",
@@ -1249,49 +1442,78 @@
       "average_score": 60.0,
       "spread": 11.5,
       "controversial": false,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 61.0,
+      "seasonal_adjustment": 1,
+      "may_grade": "C"
     },
     {
-      "id": "904331b4",
-      "name_ko": "팜 비치 록풀",
+      "id": "fa50dcb3",
+      "name_ko": "백 크릭 다리",
+      "region": "사우스웨스트록스/켐시",
+      "scores": {
+        "A": 63.0,
+        "B": 55.5,
+        "C": 62.5
+      },
+      "average_score": 60.3,
+      "spread": 7.5,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 60.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "a535b048",
+      "name_ko": "디 엔트런스 메모리얼 공원 (펠리컨 피딩)",
       "region": "센트럴코스트",
       "scores": {
-        "A": 60.0,
-        "B": 59.0,
-        "C": 60.5
+        "A": 63.5,
+        "B": 58.0,
+        "C": 62.0
       },
-      "average_score": 59.8,
-      "spread": 1.5,
+      "average_score": 61.2,
+      "spread": 5.5,
       "controversial": false,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 60.2,
+      "seasonal_adjustment": -1,
+      "may_grade": "C"
     },
     {
-      "id": "36dc1295",
-      "name_ko": "제놀란 케이브즈 (제놀란 동굴)",
-      "region": "블루마운틴",
+      "id": "6ad0213c",
+      "name_ko": "다크 포인트 워킹 트랙",
+      "region": "뉴캐슬/포트스테판스",
       "scores": {
-        "A": 43.0,
-        "B": 74.5,
-        "C": 58.0
+        "A": 47.0,
+        "B": 72.0,
+        "C": 63.0
       },
-      "average_score": 58.5,
-      "spread": 31.5,
+      "average_score": 60.7,
+      "spread": 25.0,
       "controversial": true,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 59.7,
+      "seasonal_adjustment": -1,
+      "may_grade": "C"
     },
     {
-      "id": "a183bc9a",
-      "name_ko": "러브스 베이",
+      "id": "5254b0bc",
+      "name_ko": "부시랭거스 베이 수중 보호구역",
       "region": "울릉공/키아마",
       "scores": {
-        "A": 62.5,
-        "B": 53.0,
-        "C": 59.5
+        "A": 55.0,
+        "B": 68.0,
+        "C": 67.5
       },
-      "average_score": 58.3,
-      "spread": 9.5,
+      "average_score": 63.5,
+      "spread": 13.0,
       "controversial": false,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 58.5,
+      "seasonal_adjustment": -5,
+      "may_grade": "C"
     },
     {
       "id": "f04313c6",
@@ -1305,63 +1527,10 @@
       "average_score": 58.2,
       "spread": 20.5,
       "controversial": true,
-      "grade": "C"
-    },
-    {
-      "id": "23d43404",
-      "name_ko": "빅 프론 (거대 새우 조형물)",
-      "region": "바이런베이",
-      "scores": {
-        "A": 69.0,
-        "B": 46.5,
-        "C": 57.5
-      },
-      "average_score": 57.7,
-      "spread": 22.5,
-      "controversial": true,
-      "grade": "C"
-    },
-    {
-      "id": "5808639b",
-      "name_ko": "지그재그 레일웨이",
-      "region": "블루마운틴",
-      "scores": {
-        "A": 51.5,
-        "B": 57.0,
-        "C": 64.5
-      },
-      "average_score": 57.7,
-      "spread": 13.0,
-      "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "d2936dd7",
-      "name_ko": "빅 코알라 - 모든 코알라의 영혼",
-      "region": "포트맥쿼리",
-      "scores": {
-        "A": 67.0,
-        "B": 43.5,
-        "C": 62.5
-      },
-      "average_score": 57.7,
-      "spread": 23.5,
-      "controversial": true,
-      "grade": "C"
-    },
-    {
-      "id": "b7e6c92f",
-      "name_ko": "오스트레일리아 국립 해양 박물관",
-      "region": "시드니",
-      "scores": {
-        "A": 50.5,
-        "B": 52.5,
-        "C": 69.0
-      },
-      "average_score": 57.3,
-      "spread": 18.5,
-      "controversial": true,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 58.2,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
     },
     {
       "id": "269c82b6",
@@ -1375,7 +1544,112 @@
       "average_score": 57.2,
       "spread": 12.0,
       "controversial": false,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 58.2,
+      "seasonal_adjustment": 1,
+      "may_grade": "C"
+    },
+    {
+      "id": "904331b4",
+      "name_ko": "팜 비치 록풀",
+      "region": "센트럴코스트",
+      "scores": {
+        "A": 60.0,
+        "B": 59.0,
+        "C": 60.5
+      },
+      "average_score": 59.8,
+      "spread": 1.5,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 57.8,
+      "seasonal_adjustment": -2,
+      "may_grade": "C"
+    },
+    {
+      "id": "23d43404",
+      "name_ko": "빅 프론 (거대 새우 조형물)",
+      "region": "바이런베이",
+      "scores": {
+        "A": 69.0,
+        "B": 46.5,
+        "C": 57.5
+      },
+      "average_score": 57.7,
+      "spread": 22.5,
+      "controversial": true,
+      "grade": "C",
+      "may_adjusted_score": 57.7,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "d2936dd7",
+      "name_ko": "빅 코알라 - 모든 코알라의 영혼",
+      "region": "포트맥쿼리",
+      "scores": {
+        "A": 67.0,
+        "B": 43.5,
+        "C": 62.5
+      },
+      "average_score": 57.7,
+      "spread": 23.5,
+      "controversial": true,
+      "grade": "C",
+      "may_adjusted_score": 57.7,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "b7e6c92f",
+      "name_ko": "오스트레일리아 국립 해양 박물관",
+      "region": "시드니",
+      "scores": {
+        "A": 50.5,
+        "B": 52.5,
+        "C": 69.0
+      },
+      "average_score": 57.3,
+      "spread": 18.5,
+      "controversial": true,
+      "grade": "C",
+      "may_adjusted_score": 57.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
+    },
+    {
+      "id": "5808639b",
+      "name_ko": "지그재그 레일웨이",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 51.5,
+        "B": 57.0,
+        "C": 64.5
+      },
+      "average_score": 57.7,
+      "spread": 13.0,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 56.7,
+      "seasonal_adjustment": -1,
+      "may_grade": "C"
+    },
+    {
+      "id": "a183bc9a",
+      "name_ko": "러브스 베이",
+      "region": "울릉공/키아마",
+      "scores": {
+        "A": 62.5,
+        "B": 53.0,
+        "C": 59.5
+      },
+      "average_score": 58.3,
+      "spread": 9.5,
+      "controversial": false,
+      "grade": "C",
+      "may_adjusted_score": 56.3,
+      "seasonal_adjustment": -2,
+      "may_grade": "C"
     },
     {
       "id": "368a4e1c",
@@ -1389,21 +1663,10 @@
       "average_score": 57.2,
       "spread": 7.5,
       "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "551ff6a1",
-      "name_ko": "우룬가 보드워크",
-      "region": "콥스하버",
-      "scores": {
-        "A": 43.5,
-        "B": 70.0,
-        "C": 58.0
-      },
-      "average_score": 57.2,
-      "spread": 26.5,
-      "controversial": true,
-      "grade": "C"
+      "grade": "C",
+      "may_adjusted_score": 56.2,
+      "seasonal_adjustment": -1,
+      "may_grade": "C"
     },
     {
       "id": "98c09a51",
@@ -1417,49 +1680,10 @@
       "average_score": 57.0,
       "spread": 13.0,
       "controversial": false,
-      "grade": "C"
-    },
-    {
-      "id": "32918380",
-      "name_ko": "피겨 에잇 풀스",
-      "region": "로열국립공원/그랜드퍼시픽",
-      "scores": {
-        "A": 30.5,
-        "B": 85.5,
-        "C": 51.5
-      },
-      "average_score": 55.8,
-      "spread": 55.0,
-      "controversial": true,
-      "grade": "D"
-    },
-    {
-      "id": "3e54b21c",
-      "name_ko": "루나 파크 시드니",
-      "region": "시드니",
-      "scores": {
-        "A": 57.0,
-        "B": 50.0,
-        "C": 56.5
-      },
-      "average_score": 54.5,
-      "spread": 7.0,
-      "controversial": false,
-      "grade": "D"
-    },
-    {
-      "id": "5dc8e4b0",
-      "name_ko": "오스트레일리안 렙타일 파크 (호주 파충류 공원)",
-      "region": "센트럴코스트",
-      "scores": {
-        "A": 50.5,
-        "B": 49.5,
-        "C": 63.5
-      },
-      "average_score": 54.5,
-      "spread": 14.0,
-      "controversial": false,
-      "grade": "D"
+      "grade": "C",
+      "may_adjusted_score": 56.0,
+      "seasonal_adjustment": -1,
+      "may_grade": "C"
     },
     {
       "id": "59520c4f",
@@ -1473,21 +1697,61 @@
       "average_score": 53.5,
       "spread": 19.0,
       "controversial": true,
-      "grade": "D"
+      "grade": "D",
+      "may_adjusted_score": 53.5,
+      "seasonal_adjustment": 0,
+      "may_grade": "C"
     },
     {
-      "id": "e64dcb8e",
-      "name_ko": "가이 포크스 리버 국립공원",
-      "region": "콥스하버",
+      "id": "3e54b21c",
+      "name_ko": "루나 파크 시드니",
+      "region": "시드니",
       "scores": {
-        "A": 26.5,
-        "B": 73.0,
-        "C": 59.5
+        "A": 57.0,
+        "B": 50.0,
+        "C": 56.5
       },
-      "average_score": 53.0,
-      "spread": 46.5,
+      "average_score": 54.5,
+      "spread": 7.0,
+      "controversial": false,
+      "grade": "D",
+      "may_adjusted_score": 52.5,
+      "seasonal_adjustment": -2,
+      "may_grade": "D"
+    },
+    {
+      "id": "5dc8e4b0",
+      "name_ko": "오스트레일리안 렙타일 파크 (호주 파충류 공원)",
+      "region": "센트럴코스트",
+      "scores": {
+        "A": 50.5,
+        "B": 49.5,
+        "C": 63.5
+      },
+      "average_score": 54.5,
+      "spread": 14.0,
+      "controversial": false,
+      "grade": "D",
+      "may_adjusted_score": 52.5,
+      "seasonal_adjustment": -2,
+      "may_grade": "D"
+    },
+    {
+      "id": "36dc1295",
+      "name_ko": "제놀란 케이브즈 (제놀란 동굴)",
+      "region": "블루마운틴",
+      "scores": {
+        "A": 43.0,
+        "B": 74.5,
+        "C": 58.0
+      },
+      "average_score": 58.5,
+      "spread": 31.5,
       "controversial": true,
-      "grade": "D"
+      "grade": "C",
+      "may_adjusted_score": 51.5,
+      "seasonal_adjustment": -7,
+      "may_grade": "D"
     },
     {
       "id": "7ac4516b",
@@ -1501,7 +1765,27 @@
       "average_score": 51.3,
       "spread": 13.0,
       "controversial": false,
-      "grade": "D"
+      "grade": "D",
+      "may_adjusted_score": 51.3,
+      "seasonal_adjustment": 0,
+      "may_grade": "D"
+    },
+    {
+      "id": "551ff6a1",
+      "name_ko": "우룬가 보드워크",
+      "region": "콥스하버",
+      "scores": {
+        "A": 43.5,
+        "B": 70.0,
+        "C": 58.0
+      },
+      "average_score": 57.2,
+      "spread": 26.5,
+      "controversial": true,
+      "grade": "C",
+      "may_adjusted_score": 51.2,
+      "seasonal_adjustment": -6,
+      "may_grade": "D"
     },
     {
       "id": "35343eb1",
@@ -1515,7 +1799,27 @@
       "average_score": 51.2,
       "spread": 18.0,
       "controversial": true,
-      "grade": "D"
+      "grade": "D",
+      "may_adjusted_score": 50.2,
+      "seasonal_adjustment": -1,
+      "may_grade": "D"
+    },
+    {
+      "id": "32918380",
+      "name_ko": "피겨 에잇 풀스",
+      "region": "로열국립공원/그랜드퍼시픽",
+      "scores": {
+        "A": 30.5,
+        "B": 85.5,
+        "C": 51.5
+      },
+      "average_score": 55.8,
+      "spread": 55.0,
+      "controversial": true,
+      "grade": "D",
+      "may_adjusted_score": 47.8,
+      "seasonal_adjustment": -8,
+      "may_grade": "D"
     },
     {
       "id": "6b8f267d",
@@ -1529,7 +1833,27 @@
       "average_score": 49.3,
       "spread": 11.5,
       "controversial": false,
-      "grade": "D"
+      "grade": "D",
+      "may_adjusted_score": 47.3,
+      "seasonal_adjustment": -2,
+      "may_grade": "D"
+    },
+    {
+      "id": "e64dcb8e",
+      "name_ko": "가이 포크스 리버 국립공원",
+      "region": "콥스하버",
+      "scores": {
+        "A": 26.5,
+        "B": 73.0,
+        "C": 59.5
+      },
+      "average_score": 53.0,
+      "spread": 46.5,
+      "controversial": true,
+      "grade": "D",
+      "may_adjusted_score": 47.0,
+      "seasonal_adjustment": -6,
+      "may_grade": "D"
     },
     {
       "id": "8072c908",
@@ -1543,7 +1867,10 @@
       "average_score": 45.3,
       "spread": 15.0,
       "controversial": true,
-      "grade": "D"
+      "grade": "D",
+      "may_adjusted_score": 43.3,
+      "seasonal_adjustment": -2,
+      "may_grade": "D"
     },
     {
       "id": "01915bd7",
@@ -1557,7 +1884,15 @@
       "average_score": 42.5,
       "spread": 8.5,
       "controversial": false,
-      "grade": "D"
+      "grade": "D",
+      "may_adjusted_score": 40.5,
+      "seasonal_adjustment": -2,
+      "may_grade": "D"
     }
-  ]
+  ],
+  "may_evaluation": {
+    "description": "5월 계절 보정 적용 (2026-03-16)",
+    "adjusted_count": 88,
+    "grade_changes": 18
+  }
 }
