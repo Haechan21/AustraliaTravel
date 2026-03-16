@@ -1,0 +1,41 @@
+---
+layout: default
+title: 액티비티 후보
+---
+
+<div class="activities-page">
+  <h1>액티비티 후보</h1>
+  <p class="activities-subtitle" id="subtitle">5개 지역 · 48개 체험 활동 · 2026년 5월 하순 기준</p>
+
+  <!-- Region tabs -->
+  <div class="region-tabs" id="regionTabs">
+    <button class="region-tab active" data-region="byron-bay">바이런베이</button>
+    <button class="region-tab" data-region="port-stephens">포트스테판스·뉴캐슬</button>
+    <button class="region-tab" data-region="coffs-harbour">콥스하버·도리고</button>
+    <button class="region-tab" data-region="port-macquarie">포트맥쿼리</button>
+    <button class="region-tab" data-region="blue-mountains-sydney">블루마운틴·시드니</button>
+  </div>
+
+  <!-- Region summary -->
+  <div class="region-summary" id="regionSummary"></div>
+
+  <!-- Activity cards grid -->
+  <div class="activity-grid" id="activityGrid"></div>
+
+  <!-- Full research -->
+  <details class="full-research" id="fullResearch">
+    <summary><strong>전체 리서치 원문 보기</strong></summary>
+    <div class="research-content" id="researchContent">로딩 중...</div>
+  </details>
+</div>
+
+<!-- Activity detail modal -->
+<div class="act-modal-overlay" id="actModal">
+  <div class="act-modal-content">
+    <button class="act-modal-close" id="actModalClose">&times;</button>
+    <div class="act-modal-body" id="actModalBody"></div>
+  </div>
+</div>
+
+<script>window.__BASE_URL__ = "{{ site.baseurl }}";</script>
+<script src="{{ '/assets/js/activities.js' | relative_url }}"></script>
