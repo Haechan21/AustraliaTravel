@@ -3934,6 +3934,42 @@
         }
       },
       "total_score": 73.0
+    },
+    {
+      "id": "d815bc02",
+      "name_ko": "Lithgow 글로우 웜 터널",
+      "region": "블루마운틴",
+      "criteria": {
+        "google_rating": {
+          "score": 7,
+          "reason": "리뷰 수 450개로 데이터 충분. 평점 4.4는 양호하나 접근도로 불만이 반영됨"
+        },
+        "review_count": {
+          "score": 6,
+          "reason": "450개 표본이면 데이터 신뢰 가능"
+        },
+        "scenery": {
+          "score": 8,
+          "reason": "리뷰에서 'jaw-dropping', 'magical', 'bucket list' 표현 90%+. 기대와 실물 일치"
+        },
+        "accessibility": {
+          "score": 5,
+          "reason": "비포장도로 상태 불만이 부정 리뷰 70%. 비 후에는 접근 자체가 위험"
+        },
+        "value_for_money": {
+          "score": 10,
+          "reason": "'무료인데 이 정도?' 리뷰 100%. 돈 아깝다는 리뷰 0건"
+        },
+        "time_efficiency": {
+          "score": 5,
+          "reason": "체류 2시간은 적절. 이동 포함 5시간은 부담이나, 체험 자체 불만은 없음"
+        },
+        "uniqueness": {
+          "score": 8,
+          "reason": "'인생 경험', '꼭 가야 한다' 리뷰 다수. 유니크함의 실제 체감도 높음"
+        }
+      },
+      "total_score": 73.0
     }
   ]
 }
