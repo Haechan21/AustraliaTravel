@@ -86,5 +86,6 @@
     "best_time": "파도 높은 날 (북동쪽 파도 최적)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Little+Blowhole,+Tingira+Cres,+Kiama+NSW+2533,+Australia"
 }

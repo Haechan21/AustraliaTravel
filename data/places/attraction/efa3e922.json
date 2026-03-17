@@ -57,7 +57,10 @@
     "logistics": {
       "parking": "Craig Ave 노상 무료 주차. 접근성 주차 1대. 공간 매우 제한적",
       "road_condition": "주택가 도로, 양호. 좁은 골목",
-      "nearby_attractions": "갭 공원(472d62b4) 차로 5분/도보 20분 - 해안 산책로 연계 가능. 본다이~브론테(034f4322) 차로 10분",
+      "nearby_attractions": [
+        {"name": "갭 공원 (더 갭)", "drive_min": 5, "walk_min": 20},
+        {"name": "본다이 투 브론테 해안 산책로", "drive_min": 10}
+      ],
       "peak_times": "주말 오후. 규모가 작아 소수 인원으로도 붐비는 느낌",
       "public_transport": "인근 버스 정류장에서 도보 거리. 325번 버스 등 이용 가능"
     },

@@ -86,5 +86,6 @@
     "best_time": "이른 아침 (일출 + 주차 확보)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Sea+Cliff+Bridge,+Lawrence+Hargrave+Dr,+Clifton+NSW+2515,+Australia"
 }

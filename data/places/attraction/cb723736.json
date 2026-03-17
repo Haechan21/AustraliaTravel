@@ -60,7 +60,12 @@
     "logistics": {
       "parking": "무료 주차장. 주차장에서 전망대까지 짧은 도보. 충분한 공간",
       "road_condition": "Hassans Walls Rd - 비포장 구간 있으나 일반 차량 통행 가능. 저속 운행 권장",
-      "nearby_attractions": "지그재그 레일웨이(5808639b) 차로 15분. 제놀란 동굴(36dc1295) 차로 50분(현재 폐쇄). 리스고 타운 차로 10분. 블루마운틴 주요 명소(카툼바) 차로 40분+",
+      "nearby_attractions": [
+        {"name": "지그재그 레일웨이", "drive_min": 15},
+        {"name": "제놀란 케이브즈 (현재 폐쇄)", "drive_min": 50},
+        {"name": "리스고 타운", "drive_min": 10},
+        {"name": "블루마운틴 주요 명소 (카툼바)", "drive_min": 40}
+      ],
       "peak_times": "주말 오전~오후. 평일은 매우 한적",
       "public_transport": "대중교통 접근 불가. 차량 필수"
     },
@@ -85,5 +90,6 @@
     "best_time": "맑은 날 오후 (일몰 전)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Hassans+Walls+Lookout,+Hassans+Walls+Rd,+Hassans+Walls+NSW+2790,+Australia"
 }

@@ -54,7 +54,11 @@
     "logistics": {
       "parking": "재개장 시 방문자 주차장 업그레이드 예정. 기존 주차 무료",
       "road_condition": "Jenolan Caves Rd - 2024년 홍수 피해로 현재 폐쇄/보수 중. Hampton 구간 2차선 복구 완료. Two Mile 구간 18개월 보수 진행 중",
-      "nearby_attractions": "하산스 월즈(cb723736) 차로 50분. 지그재그 레일웨이(5808639b) 차로 40분. 카툼바 에코 포인트(ef2de137) 차로 1.5시간",
+      "nearby_attractions": [
+        {"name": "하산스 월즈 전망대", "drive_min": 50},
+        {"name": "지그재그 레일웨이", "drive_min": 40},
+        {"name": "에코 포인트 전망대 (쓰리 시스터스)", "drive_min": 90}
+      ],
       "peak_times": "재개장 초기 인기 예상. 사전 예약 필수가 될 전망",
       "public_transport": "대중교통 접근 불가. 차량 필수. 도로 상태 확인 후 방문"
     },

@@ -88,5 +88,6 @@
     "best_time": "일출",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Bombo+Headland+Quarry,+Darien+Ave,+Bombo+NSW+2533,+Australia"
 }

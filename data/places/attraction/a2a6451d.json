@@ -55,7 +55,12 @@
     "logistics": {
       "parking": "Watson Rd, Argyle St 미터 주차 ($8/시간). Wilson Clocktower 주차장 이용 가능. 주차 비싸고 제한적",
       "road_condition": "도심 도로, 양호. 언덕 위 접근 경사 있음",
-      "nearby_attractions": "바랑가루(b484de1d) 도보 10분. 달링하버(f04313c6) 도보 15분. 더 록스(The Rocks) 도보 5분. 서큘러 키 도보 10분",
+      "nearby_attractions": [
+        {"name": "바랑가루 보호지역", "walk_min": 10},
+        {"name": "달링 하버", "walk_min": 15},
+        {"name": "더 록스 (The Rocks)", "walk_min": 5},
+        {"name": "서큘러 키", "walk_min": 10}
+      ],
       "peak_times": "주말 일몰 시간대. 평일은 비교적 한적",
       "public_transport": "와이야드역 도보 15분. 서큘러 키역 도보 10분. 버스 다수"
     },

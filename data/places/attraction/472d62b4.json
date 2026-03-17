@@ -57,7 +57,11 @@
     "logistics": {
       "parking": "Gap Rd 노상 주차 제한적. 피크 시간 빠르게 만차. 대중교통 추천",
       "road_condition": "일반 시내 도로, 양호. 왓슨스 베이 반도 진입 도로 혼잡 가능",
-      "nearby_attractions": "다이아몬드 베이(efa3e922) 차로 5분. 본다이~브론테(034f4322) 차로 15분. Camp Cove, South Head 도보 연계",
+      "nearby_attractions": [
+        {"name": "다이아몬드 베이 보호지역", "drive_min": 5},
+        {"name": "본다이 투 브론테 해안 산책로", "drive_min": 15},
+        {"name": "Camp Cove / South Head"}
+      ],
       "peak_times": "주말 오후, 특히 일몰 시간대. 관광버스 도착 시간(11시~14시)",
       "public_transport": "왓슨스 베이 페리 + 도보 5분. 버스 324 Gap Park 정류장 하차"
     },

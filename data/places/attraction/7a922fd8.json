@@ -22,5 +22,6 @@
     "best_time": null,
     "weather_dependent": null,
     "reservation_required": null
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=-34.2239166,150.9972055"
 }

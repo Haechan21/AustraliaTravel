@@ -84,5 +84,6 @@
     "best_time": "오전~오후 (맑은 날)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Blenheim+Beach,+Vincentia+NSW+2540,+Australia"
 }

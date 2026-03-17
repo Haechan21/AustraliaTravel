@@ -57,7 +57,13 @@
     "logistics": {
       "parking": "달링하버 인근 유료 주차장 ($10~15/시간, 사전 예약 시 $20~35/일). 박물관 전용 주차 없음",
       "road_condition": "도심 도로, 양호. 교통 혼잡 가능",
-      "nearby_attractions": "달링하버(f04313c6) 내 위치. 샤크 다이브(f81a1418) 같은 건물. 바랑가루(b484de1d) 도보 15분. SEA LIFE 수족관, WILD LIFE 동물원 인접",
+      "nearby_attractions": [
+        {"name": "달링 하버", "distance_km": 0},
+        {"name": "샤크 다이브 익스트림", "distance_km": 0},
+        {"name": "바랑가루 보호지역", "walk_min": 15},
+        {"name": "SEA LIFE 수족관"},
+        {"name": "WILD LIFE 동물원"}
+      ],
       "peak_times": "학교 방학, 공휴일, 주말 혼잡. 평일 오전 한적",
       "public_transport": "타운홀역 도보 10분. 달링하버 페리. 라이트레일 Convention 정류장"
     },

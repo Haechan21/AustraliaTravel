@@ -58,7 +58,12 @@
     "logistics": {
       "parking": "유료 주차 (앱 결제, 15분당 $3). 공간 제한적. 대형 버스 접근 불가",
       "road_condition": "Sublime Point Rd - 포장 도로, 양호. Great Western Highway에서 접근",
-      "nearby_attractions": "에버글라데스(7e886049) 차로 5분. 링컨스 록(1a05deb4) 차로 10분. 에코 포인트(ef2de137) 차로 10분. 시닉월드(b39fd373) 차로 10분",
+      "nearby_attractions": [
+        {"name": "에버글라데스 하우스 & 가든스", "drive_min": 5},
+        {"name": "링컨스 록", "drive_min": 10},
+        {"name": "에코 포인트 전망대 (쓰리 시스터스)", "drive_min": 10},
+        {"name": "시닉월드", "drive_min": 10}
+      ],
       "peak_times": "일출/일몰 시간대에 사진가들 방문. 주말 오전~오후. 대형 버스 못 들어와 카툼바보다 한적",
       "public_transport": "Leura역에서 도보 30분+ 또는 택시. 대중교통 접근 불편"
     },

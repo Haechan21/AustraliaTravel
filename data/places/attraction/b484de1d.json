@@ -55,7 +55,12 @@
     "logistics": {
       "parking": "Wilson Parking 지하 주차장 300대 (Towns Place 입구, 6am~자정). 앱/사전 예약 시 할인. 인근 달링하버 주차장도 이용 가능",
       "road_condition": "도심 도로, 양호",
-      "nearby_attractions": "옵저버토리 힐(a2a6451d) 도보 10분. 달링하버(f04313c6) 도보 15분. 해양박물관(b7e6c92f) 도보 20분. 서큘러 키 도보 15분(워터프론트 산책)",
+      "nearby_attractions": [
+        {"name": "옵저버토리 힐 공원", "walk_min": 10},
+        {"name": "달링 하버", "walk_min": 15},
+        {"name": "오스트레일리아 국립 해양 박물관", "walk_min": 20},
+        {"name": "서큘러 키", "walk_min": 15}
+      ],
       "peak_times": "주말 오전~오후. 이벤트 시 혼잡",
       "public_transport": "바랑가루 메트로역 (Hickson Rd 북쪽). 와이야드역 지하 보행로 연결(1km). F3/F4 페리 바랑가루 와프(도보 10분)"
     },

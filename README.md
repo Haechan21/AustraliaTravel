@@ -7,7 +7,7 @@
 구글맵 후보지를 전처리하고, Claude Code가 정보 수집 · 평가 · 일정 생성 · 리뷰를 수행한다.
 
 ![Status](https://img.shields.io/badge/Phase_4-일정_생성_중-yellow?style=for-the-badge)
-![Places](https://img.shields.io/badge/관광지-109곳_평가_완료-blue?style=for-the-badge)
+![Places](https://img.shields.io/badge/관광지-110곳_평가_완료-blue?style=for-the-badge)
 ![Duration](https://img.shields.io/badge/기간-9일_(활동_7일)-green?style=for-the-badge)
 
 [**GitHub Pages에서 보기**](https://haechan21.github.io/australia-travel/)
@@ -31,36 +31,55 @@
 
 ```
 호주여행/
-├── _layouts/                  # Jekyll 레이아웃
+├── _config.yml                   # Jekyll 사이트 설정
+├── _layouts/                     # Jekyll 레이아웃
 ├── assets/
-│   ├── css/style.scss         #   커스텀 스타일 (모달, 랭킹 테이블 등)
-│   ├── js/rankings.js         #   랭킹 페이지 인터랙션 (필터, 정렬, 모달)
-│   └── data/place_data.json   #   프론트엔드용 통합 데이터 (자동 생성)
-├── index.md                   # GitHub Pages 메인
-├── rankings.html              # 관광지 랭킹 (동적 페이지)
-├── CLAUDE.md                  # Claude Code 작업 가이드
+│   ├── css/style.scss            #   커스텀 스타일
+│   ├── js/
+│   │   ├── rankings.js           #   랭킹 페이지 인터랙션 (필터, 정렬, 모달)
+│   │   ├── routes.js             #   루트 비교 페이지 인터랙션 (Leaflet.js)
+│   │   └── activities.js         #   액티비티 페이지 인터랙션
+│   └── data/
+│       ├── place_data.json       #   프론트엔드용 장소 데이터 (자동 생성)
+│       └── route_data.json       #   루트 비교용 경유지·좌표 데이터
+├── index.md                      # GitHub Pages 메인
+├── rankings.html                 # 관광지 랭킹 (동적 페이지)
+├── routes.html                   # 루트 비교 (지도 + 상세 평가)
+├── activities.html               # 액티비티 후보 페이지
+├── route-plans.html             # 루트 상세 (→ routes.html 리다이렉트)
+├── CLAUDE.md                     # Claude Code 작업 가이드
 ├── docs/
-│   ├── SPEC.md                #   기술 설계서 (데이터 스키마, 워크플로우)
-│   ├── CRITIC.md              #   평가 페르소나 3명 정의 · 채점 가이드라인
-│   ├── META.md                #   여행 전제 조건 (항공, 렌터카, 제약)
-│   └── ITINERARY.md           #   확정 일정 (Single Source of Truth)
-├── GoogleMaps/                # 구글맵 내보내기 원본 (읽기 전용)
+│   ├── SPEC.md                   #   기술 설계서 (데이터 스키마, 워크플로우)
+│   ├── CRITIC.md                 #   평가 페르소나 3명 정의 · 채점 가이드라인
+│   ├── CRITIC_ROUTE.md           #   루트 후보 평가 페르소나 및 기준
+│   ├── META.md                   #   여행 전제 조건 (항공, 렌터카, 제약)
+│   ├── ITINERARY.md              #   확정 일정 (Single Source of Truth)
+│   └── TRAVELER_PROFILE.md       #   여행자 프로필 & 선호도
+├── GoogleMaps/                   # 구글맵 내보내기 원본 (읽기 전용)
 ├── config/
-│   ├── scoring.json           #   카테고리별 평가 기준·가중치
-│   └── trip.json              #   여행 일정 설정
+│   ├── scoring.json              #   카테고리별 평가 기준·가중치
+│   └── trip.json                 #   여행 일정 설정
 ├── data/
-│   ├── places/attraction/     #   장소별 상세 JSON (110개, 중복 1개)
+│   ├── places/attraction/        #   장소별 상세 JSON (111개, 중복 1개)
 │   ├── scores/
-│   │   ├── attraction_scored.json  # 종합 평가 결과
-│   │   ├── scorer_A/B/C.json      # 개별 평가자 결과
-│   │   └── RANKINGS.md            # 랭킹 (정적 마크다운 버전)
-│   └── regions.json           #   좌표 기반 지역 분류 (14개 지역)
+│   │   ├── attraction_scored.json    # 종합 평가 결과
+│   │   ├── scorer_A/B/C.json        # 개별 평가자 결과
+│   │   └── RANKINGS.md              # 랭킹 (정적 마크다운 버전)
+│   └── regions.json              #   좌표 기반 지역 분류 (14개 지역)
 ├── research/
-│   ├── deep-research/         #   외부 AI 딥 리서치
-│   ├── claude-research/       #   Claude Code 직접 조사
-│   └── ai-review/             #   일정 리뷰 근거
+│   ├── deep-research/            #   외부 AI 딥 리서치
+│   ├── claude-research/          #   Claude Code 직접 조사
+│   │   ├── activities/           #     액티비티 리서치
+│   │   ├── places/               #     지역별 장소 리서치
+│   │   └── weather/              #     지역별 날씨 조사
+│   └── route-plans/              #   9개 루트 후보 상세 일정
 └── scripts/
-    └── parse_googlemaps.py    #   Phase 1 전처리
+    ├── parse_googlemaps.py       #   Phase 1: GoogleMaps 전처리
+    ├── generate_frontend.py      #   평가 결과 → RANKINGS.md + place_data.json
+    ├── update_route_scores.py    #   루트 파일 점수 정합성 검증/수정
+    └── utils/
+        ├── __init__.py
+        └── geo.py                #   좌표/거리 계산, 지역 할당
 ```
 
 ---
@@ -103,6 +122,10 @@ python scripts/generate_frontend.py            # 전체 (재채점 + RANKINGS + 
 python scripts/generate_frontend.py --rescore  # 등급 재계산만
 python scripts/generate_frontend.py --rank     # RANKINGS.md만
 python scripts/generate_frontend.py --data     # place_data.json만
+
+# 루트 파일 점수 정합성 검증/수정
+python scripts/update_route_scores.py            # 불일치 리포트만 (dry-run)
+python scripts/update_route_scores.py --fix      # 실제 수정
 ```
 
 Python 3.11+ 표준 라이브러리만 사용. 외부 의존성 없음.

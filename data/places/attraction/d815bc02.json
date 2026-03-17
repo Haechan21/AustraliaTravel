@@ -64,7 +64,10 @@
     "logistics": {
       "parking": "무료 주차장 (Newnes Junction). 약 20대 수용. 주말 10시 이후 포화 가능",
       "road_condition": "마지막 30km 비포장(Glow Worm Tunnel Road). 건조 시 2WD 가능, 비 후 4WD 권장. Corrugated surface + 포트홀 주의",
-      "nearby_attractions": "블루마운틴 국립공원 (카툼바 에코포인트에서 차로 1.5시간), Zig Zag Railway(차로 30분)",
+      "nearby_attractions": [
+        {"name": "블루마운틴스 국립공원 (카툼바 에코포인트)", "drive_min": 90},
+        {"name": "지그재그 레일웨이", "drive_min": 30}
+      ],
       "peak_times": "주말 10~14시 혼잡. 평일 오전은 거의 독점",
       "public_transport": "없음 — 차량 필수"
     },

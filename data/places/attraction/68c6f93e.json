@@ -58,7 +58,13 @@
     "logistics": {
       "parking": "각 명소별 개별 주차장. 에코 포인트, 서블라임 포인트, Evans Lookout 등. 주말 혼잡",
       "road_condition": "Great Western Highway 및 각 접근 도로 양호. 시드니에서 차로 1.5~2시간",
-      "nearby_attractions": "국립공원 내에 쓰리시스터스(89376ce6), 에코 포인트(ef2de137), 시닉월드(b39fd373), 그랜드 캐니언(c7c5e692), 카툼바 폭포(fdef9085) 등 다수 포함",
+      "nearby_attractions": [
+        {"name": "쓰리 시스터스"},
+        {"name": "에코 포인트 전망대 (쓰리 시스터스)"},
+        {"name": "시닉월드"},
+        {"name": "그랜드 캐니언 워킹 트랙"},
+        {"name": "카툼바 폭포"}
+      ],
       "peak_times": "주말 오전~오후. 학교 방학. 평일 방문 강력 추천",
       "public_transport": "시드니 센트럴역에서 블루마운틴 라인 열차 (카툼바, 웬트워스 폴스, 블랙히스 등 정차). 역에서 각 명소까지 버스/택시"
     },

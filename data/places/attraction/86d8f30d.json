@@ -58,7 +58,12 @@
     "logistics": {
       "parking": "아스팔트 포장 주차장 (접근성 주차 2대 포함). 주말 혼잡 시 헤리티지 센터 주차장(500m) 이용",
       "road_condition": "Govetts Leap Rd - 아스팔트 포장, 양호. Great Western Highway에서 접근",
-      "nearby_attractions": "그랜드 캐니언 워킹 트랙(c7c5e692) 차로 5분. 블루마운틴 국립공원(68c6f93e) 내 위치. Blackheath 마을 차로 3분. 에코 포인트(ef2de137) 차로 20분",
+      "nearby_attractions": [
+        {"name": "그랜드 캐니언 워킹 트랙", "drive_min": 5},
+        {"name": "블루마운틴스 국립공원"},
+        {"name": "Blackheath 마을", "drive_min": 3},
+        {"name": "에코 포인트 전망대 (쓰리 시스터스)", "drive_min": 20}
+      ],
       "peak_times": "주말 오전 10시~오후 3시. 일출/일몰 시간대도 사진가들로 붐빔",
       "public_transport": "Blackheath역에서 도보 30분 또는 택시. 직행 버스 없음"
     },
@@ -83,5 +88,6 @@
     "best_time": "이른 아침 (일출) 또는 오후 (맑은 날)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Govetts+Leap+Lookout,+Govetts+Leap+Rd,+Blackheath+NSW+2785,+Australia"
 }

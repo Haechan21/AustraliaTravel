@@ -57,7 +57,13 @@
     "logistics": {
       "parking": "달링하버 인근 상업 주차장 다수. $10~15/시간, 사전 예약 시 $20~35/일. ICC 주차장 대규모",
       "road_condition": "도심 도로, 혼잡 가능. 주차보다 대중교통 추천",
-      "nearby_attractions": "해양박물관(b7e6c92f) 내 위치. 샤크 다이브(f81a1418) 도보 5분. 바랑가루(b484de1d) 도보 15분. 옵저버토리 힐(a2a6451d) 도보 15분. 차이니즈 가든 인접",
+      "nearby_attractions": [
+        {"name": "오스트레일리아 국립 해양 박물관", "distance_km": 0},
+        {"name": "샤크 다이브 익스트림", "walk_min": 5},
+        {"name": "바랑가루 보호지역", "walk_min": 15},
+        {"name": "옵저버토리 힐 공원", "walk_min": 15},
+        {"name": "차이니즈 가든"}
+      ],
       "peak_times": "주말 오후~저녁. 대형 이벤트 시 극도 혼잡. 평일은 여유",
       "public_transport": "타운홀역 도보 10분. 라이트레일 Convention/Exhibition 정류장. 달링하버 페리"
     },

@@ -57,7 +57,10 @@
     "logistics": {
       "parking": "노상 주차만 가능. Blues Point Rd 인근 제한적. 주말/맑은 날 주차 매우 어려움",
       "road_condition": "일반 시내 도로, 양호",
-      "nearby_attractions": "루나파크 시드니(3e54b21c) 도보 10분 거리, 밀슨스 포인트역 인근. 옵저버토리 힐(a2a6451d) 하버브리지 건너 도보 20분",
+      "nearby_attractions": [
+        {"name": "루나 파크 시드니", "walk_min": 10},
+        {"name": "옵저버토리 힐 공원", "walk_min": 20}
+      ],
       "peak_times": "주말 오후, 특히 일몰 시간대. 새해 전야 폐쇄됨",
       "public_transport": "맥마혼스 포인트 페리 선착장 도보 5분, 노스시드니역 도보 10분. 버스 노선 이용 가능"
     },
@@ -82,5 +85,6 @@
     "best_time": "일몰 시간대",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Blues+Point+Reserve,+Blues+Point+Rd,+McMahons+Point+NSW+2060,+Australia"
 }

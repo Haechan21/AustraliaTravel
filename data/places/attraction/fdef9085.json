@@ -59,7 +59,12 @@
     "logistics": {
       "parking": "Katoomba Falls Kiosk 인근 무료 주차 2곳 (Cliff Dr 양쪽). 시간 제한 없음",
       "road_condition": "Cliff Dr - 포장 도로, 양호. 카툼바 시내에서 접근 용이",
-      "nearby_attractions": "에코 포인트/쓰리시스터스(ef2de137/89376ce6) 도보 15분. 시닉월드(b39fd373) 도보 10분. 시닉 레일웨이(c92d2048) 도보 10분. 서블라임 포인트(04cc52a2) 차로 10분",
+      "nearby_attractions": [
+        {"name": "에코 포인트 전망대 (쓰리 시스터스)", "walk_min": 15},
+        {"name": "시닉월드", "walk_min": 10},
+        {"name": "시닉 레일웨이", "walk_min": 10},
+        {"name": "서블라임 포인트 전망대", "drive_min": 10}
+      ],
       "peak_times": "야간 조명 산책(일몰~22:30)이 하이라이트. 낮에는 비교적 한적",
       "public_transport": "카툼바역에서 도보 20분. 686G 버스 이용 가능"
     },

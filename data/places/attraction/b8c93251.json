@@ -58,7 +58,10 @@
     "logistics": {
       "parking": "원내 무료 주차. 충분한 공간. 접근성 주차 별도 제공",
       "road_condition": "Narellan Rd에서 진입, 양호. 시드니 CBD에서 차로 약 1시간 (M5/M31)",
-      "nearby_attractions": "시드니 도심 장소들과 거리 먼 편 (약 60km). 캠벨타운 시내 차로 15분. 블루마운틴 방면과 동선이 맞지 않음",
+      "nearby_attractions": [
+        {"name": "시드니 도심", "distance_km": 60},
+        {"name": "캠벨타운 시내", "drive_min": 15}
+      ],
       "peak_times": "주말 오전~오후 놀이터 주변. 평일은 한적",
       "public_transport": "캠벨타운역까지 열차 후 택시/우버 필요. 대중교통 접근 매우 불편. 차량 필수"
     },

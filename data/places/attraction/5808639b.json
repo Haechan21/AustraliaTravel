@@ -61,7 +61,12 @@
     "logistics": {
       "parking": "Clarence역 신규 대형 주차장, 무료. 화장실 시설 완비",
       "road_condition": "Chifley Rd (840번지) - 포장 도로, 양호. Great Western Highway에서 접근",
-      "nearby_attractions": "하산스 월즈(cb723736) 차로 15분. 리스고 타운 차로 10분. 카툼바 에코 포인트(ef2de137) 차로 40분. 제놀란 동굴(36dc1295) 차로 40분(현재 폐쇄)",
+      "nearby_attractions": [
+        {"name": "하산스 월즈 전망대", "drive_min": 15},
+        {"name": "리스고 타운", "drive_min": 10},
+        {"name": "에코 포인트 전망대 (쓰리 시스터스)", "drive_min": 40},
+        {"name": "제놀란 케이브즈 (현재 폐쇄)", "drive_min": 40}
+      ],
       "peak_times": "운행일(격주 금/토/일)에 집중. 자주 매진되므로 조기 예매 필수",
       "public_transport": "Clarence역은 일반 열차 정차역 아님. 차량 필수"
     },

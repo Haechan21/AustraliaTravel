@@ -58,7 +58,11 @@
     "logistics": {
       "parking": "유료 주차 ($3/15분, 앱 결제). 소규모 주차장으로 일몰 시간대 혼잡. Little Switzerland Dr 끝",
       "road_condition": "Little Switzerland Dr - 좁은 주택가 도로. 포장, 양호",
-      "nearby_attractions": "웬트워스 폴스 전망대(1d375b4d) 차로 5분. 엠프레스 폭포(9ba192a2) 차로 8분. 서블라임 포인트(04cc52a2) 차로 10분",
+      "nearby_attractions": [
+        {"name": "웬트워스 폴스 전망대", "drive_min": 5},
+        {"name": "엠프레스 폭포", "drive_min": 8},
+        {"name": "서블라임 포인트 전망대", "drive_min": 10}
+      ],
       "peak_times": "일몰 시간대에 극도 혼잡. 일찍 도착하여 자리 확보 필요. 평일은 비교적 한적",
       "public_transport": "Wentworth Falls역에서 도보 40분+ 또는 택시. 대중교통 접근 매우 불편"
     },
