@@ -11,7 +11,7 @@
       "lat": -34.009436799999996
     },
     "address": "Cape Solander Dr, Kurnell NSW 2231, Australia",
-    "region": "로열국립공원/그랜드퍼시픽"
+    "region": "시드니"
   },
   "collected_data": {
     "rating": 4.5,
@@ -59,21 +59,38 @@
       "parking": "전망대 부근 주차장 있음. 장애인 주차 포함. 2025-2026 공사로 주차 영향 가능. 주말/고래 시즌 혼잡.",
       "road_condition": "Cape Solander Dr 포장도로. 시드니 CBD에서 약 40분.",
       "nearby_attractions": [
-        {"name": "Royal National Park (89b09750)", "distance_km": 15, "drive_min": 25},
-        {"name": "Eagle Rock (2228124c)", "distance_km": 25, "drive_min": 40}
+        {
+          "name": "Royal National Park (89b09750)",
+          "distance_km": 15,
+          "drive_min": 25
+        },
+        {
+          "name": "Eagle Rock (2228124c)",
+          "distance_km": 25,
+          "drive_min": 40
+        }
       ],
       "peak_times": "주말 오전, 고래 시즌(6-7월) 특히 혼잡",
       "public_transport": "Cronulla 역에서 987번 버스로 Kurnell까지 이동 가능"
     },
     "experience": {
-      "photo_spots": ["절벽 위 전망 플랫폼에서 고래 + 태즈먼해 파노라마", "Muru Track 해안선 절벽 뷰"],
+      "photo_spots": [
+        "절벽 위 전망 플랫폼에서 고래 + 태즈먼해 파노라마",
+        "Muru Track 해안선 절벽 뷰"
+      ],
       "golden_hour": "동쪽 바다를 향한 전망대로 일출 뷰 탁월",
       "seasonal_beauty": "5월 가을 — 고래 이동 시작 시기로 야생동물 관찰의 시작점",
-      "hidden_gems": "Yena Track을 따라 원주민 역사 유적지와 해안 경관 동시 감상",
+      "hidden_gems": [
+        "Yena Track을 따라 원주민 역사 유적지와 해안 경관 동시 감상"
+      ],
       "sensory_notes": "거센 바닷바람, 파도 소리, 탁 트인 수평선. 고래 분수를 볼 때의 감동."
     },
     "risk_check": {
-      "negative_review_patterns": ["화장실 부재", "공사로 인한 접근 제한", "주차 부족"],
+      "negative_review_patterns": [
+        "화장실 부재",
+        "공사로 인한 접근 제한",
+        "주차 부족"
+      ],
       "may_operation": "정상 운영. 단 인프라 업그레이드 공사로 일부 구역 제한 가능.",
       "safety_issues": "절벽 가장자리 주의. 난간 있으나 바람 강할 수 있음.",
       "weather_impact": "강풍/우천 시 전망 제한되나 접근 자체는 가능",

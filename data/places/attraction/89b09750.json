@@ -59,23 +59,49 @@
       "parking": "Audley, Wattamolla, Garie Beach 등 여러 주차장. 주말 만차 잦음. Park'nPay 앱 결제.",
       "road_condition": "주요 도로 포장. 일부 비치 접근로 급경사.",
       "nearby_attractions": [
-        {"name": "Eagle Rock (2228124c)", "distance_km": 5, "drive_min": 10},
-        {"name": "Winifred Falls (269c82b6)", "distance_km": 4, "drive_min": 10},
-        {"name": "Figure Eight Pools (32918380)", "distance_km": 12, "drive_min": 20},
-        {"name": "Cape Solander (152a7cf4)", "distance_km": 15, "drive_min": 25}
+        {
+          "name": "Eagle Rock (2228124c)",
+          "distance_km": 5,
+          "drive_min": 10
+        },
+        {
+          "name": "Winifred Falls (269c82b6)",
+          "distance_km": 4,
+          "drive_min": 10
+        },
+        {
+          "name": "Figure Eight Pools (32918380)",
+          "distance_km": 12,
+          "drive_min": 20
+        },
+        {
+          "name": "Cape Solander (152a7cf4)",
+          "distance_km": 15,
+          "drive_min": 25
+        }
       ],
       "peak_times": "주말 오전 10시~오후 3시. 여름 특히 혼잡.",
       "public_transport": "Loftus, Heathcote, Waterfall, Otford, Cronulla 역에서 접근 가능"
     },
     "experience": {
-      "photo_spots": ["Coast Track 해안 절벽 파노라마", "Wattamolla 라군", "Garie Beach 서핑 풍경", "Audley Weir 가을 풍경"],
+      "photo_spots": [
+        "Coast Track 해안 절벽 파노라마",
+        "Wattamolla 라군",
+        "Garie Beach 서핑 풍경",
+        "Audley Weir 가을 풍경"
+      ],
       "golden_hour": "Garie North Head에서 일출, 해안 절벽에서 일몰",
       "seasonal_beauty": "5월 가을 — 선선한 기온, 맑은 하늘, 해안 하이킹 최적. 고래 이동 시작.",
-      "hidden_gems": "Deer Pool — 인파 적은 담수 수영 스팟. Curracurrang Creek 숨은 수영장.",
+      "hidden_gems": [
+        "Deer Pool — 인파 적은 담수 수영 스팟. Curracurrang Creek 숨은 수영장."
+      ],
       "sensory_notes": "유칼립투스 향, 다양한 새소리, 해안 바람, 열대우림의 습한 공기"
     },
     "risk_check": {
-      "negative_review_patterns": ["주차 포화", "공원 규모로 인한 이동 시간"],
+      "negative_review_patterns": [
+        "주차 포화",
+        "공원 규모로 인한 이동 시간"
+      ],
       "may_operation": "정상 운영. 5월은 산불 위험 낮아 폐쇄 가능성 최소.",
       "safety_issues": "절벽 가장자리 주의. 일부 해변 서핑 위험. 야생동물(뱀) 주의.",
       "weather_impact": "우천 시 트레일 미끄러움. 해변 활동 제한. 폭포 수량은 증가.",

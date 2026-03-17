@@ -57,23 +57,47 @@
       "parking": "충분한 무료 주차. 주거 지역이라 혼잡하지 않음.",
       "road_condition": "Tingira Cres 주거 도로. 포장 양호.",
       "nearby_attractions": [
-        {"name": "Kiama Blowhole (30097942)", "distance_km": 2, "drive_min": 4},
-        {"name": "Kiama Lighthouse (dc2795c8)", "distance_km": 2, "drive_min": 4},
-        {"name": "Loves Bay (a183bc9a)", "distance_km": 1.5, "drive_min": 3},
-        {"name": "Bombo Headland (a43e5009)", "distance_km": 5, "drive_min": 7}
+        {
+          "name": "Kiama Blowhole (30097942)",
+          "distance_km": 2,
+          "drive_min": 4
+        },
+        {
+          "name": "Kiama Lighthouse (dc2795c8)",
+          "distance_km": 2,
+          "drive_min": 4
+        },
+        {
+          "name": "Loves Bay (a183bc9a)",
+          "distance_km": 1.5,
+          "drive_min": 3
+        },
+        {
+          "name": "Bombo Headland (a43e5009)",
+          "distance_km": 5,
+          "drive_min": 7
+        }
       ],
       "peak_times": "한적한 편. 주말 오후에도 크게 붐비지 않음.",
       "public_transport": "키아마역에서 도보 약 25분 또는 버스"
     },
     "experience": {
-      "photo_spots": ["분출 순간 물줄기 클로즈업", "Endeavour Lookout에서 해안 파노라마"],
+      "photo_spots": [
+        "분출 순간 물줄기 클로즈업",
+        "Endeavour Lookout에서 해안 파노라마"
+      ],
       "golden_hour": "오전 햇살이 물보라를 비추면 무지개 효과",
       "seasonal_beauty": "5월 가을 — 파도 강해 분출 확률 높음",
-      "hidden_gems": "Endeavour Lookout에서 남쪽 해안선 조망 — 대부분 블로우홀만 보고 놓침",
+      "hidden_gems": [
+        "Endeavour Lookout에서 남쪽 해안선 조망 — 대부분 블로우홀만 보고 놓침"
+      ],
       "sensory_notes": "쿵 하는 분출 소리, 얼굴에 튀는 물보라, 바위 사이로 밀려드는 파도의 힘"
     },
     "risk_check": {
-      "negative_review_patterns": ["큰 블로우홀 대비 규모 작음", "물보라에 젖음"],
+      "negative_review_patterns": [
+        "큰 블로우홀 대비 규모 작음",
+        "물보라에 젖음"
+      ],
       "may_operation": "정상 운영. 5월 파도 조건 양호.",
       "safety_issues": "바위 해안 가장자리 주의. 파도에 쓸려갈 위험. 전망 플랫폼에서 관람 권장.",
       "weather_impact": "파도가 높을수록 분출 활발. 잔잔하면 분출 없을 수 있음.",

@@ -57,23 +57,48 @@
       "parking": "소규모 무료 주차장. 1 Hillside Dr 진입",
       "road_condition": "포장도로. Urunga 시내에서 접근 용이",
       "nearby_attractions": [
-        {"name": "Urunga Boardwalk (우룬가 보드워크)", "distance_km": 1, "drive_min": 3},
-        {"name": "Boambee Headland (보암비)", "distance_km": 20, "drive_min": 22},
-        {"name": "The Honey Place", "distance_km": 3, "drive_min": 5},
-        {"name": "Bellingen 마을", "distance_km": 12, "drive_min": 15}
+        {
+          "name": "Urunga Boardwalk (우룬가 보드워크)",
+          "distance_km": 1,
+          "drive_min": 3
+        },
+        {
+          "name": "Boambee Headland (보암비)",
+          "distance_km": 20,
+          "drive_min": 22
+        },
+        {
+          "name": "The Honey Place",
+          "distance_km": 3,
+          "drive_min": 5
+        },
+        {
+          "name": "Bellingen 마을",
+          "distance_km": 12,
+          "drive_min": 15
+        }
       ],
       "peak_times": "아침 조류 관찰 시간이 인기. 전반적으로 한적",
       "public_transport": "Urunga역에서 도보 가능"
     },
     "experience": {
-      "photo_spots": ["수련 가득한 작은 호수", "페이퍼바크 나무 숲", "150m 재활용 플라스틱 보드워크"],
+      "photo_spots": [
+        "수련 가득한 작은 호수",
+        "페이퍼바크 나무 숲",
+        "150m 재활용 플라스틱 보드워크"
+      ],
       "golden_hour": "아침 이슬 맺힌 습지가 빛에 반짝이는 모습. 정오 전후 수련 꽃 가장 활짝",
       "seasonal_beauty": "5월 가을 습지 풍경이 아름다움. 철새 관찰 가능",
-      "hidden_gems": "100종 이상의 조류 관찰 가능 (보라물닭, 검은목황새, 흑조 등). 450m 루프+150m 보드워크 휠체어/유모차 접근 가능",
+      "hidden_gems": [
+        "100종 이상의 조류 관찰 가능 (보라물닭, 검은목황새, 흑조 등). 450m 루프+150m 보드워크 휠체어/유모차 접근 가능"
+      ],
       "sensory_notes": "새소리가 풍부. 습지의 신선한 공기. 수련 위 물방울의 반짝임. 페이퍼바크 나무 껍질 질감"
     },
     "risk_check": {
-      "negative_review_patterns": ["코스가 짧아 금방 끝남 (약 600m)", "단독 방문 시 아쉬움"],
+      "negative_review_patterns": [
+        "코스가 짧아 금방 끝남 (약 600m)",
+        "단독 방문 시 아쉬움"
+      ],
       "may_operation": "항상 개방. 정상 운영",
       "safety_issues": "특별한 안전 이슈 없음. 평탄한 지형",
       "weather_impact": "우천 시 보드워크 미끄러울 수 있으나 방문 가능. 습지라 비 후에도 풍경 좋음",

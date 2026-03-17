@@ -59,23 +59,40 @@
       "parking": "아스팔트 포장 주차장 (접근성 주차 2대 포함). 주말 혼잡 시 헤리티지 센터 주차장(500m) 이용",
       "road_condition": "Govetts Leap Rd - 아스팔트 포장, 양호. Great Western Highway에서 접근",
       "nearby_attractions": [
-        {"name": "그랜드 캐니언 워킹 트랙", "drive_min": 5},
-        {"name": "블루마운틴스 국립공원"},
-        {"name": "Blackheath 마을", "drive_min": 3},
-        {"name": "에코 포인트 전망대 (쓰리 시스터스)", "drive_min": 20}
+        {
+          "name": "그랜드 캐니언 워킹 트랙",
+          "drive_min": 5
+        },
+        {
+          "name": "블루마운틴스 국립공원"
+        },
+        {
+          "name": "Blackheath 마을",
+          "drive_min": 3
+        },
+        {
+          "name": "에코 포인트 전망대 (쓰리 시스터스)",
+          "drive_min": 20
+        }
       ],
       "peak_times": "주말 오전 10시~오후 3시. 일출/일몰 시간대도 사진가들로 붐빔",
       "public_transport": "Blackheath역에서 도보 30분 또는 택시. 직행 버스 없음"
     },
     "experience": {
-      "photo_spots": "전망대에서 브라이덜 베일 폭포와 그로즈 밸리 파노라마. Cliff Top Track 따라 다양한 앵글",
+      "photo_spots": [
+        "전망대에서 브라이덜 베일 폭포와 그로즈 밸리 파노라마. Cliff Top Track 따라 다양한 앵글"
+      ],
       "golden_hour": "동쪽 전망이므로 일출 시 빛이 밸리를 비추면 장관. 일몰 시 암벽이 붉게 물듦",
       "seasonal_beauty": "5월 가을 - 밸리의 유칼립투스 숲과 안개가 어우러진 몽환적 풍경. 폭포 수량 적절",
-      "hidden_gems": "관광객이 에코 포인트에 몰리므로 이곳은 상대적으로 한적. Pulpit Rock까지 연계하면 더 깊은 블루마운틴 체험",
+      "hidden_gems": [
+        "관광객이 에코 포인트에 몰리므로 이곳은 상대적으로 한적. Pulpit Rock까지 연계하면 더 깊은 블루마운틴 체험"
+      ],
       "sensory_notes": "폭포 소리, 바람에 실려 오는 유칼립투스 향, 절벽 위에서 느끼는 공간의 광활함"
     },
     "risk_check": {
-      "negative_review_patterns": "주차장 차량 소음, 안개 시 전망 불가, 주말 혼잡",
+      "negative_review_patterns": [
+        "주차장 차량 소음, 안개 시 전망 불가, 주말 혼잡"
+      ],
       "may_operation": "5월 정상 운영. 24시간 개방이나 어둠 속 절벽 가장자리 주의",
       "safety_issues": "절벽 가장자리 안전 울타리 있으나 트레일에서 벗어나면 위험. 비 후 트레일 미끄러움",
       "weather_impact": "안개/비 시 전망 불가. 강풍 시 절벽 근처 위험. 맑은 날 방문 필수",

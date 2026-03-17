@@ -58,22 +58,43 @@
       "parking": "도로 자체는 주차 불필요. 개별 정차 스팟(Bald Hill, Sea Cliff Bridge 등)에 주차장.",
       "road_condition": "전 구간 포장 양호. 해안 절벽 도로로 커브 많음. 안전 운전 필요.",
       "nearby_attractions": [
-        {"name": "Stanwell Tops Lookout (8bc91376)", "distance_km": 0.5, "drive_min": 1},
-        {"name": "Sea Cliff Bridge (96da6ea2)", "distance_km": 4, "drive_min": 6},
-        {"name": "Old Helensburgh Station (f5d5a290)", "distance_km": 5, "drive_min": 8}
+        {
+          "name": "Stanwell Tops Lookout (8bc91376)",
+          "distance_km": 0.5,
+          "drive_min": 1
+        },
+        {
+          "name": "Sea Cliff Bridge (96da6ea2)",
+          "distance_km": 4,
+          "drive_min": 6
+        },
+        {
+          "name": "Old Helensburgh Station (f5d5a290)",
+          "distance_km": 5,
+          "drive_min": 8
+        }
       ],
       "peak_times": "주말 오전~오후. 평일은 원활.",
       "public_transport": "구간별로 기차역(Stanwell Park, Coalcliff 등) 접근 가능하나 드라이브 목적이므로 차량 필수."
     },
     "experience": {
-      "photo_spots": ["Sea Cliff Bridge 위에서 해안 절벽", "Bald Hill에서 파노라마 뷰", "해안 커브 도로 드라이브 장면"],
+      "photo_spots": [
+        "Sea Cliff Bridge 위에서 해안 절벽",
+        "Bald Hill에서 파노라마 뷰",
+        "해안 커브 도로 드라이브 장면"
+      ],
       "golden_hour": "동쪽 해안이므로 일출 시 황금빛 해안선. 오후는 역광.",
       "seasonal_beauty": "5월 가을 — 맑은 하늘, 선선한 바람, 해안 풍경의 선명도 최고",
-      "hidden_gems": "Coalcliff 해안 워크 — 대부분 지나치는 작은 해안 마을의 숨은 산책로",
+      "hidden_gems": [
+        "Coalcliff 해안 워크 — 대부분 지나치는 작은 해안 마을의 숨은 산책로"
+      ],
       "sensory_notes": "창문 열고 달리는 해안 바람, 절벽 아래 파도 소리, 열대우림 구간의 초록 터널"
     },
     "risk_check": {
-      "negative_review_patterns": ["정차 스팟 주차 부족", "전체 코스 시간 과소평가"],
+      "negative_review_patterns": [
+        "정차 스팟 주차 부족",
+        "전체 코스 시간 과소평가"
+      ],
       "may_operation": "정상 운영. 도로 상태 양호.",
       "safety_issues": "해안 절벽 커브 도로 — 속도 주의. 관광 중 운전 부주의 위험.",
       "weather_impact": "우천 시 노면 미끄러움 + 전망 제한. 강풍 시 해안 도로 주의.",

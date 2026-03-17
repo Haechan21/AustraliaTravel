@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-03-13",
   "category": "attraction",
-  "total_places": 110,
+  "total_places": 109,
   "grading_method": "percentile",
   "grading_note": "grade는 may_adjusted_score(5월 계절 보정) 기준 퍼센타일 등급",
   "grading_cutoffs": {
@@ -9,14 +9,14 @@
     "A": "7~28위",
     "B": "29~66위",
     "C": "67~99위",
-    "D": "100~110위"
+    "D": "100~109위"
   },
   "grade_distribution": {
     "S": 6,
     "A": 22,
     "B": 38,
     "C": 33,
-    "D": 11
+    "D": 10
   },
   "controversial_count": 37,
   "scores": [
@@ -1045,22 +1045,6 @@
       "grade": "B"
     },
     {
-      "id": "669a240e",
-      "name_ko": "코알라 병원 (매쿼리 자연보호구역)",
-      "region": "포트맥쿼리",
-      "scores": {
-        "A": 67.5,
-        "B": 64.5,
-        "C": 70.0
-      },
-      "average_score": 67.3,
-      "spread": 5.5,
-      "controversial": false,
-      "seasonal_adjustment": 0,
-      "may_adjusted_score": 67.3,
-      "grade": "B"
-    },
-    {
       "id": "b6b6c774",
       "name_ko": "콰드 바이크 킹",
       "region": "뉴캐슬/포트스테판스",
@@ -1090,7 +1074,7 @@
       "controversial": false,
       "seasonal_adjustment": 6,
       "may_adjusted_score": 66.8,
-      "grade": "C"
+      "grade": "B"
     },
     {
       "id": "d5fa343f",
@@ -1618,7 +1602,7 @@
       "controversial": false,
       "seasonal_adjustment": -2,
       "may_adjusted_score": 52.5,
-      "grade": "D"
+      "grade": "C"
     },
     {
       "id": "5dc8e4b0",

@@ -11,7 +11,7 @@
       "lat": -34.2544902
     },
     "address": "Lawrence Hargrave Dr, Clifton NSW 2515, Australia",
-    "region": "울릉공/키아마"
+    "region": "로열국립공원/그랜드퍼시픽"
   },
   "collected_data": {
     "rating": 4.6,
@@ -58,22 +58,43 @@
       "parking": "매우 제한적. 남쪽 Rube Hargrave Park(Clifton) 또는 북쪽 Coalcliff 주차장 이용. 무료.",
       "road_condition": "Lawrence Hargrave Dr 포장 양호. 다리 위 2차선 도로.",
       "nearby_attractions": [
-        {"name": "Stanwell Tops Lookout (8bc91376)", "distance_km": 4, "drive_min": 6},
-        {"name": "Grand Pacific Drive (f97b06e6)", "distance_km": 4, "drive_min": 6},
-        {"name": "Flagstaff Point Lighthouse (579eb092)", "distance_km": 20, "drive_min": 25}
+        {
+          "name": "Stanwell Tops Lookout (8bc91376)",
+          "distance_km": 4,
+          "drive_min": 6
+        },
+        {
+          "name": "Grand Pacific Drive (f97b06e6)",
+          "distance_km": 4,
+          "drive_min": 6
+        },
+        {
+          "name": "Flagstaff Point Lighthouse (579eb092)",
+          "distance_km": 20,
+          "drive_min": 25
+        }
       ],
       "peak_times": "주말 종일. 평일 이른 아침/늦은 오후 한적.",
       "public_transport": "Coalcliff역에서 도보 접근 가능"
     },
     "experience": {
-      "photo_spots": ["다리 위에서 절벽과 바다 파노라마", "남쪽 Clifton 해안에서 다리 전경", "절벽 위 (비공식) 전망대에서 내려다보기"],
+      "photo_spots": [
+        "다리 위에서 절벽과 바다 파노라마",
+        "남쪽 Clifton 해안에서 다리 전경",
+        "절벽 위 (비공식) 전망대에서 내려다보기"
+      ],
       "golden_hour": "일출 시 동쪽 바다에서 황금빛이 다리를 비춤. 드론 촬영 인기 스팟.",
       "seasonal_beauty": "5월 가을 — 맑은 하늘에 절벽과 바다의 대비가 선명",
-      "hidden_gems": "다리 남쪽 끝 Clifton 해안 산책로 — 조용한 해안 워크",
+      "hidden_gems": [
+        "다리 남쪽 끝 Clifton 해안 산책로 — 조용한 해안 워크"
+      ],
       "sensory_notes": "발아래 파도가 부서지는 소리, 해안 바람, 절벽 위 아찔한 높이감"
     },
     "risk_check": {
-      "negative_review_patterns": ["주차 부족이 가장 큰 불만", "비공식 전망대 안전 문제"],
+      "negative_review_patterns": [
+        "주차 부족이 가장 큰 불만",
+        "비공식 전망대 안전 문제"
+      ],
       "may_operation": "정상 운영. 날씨 무관하게 접근 가능.",
       "safety_issues": "비공식 절벽 전망대 접근 시 사고 위험. 절벽 암석이 바다로 붕괴 중인 지역. 벌금 부과 가능.",
       "weather_impact": "우천 시 도보 미끄러움. 강풍 시 다리 위 보행 불쾌. 전망은 제한적.",

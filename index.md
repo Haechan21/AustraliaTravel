@@ -4,7 +4,7 @@ layout: default
 
 <div align="center">
 <img src="https://img.shields.io/badge/Phase_4-루트_후보_9개_비교_중-yellow?style=for-the-badge" alt="Status" />
-<img src="https://img.shields.io/badge/관광지-110곳_평가_완료-blue?style=for-the-badge" alt="Places" />
+<img src="https://img.shields.io/badge/관광지-109곳_평가_완료-blue?style=for-the-badge" alt="Places" />
 <img src="https://img.shields.io/badge/기간-9일_(활동_7일)-green?style=for-the-badge" alt="Duration" />
 </div>
 
@@ -44,7 +44,7 @@ layout: default
 
 <br/>
 
-## 관광지 등급 (110곳, 5월 계절 보정 반영)
+## 관광지 등급 (109곳, 5월 계절 보정 반영)
 
 3명의 AI 평가자(효율 전략가 · 감성 탐험가 · 현실주의 비평가)가 독립 채점 후, 5월 방문 계절 보정을 적용했다.
 
@@ -54,7 +54,7 @@ layout: default
 | **A** | 22곳 | 상위 5~25% | 고벳츠 리프 전망대, 블루마운틴스 국립공원, 시 클리프 브릿지 |
 | **B** | 38곳 | 상위 25~60% | 본다이 투 브론테, 포트 스테판스 캥거루 등 |
 | **C** | 33곳 | 상위 60~90% | 빅 프론, 달링 하버 등 |
-| **D** | 11곳 | 하위 10% | 피겨 에잇 풀스(논쟁), 제놀란 동굴(5월 폐쇄), 포트맥쿼리 천문대 등 |
+| **D** | 10곳 | 하위 10% | 피겨 에잇 풀스(논쟁), 제놀란 동굴(5월 폐쇄), 포트맥쿼리 천문대 등 |
 
 > 전체 목록과 상세 점수 → <a href="rankings.html">관광지 랭킹</a>
 

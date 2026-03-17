@@ -57,21 +57,38 @@
       "parking": "소규모 무료 주차장. 해변 바로 위. 여름 혼잡하나 5월은 여유.",
       "road_condition": "Vincentia 주거 도로. 포장 양호. 시드니에서 약 3시간.",
       "nearby_attractions": [
-        {"name": "Fitzroy Falls (c49e60e1)", "distance_km": 75, "drive_min": 80},
-        {"name": "Carrington Falls (22d70fbe)", "distance_km": 60, "drive_min": 70}
+        {
+          "name": "Fitzroy Falls (c49e60e1)",
+          "distance_km": 75,
+          "drive_min": 80
+        },
+        {
+          "name": "Carrington Falls (22d70fbe)",
+          "distance_km": 60,
+          "drive_min": 70
+        }
       ],
       "peak_times": "여름 주말 혼잡. 5월은 한적.",
       "public_transport": "Nowra/Bomaderry역에서 버스. 접근 제한적. 차량 권장."
     },
     "experience": {
-      "photo_spots": ["백사장 + 청록색 바다 파노라마", "부시에서 해변으로 내려가는 진입로", "수중 스노클링 장면"],
+      "photo_spots": [
+        "백사장 + 청록색 바다 파노라마",
+        "부시에서 해변으로 내려가는 진입로",
+        "수중 스노클링 장면"
+      ],
       "golden_hour": "오전 햇살이 만을 비추면 물색이 가장 맑고 아름다움",
       "seasonal_beauty": "5월 가을 — 여름 인파 없이 조용한 백사장. 물색은 여전히 아름다움.",
-      "hidden_gems": "해변에서 돌고래가 해안 근처까지 오는 모습 관찰 — 무인도 느낌",
+      "hidden_gems": [
+        "해변에서 돌고래가 해안 근처까지 오는 모습 관찰 — 무인도 느낌"
+      ],
       "sensory_notes": "부드러운 백사장, 맑은 물, 숲에서 해변으로 전환되는 공간, 잔잔한 파도 소리"
     },
     "risk_check": {
-      "negative_review_patterns": ["5월 수온 낮음", "여름 혼잡"],
+      "negative_review_patterns": [
+        "5월 수온 낮음",
+        "여름 혼잡"
+      ],
       "may_operation": "정상 운영. 한적한 비수기.",
       "safety_issues": "잔잔한 만이라 안전한 편. 구조대 없으므로 수영 시 주의.",
       "weather_impact": "우천 시 해변 매력 감소. 바람 강하면 불쾌. 수온 낮음(약 18°C).",

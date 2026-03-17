@@ -55,23 +55,49 @@
       "parking": "Crowdy Road 라군 지역 주차장. Crowdy Street 진입 시 별도 주차. 무료",
       "road_condition": "일부 비포장 도로 구간. 4WD 비치 접근은 별도 허가 필요",
       "nearby_attractions": [
-        {"name": "Crowdy Head Lighthouse", "distance_km": 5, "drive_min": 8},
-        {"name": "Harrington Breakwall", "distance_km": 2, "drive_min": 5},
-        {"name": "Harrington Lagoon (안전 수영)", "distance_km": 1, "drive_min": 3},
-        {"name": "North Haven Breakwall", "distance_km": 20, "drive_min": 25}
+        {
+          "name": "Crowdy Head Lighthouse",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Harrington Breakwall",
+          "distance_km": 2,
+          "drive_min": 5
+        },
+        {
+          "name": "Harrington Lagoon (안전 수영)",
+          "distance_km": 1,
+          "drive_min": 3
+        },
+        {
+          "name": "North Haven Breakwall",
+          "distance_km": 20,
+          "drive_min": 25
+        }
       ],
       "peak_times": "여름 학교 방학 시 혼잡. 5월 비수기 한산",
       "public_transport": "대중교통 없음. 차량 필수"
     },
     "experience": {
-      "photo_spots": ["해안 전망대에서 매닝강 어귀와 바다 파노라마", "열대우림 산책로", "해안 절벽 경관"],
+      "photo_spots": [
+        "해안 전망대에서 매닝강 어귀와 바다 파노라마",
+        "열대우림 산책로",
+        "해안 절벽 경관"
+      ],
       "golden_hour": "동쪽 해안이라 일출 시 해변에 빛이 비침",
       "seasonal_beauty": "5월 고래 관찰 시즌 시작. 가을 색의 열대우림 산책 가능",
-      "hidden_gems": "431헥타르 넓은 자연 공간. Harrington Lagoon은 가족 친화적 안전 수영 장소. 길 건너 상점 이용 가능",
+      "hidden_gems": [
+        "431헥타르 넓은 자연 공간. Harrington Lagoon은 가족 친화적 안전 수영 장소. 길 건너 상점 이용 가능"
+      ],
       "sensory_notes": "파도 소리, 강 어귀의 바람, 열대우림의 새소리, 한적한 어촌 분위기"
     },
     "risk_check": {
-      "negative_review_patterns": ["차량 진입 시 비포장 도로 구간", "입장료 필요", "관광 인프라 제한적"],
+      "negative_review_patterns": [
+        "차량 진입 시 비포장 도로 구간",
+        "입장료 필요",
+        "관광 인프라 제한적"
+      ],
       "may_operation": "일출~일몰 개방. 5월 정상 이용 가능",
       "safety_issues": "비순찰 해변 — 수영 주의. 4WD 비치 접근 별도 허가 필요",
       "weather_impact": "비 후 비포장 도로 상태 악화 가능. 우천 시 해안 전망대 접근 불편",

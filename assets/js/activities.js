@@ -1,6 +1,6 @@
 /**
  * 액티비티 후보 페이지
- * 5개 지역의 체험 활동을 카드 그리드로 표시하고, 마크다운 원문에서 상세 정보를 모달로 제공
+ * 10개 지역의 체험 활동을 카드 그리드로 표시하고, 마크다운 원문에서 상세 정보를 모달로 제공
  */
 (function () {
   'use strict';
@@ -13,6 +13,13 @@
     /* ── 페이지 레이아웃 ── */
     '.activities-page { max-width: 1100px; margin: 0 auto; }',
     '.activities-subtitle { color: #586069; margin-bottom: 1.2em; }',
+
+    /* ── 지역 지도 ── */
+    '#activityMap { height: 340px; border-radius: 10px; border: 1px solid #e1e4e8; margin-bottom: 1.2em; z-index: 0; }',
+    '.region-marker { background: #fff; border: 2px solid #157878; border-radius: 16px; padding: 4px 12px; font-size: 0.82em; font-weight: 700; color: #157878; white-space: nowrap; cursor: pointer; box-shadow: 0 1px 4px rgba(0,0,0,.15); text-align: center; transform: translate(-50%, -50%); }',
+    '.region-marker:hover { background: #157878; color: #fff; z-index: 9000 !important; }',
+    '.region-marker.active { background: #157878; color: #fff; box-shadow: 0 2px 8px rgba(21,120,120,.35); z-index: 8000 !important; }',
+    '.region-marker .marker-count { display: block; font-size: 0.75em; font-weight: 400; opacity: .8; margin-top: 1px; }',
 
     /* ── 지역 탭 ── */
     '.region-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 1.2em; }',
@@ -91,8 +98,28 @@
      ══════════════════════════════════════════ */
   var REGIONS = [
     {
+      id: 'gold-coast',
+      name: '골드코스트',
+      center: [-28.06, 153.33],
+      file: 'research/claude-research/activities/골드코스트-액티비티-리서치.md',
+      summary: '서핑·반딧불이·힌터랜드 폭포·열기구. 5월 비수기라 관광객 적고 예약 수월. 은하수 촬영 조건 우수.',
+      activities: [
+        { name: '서핑 / 수상 액티비티', icon: '🏄', cost: '$35~59', duration: '2h', booking: '권장', may: 'optimal', mayLabel: '5월 최적', note: '5월 수온 22~25°C, 겨울이 오히려 서핑 배우기 최적. Currumbin Alley $35~', section: 1 },
+        { name: '스카이다이빙 / 어드벤처', icon: '🪂', cost: '$46~495', duration: '1~4h', booking: '필수', may: 'good', mayLabel: '연중 운영', note: 'Skydive $495(12,000ft, Kirra Beach 착지). 제트보트 $46~, 헬리콥터 $65~', section: 2 },
+        { name: '고래 관찰', icon: '🐋', cost: '$79~', duration: '2~3h', booking: '필수', may: 'limited', mayLabel: '5/30 개시', note: 'Sea World Cruises 2026 시즌 5/30 개시. 시즌 첫 주와 겹칠 가능성', section: 3 },
+        { name: '반딧불이 야간 투어', icon: '✨', cost: '무료~$80', duration: '1.5~2h', booking: '투어 권장', may: 'good', mayLabel: '연중 가능', note: '스프링브룩 Natural Bridge 5월에도 관찰 가능(여름 대비 약함). 셀프 방문 무료', section: 4 },
+        { name: '힌터랜드 하이킹/폭포', icon: '🥾', cost: '무료~$8', duration: '2~3h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Twin Falls Circuit(2h, 폭포 뒤 걷기) 1순위. Purlingbrook Falls, O\'Reilly\'s Tree Top Walk', section: 5 },
+        { name: '마켓 / 로컬 체험', icon: '🛍', cost: '무료', duration: '2~3h', booking: '불필요', may: 'optimal', mayLabel: '커플 필수', note: 'Miami Marketta(수~토 5pm, 무료, 스트릿푸드+라이브 음악). Gallery Walk 탬버린', section: 6 },
+        { name: '야경 / 은하수', icon: '🌌', cost: '$97~', duration: '자유', booking: '클라임 필수', may: 'optimal', mayLabel: '5월 최적', note: 'SkyPoint 트와일라잇 클라임 $97. 스프링브룩 Best of All Lookout 은하수 촬영 최적', section: 7 },
+        { name: '테마파크', icon: '🎢', cost: '$50~100+', duration: '반나절+', booking: '온라인', may: 'good', mayLabel: '연중 운영', note: 'Dreamworld Winterfest 외 커플에겐 비추. 관심 있으면 참고', section: 8 },
+        { name: '숨은 명소', icon: '🗺', cost: '무료~$55', duration: '자유', booking: '도예 예약', may: 'good', mayLabel: '연중 개방', note: 'Burleigh Hill 일몰 피크닉(무료), Crockd Studios 도예 체험($55)', section: 9 },
+        { name: '커플 특별 체험', icon: '💑', cost: '$149~390', duration: '2~4h', booking: '필수', may: 'good', mayLabel: '연중 운영', note: '열기구 $299~390/인(일출+와이너리 조식). 코알라 인카운터 $149/인', section: 10 }
+      ]
+    },
+    {
       id: 'byron-bay',
       name: '바이런베이',
+      center: [-28.71, 153.60],
       file: 'research/claude-research/activities/바이런베이-액티비티-리서치.md',
       summary: '서핑·카약·스카이다이빙부터 농장 브런치·원주민 문화까지. 5월은 바람이 연중 가장 적어 수상 스포츠 최적.',
       activities: [
@@ -111,6 +138,7 @@
     {
       id: 'port-stephens',
       name: '포트스테판스·뉴캐슬',
+      center: [-32.81, 151.93],
       file: 'research/claude-research/activities/포트스테판스-뉴캐슬-액티비티-리서치.md',
       summary: '사막 샌드보딩·돌고래 크루즈·낙타 라이드 등 어드벤처 집중. 대부분 연중 운영으로 5월 방문 안정적.',
       activities: [
@@ -129,6 +157,7 @@
     {
       id: 'coffs-harbour',
       name: '콥스하버·도리고·벨링겐',
+      center: [-30.33, 153.03],
       file: 'research/claude-research/activities/콥스하버-도리고-벨링겐-액티비티-리서치.md',
       summary: '해양(다이빙·스노클링) + 열대우림(Waterfall Way·반딧불이) + 보헤미안 마을(벨링겐). Grey Nurse Shark 관찰 최적기.',
       activities: [
@@ -147,6 +176,7 @@
     {
       id: 'port-macquarie',
       name: '포트맥쿼리',
+      center: [-31.47, 152.90],
       file: 'research/claude-research/activities/포트맥쿼리-액티비티-리서치.md',
       summary: '코알라 병원·동물원·딸기농장 등 부드러운 체험이 많고 비용도 저렴. 5월 서핑은 연중 최적.',
       activities: [
@@ -165,6 +195,7 @@
     {
       id: 'blue-mountains-sydney',
       name: '블루마운틴·시드니',
+      center: [-33.77, 150.70],
       file: 'research/claude-research/activities/블루마운틴-시드니-이색체험-리서치.md',
       subRegions: [
         { label: '블루마운틴', start: 0, end: 8 },
@@ -193,6 +224,91 @@
         { name: '시드니 하버 카약', icon: '🚣', cost: '$80~120', duration: '2~3h', booking: '필요', may: 'limited', mayLabel: '바람 주의', note: '수온 18~20°C 웻수트 권장. 15노트+ 풍속 시 취소. 달링하버 출발 추천', section: 9, sectionKey: '시드니 하버 카약' },
         { name: '원주민 문화 체험', icon: '🪃', cost: '$35~70', duration: '1~2h', booking: '필수', may: 'good', mayLabel: '연중 운영', note: 'The Rocks Dreaming Tour → 마켓 → Vivid 동선 결합 추천. Burrawa BridgeClimb도', section: 10, sectionKey: '원주민 문화 체험 (Aboriginal' }
       ]
+    },
+    {
+      id: 'central-coast',
+      name: '센트럴코스트',
+      center: [-33.45, 151.36],
+      file: 'research/claude-research/activities/센트럴코스트-액티비티-리서치.md',
+      summary: 'Bouddi 해안 트레킹·Somersby 폭포·Reptile Park·펠리컨 먹이주기. 무료 액티비티만으로 1~2일 충실.',
+      activities: [
+        { name: '해안 하이킹/트레킹', icon: '🥾', cost: '무료~$12', duration: '2~3h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Bouddi Coastal Walk(Putty Beach~Maitland Bay 추천). The Skillion 전망대, Wyrrabalong NP', section: 1 },
+        { name: '수상 액티비티', icon: '🚣', cost: '$25~60', duration: '1~3h', booking: '권장', may: 'limited', mayLabel: '수온 20~22°C', note: 'Avoca Lake SUP/카약, Terrigal Lagoon. 5월 수온 20~22°C, 호수/라군 추천', section: 2 },
+        { name: '야생동물 체험', icon: '🦎', cost: '무료~$50', duration: '1~3h', booking: '불필요', may: 'good', mayLabel: '연중 운영', note: 'Australian Reptile Park $50/인. The Entrance 펠리컨 먹이주기(매일 3:30pm, 무료)', section: 3 },
+        { name: '폭포 탐방', icon: '💧', cost: '무료', duration: '30min~1h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Somersby Falls(800m 왕복 30분, 무료). Reptile Park과 5분 거리 콤보', section: 4 },
+        { name: '마켓/로컬 체험', icon: '🛍', cost: '무료', duration: '1~2h', booking: '불필요', may: 'good', mayLabel: '주말 운영', note: 'Avoca Beachside(4째 일요일), Terrigal Beach(1째 토), Gosford Farmers(매주 일)', section: 5 },
+        { name: '은하수/별 관찰', icon: '🌌', cost: '무료', duration: '자유', booking: '불필요', may: 'optimal', mayLabel: '5월 시즌', note: 'Putty Beach/Norah Head Lighthouse 은하수 촬영 최적. 국립공원 내 빛 공해 최소', section: 6 },
+        { name: '숨은 명소', icon: '🗺', cost: '무료~$10', duration: '자유', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Patonga Beach(페리 체험), Pearl Beach(록풀+카페), Norah Head Lighthouse 투어 $10', section: 7 },
+        { name: '맛집/카페', icon: '☕', cost: '식비', duration: '자유', booking: '고급 예약', may: 'good', mayLabel: '연중 운영', note: 'Terrigal 파인다이닝(2026 Chef Hat), Distillery Botanica 칵테일 클래스 $95/인', section: 8 },
+        { name: '기타 아웃도어', icon: '🚴', cost: '$30~95', duration: '2~4h', booking: '권장', may: 'good', mayLabel: '연중 운영', note: 'Glenworth Valley 승마/카약, Firescreek 무료 와인 테이스팅', section: 9 }
+      ]
+    },
+    {
+      id: 'wollongong-kiama',
+      name: '울릉공·키아마·GPD',
+      center: [-34.43, 150.95],
+      file: 'research/claude-research/activities/울릉공-키아마-그랜드퍼시픽-액티비티-리서치.md',
+      summary: 'Grand Pacific Drive 해안 드라이브·스카이다이빙·Kiama Blowhole(5~9월 최적!)·Minnamurra 열대우림. Bombo Quarry 은하수 명소.',
+      activities: [
+        { name: 'Grand Pacific Drive', icon: '🚗', cost: '무료', duration: '반나절+', booking: '불필요', may: 'good', mayLabel: '연중 운영', note: '140km 해안 드라이브. Sea Cliff Bridge 포함 7개 주요 정차 포인트', section: 1 },
+        { name: '스카이다이빙/패러글라이딩', icon: '🪂', cost: '$249~349', duration: '2~4h', booking: '필수', may: 'good', mayLabel: '연중 운영', note: 'Stanwell Tops/Bald Hill. 탠덤 패러글라이딩 ~$350, 스카이다이빙 $349~', section: 2 },
+        { name: '하이킹/트레킹', icon: '🥾', cost: '무료~$8', duration: '2~3h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Minnamurra Rainforest(커플 최적 2h). Wedding Cake Rock, Kiama Coast Walk', section: 3 },
+        { name: '수상 액티비티', icon: '🏄', cost: '무료~$90', duration: '1~2h', booking: '레슨 예약', may: 'limited', mayLabel: '웻수트 필수', note: '5월 수온 18~20°C. 서핑 레슨 ~$90, 오션풀 4곳(무료)', section: 4 },
+        { name: 'Symbio Wildlife Park', icon: '🐨', cost: '$49~109', duration: '2~3h', booking: '인카운터 권장', may: 'good', mayLabel: '연중 운영', note: '입장 ~$49, 코알라 인카운터 ~$60 추가', section: 5 },
+        { name: 'Kiama Blowhole / 지질 명소', icon: '💨', cost: '무료', duration: '1~2h', booking: '불필요', may: 'optimal', mayLabel: '5~9월 최적!', note: 'Kiama Blowhole 5~9월 최적기! Cathedral Rocks & Bombo Quarry', section: 6 },
+        { name: 'Nan Tien Temple', icon: '🛕', cost: '무료', duration: '1~2h', booking: '불필요', may: 'good', mayLabel: '화~일 운영', note: '남반구 최대 불교 사찰. 무료 입장, Tea House, 명상 체험. Pilgrim Lodge 숙박 가능', section: 7 },
+        { name: '마켓', icon: '🛍', cost: '무료', duration: '1~2h', booking: '불필요', may: 'good', mayLabel: '주중/주말', note: 'Kiama Farmers(매주 수), Seaside Markets(셋째 일), Nan Tien(첫째 토)', section: 8 },
+        { name: '은하수/별 관찰', icon: '🌌', cost: '무료', duration: '자유', booking: '불필요', may: 'optimal', mayLabel: '5월 최적', note: 'Bombo Quarry 은하수 촬영 최적! 지질 전경+은하수 구도. 촬영 스팟 4곳', section: 9 },
+        { name: '숨은 명소/맛집', icon: '🗺', cost: '무료~식비', duration: '자유', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Brokers Nose, Austinmer. Kiama 맛집 8곳, Wollongong 6곳', section: 10 },
+        { name: 'Illawarra Fly Treetop', icon: '🌳', cost: '$22.50~67.50', duration: '1~2h', booking: '온라인 권장', may: 'good', mayLabel: '연중 운영', note: 'Treetop Walk $22.50, Zipline $67.50. 해발 710m 열대우림 캐노피', section: 12 }
+      ]
+    },
+    {
+      id: 'southern-highlands',
+      name: '서던하이랜드·저비스베이',
+      center: [-34.78, 150.61],
+      file: 'research/claude-research/activities/서던하이랜드-저비스베이-액티비티-리서치.md',
+      summary: '세계에서 가장 하얀 모래(Hyams Beach)·Fitzroy Falls·5월 단풍 절정·Jervis Bay 돌핀/별 관찰. Mushroom Tunnel 독특 체험.',
+      activities: [
+        { name: '돌핀/고래 크루즈', icon: '🐬', cost: '$35~69', duration: '1.5~2h', booking: '필수', may: 'good', mayLabel: '돌핀 연중', note: 'Dolphin Watch $35/인. 100마리+ 돌핀 상주. 5월 중순부터 고래 시즌 개시', section: 1 },
+        { name: '하이킹', icon: '🥾', cost: '무료', duration: '1~3h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'White Sands Walk(2~5km), Fitzroy Falls West Rim(3.8km, 2h), Drawing Room Rocks', section: 2 },
+        { name: '카약/SUP', icon: '🚣', cost: '$30~145', duration: '1~3h', booking: '권장', may: 'limited', mayLabel: '웻수트 필요', note: '5월 수온 ~20°C. 가이드 시카약 $145/인, 셀프 렌탈 $30~60', section: 3 },
+        { name: '야생동물', icon: '🦘', cost: '무료', duration: '자유', booking: '불필요', may: 'good', mayLabel: '거의 확실', note: 'Green Patch 캥거루 거의 확실. 에키드나 관찰 가능', section: 4 },
+        { name: '마을 탐방 (Bowral·Berry)', icon: '🏘', cost: '무료+식비', duration: '반나절', booking: '불필요', may: 'optimal', mayLabel: '5월 단풍', note: 'Bowral(갤러리+단풍), Berrima(1830년대 헤리티지), Berry(카페+부티크)', section: 5 },
+        { name: '와이너리/맛집', icon: '🍷', cost: '무료~$40', duration: '1~2h', booking: '권장', may: 'good', mayLabel: '연중 운영', note: 'Centennial Vineyards, Tractorless, Dawning Day. 쿨클라임 와인', section: 6 },
+        { name: '별 관찰 (Jervis Bay)', icon: '🌌', cost: '$85', duration: '2h', booking: '필수', may: 'optimal', mayLabel: '5월 최적', note: 'Jervis Bay Stargazing $85/인, 천체물리학 박사 가이드. 5/11~21 은하수 골든윈도우', section: 7 },
+        { name: '가을 단풍', icon: '🍂', cost: '무료', duration: '자유', booking: '불필요', may: 'optimal', mayLabel: '5월 절정!', note: 'Retford Park, Corbett Gardens, Berrima가 5월 절정기', section: 8 },
+        { name: '숨은 명소', icon: '🗺', cost: '무료~$40', duration: '자유', booking: '터널 예약', may: 'good', mayLabel: '연중 개방', note: 'Mittagong Mushroom Tunnel $40/인(6월 중순 휴업 전 마지막 기회!). Chinamans Beach', section: 9 }
+      ]
+    },
+    {
+      id: 'forster-swr-yamba',
+      name: '포스터·SWR·야마',
+      center: [-30.50, 153.00],
+      file: 'research/claude-research/activities/포스터-SWR-야마-액티비티-리서치.md',
+      subRegions: [
+        { label: '포스터/해링턴 (Forster)', start: 0, end: 4 },
+        { label: '사우스웨스트록스 (SWR)', start: 4, end: 8 },
+        { label: '야마/그래프턴 (Yamba)', start: 8, end: 12 }
+      ],
+      summary: 'Smoky Cape 등대 트레킹·Trial Bay Gaol 은하수·Yamba 돌고래 카약·Angourie Blue Pool. 빛 공해 적은 별 관찰 명소.',
+      activities: [
+        /* 포스터/해링턴 */
+        { name: '해안 하이킹', icon: '🥾', cost: '무료', duration: '1~3h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Cape Hawke Lookout(420계단), Crowdy Bay Diamond Head Loop(4.7km)', section: 1, sectionKey: 'Part 1' },
+        { name: '수상 액티비티', icon: '🐬', cost: '$35~70', duration: '1.5~3h', booking: '권장', may: 'good', mayLabel: '연중 운영', note: '고래/돌고래 투어(Epic Surf, FreeSpirit). 카약(Lazy Paddles). One Mile Beach 서핑', section: 2, sectionKey: 'Part 1' },
+        { name: '마켓/맛집', icon: '🛍', cost: '무료+식비', duration: '1~2h', booking: '불필요', may: 'good', mayLabel: '5/23 토 운영', note: 'Forster Farmers Market 셋째 토요일 5/23 방문 가능. Thirty Three Degrees 오이스터 바', section: 5, sectionKey: 'Part 1' },
+        { name: '은하수 촬영', icon: '🌌', cost: '무료', duration: '자유', booking: '불필요', may: 'optimal', mayLabel: '5월 최적', note: 'Crowdy Bay NP Diamond Head — 빛 공해 최소, 은하수 촬영 1순위', section: 6, sectionKey: 'Part 1' },
+        /* SWR */
+        { name: 'Smoky Cape 등대 트레킹', icon: '🏔', cost: '무료', duration: '2~3h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Smoky Cape Range Walking Track 5.5km 편도. NSW 최고 높이 등대 종착점', section: 1, sectionKey: 'Part 2' },
+        { name: 'Trial Bay Gaol', icon: '🏛', cost: '$11', duration: '1~1.5h', booking: '불필요', may: 'good', mayLabel: '연중 운영', note: '셀프가이드 투어 성인 $11. 폐허 전경으로 은하수 촬영 드라마틱 구도', section: 4, sectionKey: 'Part 2' },
+        { name: '다이빙 (Fish Rock Cave)', icon: '🤿', cost: '$260', duration: '1일', booking: '필수', may: 'good', mayLabel: '연중 운영', note: '호주 유일 해양 동굴 다이빙. 1일 2다이브 $260. Grey Nurse Shark', section: 2, sectionKey: 'Part 2' },
+        { name: '야생 캥거루 (Little Bay)', icon: '🦘', cost: '무료', duration: '자유', booking: '불필요', may: 'good', mayLabel: '연중 가능', note: 'Little Bay에서 야생 캥거루 조우 가능', section: 3, sectionKey: 'Part 2' },
+        /* 야마 */
+        { name: '돌고래 카약 투어', icon: '🐬', cost: '$70', duration: '3h', booking: '필수', may: 'good', mayLabel: '연중 운영', note: 'Yamba Kayak 돌고래 카약 $70/인 — 이 지역 최고 커플 체험', section: 2, sectionKey: 'Part 3' },
+        { name: 'Angourie Blue Pool', icon: '🏊', cost: '무료', duration: '1~2h', booking: '불필요', may: 'limited', mayLabel: '5월 서늘', note: '채석장 변신 천연 담수 수영장. 무료. Angourie Walking Track 10km 연결', section: 1, sectionKey: 'Part 3' },
+        { name: '마켓/문화', icon: '🛍', cost: '무료+식비', duration: '반나절', booking: '불필요', may: 'good', mayLabel: '수요일 운영', note: 'Yamba Farmers Market 매주 수 7~11am. Grafton Heritage Trail + Gallery', section: 5, sectionKey: 'Part 3' },
+        { name: '맛집', icon: '🍽', cost: '식비', duration: '자유', booking: '고급 예약', may: 'good', mayLabel: '연중 운영', note: 'Karrikin 파인다이닝, Sandbar 해산물. 맛집 11곳', section: 8, sectionKey: 'Part 3' }
+      ]
     }
   ];
 
@@ -204,13 +320,94 @@
      ══════════════════════════════════════════ */
   var activeRegion = REGIONS[0].id;
   var mdCache = {};
+  var regionMarkers = {};
 
   /* ══════════════════════════════════════════
      초기화
      ══════════════════════════════════════════ */
+  var actMap = initMap();
   bindTabs();
   bindFullResearch();
-  renderRegion(activeRegion);
+  selectRegion(activeRegion);
+
+  /* ══════════════════════════════════════════
+     지도 초기화
+     ══════════════════════════════════════════ */
+  function initMap() {
+    var mapEl = document.getElementById('activityMap');
+    if (!mapEl || typeof L === 'undefined') return null;
+
+    // 모든 지역 좌표로 bounds 계산
+    var bounds = [];
+    REGIONS.forEach(function (r) { if (r.center) bounds.push(r.center); });
+    if (!bounds.length) return null;
+
+    var map = L.map('activityMap', {
+      scrollWheelZoom: false,
+      zoomControl: true
+    });
+
+    // NSW 해안에 딱 맞게 fitBounds (여백 포함)
+    map.fitBounds(bounds, { padding: [30, 30] });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+      maxZoom: 15
+    }).addTo(map);
+
+    // 각 지역에 커스텀 마커(버튼) 생성
+    REGIONS.forEach(function (r) {
+      if (!r.center) return;
+      var icon = L.divIcon({
+        className: '',
+        html: '<div class="region-marker' + (r.id === activeRegion ? ' active' : '') + '" data-region="' + r.id + '">' +
+              r.name.split('·')[0] +
+              '<span class="marker-count">' + r.activities.length + '개</span>' +
+              '</div>',
+        iconSize: null,
+        iconAnchor: [0, 0]
+      });
+      var marker = L.marker(r.center, { icon: icon }).addTo(map);
+      marker.on('click', function () { selectRegion(r.id); });
+      regionMarkers[r.id] = marker;
+    });
+
+    return map;
+  }
+
+  /* ══════════════════════════════════════════
+     지역 선택 (지도 + 탭 동기화)
+     ══════════════════════════════════════════ */
+  function selectRegion(regionId) {
+    activeRegion = regionId;
+
+    // 탭 동기화
+    var tabs = document.querySelectorAll('.region-tab');
+    for (var i = 0; i < tabs.length; i++) {
+      if (tabs[i].getAttribute('data-region') === regionId) {
+        tabs[i].classList.add('active');
+      } else {
+        tabs[i].classList.remove('active');
+      }
+    }
+
+    // 지도 마커 동기화
+    REGIONS.forEach(function (r) {
+      var m = regionMarkers[r.id];
+      if (!m) return;
+      var el = m.getElement();
+      if (!el) return;
+      var markerDiv = el.querySelector('.region-marker');
+      if (!markerDiv) return;
+      if (r.id === regionId) {
+        markerDiv.classList.add('active');
+      } else {
+        markerDiv.classList.remove('active');
+      }
+    });
+
+    renderRegion(regionId);
+  }
 
   /* ══════════════════════════════════════════
      전체 리서치 toggle 바인딩 (한 번만)
@@ -231,10 +428,7 @@
     var tabs = document.querySelectorAll('.region-tab');
     for (var i = 0; i < tabs.length; i++) {
       tabs[i].addEventListener('click', function () {
-        for (var j = 0; j < tabs.length; j++) tabs[j].classList.remove('active');
-        this.classList.add('active');
-        activeRegion = this.getAttribute('data-region');
-        renderRegion(activeRegion);
+        selectRegion(this.getAttribute('data-region'));
       });
     }
   }

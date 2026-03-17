@@ -57,22 +57,44 @@
       "parking": "무료 주차장, 입구 근처 접근 용이",
       "road_condition": "Pacific Highway에서 접근. 포장도로",
       "nearby_attractions": [
-        {"name": "Walkabout Wildlife Sanctuary", "distance_km": 3, "drive_min": 5},
-        {"name": "Somersby Falls Picnic Area", "distance_km": 5, "drive_min": 8},
-        {"name": "Brisbane Water National Park (Bulgandry)", "distance_km": 10, "drive_min": 12}
+        {
+          "name": "Walkabout Wildlife Sanctuary",
+          "distance_km": 3,
+          "drive_min": 5
+        },
+        {
+          "name": "Somersby Falls Picnic Area",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Brisbane Water National Park (Bulgandry)",
+          "distance_km": 10,
+          "drive_min": 12
+        }
       ],
       "peak_times": "학교 방학과 주말에 혼잡. 5월 비수기라 대기 짧음",
       "public_transport": "대중교통 접근 어려움. 차량 필수"
     },
     "experience": {
-      "photo_spots": ["입구 거대 프릴넥 도마뱀 조각상", "코알라 만지기 체험 촬영", "캥거루 먹이주기 근접 촬영"],
+      "photo_spots": [
+        "입구 거대 프릴넥 도마뱀 조각상",
+        "코알라 만지기 체험 촬영",
+        "캥거루 먹이주기 근접 촬영"
+      ],
       "golden_hour": "주로 실내/반실내라 골든아워 무관",
       "seasonal_beauty": "5월 비수기라 여유로운 관람. 동물들 활발한 시기",
-      "hidden_gems": "독사 시연(venom milking) 프로그램이 독특. 폭포 소리를 들으며 산책로 이동. 2023 호주 관광 어워드 금상 수상",
+      "hidden_gems": [
+        "독사 시연(venom milking) 프로그램이 독특. 폭포 소리를 들으며 산책로 이동. 2023 호주 관광 어워드 금상 수상"
+      ],
       "sensory_notes": "동물 소리, 폭포 소리, 유칼립투스 숲의 향기"
     },
     "risk_check": {
-      "negative_review_patterns": ["입장료 비쌈 ($54.99)", "해외 대형 동물원 대비 규모 작음", "가격 대비 체류시간 짧다는 의견"],
+      "negative_review_patterns": [
+        "입장료 비쌈 ($54.99)",
+        "해외 대형 동물원 대비 규모 작음",
+        "가격 대비 체류시간 짧다는 의견"
+      ],
       "may_operation": "5월 정상 운영 (매일 09:00-17:00)",
       "safety_issues": "특별한 안전 이슈 없음. 우천 시 실내 전시관 이용 가능",
       "weather_impact": "실내 전시관 있어 우천 시에도 관람 가능",

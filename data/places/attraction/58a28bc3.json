@@ -55,22 +55,43 @@
       "parking": "40 Bush St 대형 무료 주차장. 가족 단위 방문객으로 빨리 차는 편",
       "road_condition": "포장도로, 접근 용이",
       "nearby_attractions": [
-        {"name": "Norah Head 록풀 & 라이트하우스 비치", "distance_km": 0.5, "drive_min": 3},
-        {"name": "The Entrance (펠리컨 피딩)", "distance_km": 15, "drive_min": 20},
-        {"name": "Australian Reptile Park", "distance_km": 25, "drive_min": 25}
+        {
+          "name": "Norah Head 록풀 & 라이트하우스 비치",
+          "distance_km": 0.5,
+          "drive_min": 3
+        },
+        {
+          "name": "The Entrance (펠리컨 피딩)",
+          "distance_km": 15,
+          "drive_min": 20
+        },
+        {
+          "name": "Australian Reptile Park",
+          "distance_km": 25,
+          "drive_min": 25
+        }
       ],
       "peak_times": "주말 오전에 가이드 투어 참가자로 혼잡. 평일 오전 권장",
       "public_transport": "센트럴코스트 버스 이용 가능하나 빈도 낮음"
     },
     "experience": {
-      "photo_spots": ["등대 꼭대기에서 360도 파노라마 전망", "록풀과 등대 배경 사진", "라이트하우스 비치에서 올려다보는 등대"],
+      "photo_spots": [
+        "등대 꼭대기에서 360도 파노라마 전망",
+        "록풀과 등대 배경 사진",
+        "라이트하우스 비치에서 올려다보는 등대"
+      ],
       "golden_hour": "이른 아침과 늦은 오후 빛에서 사진 촬영 최적. 동쪽 해안이라 일출 뷰 우수",
       "seasonal_beauty": "5월은 고래 이동 시즌 시작 — 등대 꼭대기에서 고래 관찰 가능",
-      "hidden_gems": "등대 옆 숙소(Lighthouse Quarters)에서 숙박 가능. 아래쪽 록풀에서 해양 생물 탐색",
+      "hidden_gems": [
+        "등대 옆 숙소(Lighthouse Quarters)에서 숙박 가능. 아래쪽 록풀에서 해양 생물 탐색"
+      ],
       "sensory_notes": "96계단 오르며 느끼는 역사적 건축물의 질감, 꼭대기에서의 바람, 탁 트인 바다 전망"
     },
     "risk_check": {
-      "negative_review_patterns": ["96개 계단 올라야 함 — 체력 필요", "주차 공간 제한적"],
+      "negative_review_patterns": [
+        "96개 계단 올라야 함 — 체력 필요",
+        "주차 공간 제한적"
+      ],
       "may_operation": "5월 정상 운영. 가이드 투어 매일 10:00-13:30",
       "safety_issues": "96계단 4단계로 나뉘어 천천히 올라갈 수 있음. 특별한 위험 없음",
       "weather_impact": "흐린 날이나 비 오는 날 전망 제한. 바람 강한 날 주의",

@@ -59,21 +59,37 @@
       "parking": "Warumbul Road 주차장 이용. 소규모이나 인기 명소가 아니라 대체로 여유.",
       "road_condition": "Warumbul Rd 비포장 구간 일부. 시드니에서 약 50분.",
       "nearby_attractions": [
-        {"name": "Royal National Park (89b09750)", "distance_km": 4, "drive_min": 10},
-        {"name": "Eagle Rock (2228124c)", "distance_km": 8, "drive_min": 15}
+        {
+          "name": "Royal National Park (89b09750)",
+          "distance_km": 4,
+          "drive_min": 10
+        },
+        {
+          "name": "Eagle Rock (2228124c)",
+          "distance_km": 8,
+          "drive_min": 15
+        }
       ],
       "peak_times": "주말 오전에도 비교적 한적. 인기 명소 대비 방문객 적음.",
       "public_transport": "Waterfall역에서 도보 접근 가능하나 거리 있음. 차량 권장."
     },
     "experience": {
-      "photo_spots": ["바위 선반 위로 쏟아지는 폭포 전경", "폭포 아래 풀에서의 반영 사진"],
+      "photo_spots": [
+        "바위 선반 위로 쏟아지는 폭포 전경",
+        "폭포 아래 풀에서의 반영 사진"
+      ],
       "golden_hour": "숲속 계곡이라 직사광 제한적. 오전 중 부분적 햇살 유입 시 최적.",
       "seasonal_beauty": "5월 가을 — 비 이후 수량 풍부. 주변 유칼립투스 숲의 고요한 분위기.",
-      "hidden_gems": "South West Arm Pools로의 사이드트립 — 수영 가능한 자연 풀",
+      "hidden_gems": [
+        "South West Arm Pools로의 사이드트립 — 수영 가능한 자연 풀"
+      ],
       "sensory_notes": "숲속 새소리, 폭포 물소리, 이끼 낀 바위의 습한 공기"
     },
     "risk_check": {
-      "negative_review_patterns": ["건기 시 수량 부족", "급경사 미끄러움"],
+      "negative_review_patterns": [
+        "건기 시 수량 부족",
+        "급경사 미끄러움"
+      ],
       "may_operation": "정상 운영. 가을비 후 수량 기대.",
       "safety_issues": "후반부 급경사에 미끄러운 바위와 나무뿌리. 하이킹 신발 필수.",
       "weather_impact": "우천 직후가 오히려 최적. 폭우 중에는 트레일 위험.",

@@ -57,22 +57,43 @@
       "parking": "무료 주차장 구비. M1에서 Calga Interchange → Peats Ridge Road로 접근",
       "road_condition": "포장도로. M1에서 쉽게 접근 가능. 내부 산책로는 비포장(나무뿌리, 돌 주의)",
       "nearby_attractions": [
-        {"name": "Australian Reptile Park", "distance_km": 3, "drive_min": 5},
-        {"name": "Somersby Falls Picnic Area", "distance_km": 5, "drive_min": 8},
-        {"name": "Brisbane Water National Park", "distance_km": 8, "drive_min": 10}
+        {
+          "name": "Australian Reptile Park",
+          "distance_km": 3,
+          "drive_min": 5
+        },
+        {
+          "name": "Somersby Falls Picnic Area",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Brisbane Water National Park",
+          "distance_km": 8,
+          "drive_min": 10
+        }
       ],
       "peak_times": "학교 방학과 주말에 약간 혼잡. 5월 비수기 여유",
       "public_transport": "대중교통 접근 어려움. 차량 필수"
     },
     "experience": {
-      "photo_spots": ["자유롭게 다니는 캥거루와 근접 촬영", "80에이커 자연 부시랜드 산책"],
+      "photo_spots": [
+        "자유롭게 다니는 캥거루와 근접 촬영",
+        "80에이커 자연 부시랜드 산책"
+      ],
       "golden_hour": "야외 부지라 오전 빛에서 동물 촬영 최적",
       "seasonal_beauty": "5월 가을 야외 산책 쾌적. 부시랜드의 가을 색감",
-      "hidden_gems": "매시간 레인저 토크 참여 시 체험 극대화. 2005년부터 야생동물 구조 활동 지속하는 진정성 있는 보호구역",
+      "hidden_gems": [
+        "매시간 레인저 토크 참여 시 체험 극대화. 2005년부터 야생동물 구조 활동 지속하는 진정성 있는 보호구역"
+      ],
       "sensory_notes": "부시랜드의 자연 소리, 캥거루가 풀을 뜯는 소리, 새소리"
     },
     "risk_check": {
-      "negative_review_patterns": ["대형 동물원 기대 시 실망 가능", "시설이 다소 기본적", "규모 작아 반나절이면 충분"],
+      "negative_review_patterns": [
+        "대형 동물원 기대 시 실망 가능",
+        "시설이 다소 기본적",
+        "규모 작아 반나절이면 충분"
+      ],
       "may_operation": "5월 정상 운영 (매일 09:30-17:00)",
       "safety_issues": "내부 산책로 비포장 — 나무뿌리, 돌 주의. 편한 운동화 권장",
       "weather_impact": "야외 위주라 비 오는 날 방문 불편. 일부 실내 시설 있음",

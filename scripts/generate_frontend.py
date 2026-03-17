@@ -307,7 +307,7 @@ def generate_place_data(scored, scorers, place_files):
             "name": place.get("name", ""),
             "region": item["region"],
             "grade": get_grade(item),
-            "average_score": get_score(item),
+            "may_adjusted_score": get_score(item),
             "scores": item["scores"],
             "spread": item["spread"],
             "controversial": item["controversial"],

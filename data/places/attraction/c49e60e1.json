@@ -59,21 +59,39 @@
       "parking": "포장 주차장. 장애인 주차 2면, 버스 주차 가능. 주차비 $4/일. 현금+카드 결제. 주말 혼잡.",
       "road_condition": "Nowra Rd 포장 양호. 캔버라에서 174km(Hume & Illawarra Hwy 경유). 시드니에서 약 2시간.",
       "nearby_attractions": [
-        {"name": "Carrington Falls (22d70fbe)", "distance_km": 20, "drive_min": 25},
-        {"name": "Blenheim Beach (7d2ee5d0)", "distance_km": 75, "drive_min": 80}
+        {
+          "name": "Carrington Falls (22d70fbe)",
+          "distance_km": 20,
+          "drive_min": 25
+        },
+        {
+          "name": "Blenheim Beach (7d2ee5d0)",
+          "distance_km": 75,
+          "drive_min": 80
+        }
       ],
       "peak_times": "주말 오전 10시~오후 2시 혼잡. 주중 한적.",
       "public_transport": "대중교통 제한적. 차량 필수."
     },
     "experience": {
-      "photo_spots": ["메인 전망대에서 81m 폭포 전경", "고가 보도(elevated boardwalk)에서 열대우림 캐노피", "트윈 폭포 전망대"],
+      "photo_spots": [
+        "메인 전망대에서 81m 폭포 전경",
+        "고가 보도(elevated boardwalk)에서 열대우림 캐노피",
+        "트윈 폭포 전망대"
+      ],
       "golden_hour": "오전 중 동쪽에서 빛이 폭포를 비추는 시간 최적",
       "seasonal_beauty": "5월 가을 — 서던 하이랜즈 단풍 시작, 여름비 이후 풍부한 수량으로 폭포 장관",
-      "hidden_gems": "West Rim Walking Track — 대부분 메인 전망대만 보고 돌아가지만 이 트레일은 열대우림 깊숙이 체험",
+      "hidden_gems": [
+        "West Rim Walking Track — 대부분 메인 전망대만 보고 돌아가지만 이 트레일은 열대우림 깊숙이 체험"
+      ],
       "sensory_notes": "81m 아래로 떨어지는 물소리의 울림, 우림의 습한 공기, 새소리, 시원한 고원 바람"
     },
     "risk_check": {
-      "negative_review_patterns": ["체류 짧음 (메인 전망만 2분)", "안개로 폭포 안 보임", "주말 주차 혼잡"],
+      "negative_review_patterns": [
+        "체류 짧음 (메인 전망만 2분)",
+        "안개로 폭포 안 보임",
+        "주말 주차 혼잡"
+      ],
       "may_operation": "정상 운영. Morton NP는 악천후/산불 위험 시 일시 폐쇄 가능하나 5월은 위험 낮음.",
       "safety_issues": "전망대/보도는 안전 난간 구비. West Rim Track 일부 구간 미끄러움.",
       "weather_impact": "우천/안개 시 폭포 시야 제한. 비 자체가 수량 증가에 기여하므로 비 온 직후가 최적.",

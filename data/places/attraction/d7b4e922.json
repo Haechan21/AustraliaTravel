@@ -55,23 +55,48 @@
       "parking": "무료 주차장. 인기 있어 혼잡할 수 있음",
       "road_condition": "포장도로(sealed road)로 접근 용이. Harrington에서 5분 거리",
       "nearby_attractions": [
-        {"name": "Harrington Beach State Park", "distance_km": 5, "drive_min": 8},
-        {"name": "Crowdy Bay National Park (Diamond Head)", "distance_km": 10, "drive_min": 15},
-        {"name": "Crowdy Head Beach (서프 라이프세이빙 클럽)", "distance_km": 0.5, "drive_min": 2},
-        {"name": "North Haven Breakwall", "distance_km": 25, "drive_min": 30}
+        {
+          "name": "Harrington Beach State Park",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Crowdy Bay National Park (Diamond Head)",
+          "distance_km": 10,
+          "drive_min": 15
+        },
+        {
+          "name": "Crowdy Head Beach (서프 라이프세이빙 클럽)",
+          "distance_km": 0.5,
+          "drive_min": 2
+        },
+        {
+          "name": "North Haven Breakwall",
+          "distance_km": 25,
+          "drive_min": 30
+        }
       ],
       "peak_times": "고래 시즌(5-10월) 일출/일몰 시 약간 혼잡",
       "public_transport": "대중교통 없음. 차량 필수"
     },
     "experience": {
-      "photo_spots": ["헤드랜드 위 등대와 바다 배경", "360도 파노라마 (매닝 밸리~해스팅스 밸리)", "고래 브리칭 장면 (시즌)"],
+      "photo_spots": [
+        "헤드랜드 위 등대와 바다 배경",
+        "360도 파노라마 (매닝 밸리~해스팅스 밸리)",
+        "고래 브리칭 장면 (시즌)"
+      ],
       "golden_hour": "동쪽 곶이라 일출 뷰 탁월. 일몰 시에도 서쪽 매닝 밸리 방면 석양 감상 가능",
       "seasonal_beauty": "5월 고래 이동 시즌 시작 — 곶에서 가까이 지나가는 고래 관찰 가능. 낚시 시즌도 양호",
-      "hidden_gems": "1878-79년 건축된 NSW 5개 소형 등대 중 하나. 해안 양방향 파노라마 뷰. Crowdy Bay NP와 연결",
+      "hidden_gems": [
+        "1878-79년 건축된 NSW 5개 소형 등대 중 하나. 해안 양방향 파노라마 뷰. Crowdy Bay NP와 연결"
+      ],
       "sensory_notes": "바람, 파도 소리, 어촌 마을의 고요함, 등대의 역사적 분위기"
     },
     "risk_check": {
-      "negative_review_patterns": ["등대 내부 입장 불가", "주차장 혼잡할 수 있음"],
+      "negative_review_patterns": [
+        "등대 내부 입장 불가",
+        "주차장 혼잡할 수 있음"
+      ],
       "may_operation": "24시간 개방. 5월 정상 관람. 고래 시즌 시작",
       "safety_issues": "절벽 가장자리 주의. 바람 강한 날 주의",
       "weather_impact": "강풍/비 시 전망대 방문 불편",

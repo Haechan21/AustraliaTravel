@@ -59,22 +59,44 @@
       "parking": "Bass Point Reserve 내 무료 주차. 단 2026년 1-3월 차량 접근 폐쇄 공사 — 5월까지 복구 여부 확인 필요.",
       "road_condition": "Bass Point Tourist Rd 포장. 셸하버에서 10분.",
       "nearby_attractions": [
-        {"name": "Bombo Headland (a43e5009)", "distance_km": 8, "drive_min": 12},
-        {"name": "Kiama Lighthouse (dc2795c8)", "distance_km": 12, "drive_min": 15},
-        {"name": "Flagstaff Point Lighthouse (579eb092)", "distance_km": 20, "drive_min": 25}
+        {
+          "name": "Bombo Headland (a43e5009)",
+          "distance_km": 8,
+          "drive_min": 12
+        },
+        {
+          "name": "Kiama Lighthouse (dc2795c8)",
+          "distance_km": 12,
+          "drive_min": 15
+        },
+        {
+          "name": "Flagstaff Point Lighthouse (579eb092)",
+          "distance_km": 20,
+          "drive_min": 25
+        }
       ],
       "peak_times": "여름 주말 매우 혼잡. 5월은 상대적 한적.",
       "public_transport": "셸하버에서 버스 + 도보. 차량 권장."
     },
     "experience": {
-      "photo_spots": ["청록색 록풀 항공뷰", "수중 Grey Nurse Shark", "해안 절벽에서 내려다보는 만"],
+      "photo_spots": [
+        "청록색 록풀 항공뷰",
+        "수중 Grey Nurse Shark",
+        "해안 절벽에서 내려다보는 만"
+      ],
       "golden_hour": "오전 햇살이 만으로 비추면 수중 시야 최적",
       "seasonal_beauty": "5월 가을 — 여름 인파 감소, 해양생물은 여전히 풍부",
-      "hidden_gems": "Bass Point 해안 산책로 — 록풀과 해안 식생 관찰",
+      "hidden_gems": [
+        "Bass Point 해안 산책로 — 록풀과 해안 식생 관찰"
+      ],
       "sensory_notes": "맑은 바닷물, 바위 사이 물결, 해양생물과의 근접 만남의 스릴"
     },
     "risk_check": {
-      "negative_review_patterns": ["주차 부족", "계단 접근 어려움", "조수 영향"],
+      "negative_review_patterns": [
+        "주차 부족",
+        "계단 접근 어려움",
+        "조수 영향"
+      ],
       "may_operation": "2026년 1-3월 차량 접근 폐쇄 공사. 5월까지 복구 여부 반드시 사전 확인 필요.",
       "safety_issues": "날카로운 바위로 워터슈즈 필수. 조수/파도 확인 필요. 구조대 없음.",
       "weather_impact": "파도 높으면 스노클링 위험. 우천 시 시야 저하. 5월 수온 낮음(웻수트 필요).",

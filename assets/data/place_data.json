@@ -1,12 +1,12 @@
 {
   "generated_at": "2026-03-13",
-  "total": 110,
+  "total": 109,
   "grade_distribution": {
     "S": 6,
     "A": 22,
     "B": 38,
     "C": 33,
-    "D": 11
+    "D": 10
   },
   "grading_method": "percentile",
   "grading_cutoffs": {
@@ -14,7 +14,7 @@
     "A": "7~28위",
     "B": "29~66위",
     "C": "67~99위",
-    "D": "100~110위"
+    "D": "100~109위"
   },
   "controversial_count": 37,
   "personas": {
@@ -70,7 +70,7 @@
       "name": "Cape Byron (Cape Byron Lighthouse)",
       "region": "바이런베이",
       "grade": "S",
-      "average_score": 90.5,
+      "may_adjusted_score": 90.5,
       "scores": {
         "A": 75.0,
         "B": 95.5,
@@ -169,7 +169,7 @@
       "name": "Look At Me Now Headland Walk",
       "region": "콥스하버",
       "grade": "S",
-      "average_score": 88.3,
+      "may_adjusted_score": 88.3,
       "scores": {
         "A": 79.5,
         "B": 94.0,
@@ -268,7 +268,7 @@
       "name": "Newcastle Memorial Walk",
       "region": "뉴캐슬/포트스테판스",
       "grade": "S",
-      "average_score": 87.0,
+      "may_adjusted_score": 87.0,
       "scores": {
         "A": 87.5,
         "B": 79.0,
@@ -367,7 +367,7 @@
       "name": "Grand Canyon Walking Track",
       "region": "블루마운틴",
       "grade": "S",
-      "average_score": 86.3,
+      "may_adjusted_score": 86.3,
       "scores": {
         "A": 64.0,
         "B": 91.0,
@@ -466,7 +466,7 @@
       "name": "Grand Pacific Drive",
       "region": "로열국립공원/그랜드퍼시픽",
       "grade": "S",
-      "average_score": 85.3,
+      "may_adjusted_score": 85.3,
       "scores": {
         "A": 79.5,
         "B": 85.0,
@@ -565,7 +565,7 @@
       "name": "Katoomba Falls",
       "region": "블루마운틴",
       "grade": "S",
-      "average_score": 85.3,
+      "may_adjusted_score": 85.3,
       "scores": {
         "A": 78.5,
         "B": 82.0,
@@ -664,7 +664,7 @@
       "name": "Blue Mountains National Park",
       "region": "블루마운틴",
       "grade": "A",
-      "average_score": 85.0,
+      "may_adjusted_score": 85.0,
       "scores": {
         "A": 64.5,
         "B": 91.0,
@@ -763,7 +763,7 @@
       "name": "Tomaree Head Summit Walk",
       "region": "뉴캐슬/포트스테판스",
       "grade": "A",
-      "average_score": 84.7,
+      "may_adjusted_score": 84.7,
       "scores": {
         "A": 75.0,
         "B": 87.0,
@@ -862,7 +862,7 @@
       "name": "Govetts Leap Lookout",
       "region": "블루마운틴",
       "grade": "A",
-      "average_score": 83.5,
+      "may_adjusted_score": 83.5,
       "scores": {
         "A": 79.0,
         "B": 85.0,
@@ -961,7 +961,7 @@
       "name": "Cape Byron Walking Track",
       "region": "바이런베이",
       "grade": "A",
-      "average_score": 83.3,
+      "may_adjusted_score": 83.3,
       "scores": {
         "A": 66.5,
         "B": 93.0,
@@ -1060,7 +1060,7 @@
       "name": "Sublime Point Lookout",
       "region": "블루마운틴",
       "grade": "A",
-      "average_score": 82.3,
+      "may_adjusted_score": 82.3,
       "scores": {
         "A": 76.0,
         "B": 84.0,
@@ -1159,7 +1159,7 @@
       "name": "The Three Sisters",
       "region": "블루마운틴",
       "grade": "A",
-      "average_score": 81.3,
+      "may_adjusted_score": 81.3,
       "scores": {
         "A": 79.5,
         "B": 83.0,
@@ -1258,7 +1258,7 @@
       "name": "Sea Cliff Bridge",
       "region": "울릉공/키아마",
       "grade": "A",
-      "average_score": 81.3,
+      "may_adjusted_score": 81.3,
       "scores": {
         "A": 74.5,
         "B": 84.0,
@@ -1357,7 +1357,7 @@
       "name": "Echo Point Lookout (Three Sisters)",
       "region": "블루마운틴",
       "grade": "A",
-      "average_score": 81.3,
+      "may_adjusted_score": 81.3,
       "scores": {
         "A": 79.0,
         "B": 81.5,
@@ -1456,7 +1456,7 @@
       "name": "Dangar Falls",
       "region": "콥스하버",
       "grade": "A",
-      "average_score": 80.8,
+      "may_adjusted_score": 80.8,
       "scores": {
         "A": 80.0,
         "B": 78.0,
@@ -1555,7 +1555,7 @@
       "name": "Burleigh Head National Park",
       "region": "골드코스트",
       "grade": "A",
-      "average_score": 80.5,
+      "may_adjusted_score": 80.5,
       "scores": {
         "A": 78.0,
         "B": 78.0,
@@ -1654,7 +1654,7 @@
       "name": "Bombo Headland Quarry",
       "region": "울릉공/키아마",
       "grade": "A",
-      "average_score": 80.0,
+      "may_adjusted_score": 80.0,
       "scores": {
         "A": 74.5,
         "B": 86.0,
@@ -1753,7 +1753,7 @@
       "name": "Forest Sky Pier",
       "region": "콥스하버",
       "grade": "A",
-      "average_score": 79.2,
+      "may_adjusted_score": 79.2,
       "scores": {
         "A": 78.5,
         "B": 74.0,
@@ -1852,7 +1852,7 @@
       "name": "Kiama Blowhole (Blowhole Point)",
       "region": "울릉공/키아마",
       "grade": "A",
-      "average_score": 78.5,
+      "may_adjusted_score": 78.5,
       "scores": {
         "A": 76.0,
         "B": 70.0,
@@ -1951,7 +1951,7 @@
       "name": "Ebor Falls",
       "region": "콥스하버",
       "grade": "A",
-      "average_score": 78.3,
+      "may_adjusted_score": 78.3,
       "scores": {
         "A": 73.0,
         "B": 76.0,
@@ -2050,7 +2050,7 @@
       "name": "Muttonbird Island Nature Reserve",
       "region": "콥스하버",
       "grade": "A",
-      "average_score": 78.3,
+      "may_adjusted_score": 78.3,
       "scores": {
         "A": 76.5,
         "B": 77.5,
@@ -2149,7 +2149,7 @@
       "name": "Tacking Point Lighthouse",
       "region": "포트맥쿼리",
       "grade": "A",
-      "average_score": 78.2,
+      "may_adjusted_score": 78.2,
       "scores": {
         "A": 82.5,
         "B": 67.5,
@@ -2248,7 +2248,7 @@
       "name": "Crystal Shower Falls",
       "region": "콥스하버",
       "grade": "A",
-      "average_score": 77.8,
+      "may_adjusted_score": 77.8,
       "scores": {
         "A": 62.0,
         "B": 80.0,
@@ -2347,7 +2347,7 @@
       "name": "Bennetts Head Lookout",
       "region": "포스터/해링턴",
       "grade": "A",
-      "average_score": 77.7,
+      "may_adjusted_score": 77.7,
       "scores": {
         "A": 75.5,
         "B": 75.0,
@@ -2446,7 +2446,7 @@
       "name": "Fitzroy Falls Lookout",
       "region": "서던하이랜드/저비스베이",
       "grade": "A",
-      "average_score": 77.7,
+      "may_adjusted_score": 77.7,
       "scores": {
         "A": 71.5,
         "B": 79.0,
@@ -2545,7 +2545,7 @@
       "name": "Wentworth Falls Lookout",
       "region": "블루마운틴",
       "grade": "A",
-      "average_score": 77.5,
+      "may_adjusted_score": 77.5,
       "scores": {
         "A": 71.5,
         "B": 83.5,
@@ -2644,7 +2644,7 @@
       "name": "Stanwell Tops Lookout",
       "region": "로열국립공원/그랜드퍼시픽",
       "grade": "A",
-      "average_score": 77.0,
+      "may_adjusted_score": 77.0,
       "scores": {
         "A": 78.5,
         "B": 76.0,
@@ -2743,7 +2743,7 @@
       "name": "The Gap Park",
       "region": "시드니",
       "grade": "A",
-      "average_score": 76.3,
+      "may_adjusted_score": 76.3,
       "scores": {
         "A": 71.5,
         "B": 73.5,
@@ -2842,7 +2842,7 @@
       "name": "Bondi to Bronte Coastal Walk",
       "region": "시드니",
       "grade": "B",
-      "average_score": 76.0,
+      "may_adjusted_score": 76.0,
       "scores": {
         "A": 69.5,
         "B": 74.0,
@@ -2941,7 +2941,7 @@
       "name": "Diamond Bay Reserve",
       "region": "시드니",
       "grade": "B",
-      "average_score": 75.8,
+      "may_adjusted_score": 75.8,
       "scores": {
         "A": 75.0,
         "B": 74.0,
@@ -3040,7 +3040,7 @@
       "name": "Moonee Beach Nature Reserve",
       "region": "콥스하버",
       "grade": "B",
-      "average_score": 75.7,
+      "may_adjusted_score": 75.7,
       "scores": {
         "A": 66.0,
         "B": 76.5,
@@ -3139,7 +3139,7 @@
       "name": "Bogey Hole",
       "region": "뉴캐슬/포트스테판스",
       "grade": "B",
-      "average_score": 75.5,
+      "may_adjusted_score": 75.5,
       "scores": {
         "A": 70.0,
         "B": 80.5,
@@ -3238,7 +3238,7 @@
       "name": "Port Macquarie Coastal Walk",
       "region": "포트맥쿼리",
       "grade": "B",
-      "average_score": 75.3,
+      "may_adjusted_score": 75.3,
       "scores": {
         "A": 56.5,
         "B": 83.5,
@@ -3337,7 +3337,7 @@
       "name": "Boambee Headland Lookout",
       "region": "콥스하버",
       "grade": "B",
-      "average_score": 75.2,
+      "may_adjusted_score": 75.2,
       "scores": {
         "A": 71.5,
         "B": 76.0,
@@ -3436,7 +3436,7 @@
       "name": "Crowdy Head Lighthouse",
       "region": "포스터/해링턴",
       "grade": "B",
-      "average_score": 75.2,
+      "may_adjusted_score": 75.2,
       "scores": {
         "A": 71.5,
         "B": 76.5,
@@ -3535,7 +3535,7 @@
       "name": "Empress Falls",
       "region": "블루마운틴",
       "grade": "B",
-      "average_score": 74.8,
+      "may_adjusted_score": 74.8,
       "scores": {
         "A": 62.5,
         "B": 82.0,
@@ -3634,7 +3634,7 @@
       "name": "Cape Solander Lookout",
       "region": "로열국립공원/그랜드퍼시픽",
       "grade": "B",
-      "average_score": 74.7,
+      "may_adjusted_score": 74.7,
       "scores": {
         "A": 68.5,
         "B": 77.5,
@@ -3733,7 +3733,7 @@
       "name": "Flagstaff Point Lighthouse (Wollongong Head)",
       "region": "울릉공/키아마",
       "grade": "B",
-      "average_score": 74.3,
+      "may_adjusted_score": 74.3,
       "scores": {
         "A": 80.0,
         "B": 66.5,
@@ -3832,7 +3832,7 @@
       "name": "Royal National Park",
       "region": "로열국립공원/그랜드퍼시픽",
       "grade": "B",
-      "average_score": 74.0,
+      "may_adjusted_score": 74.0,
       "scores": {
         "A": 56.5,
         "B": 80.5,
@@ -3931,7 +3931,7 @@
       "name": "Lincoln's Rock (Flat Rock)",
       "region": "블루마운틴",
       "grade": "B",
-      "average_score": 73.8,
+      "may_adjusted_score": 73.8,
       "scores": {
         "A": 69.5,
         "B": 80.5,
@@ -4030,7 +4030,7 @@
       "name": "Arakoon National Park (Trial Bay Gaol)",
       "region": "사우스웨스트록스/켐시",
       "grade": "B",
-      "average_score": 73.8,
+      "may_adjusted_score": 73.8,
       "scores": {
         "A": 62.5,
         "B": 79.0,
@@ -4129,7 +4129,7 @@
       "name": "Port Stephens Kangaroo Encounters",
       "region": "뉴캐슬/포트스테판스",
       "grade": "B",
-      "average_score": 73.3,
+      "may_adjusted_score": 73.3,
       "scores": {
         "A": 71.0,
         "B": 75.5,
@@ -4228,7 +4228,7 @@
       "name": "Little Blowhole",
       "region": "울릉공/키아마",
       "grade": "B",
-      "average_score": 73.2,
+      "may_adjusted_score": 73.2,
       "scores": {
         "A": 75.0,
         "B": 65.0,
@@ -4327,7 +4327,7 @@
       "name": "Ku-ring-gai Chase National Park",
       "region": "시드니",
       "grade": "B",
-      "average_score": 72.8,
+      "may_adjusted_score": 72.8,
       "scores": {
         "A": 56.5,
         "B": 77.5,
@@ -4426,7 +4426,7 @@
       "name": "Hassans Walls Lookout",
       "region": "블루마운틴",
       "grade": "B",
-      "average_score": 72.8,
+      "may_adjusted_score": 72.8,
       "scores": {
         "A": 63.0,
         "B": 78.0,
@@ -4525,7 +4525,7 @@
       "name": "Yamba Lighthouse (Clarence River Light)",
       "region": "야마/그래프턴",
       "grade": "B",
-      "average_score": 72.7,
+      "may_adjusted_score": 72.7,
       "scores": {
         "A": 77.5,
         "B": 67.0,
@@ -4624,7 +4624,7 @@
       "name": "Old Helensburgh Station (Glow Worm Tunnel)",
       "region": "로열국립공원/그랜드퍼시픽",
       "grade": "B",
-      "average_score": 72.7,
+      "may_adjusted_score": 72.7,
       "scores": {
         "A": 57.0,
         "B": 82.0,
@@ -4723,7 +4723,7 @@
       "name": "Sydney Harbour National Park",
       "region": "시드니",
       "grade": "B",
-      "average_score": 72.5,
+      "may_adjusted_score": 72.5,
       "scores": {
         "A": 55.0,
         "B": 76.5,
@@ -4822,7 +4822,7 @@
       "name": "Eagle Rock Lookout",
       "region": "로열국립공원/그랜드퍼시픽",
       "grade": "B",
-      "average_score": 72.5,
+      "may_adjusted_score": 72.5,
       "scores": {
         "A": 52.5,
         "B": 80.5,
@@ -4921,7 +4921,7 @@
       "name": "Carrington Falls",
       "region": "서던하이랜드/저비스베이",
       "grade": "B",
-      "average_score": 72.3,
+      "may_adjusted_score": 72.3,
       "scores": {
         "A": 70.0,
         "B": 68.0,
@@ -5020,7 +5020,7 @@
       "name": "Lamington National Park",
       "region": "골드코스트",
       "grade": "B",
-      "average_score": 72.3,
+      "may_adjusted_score": 72.3,
       "scores": {
         "A": 51.0,
         "B": 84.5,
@@ -5119,7 +5119,7 @@
       "name": "Scenic Railway",
       "region": "블루마운틴",
       "grade": "B",
-      "average_score": 71.5,
+      "may_adjusted_score": 71.5,
       "scores": {
         "A": 77.0,
         "B": 65.5,
@@ -5218,7 +5218,7 @@
       "name": "Glow Worm Tunnel (Wollemi National Park)",
       "region": "블루마운틴",
       "grade": "B",
-      "average_score": 71.5,
+      "may_adjusted_score": 71.5,
       "scores": {
         "A": 51.5,
         "B": 90.0,
@@ -5317,7 +5317,7 @@
       "name": "Barrenjoey Lighthouse",
       "region": "센트럴코스트",
       "grade": "B",
-      "average_score": 70.8,
+      "may_adjusted_score": 70.8,
       "scores": {
         "A": 53.0,
         "B": 78.5,
@@ -5416,7 +5416,7 @@
       "name": "Observatory Hill Park",
       "region": "시드니",
       "grade": "B",
-      "average_score": 70.7,
+      "may_adjusted_score": 70.7,
       "scores": {
         "A": 71.5,
         "B": 65.5,
@@ -5515,7 +5515,7 @@
       "name": "Norah Head Lighthouse",
       "region": "센트럴코스트",
       "grade": "B",
-      "average_score": 70.3,
+      "may_adjusted_score": 70.3,
       "scores": {
         "A": 67.0,
         "B": 68.5,
@@ -5614,7 +5614,7 @@
       "name": "Oakfield Ranch Camel Rides",
       "region": "뉴캐슬/포트스테판스",
       "grade": "B",
-      "average_score": 70.0,
+      "may_adjusted_score": 70.0,
       "scores": {
         "A": 67.5,
         "B": 76.5,
@@ -5713,7 +5713,7 @@
       "name": "Barangaroo Reserve",
       "region": "시드니",
       "grade": "B",
-      "average_score": 68.8,
+      "may_adjusted_score": 68.8,
       "scores": {
         "A": 70.5,
         "B": 60.5,
@@ -5812,7 +5812,7 @@
       "name": "Blackbutt Reserve",
       "region": "뉴캐슬/포트스테판스",
       "grade": "B",
-      "average_score": 68.3,
+      "may_adjusted_score": 68.3,
       "scores": {
         "A": 62.0,
         "B": 70.0,
@@ -5911,7 +5911,7 @@
       "name": "Blenheim Beach",
       "region": "서던하이랜드/저비스베이",
       "grade": "B",
-      "average_score": 68.2,
+      "may_adjusted_score": 68.2,
       "scores": {
         "A": 61.5,
         "B": 76.0,
@@ -6010,7 +6010,7 @@
       "name": "Ellenborough Falls",
       "region": "포트맥쿼리",
       "grade": "B",
-      "average_score": 68.0,
+      "may_adjusted_score": 68.0,
       "scores": {
         "A": 48.0,
         "B": 83.5,
@@ -6109,7 +6109,7 @@
       "name": "Blues Point Reserve",
       "region": "시드니",
       "grade": "B",
-      "average_score": 68.0,
+      "may_adjusted_score": 68.0,
       "scores": {
         "A": 66.5,
         "B": 65.5,
@@ -6208,7 +6208,7 @@
       "name": "Fly Point Aquatic Reserve",
       "region": "뉴캐슬/포트스테판스",
       "grade": "B",
-      "average_score": 67.7,
+      "may_adjusted_score": 67.7,
       "scores": {
         "A": 63.0,
         "B": 72.5,
@@ -6307,7 +6307,7 @@
       "name": "Koala Conservation Hospital Port Macquarie",
       "region": "포트맥쿼리",
       "grade": "B",
-      "average_score": 67.3,
+      "may_adjusted_score": 67.3,
       "scores": {
         "A": 67.5,
         "B": 64.5,
@@ -6400,112 +6400,13 @@
       },
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Koala%20Conservation%20Hospital%20Port%20Macquarie%20Australia&center=-31.4427091,152.9193525"
     },
-    "669a240e": {
-      "id": "669a240e",
-      "name_ko": "코알라 병원 (매쿼리 자연보호구역)",
-      "name": "Koala Hospital (Macquarie Nature Reserve)",
-      "region": "포트맥쿼리",
-      "grade": "B",
-      "average_score": 67.3,
-      "scores": {
-        "A": 67.5,
-        "B": 64.5,
-        "C": 70.0
-      },
-      "spread": 5.5,
-      "controversial": false,
-      "breakdown": {
-        "scenery": {
-          "avg": 4.7,
-          "A": 4,
-          "B": 4,
-          "C": 6,
-          "reasons": {
-            "A": "코알라 병원(임시 운영지). 경치 목적 아님",
-            "B": "642731d5와 동일 기관 — 시설 기반",
-            "C": "포토스팟 2개"
-          }
-        },
-        "uniqueness": {
-          "avg": 7.7,
-          "A": 8,
-          "B": 8,
-          "C": 7,
-          "reasons": {
-            "A": "642731d5와 동일 — 코알라 병원",
-            "B": "642731d5와 동일 — 세계 최초 코알라 전문 병원",
-            "C": "코알라 전문 병원이나 642731d5와 동일, 임시 운영"
-          }
-        },
-        "google_rating": {
-          "avg": 7.3,
-          "A": 7,
-          "B": 7,
-          "C": 8,
-          "reasons": {
-            "A": "평점 4.6",
-            "B": "4.6점",
-            "C": "구글 평점 4.6/5.0, 리뷰 3500건으로 높은 신뢰도"
-          }
-        },
-        "accessibility": {
-          "avg": 6.3,
-          "A": 6,
-          "B": 7,
-          "C": 6,
-          "reasons": {
-            "A": "642731d5와 동일 — Guulabaa 임시 운영. 무료 주차",
-            "B": "Guulabaa 임시 운영",
-            "C": "원래 위치 폐쇄, Guulabaa 임시 운영, 차량 필수"
-          }
-        },
-        "review_count": {
-          "avg": 8.0,
-          "A": 7,
-          "B": 8,
-          "C": 9,
-          "reasons": {
-            "A": "리뷰 3500건으로 잘 검증됨",
-            "B": "3500개",
-            "C": "리뷰 3500건"
-          }
-        },
-        "value_for_money": {
-          "avg": 6.7,
-          "A": 7,
-          "B": 7,
-          "C": 6,
-          "reasons": {
-            "A": "AUD12.5 + 60분. 642731d5와 동일",
-            "B": "$12.5 코알라 관찰",
-            "C": "입장료 $12.50, 임시 운영으로 체험 제한적"
-          }
-        },
-        "time_efficiency": {
-          "avg": 6.7,
-          "A": 8,
-          "B": 6,
-          "C": 6,
-          "reasons": {
-            "A": "60분. 642731d5와 동일 시설",
-            "B": "60분",
-            "C": "임시 운영지 방문 1시간"
-          }
-        }
-      },
-      "coords": {
-        "lat": -31.4419743,
-        "lng": 152.9206423
-      },
-      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Koala%20Hospital%20%28Macquarie%20Nature%20Reserve%29%20Australia&center=-31.4419743,152.9206423"
-    },
     "b6b6c774": {
       "id": "b6b6c774",
       "name_ko": "콰드 바이크 킹",
       "name": "Quad Bike King",
       "region": "뉴캐슬/포트스테판스",
       "grade": "B",
-      "average_score": 67.0,
+      "may_adjusted_score": 67.0,
       "scores": {
         "A": 63.5,
         "B": 64.5,
@@ -6603,8 +6504,8 @@
       "name_ko": "에버글라데스 하우스 & 가든스",
       "name": "Everglades House & Gardens",
       "region": "블루마운틴",
-      "grade": "C",
-      "average_score": 66.8,
+      "grade": "B",
+      "may_adjusted_score": 66.8,
       "scores": {
         "A": 54.5,
         "B": 62.5,
@@ -6703,7 +6604,7 @@
       "name": "Urunga Wetlands Boardwalk",
       "region": "콥스하버",
       "grade": "C",
-      "average_score": 66.5,
+      "may_adjusted_score": 66.5,
       "scores": {
         "A": 69.0,
         "B": 61.0,
@@ -6802,7 +6703,7 @@
       "name": "Bouddi National Park - Maitland Bay Track",
       "region": "센트럴코스트",
       "grade": "C",
-      "average_score": 66.3,
+      "may_adjusted_score": 66.3,
       "scores": {
         "A": 55.0,
         "B": 72.5,
@@ -6901,7 +6802,7 @@
       "name": "Port Macquarie Camel Safaris",
       "region": "포트맥쿼리",
       "grade": "C",
-      "average_score": 66.3,
+      "may_adjusted_score": 66.3,
       "scores": {
         "A": 63.5,
         "B": 71.5,
@@ -7000,7 +6901,7 @@
       "name": "Scenic World Blue Mountains",
       "region": "블루마운틴",
       "grade": "C",
-      "average_score": 65.5,
+      "may_adjusted_score": 65.5,
       "scores": {
         "A": 57.5,
         "B": 70.5,
@@ -7099,7 +7000,7 @@
       "name": "North Haven Breakwall",
       "region": "포트맥쿼리",
       "grade": "C",
-      "average_score": 65.5,
+      "may_adjusted_score": 65.5,
       "scores": {
         "A": 68.0,
         "B": 60.5,
@@ -7198,7 +7099,7 @@
       "name": "Pelican Foreshore Park",
       "region": "뉴캐슬/포트스테판스",
       "grade": "C",
-      "average_score": 65.2,
+      "may_adjusted_score": 65.2,
       "scores": {
         "A": 66.5,
         "B": 61.5,
@@ -7297,7 +7198,7 @@
       "name": "Little Bay Picnic Area",
       "region": "사우스웨스트록스/켐시",
       "grade": "C",
-      "average_score": 65.2,
+      "may_adjusted_score": 65.2,
       "scores": {
         "A": 64.0,
         "B": 64.5,
@@ -7396,7 +7297,7 @@
       "name": "Brisbane Water National Park - Bulgandry Art Site",
       "region": "센트럴코스트",
       "grade": "C",
-      "average_score": 64.7,
+      "may_adjusted_score": 64.7,
       "scores": {
         "A": 53.0,
         "B": 70.0,
@@ -7495,7 +7396,7 @@
       "name": "Tamborine National Park (Cedar Creek Falls)",
       "region": "골드코스트",
       "grade": "C",
-      "average_score": 64.2,
+      "may_adjusted_score": 64.2,
       "scores": {
         "A": 56.0,
         "B": 69.0,
@@ -7594,7 +7495,7 @@
       "name": "Sea Acres Rainforest Centre",
       "region": "포트맥쿼리",
       "grade": "C",
-      "average_score": 64.2,
+      "may_adjusted_score": 64.2,
       "scores": {
         "A": 64.0,
         "B": 68.5,
@@ -7693,7 +7594,7 @@
       "name": "Shark Dive Xtreme",
       "region": "시드니",
       "grade": "C",
-      "average_score": 63.3,
+      "may_adjusted_score": 63.3,
       "scores": {
         "A": 47.5,
         "B": 64.0,
@@ -7792,7 +7693,7 @@
       "name": "SkyPoint Observation Deck",
       "region": "골드코스트",
       "grade": "C",
-      "average_score": 63.2,
+      "may_adjusted_score": 63.2,
       "scores": {
         "A": 65.0,
         "B": 57.5,
@@ -7891,7 +7792,7 @@
       "name": "Kiama Lighthouse",
       "region": "울릉공/키아마",
       "grade": "C",
-      "average_score": 62.5,
+      "may_adjusted_score": 62.5,
       "scores": {
         "A": 71.0,
         "B": 54.5,
@@ -7990,7 +7891,7 @@
       "name": "Irukandji Shark & Ray Encounters",
       "region": "뉴캐슬/포트스테판스",
       "grade": "C",
-      "average_score": 62.3,
+      "may_adjusted_score": 62.3,
       "scores": {
         "A": 61.0,
         "B": 54.0,
@@ -8089,7 +7990,7 @@
       "name": "Australian Botanic Garden Mount Annan",
       "region": "시드니",
       "grade": "C",
-      "average_score": 62.3,
+      "may_adjusted_score": 62.3,
       "scores": {
         "A": 54.0,
         "B": 65.5,
@@ -8188,7 +8089,7 @@
       "name": "Taronga Zoo Sydney",
       "region": "시드니",
       "grade": "C",
-      "average_score": 61.2,
+      "may_adjusted_score": 61.2,
       "scores": {
         "A": 56.5,
         "B": 64.0,
@@ -8287,7 +8188,7 @@
       "name": "Harrington Beach State Park",
       "region": "포스터/해링턴",
       "grade": "C",
-      "average_score": 61.0,
+      "may_adjusted_score": 61.0,
       "scores": {
         "A": 52.5,
         "B": 64.0,
@@ -8386,7 +8287,7 @@
       "name": "Back Creek Bridge",
       "region": "사우스웨스트록스/켐시",
       "grade": "C",
-      "average_score": 60.3,
+      "may_adjusted_score": 60.3,
       "scores": {
         "A": 63.0,
         "B": 55.5,
@@ -8485,7 +8386,7 @@
       "name": "The Entrance Memorial Park (Pelican Feeding)",
       "region": "센트럴코스트",
       "grade": "C",
-      "average_score": 60.2,
+      "may_adjusted_score": 60.2,
       "scores": {
         "A": 63.5,
         "B": 58.0,
@@ -8584,7 +8485,7 @@
       "name": "Dark Point Walking Track",
       "region": "뉴캐슬/포트스테판스",
       "grade": "C",
-      "average_score": 59.7,
+      "may_adjusted_score": 59.7,
       "scores": {
         "A": 47.0,
         "B": 72.0,
@@ -8683,7 +8584,7 @@
       "name": "Bushrangers Bay Aquatic Reserve",
       "region": "울릉공/키아마",
       "grade": "C",
-      "average_score": 58.5,
+      "may_adjusted_score": 58.5,
       "scores": {
         "A": 55.0,
         "B": 68.0,
@@ -8782,7 +8683,7 @@
       "name": "Winifred Falls",
       "region": "로열국립공원/그랜드퍼시픽",
       "grade": "C",
-      "average_score": 58.2,
+      "may_adjusted_score": 58.2,
       "scores": {
         "A": 52.0,
         "B": 64.0,
@@ -8881,7 +8782,7 @@
       "name": "Darling Harbour",
       "region": "시드니",
       "grade": "C",
-      "average_score": 58.2,
+      "may_adjusted_score": 58.2,
       "scores": {
         "A": 55.0,
         "B": 49.5,
@@ -8980,7 +8881,7 @@
       "name": "Palm Beach Rockpool",
       "region": "센트럴코스트",
       "grade": "C",
-      "average_score": 57.8,
+      "may_adjusted_score": 57.8,
       "scores": {
         "A": 60.0,
         "B": 59.0,
@@ -9079,7 +8980,7 @@
       "name": "The Big Prawn",
       "region": "바이런베이",
       "grade": "C",
-      "average_score": 57.7,
+      "may_adjusted_score": 57.7,
       "scores": {
         "A": 69.0,
         "B": 46.5,
@@ -9178,7 +9079,7 @@
       "name": "The Big Koala - The Spirit of All Koalas",
       "region": "포트맥쿼리",
       "grade": "C",
-      "average_score": 57.7,
+      "may_adjusted_score": 57.7,
       "scores": {
         "A": 67.0,
         "B": 43.5,
@@ -9277,7 +9178,7 @@
       "name": "Australian National Maritime Museum",
       "region": "시드니",
       "grade": "C",
-      "average_score": 57.3,
+      "may_adjusted_score": 57.3,
       "scores": {
         "A": 50.5,
         "B": 52.5,
@@ -9376,7 +9277,7 @@
       "name": "Zig Zag Railway",
       "region": "블루마운틴",
       "grade": "C",
-      "average_score": 56.7,
+      "may_adjusted_score": 56.7,
       "scores": {
         "A": 51.5,
         "B": 57.0,
@@ -9475,7 +9376,7 @@
       "name": "Loves Bay",
       "region": "울릉공/키아마",
       "grade": "C",
-      "average_score": 56.3,
+      "may_adjusted_score": 56.3,
       "scores": {
         "A": 62.5,
         "B": 53.0,
@@ -9574,7 +9475,7 @@
       "name": "David Fleay Wildlife Park",
       "region": "골드코스트",
       "grade": "C",
-      "average_score": 56.2,
+      "may_adjusted_score": 56.2,
       "scores": {
         "A": 55.0,
         "B": 54.5,
@@ -9673,7 +9574,7 @@
       "name": "Walkabout Wildlife Sanctuary",
       "region": "센트럴코스트",
       "grade": "C",
-      "average_score": 56.0,
+      "may_adjusted_score": 56.0,
       "scores": {
         "A": 49.0,
         "B": 60.0,
@@ -9772,7 +9673,7 @@
       "name": "The Big Banana Fun Park",
       "region": "콥스하버",
       "grade": "C",
-      "average_score": 53.5,
+      "may_adjusted_score": 53.5,
       "scores": {
         "A": 55.5,
         "B": 43.0,
@@ -9870,8 +9771,8 @@
       "name_ko": "루나 파크 시드니",
       "name": "Luna Park Sydney",
       "region": "시드니",
-      "grade": "D",
-      "average_score": 52.5,
+      "grade": "C",
+      "may_adjusted_score": 52.5,
       "scores": {
         "A": 57.0,
         "B": 50.0,
@@ -9970,7 +9871,7 @@
       "name": "Australian Reptile Park",
       "region": "센트럴코스트",
       "grade": "D",
-      "average_score": 52.5,
+      "may_adjusted_score": 52.5,
       "scores": {
         "A": 50.5,
         "B": 49.5,
@@ -10069,7 +9970,7 @@
       "name": "Jenolan Caves",
       "region": "블루마운틴",
       "grade": "D",
-      "average_score": 51.5,
+      "may_adjusted_score": 51.5,
       "scores": {
         "A": 43.0,
         "B": 74.5,
@@ -10168,7 +10069,7 @@
       "name": "Wooli Breakwater",
       "region": "야마/그래프턴",
       "grade": "D",
-      "average_score": 51.3,
+      "may_adjusted_score": 51.3,
       "scores": {
         "A": 43.5,
         "B": 54.0,
@@ -10267,7 +10168,7 @@
       "name": "Urunga Boardwalk",
       "region": "콥스하버",
       "grade": "D",
-      "average_score": 51.2,
+      "may_adjusted_score": 51.2,
       "scores": {
         "A": 43.5,
         "B": 70.0,
@@ -10366,7 +10267,7 @@
       "name": "Chang Lai Yuan Chinese Gardens",
       "region": "시드니",
       "grade": "D",
-      "average_score": 50.2,
+      "may_adjusted_score": 50.2,
       "scores": {
         "A": 58.5,
         "B": 40.5,
@@ -10465,7 +10366,7 @@
       "name": "Figure Eight Pools",
       "region": "로열국립공원/그랜드퍼시픽",
       "grade": "D",
-      "average_score": 47.8,
+      "may_adjusted_score": 47.8,
       "scores": {
         "A": 30.5,
         "B": 85.5,
@@ -10564,7 +10465,7 @@
       "name": "Hunter Valley Wildlife Park",
       "region": "뉴캐슬/포트스테판스",
       "grade": "D",
-      "average_score": 47.3,
+      "may_adjusted_score": 47.3,
       "scores": {
         "A": 46.5,
         "B": 45.0,
@@ -10663,7 +10564,7 @@
       "name": "Guy Fawkes River National Park",
       "region": "콥스하버",
       "grade": "D",
-      "average_score": 47.0,
+      "may_adjusted_score": 47.0,
       "scores": {
         "A": 26.5,
         "B": 73.0,
@@ -10762,7 +10663,7 @@
       "name": "Toboggan Hill Park",
       "region": "뉴캐슬/포트스테판스",
       "grade": "D",
-      "average_score": 43.3,
+      "may_adjusted_score": 43.3,
       "scores": {
         "A": 49.0,
         "B": 36.0,
@@ -10861,7 +10762,7 @@
       "name": "Port Macquarie Astronomical Observatory",
       "region": "포트맥쿼리",
       "grade": "D",
-      "average_score": 40.5,
+      "may_adjusted_score": 40.5,
       "scores": {
         "A": 37.5,
         "B": 44.0,
@@ -11020,7 +10921,6 @@
     "1b4d8d4c",
     "523a0b70",
     "642731d5",
-    "669a240e",
     "b6b6c774",
     "7e886049",
     "d5fa343f",

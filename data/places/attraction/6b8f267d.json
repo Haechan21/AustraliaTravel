@@ -58,23 +58,49 @@
       "parking": "현장 무료 주차. 138 Lomas Ln 진입",
       "road_condition": "일부 비포장 구간 있으나 일반 차량 통행 가능. Maitland 경유 Farley/Bishops Bridge 루트는 포트홀 심해 비추천",
       "nearby_attractions": [
-        {"name": "헌터밸리 와이너리 (Allandale 등)", "distance_km": 5, "drive_min": 8},
-        {"name": "The Valley Brewhouse", "distance_km": 3, "drive_min": 5},
-        {"name": "Cessnock 시내", "distance_km": 5, "drive_min": 8},
-        {"name": "Newcastle 시내", "distance_km": 60, "drive_min": 55}
+        {
+          "name": "헌터밸리 와이너리 (Allandale 등)",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "The Valley Brewhouse",
+          "distance_km": 3,
+          "drive_min": 5
+        },
+        {
+          "name": "Cessnock 시내",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Newcastle 시내",
+          "distance_km": 60,
+          "drive_min": 55
+        }
       ],
       "peak_times": "주말/학교 방학 혼잡. 오전 개장(9AM) 직후가 최적",
       "public_transport": "대중교통 접근 어려움. 자차 필수"
     },
     "experience": {
-      "photo_spots": ["캥거루 먹이주기 체험 사진", "코알라 근접 촬영", "기린/사자/얼룩말 등 이국적 동물"],
+      "photo_spots": [
+        "캥거루 먹이주기 체험 사진",
+        "코알라 근접 촬영",
+        "기린/사자/얼룩말 등 이국적 동물"
+      ],
       "golden_hour": "오전 햇살 아래 동물들이 가장 활발. 오후 늦은 시간은 동물 활동 줄어듦",
       "seasonal_beauty": "5월 가을 야외 관람에 쾌적. 비 오는 날에도 실내 전시 일부 있음",
-      "hidden_gems": "헌터밸리 와이너리 투어와 연계 가능. NSW 최고의 동물원 중 하나",
+      "hidden_gems": [
+        "헌터밸리 와이너리 투어와 연계 가능. NSW 최고의 동물원 중 하나"
+      ],
       "sensory_notes": "동물 소리 (앵무새, 원숭이 등). 동물원 특유의 자연 냄새. 캥거루 먹이주기 시 직접적 촉감"
     },
     "risk_check": {
-      "negative_review_patterns": ["입장료 높음 ($49)", "일부 동물 사육장 작다는 의견", "도심에서 거리 있음"],
+      "negative_review_patterns": [
+        "입장료 높음 ($49)",
+        "일부 동물 사육장 작다는 의견",
+        "도심에서 거리 있음"
+      ],
       "may_operation": "매일 9AM-4PM 정상 운영",
       "safety_issues": "특별한 안전 이슈 없음. 가족 친화적",
       "weather_impact": "비 오는 날 야외 구간 불편. 실내 전시 일부 있으나 제한적",

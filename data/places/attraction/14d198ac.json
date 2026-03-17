@@ -58,23 +58,49 @@
       "parking": "넓은 무료 주차장. Sawtell Rd에서 진입. 놀이터/화장실 인접",
       "road_condition": "좁은 진입로 후 주차장 도달. 포장도로. 캐러밴 비추천 (회전 공간 없음, 경고 표지 없음)",
       "nearby_attractions": [
-        {"name": "Sawtell (소텔) 마을", "distance_km": 2, "drive_min": 5},
-        {"name": "The Big Banana Fun Park (빅 바나나)", "distance_km": 10, "drive_min": 12},
-        {"name": "Muttonbird Island (머튼버드)", "distance_km": 8, "drive_min": 12},
-        {"name": "Forest Sky Pier (포레스트 스카이 피어)", "distance_km": 12, "drive_min": 15}
+        {
+          "name": "Sawtell (소텔) 마을",
+          "distance_km": 2,
+          "drive_min": 5
+        },
+        {
+          "name": "The Big Banana Fun Park (빅 바나나)",
+          "distance_km": 10,
+          "drive_min": 12
+        },
+        {
+          "name": "Muttonbird Island (머튼버드)",
+          "distance_km": 8,
+          "drive_min": 12
+        },
+        {
+          "name": "Forest Sky Pier (포레스트 스카이 피어)",
+          "distance_km": 12,
+          "drive_min": 15
+        }
       ],
       "peak_times": "이른 아침/늦은 오후 인기. 고래 관찰 시즌에 방문객 증가",
       "public_transport": "소텔까지 버스 이용 가능. 이후 도보"
     },
     "experience": {
-      "photo_spots": ["남쪽 머레이즈 비치 전망", "북쪽 보암비 크릭 전망", "헤드랜드 정상에서 양방향 파노라마"],
+      "photo_spots": [
+        "남쪽 머레이즈 비치 전망",
+        "북쪽 보암비 크릭 전망",
+        "헤드랜드 정상에서 양방향 파노라마"
+      ],
       "golden_hour": "동향 해안이므로 일출 뷰 탁월. 해/달이 바다 위로 뜨는 장면 장관",
       "seasonal_beauty": "5월 고래 이동 시즌 시작. 가을 걷기에 최적 기온",
-      "hidden_gems": "소텔(Sawtell) 마을은 레트로 감성 해변 마을. TripAdvisor 소텔 1위 명소",
+      "hidden_gems": [
+        "소텔(Sawtell) 마을은 레트로 감성 해변 마을. TripAdvisor 소텔 1위 명소"
+      ],
       "sensory_notes": "해풍과 파도 소리. 탁 트인 양방향 해안 전망의 개방감. 풀밭 위 해풍"
     },
     "risk_check": {
-      "negative_review_patterns": ["피크닉 테이블 적음", "그늘 부족", "캐러밴 진입 불가 (회전 공간 없음)"],
+      "negative_review_patterns": [
+        "피크닉 테이블 적음",
+        "그늘 부족",
+        "캐러밴 진입 불가 (회전 공간 없음)"
+      ],
       "may_operation": "항상 개방. 정상 운영",
       "safety_issues": "특별한 안전 이슈 없음. 절벽 가장자리 주의",
       "weather_impact": "강풍 시 불편. 비 오면 트레일 미끄러움",

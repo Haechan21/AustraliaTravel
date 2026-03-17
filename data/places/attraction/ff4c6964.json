@@ -58,23 +58,48 @@
       "parking": "넓은 무료 주차장 (장애인 주차 포함). 화장실/BBQ/피크닉 시설. 고트래픽 관광지라 성수기 주차 제한",
       "road_condition": "포장도로. 도리고 타운 중심에서 북쪽 Coramba Rd로 2km. 접근 매우 용이",
       "nearby_attractions": [
-        {"name": "Crystal Shower Falls (크리스탈 샤워)", "distance_km": 7, "drive_min": 10},
-        {"name": "Dorrigo Rainforest Centre", "distance_km": 5, "drive_min": 8},
-        {"name": "Ebor Falls (에보르 폭포)", "distance_km": 50, "drive_min": 55},
-        {"name": "Dorrigo 타운 카페/상점", "distance_km": 2, "drive_min": 3}
+        {
+          "name": "Crystal Shower Falls (크리스탈 샤워)",
+          "distance_km": 7,
+          "drive_min": 10
+        },
+        {
+          "name": "Dorrigo Rainforest Centre",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Ebor Falls (에보르 폭포)",
+          "distance_km": 50,
+          "drive_min": 55
+        },
+        {
+          "name": "Dorrigo 타운 카페/상점",
+          "distance_km": 2,
+          "drive_min": 3
+        }
       ],
       "peak_times": "주말 관광 인기 장소. 오전이 한적",
       "public_transport": "대중교통 접근 어려움. 자차 필수"
     },
     "experience": {
-      "photo_spots": ["주차장 전망대에서 폭포 정면 감상", "폭포 하단 두 번째 전망 플랫폼", "아이 놀이터/미로 옆 잔디밭"],
+      "photo_spots": [
+        "주차장 전망대에서 폭포 정면 감상",
+        "폭포 하단 두 번째 전망 플랫폼",
+        "아이 놀이터/미로 옆 잔디밭"
+      ],
       "golden_hour": "오전 빛이 폭포에 잘 비침. 주차장 레벨 전망대가 정면이므로 빛 방향 좋음",
       "seasonal_beauty": "5월 수온 차가워 수영 어려움. 폭포 감상과 산책에 좋은 시기. 현무암 절벽의 가을 색감",
-      "hidden_gems": "주차장 옆 어린이 놀이터와 미로. 반려견 동반 가능. 전망대까지 휠체어 접근 가능",
+      "hidden_gems": [
+        "주차장 옆 어린이 놀이터와 미로. 반려견 동반 가능. 전망대까지 휠체어 접근 가능"
+      ],
       "sensory_notes": "30m 높이 현무암 절벽에서 떨어지는 폭포 소리. 시원한 물안개. 우림의 습한 향기"
     },
     "risk_check": {
-      "negative_review_patterns": ["폭포 하단 접근 일시 제한 가능", "성수기 주차 제한"],
+      "negative_review_patterns": [
+        "폭포 하단 접근 일시 제한 가능",
+        "성수기 주차 제한"
+      ],
       "may_operation": "항상 개방. 정상 운영",
       "safety_issues": "폭포 하단 접근 시 바위 미끄러움 주의. 수영 웅덩이 수온 낮음",
       "weather_impact": "비 후 폭포 수량 증가하여 장관. 도로 상태는 비 후에도 양호",

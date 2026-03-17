@@ -58,23 +58,48 @@
       "parking": "Trial Bay Gaol 앞 대형 아스팔트 주차장. 버스 전용 주차 포함. 장애인 주차 4칸. 무료",
       "road_condition": "포장도로. South West Rocks에서 Phillip Dr → Cardwell St 따라 진입. 2WD 전천후 접근 가능",
       "nearby_attractions": [
-        {"name": "Little Bay Picnic Area (리틀 베이)", "distance_km": 0.5, "drive_min": 2},
-        {"name": "Back Creek Bridge (백 크릭)", "distance_km": 4, "drive_min": 7},
-        {"name": "Smoky Cape Lighthouse", "distance_km": 6, "drive_min": 10},
-        {"name": "South West Rocks 시내", "distance_km": 3, "drive_min": 5}
+        {
+          "name": "Little Bay Picnic Area (리틀 베이)",
+          "distance_km": 0.5,
+          "drive_min": 2
+        },
+        {
+          "name": "Back Creek Bridge (백 크릭)",
+          "distance_km": 4,
+          "drive_min": 7
+        },
+        {
+          "name": "Smoky Cape Lighthouse",
+          "distance_km": 6,
+          "drive_min": 10
+        },
+        {
+          "name": "South West Rocks 시내",
+          "distance_km": 3,
+          "drive_min": 5
+        }
       ],
       "peak_times": "주말/공휴일 캠핑장 만석. 교도소 관람은 오전이 한적",
       "public_transport": "대중교통 접근 어려움. 자차 필수"
     },
     "experience": {
-      "photo_spots": ["교도소 유적 내부에서 바다 배경 사진", "Sentry's Lookout에서 해안 조망", "캥거루가 풀밭에서 풀 뜯는 모습"],
+      "photo_spots": [
+        "교도소 유적 내부에서 바다 배경 사진",
+        "Sentry's Lookout에서 해안 조망",
+        "캥거루가 풀밭에서 풀 뜯는 모습"
+      ],
       "golden_hour": "동향 해안이므로 일출 뷰 탁월. 교도소 석벽에 아침 햇살이 비치는 모습 인상적",
       "seasonal_beauty": "5월 방문객 적어 한적. 고래 이동 시즌 시작. 캥거루 목격 가능",
-      "hidden_gems": "1차 세계대전 독일인 포로수용소 역사. 셀프 가이드 투어로 역사 학습. 캠핑장 병행 가능 ($31/박~). Trial Bay Kiosk Restaurant 있음",
+      "hidden_gems": [
+        "1차 세계대전 독일인 포로수용소 역사. 셀프 가이드 투어로 역사 학습. 캠핑장 병행 가능 ($31/박~). Trial Bay Kiosk Restaurant 있음"
+      ],
       "sensory_notes": "교도소 석벽 사이로 부는 바람 소리. 파도 소리와 역사적 분위기의 조화. 잔디밭에서 캥거루 관찰"
     },
     "risk_check": {
-      "negative_review_patterns": ["교도소 유적이 생각보다 작음", "별도 입장료 ($11)"],
+      "negative_review_patterns": [
+        "교도소 유적이 생각보다 작음",
+        "별도 입장료 ($11)"
+      ],
       "may_operation": "매일 9AM-4:30PM 정상 운영 (크리스마스 제외)",
       "safety_issues": "해안 절벽 가장자리 주의. 스노클링/수영 시 조류 확인",
       "weather_impact": "우천 시 야외 관람 불편하나 교도소 내부 일부 지붕 있음. 강풍 시 해안 산책 주의",

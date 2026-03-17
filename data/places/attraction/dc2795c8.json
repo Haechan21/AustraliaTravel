@@ -58,23 +58,47 @@
       "parking": "Blowhole Point Rd 충분한 무료 주차.",
       "road_condition": "포장 양호. 키아마 타운센터에서 도보 가능.",
       "nearby_attractions": [
-        {"name": "Kiama Blowhole (30097942)", "distance_km": 0.1, "drive_min": 1},
-        {"name": "Little Blowhole (87882b26)", "distance_km": 2, "drive_min": 4},
-        {"name": "Bombo Headland (a43e5009)", "distance_km": 3, "drive_min": 5},
-        {"name": "Loves Bay (a183bc9a)", "distance_km": 3, "drive_min": 5}
+        {
+          "name": "Kiama Blowhole (30097942)",
+          "distance_km": 0.1,
+          "drive_min": 1
+        },
+        {
+          "name": "Little Blowhole (87882b26)",
+          "distance_km": 2,
+          "drive_min": 4
+        },
+        {
+          "name": "Bombo Headland (a43e5009)",
+          "distance_km": 3,
+          "drive_min": 5
+        },
+        {
+          "name": "Loves Bay (a183bc9a)",
+          "distance_km": 3,
+          "drive_min": 5
+        }
       ],
       "peak_times": "큰 블로우홀과 동일 — 주말 오전~오후 혼잡.",
       "public_transport": "키아마역에서 도보 10분"
     },
     "experience": {
-      "photo_spots": ["등대 + 바다 배경", "Blowhole Point에서 해안선 파노라마"],
+      "photo_spots": [
+        "등대 + 바다 배경",
+        "Blowhole Point에서 해안선 파노라마"
+      ],
       "golden_hour": "일출 시 동쪽 바다에서 등대를 비추는 따뜻한 빛",
       "seasonal_beauty": "5월 가을 — 풍부한 해안 조류 관찰. 서늘한 바닷바람.",
-      "hidden_gems": "Pilots' Cottage Museum — 대부분 지나치는 작은 박물관",
+      "hidden_gems": [
+        "Pilots' Cottage Museum — 대부분 지나치는 작은 박물관"
+      ],
       "sensory_notes": "등대 주변 바닷바람, 갈매기 소리, 근처 블로우홀의 분출 소리"
     },
     "risk_check": {
-      "negative_review_patterns": ["등대 내부 비공개", "단독 방문 시 체류 짧음"],
+      "negative_review_patterns": [
+        "등대 내부 비공개",
+        "단독 방문 시 체류 짧음"
+      ],
       "may_operation": "정상 운영.",
       "safety_issues": "해안 절벽 가장자리 주의. Blowhole Point 바위 미끄러움.",
       "weather_impact": "우천 시 전망 제한. 강풍 가능.",
