@@ -14,6 +14,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **`config/trip.json`**: 일정 생성 설정 (여행 스타일, 우선순위, 필수 포함/제외 장소).
 - **`config/scoring.json`**: 카테고리별 평가 기준 및 가중치.
 - **`docs/CRITIC.md`**: 평가 페르소나 3명(효율 전략가/감성 탐험가/현실주의 비평가)의 정의와 페르소나별 가중치. 평가 워크플로우(리서치 분업→통합→해석 분화→가중합), 기준별 채점 가이드라인 포함.
+- **`docs/CRITIC_ROUTE.md`**: 루트 후보 평가 전용 페르소나 및 기준. CRITIC.md의 루트 버전으로, 설계/감성/실행 3관점 평가 프레임워크 정의.
+- **`docs/TRAVELER_PROFILE.md`**: 여행자 프로필 및 선호도 설문 결과. 운전 내성, 여행 스타일, 예산 범위 등 개인 선호 정의.
 
 ## 워크플로우 (5 Phase)
 
@@ -21,14 +23,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 2. **정보 수집**: 웹검색으로 장소별 상세정보·리뷰 수집 → place JSON의 `collected_data` 채움, `research/claude-research/`에 리서치 저장
 3. **평가/등급**: 수집 데이터 기반 S~D 등급 부여 → `data/scores/{category}_scored.json`
 4. **일정 생성**: 대화형으로 일정 구성 → `docs/ITINERARY.md`에 직접 기록
-5. **일정 리뷰**: 확정 일정을 비판적으로 검토 → `research/ai-review/`에 근거 저장, `docs/ITINERARY.md`에 리뷰 반영
+5. **일정 리뷰**: 확정 일정을 비판적으로 검토 → `research/claude-research/`에 근거 저장, `docs/ITINERARY.md`에 리뷰 반영
 
 ## 현재 진행 상황
 
-- Phase 1 (전처리): ✅ 완료 — 111개 attraction stub (2026-03-13 추가분 26개 포함, 중복 1개)
-- Phase 2 (정보 수집): ✅ 완료 — 110개 장소 collected_data 채움 (중복 7a922fd8 제외), 14개 지역 분류, 주제별·지역별 리서치 30건+
+- Phase 1 (전처리): ✅ 완료 — 111개 attraction stub (2026-03-13 추가분 26개 포함)
+- Phase 2 (정보 수집): ✅ 완료 — 110개 장소 collected_data 채움 (미수집 1개: 7a922fd8), 14개 지역 분류, 주제별·지역별 리서치 30건+
 - Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 110곳 평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:11 (may_adjusted_score 기준 단일 `grade`). 논쟁 장소 37곳
-- Phase 4 (일정 생성): 🔄 진행 중 — 9개 루트 후보 완성 (1~9조), ITINERARY.md 최종 반영 미완
+- Phase 4 (일정 생성): 🔄 진행 중 — 9개 루트 후보 완성 (1~9조). 최종 루트 선택 미결정, ITINERARY.md는 5/23~24일만 상세 작성 (5/25~29일 미작성)
 - Phase 5 (일정 리뷰): ⬜ 미시작
 - 향후: 음식점·숙소 데이터 수집 및 평가 예정, 관광지 추가도 가능
 
@@ -45,7 +47,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Phase 4→5 전환 시
 - [ ] 9개 루트 중 최종 선택 → `docs/ITINERARY.md`에 반영
-- [ ] Phase 5 리뷰 시작 → `research/ai-review/` 근거 저장
+- [ ] Phase 5 리뷰 시작 → `research/claude-research/` 근거 저장
 
 ## 스크립트 실행
 
@@ -65,6 +67,7 @@ python scripts/generate_frontend.py --data     # place_data.json만
 # 루트 파일 점수 정합성 검증/수정
 python scripts/update_route_scores.py            # 불일치 리포트만 (dry-run)
 python scripts/update_route_scores.py --fix      # 실제 수정
+python scripts/update_route_scores.py --fix --verbose  # 상세 로그 포함
 ```
 
 외부 의존성 없음. Python 3.11+ 표준 라이브러리만 사용.
@@ -83,7 +86,25 @@ python scripts/update_route_scores.py --fix      # 실제 수정
 
 - `research/deep-research/`: 외부 AI(ChatGPT, Gemini) 딥 리서치. 파일명 `{주제}_{출처}.md`
 - `research/claude-research/`: Claude Code 직접 조사. 파일명 `{주제}.md`
-- `research/ai-review/`: docs/ITINERARY.md 리뷰 근거. 파일명 `{날짜}_{주제}.md`
+  - `places/`: 지역별 장소 리서치 요약
+  - `weather/`: 지역별 날씨 조사
+  - `activities/`: 액티비티 리서치
+- `research/route-plans/`: 루트 후보 상세 일정 (1~9조) + 종합 순위표(README.md)
+
+## 프론트엔드 구조 (Jekyll + GitHub Pages)
+
+Jekyll 기반 정적 사이트로 데이터를 시각화한다. `_config.yml`에서 `jekyll-theme-cayman` 테마 사용.
+
+| 페이지 | 파일 | JS | 데이터 소스 |
+|--------|------|----|-------------|
+| 메인 | `index.md` | — | — |
+| 관광지 랭킹 | `rankings.html` | `assets/js/rankings.js` | `assets/data/place_data.json` |
+| 루트 비교 | `routes.html` | `assets/js/routes.js` | `assets/data/route_data.json` |
+| 액티비티 후보 | `activities.html` | `assets/js/activities.js` | — |
+| 루트 상세 (리다이렉트) | `route-plans.html` | — | — → `routes.html`로 리다이렉트 |
+
+- `place_data.json`과 `route_data.json`은 `scripts/generate_frontend.py`로 자동 생성
+- 레이아웃: `_layouts/default.html`, 스타일: `assets/css/style.scss`
 
 ## 주요 설계 원칙
 

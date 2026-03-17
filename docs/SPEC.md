@@ -27,7 +27,7 @@ GoogleMaps/*.json ──→ Phase 1: 전처리 ──→ data/places/
                       Phase 3: 평가/등급 ──→ data/scores/
                       Phase 4: 일정 생성 ──→ ITINERARY.md (확정 일정)
                       Phase 5: 일정 리뷰 ──→ ITINERARY.md (리뷰 요약 + 상세)
-                                            research/ai-review/
+                                            research/claude-research/
 ```
 
 각 Phase는 개념적 단계 구분이다. 실제 작업은 대부분 **Claude Code와의 대화**로 수행되며, 각 Phase를 반드시 순서대로 거칠 필요는 없다. 예를 들어, Phase 2(정보 수집)와 Phase 4(일정 생성)를 대화 중에 동시에 진행할 수 있다.
@@ -86,7 +86,7 @@ GoogleMaps/
 | `"호주음식"` | `restaurant` | 음식점, 카페 |
 | `"호주숙소"` | `accommodation` | 숙소 |
 
-> **현재 상태**: GoogleMaps 데이터에는 `"호주여행"` (관광지, 110개 항목 — 2026-03-13 추가분 26개 포함)만 존재한다. `"호주음식"`, `"호주숙소"` 데이터는 향후 추가 예정이며, 관광지도 계속 늘어날 수 있다.
+> **현재 상태**: GoogleMaps 데이터에는 `"호주여행"` (관광지, 111개 항목 — 2026-03-13 추가분 26개 포함, 중복 1개)만 존재한다. `"호주음식"`, `"호주숙소"` 데이터는 향후 추가 예정이며, 관광지도 계속 늘어날 수 있다.
 
 > 새 카테고리가 필요하면 구글맵에서 새 리스트명으로 저장하고, 매핑 규칙을 추가한다.
 
@@ -108,6 +108,7 @@ GoogleMaps/
   "category": "attraction | restaurant | accommodation",
   "source_file": "2026-03-11.json",
   "address_raw": "string (GoogleMaps address 필드 원문 보존)",
+  "google_maps_url": "string (구글맵 URL, Phase 2에서 채움)",
 
   "location": {
     "coordinates": { "lng": 0.0, "lat": 0.0 },
@@ -137,7 +138,28 @@ GoogleMaps/
       },
       "tips": []
     },
-    "collected_at": null
+    "collected_at": null,
+    "logistics": {
+      "parking": null,
+      "road_condition": null,
+      "nearby_attractions": [],
+      "peak_times": null,
+      "public_transport": null
+    },
+    "experience": {
+      "photo_spots": [],          // string | string[] 허용
+      "golden_hour": null,
+      "seasonal_beauty": null,
+      "hidden_gems": [],
+      "sensory_notes": null
+    },
+    "risk_check": {
+      "negative_review_patterns": [],  // string | string[] 허용
+      "may_operation": null,
+      "safety_issues": null,
+      "weather_impact": null,
+      "quality_trend": null
+    }
   },
 
   "metadata": {
@@ -149,6 +171,26 @@ GoogleMaps/
   }
 }
 ```
+
+**`nearby_attractions` 필드 형식** (선택적 필드):
+
+배열 형식으로 통일. 각 원소는 객체이며, `name`만 필수이고 나머지는 선택적이다.
+
+```json
+"nearby_attractions": [
+  {"name": "장소명", "distance_km": 5, "drive_min": 10},
+  {"name": "장소명", "walk_min": 15},
+  {"name": "장소명"}
+]
+```
+
+| 필드 | 타입 | 필수 | 설명 |
+|------|------|------|------|
+| `name` | string | O | 인근 장소명 (한국어명 사용) |
+| `distance_km` | number | - | 거리 (km). 같은 위치면 0 |
+| `drive_min` | number | - | 차량 이동 시간 (분) |
+| `walk_min` | number | - | 도보 이동 시간 (분) |
+| `ferry_min` | number | - | 페리 이동 시간 (분) |
 
 **설계 원칙**:
 - `collected_data`가 `null`이면 아직 수집되지 않은 장소 (Phase 2 미완료)
@@ -195,8 +237,8 @@ GoogleMaps/
 ```json
 {
   "scorer": "A",
-  "persona": "효율 전략가",
-  "weights": { "google_rating": 15, "review_count": 10, "..." : "..." },
+  "persona": "효율 전략가 김도현",
+  "weights": { "google_rating": 0.15, "review_count": 0.15, "scenery": 0.10, "accessibility": 0.25, "value_for_money": 0.05, "time_efficiency": 0.25, "uniqueness": 0.05 },
   "scores": [
     {
       "id": "string",
@@ -214,7 +256,114 @@ GoogleMaps/
 
 **설계 원칙**:
 - `raw_scores`에 항목별 점수와 **판단 근거(reason)**를 반드시 포함. 블랙박스 평가를 방지한다.
+- 각 scorer의 `weights`는 해당 페르소나의 개별 가중치(비율, 합계 1.0)를 사용하며, `config/scoring.json`의 기본 가중치와 다를 수 있다. 3명 가중치의 산술 평균은 기본 가중치와 일치하도록 설계되어 있다.
 - 평가 기준이 변경되면 전체 재평가. 등급은 퍼센타일 기반으로 `config/scoring.json`에서 관리.
+
+#### 프론트엔드 데이터 (`assets/data/place_data.json`)
+
+`scripts/generate_frontend.py`가 평가 결과를 종합하여 생성하는 프론트엔드용 JSON. `rankings.html` 페이지에서 fetch하여 사용한다.
+
+```json
+{
+  "generated_at": "2026-03-13",
+  "total": 110,
+  "grade_distribution": { "S": 6, "A": 22, "B": 38, "C": 33, "D": 11 },
+  "grading_method": "percentile",
+  "grading_cutoffs": { "S": "1~6위", "A": "7~28위", ... },
+  "controversial_count": 37,
+  "personas": {
+    "A": { "name": "효율 전략가", "full_name": "김도현", "focus": "접근성·시간효율" },
+    "B": { ... },
+    "C": { ... }
+  },
+  "weights": {
+    "A": { "google_rating": 0.15, "review_count": 0.15, "scenery": 0.10, ... },
+    "B": { ... },
+    "C": { ... }
+  },
+  "places": {
+    "{place_id}": {
+      "id": "string (8자 해시)",
+      "name_ko": "string",
+      "name": "string (영문명)",
+      "region": "string",
+      "grade": "S | A | B | C | D",
+      "average_score": 90.5,
+      "scores": { "A": 75.0, "B": 95.5, "C": 86.0 },
+      "spread": 20.5,
+      "controversial": true,
+      "breakdown": {
+        "{criterion}": {
+          "avg": 9.3,
+          "A": 9, "B": 10, "C": 9,
+          "reasons": { "A": "string", "B": "string", "C": "string" }
+        }
+      },
+      "coords": { "lat": -28.638, "lng": 153.636 },
+      "google_maps_url": "string"
+    }
+  },
+  "ranked_ids": ["213ea17d", "e16a2fe5", ...]
+}
+```
+
+| 필드 | 설명 |
+|------|------|
+| `personas` | 3명 평가 페르소나의 이름·역할. UI 표시용 |
+| `weights` | 페르소나별 기준 가중치 (합계 1.0) |
+| `places` | place_id를 키로 한 장소 객체 맵 |
+| `places.*.breakdown` | 7개 기준별 페르소나 점수 + 판단 근거. 기준: `scenery`, `uniqueness`, `google_rating`, `accessibility`, `review_count`, `value_for_money`, `time_efficiency` |
+| `places.*.average_score` | `may_adjusted_score` 기준 (계절 보정 후 점수) |
+| `ranked_ids` | 점수 내림차순으로 정렬된 place_id 배열 |
+
+> **생성**: `python scripts/generate_frontend.py --data` (또는 플래그 없이 전체 생성). 입력 소스: `data/scores/scorer_{A,B,C}.json` + `data/scores/attraction_scored.json` + `data/places/attraction/*.json`
+
+#### 프론트엔드 데이터 (`assets/data/route_data.json`)
+
+루트 비교 페이지(`routes.html`)에서 사용하는 경유지·좌표 데이터. 수동 작성.
+
+```json
+{
+  "routes": {
+    "{route_id}": {
+      "name": "string (예: '1조: GC직행 + 남하해안')",
+      "color": "string (hex, 예: '#e74c3c')",
+      "total_km": 2177,
+      "score": 59.3,
+      "days": [
+        {
+          "day": 1,
+          "date": "5/24",
+          "label": "string (일별 요약)",
+          "day_km": 865,
+          "stops": [
+            {
+              "name": "string",
+              "lng": 151.1772,
+              "lat": -33.9461,
+              "type": "start | waypoint | attraction | stay | end",
+              "grade": "S | A | B | C | D",
+              "distance_km": 0
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
+```
+
+| 필드 | 설명 |
+|------|------|
+| `routes` | route_id(숫자 문자열 `"1"`~`"9"`)를 키로 한 루트 객체 맵 |
+| `color` | 지도에서 루트를 구분하는 hex 색상 코드 |
+| `total_km` | 루트 전체 주행 거리 (OSRM 기반) |
+| `score` | CRITIC_ROUTE.md 기준 루트 종합 점수 |
+| `days[].stops[].type` | `start`: 출발지, `waypoint`: 경유지(비관광), `attraction`: 관광 명소, `stay`: 숙박지, `end`: 종료지(렌터카 반납 등) |
+| `days[].stops[].grade` | `type`이 `attraction`인 경우에만 존재 (선택). 해당 장소의 평가 등급 |
+| `days[].stops[].distance_km` | 직전 stop으로부터의 도로 거리. 첫 stop은 0 |
+
+> **작성 방법**: `route_data.json`은 자동 생성되지 않으며, 루트 후보 작성 시 수동으로 관리한다.
 
 #### 지역 분류 (`data/regions.json`)
 
@@ -268,7 +417,7 @@ GoogleMaps 원본 데이터를 좌표 기반으로 처리한다. **장소명 확
 
 Claude Code가 대화형으로 장소별 정보를 웹 검색하고, 결과를 JSON 또는 리서치 파일에 저장한다. 조사 과정에서 생산한 리서치 결과는 `research/claude-research/`에, 외부 AI 딥 리서치(`research/deep-research/`)도 참고 소스로 활용한다.
 
-> **현재 상태**: ✅ Phase 2 완료. `data/places/attraction/` 109개 장소(중복 제외)에 `collected_data`가 채워짐. `research/claude-research/places/`에 7개 지역별 리서치 요약 생성 완료. 날씨 조사(지역별 7개 파일), 로드트립 경로 리서치, 여행 환경 조사 등도 `research/claude-research/`에 완료되어 있다.
+> **현재 상태**: ✅ Phase 2 완료. `data/places/attraction/` 110개 장소(중복 1개 제외)에 `collected_data`가 채워짐. `research/claude-research/places/`에 7개 지역별 리서치 요약 생성 완료. 날씨 조사(지역별 7개 파일), 로드트립 경로 리서치, 여행 환경 조사 등도 `research/claude-research/`에 완료되어 있다.
 
 #### 리뷰 수집 전략: 시기 기반 2구간
 
@@ -396,7 +545,18 @@ Claude Code가 대화형으로 장소별 정보를 웹 검색하고, 결과를 J
 - `data/scores/scorer_{A,B,C}.json`: 개별 평가자 결과
 - `data/scores/attraction_scored.json`: 종합 결과 (3명 평균 + 등급)
 - `data/scores/RANKINGS.md`: 사람이 읽을 수 있는 랭킹 문서 (자동 생성)
-- `rankings.html` + `assets/js/rankings.js` + `assets/data/place_data.json`: 프론트엔드 (자동 생성)
+- `assets/data/place_data.json`: 프론트엔드용 장소 데이터 (자동 생성, 스키마는 3.2절 참조)
+
+**프론트엔드 데이터 생성 스크립트** (`scripts/generate_frontend.py`):
+
+```bash
+python scripts/generate_frontend.py            # 전체 (재채점 + RANKINGS + place_data)
+python scripts/generate_frontend.py --rescore  # scorer 파일로부터 등급 재계산만
+python scripts/generate_frontend.py --rank     # RANKINGS.md만
+python scripts/generate_frontend.py --data     # place_data.json만
+```
+
+스크립트는 3단계로 동작한다: (1) scorer 파일들로부터 `attraction_scored.json` 재생성 (등급 재계산), (2) `RANKINGS.md` 생성, (3) `place_data.json` 생성. 플래그로 원하는 단계만 선택 실행할 수 있다.
 
 > **재현성 보장**: 모든 채점에 `reason` 필드로 판단 근거를 기록하므로, 나중에 기준을 조정하거나 재평가할 때 참고할 수 있다.
 
@@ -470,6 +630,7 @@ python scripts/update_route_scores.py --fix --verbose
     "2026-05-29": true,
     "2026-05-30": false
   },
+  "return_deadline": { "date": "2026-05-29", "time": "21:00" },
   "min_grade": "B",
   "must_include": [],
   "must_exclude": [],
@@ -488,7 +649,7 @@ python scripts/update_route_scores.py --fix --verbose
 ### Phase 5: 일정 리뷰
 
 **입력**: `ITINERARY.md` (확정/초안 일정), `META.md` (제약 조건), `research/deep-research/` + `research/claude-research/` (참고 자료)
-**출력**: `research/ai-review/{날짜}_{주제}.md` (근거 자료), `ITINERARY.md` (리뷰 요약 + 상세)
+**출력**: `research/claude-research/{날짜}_{주제}.md` (근거 자료), `ITINERARY.md` (리뷰 요약 + 상세)
 
 일정이 확정되거나 초안이 작성될 때마다, AI가 해당 일정을 리서치하고 비판적으로 검토하여 리뷰를 제공한다.
 
@@ -501,7 +662,7 @@ Step 1: 리서치          Step 2: 의견 정리          Step 3: 리뷰 작성
 (정보 수집)             (파일별 정리)              (ITINERARY.md 반영)
      │                       │                          │
      ▼                       ▼                          ▼
-웹 검색/딥 리서치 →  ai-review/{날짜}_*.md  →  ITINERARY.md 리뷰 섹션
+웹 검색/딥 리서치 →  claude-research/{날짜}_*.md  →  ITINERARY.md 리뷰 섹션
 참고 자료 확인         긍정 + 비판 분리             요약 + 상세
 ```
 
@@ -516,11 +677,11 @@ Step 1: 리서치          Step 2: 의견 정리          Step 3: 리뷰 작성
 | 시간 배분 적절성 | 리뷰/공식사이트 (영업시간, 체류시간) | "Sixt 시드니공항 일요일 오픈 시간" |
 | 기존 리서치 | `research/deep-research/`, `research/claude-research/` 참조 | 외부 AI 및 기존 조사 결과와 비교 |
 
-**Step 2: 의견 정리 (ai-review/ 파일 생성)**
+**Step 2: 의견 정리 (claude-research/ 파일 생성)**
 
 수집한 정보를 날짜별로 **긍정적 의견**과 **비판적 의견**으로 분리하여 파일로 정리한다.
 
-파일명: `research/ai-review/{날짜}_{주제}.md`
+파일명: `research/claude-research/{날짜}_{주제}.md`
 
 ```markdown
 ---
@@ -546,7 +707,7 @@ Step 1: 리서치          Step 2: 의견 정리          Step 3: 리뷰 작성
 
 **Step 3: 리뷰 작성 (ITINERARY.md 반영)**
 
-ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
+claude-research/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 
 - **리뷰 요약** (일정표 바로 아래, 5줄 이내): 핵심 포인트만 요약. 상세 링크 포함
 - **리뷰 상세** (하단 섹션): 구체적 근거, 대안 제시, 리스크 분석
@@ -585,21 +746,25 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 ├── docs/
 │   ├── SPEC.md                 # 기술 설계서 (이 문서)
 │   ├── CRITIC.md               # 평가 페르소나 3명 정의 및 채점 가이드
+│   ├── CRITIC_ROUTE.md         # 루트 후보 평가 페르소나 및 기준 (CRITIC.md의 루트 버전)
 │   ├── META.md                 # 여행 전제 조건 (항공, 렌터카, 로드트립 방향, 제약 조건)
 │   ├── ITINERARY.md            # 날짜별 확정 일정 + AI 리뷰 (Single Source of Truth)
 │   └── TRAVELER_PROFILE.md     # 여행자 프로필 & 선호도 설문 (운전 내성, 여행 스타일 등)
 ├── CLAUDE.md                   # Claude Code 작업 가이드
 ├── .gitignore
 │
+├── _config.yml                  # Jekyll 사이트 설정
 ├── _layouts/                   # Jekyll 레이아웃 템플릿
 │   └── default.html
 ├── rankings.html               # 관광지 랭킹 페이지 (GitHub Pages)
 ├── routes.html                 # 루트 비교 페이지 (지도 + 상세 평가)
+├── activities.html             # 액티비티 후보 페이지
 ├── index.md                    # 사이트 인덱스
 ├── assets/
 │   ├── css/style.scss          #   스타일시트
 │   ├── js/rankings.js          #   랭킹 페이지 인터랙션
 │   ├── js/routes.js            #   루트 비교 페이지 인터랙션 (Leaflet.js)
+│   ├── js/activities.js        #   액티비티 페이지 인터랙션
 │   └── data/
 │       ├── place_data.json     #   프론트엔드용 장소 데이터 (자동 생성)
 │       └── route_data.json     #   루트 비교용 경유지·좌표 데이터
@@ -609,11 +774,11 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 │   ├── claude-research/        #   Claude Code가 직접 조사한 리서치 결과
 │   │   ├── weather/            #     지역별 날씨 조사 (시드니, 센트럴코스트, 포트맥쿼리 등 7개)
 │   │   ├── places/             #     지역별 장소 리서치 요약
+│   │   ├── activities/         #     액티비티 리서치
 │   │   ├── 6일-로드트립-리서치.md
 │   │   ├── 호주-5월-여행환경.md
 │   │   └── ...
-│   ├── ai-review/              #   ITINERARY.md 리뷰 작성 시 수집한 근거
-│   └── route-plans/            #   10개 루트 후보 상세 일정 + CRITIC 토론 문서
+│   └── route-plans/            #   9개 루트 후보 상세 일정 + CRITIC 토론 문서
 │
 ├── GoogleMaps/                 # 구글맵 내보내기 원본 (입력, 수정 금지)
 │   └── {YYYY-MM-DD}.json      # 날짜 기반 파일명, 모든 카테고리 혼합
@@ -634,6 +799,7 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 └── scripts/                    # 자동화 스크립트
     ├── parse_googlemaps.py     #   Phase 1: GoogleMaps 변경 감지 + 좌표 기반 처리
     ├── generate_frontend.py    #   평가 결과 → 등급 재계산 + RANKINGS.md + place_data.json 생성
+    ├── update_route_scores.py  #   루트 파일 점수 정합성 검증/수정
     └── utils/
         ├── __init__.py
         └── geo.py              #   좌표/거리 계산, 지역 할당, 중복 탐지
@@ -643,8 +809,7 @@ ai-review/ 파일들을 종합하여 ITINERARY.md에 리뷰를 작성한다.
 - `GoogleMaps/`: 원본 데이터. 절대 스크립트가 수정하지 않음
 - `research/`: 리서치 자료 및 리뷰 근거. 사람 또는 AI가 수집하여 저장
   - `deep-research/`: ChatGPT, Gemini 등 외부 AI 딥 리서치 결과. 파일명 `{주제}_{출처}.md`
-  - `claude-research/`: Claude Code가 직접 조사한 리서치 결과. 파일명 `{주제}.md`. `weather/` 하위에 지역별 날씨 파일
-  - `ai-review/`: ITINERARY.md AI 리뷰 작성 시 근거 자료. 파일명 `{날짜}_{주제}.md`
+  - `claude-research/`: Claude Code가 직접 조사한 리서치 결과. 파일명 `{주제}.md`. `weather/` 하위에 지역별 날씨 파일, `places/` 하위에 지역별 장소 리서치, `activities/` 하위에 액티비티 리서치. Phase 5 리뷰 근거도 여기에 저장
 - `ITINERARY.md`: 확정 일정의 Single Source of Truth. 일정 변경은 반드시 이 파일에 반영
 - `config/`, `data/`, `scripts/`: 선택적 자동화 인프라. 필요 시 생성하여 사용
 

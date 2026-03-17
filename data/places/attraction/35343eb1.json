@@ -58,7 +58,10 @@
     "logistics": {
       "parking": "Nurragingy Reserve 내 무료 주차장 충분. 대형차 가능",
       "road_condition": "일반 시내 도로, 양호. M4 모터웨이에서 접근 용이",
-      "nearby_attractions": "시드니 도심 장소들과 거리 먼 편. 블루마운틴 방면 이동 시 경유 가능 (M4 경유). 마운트 아난 보태닉 가든(b8c93251)과 동선 유사하지 않음",
+      "nearby_attractions": [
+        {"name": "블루마운틴 (M4 경유)"},
+        {"name": "오스트레일리안 보태닉 가든 마운트 아난"}
+      ],
       "peak_times": "주말 오전~오후. 평일은 한적",
       "public_transport": "Doonside역에서 도보 20분+. 대중교통 접근 불편하여 차량 필수"
     },
@@ -83,5 +86,6 @@
     "best_time": "오전~오후 (맑은 날)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Chang+Lai+Yuan+Chinese+Gardens,+Nurragingy+Reserve,+Knox+Rd,+Doonside+NSW+2767,+Australia"
 }

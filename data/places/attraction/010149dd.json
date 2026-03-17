@@ -57,7 +57,11 @@
     "logistics": {
       "parking": "차량 입장 시 $5/대/일. North Head 주차장 이용. 주말 혼잡 가능",
       "road_condition": "포장 도로, 양호. North Head 게이트 시간 제한 있음 (비서머타임 6am~6pm)",
-      "nearby_attractions": "맨리 비치 도보 30분. 갭 공원(472d62b4) 페리+차로 30분. 타롱가 동물원(fd81708b) 페리로 접근 가능",
+      "nearby_attractions": [
+        {"name": "맨리 비치", "walk_min": 30},
+        {"name": "갭 공원 (더 갭)", "drive_min": 30},
+        {"name": "타롱가 동물원 시드니"}
+      ],
       "peak_times": "주말 오전~오후. 5~11월 고래 관찰 시즌에 North Head 인기",
       "public_transport": "서큘러 키에서 맨리 페리 30분. Spit Bridge to Manly Walk 시작점까지 버스"
     },

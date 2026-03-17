@@ -87,5 +87,6 @@
     "best_time": "야간 (완전한 어둠에서 최적)",
     "weather_dependent": false,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Old+Helensburgh+Station,+2+Vera+St,+Helensburgh+NSW+2508,+Australia"
 }

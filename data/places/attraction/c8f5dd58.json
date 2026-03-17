@@ -58,7 +58,10 @@
     "logistics": {
       "parking": "차량 입장료 $12/대. West Head 주차장 (아스팔트, 접근성 1대). Bobbin Head, Sphinx Memorial 주차장도 이용 가능",
       "road_condition": "West Head Rd - 좁고 구불구불한 유칼립투스 숲 속 도로. 자전거 주의. 주의 운전 필요",
-      "nearby_attractions": "시드니 하버 국립공원(010149dd) 차로 40분. 블루스 포인트(1b4d8d4c) 차로 50분. 독립적 반나절~종일 일정으로 계획 필요",
+      "nearby_attractions": [
+        {"name": "시드니 하버 국립공원", "drive_min": 40},
+        {"name": "블루스 포인트 보호지역", "drive_min": 50}
+      ],
       "peak_times": "주말 오전. 연간 멀티파크 패스 $65로 할인 가능",
       "public_transport": "시드니 CBD에서 차로 1시간. 대중교통 매우 불편. 차량 필수"
     },

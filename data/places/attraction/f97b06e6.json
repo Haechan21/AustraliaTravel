@@ -86,5 +86,6 @@
     "best_time": "오전 (일출 방향 + 교통 원활)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Grand+Pacific+Drive,+Otford+Rd,+Stanwell+Tops+NSW+2508,+Australia"
 }

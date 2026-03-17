@@ -3,9 +3,10 @@
 평가 결과 → 프론트엔드 데이터 + RANKINGS.md 생성 스크립트.
 
 사용법:
-    python scripts/generate_frontend.py          # 전체 생성
-    python scripts/generate_frontend.py --rank    # RANKINGS.md만
-    python scripts/generate_frontend.py --data    # place_data.json만
+    python scripts/generate_frontend.py            # 전체 생성 (재채점 + RANKINGS + place_data)
+    python scripts/generate_frontend.py --rescore  # 등급 재계산만
+    python scripts/generate_frontend.py --rank     # RANKINGS.md만
+    python scripts/generate_frontend.py --data     # place_data.json만
 
 입력:
     data/scores/scorer_A.json

@@ -60,7 +60,12 @@
     "logistics": {
       "parking": "Conservation Hut 주차장 이용 (무료, 공간 제한적). 주말 오전 일찍 도착 권장",
       "road_condition": "Fletcher St - 일반 도로, 양호. Conservation Hut까지 포장 도로",
-      "nearby_attractions": "웬트워스 폴스 전망대(1d375b4d) 차로 5분. 링컨스 록(1a05deb4) 차로 8분. 서블라임 포인트(04cc52a2) 차로 10분. 에버글라데스(7e886049) 차로 10분",
+      "nearby_attractions": [
+        {"name": "웬트워스 폴스 전망대", "drive_min": 5},
+        {"name": "링컨스 록", "drive_min": 8},
+        {"name": "서블라임 포인트 전망대", "drive_min": 10},
+        {"name": "에버글라데스 하우스 & 가든스", "drive_min": 10}
+      ],
       "peak_times": "주말 오전 9시~오후 2시. 평일은 한적",
       "public_transport": "Wentworth Falls역에서 도보 30분+ 또는 택시. 대중교통 접근 불편"
     },
@@ -85,5 +90,6 @@
     "best_time": "오전 (주차 확보 및 충분한 일조)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Empress+Falls,+Valley+of+the+Waters+Track,+Wentworth+Falls+NSW+2782,+Australia"
 }

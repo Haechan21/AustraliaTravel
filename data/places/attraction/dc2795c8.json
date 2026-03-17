@@ -87,5 +87,6 @@
     "best_time": "오전~오후 (블로우홀 연계)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kiama+Lighthouse,+Blowhole+Point+Rd,+Kiama+NSW+2533,+Australia"
 }

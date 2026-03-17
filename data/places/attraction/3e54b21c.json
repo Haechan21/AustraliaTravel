@@ -59,7 +59,11 @@
     "logistics": {
       "parking": "밀슨스 포인트 인근 유료 주차장. 노상 주차 제한적. 대중교통 추천",
       "road_condition": "시내 도로, 양호",
-      "nearby_attractions": "블루스 포인트(1b4d8d4c) 도보 10분. 옵저버토리 힐(a2a6451d) 하버브리지 건너 도보 20분. 바랑가루(b484de1d) 차로 10분",
+      "nearby_attractions": [
+        {"name": "블루스 포인트 보호지역", "walk_min": 10},
+        {"name": "옵저버토리 힐 공원", "walk_min": 20},
+        {"name": "바랑가루 보호지역", "drive_min": 10}
+      ],
       "peak_times": "주말 오후~저녁. 학교 방학 기간 혼잡. 5월은 비수기로 운영일 제한적",
       "public_transport": "밀슨스 포인트역 도보 5분. 서큘러 키에서 페리로도 접근 가능"
     },

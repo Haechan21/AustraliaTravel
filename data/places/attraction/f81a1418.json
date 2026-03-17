@@ -59,7 +59,11 @@
     "logistics": {
       "parking": "달링하버 인근 유료 주차장 이용 ($10~15/시간). Wilson Parking 등 사전 예약 시 할인",
       "road_condition": "시드니 도심, 교통 혼잡 가능. 대중교통 추천",
-      "nearby_attractions": "달링하버(f04313c6) 내 위치. 해양박물관(b7e6c92f) 도보 5분. 바랑가루(b484de1d) 도보 15분",
+      "nearby_attractions": [
+        {"name": "달링 하버", "distance_km": 0},
+        {"name": "오스트레일리아 국립 해양 박물관", "walk_min": 5},
+        {"name": "바랑가루 보호지역", "walk_min": 15}
+      ],
       "peak_times": "주말 타임슬롯이 빠르게 매진. 평일 예약이 수월",
       "public_transport": "타운홀역 도보 10분, 달링하버 페리 이용 가능. 라이트레일 Convention 정류장 인근"
     },
@@ -84,5 +88,6 @@
     "best_time": "시간대 무관 (예약 타임슬롯에 따름)",
     "weather_dependent": false,
     "reservation_required": true
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Shark+Dive+Xtreme,+SEA+LIFE+Sydney+Aquarium,+1-5+Wheat+Rd,+Sydney+NSW+2000,+Australia"
 }

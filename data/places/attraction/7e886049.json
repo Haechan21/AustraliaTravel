@@ -59,7 +59,12 @@
     "logistics": {
       "parking": "Everglades Ave에 무료 노상 주차 가능. 주말 혼잡할 수 있음",
       "road_condition": "Leura 시내 일반 도로, 양호. Great Western Highway에서 쉽게 접근",
-      "nearby_attractions": "서블라임 포인트 전망대(04cc52a2) 차로 5분. 에코 포인트/쓰리시스터스(ef2de137/89376ce6) 차로 10분. 시닉월드(b39fd373) 차로 8분. 카툼바 폭포(fdef9085) 차로 10분",
+      "nearby_attractions": [
+        {"name": "서블라임 포인트 전망대", "drive_min": 5},
+        {"name": "에코 포인트 전망대 (쓰리 시스터스)", "drive_min": 10},
+        {"name": "시닉월드", "drive_min": 8},
+        {"name": "카툼바 폭포", "drive_min": 10}
+      ],
       "peak_times": "주말 오전 11시~오후 2시. 평일은 한적",
       "public_transport": "Leura역에서 도보 15분. 카툼바역에서 버스 이용 가능"
     },
@@ -84,5 +89,6 @@
     "best_time": "오전~오후 (맑은 날)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Everglades+House+%26+Gardens,+37+Everglades+Ave,+Leura+NSW+2780,+Australia"
 }

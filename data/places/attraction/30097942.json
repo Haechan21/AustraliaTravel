@@ -88,5 +88,6 @@
     "best_time": "파도 높은 날 오전 (남동쪽 swell)",
     "weather_dependent": true,
     "reservation_required": false
-  }
+  },
+  "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Kiama+Blowhole,+Blowhole+Point,+Kiama+NSW+2533,+Australia"
 }

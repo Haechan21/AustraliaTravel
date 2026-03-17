@@ -62,7 +62,11 @@
     "logistics": {
       "parking": "Grand Canyon 전용 주차장 (Evans Lookout Rd, 100대+ 공간, 버스/접근성 주차 포함). 무료. Evans Lookout 주차장도 이용 가능",
       "road_condition": "Evans Lookout Rd - 포장 도로, 양호. Great Western Highway에서 Blackheath 진입 후 접근",
-      "nearby_attractions": "고벳츠 리프(86d8f30d) 차로 5분 (Cliff Top Track으로 도보 3km 연계 가능). 블루마운틴 국립공원(68c6f93e) 내 위치. Blackheath 마을 차로 5분",
+      "nearby_attractions": [
+        {"name": "고벳츠 리프 전망대", "drive_min": 5},
+        {"name": "블루마운틴스 국립공원"},
+        {"name": "Blackheath 마을", "drive_min": 5}
+      ],
       "peak_times": "주말 오전. 평일은 한적. 5월 비수기로 덜 붐빔",
       "public_transport": "Blackheath역에서 도보 40분+ 또는 택시. 대중교통 접근 불편"
     },

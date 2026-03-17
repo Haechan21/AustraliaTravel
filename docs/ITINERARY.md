@@ -93,7 +93,7 @@ layout: default
 
 > 각 날짜 일정에 대한 긍정적 의견, 비판적 의견, 대안을 정리한다.
 > 리뷰 프로세스 및 체크리스트는 [SPEC.md Phase 5](./SPEC.md#phase-5-일정-리뷰)를 참조.
-> 근거 자료는 [research/ai-review/](../research/ai-review/)에 보관.
+> 근거 자료는 [research/claude-research/](../research/claude-research/)에 보관.
 
 ## 5월 23일 리뷰
 
