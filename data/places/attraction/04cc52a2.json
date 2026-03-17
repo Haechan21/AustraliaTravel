@@ -59,23 +59,41 @@
       "parking": "유료 주차 (앱 결제, 15분당 $3). 공간 제한적. 대형 버스 접근 불가",
       "road_condition": "Sublime Point Rd - 포장 도로, 양호. Great Western Highway에서 접근",
       "nearby_attractions": [
-        {"name": "에버글라데스 하우스 & 가든스", "drive_min": 5},
-        {"name": "링컨스 록", "drive_min": 10},
-        {"name": "에코 포인트 전망대 (쓰리 시스터스)", "drive_min": 10},
-        {"name": "시닉월드", "drive_min": 10}
+        {
+          "name": "에버글라데스 하우스 & 가든스",
+          "drive_min": 5
+        },
+        {
+          "name": "링컨스 록",
+          "drive_min": 10
+        },
+        {
+          "name": "에코 포인트 전망대 (쓰리 시스터스)",
+          "drive_min": 10
+        },
+        {
+          "name": "시닉월드",
+          "drive_min": 10
+        }
       ],
       "peak_times": "일출/일몰 시간대에 사진가들 방문. 주말 오전~오후. 대형 버스 못 들어와 카툼바보다 한적",
       "public_transport": "Leura역에서 도보 30분+ 또는 택시. 대중교통 접근 불편"
     },
     "experience": {
-      "photo_spots": "주차장에서 175m 거리 전망대에서 제이미슨 밸리 파노라마. 쓰리시스터스 뒷면 조망 가능",
+      "photo_spots": [
+        "주차장에서 175m 거리 전망대에서 제이미슨 밸리 파노라마. 쓰리시스터스 뒷면 조망 가능"
+      ],
       "golden_hour": "동쪽 밸리 방향이므로 일출 시 밸리가 황금빛으로 물듦. 일몰 시에도 암벽 색감 변화 아름다움",
       "seasonal_beauty": "5월 가을 - 단풍과 파노라마 뷰. 일출/일몰 시 황금빛 조명 효과 뛰어남",
-      "hidden_gems": "카툼바(에코 포인트)보다 훨씬 한적한 블루마운틴 전망. Leura 1위 관광지. 경사 거의 없어 누구나 접근 용이",
+      "hidden_gems": [
+        "카툼바(에코 포인트)보다 훨씬 한적한 블루마운틴 전망. Leura 1위 관광지. 경사 거의 없어 누구나 접근 용이"
+      ],
       "sensory_notes": "광활한 밸리의 공간감, 유칼립투스 향, 절벽 위 바람. 고요한 블루마운틴의 진면목"
     },
     "risk_check": {
-      "negative_review_patterns": "유료 주차 도입 불만, 주차 공간 부족, 안개 시 전망 불가",
+      "negative_review_patterns": [
+        "유료 주차 도입 불만, 주차 공간 부족, 안개 시 전망 불가"
+      ],
       "may_operation": "5월 정상 운영. 24시간 개방",
       "safety_issues": "전망대 울타리 있으나 절벽 가장자리 주의. 특별한 위험 없음",
       "weather_impact": "안개/비 시 전망 완전 불가. 맑은 날 필수",

@@ -1668,42 +1668,6 @@
       "total_score": 65.0
     },
     {
-      "id": "669a240e",
-      "name_ko": "코알라 병원 (매쿼리 자연보호구역)",
-      "region": "포트맥쿼리",
-      "raw_scores": {
-        "google_rating": {
-          "score": 7,
-          "reason": "평점 4.6"
-        },
-        "review_count": {
-          "score": 7,
-          "reason": "리뷰 3500건으로 잘 검증됨"
-        },
-        "scenery": {
-          "score": 4,
-          "reason": "코알라 병원(임시 운영지). 경치 목적 아님"
-        },
-        "accessibility": {
-          "score": 6,
-          "reason": "642731d5와 동일 — Guulabaa 임시 운영. 무료 주차"
-        },
-        "value_for_money": {
-          "score": 7,
-          "reason": "AUD12.5 + 60분. 642731d5와 동일"
-        },
-        "time_efficiency": {
-          "score": 8,
-          "reason": "60분. 642731d5와 동일 시설"
-        },
-        "uniqueness": {
-          "score": 8,
-          "reason": "642731d5와 동일 — 코알라 병원"
-        }
-      },
-      "total_score": 67.5
-    },
-    {
       "id": "68c6f93e",
       "name_ko": "블루마운틴스 국립공원",
       "region": "블루마운틴",

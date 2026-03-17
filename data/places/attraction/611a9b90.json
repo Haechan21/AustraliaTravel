@@ -56,23 +56,48 @@
       "parking": "Bennetts Head Road 끝 소규모 무료 주차장. 전망대 바로 앞에 주차 가능",
       "road_condition": "포장도로, 포스터 시내에서 가까움",
       "nearby_attractions": [
-        {"name": "One Mile Beach (해안 산책로 연결)", "distance_km": 1, "drive_min": 5},
-        {"name": "Forster Main Beach", "distance_km": 1.5, "drive_min": 5},
-        {"name": "Cape Hawke Lookout (360도 전망)", "distance_km": 5, "drive_min": 7},
-        {"name": "Bicentennial Track", "distance_km": 0, "drive_min": 0}
+        {
+          "name": "One Mile Beach (해안 산책로 연결)",
+          "distance_km": 1,
+          "drive_min": 5
+        },
+        {
+          "name": "Forster Main Beach",
+          "distance_km": 1.5,
+          "drive_min": 5
+        },
+        {
+          "name": "Cape Hawke Lookout (360도 전망)",
+          "distance_km": 5,
+          "drive_min": 7
+        },
+        {
+          "name": "Bicentennial Track",
+          "distance_km": 0,
+          "drive_min": 0
+        }
       ],
       "peak_times": "5-11월 고래 시즌에 약간 혼잡. 일반적으로 한산",
       "public_transport": "포스터 시내에서 도보 가능"
     },
     "experience": {
-      "photo_spots": ["타스만해 탁 트인 파노라마", "고래 브리칭 장면 (5-11월)", "One Mile Beach 모래언덕 전경"],
+      "photo_spots": [
+        "타스만해 탁 트인 파노라마",
+        "고래 브리칭 장면 (5-11월)",
+        "One Mile Beach 모래언덕 전경"
+      ],
       "golden_hour": "동쪽 해안이라 일출 뷰 우수. 일몰 시에도 뒤편 하늘 색감 좋음",
       "seasonal_beauty": "5월 혹등고래 이동 시즌 시작 — 최적의 고래 관찰 포인트. 약 300마리 돌고래 서식 지역",
-      "hidden_gems": "Bicentennial Track으로 포스터 메인비치~베넷츠헤드~One Mile Beach 연결. 고래 관찰 업체가 이 전망대에서 고래를 발견하고 보트를 유도함",
+      "hidden_gems": [
+        "Bicentennial Track으로 포스터 메인비치~베넷츠헤드~One Mile Beach 연결. 고래 관찰 업체가 이 전망대에서 고래를 발견하고 보트를 유도함"
+      ],
       "sensory_notes": "탁 트인 바다에서 불어오는 바람, 파도 소리, 고래 브리칭의 흥분"
     },
     "risk_check": {
-      "negative_review_patterns": ["성수기 주차 어려움", "특별한 시설 없이 단순 전망대"],
+      "negative_review_patterns": [
+        "성수기 주차 어려움",
+        "특별한 시설 없이 단순 전망대"
+      ],
       "may_operation": "24시간 개방. 5월 정상 이용. 고래 시즌 시작",
       "safety_issues": "절벽 가장자리 주의. 휠체어 접근 가능",
       "weather_impact": "강풍/비 시 전망 불편. 맑은 날 방문 추천",

@@ -86,7 +86,7 @@ GoogleMaps/
 | `"호주음식"` | `restaurant` | 음식점, 카페 |
 | `"호주숙소"` | `accommodation` | 숙소 |
 
-> **현재 상태**: GoogleMaps 데이터에는 `"호주여행"` (관광지, 111개 항목 — 2026-03-13 추가분 26개 포함, 중복 1개)만 존재한다. `"호주음식"`, `"호주숙소"` 데이터는 향후 추가 예정이며, 관광지도 계속 늘어날 수 있다.
+> **현재 상태**: GoogleMaps 데이터에는 `"호주여행"` (관광지, 109개 — 중복 2개 제거 후)만 존재한다. `"호주음식"`, `"호주숙소"` 데이터는 향후 추가 예정이며, 관광지도 계속 늘어날 수 있다.
 
 > 새 카테고리가 필요하면 구글맵에서 새 리스트명으로 저장하고, 매핑 규칙을 추가한다.
 
@@ -94,7 +94,7 @@ GoogleMaps/
 
 ### 3.2 가공 데이터: data/
 
-> **현재 상태**: `data/places/attraction/`에 110개 JSON이 생성되어 있다 (중복 1개 포함, 좌표, address 원문, 지역 할당 완료). Phase 2 완료로 `name`, `name_ko`, `collected_data`가 모두 채워진 상태.
+> **현재 상태**: `data/places/attraction/`에 109개 JSON이 생성되어 있다 (좌표, address 원문, 지역 할당 완료). Phase 2 완료로 `name`, `name_ko`, `collected_data`가 모두 채워진 상태. 중복 2개 제거됨: `669a240e`(코알라 병원 — `642731d5`와 Google Place ID 동일), `7a922fd8`(스탠웰 탑스 근처 빈 stub).
 
 #### 장소 정보 (`data/places/{category}/{id}.json`)
 
@@ -147,14 +147,14 @@ GoogleMaps/
       "public_transport": null
     },
     "experience": {
-      "photo_spots": [],          // string | string[] 허용
+      "photo_spots": [],          // string[] (배열 통일)
       "golden_hour": null,
       "seasonal_beauty": null,
-      "hidden_gems": [],
+      "hidden_gems": [],          // string[] (배열 통일)
       "sensory_notes": null
     },
     "risk_check": {
-      "negative_review_patterns": [],  // string | string[] 허용
+      "negative_review_patterns": [],  // string[] (배열 통일)
       "may_operation": null,
       "safety_issues": null,
       "weather_impact": null,
@@ -288,7 +288,7 @@ GoogleMaps/
       "name": "string (영문명)",
       "region": "string",
       "grade": "S | A | B | C | D",
-      "average_score": 90.5,
+      "may_adjusted_score": 90.5,
       "scores": { "A": 75.0, "B": 95.5, "C": 86.0 },
       "spread": 20.5,
       "controversial": true,
@@ -313,7 +313,7 @@ GoogleMaps/
 | `weights` | 페르소나별 기준 가중치 (합계 1.0) |
 | `places` | place_id를 키로 한 장소 객체 맵 |
 | `places.*.breakdown` | 7개 기준별 페르소나 점수 + 판단 근거. 기준: `scenery`, `uniqueness`, `google_rating`, `accessibility`, `review_count`, `value_for_money`, `time_efficiency` |
-| `places.*.average_score` | `may_adjusted_score` 기준 (계절 보정 후 점수) |
+| `places.*.may_adjusted_score` | 5월 계절 보정 후 최종 점수. 등급(`grade`) 산정 기준 |
 | `ranked_ids` | 점수 내림차순으로 정렬된 place_id 배열 |
 
 > **생성**: `python scripts/generate_frontend.py --data` (또는 플래그 없이 전체 생성). 입력 소스: `data/scores/scorer_{A,B,C}.json` + `data/scores/attraction_scored.json` + `data/places/attraction/*.json`
@@ -374,7 +374,7 @@ GoogleMaps/
   "generated_at": "ISO8601",
   "regions": [
     {
-      "id": "string (slugified)",
+      "id": "string (한국어 지역명, 예: 블루마운틴, 시드니)",
       "name_ko": "string",
       "center": { "lng": 0.0, "lat": 0.0 },
       "radius_km": 0,
@@ -408,7 +408,7 @@ GoogleMaps 원본 데이터를 좌표 기반으로 처리한다. **장소명 확
 
 > **설계 결정**: `address` 필드는 한국어명+영문명+주소가 혼합된 비정형 문자열이므로, 프로그래밍으로 장소명을 정확히 파싱하기 어렵다. 좌표를 기반으로 웹검색하여 확인하는 것이 더 정확하다.
 
-> **현재 상태**: GoogleMaps에는 `"호주여행"` (관광지, 110개) 데이터가 있다. `"호주음식"`, `"호주숙소"` 데이터는 사용자가 구글맵에 장소를 추가한 후 내보내면 처리할 수 있다.
+> **현재 상태**: GoogleMaps에는 `"호주여행"` (관광지, 109개) 데이터가 있다. `"호주음식"`, `"호주숙소"` 데이터는 사용자가 구글맵에 장소를 추가한 후 내보내면 처리할 수 있다.
 
 ### Phase 2: 정보 수집
 
@@ -417,7 +417,7 @@ GoogleMaps 원본 데이터를 좌표 기반으로 처리한다. **장소명 확
 
 Claude Code가 대화형으로 장소별 정보를 웹 검색하고, 결과를 JSON 또는 리서치 파일에 저장한다. 조사 과정에서 생산한 리서치 결과는 `research/claude-research/`에, 외부 AI 딥 리서치(`research/deep-research/`)도 참고 소스로 활용한다.
 
-> **현재 상태**: ✅ Phase 2 완료. `data/places/attraction/` 110개 장소(중복 1개 제외)에 `collected_data`가 채워짐. `research/claude-research/places/`에 7개 지역별 리서치 요약 생성 완료. 날씨 조사(지역별 7개 파일), 로드트립 경로 리서치, 여행 환경 조사 등도 `research/claude-research/`에 완료되어 있다.
+> **현재 상태**: ✅ Phase 2 완료. `data/places/attraction/` 109개 장소에 `collected_data`가 채워짐. `research/claude-research/places/`에 7개 지역별 리서치 요약 생성 완료. 날씨 조사(지역별 7개 파일), 로드트립 경로 리서치, 여행 환경 조사 등도 `research/claude-research/`에 완료되어 있다.
 
 #### 리뷰 수집 전략: 시기 기반 2구간
 
@@ -560,7 +560,7 @@ python scripts/generate_frontend.py --data     # place_data.json만
 
 > **재현성 보장**: 모든 채점에 `reason` 필드로 판단 근거를 기록하므로, 나중에 기준을 조정하거나 재평가할 때 참고할 수 있다.
 
-> **현재 상태**: ✅ Phase 3 완료. `data/scores/attraction_scored.json`에 110곳 평가 완료(Lithgow 글로우웜 터널 추가, 중복 1개 제외). CRITIC.md 페르소나 기반 3인 독립 평가 + 퍼센타일 등급 + 5월 계절 보정 적용. 등급 분포: S:6 A:22 B:38 C:33 D:11 (`may_adjusted_score` 기준 단일 `grade`). 논쟁 장소 37곳. `data/scores/RANKINGS.md`에 랭킹 문서 자동 생성 (`scripts/generate_frontend.py`).
+> **현재 상태**: ✅ Phase 3 완료. `data/scores/attraction_scored.json`에 109곳 평가 완료. CRITIC.md 페르소나 기반 3인 독립 평가 + 퍼센타일 등급 + 5월 계절 보정 적용. 등급 분포: S:6 A:22 B:38 C:33 D:10 (`may_adjusted_score` 기준 단일 `grade`). 논쟁 장소 37곳. `data/scores/RANKINGS.md`에 랭킹 문서 자동 생성 (`scripts/generate_frontend.py`).
 
 ### Phase 4: 여행 일정 생성
 

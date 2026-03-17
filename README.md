@@ -7,7 +7,7 @@
 구글맵 후보지를 전처리하고, Claude Code가 정보 수집 · 평가 · 일정 생성 · 리뷰를 수행한다.
 
 ![Status](https://img.shields.io/badge/Phase_4-일정_생성_중-yellow?style=for-the-badge)
-![Places](https://img.shields.io/badge/관광지-110곳_평가_완료-blue?style=for-the-badge)
+![Places](https://img.shields.io/badge/관광지-109곳_평가_완료-blue?style=for-the-badge)
 ![Duration](https://img.shields.io/badge/기간-9일_(활동_7일)-green?style=for-the-badge)
 
 [**GitHub Pages에서 보기**](https://haechan21.github.io/australia-travel/)
@@ -60,12 +60,12 @@
 │   ├── scoring.json              #   카테고리별 평가 기준·가중치
 │   └── trip.json                 #   여행 일정 설정
 ├── data/
-│   ├── places/attraction/        #   장소별 상세 JSON (111개, 중복 1개)
+│   ├── places/attraction/        #   장소별 상세 JSON (109개)
 │   ├── scores/
 │   │   ├── attraction_scored.json    # 종합 평가 결과
 │   │   ├── scorer_A/B/C.json        # 개별 평가자 결과
 │   │   └── RANKINGS.md              # 랭킹 (정적 마크다운 버전)
-│   └── regions.json              #   좌표 기반 지역 분류 (14개 지역)
+│   └── regions.json              #   좌표 기반 지역 분류 (15개 지역)
 ├── research/
 │   ├── deep-research/            #   외부 AI 딥 리서치
 │   ├── claude-research/          #   Claude Code 직접 조사

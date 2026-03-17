@@ -58,22 +58,43 @@
       "parking": "충분한 무료 주차. Endeavour Dr 부근.",
       "road_condition": "포장 양호. 울릉공 시내에서 차로 5분.",
       "nearby_attractions": [
-        {"name": "Sea Cliff Bridge (96da6ea2)", "distance_km": 20, "drive_min": 25},
-        {"name": "Bushrangers Bay (5254b0bc)", "distance_km": 20, "drive_min": 25},
-        {"name": "Bombo Headland (a43e5009)", "distance_km": 35, "drive_min": 35}
+        {
+          "name": "Sea Cliff Bridge (96da6ea2)",
+          "distance_km": 20,
+          "drive_min": 25
+        },
+        {
+          "name": "Bushrangers Bay (5254b0bc)",
+          "distance_km": 20,
+          "drive_min": 25
+        },
+        {
+          "name": "Bombo Headland (a43e5009)",
+          "distance_km": 35,
+          "drive_min": 35
+        }
       ],
       "peak_times": "주말 오후. 평일은 한적.",
       "public_transport": "울릉공역에서 버스 또는 도보 20분"
     },
     "experience": {
-      "photo_spots": ["등대 + 태즈먼해 배경", "Flagstaff Hill에서 북쪽 해안선 파노라마", "구 배터리 방어시설과 등대"],
+      "photo_spots": [
+        "등대 + 태즈먼해 배경",
+        "Flagstaff Hill에서 북쪽 해안선 파노라마",
+        "구 배터리 방어시설과 등대"
+      ],
       "golden_hour": "일출 시 동쪽 바다에서 등대를 비추는 황금빛. 일몰 시 에스카프먼트 뒤로 석양.",
       "seasonal_beauty": "5월 가을 — 선명한 해안 조망과 고래 관찰 가능",
-      "hidden_gems": "Pilots' Cottage Museum — 등대지기 역사 전시",
+      "hidden_gems": [
+        "Pilots' Cottage Museum — 등대지기 역사 전시"
+      ],
       "sensory_notes": "절벽 위 바닷바람, 시원한 바다 공기, 탁 트인 수평선의 개방감"
     },
     "risk_check": {
-      "negative_review_patterns": ["체류 시간 짧음", "등대 내부 비공개"],
+      "negative_review_patterns": [
+        "체류 시간 짧음",
+        "등대 내부 비공개"
+      ],
       "may_operation": "정상 운영.",
       "safety_issues": "절벽 가장자리 주의. 공원 내 안전한 산책로.",
       "weather_impact": "우천 시 전망 제한. 강풍 가능. 접근 자체는 영향 없음.",

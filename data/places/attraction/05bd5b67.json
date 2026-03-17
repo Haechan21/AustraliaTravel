@@ -11,7 +11,7 @@
       "lat": -30.403344999999998
     },
     "address": "Ebor Falls, Waterfall Way, Ebor NSW 2453, Australia",
-    "region": "콥스하버"
+    "region": "기타"
   },
   "collected_data": {
     "rating": 4.6,
@@ -59,23 +59,50 @@
       "parking": "상부/하부 폭포 모두 아스팔트 주차장 무료. 대형 차량/캐러밴 회전 공간 제한적",
       "road_condition": "포장도로. Ebor에서 Waterfall Way 서쪽 1km → Ebor Falls Rd 우회전. 도로 품질 양호",
       "nearby_attractions": [
-        {"name": "Guy Fawkes River National Park (가이 포크스)", "distance_km": 15, "drive_min": 20},
-        {"name": "Crystal Shower Falls (크리스탈 샤워)", "distance_km": 40, "drive_min": 45},
-        {"name": "Dangar Falls (댕거 폭포)", "distance_km": 50, "drive_min": 55},
-        {"name": "Dorrigo 타운", "distance_km": 50, "drive_min": 55}
+        {
+          "name": "Guy Fawkes River National Park (가이 포크스)",
+          "distance_km": 15,
+          "drive_min": 20
+        },
+        {
+          "name": "Crystal Shower Falls (크리스탈 샤워)",
+          "distance_km": 40,
+          "drive_min": 45
+        },
+        {
+          "name": "Dangar Falls (댕거 폭포)",
+          "distance_km": 50,
+          "drive_min": 55
+        },
+        {
+          "name": "Dorrigo 타운",
+          "distance_km": 50,
+          "drive_min": 55
+        }
       ],
       "peak_times": "주말 오전~오후 혼잡. 평일은 한적",
       "public_transport": "대중교통 접근 불가. 자차 필수"
     },
     "experience": {
-      "photo_spots": ["Maam Nyayagi 전망대: 상부 폭포 정면", "Maam Nyayagi Naan.gal: 상/하부 폭포 동시 조망", "Maam Nyayagi Guunyju: 협곡 전망", "캔틸레버 전망대 4개 뷰포인트"],
+      "photo_spots": [
+        "Maam Nyayagi 전망대: 상부 폭포 정면",
+        "Maam Nyayagi Naan.gal: 상/하부 폭포 동시 조망",
+        "Maam Nyayagi Guunyju: 협곡 전망",
+        "캔틸레버 전망대 4개 뷰포인트"
+      ],
       "golden_hour": "오전 빛이 폭포에 잘 비침. 역광 주의. 오후 폭포 그림자 생길 수 있음",
       "seasonal_beauty": "5월은 여름 우기 이후 수량 풍부한 시기로 폭포 감상 최적. 뉴잉글랜드 고원이라 기온 낮음 (방한 준비). 에버라스팅 데이지와 나비",
-      "hidden_gems": "2024년 550만 달러 리뉴얼 완료. 360m 루프 워크 유모차/휠체어 접근 가능. 6개 전망대 탐방 (2km 왕복)",
+      "hidden_gems": [
+        "2024년 550만 달러 리뉴얼 완료. 360m 루프 워크 유모차/휠체어 접근 가능. 6개 전망대 탐방 (2km 왕복)"
+      ],
       "sensory_notes": "100m 높이 폭포 물줄기 소리. 고원의 차가운 공기. 안개 자욱한 협곡의 신비로운 분위기"
     },
     "risk_check": {
-      "negative_review_patterns": ["아미데일에서 거리 소요", "간이 화장실 외 편의시설 제한적", "겨울철 안개로 시야 제한"],
+      "negative_review_patterns": [
+        "아미데일에서 거리 소요",
+        "간이 화장실 외 편의시설 제한적",
+        "겨울철 안개로 시야 제한"
+      ],
       "may_operation": "연중 개방. 화재/악천후 시 폐쇄 가능",
       "safety_issues": "고원 지역이라 기온 급강하 가능. 방한복 필수. 트레일 안전 펜스 잘 되어 있음",
       "weather_impact": "안개/이슬로 시야 제한 가능. 비 와도 포장 트레일이라 접근 가능. 폭포 수량은 비 온 후 증가",

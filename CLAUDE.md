@@ -27,11 +27,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 현재 진행 상황
 
-- Phase 1 (전처리): ✅ 완료 — 111개 attraction stub (2026-03-13 추가분 26개 포함)
-- Phase 2 (정보 수집): ✅ 완료 — 110개 장소 collected_data 채움 (미수집 1개: 7a922fd8), 14개 지역 분류, 주제별·지역별 리서치 30건+
-- Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 110곳 평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:11 (may_adjusted_score 기준 단일 `grade`). 논쟁 장소 37곳
-- Phase 4 (일정 생성): 🔄 진행 중 — 9개 루트 후보 완성 (1~9조). 최종 루트 선택 미결정, ITINERARY.md는 5/23~24일만 상세 작성 (5/25~29일 미작성)
+- Phase 1 (전처리): ✅ 완료 — 109개 attraction (중복 2개 제거: `669a240e` 코알라 병원 중복, `7a922fd8` 스탠웰 탑스 빈 stub)
+- Phase 2 (정보 수집): ✅ 완료 — 109개 장소 collected_data 채움, 15개 지역 분류, 주제별·지역별 리서치 30건+
+- Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 109곳 평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:10 (may_adjusted_score 기준 단일 `grade`). 논쟁 장소 37곳
+- Phase 4 (일정 생성): 🔄 진행 중 — 9개 루트 후보 완성 (1~9조), CRITIC_ROUTE v6 재평가 완료. 5월 보정 등급 기반 루트 재편: 4조(+2.8), 3조(+2.2), 1조(+2.0), 9조(+1.5), 8조(+0.2) 개선. 최종 루트 선택 미결정, ITINERARY.md는 5/23~24일만 상세 작성
 - Phase 5 (일정 리뷰): ⬜ 미시작
+- 액티비티 리서치: ✅ 완료 — 10개 지역 100개+ 체험 활동 조사 (5개 신규 + 5개 보강: 은하수·우천대안·커플체험 추가)
 - 향후: 음식점·숙소 데이터 수집 및 평가 예정, 관광지 추가도 가능
 
 ## 에이전트 작업 체크리스트
@@ -44,6 +45,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 3. 각 루트의 S등급 방문 수 재계산 → 헤더/요약/테이블 수정 (에이전트)
 4. `research/route-plans/README.md` 종합 순위표 S등급 열 수정 (에이전트)
 5. 이 파일(`CLAUDE.md`) 진행 상황 갱신
+
+### v6 재평가 완료 (2026-03-17)
+- [x] CRITIC_ROUTE v6 5월 보정 등급 기반 전 루트 재평가
+- [x] 5개 루트 파일 수정 (1조, 3조, 4조, 8조, 9조)
+- [x] README.md 종합 순위표 v6 업데이트
+- [x] route_data.json 프론트엔드 데이터 동기화
+- [x] CLAUDE.md 진행 상황 갱신
 
 ### Phase 4→5 전환 시
 - [ ] 9개 루트 중 최종 선택 → `docs/ITINERARY.md`에 반영
@@ -88,7 +96,8 @@ python scripts/update_route_scores.py --fix --verbose  # 상세 로그 포함
 - `research/claude-research/`: Claude Code 직접 조사. 파일명 `{주제}.md`
   - `places/`: 지역별 장소 리서치 요약
   - `weather/`: 지역별 날씨 조사
-  - `activities/`: 액티비티 리서치
+  - `activities/`: 지역별 액티비티 리서치
+  - 루트(root): 여행환경·계절보정, 루트평가·운전패턴, 장소 심층리뷰, UI 리서치 등
 - `research/route-plans/`: 루트 후보 상세 일정 (1~9조) + 종합 순위표(README.md)
 
 ## 프론트엔드 구조 (Jekyll + GitHub Pages)
@@ -103,7 +112,8 @@ Jekyll 기반 정적 사이트로 데이터를 시각화한다. `_config.yml`에
 | 액티비티 후보 | `activities.html` | `assets/js/activities.js` | — |
 | 루트 상세 (리다이렉트) | `route-plans.html` | — | — → `routes.html`로 리다이렉트 |
 
-- `place_data.json`과 `route_data.json`은 `scripts/generate_frontend.py`로 자동 생성
+- `place_data.json`은 `scripts/generate_frontend.py`로 자동 생성, `route_data.json`은 수동 작성/관리
+- 외부 라이브러리: Leaflet.js 1.9.4 (CDN, `routes.html`에서 지도 렌더링용)
 - 레이아웃: `_layouts/default.html`, 스타일: `assets/css/style.scss`
 
 ## 주요 설계 원칙

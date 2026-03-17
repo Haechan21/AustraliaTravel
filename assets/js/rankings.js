@@ -159,7 +159,7 @@
         '<tr data-place-id="' + p.id + '">' +
         '<td class="col-rank">' + rank + "</td>" +
         '<td class="col-grade"><span class="grade-badge grade-' + p.grade + '">' + p.grade + "</span></td>" +
-        '<td class="col-score">' + p.average_score.toFixed(1) + "</td>" +
+        '<td class="col-score">' + p.may_adjusted_score.toFixed(1) + "</td>" +
         '<td class="col-abc scorer-a" title="평가자1: 효율 전략가">' + p.scores.A.toFixed(1) + "</td>" +
         '<td class="col-abc scorer-b" title="평가자2: 감성 탐험가">' + p.scores.B.toFixed(1) + "</td>" +
         '<td class="col-abc scorer-c" title="평가자3: 현실주의 비평가">' + p.scores.C.toFixed(1) + "</td>" +
@@ -234,7 +234,7 @@
       (mapsLink ? '<div class="modal-map-wrap">' + mapsLink + "</div>" : "") +
       '<div class="modal-meta">' +
       '<span class="modal-grade grade-' + p.grade + '">' + p.grade + "등급</span>" +
-      "<span><strong>" + fmt(p.average_score) + "점</strong></span>" +
+      "<span><strong>" + fmt(p.may_adjusted_score) + "점</strong></span>" +
       '<span>📍 ' + p.region + "</span>" +
       controvBadge +
       "</div>";

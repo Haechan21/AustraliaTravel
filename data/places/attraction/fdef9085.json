@@ -60,23 +60,41 @@
       "parking": "Katoomba Falls Kiosk 인근 무료 주차 2곳 (Cliff Dr 양쪽). 시간 제한 없음",
       "road_condition": "Cliff Dr - 포장 도로, 양호. 카툼바 시내에서 접근 용이",
       "nearby_attractions": [
-        {"name": "에코 포인트 전망대 (쓰리 시스터스)", "walk_min": 15},
-        {"name": "시닉월드", "walk_min": 10},
-        {"name": "시닉 레일웨이", "walk_min": 10},
-        {"name": "서블라임 포인트 전망대", "drive_min": 10}
+        {
+          "name": "에코 포인트 전망대 (쓰리 시스터스)",
+          "walk_min": 15
+        },
+        {
+          "name": "시닉월드",
+          "walk_min": 10
+        },
+        {
+          "name": "시닉 레일웨이",
+          "walk_min": 10
+        },
+        {
+          "name": "서블라임 포인트 전망대",
+          "drive_min": 10
+        }
       ],
       "peak_times": "야간 조명 산책(일몰~22:30)이 하이라이트. 낮에는 비교적 한적",
       "public_transport": "카툼바역에서 도보 20분. 686G 버스 이용 가능"
     },
     "experience": {
-      "photo_spots": "야간 LED 조명 산책로 사진. Orphan Rock, Witches Leap 야간 조망. 1.3km 보드워크",
+      "photo_spots": [
+        "야간 LED 조명 산책로 사진. Orphan Rock, Witches Leap 야간 조망. 1.3km 보드워크"
+      ],
       "golden_hour": "일몰 직후 야간 조명이 켜지면서 가장 아름다운 시간 시작. 5월 일몰 빨라 일찍 즐김",
       "seasonal_beauty": "5월 가을 - 해 일찍 져서 야간 조명 산책 일찍 시작. 서늘한 공기 속 조명 산책 로맨틱",
-      "hidden_gems": "400개 이상 LED 야간 산책로는 블루마운틴의 독특한 야간 체험. 무료. 낮과 밤 두 번 방문하면 전혀 다른 경험",
+      "hidden_gems": [
+        "400개 이상 LED 야간 산책로는 블루마운틴의 독특한 야간 체험. 무료. 낮과 밤 두 번 방문하면 전혀 다른 경험"
+      ],
       "sensory_notes": "야간 어둠 속 LED 빛, 폭포 소리, 서늘한 밤공기, 고요한 숲. 몽환적 분위기"
     },
     "risk_check": {
-      "negative_review_patterns": "폭포 수량 대부분 적어 볼거리 부족. 일부 조명 구간 우천 후 작동 안 됨. 야간 일부 구간 조명 고장",
+      "negative_review_patterns": [
+        "폭포 수량 대부분 적어 볼거리 부족. 일부 조명 구간 우천 후 작동 안 됨. 야간 일부 구간 조명 고장"
+      ],
       "may_operation": "5월 정상 운영. 야간조명 일몰~22:30(투광등), ~23:00(보행등)",
       "safety_issues": "야간 산책 시 어두운 구간 조심. 보드워크 포장으로 비교적 안전. 비 후 일부 미끄러울 수 있음",
       "weather_impact": "우천 후 조명 일부 작동 불량 가능. 비 시 야간 산책 불편",

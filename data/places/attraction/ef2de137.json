@@ -62,24 +62,46 @@
       "parking": "에코 포인트 유료 미터 주차 (시간당 $4, 접근성 5대). 주말 혼잡 시 600m 떨어진 거리 주차 필요. 무료 주차 없음",
       "road_condition": "Echo Point Rd - 포장 도로, 양호",
       "nearby_attractions": [
-        {"name": "쓰리 시스터스", "distance_km": 0},
-        {"name": "시닉월드", "walk_min": 20, "drive_min": 5},
-        {"name": "카툼바 폭포", "walk_min": 15},
-        {"name": "시닉 레일웨이", "drive_min": 5},
-        {"name": "서블라임 포인트 전망대", "drive_min": 10}
+        {
+          "name": "쓰리 시스터스",
+          "distance_km": 0
+        },
+        {
+          "name": "시닉월드",
+          "walk_min": 20,
+          "drive_min": 5
+        },
+        {
+          "name": "카툼바 폭포",
+          "walk_min": 15
+        },
+        {
+          "name": "시닉 레일웨이",
+          "drive_min": 5
+        },
+        {
+          "name": "서블라임 포인트 전망대",
+          "drive_min": 10
+        }
       ],
       "peak_times": "오전 10시~오후 4시 관광버스 단체. 이른 아침 또는 오후 5시 이후 추천",
       "public_transport": "카툼바역에서 686G 버스 20분. 관광안내소 매일 9am~4pm"
     },
     "experience": {
-      "photo_spots": "다단계 전망 플랫폼에서 쓰리시스터스와 제이미슨 밸리 파노라마. Prince Henry Cliff Walk 17개 추가 전망대",
+      "photo_spots": [
+        "다단계 전망 플랫폼에서 쓰리시스터스와 제이미슨 밸리 파노라마. Prince Henry Cliff Walk 17개 추가 전망대"
+      ],
       "golden_hour": "오후 늦게 석양에 물든 쓰리시스터스 감상. 5월 일몰 약 17시",
       "seasonal_beauty": "5월 가을 - 단풍 배경. 여름보다 방문객 적어 사진 촬영 여유. 가을 빛 아름다움",
-      "hidden_gems": "Prince Henry Walk으로 17개 추가 전망대와 Leura Cascades까지 5.2km 산책. Giant Stairway 1000계단 하강",
+      "hidden_gems": [
+        "Prince Henry Walk으로 17개 추가 전망대와 Leura Cascades까지 5.2km 산책. Giant Stairway 1000계단 하강"
+      ],
       "sensory_notes": "광활한 밸리의 깊이감, 바람, 유칼립투스 블루 헤이즈. 블루마운틴의 상징적 경험"
     },
     "risk_check": {
-      "negative_review_patterns": "피크 시간 극도 혼잡(관광버스), 주차 공간 부족 및 비싼 미터 주차, 안개 시 조망 불가",
+      "negative_review_patterns": [
+        "피크 시간 극도 혼잡(관광버스), 주차 공간 부족 및 비싼 미터 주차, 안개 시 조망 불가"
+      ],
       "may_operation": "5월 정상 운영. 전망대 24시간, 관광안내소 9am~4pm",
       "safety_issues": "전망 플랫폼 안전 울타리 있음. Giant Stairway/Three Sisters Walk 계단 주의",
       "weather_impact": "안개 빈도 증가(특히 아침). 바람 강함. 맑은 날 방문 필수",

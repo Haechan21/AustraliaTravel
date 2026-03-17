@@ -61,23 +61,41 @@
       "parking": "Conservation Hut 주차장 이용 (무료, 공간 제한적). 주말 오전 일찍 도착 권장",
       "road_condition": "Fletcher St - 일반 도로, 양호. Conservation Hut까지 포장 도로",
       "nearby_attractions": [
-        {"name": "웬트워스 폴스 전망대", "drive_min": 5},
-        {"name": "링컨스 록", "drive_min": 8},
-        {"name": "서블라임 포인트 전망대", "drive_min": 10},
-        {"name": "에버글라데스 하우스 & 가든스", "drive_min": 10}
+        {
+          "name": "웬트워스 폴스 전망대",
+          "drive_min": 5
+        },
+        {
+          "name": "링컨스 록",
+          "drive_min": 8
+        },
+        {
+          "name": "서블라임 포인트 전망대",
+          "drive_min": 10
+        },
+        {
+          "name": "에버글라데스 하우스 & 가든스",
+          "drive_min": 10
+        }
       ],
       "peak_times": "주말 오전 9시~오후 2시. 평일은 한적",
       "public_transport": "Wentworth Falls역에서 도보 30분+ 또는 택시. 대중교통 접근 불편"
     },
     "experience": {
-      "photo_spots": "폭포 아래에서 올려보는 앵글이 가장 인상적. 이끼 낀 바위와 양치류 배경. 자연 수영장 전경",
+      "photo_spots": [
+        "폭포 아래에서 올려보는 앵글이 가장 인상적. 이끼 낀 바위와 양치류 배경. 자연 수영장 전경"
+      ],
       "golden_hour": "계곡 내부라 직사광선보다 부드러운 확산광이 좋음. 오전 중 방문 시 빛이 폭포를 비춤",
       "seasonal_beauty": "5월 가을 - 주변 숲의 단풍과 초록 이끼의 대비. 수량이 적절하여 폭포 형태가 아름다움",
-      "hidden_gems": "폭포 아래 자연 수영장(와일드 스위밍). 실비아 폭포까지 연계 시 더 깊은 계곡 체험",
+      "hidden_gems": [
+        "폭포 아래 자연 수영장(와일드 스위밍). 실비아 폭포까지 연계 시 더 깊은 계곡 체험"
+      ],
       "sensory_notes": "폭포 떨어지는 소리, 습한 공기, 이끼와 흙 냄새, 차가운 물보라. 원시림 속 깊은 몰입감"
     },
     "risk_check": {
-      "negative_review_patterns": "가파른 계단으로 체력 부담, 비 후 미끄러운 트레일, 인기 명소라 주말 혼잡",
+      "negative_review_patterns": [
+        "가파른 계단으로 체력 부담, 비 후 미끄러운 트레일, 인기 명소라 주말 혼잡"
+      ],
       "may_operation": "5월 정상 운영. 폭우 후 트레일 폐쇄 가능성 있으므로 NSW National Parks 웹사이트 확인",
       "safety_issues": "가파른 계단과 젖은 바위. 절벽 가장자리 주의. 와일드 스위밍 시 수온 낮고 미끄러운 바위",
       "weather_impact": "폭우 후 트레일 미끄럽고 위험. 폭우 시 폭포 수량 증가하나 접근 위험도 증가",

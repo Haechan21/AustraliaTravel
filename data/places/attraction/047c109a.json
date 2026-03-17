@@ -59,23 +59,48 @@
       "parking": "무료 주차장 (대형 버스 주차도 가능). 휠체어 접근 가능",
       "road_condition": "포장도로. 콥스하버 시내에서 북쪽 Pacific Highway 5분 → Sealy Lookout 턴오프 후 바나나/아보카도 농장 사이 포장도로",
       "nearby_attractions": [
-        {"name": "The Big Banana Fun Park (빅 바나나)", "distance_km": 3, "drive_min": 5},
-        {"name": "Coffs Treetops Adventure Park", "distance_km": 0.5, "drive_min": 2},
-        {"name": "Muttonbird Island (머튼버드)", "distance_km": 9, "drive_min": 15},
-        {"name": "Gumgali Track (Korora Lookout)", "distance_km": 1, "drive_min": 3}
+        {
+          "name": "The Big Banana Fun Park (빅 바나나)",
+          "distance_km": 3,
+          "drive_min": 5
+        },
+        {
+          "name": "Coffs Treetops Adventure Park",
+          "distance_km": 0.5,
+          "drive_min": 2
+        },
+        {
+          "name": "Muttonbird Island (머튼버드)",
+          "distance_km": 9,
+          "drive_min": 15
+        },
+        {
+          "name": "Gumgali Track (Korora Lookout)",
+          "distance_km": 1,
+          "drive_min": 3
+        }
       ],
       "peak_times": "주말 오전~오후. 카페 영업 불규칙하므로 간식 챙겨가기",
       "public_transport": "대중교통 접근 어려움. 자차 필수"
     },
     "experience": {
-      "photo_spots": ["22m 캔틸레버 전망대에서 콥스하버 시내/해안선/솔리터리 아일랜즈 파노라마", "열대우림 트리캐노피 레벨 뷰", "열대우림 산책로 내부"],
+      "photo_spots": [
+        "22m 캔틸레버 전망대에서 콥스하버 시내/해안선/솔리터리 아일랜즈 파노라마",
+        "열대우림 트리캐노피 레벨 뷰",
+        "열대우림 산책로 내부"
+      ],
       "golden_hour": "동향 해안 뷰이므로 일출 시 콥스하버 도시와 바다가 황금빛. 일몰 시 산 쪽 노을",
       "seasonal_beauty": "5월 가을 습도 낮아 시야 맑고 산책에 최적. 쾌적한 기온",
-      "hidden_gems": "Gumgali Track: 곰바잉기르 원주민 이야기를 담은 해석 산책로. Coffs Treetops 하이로프 코스도 인근",
+      "hidden_gems": [
+        "Gumgali Track: 곰바잉기르 원주민 이야기를 담은 해석 산책로. Coffs Treetops 하이로프 코스도 인근"
+      ],
       "sensory_notes": "열대우림 새소리와 곤충 소리. 습한 열대우림 향. 15m 높이에서 바라보는 공중 감각"
     },
     "risk_check": {
-      "negative_review_patterns": ["카페(Nyanggan Gapi) 예고 없이 닫힐 수 있음", "일몰 후 차량 접근 불가"],
+      "negative_review_patterns": [
+        "카페(Nyanggan Gapi) 예고 없이 닫힐 수 있음",
+        "일몰 후 차량 접근 불가"
+      ],
       "may_operation": "매일 일출~일몰 정상 운영",
       "safety_issues": "전망대 계단 없이 접근 가능 (휠체어 가능). 특별한 안전 이슈 없음",
       "weather_impact": "안개/비 시 전망 제한. 우천 시 산책로 미끄러울 수 있으나 방문 가능",

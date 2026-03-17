@@ -57,23 +57,50 @@
       "parking": "무료 주차장. 주차장에서 100m 평탄한 잔디밭 도보로 등대 접근",
       "road_condition": "포장도로. 야마 타운에서 가까워 접근 편리",
       "nearby_attractions": [
-        {"name": "Yamba Main Beach (오션풀)", "distance_km": 0.3, "drive_min": 2},
-        {"name": "Turners Beach", "distance_km": 0.3, "drive_min": 2},
-        {"name": "Angourie Point (서핑 명소)", "distance_km": 5, "drive_min": 8},
-        {"name": "Wooli Breakwater", "distance_km": 60, "drive_min": 55}
+        {
+          "name": "Yamba Main Beach (오션풀)",
+          "distance_km": 0.3,
+          "drive_min": 2
+        },
+        {
+          "name": "Turners Beach",
+          "distance_km": 0.3,
+          "drive_min": 2
+        },
+        {
+          "name": "Angourie Point (서핑 명소)",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Wooli Breakwater",
+          "distance_km": 60,
+          "drive_min": 55
+        }
       ],
       "peak_times": "일몰 시간대에 약간 혼잡. 일반적으로 한산",
       "public_transport": "야마 타운에서 도보 가능"
     },
     "experience": {
-      "photo_spots": ["등대와 클래런스 강 배경", "서쪽 클래런스 강 석양", "동쪽 태평양 파노라마"],
+      "photo_spots": [
+        "등대와 클래런스 강 배경",
+        "서쪽 클래런스 강 석양",
+        "동쪽 태평양 파노라마"
+      ],
       "golden_hour": "서쪽으로 클래런스 강에 지는 석양이 아름다움 — 일몰 시 최고",
       "seasonal_beauty": "5월 고래 이동 초기 시기. 맑은 날 전망 특히 좋음. 피크닉 적합한 날씨",
-      "hidden_gems": "야마 타운 자체가 'Australia's Favourite Town' 수상 이력. 등대에서 걸어서 메인비치/오션풀까지 산책 가능",
+      "hidden_gems": [
+        "야마 타운 자체가 'Australia's Favourite Town' 수상 이력. 등대에서 걸어서 메인비치/오션풀까지 산책 가능"
+      ],
       "sensory_notes": "강과 바다가 만나는 풍경, 바닷바람, 등대 주변 넓은 잔디밭의 평화로움"
     },
     "risk_check": {
-      "negative_review_patterns": ["등대 내부 입장 불가", "안내판/시설 제한적", "바람 강한 날 불편", "그늘 없어 한낮에 더울 수 있음"],
+      "negative_review_patterns": [
+        "등대 내부 입장 불가",
+        "안내판/시설 제한적",
+        "바람 강한 날 불편",
+        "그늘 없어 한낮에 더울 수 있음"
+      ],
       "may_operation": "24시간 개방. 5월 정상 관람",
       "safety_issues": "특별한 안전 이슈 없음. 넓은 잔디밭이라 가족 안전",
       "weather_impact": "강풍 시 불편. 비 오는 날 전망 제한. 그늘 없으니 날씨에 따라 체감 차이",

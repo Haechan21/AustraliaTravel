@@ -58,23 +58,47 @@
       "parking": "무료 주차. 소규모이나 회전율 높음. 주말에도 잠시 대기하면 자리 남.",
       "road_condition": "Longview Crescent 주거 도로. 포장 양호.",
       "nearby_attractions": [
-        {"name": "Grand Pacific Drive (f97b06e6)", "distance_km": 0.5, "drive_min": 1},
-        {"name": "Old Helensburgh Station (f5d5a290)", "distance_km": 5, "drive_min": 8},
-        {"name": "Sea Cliff Bridge (96da6ea2)", "distance_km": 4, "drive_min": 6},
-        {"name": "Figure Eight Pools (32918380)", "distance_km": 5, "drive_min": 10}
+        {
+          "name": "Grand Pacific Drive (f97b06e6)",
+          "distance_km": 0.5,
+          "drive_min": 1
+        },
+        {
+          "name": "Old Helensburgh Station (f5d5a290)",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Sea Cliff Bridge (96da6ea2)",
+          "distance_km": 4,
+          "drive_min": 6
+        },
+        {
+          "name": "Figure Eight Pools (32918380)",
+          "distance_km": 5,
+          "drive_min": 10
+        }
       ],
       "peak_times": "주말 오전~오후 내내 혼잡. 평일은 한적.",
       "public_transport": "Stanwell Park역에서 도보 접근 가능"
     },
     "experience": {
-      "photo_spots": ["Sea Cliff Bridge + 해안선 파노라마", "절벽 위에서 내려다보는 해안 마을"],
+      "photo_spots": [
+        "Sea Cliff Bridge + 해안선 파노라마",
+        "절벽 위에서 내려다보는 해안 마을"
+      ],
       "golden_hour": "서쪽 절벽 방향으로 일몰 시 드라마틱한 조명",
       "seasonal_beauty": "5월 가을 — 맑은 하늘에 먼 해안선까지 선명한 시야",
-      "hidden_gems": "전망대에서 보이는 Sea Cliff Bridge를 실제로 걸어볼 수 있는 연계 코스",
+      "hidden_gems": [
+        "전망대에서 보이는 Sea Cliff Bridge를 실제로 걸어볼 수 있는 연계 코스"
+      ],
       "sensory_notes": "높은 절벽 위의 강한 바람, 탁 트인 시야의 해방감, 아래로 보이는 파도"
     },
     "risk_check": {
-      "negative_review_patterns": ["주차 부족", "체류 시간 짧음"],
+      "negative_review_patterns": [
+        "주차 부족",
+        "체류 시간 짧음"
+      ],
       "may_operation": "정상 운영. 날씨 영향 거의 없음.",
       "safety_issues": "절벽 가장자리 안전 난간 있으나 주의 필요.",
       "weather_impact": "우천/안개 시 전망 제한. 바람 강할 수 있음.",

@@ -56,23 +56,48 @@
       "parking": "Lighthouse Road 노변 무료 주차. 장애인 주차 공간 추가됨",
       "road_condition": "포장도로, 차량 접근 용이",
       "nearby_attractions": [
-        {"name": "Port Macquarie Coastal Walk (Shelly Beach~Tacking Point 구간)", "distance_km": 0, "drive_min": 0},
-        {"name": "Port Macquarie Camel Safaris (Lighthouse Beach)", "distance_km": 1.5, "drive_min": 3},
-        {"name": "Sea Acres Rainforest Centre", "distance_km": 2.0, "drive_min": 5},
-        {"name": "Surf Life Saving Club (카페/키오스크)", "distance_km": 0.5, "drive_min": 2}
+        {
+          "name": "Port Macquarie Coastal Walk (Shelly Beach~Tacking Point 구간)",
+          "distance_km": 0,
+          "drive_min": 0
+        },
+        {
+          "name": "Port Macquarie Camel Safaris (Lighthouse Beach)",
+          "distance_km": 1.5,
+          "drive_min": 3
+        },
+        {
+          "name": "Sea Acres Rainforest Centre",
+          "distance_km": 2.0,
+          "drive_min": 5
+        },
+        {
+          "name": "Surf Life Saving Club (카페/키오스크)",
+          "distance_km": 0.5,
+          "drive_min": 2
+        }
       ],
       "peak_times": "일출/일몰 시간대에 방문객 집중. 주말 오전에도 혼잡",
       "public_transport": "시내에서 버스 이용 가능하나 빈도 낮음"
     },
     "experience": {
-      "photo_spots": ["등대와 라이트하우스 비치 파노라마", "해안 절벽 위에서 내려다보는 파도", "일출/일몰 시 등대 실루엣"],
+      "photo_spots": [
+        "등대와 라이트하우스 비치 파노라마",
+        "해안 절벽 위에서 내려다보는 파도",
+        "일출/일몰 시 등대 실루엣"
+      ],
       "golden_hour": "동쪽 해안이므로 일출 뷰 탁월. 일몰은 등대 뒤편으로 하늘이 물드는 경관",
       "seasonal_beauty": "5월부터 혹등고래 북상 이동 시작 — 등대에서 고래 관찰 가능. 일몰 시간이 빨라져(약 5pm) 석양 감상에 유리",
-      "hidden_gems": "등대에서 라이트하우스 비치까지 계단으로 연결 — 7km 해변 산책 가능. 1879년 건축된 호주 13번째 오래된 등대",
+      "hidden_gems": [
+        "등대에서 라이트하우스 비치까지 계단으로 연결 — 7km 해변 산책 가능. 1879년 건축된 호주 13번째 오래된 등대"
+      ],
       "sensory_notes": "바람 소리, 파도가 절벽에 부딪히는 소리, 넓은 바다의 짠 공기"
     },
     "risk_check": {
-      "negative_review_patterns": ["등대 내부 입장 불가", "해안 산책로 일부 구간 일시 통행 제한"],
+      "negative_review_patterns": [
+        "등대 내부 입장 불가",
+        "해안 산책로 일부 구간 일시 통행 제한"
+      ],
       "may_operation": "24시간 개방, 5월 정상 관람 가능",
       "safety_issues": "절벽 가장자리 주의. 접근성 개선된 휠체어 산책로 있음",
       "weather_impact": "강풍 시 해안가 위험할 수 있음. 비 오는 날에도 방문 가능하나 경관 제한",

@@ -61,23 +61,49 @@
       "parking": "Dorrigo Rainforest Centre 주차장 (장애인 주차 포함). The Glade Picnic Area에도 주차 가능",
       "road_condition": "포장도로 (Waterfall Way). 일부 구간 좁고 급커브. 마지막 9km 속도 제한",
       "nearby_attractions": [
-        {"name": "Dangar Falls (댕거 폭포)", "distance_km": 7, "drive_min": 10},
-        {"name": "Ebor Falls (에보르 폭포)", "distance_km": 40, "drive_min": 45},
-        {"name": "Dorrigo Rainforest Centre (스카이워크)", "distance_km": 0.5, "drive_min": 2},
-        {"name": "Dorrigo 타운 카페", "distance_km": 3, "drive_min": 5}
+        {
+          "name": "Dangar Falls (댕거 폭포)",
+          "distance_km": 7,
+          "drive_min": 10
+        },
+        {
+          "name": "Ebor Falls (에보르 폭포)",
+          "distance_km": 40,
+          "drive_min": 45
+        },
+        {
+          "name": "Dorrigo Rainforest Centre (스카이워크)",
+          "distance_km": 0.5,
+          "drive_min": 2
+        },
+        {
+          "name": "Dorrigo 타운 카페",
+          "distance_km": 3,
+          "drive_min": 5
+        }
       ],
       "peak_times": "주말 오전~오후. 평일 한적",
       "public_transport": "대중교통 접근 어려움. 자차 필수"
     },
     "experience": {
-      "photo_spots": ["폭포 뒤로 걸어가며 찍는 폭포 커튼 사진", "현수교에서 폭포 정면 감상", "울창한 열대우림 트레일"],
+      "photo_spots": [
+        "폭포 뒤로 걸어가며 찍는 폭포 커튼 사진",
+        "현수교에서 폭포 정면 감상",
+        "울창한 열대우림 트레일"
+      ],
       "golden_hour": "열대우림 내부라 직사광선 적음. 오전 빛이 폭포 물줄기에 반사되어 아름다움",
       "seasonal_beauty": "5월은 겨울 직전으로 거머리 적고 폭포 수량 풍부. 여름보다 쾌적한 트레킹",
-      "hidden_gems": "폭포 뒤로 걸어갈 수 있는 독특한 경험. Wonga Walk 순환 코스(6.6km, 2.5시간) 추천. Rainforest Centre 스카이워크",
+      "hidden_gems": [
+        "폭포 뒤로 걸어갈 수 있는 독특한 경험. Wonga Walk 순환 코스(6.6km, 2.5시간) 추천. Rainforest Centre 스카이워크"
+      ],
       "sensory_notes": "폭포 물줄기 뒤에서 느끼는 물안개와 소리. 열대우림의 습한 공기와 이끼 향. 새소리와 물소리의 조화"
     },
     "risk_check": {
-      "negative_review_patterns": ["복귀 시 가파른 오르막", "거머리 (특히 비 온 후)", "비 온 뒤 트레일 미끄러움"],
+      "negative_review_patterns": [
+        "복귀 시 가파른 오르막",
+        "거머리 (특히 비 온 후)",
+        "비 온 뒤 트레일 미끄러움"
+      ],
       "may_operation": "매일 개방. Dorrigo Rainforest Centre 매일 운영",
       "safety_issues": "거머리 방지 스프레이/긴 양말 추천. 비 온 후 트레일 미끄러움. 복귀 오르막 체력 필요",
       "weather_impact": "비 후 거머리 활동 증가. 트레일 미끄러움. 폭포 수량은 비 후 증가하여 장관",

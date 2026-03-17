@@ -58,23 +58,49 @@
       "parking": "Nelson Bay Golf Course 주차장 (57 Dowling St) 무료 주차",
       "road_condition": "포장도로. Nelson Bay 시내에서 접근 용이",
       "nearby_attractions": [
-        {"name": "Fly Point Aquatic Reserve (플라이 포인트)", "distance_km": 1.5, "drive_min": 3},
-        {"name": "Tomaree Head Summit Walk (토마리 헤드)", "distance_km": 4, "drive_min": 8},
-        {"name": "Toboggan Hill Park (토보건)", "distance_km": 5, "drive_min": 8},
-        {"name": "Irukandji Shark & Ray (이루칸지)", "distance_km": 10, "drive_min": 15}
+        {
+          "name": "Fly Point Aquatic Reserve (플라이 포인트)",
+          "distance_km": 1.5,
+          "drive_min": 3
+        },
+        {
+          "name": "Tomaree Head Summit Walk (토마리 헤드)",
+          "distance_km": 4,
+          "drive_min": 8
+        },
+        {
+          "name": "Toboggan Hill Park (토보건)",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Irukandji Shark & Ray (이루칸지)",
+          "distance_km": 10,
+          "drive_min": 15
+        }
       ],
       "peak_times": "투어 시간 고정 (일몰 1-2시간 전). 소규모(최대 6명)라 예약 빨리 마감",
       "public_transport": "넬슨베이 시내에서 도보 가능 (Dowling St)"
     },
     "experience": {
-      "photo_spots": ["골프장 잔디밭 위의 야생 캥거루 무리", "석양 빛 아래 캥거루 실루엣", "골프카트에서 바라본 캥거루 근접 촬영"],
+      "photo_spots": [
+        "골프장 잔디밭 위의 야생 캥거루 무리",
+        "석양 빛 아래 캥거루 실루엣",
+        "골프카트에서 바라본 캥거루 근접 촬영"
+      ],
       "golden_hour": "투어 자체가 일몰 전 시간대라 골든아워 촬영 최적. 서쪽 방향 석양 배경",
       "seasonal_beauty": "5월 일몰이 빨라져 오후 5시경 투어. 가을 석양 색감이 따뜻하고 풍성",
-      "hidden_gems": "70헥타르 골프장에 약 100마리 야생 캥거루 서식. 수익금 전액 캥거루 연구에 사용. 동물원이 아닌 야생 환경",
+      "hidden_gems": [
+        "70헥타르 골프장에 약 100마리 야생 캥거루 서식. 수익금 전액 캥거루 연구에 사용. 동물원이 아닌 야생 환경"
+      ],
       "sensory_notes": "캥거루가 풀 뜯는 소리. 석양 아래 골프장의 평화로운 분위기. 자연 그대로의 야생 교감"
     },
     "risk_check": {
-      "negative_review_patterns": ["사전 예약 필수 (예약 없이 방문 시 실망)", "현금만 받는 경우 있음 ($20 골프카트)", "소규모 투어라 예약 빨리 마감"],
+      "negative_review_patterns": [
+        "사전 예약 필수 (예약 없이 방문 시 실망)",
+        "현금만 받는 경우 있음 ($20 골프카트)",
+        "소규모 투어라 예약 빨리 마감"
+      ],
       "may_operation": "정상 운영. 5월 투어 시간 조정 (일몰 빨라짐)",
       "safety_issues": "야생 캥거루이므로 너무 가까이 접근 금지. 가이드 지시 따를 것",
       "weather_impact": "비 오는 날 투어 취소 가능성. 날씨 확인 후 방문 권장",

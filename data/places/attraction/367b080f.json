@@ -57,23 +57,49 @@
       "parking": "Lakeview Parade 무료 노상주차. 주말 일찍 도착 권장",
       "road_condition": "포장도로. Lake Macquarie 호숫가 접근 용이",
       "nearby_attractions": [
-        {"name": "Blackbutt Reserve (블랙버트)", "distance_km": 15, "drive_min": 20},
-        {"name": "Blacksmiths Beach", "distance_km": 5, "drive_min": 8},
-        {"name": "Grannys Pool", "distance_km": 4, "drive_min": 7},
-        {"name": "Pelican RSL", "distance_km": 0.5, "drive_min": 2}
+        {
+          "name": "Blackbutt Reserve (블랙버트)",
+          "distance_km": 15,
+          "drive_min": 20
+        },
+        {
+          "name": "Blacksmiths Beach",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Grannys Pool",
+          "distance_km": 4,
+          "drive_min": 7
+        },
+        {
+          "name": "Pelican RSL",
+          "distance_km": 0.5,
+          "drive_min": 2
+        }
       ],
       "peak_times": "주말 오전~오후 가족 단위 방문 집중. 여름 성수기에 주차 부족",
       "public_transport": "주변 버스 노선 있으나 빈도 낮음"
     },
     "experience": {
-      "photo_spots": ["Lake Macquarie 호숫가 석양 반사", "어린이 놀이터 풍경", "호수와 하늘이 만나는 수평선"],
+      "photo_spots": [
+        "Lake Macquarie 호숫가 석양 반사",
+        "어린이 놀이터 풍경",
+        "호수와 하늘이 만나는 수평선"
+      ],
       "golden_hour": "서쪽 방향 호수이므로 일몰 뷰 양호. 호수면에 석양 반사",
       "seasonal_beauty": "5월 가을 선선한 날씨로 피크닉/산책에 적합. 수영은 다소 쌀쌀",
-      "hidden_gems": "울타리 있는 놀이터 구역이 어린 아이에게 안전. 무료 BBQ 시설",
+      "hidden_gems": [
+        "울타리 있는 놀이터 구역이 어린 아이에게 안전. 무료 BBQ 시설"
+      ],
       "sensory_notes": "호수의 잔잔한 물결 소리. 새 울음소리. 잔디밭에서의 평화로움"
     },
     "risk_check": {
-      "negative_review_patterns": ["Swansea Channel 근처 조류 강함", "화장실 시설 개선 필요", "성수기 주차 부족"],
+      "negative_review_patterns": [
+        "Swansea Channel 근처 조류 강함",
+        "화장실 시설 개선 필요",
+        "성수기 주차 부족"
+      ],
       "may_operation": "연중 24시간 개방",
       "safety_issues": "호수 수영 시 수심 급변 구간 주의. Swansea Channel 근처 조류 위험. 어린이 수영 주의",
       "weather_impact": "우천 시 피크닉 불가하나 놀이터는 이용 가능. 강풍 시 호수 물결 주의",

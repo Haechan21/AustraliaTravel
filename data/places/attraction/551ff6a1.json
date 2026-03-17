@@ -55,23 +55,47 @@
       "parking": "공사 중 주차 제한. 일부 구간 주차 가능",
       "road_condition": "포장도로. Urunga 시내에서 접근",
       "nearby_attractions": [
-        {"name": "Urunga Wetlands Boardwalk (웨트랜즈)", "distance_km": 1, "drive_min": 3},
-        {"name": "Boambee Headland (보암비)", "distance_km": 20, "drive_min": 22},
-        {"name": "The Honey Place", "distance_km": 3, "drive_min": 5},
-        {"name": "Bellingen 마을", "distance_km": 12, "drive_min": 15}
+        {
+          "name": "Urunga Wetlands Boardwalk (웨트랜즈)",
+          "distance_km": 1,
+          "drive_min": 3
+        },
+        {
+          "name": "Boambee Headland (보암비)",
+          "distance_km": 20,
+          "drive_min": 22
+        },
+        {
+          "name": "The Honey Place",
+          "distance_km": 3,
+          "drive_min": 5
+        },
+        {
+          "name": "Bellingen 마을",
+          "distance_km": 12,
+          "drive_min": 15
+        }
       ],
       "peak_times": "공사 중이므로 해당 없음. 완공 후 이른 아침/일몰 시간대 인기 예상",
       "public_transport": "Urunga역 인근. 도보 접근 가능"
     },
     "experience": {
-      "photo_spots": ["신규 200m 구간 전망대에서 강/경관 조망", "공사 완료 시 1.2km 강변~해안 산책로"],
+      "photo_spots": [
+        "신규 200m 구간 전망대에서 강/경관 조망",
+        "공사 완료 시 1.2km 강변~해안 산책로"
+      ],
       "golden_hour": "강 위 보드워크이므로 일출/일몰 시 수면 반사 기대",
       "seasonal_beauty": "5월 가을 강변 산책에 쾌적. 2026년 6월 완공 예정이므로 5월 방문 시 대부분 공사 중",
-      "hidden_gems": "2026년 6월 완공 시 $12.2M 투자 새 보드워크. 현재 200m 신규 구간+전망대만 이용 가능",
+      "hidden_gems": [
+        "2026년 6월 완공 시 $12.2M 투자 새 보드워크. 현재 200m 신규 구간+전망대만 이용 가능"
+      ],
       "sensory_notes": "강물 소리. 바닷바람. 새 보드워크의 나무 냄새"
     },
     "risk_check": {
-      "negative_review_patterns": ["대부분 구간 공사 중 폐쇄", "전체 보드워크 체험 불가"],
+      "negative_review_patterns": [
+        "대부분 구간 공사 중 폐쇄",
+        "전체 보드워크 체험 불가"
+      ],
       "may_operation": "2026년 5월: 대규모 공사 진행 중. 200m 신규 구간+전망대만 개방. 2026년 6월 완공 예정이나 지연 가능",
       "safety_issues": "공사 구간 접근 금지. 개방 구간만 이용",
       "weather_impact": "우천 시 보드워크 미끄러움",

@@ -59,23 +59,49 @@
       "parking": "Blowhole Point 주변 무료 주차. 주말 혼잡. 아침 일찍 권장.",
       "road_condition": "키아마 타운센터 접근 포장 양호.",
       "nearby_attractions": [
-        {"name": "Kiama Lighthouse (dc2795c8)", "distance_km": 0.1, "drive_min": 1},
-        {"name": "Little Blowhole (87882b26)", "distance_km": 2, "drive_min": 4},
-        {"name": "Bombo Headland (a43e5009)", "distance_km": 3, "drive_min": 5},
-        {"name": "Loves Bay (a183bc9a)", "distance_km": 3, "drive_min": 5}
+        {
+          "name": "Kiama Lighthouse (dc2795c8)",
+          "distance_km": 0.1,
+          "drive_min": 1
+        },
+        {
+          "name": "Little Blowhole (87882b26)",
+          "distance_km": 2,
+          "drive_min": 4
+        },
+        {
+          "name": "Bombo Headland (a43e5009)",
+          "distance_km": 3,
+          "drive_min": 5
+        },
+        {
+          "name": "Loves Bay (a183bc9a)",
+          "distance_km": 3,
+          "drive_min": 5
+        }
       ],
       "peak_times": "주말 오전~오후 가장 혼잡. 주차 대기열 발생.",
       "public_transport": "키아마역에서 도보 10분"
     },
     "experience": {
-      "photo_spots": ["분출 순간 물기둥 (최동단 전망대)", "블로우홀 개구부 클로즈업", "Blowhole Point 해안 파노라마"],
+      "photo_spots": [
+        "분출 순간 물기둥 (최동단 전망대)",
+        "블로우홀 개구부 클로즈업",
+        "Blowhole Point 해안 파노라마"
+      ],
       "golden_hour": "오전 햇살에 물보라가 무지개 효과. 일출 시 극적.",
       "seasonal_beauty": "5월 가을 — 남동쪽 파도 강해 분출 확률 높음",
-      "hidden_gems": "Blowhole Point 남쪽 록풀 — 아이들 물놀이 가능",
+      "hidden_gems": [
+        "Blowhole Point 남쪽 록풀 — 아이들 물놀이 가능"
+      ],
       "sensory_notes": "땅을 울리는 쿵 소리, 갑작스러운 물기둥, 얼굴에 튀는 물보라의 짜릿함"
     },
     "risk_check": {
-      "negative_review_patterns": ["분출 없이 긴 대기", "과대기대 후 실망", "주차 혼잡"],
+      "negative_review_patterns": [
+        "분출 없이 긴 대기",
+        "과대기대 후 실망",
+        "주차 혼잡"
+      ],
       "may_operation": "정상 운영. 5월 남동쪽 파도 조건 양호.",
       "safety_issues": "바위 가장자리 미끄러움. 분출 시 물보라에 젖음. 난간 내에서 관람 권장.",
       "weather_impact": "남동쪽 파도 필수 — 잔잔한 날 분출 없음. 우천 자체는 영향 적으나 파도 조건이 핵심.",

@@ -56,23 +56,41 @@
       "parking": "Wilson Parking 지하 주차장 300대 (Towns Place 입구, 6am~자정). 앱/사전 예약 시 할인. 인근 달링하버 주차장도 이용 가능",
       "road_condition": "도심 도로, 양호",
       "nearby_attractions": [
-        {"name": "옵저버토리 힐 공원", "walk_min": 10},
-        {"name": "달링 하버", "walk_min": 15},
-        {"name": "오스트레일리아 국립 해양 박물관", "walk_min": 20},
-        {"name": "서큘러 키", "walk_min": 15}
+        {
+          "name": "옵저버토리 힐 공원",
+          "walk_min": 10
+        },
+        {
+          "name": "달링 하버",
+          "walk_min": 15
+        },
+        {
+          "name": "오스트레일리아 국립 해양 박물관",
+          "walk_min": 20
+        },
+        {
+          "name": "서큘러 키",
+          "walk_min": 15
+        }
       ],
       "peak_times": "주말 오전~오후. 이벤트 시 혼잡",
       "public_transport": "바랑가루 메트로역 (Hickson Rd 북쪽). 와이야드역 지하 보행로 연결(1km). F3/F4 페리 바랑가루 와프(도보 10분)"
     },
     "experience": {
-      "photo_spots": "사암 블록 록풀과 해안선. 하버브리지 배경 산책로. 자생 수목 75,000그루의 자연 경관",
+      "photo_spots": [
+        "사암 블록 록풀과 해안선. 하버브리지 배경 산책로. 자생 수목 75,000그루의 자연 경관"
+      ],
       "golden_hour": "서쪽 하버 방향이므로 일몰 시 하버 위 황금빛 반사. 이른 아침 안개 낀 하버 풍경",
       "seasonal_beauty": "5월 가을 - 비수기로 한적. 쾌적한 날씨에 산책 최적. 자생 식물의 가을 변화",
-      "hidden_gems": "사암 블록으로 재현한 록풀. Stargazer Lawn에서 눕기. 바랑가루 레스토랑 구역과 연계",
+      "hidden_gems": [
+        "사암 블록으로 재현한 록풀. Stargazer Lawn에서 눕기. 바랑가루 레스토랑 구역과 연계"
+      ],
       "sensory_notes": "하버 바람, 물결 소리, 자생 수목의 향. 현대 도시와 자연의 조화"
     },
     "risk_check": {
-      "negative_review_patterns": "주말 혼잡, 일부 시설 제한적이라는 의견",
+      "negative_review_patterns": [
+        "주말 혼잡, 일부 시설 제한적이라는 의견"
+      ],
       "may_operation": "5월 정상 운영. 24시간 개방",
       "safety_issues": "특별한 위험 없음. 잘 관리된 공원",
       "weather_impact": "비 시 야외 산책 불편. 맑은 날 하버 뷰 극대화",

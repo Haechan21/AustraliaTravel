@@ -70,7 +70,9 @@
   var activeRoute = 'all';
   var activeDay = 'all';
 
-  fetch('assets/data/route_data.json')
+  var base = (window.__BASE_URL__ || '').replace(/\/+$/, '');
+
+  fetch(base + '/assets/data/route_data.json')
     .then(function (r) { return r.json(); })
     .then(function (data) {
       routeData = data.routes;
@@ -405,7 +407,7 @@
 
   /* ── place_data.json 로드 + 모달 ── */
   var placeData = null;
-  fetch('assets/data/place_data.json')
+  fetch(base + '/assets/data/place_data.json')
     .then(function (r) { return r.json(); })
     .then(function (d) { placeData = d; });
 
@@ -470,7 +472,7 @@
 
     html += '<div class="modal-meta">';
     html += '<span class="modal-grade grade-' + p.grade + '">' + p.grade + '\uB4F1\uAE09</span>';
-    html += '<span><strong>' + p.average_score.toFixed(1) + '\uC810</strong></span>';
+    html += '<span><strong>' + p.may_adjusted_score.toFixed(1) + '\uC810</strong></span>';
     html += '<span>\uD83D\uDCCD ' + p.region + '</span>';
     if (p.controversial) html += '<span class="modal-controversy">\u26A1 \uB17C\uC7C1 (\uD3B8\uCC28 ' + p.spread.toFixed(1) + ')</span>';
     html += '</div>';

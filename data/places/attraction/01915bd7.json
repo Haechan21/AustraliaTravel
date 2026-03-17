@@ -56,22 +56,43 @@
       "parking": "Rotary Park 인근 무료 주차 (18시 이후 무료, 그 전 유료). Short Street 주변 주차 가능",
       "road_condition": "포장도로, 시내 중심가에서 접근 용이",
       "nearby_attractions": [
-        {"name": "Port Macquarie Coastal Walk (Town Beach)", "distance_km": 0.3, "drive_min": 2},
-        {"name": "Tacking Point Lighthouse", "distance_km": 5.5, "drive_min": 10},
-        {"name": "Koala Hospital (Guulabaa)", "distance_km": 12, "drive_min": 15}
+        {
+          "name": "Port Macquarie Coastal Walk (Town Beach)",
+          "distance_km": 0.3,
+          "drive_min": 2
+        },
+        {
+          "name": "Tacking Point Lighthouse",
+          "distance_km": 5.5,
+          "drive_min": 10
+        },
+        {
+          "name": "Koala Hospital (Guulabaa)",
+          "distance_km": 12,
+          "drive_min": 15
+        }
       ],
       "peak_times": "수/금/일 저녁 세션 시작 시간(겨울 7:30pm)에 집중",
       "public_transport": "포트맥쿼리 시내에서 도보 가능 거리"
     },
     "experience": {
-      "photo_spots": ["망원경을 통한 토성/목성 사진 촬영", "새 천문과학센터 외관"],
+      "photo_spots": [
+        "망원경을 통한 토성/목성 사진 촬영",
+        "새 천문과학센터 외관"
+      ],
       "golden_hour": "야간 관측 프로그램이므로 일몰/일출 무관. 밤하늘 별 관측이 핵심",
       "seasonal_beauty": "5월은 해가 일찍 져서(약 5pm) 저녁 관측 프로그램 시작이 빨라 유리. 가을 밤하늘이 맑은 편",
-      "hidden_gems": "2024년 11월 신축 Astronomy Science Centre에서 인터랙티브 전시 체험 가능",
+      "hidden_gems": [
+        "2024년 11월 신축 Astronomy Science Centre에서 인터랙티브 전시 체험 가능"
+      ],
       "sensory_notes": "고요한 밤, 망원경 렌즈를 통해 보는 토성 고리의 시각적 감동"
     },
     "risk_check": {
-      "negative_review_patterns": ["일부 가이드의 불친절한 태도", "프레젠테이션 주제가 기대와 다를 수 있음", "흐린 날 관측 불가로 실망"],
+      "negative_review_patterns": [
+        "일부 가이드의 불친절한 태도",
+        "프레젠테이션 주제가 기대와 다를 수 있음",
+        "흐린 날 관측 불가로 실망"
+      ],
       "may_operation": "5월 정상 운영. 겨울 시간표(7:30pm 오픈) 적용. 수/금/일만 운영",
       "safety_issues": "특별한 안전 이슈 없음. 장애인 접근 가능",
       "weather_impact": "구름 낀 날 관측 불가 — 날씨에 따라 취소 가능. 사전 웹사이트 확인 필수",

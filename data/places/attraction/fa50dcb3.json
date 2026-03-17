@@ -57,23 +57,48 @@
       "parking": "Buchanan Dr 대형 무료 주차장. 충분한 공간",
       "road_condition": "포장도로. South West Rocks Rd에서 접근",
       "nearby_attractions": [
-        {"name": "Arakoon NP / Trial Bay Gaol (아라쿤)", "distance_km": 4, "drive_min": 7},
-        {"name": "Little Bay Picnic Area (리틀 베이)", "distance_km": 4, "drive_min": 7},
-        {"name": "South West Rocks 시내", "distance_km": 1, "drive_min": 2},
-        {"name": "Hat Head National Park (Jack Perkins Track)", "distance_km": 10, "drive_min": 15}
+        {
+          "name": "Arakoon NP / Trial Bay Gaol (아라쿤)",
+          "distance_km": 4,
+          "drive_min": 7
+        },
+        {
+          "name": "Little Bay Picnic Area (리틀 베이)",
+          "distance_km": 4,
+          "drive_min": 7
+        },
+        {
+          "name": "South West Rocks 시내",
+          "distance_km": 1,
+          "drive_min": 2
+        },
+        {
+          "name": "Hat Head National Park (Jack Perkins Track)",
+          "distance_km": 10,
+          "drive_min": 15
+        }
       ],
       "peak_times": "여름 수영 시즌 인기. 5월은 한적",
       "public_transport": "South West Rocks 시내에서 도보 가능"
     },
     "experience": {
-      "photo_spots": ["보행자 다리 위에서 맹그로브 숲 조망", "다리 아래 얕은 물에서 놀이 장면", "SUP 투어 사진"],
+      "photo_spots": [
+        "보행자 다리 위에서 맹그로브 숲 조망",
+        "다리 아래 얕은 물에서 놀이 장면",
+        "SUP 투어 사진"
+      ],
       "golden_hour": "오전 빛이 크릭 수면에 반사. 맹그로브 숲 사이 빛줄기 포인트",
       "seasonal_beauty": "5월 가을 산책에 쾌적. 수영은 서늘할 수 있음. 맹그로브 숲 초록빛 유지",
-      "hidden_gems": "보행자 다리 건너 맹그로브 숲 산책 가능. 맞은편 카페에서 식사. SUP 투어 회사 현장 운영",
+      "hidden_gems": [
+        "보행자 다리 건너 맹그로브 숲 산책 가능. 맞은편 카페에서 식사. SUP 투어 회사 현장 운영"
+      ],
       "sensory_notes": "맹그로브 숲의 독특한 향. 크릭 물소리. 다리 위에서 내려다보는 맑은 물. 아이들 웃음소리"
     },
     "risk_check": {
-      "negative_review_patterns": ["다리에서 뛰어내리기 안전 주의", "5월 수온 낮아 수영 쌀쌀"],
+      "negative_review_patterns": [
+        "다리에서 뛰어내리기 안전 주의",
+        "5월 수온 낮아 수영 쌀쌀"
+      ],
       "may_operation": "24시간 개방. 정상 이용",
       "safety_issues": "다리에서 뛰어내리기 시 수심 확인 필수. 어린이 수영 시 보호자 동반. 얕은 쪽은 안전",
       "weather_impact": "우천 시 산책 불편. 크릭 수위 상승 시 수영 금지",

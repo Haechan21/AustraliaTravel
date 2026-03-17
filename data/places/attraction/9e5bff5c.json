@@ -58,23 +58,49 @@
       "parking": "Birubi Beach 하단 공용 주차장 (Lower Public Carpark) 무료. James Paterson St 끝",
       "road_condition": "포장도로. Anna Bay 시내에서 접근 용이. 주차장에서 낙타 트레일러 쉽게 발견",
       "nearby_attractions": [
-        {"name": "Irukandji Shark & Ray (이루칸지)", "distance_km": 3, "drive_min": 5},
-        {"name": "Stockton Sand Dunes", "distance_km": 0, "drive_min": 0},
-        {"name": "Toboggan Hill Park (토보건)", "distance_km": 8, "drive_min": 12},
-        {"name": "Quad Bike King (콰드바이크)", "distance_km": 15, "drive_min": 18}
+        {
+          "name": "Irukandji Shark & Ray (이루칸지)",
+          "distance_km": 3,
+          "drive_min": 5
+        },
+        {
+          "name": "Stockton Sand Dunes",
+          "distance_km": 0,
+          "drive_min": 0
+        },
+        {
+          "name": "Toboggan Hill Park (토보건)",
+          "distance_km": 8,
+          "drive_min": 12
+        },
+        {
+          "name": "Quad Bike King (콰드바이크)",
+          "distance_km": 15,
+          "drive_min": 18
+        }
       ],
       "peak_times": "학교 방학/주말 대기시간 길어짐. 평일 오전이 한적. 선셋 라이드 인기",
       "public_transport": "Anna Bay까지 버스 가능하나 주차장까지 도보 필요"
     },
     "experience": {
-      "photo_spots": ["모래언덕 위 낙타 행렬 실루엣 (특히 선셋)", "해변가 물가에서 낙타 타기", "Stockton Sand Dunes 배경 파노라마"],
+      "photo_spots": [
+        "모래언덕 위 낙타 행렬 실루엣 (특히 선셋)",
+        "해변가 물가에서 낙타 타기",
+        "Stockton Sand Dunes 배경 파노라마"
+      ],
       "golden_hour": "선셋 라이드가 골든아워 최적. 서쪽 석양 아래 모래언덕에서의 낙타 체험이 압권",
       "seasonal_beauty": "5월 가을 선셋이 빨라짐. 방풍 재킷 필요. 가을 석양 색감이 따뜻함",
-      "hidden_gems": "남반구 최대 해안 사구에서의 낙타 체험. 선셋 라이드는 높은 사구까지 올라가 더 특별",
+      "hidden_gems": [
+        "남반구 최대 해안 사구에서의 낙타 체험. 선셋 라이드는 높은 사구까지 올라가 더 특별"
+      ],
       "sensory_notes": "모래 위 낙타 발소리. 해풍에 실려오는 소금기. 높이에서 느끼는 낙타의 흔들림. 바람에 날리는 모래"
     },
     "risk_check": {
-      "negative_review_patterns": ["20분 데이 라이드가 짧게 느껴짐", "날씨에 따라 취소", "바람 강한 날 모래 날림"],
+      "negative_review_patterns": [
+        "20분 데이 라이드가 짧게 느껴짐",
+        "날씨에 따라 취소",
+        "바람 강한 날 모래 날림"
+      ],
       "may_operation": "매일 10AM-3:30PM 운영 (수요일 휴무). 선셋 라이드 금/토만",
       "safety_issues": "강풍 시 모래 날림으로 선글라스 필수. 낙타 탑승 시 안전벨트 있음",
       "weather_impact": "비/강풍 시 운영 취소. 날씨 확인 후 방문 필수",

@@ -59,22 +59,45 @@
       "parking": "Garawarra Farm 주차장 또는 Otford 주차장 이용. 공원 입장료 $12.",
       "road_condition": "포장도로로 주차장까지 접근. 이후 도보 6km 비포장 트레일.",
       "nearby_attractions": [
-        {"name": "Stanwell Tops Lookout (8bc91376)", "distance_km": 5, "drive_min": 10},
-        {"name": "Grand Pacific Drive (f97b06e6)", "distance_km": 5, "drive_min": 8},
-        {"name": "Eagle Rock (2228124c)", "distance_km": 12, "drive_min": 25}
+        {
+          "name": "Stanwell Tops Lookout (8bc91376)",
+          "distance_km": 5,
+          "drive_min": 10
+        },
+        {
+          "name": "Grand Pacific Drive (f97b06e6)",
+          "distance_km": 5,
+          "drive_min": 8
+        },
+        {
+          "name": "Eagle Rock (2228124c)",
+          "distance_km": 12,
+          "drive_min": 25
+        }
       ],
       "peak_times": "조건 좋은 주말 매우 혼잡. 평일 방문 강력 권장.",
       "public_transport": "Otford역에서 도보 접근 가능 (약 30분 + 트레일 2시간)"
     },
     "experience": {
-      "photo_spots": ["8자 풀 클로즈업", "Burning Palms Beach 전경", "해안 절벽 위에서 내려다보는 바위 선반"],
+      "photo_spots": [
+        "8자 풀 클로즈업",
+        "Burning Palms Beach 전경",
+        "해안 절벽 위에서 내려다보는 바위 선반"
+      ],
       "golden_hour": "동쪽 해안으로 일출 시 풀에 반영되는 빛이 아름다움. 단 접근 시간 고려 필요.",
       "seasonal_beauty": "5월 — 겨울 접근기로 파도 높아 접근 제한적이나, 조건 맞으면 한적한 경험 가능",
-      "hidden_gems": "트레일 도중 Burning Palms Beach 자체가 숨은 보석 — 서핑과 자연 휴식",
+      "hidden_gems": [
+        "트레일 도중 Burning Palms Beach 자체가 숨은 보석 — 서핑과 자연 휴식"
+      ],
       "sensory_notes": "험한 하산 후 마주하는 숨 막히는 해안, 파도 포말, 풀에 담긴 맑은 바닷물"
     },
     "risk_check": {
-      "negative_review_patterns": ["위험 대비 보상 불균형", "과대평가", "체력적 부담", "부상 사례 다수"],
+      "negative_review_patterns": [
+        "위험 대비 보상 불균형",
+        "과대평가",
+        "체력적 부담",
+        "부상 사례 다수"
+      ],
       "may_operation": "운영은 하나 5월 파도가 높아 안전 접근 가능 일수 제한적. 파도 예보 필수 확인.",
       "safety_issues": "바위 선반에서 대형 파도에 쓸려가는 사고 다발. 트레일 하산 중 미끄러짐 부상. 시설 전무.",
       "weather_impact": "파도/바람 직접 영향. 간조+파도 1m 이하만 안전. 우천 시 트레일 극도로 위험.",

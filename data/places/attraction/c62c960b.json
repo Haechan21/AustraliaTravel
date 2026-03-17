@@ -56,22 +56,43 @@
       "parking": "Lighthouse Beach 무료 주차장. 넓은 주차 공간이나 남쪽 끝(낙타 사파리 위치)까지 10-15분 도보 필요할 수 있음",
       "road_condition": "Matthew Flinders Drive, 포장도로",
       "nearby_attractions": [
-        {"name": "Tacking Point Lighthouse", "distance_km": 1.0, "drive_min": 3},
-        {"name": "Sea Acres Rainforest Centre", "distance_km": 1.5, "drive_min": 4},
-        {"name": "Lighthouse Beach (7km 해변)", "distance_km": 0, "drive_min": 0}
+        {
+          "name": "Tacking Point Lighthouse",
+          "distance_km": 1.0,
+          "drive_min": 3
+        },
+        {
+          "name": "Sea Acres Rainforest Centre",
+          "distance_km": 1.5,
+          "drive_min": 4
+        },
+        {
+          "name": "Lighthouse Beach (7km 해변)",
+          "distance_km": 0,
+          "drive_min": 0
+        }
       ],
       "peak_times": "오전 9:30 오픈 직후 가장 대기 짧음. 학교 방학 시 혼잡",
       "public_transport": "대중교통 접근 어려움"
     },
     "experience": {
-      "photo_spots": ["낙타 위에서 해변 배경 사진", "라이트하우스 비치 파노라마 배경의 낙타 행렬"],
+      "photo_spots": [
+        "낙타 위에서 해변 배경 사진",
+        "라이트하우스 비치 파노라마 배경의 낙타 행렬"
+      ],
       "golden_hour": "동쪽 해안 해변이라 일출 시 아름다움. 오전 운영이라 아침 빛 활용",
       "seasonal_beauty": "5월 가을 선선한 날씨에 낙타 타기 쾌적. 해변의 가을 분위기",
-      "hidden_gems": "호주에서 해변 낙타 타기가 가능한 몇 안 되는 장소 중 하나. 가이드가 사진 촬영도 도와줌",
+      "hidden_gems": [
+        "호주에서 해변 낙타 타기가 가능한 몇 안 되는 장소 중 하나. 가이드가 사진 촬영도 도와줌"
+      ],
       "sensory_notes": "낙타의 독특한 움직임 체감, 해변 파도 소리, 바닷바람, 모래 위 낙타 발소리"
     },
     "risk_check": {
-      "negative_review_patterns": ["예약 불가 선착순이라 놓칠 수 있음", "현금/EFTPOS만 가능 (카드 불가 가능성)", "대기 시간이 길 수 있음"],
+      "negative_review_patterns": [
+        "예약 불가 선착순이라 놓칠 수 있음",
+        "현금/EFTPOS만 가능 (카드 불가 가능성)",
+        "대기 시간이 길 수 있음"
+      ],
       "may_operation": "5월 정상 운영. 일~금 9:30am-1:00pm, 토요일 휴무",
       "safety_issues": "헬멧 제공됨. 낙타 관리 상태 양호",
       "weather_impact": "비 오는 날 운영 취소 가능. 날씨 확인 필요",
