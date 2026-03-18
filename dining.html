@@ -1,0 +1,42 @@
+---
+layout: default
+title: 식당 후보
+---
+
+<div class="dining-page">
+  <h1>식당 후보</h1>
+  <p class="dining-subtitle">6조 루트 · 6개 거점 · 140개+ 리서치 · 126개 CRITIC 채점 · 3명 페르소나(동선 미식가 / 미식 큐레이터 / 리뷰 검증자) · 2026년 5월 기준</p>
+
+  <!-- 뷰 모드 토글 -->
+  <div class="view-toggle" id="viewToggle"></div>
+
+  <!-- 지도 -->
+  <div id="diningMap"></div>
+
+  <!-- 거점/날짜 탭 -->
+  <div class="stop-tabs" id="stopTabs"></div>
+
+  <!-- 거점 요약 -->
+  <div class="stop-summary" id="stopSummary"></div>
+
+  <!-- 필터 영역 -->
+  <div class="filter-row" id="filterRow"></div>
+
+  <!-- 예산 시뮬레이션 바 -->
+  <div class="budget-bar" id="budgetBar"></div>
+
+  <!-- 식당 카드 그리드 -->
+  <div class="dining-grid" id="diningGrid"></div>
+</div>
+
+<!-- 상세 모달 -->
+<div class="dine-modal-overlay" id="dineModal">
+  <div class="dine-modal-content">
+    <button class="dine-modal-close" id="dineModalClose">&times;</button>
+    <div class="dine-modal-body" id="dineModalBody"></div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ '/assets/js/dining.js?v=20260319d' | relative_url }}"></script>
