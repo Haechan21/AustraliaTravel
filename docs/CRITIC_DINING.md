@@ -458,8 +458,8 @@ Step 4: 종합 (3명 평균 + 논쟁 식당 하이라이트)
 | 바이런베이 | ✅ 28곳 | ✅ 24곳 | The Smoking Camel (70.7) | `research/claude-research/dining/바이런베이_평가.md` |
 | 콥스하버 | ✅ 15곳 | ✅ 15곳 | Latitude 30 (68.7, 논쟁) | `research/claude-research/dining/콥스하버_평가.md` |
 | 포트맥쿼리 | ✅ 18곳 | ✅ 17곳 | The Stunned Mullet (79.7, 논쟁) | `research/claude-research/dining/포트맥쿼리_평가.md` |
-| 넬슨베이 | ✅ 18곳 | ✅ 14곳 | Sandpipers (78.0) | `research/claude-research/dining/넬슨베이_평가.md` |
-| 블루마운틴 | ✅ 30곳+ | ✅ 22곳 | Ateş (76.7) / Echoes (72.3) | `research/claude-research/dining/블루마운틴_평가.md` |
+| 넬슨베이 | ✅ 18곳 | ✅ 15곳 | Sandpipers (78.0) | `research/claude-research/dining/넬슨베이_평가.md` |
+| 블루마운틴 | ✅ 30곳+ | ✅ 26곳 | Ateş (76.7) / Echoes (72.3) | `research/claude-research/dining/블루마운틴_평가.md` |
 | 시드니 | ✅ 35곳+ | ✅ 29곳 | Bennelong (75.0) | `research/claude-research/dining/시드니_평가.md` |
 | 경유지 | ✅ 25곳+ | — | Heatherbrae's Pies, Diggies Kiama 등 | `research/claude-research/dining/경유지_*.md` |
 | **종합** | — | — | — | `research/claude-research/dining/식당_종합가이드.md` |

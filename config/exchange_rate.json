@@ -1,0 +1,53 @@
+{
+  "_comment": "환율 SSOT — 프로젝트 전체에서 이 파일의 값을 기준으로 원화 환산",
+  "base": "AUD",
+  "quote": "KRW",
+  "rate": 1030,
+  "rate_display": "1 AUD ≈ 1,030원",
+  "updated_at": "2026-03-19",
+  "source": "xe.com / OANDA 기준 시장 환율 (2026-03-19)",
+  "note": "여행일(2026-05) 실제 환율은 변동 가능. 예산 계획용 참고치로 사용. 환율 변경 시 이 파일을 먼저 수정하고, 아래 affected_files 목록의 파일들을 동기화할 것.",
+  "previous_rates": [
+    { "rate": 870, "used_in": "식당·액티비티 SSOT (2026-03-18 이전)", "note": "과소평가" },
+    { "rate": 900, "used_in": "숙소 SSOT·lodging.js (2026-03-18 이전)", "note": "과소평가" }
+  ],
+  "affected_files": [
+    {
+      "path": "research/claude-research/dining/식당_종합가이드.md",
+      "role": "식당 SSOT",
+      "what": "예산 시나리오 KRW 환산값 (절약/밸런스/투자)",
+      "old_rate": 870
+    },
+    {
+      "path": "research/claude-research/accommodation/숙소_종합비교.md",
+      "role": "숙소 SSOT",
+      "what": "예산 시뮬레이션 한화 환산 행",
+      "old_rate": 900
+    },
+    {
+      "path": "research/claude-research/activities/액티비티_종합가이드.md",
+      "role": "액티비티 SSOT",
+      "what": "예산 시나리오 KRW 환산값 (무료형/밸런스/올인)",
+      "old_rate": 870
+    },
+    {
+      "path": "assets/js/dining.js",
+      "role": "식당 UI",
+      "what": "예산 시나리오 krw 필드 하드코딩 값 (L408~410)",
+      "old_rate": 870
+    },
+    {
+      "path": "assets/js/lodging.js",
+      "role": "숙소 UI",
+      "what": "원화 환산 계산식 (L465: total * 900 / 10000)",
+      "old_rate": 900
+    },
+    {
+      "path": "docs/ITINERARY.md",
+      "role": "확정 일정",
+      "what": "환전 금액 언급 (~100만원)",
+      "old_rate": null,
+      "note": "환율이 아닌 환전 권장 금액 — 환율 변경 시 재검토 필요"
+    }
+  ]
+}

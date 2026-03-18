@@ -462,7 +462,7 @@
       div.innerHTML =
         '<div class="scenario-name">' + sc.label + ' <span style="font-weight:400;color:#586069">— ' + sc.desc + '</span></div>' +
         '<div class="scenario-total">$' + total.toLocaleString() + '</div>' +
-        '<div class="scenario-krw">~' + Math.round(total * 900 / 10000) + '만원</div>' +
+        '<div class="scenario-krw">~' + Math.round(total * 1030 / 10000) + '만원</div>' +
         '<div class="scenario-pick"></div>';
 
       /* 클릭 핸들러 */

@@ -110,7 +110,7 @@
         { name: '반딧불이 야간 투어', icon: '✨', cost: '무료~$80', duration: '1.5~2h', booking: '투어 권장', may: 'good', mayLabel: '연중 가능', note: '스프링브룩 Natural Bridge 5월에도 관찰 가능(여름 대비 약함). 셀프 방문 무료', section: 4 },
         { name: '힌터랜드 하이킹/폭포', icon: '🥾', cost: '무료~$8', duration: '2~3h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Twin Falls Circuit(2h, 폭포 뒤 걷기) 1순위. Purlingbrook Falls, O\'Reilly\'s Tree Top Walk', section: 5 },
         { name: '마켓 / 로컬 체험', icon: '🛍', cost: '무료', duration: '2~3h', booking: '불필요', may: 'optimal', mayLabel: '커플 필수', note: 'Miami Marketta(수~토 5pm, 무료, 스트릿푸드+라이브 음악). Gallery Walk 탬버린', section: 6 },
-        { name: '야경 / 은하수', icon: '🌌', cost: '$97~', duration: '자유', booking: '클라임 필수', may: 'optimal', mayLabel: '5월 최적', note: 'SkyPoint 트와일라잇 클라임 $97. 스프링브룩 Best of All Lookout 은하수 촬영 최적', section: 7 },
+        { name: '야경 / 별 관찰', icon: '🌌', cost: '$97~', duration: '자유', booking: '클라임 필수', may: 'good', mayLabel: '야경 양호', note: 'SkyPoint 트와일라잇 클라임 $97. 스프링브룩 Best of All Lookout. 여행 기간 달 밝기 58~99%로 은하수 촬영 불가', section: 7 },
         { name: '테마파크', icon: '🎢', cost: '$50~100+', duration: '반나절+', booking: '온라인', may: 'good', mayLabel: '연중 운영', note: 'Dreamworld Winterfest 외 커플에겐 비추. 관심 있으면 참고', section: 8 },
         { name: '숨은 명소', icon: '🗺', cost: '무료~$55', duration: '자유', booking: '도예 예약', may: 'good', mayLabel: '연중 개방', note: 'Burleigh Hill 일몰 피크닉(무료), Crockd Studios 도예 체험($55)', section: 9 },
         { name: '커플 특별 체험', icon: '💑', cost: '$149~390', duration: '2~4h', booking: '필수', may: 'good', mayLabel: '연중 운영', note: '열기구 $299~390/인(일출+와이너리 조식). 코알라 인카운터 $149/인', section: 10 }
@@ -237,7 +237,7 @@
         { name: '야생동물 체험', icon: '🦎', cost: '무료~$50', duration: '1~3h', booking: '불필요', may: 'good', mayLabel: '연중 운영', note: 'Australian Reptile Park $50/인. The Entrance 펠리컨 먹이주기(매일 3:30pm, 무료)', section: 3 },
         { name: '폭포 탐방', icon: '💧', cost: '무료', duration: '30min~1h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Somersby Falls(800m 왕복 30분, 무료). Reptile Park과 5분 거리 콤보', section: 4 },
         { name: '마켓/로컬 체험', icon: '🛍', cost: '무료', duration: '1~2h', booking: '불필요', may: 'good', mayLabel: '주말 운영', note: 'Avoca Beachside(4째 일요일), Terrigal Beach(1째 토), Gosford Farmers(매주 일)', section: 5 },
-        { name: '은하수/별 관찰', icon: '🌌', cost: '무료', duration: '자유', booking: '불필요', may: 'optimal', mayLabel: '5월 시즌', note: 'Putty Beach/Norah Head Lighthouse 은하수 촬영 최적. 국립공원 내 빛 공해 최소', section: 6 },
+        { name: '별 관찰', icon: '🌌', cost: '무료', duration: '자유', booking: '불필요', may: 'limited', mayLabel: '달 밝음', note: 'Putty Beach/Norah Head Lighthouse. 빛 공해 최소 구역이나 여행 기간 달 밝기 58~99%로 은하수 촬영 불가', section: 6 },
         { name: '숨은 명소', icon: '🗺', cost: '무료~$10', duration: '자유', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Patonga Beach(페리 체험), Pearl Beach(록풀+카페), Norah Head Lighthouse 투어 $10', section: 7 },
         { name: '맛집/카페', icon: '☕', cost: '식비', duration: '자유', booking: '고급 예약', may: 'good', mayLabel: '연중 운영', note: 'Terrigal 파인다이닝(2026 Chef Hat), Distillery Botanica 칵테일 클래스 $95/인', section: 8 },
         { name: '기타 아웃도어', icon: '🚴', cost: '$30~95', duration: '2~4h', booking: '권장', may: 'good', mayLabel: '연중 운영', note: 'Glenworth Valley 승마/카약, Firescreek 무료 와인 테이스팅', section: 9 }
@@ -258,7 +258,7 @@
         { name: 'Kiama Blowhole / 지질 명소', icon: '💨', cost: '무료', duration: '1~2h', booking: '불필요', may: 'optimal', mayLabel: '5~9월 최적!', note: 'Kiama Blowhole 5~9월 최적기! Cathedral Rocks & Bombo Quarry', section: 6 },
         { name: 'Nan Tien Temple', icon: '🛕', cost: '무료', duration: '1~2h', booking: '불필요', may: 'good', mayLabel: '화~일 운영', note: '남반구 최대 불교 사찰. 무료 입장, Tea House, 명상 체험. Pilgrim Lodge 숙박 가능', section: 7 },
         { name: '마켓', icon: '🛍', cost: '무료', duration: '1~2h', booking: '불필요', may: 'good', mayLabel: '주중/주말', note: 'Kiama Farmers(매주 수), Seaside Markets(셋째 일), Nan Tien(첫째 토)', section: 8 },
-        { name: '은하수/별 관찰', icon: '🌌', cost: '무료', duration: '자유', booking: '불필요', may: 'optimal', mayLabel: '5월 최적', note: 'Bombo Quarry 은하수 촬영 최적! 지질 전경+은하수 구도. 촬영 스팟 4곳', section: 9 },
+        { name: '별 관찰 / 지질 야경', icon: '🌌', cost: '무료', duration: '자유', booking: '불필요', may: 'limited', mayLabel: '달 밝음', note: 'Bombo Quarry 지질 야경 스팟. 여행 기간 달 밝기 58~99%로 은하수 촬영 불가. 지질 사진은 가능', section: 9 },
         { name: '숨은 명소/맛집', icon: '🗺', cost: '무료~식비', duration: '자유', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Brokers Nose, Austinmer. Kiama 맛집 8곳, Wollongong 6곳', section: 10 },
         { name: 'Illawarra Fly Treetop', icon: '🌳', cost: '$22.50~67.50', duration: '1~2h', booking: '온라인 권장', may: 'good', mayLabel: '연중 운영', note: 'Treetop Walk $22.50, Zipline $67.50. 해발 710m 열대우림 캐노피', section: 12 }
       ]
@@ -276,7 +276,7 @@
         { name: '야생동물', icon: '🦘', cost: '무료', duration: '자유', booking: '불필요', may: 'good', mayLabel: '거의 확실', note: 'Green Patch 캥거루 거의 확실. 에키드나 관찰 가능', section: 4 },
         { name: '마을 탐방 (Bowral·Berry)', icon: '🏘', cost: '무료+식비', duration: '반나절', booking: '불필요', may: 'optimal', mayLabel: '5월 단풍', note: 'Bowral(갤러리+단풍), Berrima(1830년대 헤리티지), Berry(카페+부티크)', section: 5 },
         { name: '와이너리/맛집', icon: '🍷', cost: '무료~$40', duration: '1~2h', booking: '권장', may: 'good', mayLabel: '연중 운영', note: 'Centennial Vineyards, Tractorless, Dawning Day. 쿨클라임 와인', section: 6 },
-        { name: '별 관찰 (Jervis Bay)', icon: '🌌', cost: '$85', duration: '2h', booking: '필수', may: 'optimal', mayLabel: '5월 최적', note: 'Jervis Bay Stargazing $85/인, 천체물리학 박사 가이드. 5/11~21 은하수 골든윈도우', section: 7 },
+        { name: '별 관찰 (Jervis Bay)', icon: '🌌', cost: '$85', duration: '2h', booking: '필수', may: 'good', mayLabel: '가이드 투어', note: 'Jervis Bay Stargazing $85/인, 천체물리학 박사 가이드. 은하수 골든윈도우(5/11~21)는 여행 전 종료. 별자리 관찰은 가능', section: 7 },
         { name: '가을 단풍', icon: '🍂', cost: '무료', duration: '자유', booking: '불필요', may: 'optimal', mayLabel: '5월 절정!', note: 'Retford Park, Corbett Gardens, Berrima가 5월 절정기', section: 8 },
         { name: '숨은 명소', icon: '🗺', cost: '무료~$40', duration: '자유', booking: '터널 예약', may: 'good', mayLabel: '연중 개방', note: 'Mittagong Mushroom Tunnel $40/인(6월 중순 휴업 전 마지막 기회!). Chinamans Beach', section: 9 }
       ]
@@ -297,7 +297,7 @@
         { name: '해안 하이킹', icon: '🥾', cost: '무료', duration: '1~3h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Cape Hawke Lookout(420계단), Crowdy Bay Diamond Head Loop(4.7km)', section: 1, sectionKey: 'Part 1' },
         { name: '수상 액티비티', icon: '🐬', cost: '$35~70', duration: '1.5~3h', booking: '권장', may: 'good', mayLabel: '연중 운영', note: '고래/돌고래 투어(Epic Surf, FreeSpirit). 카약(Lazy Paddles). One Mile Beach 서핑', section: 2, sectionKey: 'Part 1' },
         { name: '마켓/맛집', icon: '🛍', cost: '무료+식비', duration: '1~2h', booking: '불필요', may: 'good', mayLabel: '5/23 토 운영', note: 'Forster Farmers Market 셋째 토요일 5/23 방문 가능. Thirty Three Degrees 오이스터 바', section: 5, sectionKey: 'Part 1' },
-        { name: '은하수 촬영', icon: '🌌', cost: '무료', duration: '자유', booking: '불필요', may: 'optimal', mayLabel: '5월 최적', note: 'Crowdy Bay NP Diamond Head — 빛 공해 최소, 은하수 촬영 1순위', section: 6, sectionKey: 'Part 1' },
+        { name: '별 관찰', icon: '🌌', cost: '무료', duration: '자유', booking: '불필요', may: 'limited', mayLabel: '달 밝음', note: 'Crowdy Bay NP Diamond Head — 빛 공해 최소 구역이나 여행 기간 달 밝기 58~99%로 은하수 촬영 불가', section: 6, sectionKey: 'Part 1' },
         /* SWR */
         { name: 'Smoky Cape 등대 트레킹', icon: '🏔', cost: '무료', duration: '2~3h', booking: '불필요', may: 'good', mayLabel: '연중 개방', note: 'Smoky Cape Range Walking Track 5.5km 편도. NSW 최고 높이 등대 종착점', section: 1, sectionKey: 'Part 2' },
         { name: 'Trial Bay Gaol', icon: '🏛', cost: '$11', duration: '1~1.5h', booking: '불필요', may: 'good', mayLabel: '연중 운영', note: '셀프가이드 투어 성인 $11. 폐허 전경으로 은하수 촬영 드라마틱 구도', section: 4, sectionKey: 'Part 2' },
