@@ -1,0 +1,36 @@
+---
+layout: default
+title: 숙소 후보
+---
+
+<div class="lodging-page">
+  <h1>숙소 후보</h1>
+  <p class="lodging-subtitle">6조 루트 · 6개 거점 · 95개 숙소 조사 · 77개 CRITIC 채점 · CRITIC_LODGING 3명 페르소나 평가 · 2026년 5월 기준</p>
+
+  <!-- 루트 지도 -->
+  <div id="lodgingMap"></div>
+
+  <!-- 거점 탭 -->
+  <div class="stop-tabs" id="stopTabs"></div>
+
+  <!-- 거점 요약 -->
+  <div class="stop-summary" id="stopSummary"></div>
+
+  <!-- 예산 시뮬레이션 바 -->
+  <div class="budget-bar" id="budgetBar"></div>
+
+  <!-- 숙소 카드 그리드 -->
+  <div class="lodging-grid" id="lodgingGrid"></div>
+</div>
+
+<!-- 상세 모달 -->
+<div class="lodge-modal-overlay" id="lodgeModal">
+  <div class="lodge-modal-content">
+    <button class="lodge-modal-close" id="lodgeModalClose">&times;</button>
+    <div class="lodge-modal-body" id="lodgeModalBody"></div>
+  </div>
+</div>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="{{ '/assets/js/lodging.js?v=20260318g' | relative_url }}"></script>
