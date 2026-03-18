@@ -4,7 +4,7 @@
       "name": "1조: GC직행 + 남하해안",
       "color": "#e74c3c",
       "total_km": 2375,
-      "score": 61.3,
+      "score": 54.7,
       "days": [
         {
           "day": 1,
@@ -313,7 +313,7 @@
       "name": "2조: 남쪽해안 + 블루마운틴",
       "color": "#3498db",
       "total_km": 735,
-      "score": 78.2,
+      "score": 77.3,
       "days": [
         {
           "day": 1,
@@ -652,7 +652,7 @@
       "name": "3조: 해안+내륙 폭포 루프",
       "color": "#2ecc71",
       "total_km": 2423,
-      "score": 63.2,
+      "score": 58.8,
       "days": [
         {
           "day": 1,
@@ -945,7 +945,7 @@
       "name": "4조: 오션앤마운틴 그랜드루프",
       "color": "#f1c40f",
       "total_km": 2517,
-      "score": 71.8,
+      "score": 69.7,
       "days": [
         {
           "day": 1,
@@ -1256,7 +1256,7 @@
       "name": "5조: 풀 스윙 (개선)",
       "color": "#9b59b6",
       "total_km": 2185,
-      "score": 65.7,
+      "score": 68.3,
       "days": [
         {
           "day": 1,
@@ -1548,7 +1548,7 @@
       "name": "6조: 바이런직행 + 블루마운틴",
       "color": "#e67e22",
       "total_km": 2316,
-      "score": 78.7,
+      "score": 78.0,
       "days": [
         {
           "day": 1,
@@ -1898,7 +1898,7 @@
       "name": "7조: 안전첫날 + S올클리어",
       "color": "#1abc9c",
       "total_km": 2331,
-      "score": 68.2,
+      "score": 59.5,
       "days": [
         {
           "day": 1,
@@ -2234,7 +2234,7 @@
       "name": "8조: 바이런 연박 감성 루트",
       "color": "#16a085",
       "total_km": 2264,
-      "score": 77.9,
+      "score": 73.0,
       "days": [
         {
           "day": 1,
@@ -2584,7 +2584,7 @@
       "name": "9조: GC포함 밸런스 (4조 완성형)",
       "color": "#c0392b",
       "total_km": 2379,
-      "score": 66.0,
+      "score": 59.5,
       "days": [
         {
           "day": 1,
