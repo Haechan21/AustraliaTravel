@@ -30,7 +30,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Phase 1 (전처리): ✅ 완료 — 109개 attraction (중복 2개 제거: `669a240e` 코알라 병원 중복, `7a922fd8` 스탠웰 탑스 빈 stub)
 - Phase 2 (정보 수집): ✅ 완료 — 109개 장소 collected_data 채움, 15개 지역 분류, 주제별·지역별 리서치 30건+
 - Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 109곳 평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:10 (may_adjusted_score 기준 단일 `grade`). 논쟁 장소 37곳
-- Phase 4 (일정 생성): 🔄 진행 중 — 9개 루트 후보 완성 (1~9조), CRITIC_ROUTE v6 재평가 완료. 5월 보정 등급 기반 루트 재편: 4조(+2.8), 3조(+2.2), 1조(+2.0), 9조(+1.5), 8조(+0.2) 개선. 최종 루트 선택 미결정, ITINERARY.md는 5/23~24일만 상세 작성
+- Phase 4 (일정 생성): 🔄 진행 중 — 9개 루트 후보 완성 (1~9조), CRITIC_ROUTE v7 재평가 완료. 식사 시간 보완 + 전면 재평가로 순위 변동: 5조 7→5위(▲2), 7조 5→6위(▼1). 상위 3개 유지(6조→2조→8조). 최종 루트 선택 미결정, ITINERARY.md는 5/23~24일만 상세 작성
 - Phase 5 (일정 리뷰): ⬜ 미시작
 - 액티비티 리서치: ✅ 완료 — 10개 지역 100개+ 체험 활동 조사 (5개 신규 + 5개 보강: 은하수·우천대안·커플체험 추가)
 - 향후: 음식점·숙소 데이터 수집 및 평가 예정, 관광지 추가도 가능
@@ -45,6 +45,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 3. 각 루트의 S등급 방문 수 재계산 → 헤더/요약/테이블 수정 (에이전트)
 4. `research/route-plans/README.md` 종합 순위표 S등급 열 수정 (에이전트)
 5. 이 파일(`CLAUDE.md`) 진행 상황 갱신
+
+### v7 재평가 완료 (2026-03-18)
+- [x] CRITIC_ROUTE v7 식사 시간 보완 + 전면 재평가 (전 루트)
+- [x] 9개 루트 파일 v7 재평가 섹션 추가
+- [x] README.md 종합 순위표 v7 업데이트
+- [x] route_data.json 프론트엔드 데이터 동기화
+- [x] CLAUDE.md 진행 상황 갱신
 
 ### v6 재평가 완료 (2026-03-17)
 - [x] CRITIC_ROUTE v6 5월 보정 등급 기반 전 루트 재평가
