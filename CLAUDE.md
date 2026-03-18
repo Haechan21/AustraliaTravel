@@ -15,6 +15,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **`config/scoring.json`**: 카테고리별 평가 기준 및 가중치.
 - **`docs/CRITIC.md`**: 평가 페르소나 3명(효율 전략가/감성 탐험가/현실주의 비평가)의 정의와 페르소나별 가중치. 평가 워크플로우(리서치 분업→통합→해석 분화→가중합), 기준별 채점 가이드라인 포함.
 - **`docs/CRITIC_ROUTE.md`**: 루트 후보 평가 전용 페르소나 및 기준. CRITIC.md의 루트 버전으로, 설계/감성/실행 3관점 평가 프레임워크 정의.
+- **`docs/CRITIC_LODGING.md`**: 숙소 평가 전용 페르소나(가성비 전략가/감성 큐레이터/실용 검증자) 및 7개 기준(L1~L7). 거점별 상대 순위 방식.
+- **`research/claude-research/accommodation/숙소_종합비교.md`**: 숙소 수치의 **Single Source of Truth(SSOT)**. 리서치·채점·비선정 수, 거점별 TOP 순위, 예산 시뮬레이션. 숙소 숫자 변경 시 이 파일을 먼저 갱신하고 다른 문서에 반영.
 - **`docs/TRAVELER_PROFILE.md`**: 여행자 프로필 및 선호도 설문 결과. 운전 내성, 여행 스타일, 예산 범위 등 개인 선호 정의.
 
 ## 워크플로우 (5 Phase)
@@ -33,7 +35,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Phase 4 (일정 생성): 🔄 진행 중 — 9개 루트 후보 완성 (1~9조), CRITIC_ROUTE v7 재평가 완료. 식사 시간 보완 + 전면 재평가로 순위 변동: 5조 7→5위(▲2), 7조 5→6위(▼1). 상위 3개 유지(6조→2조→8조). 최종 루트 선택 미결정, ITINERARY.md는 5/23~24일만 상세 작성
 - Phase 5 (일정 리뷰): ⬜ 미시작
 - 액티비티 리서치: ✅ 완료 — 10개 지역 100개+ 체험 활동 조사 (5개 신규 + 5개 보강: 은하수·우천대안·커플체험 추가)
-- 향후: 음식점·숙소 데이터 수집 및 평가 예정, 관광지 추가도 가능
+- 숙소 평가 프레임워크: ✅ 완료 — CRITIC_LODGING.md 작성 완료 (3명 페르소나 A''/B''/C'', 7개 기준 L1~L7, 거점별 상대 순위 방식). 6조 기준 6개 거점 맥락 정의, scoring.json 동기화 완료
+- 숙소 리서치: ✅ 완료 — 6개 거점 62개 기본후보 + 33개 투자후보 조사, 복수 플랫폼(Booking/TA/Google/공식사이트) 가격·리뷰 수집. 상세는 종합비교.md 참조
+- 숙소 평가: ✅ 완료 — CRITIC_LODGING.md 기반 기본평가 44개 + 투자평가 33개 = 총 77개 CRITIC 채점(비선정 18개 별도). 3명 페르소나 독립 채점, 웹 추가 조사(Google/Booking/TA/공식사이트/블로그), 일정 맥락(도착시간·뷰 활용가능성·체크인 방식) 반영. **기본평가/투자평가 탭 분리 완료** — lodging.html에서 평가 완료 **77개 전체** 표시(프레임별 탭 전환: 기본 44개 $150~300 / 투자 33개 $300~900). 이중평가 숙소(Marina Resort 등)는 두 탭에 각 프레임 점수로 표시. 상세 수치는 종합비교.md(SSOT) 참조
+- 식당 평가 프레임워크: ✅ 완료 — CRITIC_DINING.md 작성 완료 (3명 페르소나 A''' 동선 미식가 / B''' 미식 큐레이터 / C''' 리뷰 검증자, 6개 기준 F1~F6, 지역별+식사유형별 상대 순위 방식). scoring.json 동기화 완료
+- 식당 리서치: ✅ 완료 — 6개 거점 + 10개 경유지 140개+ 식당/체험 조사 (1차 7팀 + 2차 5팀 병렬 리서치). 호주 공원 BBQ 가이드, 파머스마켓 일정, 호주 고유 음식 체험 포함
+- 식당 평가: ✅ 완료 — CRITIC_DINING.md 프레임워크 기반 6개 거점 120개+ 식당 3명 페르소나 독립 채점. 거점별 식사유형별 추천/차선/가능/비추 라벨 부여. 논쟁 식당 40곳+ 식별
+- 향후: 최종 루트 선택 → ITINERARY.md 전체 작성(식사·숙소 통합), Phase 5(일정 리뷰) 진행, 관광지 추가도 가능
 
 ## 에이전트 작업 체크리스트
 
@@ -117,6 +125,7 @@ Jekyll 기반 정적 사이트로 데이터를 시각화한다. `_config.yml`에
 | 관광지 랭킹 | `rankings.html` | `assets/js/rankings.js` | `assets/data/place_data.json` |
 | 루트 비교 | `routes.html` | `assets/js/routes.js` | `assets/data/route_data.json` |
 | 액티비티 후보 | `activities.html` | `assets/js/activities.js` | — |
+| 숙소 후보 | `lodging.html` | `assets/js/lodging.js` | — (JS 내부 데이터, 기본평가/투자평가 탭 분리) |
 | 루트 상세 (리다이렉트) | `route-plans.html` | — | — → `routes.html`로 리다이렉트 |
 
 - `place_data.json`은 `scripts/generate_frontend.py`로 자동 생성, `route_data.json`은 수동 작성/관리

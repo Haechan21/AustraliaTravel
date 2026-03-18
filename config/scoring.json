@@ -12,23 +12,43 @@
   },
   "restaurant": {
     "criteria": {
-      "google_rating": { "weight": 20, "type": "quantitative", "description": "구글 평점" },
-      "review_count": { "weight": 10, "type": "quantitative", "description": "리뷰 수" },
-      "food_quality": { "weight": 25, "type": "ai_judgment", "description": "음식 퀄리티 (맛, 신선도, 플레이팅)" },
-      "value_for_money": { "weight": 20, "type": "ai_judgment", "description": "가성비 (가격대 vs 리뷰 만족도)" },
-      "ambiance": { "weight": 15, "type": "ai_judgment", "description": "분위기 / 뷰" },
-      "location_convenience": { "weight": 10, "type": "ai_judgment", "description": "위치 편의성 (관광지/숙소와의 거리)" }
-    }
+      "google_rating": { "weight": 20, "type": "quantitative", "description": "구글 평점 (복수 플랫폼 교차 검증)" },
+      "review_count": { "weight": 10, "type": "quantitative", "description": "리뷰 수 / 데이터 신뢰도 (복수 플랫폼 존재 여부)" },
+      "food_quality": { "weight": 25, "type": "ai_judgment", "description": "음식 퀄리티 (맛, 신선도, 플레이팅, 호주 로컬 식재료 활용)" },
+      "value_for_money": { "weight": 20, "type": "ai_judgment", "description": "가성비 (가격대 vs 리뷰 만족도, 6일 전체 식비 배분)" },
+      "ambiance": { "weight": 15, "type": "ai_judgment", "description": "분위기 / 뷰 (오션뷰, 커플 감성, 카페 분위기)" },
+      "location_convenience": { "weight": 10, "type": "ai_judgment", "description": "위치 편의성 (관광지/숙소/동선과의 거리, 주차, 대기시간)" }
+    },
+    "evaluation_framework": "docs/CRITIC_DINING.md",
+    "grade_method": "지역별 + 식사 유형별 상대 순위 (추천/차선/가능/비추)"
   },
   "accommodation": {
     "criteria": {
-      "google_rating": { "weight": 15, "type": "quantitative", "description": "구글 평점" },
-      "review_count": { "weight": 10, "type": "quantitative", "description": "리뷰 수" },
-      "cleanliness": { "weight": 25, "type": "ai_judgment", "description": "청결도 / 시설" },
-      "value_for_money": { "weight": 20, "type": "ai_judgment", "description": "가성비 (1박 가격 vs 리뷰 만족도)" },
-      "location": { "weight": 20, "type": "ai_judgment", "description": "위치 (주변 관광지/음식점 접근성)" },
-      "host_response": { "weight": 10, "type": "ai_judgment", "description": "호스트 응대" }
-    }
+      "value_for_money": { "weight": 20, "type": "ai_judgment", "description": "가성비 (1박 가격 vs 제공 가치, 동급 숙소 대비 상대 비교)" },
+      "cleanliness": { "weight": 20, "type": "ai_judgment", "description": "청결도 / 시설 상태 (리노베이션 여부, 리뷰 일관성)" },
+      "view_ambiance": { "weight": 15, "type": "ai_judgment", "description": "뷰 / 분위기 (객실 뷰, 커플 감성, 벽난로/발코니, 건축 매력)" },
+      "location_fit": { "weight": 15, "type": "ai_judgment", "description": "위치 적합도 (다음날 일정 연계, 주변 식당/편의시설)" },
+      "parking_checkin": { "weight": 10, "type": "ai_judgment", "description": "주차 / 체크인 편의 (무료/보안 주차, 늦은 체크인 대응)" },
+      "review_reliability": { "weight": 10, "type": "ai_judgment", "description": "리뷰 신뢰도 (복수 플랫폼 평점, 리뷰 수, 부정 패턴 부재)" },
+      "amenities": { "weight": 10, "type": "ai_judgment", "description": "부가가치 (조식, 키친넷, 수영장, 자전거 대여 등)" }
+    },
+    "persona_weights": {
+      "A_value_strategist": {
+        "value_for_money": 30, "cleanliness": 15, "view_ambiance": 5,
+        "location_fit": 15, "parking_checkin": 10, "review_reliability": 15, "amenities": 10
+      },
+      "B_aesthetic_curator": {
+        "value_for_money": 10, "cleanliness": 15, "view_ambiance": 35,
+        "location_fit": 10, "parking_checkin": 0, "review_reliability": 5, "amenities": 25
+      },
+      "C_practical_verifier": {
+        "value_for_money": 20, "cleanliness": 30, "view_ambiance": 5,
+        "location_fit": 20, "parking_checkin": 20, "review_reliability": 10, "amenities": -5,
+        "_note": "amenities -5%: C''는 부가가치를 과대광고 위험으로 간주, 높은 raw score가 총점을 감점"
+      }
+    },
+    "evaluation_framework": "docs/CRITIC_LODGING.md",
+    "grade_method": "거점별 상대 순위 (추천/차선/가능/비추)"
   },
   "grades": {
     "method": "percentile",
