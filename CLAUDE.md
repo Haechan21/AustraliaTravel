@@ -94,6 +94,9 @@ python scripts/generate_frontend.py --data     # place_data.json만
 python scripts/update_route_scores.py            # 불일치 리포트만 (dry-run)
 python scripts/update_route_scores.py --fix      # 실제 수정
 python scripts/update_route_scores.py --fix --verbose  # 상세 로그 포함
+
+# 루트 도로 geometry 생성 (OSRM API → encoded polyline)
+python scripts/fetch_route_geometry.py           # route_geometry.json 생성 (~2분, 빌드 타임 전용)
 ```
 
 외부 의존성 없음. Python 3.11+ 표준 라이브러리만 사용.
@@ -126,13 +129,13 @@ Jekyll 기반 정적 사이트로 데이터를 시각화한다. `_config.yml`에
 |--------|------|----|-------------|
 | 메인 | `index.md` | — | — |
 | 관광지 랭킹 | `rankings.html` | `assets/js/rankings.js` | `assets/data/place_data.json` |
-| 루트 비교 | `routes.html` | `assets/js/routes.js` | `assets/data/route_data.json` |
+| 루트 비교 | `routes.html` | `assets/js/routes.js` | `assets/data/route_data.json` + `assets/data/route_geometry.json` |
 | 액티비티 후보 | `activities.html` | `assets/js/activities.js` | — (JS 내부 데이터, 10개 지역 탭 + 지도 + 5월 적합도) |
 | 숙소 후보 | `lodging.html` | `assets/js/lodging.js` | — (JS 내부 데이터, 기본평가/투자평가 탭 분리) |
 | 식당 후보 | `dining.html` | `assets/js/dining.js` | — (JS 내부 데이터, 거점별 탭 + 식사유형·라벨 필터) |
 | 루트 상세 (리다이렉트) | `route-plans.html` | — | — → `routes.html`로 리다이렉트 |
 
-- `place_data.json`은 `scripts/generate_frontend.py`로 자동 생성, `route_data.json`은 수동 작성/관리
+- `place_data.json`은 `scripts/generate_frontend.py`로 자동 생성, `route_data.json`은 수동 작성/관리, `route_geometry.json`은 `scripts/fetch_route_geometry.py`로 OSRM에서 자동 생성
 - 외부 라이브러리: Leaflet.js 1.9.4 (CDN, `routes.html`에서 지도 렌더링용)
 - 레이아웃: `_layouts/default.html`, 스타일: `assets/css/style.scss`
 

@@ -9,7 +9,26 @@
   var styleEl = document.createElement('style');
   styleEl.textContent =
     '.stop-dist { color: #5b8cb5; font-size: 0.75em; font-weight: 600; }' +
-    '.day-km { background: #1a73e8; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.78em; font-weight: 600; margin-left: 6px; vertical-align: middle; }';
+    '.day-km { background: #1a73e8; color: #fff; padding: 2px 8px; border-radius: 10px; font-size: 0.78em; font-weight: 600; margin-left: 6px; vertical-align: middle; }' +
+    '.connector-time { color: #6a737d; font-size: 0.72em; }' +
+    '.connector-road { padding: 1px 6px; border-radius: 8px; font-size: 0.7em; font-weight: 600; }' +
+    '.connector-road-m { background: #dafbe1; color: #1a7f37; }' +
+    '.connector-road-a { background: #ddf4ff; color: #0969da; }' +
+    '.connector-road-other { background: #eef2f7; color: #24292e; }' +
+    '.day-drive-summary { background: linear-gradient(135deg, #f8f9fb 0%, #eef1f5 100%); border: 1px solid #d0d7de; border-radius: 10px; padding: 10px 14px; margin-bottom: 12px; font-size: 0.82em; }' +
+    '.drive-stats-row { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }' +
+    '.drive-stat { display: inline-flex; align-items: center; gap: 4px; font-weight: 600; color: #24292e; }' +
+    '.drive-stat-icon { font-size: 1em; }' +
+    '.drive-stat-val { color: #0969da; }' +
+    '.drive-road-bar { height: 8px; border-radius: 4px; background: #e1e4e8; overflow: hidden; margin-bottom: 5px; display: flex; }' +
+    '.drive-road-m { height: 100%; background: #1a7f37; transition: width 0.4s ease; }' +
+    '.drive-road-a { height: 100%; background: #56d364; transition: width 0.4s ease; }' +
+    '.drive-road-legend { font-size: 0.75em; color: #57606a; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }' +
+    '.drive-road-chip { display: inline-flex; align-items: center; gap: 3px; }' +
+    '.drive-road-dot { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }' +
+    '.drive-road-dot-m { background: #1a7f37; }' +
+    '.drive-road-dot-a { background: #56d364; }' +
+    '.drive-road-dot-other { background: #e1e4e8; }';
   document.head.appendChild(styleEl);
 
   /* ── 색상/아이콘 설정 ── */
@@ -22,6 +41,74 @@
   const GRADE_COLORS = {
     S: '#ff2d55', A: '#ff9500', B: '#007aff', C: '#8e8e93', stay: '#34c759'
   };
+
+  /* ── Google Encoded Polyline 디코더 ── */
+  function decodePolyline(encoded) {
+    var points = [];
+    var index = 0, lat = 0, lng = 0;
+    while (index < encoded.length) {
+      var b, shift = 0, result = 0;
+      do {
+        b = encoded.charCodeAt(index++) - 63;
+        result |= (b & 0x1f) << shift;
+        shift += 5;
+      } while (b >= 0x20);
+      lat += (result & 1) ? ~(result >> 1) : (result >> 1);
+
+      shift = 0; result = 0;
+      do {
+        b = encoded.charCodeAt(index++) - 63;
+        result |= (b & 0x1f) << shift;
+        shift += 5;
+      } while (b >= 0x20);
+      lng += (result & 1) ? ~(result >> 1) : (result >> 1);
+
+      points.push([lat / 1e5, lng / 1e5]);
+    }
+    return points;
+  }
+
+  /* ── 도로 지오메트리 조회 ── */
+  var geometryData = null;
+
+  function getGeometry(routeKey, dayNum) {
+    if (!geometryData) return null;
+    var key = 'R' + routeKey + 'D' + dayNum;
+    var encoded = null;
+    if (geometryData.geometries && geometryData.geometries[key]) {
+      encoded = geometryData.geometries[key];
+    } else if (geometryData.aliases && geometryData.aliases[key]) {
+      var realKey = geometryData.aliases[key];
+      if (geometryData.geometries && geometryData.geometries[realKey]) {
+        encoded = geometryData.geometries[realKey];
+      }
+    }
+    if (!encoded) return null;
+    return decodePolyline(encoded);
+  }
+
+  /* ── OSRM 구간(leg) 데이터 조회 ── */
+  function getLegData(routeKey, dayNum) {
+    if (!geometryData || !geometryData.legs) return null;
+    var key = 'R' + routeKey + 'D' + dayNum;
+    if (geometryData.legs[key]) return geometryData.legs[key];
+    if (geometryData.aliases && geometryData.aliases[key]) {
+      var realKey = geometryData.aliases[key];
+      return geometryData.legs[realKey] || null;
+    }
+    return null;
+  }
+
+  /* ── 시간 포맷 (분 → "Xh Ym") ── */
+  function formatDuration(minutes) {
+    if (!minutes && minutes !== 0) return '';
+    var m = Math.round(minutes);
+    if (m < 60) return m + 'm';
+    var h = Math.floor(m / 60);
+    var rm = m % 60;
+    if (rm === 0) return h + 'h';
+    return h + 'h ' + rm + 'm';
+  }
 
   function makeIcon(color, size) {
     return L.divIcon({
@@ -72,15 +159,17 @@
 
   var base = (window.__BASE_URL__ || '').replace(/\/+$/, '');
 
-  fetch(base + '/assets/data/route_data.json')
-    .then(function (r) { return r.json(); })
-    .then(function (data) {
-      routeData = data.routes;
-      buildLayers();
-      showAll();
-      bindControls();
-      normalizeScoreBars();
-    });
+  Promise.all([
+    fetch(base + '/assets/data/route_data.json').then(function (r) { return r.json(); }),
+    fetch(base + '/assets/data/route_geometry.json').then(function (r) { return r.json(); }).catch(function () { return null; })
+  ]).then(function (results) {
+    routeData = results[0].routes;
+    geometryData = results[1];
+    buildLayers();
+    showAll();
+    bindControls();
+    normalizeScoreBars();
+  });
 
   /* ── 레이어 구축 ── */
   function buildLayers() {
@@ -108,7 +197,9 @@
 
         // Day polyline
         if (coords.length > 1) {
-          var line = L.polyline(coords, {
+          var roadCoords = getGeometry(key, day.day);
+          var lineCoords = roadCoords || coords;
+          var line = L.polyline(lineCoords, {
             color: color,
             weight: 3,
             opacity: 0.8,
@@ -212,10 +303,27 @@
     }
     var route = routeData[key];
 
+    // 총 운전 시간 계산
+    var totalDriveMin = 0;
+    var hasDriveTime = false;
+    route.days.forEach(function(day) {
+      var legs = getLegData(key, day.day);
+      if (legs && Array.isArray(legs)) {
+        for (var i = 0; i < legs.length; i++) {
+          if (legs[i].duration_min) {
+            totalDriveMin += legs[i].duration_min;
+            hasDriveTime = true;
+          }
+        }
+      }
+    });
+
     // 헤더
     var html = '<h3 style="color:' + ROUTE_COLORS[key] + '">' + route.name + '</h3>';
     html += '<div class="route-stats">';
-    html += '<span>총 ' + route.total_km + 'km</span>';
+    html += '<span>총 ' + route.total_km + 'km';
+    if (hasDriveTime) html += ' · 약 ' + formatDuration(totalDriveMin);
+    html += '</span>';
     html += '<span>평가 ' + route.score + '점</span>';
     html += '</div>';
 
@@ -272,16 +380,104 @@
     if (day.day_km) html += ' <span class="day-km">' + day.day_km + 'km</span>';
     html += '</div>';
 
+    // Day 운전 요약 바
+    var legs = getLegData(routeKey, dayNum);
+    if (legs && Array.isArray(legs) && legs.length > 0) {
+      var dayTotalDist = 0;
+      var dayTotalDur = 0;
+      var mKm = 0;  // Motorway (M도로)
+      var aKm = 0;  // National Highway (A도로)
+      var roadAgg = {};
+      for (var li = 0; li < legs.length; li++) {
+        if (legs[li].distance_km) dayTotalDist += legs[li].distance_km;
+        if (legs[li].duration_min) dayTotalDur += legs[li].duration_min;
+        if (legs[li].roads && Array.isArray(legs[li].roads)) {
+          for (var ri = 0; ri < legs[li].roads.length; ri++) {
+            var rd = legs[li].roads[ri];
+            var km = rd.km || 0;
+            if (rd.ref) {
+              if (/^M\d/.test(rd.ref)) mKm += km;
+              else if (/^A\d/.test(rd.ref)) aKm += km;
+            }
+            var rKey = rd.ref ? rd.ref + ' ' + rd.name : rd.name;
+            if (rKey) roadAgg[rKey] = (roadAgg[rKey] || 0) + km;
+          }
+        }
+      }
+      // 도로 집계 정렬 (상위 3개)
+      var sortedRoads = Object.keys(roadAgg).sort(function(a,b) { return roadAgg[b] - roadAgg[a]; });
+      var mPct = dayTotalDist > 0 ? Math.round(mKm / dayTotalDist * 100) : 0;
+      var aPct = dayTotalDist > 0 ? Math.round(aKm / dayTotalDist * 100) : 0;
+      var majorPct = mPct + aPct;
+      var otherPct = 100 - majorPct;
+
+      html += '<div class="day-drive-summary">';
+      // 상단: 거리, 시간, 주요도로%
+      html += '<div class="drive-stats-row">';
+      html += '<span class="drive-stat"><span class="drive-stat-icon">\uD83D\uDE97</span> <span class="drive-stat-val">' + Math.round(dayTotalDist) + 'km</span></span>';
+      html += '<span class="drive-stat"><span class="drive-stat-icon">\u23F1</span> <span class="drive-stat-val">\uC57D ' + formatDuration(dayTotalDur) + '</span></span>';
+      html += '<span class="drive-stat">\uC8FC\uC694\uB3C4\uB85C <span class="drive-stat-val">' + majorPct + '%</span></span>';
+      html += '</div>';
+      // 2단 프로그레스 바: M(진녹) + A(연녹) + 기타(회색)
+      html += '<div class="drive-road-bar">';
+      if (mPct > 0) html += '<div class="drive-road-m" style="width:' + mPct + '%"></div>';
+      if (aPct > 0) html += '<div class="drive-road-a" style="width:' + aPct + '%"></div>';
+      html += '</div>';
+      // 하단: 범례 + 상위 도로명
+      html += '<div class="drive-road-legend">';
+      if (mPct > 0) html += '<span class="drive-road-chip"><span class="drive-road-dot drive-road-dot-m"></span>\uACE0\uC18D\uB3C4\uB85C ' + mPct + '%</span>';
+      if (aPct > 0) html += '<span class="drive-road-chip"><span class="drive-road-dot drive-road-dot-a"></span>\uAD6D\uB3C4 ' + aPct + '%</span>';
+      if (otherPct > 0) html += '<span class="drive-road-chip"><span class="drive-road-dot drive-road-dot-other"></span>\uAE30\uD0C0 ' + otherPct + '%</span>';
+      html += '</div>';
+      // 상위 도로 목록
+      var topCount = Math.min(sortedRoads.length, 3);
+      for (var ti = 0; ti < topCount; ti++) {
+        var rName = sortedRoads[ti];
+        var rKm = Math.round(roadAgg[rName]);
+        if (rKm < 5) break;
+        html += '<div class="drive-road-legend" style="margin-top:1px">';
+        // 도로 유형에 따른 dot 색상
+        var dotClass = 'drive-road-dot-other';
+        if (/^M\d/.test(rName)) dotClass = 'drive-road-dot-m';
+        else if (/^A\d/.test(rName)) dotClass = 'drive-road-dot-a';
+        html += '<span class="drive-road-chip"><span class="drive-road-dot ' + dotClass + '"></span>' + rName + ' <span style="color:#57606a">' + rKm + 'km</span></span>';
+        html += '</div>';
+      }
+      html += '</div>';
+    }
+
     html += '<div class="day-stops">';
 
     day.stops.forEach(function(stop, idx) {
       // 거리 커넥터
       if (idx > 0) {
         html += '<div class="stop-connector">';
-        if (stop.distance_km && stop.distance_km > 0) {
-          html += '↓ <span class="connector-dist">' + stop.distance_km + 'km</span>';
+        var leg = (legs && Array.isArray(legs)) ? legs[idx - 1] : null;
+        if (leg) {
+          // OSRM leg 데이터 사용
+          var distKm = leg.distance_km ? Math.round(leg.distance_km) : (stop.distance_km || 0);
+          html += '\u2193 <span class="connector-dist">' + distKm + 'km</span>';
+          if (leg.duration_min) {
+            html += ' <span class="connector-time">\u00B7 \uC57D ' + formatDuration(leg.duration_min) + '</span>';
+          }
+          if (leg.roads && Array.isArray(leg.roads) && leg.roads.length > 0) {
+            var topRd = leg.roads[0];
+            var rdLabel = topRd.ref ? topRd.ref + ' ' + topRd.name : topRd.name;
+            if (rdLabel.length > 25) rdLabel = rdLabel.substring(0, 25) + '\u2026';
+            if (rdLabel) {
+              var rdClass = 'connector-road-other';
+              if (topRd.ref && /^M\d/.test(topRd.ref)) rdClass = 'connector-road-m';
+              else if (topRd.ref && /^A\d/.test(topRd.ref)) rdClass = 'connector-road-a';
+              html += ' <span class="connector-road ' + rdClass + '">' + rdLabel + '</span>';
+            }
+          }
         } else {
-          html += '↓';
+          // 폴백: 기존 방식
+          if (stop.distance_km && stop.distance_km > 0) {
+            html += '\u2193 <span class="connector-dist">' + stop.distance_km + 'km</span>';
+          } else {
+            html += '\u2193';
+          }
         }
         html += '</div>';
       }
@@ -359,12 +555,33 @@
   var SCORE_MAX = 100;
 
   function normalizeScoreBars() {
-    document.querySelectorAll('.score-item').forEach(function (el) {
+    var container = document.getElementById('scoreBar');
+    var items = Array.from(container.querySelectorAll('.score-item'));
+
+    // JSON score 기준으로 재정렬
+    items.sort(function (a, b) {
+      var sa = routeData[a.getAttribute('data-route')].score;
+      var sb = routeData[b.getAttribute('data-route')].score;
+      return sb - sa;
+    });
+
+    // 헤더 이후에 정렬된 순서로 재삽입
+    var header = container.querySelector('.score-bar-header');
+    items.forEach(function (el) {
+      container.appendChild(el);
+    });
+
+    // 너비 + 점수 텍스트 + 메달 동기화
+    var medals = ['\uD83E\uDD47', '\uD83E\uDD48', '\uD83E\uDD49'];
+    items.forEach(function (el, idx) {
       var key = el.getAttribute('data-route');
       var score = routeData[key].score;
-      // 50점=0%, 100점=100%
       var pct = ((score - SCORE_BASE) / (SCORE_MAX - SCORE_BASE)) * 100;
       el.querySelector('.score-fill').style.width = Math.max(pct, 1) + '%';
+      var numEl = el.querySelector('.score-num');
+      if (numEl) numEl.textContent = score.toFixed(1);
+      var labelEl = el.querySelector('.score-label');
+      if (labelEl) labelEl.textContent = (idx < 3 ? medals[idx] + ' ' : '') + key + '\uC870';
     });
   }
 

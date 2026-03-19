@@ -391,7 +391,8 @@
       }
     }
 
-    // 지도 마커 동기화
+    // 지도 마커 동기화 + 선택 지역으로 줌
+    var selectedCenter = null;
     REGIONS.forEach(function (r) {
       var m = regionMarkers[r.id];
       if (!m) return;
@@ -401,10 +402,15 @@
       if (!markerDiv) return;
       if (r.id === regionId) {
         markerDiv.classList.add('active');
+        selectedCenter = r.center;
       } else {
         markerDiv.classList.remove('active');
       }
     });
+
+    if (selectedCenter && actMap) {
+      actMap.setView(selectedCenter, 10, { animate: true });
+    }
 
     renderRegion(regionId);
   }
