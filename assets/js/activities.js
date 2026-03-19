@@ -59,16 +59,39 @@
     '.act-modal-close { position: sticky; top: 0; float: right; background: #f6f8fa; border: none; font-size: 1.5em; cursor: pointer; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1; color: #586069; }',
     '.act-modal-close:hover { background: #e1e4e8; }',
     '.act-modal-body { line-height: 1.7; }',
-    '.act-modal-body h3 { color: #157878; margin-top: 1.2em; border-bottom: 1px solid #e1e4e8; padding-bottom: .3em; }',
-    '.act-modal-body h4 { color: #24292e; margin-top: 1em; }',
-    '.act-modal-body table { width: 100%; border-collapse: collapse; margin: .8em 0; font-size: .9em; }',
-    '.act-modal-body td, .act-modal-body th { padding: 6px 10px; border: 1px solid #e1e4e8; text-align: left; }',
-    '.act-modal-body tr:nth-child(even) { background: #f6f8fa; }',
-    '.act-modal-body blockquote { border-left: 3px solid #157878; margin: .8em 0; padding: .4em .8em; color: #586069; background: #f6f8fa; }',
-    '.act-modal-body ul { padding-left: 1.4em; }',
-    '.act-modal-body li { margin: .3em 0; }',
-    '.act-modal-body a { color: #0366d6; text-decoration: none; }',
-    '.act-modal-body a:hover { text-decoration: underline; }',
+
+    /* ── 모달 상단: 구조화된 헤더 ── */
+    '.am-header { margin-bottom: 20px; }',
+    '.am-title { font-size: 1.3em; font-weight: 700; color: #24292e; margin: 0 0 2px; padding-right: 2em; display: flex; align-items: center; gap: 8px; }',
+    '.am-title-icon { font-size: 1.4em; }',
+    '.am-subtitle { font-size: 0.88em; color: #586069; margin: 0 0 12px; }',
+    '.am-info-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; margin-bottom: 16px; }',
+    '.am-info-cell { background: #f6f8fa; border-radius: 8px; padding: 10px 12px; text-align: center; }',
+    '.am-info-label { font-size: 0.72em; font-weight: 600; color: #586069; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }',
+    '.am-info-value { font-size: 1.05em; font-weight: 700; color: #24292e; }',
+    '.am-info-value.am-highlight { color: #157878; font-size: 1.15em; }',
+    '.am-note-box { background: #f0f7f7; border: 1px solid #d0e8e8; border-radius: 8px; padding: 12px 16px; margin-bottom: 16px; }',
+    '.am-note-box .am-note-label { font-size: 0.78em; font-weight: 700; color: #157878; margin-bottom: 4px; }',
+    '.am-note-box .am-note-text { font-size: 0.9em; color: #24292e; line-height: 1.5; }',
+    '.am-gmaps-btn { display: inline-flex; align-items: center; gap: 4px; padding: 6px 14px; border-radius: 6px; background: #f6f8fa; border: 1px solid #d1d5da; color: #24292e; font-size: 0.85em; font-weight: 600; text-decoration: none; transition: all .15s; }',
+    '.am-gmaps-btn:hover { background: #e1e4e8; text-decoration: none; }',
+
+    /* ── 모달 하단: 상세 리서치 ── */
+    '.am-detail-body { padding: 0; margin-top: 8px; border-top: 1px solid #e1e4e8; padding-top: 16px; line-height: 1.7; }',
+
+    '.am-detail-body h3 { color: #157878; margin-top: 1.2em; border-bottom: 1px solid #e1e4e8; padding-bottom: .3em; }',
+    '.am-detail-body h4 { color: #24292e; margin-top: 1em; }',
+    '.am-detail-body h5 { color: #586069; margin: .6em 0 .3em; font-size: .95em; }',
+    '.am-detail-body table { width: 100%; border-collapse: collapse; margin: .8em 0; font-size: .88em; }',
+    '.am-detail-body td, .am-detail-body th { padding: 6px 10px; border: 1px solid #e1e4e8; text-align: left; }',
+    '.am-detail-body tr:nth-child(even) { background: #f6f8fa; }',
+    '.am-detail-body thead tr { background: #f0f7f7 !important; }',
+    '.am-detail-body thead th { font-weight: 600; padding: 8px 10px; border: 1px solid #e1e4e8; text-align: left; font-size: 0.88em; }',
+    '.am-detail-body blockquote { border-left: 3px solid #157878; margin: .8em 0; padding: .4em .8em; color: #586069; background: #f6f8fa; border-radius: 0 6px 6px 0; }',
+    '.am-detail-body ul { padding-left: 1.4em; }',
+    '.am-detail-body li { margin: .3em 0; }',
+    '.am-detail-body a { color: #0366d6; text-decoration: none; }',
+    '.am-detail-body a:hover { text-decoration: underline; }',
 
     /* ── 전체 리서치 ── */
     '.full-research { margin-top: 2em; border: 1px solid #e1e4e8; border-radius: 8px; }',
@@ -89,6 +112,7 @@
     '  .region-tabs { gap: 4px; }',
     '  .region-tab { padding: 6px 12px; font-size: 0.82em; }',
     '  .act-modal-content { padding: 20px 16px; }',
+    '  .am-info-grid { grid-template-columns: repeat(2, 1fr); }',
     '}'
   ].join('\n');
   document.head.appendChild(css);
@@ -540,18 +564,50 @@
   });
 
   function openModal(regionId, act) {
-    modalBody.innerHTML = '<p style="color:#586069">로딩 중...</p>';
+    var region = REGIONS.filter(function (r) { return r.id === regionId; })[0];
+    var regionName = region ? region.name : '';
+
+    // 구조화된 상단 헤더 빌드
+    var html = '';
+    html += '<div class="am-header">';
+    html += '<h2 class="am-title"><span class="am-title-icon">' + act.icon + '</span>' + act.name + '</h2>';
+    html += '<p class="am-subtitle">' + regionName + ' · 2026년 5월 하순</p>';
+
+    // Google Maps 링크
+    html += '<div style="margin-bottom:14px"><a class="am-gmaps-btn" href="https://www.google.com/maps/search/' +
+      encodeURIComponent(act.name + ' ' + regionName + ' NSW Australia') +
+      '" target="_blank" rel="noopener">📍 Google Maps에서 보기</a></div>';
+
+    // 정보 그리드
+    html += '<div class="am-info-grid">';
+    html += '<div class="am-info-cell"><div class="am-info-label">비용</div><div class="am-info-value am-highlight">' + act.cost + '</div></div>';
+    html += '<div class="am-info-cell"><div class="am-info-label">소요시간</div><div class="am-info-value">' + act.duration + '</div></div>';
+    html += '<div class="am-info-cell"><div class="am-info-label">예약</div><div class="am-info-value">' + act.booking + '</div></div>';
+    html += '<div class="am-info-cell"><div class="am-info-label">5월 적합도</div><div class="am-info-value"><span class="may-badge may-' + act.may + '">' + mayDot(act.may) + ' ' + act.mayLabel + '</span></div></div>';
+    html += '</div>';
+
+    // 요약 노트
+    if (act.note) {
+      html += '<div class="am-note-box"><div class="am-note-label">요약</div><div class="am-note-text">' + act.note + '</div></div>';
+    }
+    html += '</div>';
+
+    // 상세 리서치 (마크다운)
+    html += '<div class="am-detail-body" id="amDetailBody"><p style="color:#586069">로딩 중...</p></div>';
+
+    modalBody.innerHTML = html;
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
 
+    // 상세 리서치 즉시 로딩
+    var detailBody = document.getElementById('amDetailBody');
     fetchMd(regionId, function (md) {
       var section = extractSection(md, act.section, act.sectionKey);
       if (section) {
-        modalBody.innerHTML =
-          '<div style="margin-bottom:12px"><span class="may-badge may-' + act.may + '">' + mayDot(act.may) + ' ' + act.mayLabel + '</span></div>' +
-          simpleMarkdown(section);
+        var cleaned = section.replace(/^#{1,3} \d+\.\s+.+$/m, '').trim();
+        detailBody.innerHTML = simpleMarkdown(cleaned);
       } else {
-        modalBody.innerHTML = '<p style="color:#d73a49">섹션을 찾을 수 없습니다.</p>';
+        detailBody.innerHTML = '<p style="color:#586069">상세 리서치가 없습니다.</p>';
       }
     });
   }
@@ -625,27 +681,38 @@
   }
 
   function simpleMarkdown(md) {
-    return md
-      .replace(/^#### (.+)$/gm, '<h5 style="color:#586069;margin:.6em 0 .3em">$1</h5>')
+    // 테이블을 먼저 블록 단위로 처리 (구분선 깨짐 방지)
+    var result = md.replace(/(^\|.+$\n?)+/gm, function (block) {
+      var lines = block.trim().split('\n');
+      var rows = [];
+      lines.forEach(function (line) {
+        var cells = line.split('|').filter(function (c) { return c.trim(); });
+        // 구분선(|---|---|) 건너뛰기
+        if (cells.every(function (c) { return /^[\s\-:]+$/.test(c); })) return;
+        var tag = rows.length === 0 ? 'th' : 'td';
+        var row = cells.map(function (c) { return '<' + tag + '>' + c.trim() + '</' + tag + '>'; }).join('');
+        rows.push('<tr>' + row + '</tr>');
+      });
+      if (!rows.length) return '';
+      var thead = '<thead>' + rows[0] + '</thead>';
+      var tbody = rows.length > 1 ? '<tbody>' + rows.slice(1).join('') + '</tbody>' : '';
+      return '<table>' + thead + tbody + '</table>';
+    });
+
+    result = result
+      .replace(/^#### (.+)$/gm, '<h5>$1</h5>')
       .replace(/^### (.+)$/gm, '<h4>$1</h4>')
       .replace(/^## (.+)$/gm, '<h3>$1</h3>')
       .replace(/^# (.+)$/gm, '<h3>$1</h3>')
       .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
       .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
-      .replace(/^\| (.+)$/gm, function (match) {
-        var cells = match.split('|').filter(function (c) { return c.trim(); });
-        // Skip separator rows (|---|---|)
-        if (cells.every(function (c) { return /^[\s-:]+$/.test(c); })) return '';
-        var row = cells.map(function (c) { return '<td>' + c.trim() + '</td>'; }).join('');
-        return '<tr>' + row + '</tr>';
-      })
       .replace(/^- (.+)$/gm, '<li>$1</li>')
       .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
-      .replace(/(<tr>.*<\/tr>\n?)+/g, '<table>$&</table>')
       .replace(/^---$/gm, '<hr/>')
       .replace(/\n\n/g, '<br/>')
       .replace(/\n/g, '\n');
+    return result;
   }
 
   /* ══════════════════════════════════════════
