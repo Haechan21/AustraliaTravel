@@ -400,10 +400,10 @@
     /* NSW 해안에 맞게 fitBounds */
     map.fitBounds(bounds, { padding: [30, 30] });
 
-    /* 타일 레이어 — activities.js와 동일한 CARTO 타일 */
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-      maxZoom: 15
+    /* 타일 레이어 — OSM 통일 */
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap',
+      maxZoom: 18
     }).addTo(map);
 
     /* 점선 루트 연결 */
