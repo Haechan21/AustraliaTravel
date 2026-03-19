@@ -89,7 +89,7 @@
     '.dine-card .card-pros { font-size: 0.82em; color: #22863a; line-height: 1.4; margin-bottom: 4px; }',
     '.dine-card .card-controversy { display: inline-block; font-size: 0.75em; font-weight: 600; color: #d4380d; background: #fff1f0; padding: 1px 8px; border-radius: 8px; }',
     '.dine-card.budget-pick { border-color: #d4380d; box-shadow: 0 0 0 2px rgba(212,56,13,.25); }',
-    '.dine-card.budget-pick::after { content: attr(data-pick-label); position: absolute; top: -1px; right: -1px; background: #d4380d; color: #fff; font-size: 0.72em; font-weight: 700; padding: 2px 10px; border-radius: 0 10px 0 8px; pointer-events: none; }',
+    '.dine-card.budget-pick::after { content: attr(data-pick-label); position: absolute; top: -1px; left: 44px; background: #d4380d; color: #fff; font-size: 0.72em; font-weight: 700; padding: 3px 10px; border-radius: 0 8px 8px 0; pointer-events: none; }',
 
     /* 모달 */
     '.dine-modal-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,.5); z-index: 1000; justify-content: center; align-items: flex-start; padding: 40px 16px; overflow-y: auto; }',

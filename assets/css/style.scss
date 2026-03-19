@@ -714,13 +714,14 @@
 }
 
 .score-label {
-  width: 2.5em;
+  min-width: 3.8em;
   font-size: 0.8em;
   font-weight: 700;
   text-align: right;
   color: #24292e;
   flex-shrink: 0;
   margin-right: 0.3em;
+  white-space: nowrap;
 }
 
 .score-break {

@@ -508,7 +508,8 @@
       tabs[i].classList.toggle('active', tabs[i].getAttribute('data-stop') === stopId);
     }
 
-    /* 마커 동기화 */
+    /* 마커 동기화 + 선택 거점으로 줌 */
+    var selectedCenter = null;
     STOPS.forEach(function (s) {
       var m = stopMarkers[s.id];
       if (!m) return;
@@ -516,7 +517,12 @@
       if (!el) return;
       var md = el.querySelector('.stop-marker');
       if (md) md.classList.toggle('active', s.id === stopId);
+      if (s.id === stopId) selectedCenter = s.center;
     });
+
+    if (selectedCenter && leafletMap) {
+      leafletMap.setView(selectedCenter, 10, { animate: true });
+    }
 
     /* 거점 내용 렌더링 + 시나리오 UI */
     renderStop(stopId);
