@@ -60,6 +60,8 @@ layout: default
 
 > 📋 음식점 평가 완료(140개+ CRITIC) · 숙소 평가 완료(77개 CRITIC) → <a href="lodging.html">숙소 후보</a>
 
+> 🧳 비자·운전·안전·환전·보험·패킹·통신 실전 가이드 → <a href="essentials.html">여행 준비</a>
+
 <br/>
 
 ## 이 프로젝트는
