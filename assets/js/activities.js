@@ -350,9 +350,9 @@
     // NSW 해안에 딱 맞게 fitBounds (여백 포함)
     map.fitBounds(bounds, { padding: [30, 30] });
 
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
-      maxZoom: 15
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap',
+      maxZoom: 18
     }).addTo(map);
 
     // 각 지역에 커스텀 마커(버튼) 생성

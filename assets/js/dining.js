@@ -555,17 +555,33 @@
   }
 
   function initMap() {
-    map = L.map('diningMap').setView([-30.5, 152.5], 6);
+    var bounds = [];
+    STOPS.forEach(function(s) { if (s.center) bounds.push(s.center); });
+    if (!bounds.length) return;
+
+    map = L.map('diningMap', {
+      scrollWheelZoom: false,
+      zoomControl: true
+    });
+
+    map.fitBounds(bounds, { padding: [30, 30] });
+
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       attribution: '&copy; OpenStreetMap',
       maxZoom: 18
     }).addTo(map);
 
+    /* 점선 루트 연결 */
+    L.polyline(bounds, { color: '#d4380d', weight: 2, opacity: 0.4, dashArray: '8 6' }).addTo(map);
+
     STOPS.forEach(function(s) {
+      if (!s.center) return;
       var icon = L.divIcon({
-        className: 'stop-marker',
-        html: s.name + '<span class="marker-day">' + s.day + '</span>',
-        iconSize: null
+        className: '',
+        html: '<div class="stop-marker' + (s.id === activeStop ? ' active' : '') + '" data-stop="' + s.id + '">' +
+              s.name + '<span class="marker-day">' + s.day + '</span></div>',
+        iconSize: null,
+        iconAnchor: [0, 0]
       });
       var m = L.marker(s.center, {icon: icon}).addTo(map);
       m.on('click', function() { selectStop(s.id); });
