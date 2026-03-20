@@ -192,6 +192,42 @@
       "total_score": 79.0
     },
     {
+      "id": "5fad89b9",
+      "name_ko": "도리고 스카이워크",
+      "region": "워터폴웨이/도리고",
+      "raw_scores": {
+        "google_rating": {
+          "score": 8,
+          "reason": "4.7/5.0 우수하나 135건으로 표본 신뢰도 제한. 교차 검증 어려움"
+        },
+        "review_count": {
+          "score": 4,
+          "reason": "135건. 국립공원 내 시설이라 리뷰 수 자체가 적은 편. 데이터 부족"
+        },
+        "scenery": {
+          "score": 7,
+          "reason": "경치 긍정 리뷰 높으나 안개/구름 시 전망 완전 차단. 날씨 의존도 높음"
+        },
+        "accessibility": {
+          "score": 7,
+          "reason": "전 구간 포장도로, 2WD 가능. 도착 후 휠체어 접근 가능. 산길이나 노면 양호"
+        },
+        "value_for_money": {
+          "score": 9,
+          "reason": "$2 골드코인 기부. 리뷰에서 '가성비 최고' 평가 일관"
+        },
+        "time_efficiency": {
+          "score": 7,
+          "reason": "30분 체류로 핵심 완료. '짧지만 충분' 리뷰 다수"
+        },
+        "uniqueness": {
+          "score": 7,
+          "reason": "곤드와나 세계유산 인증. '독특한 경험' 리뷰 있으나 유사 캐노피 워크와 차별점은 Heritage 지위"
+        }
+      },
+      "total_score": 71.5
+    },
+    {
       "id": "04cc52a2",
       "name_ko": "서블라임 포인트 전망대",
       "region": "블루마운틴",

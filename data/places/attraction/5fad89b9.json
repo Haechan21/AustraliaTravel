@@ -1,0 +1,123 @@
+{
+  "id": "5fad89b9",
+  "name": "Skywalk Lookout (Dorrigo Rainforest Centre)",
+  "name_ko": "도리고 스카이워크",
+  "category": "attraction",
+  "source_file": "manual-2026-03-20.json",
+  "address_raw": "Dorrigo Rainforest Centre, Dome Road, Dorrigo Mountain NSW 2453",
+  "location": {
+    "coordinates": {
+      "lng": 152.7296593,
+      "lat": -30.3635196
+    },
+    "address": "142 Dome Road, Dorrigo Mountain NSW 2453 (Dorrigo National Park)",
+    "region": "워터폴웨이/도리고"
+  },
+  "collected_data": {
+    "rating": 4.7,
+    "total_reviews": 135,
+    "price_level": null,
+    "opening_hours": "스카이워크: 5am~10pm / 센터: 5~8월 9am~3pm, 9~4월 9am~3:30pm",
+    "review_summary": {
+      "same_month_last_year": {
+        "period": "2025-05",
+        "count": null,
+        "positive": [
+          "가을 기온(7~16°C)으로 열대우림 산책에 쾌적",
+          "여름보다 습도 낮아 벨링거 밸리~태평양 해안 전망이 맑은 날 많음",
+          "관광 비수기로 한적한 방문 가능"
+        ],
+        "negative": [
+          "안개/구름 발생 시 전망 완전 차단",
+          "도리고 지역 연 강수량 2,000mm — 5월도 간헐적 비 가능"
+        ],
+        "seasonal_notes": "5월 건기 전환기. 습도 낮고 기온 쾌적. 방한복 필요 (아침 7°C)"
+      },
+      "recent_6_months": {
+        "period": "2025-09 ~ 2026-03",
+        "count": null,
+        "positive": [
+          "70m 보드워크가 절벽 가장자리에서 열대우림 위 21m 높이로 뻗어나감",
+          "벨링거 밸리~태평양 해안까지 파노라마 전망",
+          "실질 무료 입장 ($2 골드코인 기부)",
+          "휠체어/유모차 완전 접근 가능, 주차장에서 1분 거리",
+          "곤드와나 우림 세계유산 — 곰바잉기르(Gumbaynggirr) 문화 해설",
+          "Canopy Cafe (셰프 운영), 기프트숍(원주민 아트), 인터랙티브 전시"
+        ],
+        "negative": [
+          "안개/구름 시 전망 완전 차단 (날씨 의존도 높음)",
+          "고소공포증 있는 사람에게 불안할 수 있음",
+          "습파리(marsh flies) 성가심"
+        ],
+        "status_notes": "⚠️ Dorrigo Arc Rainforest Centre 재개발($32M) 착공 2026년 초 예정. 기존 스카이워크 철거 후 신축. 2026년 5월 방문 시 폐쇄 가능성 높음. 사전 확인 필수: 02 6657 5913"
+      },
+      "tips": [
+        "벨링겐에서 차로 약 30분 (Waterfall Way B78, 32km)",
+        "콥스하버에서 약 1시간 (60km)",
+        "맑은 오전이 전망 최적 (안개 걷힌 후)",
+        "Wonga Walk (6.6km 순환, 2.5시간)로 크리스탈 샤워 폭포까지 도보 연결 가능",
+        "방한복 필요 (5월 아침 7°C)",
+        "⚠️ 2026년 초 재개발 착공 — 방문 전 NPWS 운영 여부 확인 필수"
+      ]
+    },
+    "collected_at": "2026-03-20T00:00:00Z",
+    "logistics": {
+      "parking": "Dorrigo Rainforest Centre 무료 주차장. 장애인 주차 2면. 대형 버스 가능",
+      "road_condition": "전 구간 포장도로, 2WD 전천후 접근 가능. 벨링겐→도리고 구간 산길이나 노면 양호",
+      "nearby_attractions": [
+        {
+          "name": "크리스탈 샤워 폭포 (Crystal Shower Falls)",
+          "distance_km": 0.5,
+          "drive_min": 0,
+          "note": "Wonga Walk 도보 연결 또는 차로 이동"
+        },
+        {
+          "name": "댕거 폭포 (Dangar Falls)",
+          "distance_km": 7,
+          "drive_min": 10
+        },
+        {
+          "name": "벨링겐 마을 (Bellingen)",
+          "distance_km": 32,
+          "drive_min": 30
+        }
+      ],
+      "peak_times": "주말 오전~오후. 평일은 비교적 한적",
+      "public_transport": "대중교통 접근 어려움. 자차 필수"
+    },
+    "experience": {
+      "photo_spots": [
+        "보드워크 끝단에서 벨링거 밸리~태평양 해안 파노라마",
+        "McGraths Hump ('잠자는 노인' 형상) 배경",
+        "마운트 포스트 셀프 타이머 촬영대 설치됨",
+        "열대우림 캐노피 레벨 뷰"
+      ],
+      "golden_hour": "동향 전망이므로 일출 시 벨링거 밸리가 황금빛. 일몰 시 서쪽 산 노을 반사",
+      "seasonal_beauty": "5월 가을 — 습도 낮아 시야 맑고 산책에 최적. 열대우림 상록수로 계절 변화 적음",
+      "hidden_gems": [
+        "곰바잉기르(Gumbaynggirr) 원주민 문화 해설 — 열대우림의 전통 의미와 이야기",
+        "Canopy Cafe — 센터 내 셰프 운영 카페, 우림 뷰"
+      ],
+      "sensory_notes": "열대우림 새소리 (regent bowerbird, topknot pigeon). 이끼와 습한 우림 향. 21m 높이에서의 바람과 공중 부양 감각"
+    },
+    "risk_check": {
+      "negative_review_patterns": [
+        "안개/구름 시 전망 완전 차단",
+        "고소공포증 주의",
+        "습파리(marsh flies) 성가심"
+      ],
+      "may_operation": "⚠️ 2026년 초 Dorrigo Arc 재개발 착공 예정 — 기존 스카이워크 철거 가능. 2026년 5월 폐쇄 가능성 높음. 사전 확인 필수 (02 6657 5913)",
+      "safety_issues": "휠체어 접근 가능, 난간 설치. 고소공포증 외 안전 이슈 없음",
+      "weather_impact": "안개/비 시 전망 제한. 도리고 연간 2,000mm 강수. 우천 시 산책로 미끄러울 수 있으나 스카이워크 자체는 접근 가능",
+      "quality_trend": "꾸준히 높은 평가 (4.7/5). 곤드와나 세계유산. 재개발로 인한 폐쇄가 2026년 최대 변수"
+    }
+  },
+  "metadata": {
+    "estimated_visit_duration_min": 30,
+    "cost_aud": 2,
+    "best_time": "맑은 날 오전 (안개 걷힌 후)",
+    "weather_dependent": true,
+    "reservation_required": false
+  },
+  "google_maps_url": "https://www.google.com/maps/place/Skywalk+Lookout/@-30.3635196,152.7296593,17z"
+}

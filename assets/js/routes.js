@@ -160,8 +160,8 @@
   var base = (window.__BASE_URL__ || '').replace(/\/+$/, '');
 
   Promise.all([
-    fetch(base + '/assets/data/route_data.json').then(function (r) { return r.json(); }),
-    fetch(base + '/assets/data/route_geometry.json').then(function (r) { return r.json(); }).catch(function () { return null; })
+    fetch(base + '/data/routes/route_data.json').then(function (r) { return r.json(); }),
+    fetch(base + '/data/routes/route_geometry.json').then(function (r) { return r.json(); }).catch(function () { return null; })
   ]).then(function (results) {
     routeData = results[0].routes;
     geometryData = results[1];

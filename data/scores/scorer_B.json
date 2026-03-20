@@ -192,6 +192,42 @@
       "total_score": 74.0
     },
     {
+      "id": "5fad89b9",
+      "name_ko": "도리고 스카이워크",
+      "region": "워터폴웨이/도리고",
+      "raw_scores": {
+        "google_rating": {
+          "score": 7,
+          "reason": "4.7점. 높은 편이나 평점 자체보다 현장 경험이 중요"
+        },
+        "review_count": {
+          "score": 5,
+          "reason": "135건. 숨은 명소일 수 있음. 비수기 방문자가 적을 뿐"
+        },
+        "scenery": {
+          "score": 8,
+          "reason": "21m 높이에서 곤드와나 열대우림 캐노피 위 파노라마. 벨링거 밸리~태평양 해안 조망. 가을 맑은 날 시야 확보 시 압도적"
+        },
+        "accessibility": {
+          "score": 8,
+          "reason": "Waterfall Way 드라이브 자체가 열대우림 관통 경험. 도착 후 1분 접근. 여정도 감성의 일부"
+        },
+        "value_for_money": {
+          "score": 9,
+          "reason": "$2 기부로 세계유산 열대우림 위 공중 체험. 비용 대비 경험이 돈을 초월"
+        },
+        "time_efficiency": {
+          "score": 5,
+          "reason": "30분 체류. 시간 자체보다 몰입도가 중요 — 보통 수준"
+        },
+        "uniqueness": {
+          "score": 8,
+          "reason": "곤드와나 세계유산 열대우림 위 보드워크. 곰바잉기르 원주민 문화 해설. 한국에서 절대 불가능한 고대 우림 체험"
+        }
+      },
+      "total_score": 78.0
+    },
+    {
       "id": "04cc52a2",
       "name_ko": "서블라임 포인트 전망대",
       "region": "블루마운틴",

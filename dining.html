@@ -5,7 +5,7 @@ title: 식당 후보
 
 <div class="dining-page">
   <h1>식당 후보</h1>
-  <p class="dining-subtitle">6조 루트 · 6개 거점 · 140개+ 리서치 · 126개 CRITIC 채점 · 3명 페르소나(동선 미식가 / 미식 큐레이터 / 리뷰 검증자) · 2026년 5월 기준</p>
+  <p class="dining-subtitle" id="subtitle">로딩 중...</p>
 
   <!-- 뷰 모드 토글 -->
   <div class="view-toggle" id="viewToggle"></div>
@@ -39,4 +39,5 @@ title: 식당 후보
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>window.__BASE_URL__ = "{{ site.baseurl }}";</script>
 <script src="{{ '/assets/js/dining.js?v=20260319d' | relative_url }}"></script>

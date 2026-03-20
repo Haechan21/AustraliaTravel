@@ -1,12 +1,12 @@
 {
   "generated_at": "2026-03-13",
-  "total": 109,
+  "total": 110,
   "grade_distribution": {
     "S": 6,
     "A": 22,
     "B": 38,
     "C": 33,
-    "D": 10
+    "D": 11
   },
   "grading_method": "percentile",
   "grading_cutoffs": {
@@ -14,7 +14,7 @@
     "A": "7~28위",
     "B": "29~66위",
     "C": "67~99위",
-    "D": "100~109위"
+    "D": "100~110위"
   },
   "controversial_count": 37,
   "personas": {
@@ -3529,6 +3529,105 @@
       },
       "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Crowdy%20Head%20Lighthouse%20Australia&center=-31.843442,152.7535723"
     },
+    "5fad89b9": {
+      "id": "5fad89b9",
+      "name_ko": "도리고 스카이워크",
+      "name": "Skywalk Lookout (Dorrigo Rainforest Centre)",
+      "region": "워터폴웨이/도리고",
+      "grade": "B",
+      "may_adjusted_score": 75.0,
+      "scores": {
+        "A": 69.5,
+        "B": 78.0,
+        "C": 71.5
+      },
+      "spread": 8.5,
+      "controversial": false,
+      "breakdown": {
+        "scenery": {
+          "avg": 7.3,
+          "A": 7,
+          "B": 8,
+          "C": 7,
+          "reasons": {
+            "A": "열대우림 위 21m 보드워크 전망. 주차장에서 1분 접근으로 빠르게 감상",
+            "B": "21m 높이에서 곤드와나 열대우림 캐노피 위 파노라마. 벨링거 밸리~태평양 해안 조망. 가을 맑은 날 시야 확보 시 압도적",
+            "C": "경치 긍정 리뷰 높으나 안개/구름 시 전망 완전 차단. 날씨 의존도 높음"
+          }
+        },
+        "uniqueness": {
+          "avg": 7.3,
+          "A": 7,
+          "B": 8,
+          "C": 7,
+          "reasons": {
+            "A": "곤드와나 세계유산 열대우림. 원주민 문화 해설 포함. 유사 캐노피 워크 있으나 Heritage 가치",
+            "B": "곤드와나 세계유산 열대우림 위 보드워크. 곰바잉기르 원주민 문화 해설. 한국에서 절대 불가능한 고대 우림 체험",
+            "C": "곤드와나 세계유산 인증. '독특한 경험' 리뷰 있으나 유사 캐노피 워크와 차별점은 Heritage 지위"
+          }
+        },
+        "google_rating": {
+          "avg": 8.0,
+          "A": 9,
+          "B": 7,
+          "C": 8,
+          "reasons": {
+            "A": "평점 4.7. 높은 평점이나 리뷰 수 135건으로 표본 한정",
+            "B": "4.7점. 높은 편이나 평점 자체보다 현장 경험이 중요",
+            "C": "4.7/5.0 우수하나 135건으로 표본 신뢰도 제한. 교차 검증 어려움"
+          }
+        },
+        "accessibility": {
+          "avg": 6.7,
+          "A": 5,
+          "B": 8,
+          "C": 7,
+          "reasons": {
+            "A": "콥스하버에서 1시간, 벨링겐에서 30분 산길. 도착 후 휠체어 접근 가능하나 우회 동선 큼",
+            "B": "Waterfall Way 드라이브 자체가 열대우림 관통 경험. 도착 후 1분 접근. 여정도 감성의 일부",
+            "C": "전 구간 포장도로, 2WD 가능. 도착 후 휠체어 접근 가능. 산길이나 노면 양호"
+          }
+        },
+        "review_count": {
+          "avg": 4.3,
+          "A": 4,
+          "B": 5,
+          "C": 4,
+          "reasons": {
+            "A": "135건. 국립공원 시설로 데이터 충분하지 않음",
+            "B": "135건. 숨은 명소일 수 있음. 비수기 방문자가 적을 뿐",
+            "C": "135건. 국립공원 내 시설이라 리뷰 수 자체가 적은 편. 데이터 부족"
+          }
+        },
+        "value_for_money": {
+          "avg": 9.0,
+          "A": 9,
+          "B": 9,
+          "C": 9,
+          "reasons": {
+            "A": "$2 골드코인 + 30분. 세계유산 체험 대비 거의 무료",
+            "B": "$2 기부로 세계유산 열대우림 위 공중 체험. 비용 대비 경험이 돈을 초월",
+            "C": "$2 골드코인 기부. 리뷰에서 '가성비 최고' 평가 일관"
+          }
+        },
+        "time_efficiency": {
+          "avg": 7.0,
+          "A": 9,
+          "B": 5,
+          "C": 7,
+          "reasons": {
+            "A": "30분 체류로 스카이워크+전망 핵심 완료. 크리스탈 샤워 폭포와 묶으면 효율 극대",
+            "B": "30분 체류. 시간 자체보다 몰입도가 중요 — 보통 수준",
+            "C": "30분 체류로 핵심 완료. '짧지만 충분' 리뷰 다수"
+          }
+        }
+      },
+      "coords": {
+        "lat": -30.3635196,
+        "lng": 152.7296593
+      },
+      "google_maps_url": "https://www.google.com/maps/search/?api=1&query=Skywalk%20Lookout%20%28Dorrigo%20Rainforest%20Centre%29%20Australia&center=-30.3635196,152.7296593"
+    },
     "9ba192a2": {
       "id": "9ba192a2",
       "name_ko": "엠프레스 폭포",
@@ -6504,7 +6603,7 @@
       "name_ko": "에버글라데스 하우스 & 가든스",
       "name": "Everglades House & Gardens",
       "region": "블루마운틴",
-      "grade": "B",
+      "grade": "C",
       "may_adjusted_score": 66.8,
       "scores": {
         "A": 54.5,
@@ -9771,7 +9870,7 @@
       "name_ko": "루나 파크 시드니",
       "name": "Luna Park Sydney",
       "region": "시드니",
-      "grade": "C",
+      "grade": "D",
       "may_adjusted_score": 52.5,
       "scores": {
         "A": 57.0,
@@ -10892,6 +10991,7 @@
     "d3a4be59",
     "14d198ac",
     "d7b4e922",
+    "5fad89b9",
     "9ba192a2",
     "152a7cf4",
     "579eb092",

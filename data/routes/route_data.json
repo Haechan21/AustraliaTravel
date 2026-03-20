@@ -3,13 +3,13 @@
     "1": {
       "name": "1조: GC직행 + 남하해안",
       "color": "#e74c3c",
-      "total_km": 2375,
+      "total_km": 2293,
       "score": 54.7,
       "days": [
         {
           "day": 1,
           "date": "5/24",
-          "label": "시드니→골드코스트 (882km)",
+          "label": "시드니→골드코스트 (865km)",
           "day_km": 865,
           "stops": [
             {
@@ -151,7 +151,7 @@
           "day": 4,
           "date": "5/27",
           "label": "Waterfall Way: 콥스→도리고→포트맥쿼리",
-          "day_km": 348,
+          "day_km": 266,
           "stops": [
             {
               "name": "콥스하버",
@@ -168,12 +168,13 @@
               "distance_km": 36
             },
             {
-              "name": "포레스트 스카이 피어",
-              "lng": 153.1095289,
-              "lat": -30.2664777,
+              "name": "도리고 스카이워크",
+              "lng": 152.7296593,
+              "lat": -30.3635196,
               "type": "attraction",
-              "grade": "A",
-              "distance_km": 46
+              "grade": "B",
+              "distance_km": 29,
+              "id": "5fad89b9"
             },
             {
               "name": "크리스탈 샤워 폭포",
@@ -181,7 +182,7 @@
               "lat": -30.3805276,
               "type": "attraction",
               "grade": "A",
-              "distance_km": 70
+              "distance_km": 5
             },
             {
               "name": "댕거 폭포",
@@ -292,8 +293,8 @@
             },
             {
               "name": "그랜드 퍼시픽 드라이브",
-              "lng": 150.9200,
-              "lat": -34.2100,
+              "lng": 150.92,
+              "lat": -34.21,
               "type": "attraction",
               "grade": "S",
               "distance_km": 10
@@ -651,13 +652,13 @@
     "3": {
       "name": "3조: 해안+내륙 폭포 루프",
       "color": "#2ecc71",
-      "total_km": 2423,
+      "total_km": 2282,
       "score": 58.8,
       "days": [
         {
           "day": 1,
           "date": "5/24",
-          "label": "시드니→골드코스트 (882km)",
+          "label": "시드니→골드코스트 (865km)",
           "day_km": 865,
           "stops": [
             {
@@ -799,7 +800,7 @@
           "day": 4,
           "date": "5/27",
           "label": "Waterfall Way: 콥스→도리고→포트맥쿼리",
-          "day_km": 347,
+          "day_km": 265,
           "stops": [
             {
               "name": "콥스하버",
@@ -816,12 +817,13 @@
               "distance_km": 36
             },
             {
-              "name": "포레스트 스카이 피어",
-              "lng": 153.1095289,
-              "lat": -30.2664777,
+              "name": "도리고 스카이워크",
+              "lng": 152.7296593,
+              "lat": -30.3635196,
               "type": "attraction",
-              "grade": "A",
-              "distance_km": 46
+              "grade": "B",
+              "distance_km": 29,
+              "id": "5fad89b9"
             },
             {
               "name": "크리스탈 샤워 폭포",
@@ -829,7 +831,7 @@
               "lat": -30.3805276,
               "type": "attraction",
               "grade": "A",
-              "distance_km": 70
+              "distance_km": 5
             },
             {
               "name": "댕거 폭포",
@@ -860,7 +862,7 @@
           "day": 5,
           "date": "5/28",
           "label": "포트맥쿼리→포트스테판스→뉴캐슬",
-          "day_km": 381,
+          "day_km": 322,
           "stops": [
             {
               "name": "포트맥쿼리",
@@ -924,8 +926,8 @@
             },
             {
               "name": "그랜드 퍼시픽 드라이브",
-              "lng": 150.9200,
-              "lat": -34.2100,
+              "lng": 150.92,
+              "lat": -34.21,
               "type": "attraction",
               "grade": "S",
               "distance_km": 10
@@ -944,13 +946,13 @@
     "4": {
       "name": "4조: 오션앤마운틴 그랜드루프",
       "color": "#f1c40f",
-      "total_km": 2517,
+      "total_km": 2419,
       "score": 69.7,
       "days": [
         {
           "day": 1,
           "date": "5/24",
-          "label": "시드니→골드코스트 (882km)",
+          "label": "시드니→골드코스트 (862km)",
           "day_km": 862,
           "stops": [
             {
@@ -994,7 +996,7 @@
           "day": 2,
           "date": "5/25",
           "label": "GC→바이런→콥스하버",
-          "day_km": 338,
+          "day_km": 348,
           "stops": [
             {
               "name": "골드코스트",
@@ -1017,7 +1019,7 @@
               "lat": -28.6432,
               "type": "attraction",
               "grade": "S",
-              "distance_km": 105
+              "distance_km": 82
             },
             {
               "name": "룩앳미나우 헤드랜드",
@@ -1025,7 +1027,7 @@
               "lat": -30.3605,
               "type": "attraction",
               "grade": "S",
-              "distance_km": 235
+              "distance_km": 244
             },
             {
               "name": "콥스하버",
@@ -1040,7 +1042,7 @@
           "day": 3,
           "date": "5/26",
           "label": "콥스→도리고→포트맥쿼리",
-          "day_km": 348,
+          "day_km": 266,
           "stops": [
             {
               "name": "콥스하버",
@@ -1057,12 +1059,13 @@
               "distance_km": 36
             },
             {
-              "name": "포레스트 스카이 피어",
-              "lng": 153.1095289,
-              "lat": -30.2664777,
+              "name": "도리고 스카이워크",
+              "lng": 152.7296593,
+              "lat": -30.3635196,
               "type": "attraction",
-              "grade": "A",
-              "distance_km": 46
+              "grade": "B",
+              "distance_km": 29,
+              "id": "5fad89b9"
             },
             {
               "name": "크리스탈 샤워 폭포",
@@ -1070,7 +1073,7 @@
               "lat": -30.3805276,
               "type": "attraction",
               "grade": "A",
-              "distance_km": 70
+              "distance_km": 5
             },
             {
               "name": "댕거 폭포",
@@ -1138,7 +1141,7 @@
           "day": 5,
           "date": "5/28",
           "label": "포트스테판스→뉴캐슬→블루마운틴",
-          "day_km": 328,
+          "day_km": 324,
           "stops": [
             {
               "name": "넬슨베이",
@@ -1161,7 +1164,7 @@
               "lat": -33.727691199999995,
               "type": "attraction",
               "grade": "S",
-              "distance_km": 200
+              "distance_km": 234
             },
             {
               "name": "에코 포인트 (쓰리 시스터스)",
@@ -1177,14 +1180,14 @@
               "lat": -33.628006,
               "type": "attraction",
               "grade": "A",
-              "distance_km": 10
+              "distance_km": 16
             },
             {
               "name": "블루마운틴 (카툼바)",
               "lng": 150.312,
               "lat": -33.714,
               "type": "stay",
-              "distance_km": 0
+              "distance_km": 14
             }
           ]
         },
@@ -1192,7 +1195,7 @@
           "day": 6,
           "date": "5/29",
           "label": "블루마운틴→그랜드퍼시픽→시드니공항",
-          "day_km": 361,
+          "day_km": 339,
           "stops": [
             {
               "name": "카툼바",
@@ -1207,7 +1210,7 @@
               "lat": -33.649376,
               "type": "attraction",
               "grade": "S",
-              "distance_km": 15
+              "distance_km": 13
             },
             {
               "name": "스탠웰 탑스 전망대",
@@ -1255,13 +1258,13 @@
     "5": {
       "name": "5조: 풀 스윙 (개선)",
       "color": "#9b59b6",
-      "total_km": 2185,
+      "total_km": 2103,
       "score": 68.3,
       "days": [
         {
           "day": 1,
           "date": "5/24",
-          "label": "시드니→골드코스트 (882km)",
+          "label": "시드니→골드코스트 (862km)",
           "day_km": 862,
           "stops": [
             {
@@ -1410,7 +1413,7 @@
           "day": 4,
           "date": "5/27",
           "label": "Waterfall Way: 콥스→도리고→포트맥쿼리",
-          "day_km": 348,
+          "day_km": 266,
           "stops": [
             {
               "name": "콥스하버",
@@ -1427,12 +1430,13 @@
               "distance_km": 36
             },
             {
-              "name": "포레스트 스카이 피어",
-              "lng": 153.1095289,
-              "lat": -30.2664777,
+              "name": "도리고 스카이워크",
+              "lng": 152.7296593,
+              "lat": -30.3635196,
               "type": "attraction",
-              "grade": "A",
-              "distance_km": 46
+              "grade": "B",
+              "distance_km": 29,
+              "id": "5fad89b9"
             },
             {
               "name": "크리스탈 샤워 폭포",
@@ -1440,7 +1444,7 @@
               "lat": -30.380527599999997,
               "type": "attraction",
               "grade": "A",
-              "distance_km": 70
+              "distance_km": 5
             },
             {
               "name": "댕거 폭포",
@@ -1547,7 +1551,7 @@
     "6": {
       "name": "6조: 바이런직행 + 블루마운틴",
       "color": "#e67e22",
-      "total_km": 2316,
+      "total_km": 2234,
       "score": 78.0,
       "days": [
         {
@@ -1658,7 +1662,7 @@
           "day": 3,
           "date": "5/26",
           "label": "Waterfall Way: 콥스→도리고→포트맥쿼리",
-          "day_km": 347,
+          "day_km": 265,
           "stops": [
             {
               "name": "콥스하버",
@@ -1675,12 +1679,13 @@
               "distance_km": 36
             },
             {
-              "name": "포레스트 스카이 피어",
-              "lng": 153.1095289,
-              "lat": -30.2664777,
+              "name": "도리고 스카이워크",
+              "lng": 152.7296593,
+              "lat": -30.3635196,
               "type": "attraction",
-              "grade": "A",
-              "distance_km": 46
+              "grade": "B",
+              "distance_km": 29,
+              "id": "5fad89b9"
             },
             {
               "name": "크리스탈 샤워 폭포",
@@ -1688,7 +1693,7 @@
               "lat": -30.380527599999997,
               "type": "attraction",
               "grade": "A",
-              "distance_km": 70
+              "distance_km": 5
             },
             {
               "name": "댕거 폭포",
@@ -1844,19 +1849,19 @@
               "distance_km": 13
             },
             {
-              "name": "그랜드 퍼시픽 드라이브",
-              "lng": 150.9961037,
-              "lat": -34.224236,
-              "type": "attraction",
-              "grade": "S",
-              "distance_km": 144
-            },
-            {
               "name": "스탠웰 탑스 전망대",
               "lng": 150.9974825,
               "lat": -34.2237322,
               "type": "attraction",
               "grade": "A",
+              "distance_km": 144
+            },
+            {
+              "name": "그랜드 퍼시픽 드라이브",
+              "lng": 150.9961037,
+              "lat": -34.224236,
+              "type": "attraction",
+              "grade": "S",
               "distance_km": 0
             },
             {
@@ -1897,7 +1902,7 @@
     "7": {
       "name": "7조: 안전첫날 + S올클리어",
       "color": "#1abc9c",
-      "total_km": 2331,
+      "total_km": 2249,
       "score": 59.5,
       "days": [
         {
@@ -1949,7 +1954,7 @@
           "day": 2,
           "date": "5/25",
           "label": "Waterfall Way: 포맥→도리고→콥스하버",
-          "day_km": 370,
+          "day_km": 288,
           "stops": [
             {
               "name": "포트맥쿼리",
@@ -1966,19 +1971,20 @@
               "distance_km": 143
             },
             {
-              "name": "포레스트 스카이 피어",
-              "lng": 153.1095289,
-              "lat": -30.2664777,
+              "name": "도리고 스카이워크",
+              "lng": 152.7296593,
+              "lat": -30.3635196,
               "type": "attraction",
-              "distance_km": 46,
-              "grade": "A"
+              "distance_km": 29,
+              "grade": "B",
+              "id": "5fad89b9"
             },
             {
               "name": "크리스탈 샤워 폭포",
               "lng": 152.7297825,
               "lat": -30.3805276,
               "type": "attraction",
-              "distance_km": 70,
+              "distance_km": 5,
               "grade": "A"
             },
             {
@@ -2233,7 +2239,7 @@
     "8": {
       "name": "8조: 바이런 연박 감성 루트",
       "color": "#16a085",
-      "total_km": 2264,
+      "total_km": 2254,
       "score": 73.0,
       "days": [
         {
@@ -2335,7 +2341,7 @@
           "day": 3,
           "date": "5/26",
           "label": "바이런→콥스→도리고→벨링겐",
-          "day_km": 358,
+          "day_km": 348,
           "stops": [
             {
               "name": "바이런베이",
@@ -2361,19 +2367,20 @@
               "grade": "A"
             },
             {
-              "name": "포레스트 스카이 피어",
-              "lng": 153.1095289,
-              "lat": -30.2664777,
+              "name": "도리고 스카이워크",
+              "lng": 152.7296593,
+              "lat": -30.3635196,
               "type": "attraction",
-              "distance_km": 12,
-              "grade": "A"
+              "distance_km": 67,
+              "grade": "B",
+              "id": "5fad89b9"
             },
             {
               "name": "크리스탈 샤워 폭포",
               "lng": 152.7297825,
               "lat": -30.3805276,
               "type": "attraction",
-              "distance_km": 70,
+              "distance_km": 5,
               "grade": "A"
             },
             {
@@ -2583,13 +2590,13 @@
     "9": {
       "name": "9조: GC포함 밸런스 (4조 완성형)",
       "color": "#c0392b",
-      "total_km": 2379,
+      "total_km": 2468,
       "score": 59.5,
       "days": [
         {
           "day": 1,
           "date": "5/24",
-          "label": "시드니→골드코스트 (882km)",
+          "label": "시드니→골드코스트 (862km)",
           "day_km": 862,
           "stops": [
             {
@@ -2694,7 +2701,7 @@
           "day": 3,
           "date": "5/26",
           "label": "콥스→도리고→포맥→포트스테판스",
-          "day_km": 440,
+          "day_km": 529,
           "stops": [
             {
               "name": "콥스하버",
@@ -2719,19 +2726,20 @@
               "distance_km": 56
             },
             {
-              "name": "포레스트 스카이 피어",
-              "lng": 153.1095289,
-              "lat": -30.2664777,
+              "name": "도리고 스카이워크",
+              "lng": 152.7296593,
+              "lat": -30.3635196,
               "type": "attraction",
-              "distance_km": 46,
-              "grade": "A"
+              "distance_km": 29,
+              "grade": "B",
+              "id": "5fad89b9"
             },
             {
               "name": "크리스탈 샤워 폭포",
               "lng": 152.7297825,
               "lat": -30.3805276,
               "type": "attraction",
-              "distance_km": 70,
+              "distance_km": 5,
               "grade": "A"
             },
             {
@@ -2739,7 +2747,7 @@
               "lng": 152.7143427,
               "lat": -30.3233022,
               "type": "attraction",
-              "distance_km": 7,
+              "distance_km": 12,
               "grade": "A"
             },
             {
@@ -2747,7 +2755,7 @@
               "lng": 152.067,
               "lat": -32.717,
               "type": "stay",
-              "distance_km": 241
+              "distance_km": 407
             }
           ]
         },

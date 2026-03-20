@@ -6,8 +6,8 @@
 
 구글맵 후보지를 전처리하고, Claude Code가 정보 수집 · 평가 · 일정 생성 · 리뷰를 수행한다.
 
-![Status](https://img.shields.io/badge/Phase_4-일정_생성_중-yellow?style=for-the-badge)
-![Places](https://img.shields.io/badge/관광지-109곳_평가_완료-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Phase_4-6조_확정_(바이런직행+블루마운틴)-green?style=for-the-badge)
+![Places](https://img.shields.io/badge/관광지-110곳_평가_완료-blue?style=for-the-badge)
 ![Duration](https://img.shields.io/badge/기간-9일_(활동_7일)-green?style=for-the-badge)
 
 [**GitHub Pages에서 보기**](https://haechan21.github.io/australia-travel/)
@@ -37,46 +37,68 @@
 │   ├── css/style.scss            #   커스텀 스타일
 │   ├── js/
 │   │   ├── rankings.js           #   랭킹 페이지 인터랙션 (필터, 정렬, 모달)
-│   │   ├── routes.js             #   루트 비교 페이지 인터랙션 (Leaflet.js)
-│   │   └── activities.js         #   액티비티 페이지 인터랙션
+│   │   ├── routes.js             #   루트 비교 페이지 (Leaflet.js 지도)
+│   │   ├── activities.js         #   액티비티 페이지 인터랙션
+│   │   ├── lodging.js            #   숙소 페이지 인터랙션
+│   │   ├── dining.js             #   식당 페이지 인터랙션
+│   │   └── essentials.js         #   여행 준비 가이드 인터랙션
 │   └── data/
-│       ├── place_data.json       #   프론트엔드용 장소 데이터 (자동 생성)
-│       └── route_data.json       #   루트 비교용 경유지·좌표 데이터
+│       └── place_data.json       #   프론트엔드용 장소 데이터 (자동 생성)
 ├── index.md                      # GitHub Pages 메인
 ├── rankings.html                 # 관광지 랭킹 (동적 페이지)
 ├── routes.html                   # 루트 비교 (지도 + 상세 평가)
 ├── activities.html               # 액티비티 후보 페이지
-├── route-plans.html             # 루트 상세 (→ routes.html 리다이렉트)
+├── lodging.html                  # 숙소 후보 페이지
+├── dining.html                   # 식당 후보 페이지
+├── essentials.html               # 여행 준비 가이드
+├── route-plans.html              # 루트 상세 (→ routes.html 리다이렉트)
 ├── CLAUDE.md                     # Claude Code 작업 가이드
 ├── docs/
 │   ├── SPEC.md                   #   기술 설계서 (데이터 스키마, 워크플로우)
-│   ├── CRITIC.md                 #   평가 페르소나 3명 정의 · 채점 가이드라인
+│   ├── CRITIC.md                 #   관광지 평가 페르소나 · 채점 가이드라인
 │   ├── CRITIC_ROUTE.md           #   루트 후보 평가 페르소나 및 기준
+│   ├── CRITIC_LODGING.md         #   숙소 평가 페르소나 및 기준
+│   ├── CRITIC_DINING.md          #   식당 평가 페르소나 및 기준
 │   ├── META.md                   #   여행 전제 조건 (항공, 렌터카, 제약)
 │   ├── ITINERARY.md              #   확정 일정 (Single Source of Truth)
 │   └── TRAVELER_PROFILE.md       #   여행자 프로필 & 선호도
 ├── GoogleMaps/                   # 구글맵 내보내기 원본 (읽기 전용)
 ├── config/
 │   ├── scoring.json              #   카테고리별 평가 기준·가중치
+│   ├── exchange_rate.json        #   환율 SSOT (1 AUD ≈ 1,030원)
 │   └── trip.json                 #   여행 일정 설정
 ├── data/
-│   ├── places/attraction/        #   장소별 상세 JSON (109개)
+│   ├── places/attraction/        #   장소별 상세 JSON (110개)
 │   ├── scores/
 │   │   ├── attraction_scored.json    # 종합 평가 결과
 │   │   ├── scorer_A/B/C.json        # 개별 평가자 결과
 │   │   └── RANKINGS.md              # 랭킹 (정적 마크다운 버전)
+│   ├── routes/
+│   │   ├── route_data.json          # 루트 경유지·좌표·거리 SSOT
+│   │   └── route_geometry.json      # OSRM 경로 geometry
+│   ├── lodging/
+│   │   └── lodging_data.json        # 숙소 데이터 SSOT (77개)
+│   ├── dining/
+│   │   └── dining_data.json         # 식당 데이터 SSOT (126개)
+│   ├── activities/
+│   │   └── activities_data.json     # 액티비티 데이터 SSOT (109개)
 │   └── regions.json              #   좌표 기반 지역 분류 (15개 지역)
 ├── research/
 │   ├── deep-research/            #   외부 AI 딥 리서치
 │   ├── claude-research/          #   Claude Code 직접 조사
+│   │   ├── accommodation/        #     숙소 리서치
 │   │   ├── activities/           #     액티비티 리서치
+│   │   ├── dining/               #     식당 리서치
 │   │   ├── places/               #     지역별 장소 리서치
 │   │   └── weather/              #     지역별 날씨 조사
 │   └── route-plans/              #   9개 루트 후보 상세 일정
 └── scripts/
     ├── parse_googlemaps.py       #   Phase 1: GoogleMaps 전처리
     ├── generate_frontend.py      #   평가 결과 → RANKINGS.md + place_data.json
-    ├── update_route_scores.py    #   루트 파일 점수 정합성 검증/수정
+    ├── sync_engine.py            #   인라인 마커 동기화 엔진
+    ├── sync_route_docs.py        #   루트 MD ↔ route_data.json 동기화
+    ├── sync_data_docs.py         #   숙소/식당/액티비티 종합문서 ↔ JSON 동기화
+    ├── fetch_route_geometry.py   #   OSRM API → 경로 geometry 생성
     └── utils/
         ├── __init__.py
         └── geo.py                #   좌표/거리 계산, 지역 할당
@@ -91,7 +113,7 @@
 | 1. 전처리 | GoogleMaps → 장소 stub + 지역 분류 + 중복 탐지 | ✅ |
 | 2. 정보 수집 | 웹검색으로 리뷰·운영정보 수집 | ✅ |
 | 3. 평가/등급 | 3명 페르소나 독립 평가 → 퍼센타일 등급 (S~D) | ✅ |
-| 4. 일정 생성 | 등급·지리·제약 기반 일정 구성 | 🔄 |
+| 4. 일정 생성 | 등급·지리·제약 기반 일정 구성 | ✅ |
 | 5. 일정 리뷰 | 확정 일정 비판적 검토 | ⬜ |
 
 ### 평가 시스템
@@ -123,9 +145,16 @@ python scripts/generate_frontend.py --rescore  # 등급 재계산만
 python scripts/generate_frontend.py --rank     # RANKINGS.md만
 python scripts/generate_frontend.py --data     # place_data.json만
 
-# 루트 파일 점수 정합성 검증/수정
-python scripts/update_route_scores.py            # 불일치 리포트만 (dry-run)
-python scripts/update_route_scores.py --fix      # 실제 수정
+# 인라인 마커 기반 데이터 동기화 (SSOT → 루트 MD + README + route_data.json)
+python scripts/sync_route_docs.py              # dry-run: 불일치 리포트
+python scripts/sync_route_docs.py --fix        # 마커 값 교체 + route_data.json 자동 정합
+
+# 숙소/식당/액티비티 종합 문서 ↔ data/ JSON 동기화
+python scripts/sync_data_docs.py              # dry-run: 불일치 리포트
+python scripts/sync_data_docs.py --fix        # 마커 값 교체
+
+# 루트 도로 geometry 생성 (OSRM API)
+python scripts/fetch_route_geometry.py        # data/routes/route_geometry.json 생성
 ```
 
 Python 3.11+ 표준 라이브러리만 사용. 외부 의존성 없음.
