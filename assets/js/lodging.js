@@ -178,146 +178,7 @@
   /* ══════════════════════════════════════════
      데이터 (변경 금지)
      ══════════════════════════════════════════ */
-  var STOPS = [
-    {
-      id: 'byron-bay', name: '바이런베이', day: 'Day 1', date: '5/24(일)',
-      role: 'transit', roleLabel: '이동일 숙소',
-      center: [-28.6474, 153.6020],
-      budget: '$150~420', nights: 1,
-      summary: '783km 운전 후 20:30 도착. 뷰는 즐길 시간 없음(9.5시간 체류, 대부분 수면). 셀프체크인 + 보안주차가 핵심.',
-      budgetPick: { economy: { name: 'The Lord Byron', price: 150 }, balance: { name: 'Waves Byron Bay', price: 220 }, premium: { name: 'Hotel Marvell', price: 350 } },
-      lodgings: [
-        { rank: 1, name: 'Waves Byron Bay', type: '부티크호텔 20실', price: '$180~250', couple: '9.7', score: '81.7', parking: '무료 지하 보안', checkin: '사전연락', view: '일부 오션뷰', tags: ['parking', 'breakfast'], pros: '무료 지하 보안주차, 커플 평점 최고(9.7), 무료 조식', cons: '셀프체크인 없음(사전연락 필수)', platforms: 'Booking $200~350 / KAYAK $136~', note: '기본평가 1위(81.7). 보안주차+조식이 이동일에 핵심 가치' },
-        { rank: 0, name: 'The Bower Byron Bay', type: '프리미엄 게스트하우스', price: '$186~300', couple: '—', score: '81.0', parking: '무료', checkin: '셀프(Key Safe)', view: '가든', tags: ['selfcheckin', 'pool'], pros: 'Booking 9.5(642건), Key Safe 셀프체크인, 가열풀+정원', cons: '주차 공간 제한(사전 요청)', platforms: 'Booking $186~300', note: '투자평가 1위(81.0). 셀프체크인이 20:30 도착에 가장 확실' },
-        { rank: 0, name: 'Hotel Marvell', type: '5성 부티크 24실', price: '$279~420', couple: '—', score: '81.2', parking: '무료 지하', checkin: '24시간 프론트', view: '루프탑 뷰', tags: ['pool', 'parking', 'breakfast'], pros: '루프탑 히팅풀+바, 무료 지하주차, 조식 포함, 24시간 프론트', cons: '예산 초과($300+), 이동일 1박에 시설 활용 제한', platforms: 'Booking $279~420', note: '투자평가 2위(81.2). 일정 조정(17:00 도착)하면 루프탑 경험 가능' },
-        { rank: 4, name: 'The Lord Byron', type: '리조트 29실', price: '$120~200', couple: '9.4', score: '76.5', parking: '무료(건물앞)', checkin: '확인 필요', view: '가든/풀뷰', tags: ['pool'], pros: 'TA 바이런 2위, 체크아웃 12시, 무료 자전거/서핑보드, 가성비 압도적', cons: '늦은 체크인 미확인(예약 전 문의)', platforms: 'KAYAK $138~ / Wotif $308~', note: '기본평가 2위(76.5). A\'\' 가성비 84.0(전체 1위)' },
-        { rank: 5, name: 'Atlantic Byron Bay', type: '부티크 게스트하우스', price: '$200~300', couple: '9.6', score: '73.2', parking: '무료(혼잡)', checkin: '사전연락', view: '가든뷰', tags: ['pool'], pros: '부티크 감성 최고, 열대 정원+랩풀+벽난로 라운지', cons: '주차 혼잡(늦은 도착 시 자리 없을 수 있음)', platforms: 'Booking $225~350 / KAYAK $171~', note: '이동일 보정 시 감성 가치 크게 감소(논쟁, 편차 23.5)' },
-        { rank: 6, name: 'Bay Motel', type: '모텔 4성', price: '$150~200', couple: '9.5', score: '70.0', parking: '무료(노상)', checkin: '셀프 키 수령', view: '오션뷰(발코니)', tags: ['selfcheckin', 'view'], pros: '셀프 키 수령(20:30 최적), 메인비치 맞은편, 발코니 오션뷰', cons: '주차 보안 아님, 하층 곰팡이 리뷰(상층 지정 필수)', platforms: 'Booking $150~250 / KAYAK $106~', note: '기본평가 4위(70.0). 셀프체크인은 확실하나 곰팡이 리스크' },
-        { rank: 7, name: 'Byron Bay Hotel & Apartments', type: '풀키친 아파트', price: '$175~250', couple: '9.4', score: '66.0', parking: '무료 언더커버', checkin: '사전연락(~20시)', view: '풀/가든뷰', tags: ['kitchen'], pros: '풀 키친+세탁기+수영장, 언더커버 파킹, 위치 9.4', cons: '셀프체크인 미확인(20:30 도착 시 리셉션 마감), 시설 노후("TLC 필요")', platforms: 'Booking $175~250 / Travelocity $175~', note: '기본평가 5위(66.0). 논쟁(편차 15.5) — B\'\' 감성 부재(57.5)로 평가 분산' },
-        { rank: 8, name: 'Hibiscus Motel', type: '모텔', price: '$120~160', couple: '9.2', score: '51.2', parking: '무료(좁음)', checkin: '옆건물 키수령', view: '없음', tags: ['kitchen'], pros: '최저가($120~), 키친넷, 메인비치 도보 3분', cons: '뷰 없음, 18시 이후 옆건물 키 수령 불편', platforms: 'KAYAK $113~', note: '비추. 늦은 체크인 대응 부족' },
-        { rank: 0, name: '28 Degrees Byron Bay', type: '럭셔리 게스트하우스(Adults Only)', price: '$337~441', couple: '9.4', score: '77.2', parking: '무료', checkin: '미확인', view: '등대뷰+플런지풀', tags: ['pool', 'view'], pros: 'Adults Only, 프라이빗 플런지풀(야간 이용!), 등대뷰 발코니, Sealy 킹베드, 무료 미니바', cons: '늦은 도착 정책 미확인, 리뷰 162건, $400+', platforms: 'Booking 9.4(162건) / TA B&B 2위', note: '투자평가(77.2, A\'\' 71.0 / B\'\' 89.5 / C\'\' 71.0). 별 아래 플런지풀은 이동일에도 경험 가능' },
-        { rank: 0, name: 'Swell Hotel Byron', type: '5성 부티크 16실(Adults Only)', price: '$339~403', couple: '—', score: '72.7', parking: '무료(선착순)', checkin: '미확인', view: '70년대 감성 인테리어', tags: ['pool'], pros: '핑크 마블 마그네슘풀, 적외선 사우나+아이스배스, 무료 자전거, Adults Only, 바디 리커버리 최적', cons: '체크인 미확인, 리뷰 177건, 등대 차 10분', platforms: 'Booking(177건)', note: '투자평가(72.7, A\'\' 66.5 / B\'\' 86.0 / C\'\' 65.5). 웰니스 경험은 이동일에 실용적' },
-        { rank: 0, name: 'Elements of Byron', type: '5성 에코리조트 202빌라', price: '$400~680', couple: '9.4', score: '65.8', parking: '무료', checkin: '15:00', view: '비치프론트 4개 생태계', tags: ['fireplace', 'pool'], pros: '50에이커 비치프론트, 벽난로+프라이빗 바스하우스 빌라, 비치클럽, 파이어핏', cons: '등대 차 12분, 셔틀 17:30 마감, 1박에 과잉', platforms: 'Booking 커플 9.4', note: '투자평가(65.8, A\'\' 60.5 / B\'\' 84.5 / C\'\' 52.5). 비추. 이동일 1박에 부적합' },
-        { rank: 0, name: 'Crystalbrook Byron', type: '5성 레인포레스트 리조트 92스위트', price: '$214~350', couple: '9.4', score: '61.7', parking: '무료', checkin: '15:00', view: '레인포레스트 트리탑', tags: ['pool'], pros: '18ha 열대우림, 인피니티풀+카바나, Eleme Day Spa, 무료 요가', cons: '등대 차 12분, 타운 차 10분, 서비스 하락 트렌드, 청결 이슈', platforms: 'Booking 커플 9.4', note: '투자평가(61.7, A\'\' 59.5 / B\'\' 77.0 / C\'\' 48.5). 비추' }
-      ]
-    },
-    {
-      id: 'coffs-harbour', name: '콥스하버', day: 'Day 2', date: '5/25(월)',
-      role: 'budget', roleLabel: '일반 가성비',
-      center: [-30.2963, 153.1135],
-      budget: '$100~222', nights: 1,
-      summary: '오후 도착, Jetty Strip 저녁 식사 후 휴식. Jetty Strip 도보권 + 가성비+청결이 핵심.',
-      budgetPick: { economy: { name: 'Bosuns Inn', price: 100 }, balance: { name: 'Caribbean Motel', price: 150 }, premium: { name: 'The Observatory', price: 200 } },
-      lodgings: [
-        { rank: 0, name: 'The Observatory', type: '아파트 4성', price: '$177~222', couple: '—', score: '75.2', parking: '무료(넉넉)', checkin: '셀프', view: '하버 파노라마', tags: ['view', 'kitchen'], pros: 'Jetty Strip 도보 5분, 하버 파노라마 뷰, 넓은 아파트, 무료 주차 넉넉', cons: '가격 +$50 추가 투자 필요', platforms: 'Booking ~$200', note: '투자평가 1위(75.2). +$50으로 하버 뷰+넓은 공간 업그레이드' },
-        { rank: 2, name: 'Caribbean Motel', type: '모텔 3.5성', price: '$128~175', couple: '9.2', score: '74.3', parking: '무료(좁음)', checkin: '사전연락', view: 'Seaview 발코니', tags: ['view', 'reno'], pros: '전 객실 리노, Jetty Strip 100m 도보, Seaview 발코니, 3명 합의 유일', cons: '주차 좁음(SUV 주의)', platforms: 'Booking ~$135', note: '기본평가 1위(74.3). 3명 모두 70점대 달성한 유일한 숙소' },
-        { rank: 3, name: 'Beachpark Apartments', type: '아파트 3.5성', price: '$120~160', couple: '8.7', score: '68.3', parking: '무료 언더커버', checkin: '14:00', view: '풀뷰(해변 50m)', tags: ['kitchen', 'parking'], pros: '해변 50m, 언더커버 주차, 풀키친+발코니', cons: '리셉션 운영시간 확인 필요', platforms: 'Booking ~$130', note: '기본평가 2위(68.3). 해변+키친 원하면 CBD보다 우위' },
-        { rank: 4, name: 'CBD Motor Inn', type: '모텔 3.5성', price: '$120~180', couple: '8.7', score: '66.7', parking: '무료(대형차 OK)', checkin: '사전연락', view: '없음', tags: ['reno'], pros: '2018 전면 리노, TA 1위, CBD 입지(저녁 식사 도보)', cons: '해변까지 차 5분, 도로 소음, B\'\' 47.0 감성 부재', platforms: 'Booking ~$150 / KAYAK $104~', note: '논쟁(편차 33.5). C\'\' 실용 80.5(1위)이나 B\'\' 감성 47.0' },
-        { rank: 5, name: 'Bosuns Inn Motel', type: '모텔 3성', price: '$90~130', couple: '9.3', score: '63.8', parking: '무료(높이제한)', checkin: '14:00', view: 'Park Beach 맞은편', tags: [], pros: '커플 평점 최고(9.3), Park Beach 맞은편, 초가성비', cons: '시설 노후, 주차 높이제한 2.1m', platforms: 'Booking ~$100 / KAYAK $101~', note: '가성비 챔피언이나 Jetty Strip 멀어 저녁 동선 불편' },
-        { rank: 6, name: 'Park Beach Resort Motel', type: '모텔(오너 직영)', price: '$100~140', couple: '—', score: '65.2', parking: '무료+EV충전', checkin: '프론트', view: '없음', tags: ['kitchen'], pros: '오너 친절 반복 호평, 키친넷, 수영장+테니스, EV충전', cons: '식당가까지 차 필요, 특출난 장점 없음', platforms: 'Booking(722건)', note: '기본평가 4위(65.2). 가능' },
-        { rank: 7, name: 'Pacific Palms Motel', type: '모텔(15실 전실 1층)', price: '$100~140', couple: '9.0', score: '61.8', parking: '무료 언더커버', checkin: '14:00', view: '없음', tags: ['parking'], pros: '2025 "exceeded expectations", 무료 언더커버 주차(콥스 최상급), 전실 1층, 소음 없음', cons: '시내 도보 15분, 뷰/수영장/조식 없음', platforms: 'Booking 커플 9.0(300건+)', note: '기본평가 6위(61.8). 논쟁(편차 34.5). C\'\' 주차 강점' },
-        { rank: 8, name: 'Royal Palms Motor Inn', type: '모텔', price: '$85~120', couple: '—', score: '58.0', parking: '무료(부족)', checkin: '프론트', view: '없음', tags: [], pros: '최저가($85~), 리뷰 1540건, 수영장+BBQ', cons: '주차 부족 반복, 욕실 노후, TA 3.5/5', platforms: 'TA 3.5/5(1540건)', note: '기본평가 7위(58.0). 가능' },
-        { rank: 9, name: 'Aquajet Motel', type: '모텔', price: '$80~110', couple: '8.7', score: '57.5', parking: '무료(매우 좁음)', checkin: '프론트', view: '없음', tags: ['kitchen'], pros: '최저가($80~), 키친넷+솔트워터풀+BBQ', cons: '주차 매우 좁음, 객실 편차, 온수 느림', platforms: 'Booking 8.0(300건+)', note: '기본평가 8위(57.5). 가능' },
-        { rank: 10, name: 'Coastal Bay Motel', type: '모텔(리노)', price: '$95~130', couple: '—', score: '53.0', parking: '무료(좁음)', checkin: '프론트', view: '없음', tags: [], pros: '최근 리노, $95~130 저렴', cons: '경영진 교체 후 부정 리뷰 급증(예약취소, 곰팡이)', platforms: 'TA 4.2/5(373건)', note: '비추(53.0). 신뢰도 하락' },
-        { rank: 11, name: 'Sanctuary Resort Motor Inn', type: '모텔/리조트', price: '$85~140', couple: '—', score: '51.8', parking: '무료(대형)', checkin: '프론트', view: '가든뷰 일부', tags: [], pros: '대형 주차장(콥스 최고), 워터슬라이드, 레스토랑', cons: 'TA 3.0/5(최하위권), 시내 접근성 나쁨, 객실 편차', platforms: 'TA 3.0/5 / HC 7.4(1842건)', note: '비추(51.8)' },
-        { rank: 0, name: 'Smugglers on the Beach', type: '비치프론트 아파트', price: '$180~250', couple: '—', score: '74.5', parking: '무료', checkin: '셀프', view: '비치프론트', tags: ['view', 'kitchen'], pros: '해변 바로 앞! 풀키친, 셀프체크인, B\'\' 83.0(감성 1위)', cons: '시설 노후(2000년대 건축), Jetty Strip 차 5분', platforms: 'Booking / Wotif', note: '투자평가 2위(74.5, A\'\' 70.5 / B\'\' 83.0 / C\'\' 70.0). 비치 감성이면 Observatory보다 우선' },
-        { rank: 0, name: 'Sensom at Sapphire', type: '럭셔리 B&B 5성(Adults Only)', price: '$300~400', couple: '9.5', score: '64.5', parking: '무료', checkin: '호스트 직접', view: '6에이커 트로피컬 가든', tags: ['breakfast'], pros: '커플 9.5, 무료 고메 조식, 솔트워터풀+해먹, Adults Only, 호스트 환대', cons: '예산 초과($300+), Jetty Strip 10분, 오션뷰 아님', platforms: 'Booking 커플 9.5', note: '투자평가(64.5, A\'\' 56.0 / B\'\' 76.0 / C\'\' 61.5). 예산 초과' },
-        { rank: 0, name: 'BreakFree Aanuka Beach Resort', type: '비치리조트 4성(Accor)', price: '$180~250', couple: '8.9', score: '64.3', parking: '무료', checkin: '프론트', view: 'Diggers Beach 비치프론트', tags: ['pool'], pros: 'Diggers Beach 비치프론트, Paradise Spa Bure, 4개 수영장', cons: 'Jetty Strip 차 5분, 대형 리조트 감성 부족, 일부 노후', platforms: 'Booking 커플 8.9', note: '투자평가(64.3, A\'\' 63.0 / B\'\' 70.5 / C\'\' 59.5). 가능' },
-        { rank: 0, name: 'Aqualuna Beach Resort', type: '비치리조트 아파트 4.5성', price: '$200~300', couple: '—', score: '59.3', parking: '무료', checkin: '미확인', view: 'Sapphire Beach 오션뷰', tags: ['view'], pros: 'Sapphire Beach 직접 접근, 드라마틱 오션뷰', cons: 'Jetty Strip 15분, 리뷰 데이터 극히 부족', platforms: '데이터 부족', note: '투자평가(59.3). 데이터 부족. 추천 불가' },
-        { rank: 0, name: 'Pacific Bay Resort', type: '리조트 4성(Accor)', price: '$200~280', couple: '—', score: '54.0', parking: '무료', checkin: '24시간 프론트', view: '라군/가든', tags: ['pool'], pros: '풀서비스 리조트, 9홀 골프, 3개 수영장, 24시간 프론트', cons: '객실 노후 심각, Jetty Strip 10분, 가성비 최악', platforms: 'Booking(3239건) / TA 4/5', note: '비추(54.0). 노후 심각' }
-      ]
-    },
-    {
-      id: 'port-macquarie', name: '포트맥쿼리', day: 'Day 3', date: '5/26(화)',
-      role: 'budget', roleLabel: '일반 가성비',
-      center: [-31.4333, 152.9000],
-      budget: '$90~230', nights: 1,
-      summary: '화요일 비수기 최저가. Tacking Point 일몰 후 저녁 식사, 다음날 250km 이동.',
-      budgetPick: { economy: { name: 'Surf Beach Motel', price: 110 }, balance: { name: 'Macquarie Waters', price: 210 }, premium: { name: 'Macquarie Waters', price: 230 } },
-      lodgings: [
-        { rank: 0, name: 'Macquarie Waters', type: '부티크 아파트호텔', price: '$189~230', couple: '9.4', score: '81.5', parking: '무료 보안', checkin: '14:00', view: '루프탑 오션뷰', tags: ['view', 'pool'], pros: '루프탑 오션뷰 핫텁(커플 최적!), CBD 도보, 무료 보안주차, 3명 논쟁 없음(편차 2.5)', cons: '일부 하층 객실 뷰 제한', platforms: 'Booking $189~230', note: '투자평가 1위(81.5). Mid Pacific 대비 +$15로 6점 상승! 변경 강력 권장' },
-        { rank: 0, name: 'Sandcastle Apartments', type: '서비스드아파트 4성', price: '$200~280', couple: '—', score: '78.3', parking: '무료', checkin: '셀프', view: '180도 오션뷰', tags: ['view', 'kitchen'], pros: '180도 오션뷰, Town Beach 맞은편, 풀키친+세탁, TA #2/33', cons: '2BR 최소(1인당 비용은 저렴), 건물 외관 구형', platforms: 'Booking / KAYAK', note: '투자평가 2위(78.3). 오션뷰+풀키친 조합이 커플에게 매력적' },
-        { rank: 3, name: 'The Mid Pacific', type: '부티크모텔 4성', price: '$155~206', couple: '9.7', score: '75.7', parking: '무료+EV', checkin: '14:00', view: '리버뷰', tags: ['view', 'pool'], pros: '커플 평점 압도적(9.7, 4207건), 리버뷰+솔트워터풀+스파+무료자전거', cons: '비치프론트 아님(리버뷰), 곰팡이 간헐 리뷰', platforms: 'Booking ~$200 / KAYAK $155~', note: '기본평가 1위(75.7). B\'\' 77.0으로 감성도 충족하는 유일한 숙소' },
-        { rank: 4, name: 'El Motor Inn', type: '모텔 3.5성(리노 완료)', price: '$121~230', couple: '9.5', score: '69.5', parking: '무료(1실1대)', checkin: '프론트', view: '없음', tags: ['pool', 'reno'], pros: '리노 완료, Booking 8.6(2740건), 위치 9.6, 온수풀+BBQ데크+카페', cons: '뷰 전무(B\'\' 54.0), 주차 tight', platforms: 'Booking ~$200 / KAYAK $121~', note: '기본평가 2위(69.5). A\'\'+C\'\' 양강(77.0/77.5)이나 B\'\' 감성 부재' },
-        { rank: 5, name: 'Palm Court Motor Inn', type: '모텔 3.5성(2023 리노)', price: '$99~278', couple: '9.1', score: '68.7', parking: '무료(높이제한)', checkin: '프론트', view: '리버뷰 발코니', tags: ['view', 'reno'], pros: '2023 전면 리노, 리버뷰 발코니, Town Beach 도보 5분', cons: '지하주차 높이185cm+매우 좁음, TA #23/33', platforms: 'KAYAK $109~', note: '기본평가 3위(68.7). 논쟁 없는 안정적 차선(편차 4.5)' },
-        { rank: 6, name: 'Surf Beach Motel', type: '부티크모텔(리노)', price: '$90~140', couple: '8.7', score: '66.2', parking: '무료(문앞)', checkin: '프론트', view: '없음', tags: ['kitchen'], pros: '극강 가성비($90~), 전면 리노 완료, 문앞 주차, 키친넷', cons: '수영장/BBQ 없음, 방음 취약, 뷰 없음', platforms: 'KAYAK $85~ / Momondo $81~', note: '"잠만 자는 용도"에 최적. A\'\' 77.5(공동1위)' },
-        { rank: 0, name: 'Ana Mandara Luxury Retreat', type: '럭셔리 B&B 5성(Adults Only, 4룸)', price: '$280~350', couple: '9.6', score: '72.3', parking: '무료', checkin: '호스트 직접', view: '리버뷰+프라이빗 스파바스', tags: ['view', 'breakfast'], pros: 'TA 호주 No.1 B&B! 4룸만, 프라이빗 스파바스, 무료 풀 브렉퍼스트, 커플 9.6', cons: '예산 초과($280~350), 시내 15분, 조식 활용 제한', platforms: 'Booking 9.4 / TA 호주 B&B 1위', note: '투자평가(72.3, A\'\' 62.5 / B\'\' 87.5 / C\'\' 67.0). 감성 극대이나 예산 초과' },
-        { rank: 0, name: 'Flynns Beach Resort', type: '리조트 아파트 4성', price: '$133~180', couple: '8.7', score: '67.5', parking: '무료', checkin: '프론트', view: '풀/가든뷰', tags: ['pool'], pros: '2히티드풀+스파+사우나+테니스, Flynns Beach 도보 2분, $133~180 가성비', cons: '시내에서 3km, 오션뷰 아님, 커플 8.7', platforms: 'Booking 커플 8.7', note: '투자평가(67.5, A\'\' 70.5 / B\'\' 63.5 / C\'\' 68.5). 가능' },
-        { rank: 0, name: 'Sails Port Macquarie by Rydges', type: '워터프론트 호텔 4.5성', price: '$215~295', couple: '9.0', score: '57.2', parking: '유료 $15/일', checkin: '24시간 프론트', view: '마리나 워터프론트', tags: ['view', 'pool'], pros: '마리나 워터프론트, 히티드풀+카바나, 무료 카약, 24시간 프론트', cons: '유료 주차 $15/일, 시내 10분, 음식/청결 불만', platforms: 'TA #10/34 / Booking(2188건)', note: '비추(57.2, A\'\' 55.0 / B\'\' 74.0 / C\'\' 42.5). 유료 주차 원칙 위배' },
-        { rank: 7, name: 'East Port Motor Inn', type: '모텔', price: '$143~230', couple: '8.4', score: '67.5', parking: '무료(넉넉)', checkin: '프론트', view: '없음', tags: [], pros: 'TA 4.5/5 #5/40, 청결 일관, 17년 재방문 단골, 무료 드링크+게임룸', cons: '커플 8.4(최저), 뷰 없음, 해변 10분', platforms: 'Booking 8.3(2194건) / TA #5/40', note: '기본평가 4위(67.5). 논쟁(편차 22.0). 청결 최고+뷰 전무' },
-        { rank: 8, name: 'Port Aloha Motel', type: '모텔 3성(2012 리노)', price: '$85~130', couple: '—', score: '67.2', parking: '무료(넉넉)', checkin: '프론트', view: '없음', tags: ['kitchen'], pros: '시내 도보 2분+해변 5분, 주차 리스크 0, $85~130 극강 가성비, 수영장+BBQ+키친넷', cons: '2012 리노 후 13년 경과, 직원 무례 간헐', platforms: 'Booking 8.0(1151건)', note: '기본평가 5위(67.2). 극강 가성비 vs 감성 전무' },
-        { rank: 9, name: 'Aston Hill Motor Lodge', type: '모텔(대규모 리노)', price: '$130~180', couple: '8.1', score: '66.8', parking: '무료+지붕', checkin: '프론트', view: '공원/가든뷰', tags: ['reno'], pros: '최근 대규모 리노, Google 4.5/5, 수영장+BBQ', cons: '외곽(도보 불가), 커플 8.1', platforms: 'TA #8/34 / Google 4.5/5', note: '기본평가 6위(66.8)' },
-        { rank: 10, name: 'ibis Styles Port Macquarie', type: '체인호텔 3.5성', price: '$101~170', couple: '9.2', score: '61.3', parking: '무료(만차 반복)', checkin: '프론트', view: 'Town Beach 맞은편', tags: ['view'], pros: 'Town Beach 맞은편(위치 최고), 시내 중심', cons: 'Booking 7.9(하락), 카펫 오래됨, 엘리베이터 없음, 주차 만차', platforms: 'Booking 7.9(2494건)', note: '기본평가 8위(61.3). 위치 외 장점 없음' },
-        { rank: 11, name: 'Macquarie Barracks Motor Inn', type: '모텔(2007 리노)', price: '$110~160', couple: '8.2', score: '50.0', parking: '무료', checkin: '프론트', view: '없음', tags: [], pros: '$110~160 합리적', cons: '2007 리노 후 18년 경과, 샤워 문제 반복, 곰팡이, 카펫 얼룩', platforms: 'Booking 8.0(823건)', note: '비추(50.0)' }
-      ]
-    },
-    {
-      id: 'nelson-bay', name: '넬슨베이', day: 'Day 4', date: '5/27(수)',
-      role: 'view', roleLabel: '뷰 가능',
-      center: [-32.7233, 152.1441],
-      budget: '$140~250', nights: 1,
-      summary: '정오 도착으로 시설 활용 시간 가장 많음(~20시간). 2025 리노 직후 Marina Resort이 압도적. "넬슨베이에서는 위치가 럭셔리."',
-      budgetPick: { economy: { name: 'Hotel Nelson', price: 160 }, balance: { name: 'Marina Resort', price: 200 }, premium: { name: 'Marina Resort', price: 250 } },
-      lodgings: [
-        { rank: 1, name: 'Marina Resort', type: '부티크리조트 4성', price: '$180~250', couple: '9.6', score: '79.3', parking: '무료 CCTV 보안', checkin: '14:00', view: '마리나+베이 파노라마', tags: ['view', 'parking', 'reno'], pros: '2025 전면 리노(Stella Collective 디자인), 마리나뷰 발코니, CCTV 보안주차', cons: '키친넷 없음, 조식 별도', platforms: 'Booking $177~ / KAYAK $110~', note: '기본평가 1위(79.3, A\'\' 75.0 / B\'\' 80.0 / C\'\' 83.0). 리노 직후=신축 수준' },
-        { rank: 0, name: 'Marina Resort', track: 'invest', type: '부티크리조트 4성', price: '$180~250', couple: '9.6', score: '83.2', parking: '무료 CCTV 보안', checkin: '14:00', view: '마리나+베이 파노라마', tags: ['view', 'parking', 'reno'], pros: '$350 예산 프레임에서 재채점 — 3명 만장일치(편차 6.0), 마리나뷰 발코니', cons: '키친넷 없음, 조식 별도', platforms: 'Booking $177~ / KAYAK $110~', note: '투자평가 1위(83.2, A\'\' 83.5 / B\'\' 80.0 / C\'\' 86.0). $350까지 올려도 이길 후보 없음' },
-        { rank: 0, name: 'Bannisters Port Stephens', type: '부티크 리조트', price: '$235~320', couple: '—', score: '64.3', parking: '무료', checkin: '15:00', view: '부시/마리나 뷰', tags: ['pool'], pros: 'Rick Stein 레스토랑, 인피니티풀, 디자인 리조트', cons: '넬슨베이 시내 차 15분(동선 비효율), 예산 초과', platforms: 'Booking / KAYAK', note: '투자평가(64.3, A\'\' 58.5 / B\'\' 80.0 / C\'\' 54.5). Marina Resort 대비 열위' },
-        { rank: 0, name: 'Anchorage Garden Room', track: 'invest', type: '럭셔리 부티크 5성', price: '$200~280', couple: '9.6', score: '67.5', parking: '무료', checkin: '15:00', view: '없음(정원)', tags: ['pool'], pros: '성인전용 인피니티풀+Spa Lucca, 커플 9.6, 럭셔리 시설', cons: '객실 뷰 없음, 시내 차 7분', platforms: 'Booking / KAYAK $173~', note: '투자평가(67.5, A\'\' 63.5 / B\'\' 75.5 / C\'\' 63.5). 뷰 없는 방에 $200+' },
-        { rank: 0, name: 'Wanderers Retreat Treehouse', track: 'invest', type: '에코 트리하우스', price: '$250~360', couple: '9.7', score: '54.5', parking: '무료', checkin: '확인 필요', view: '멜라루카 우림 캐노피', tags: ['pool'], pros: '커플 9.7(넬슨베이 최고), 트리하우스+더블스파+웰컴와인, 코알라 관찰', cons: '청결 양극화(바퀴벌레/곰팡이), 시내 차 10분', platforms: 'Booking 8.8', note: '투자평가(54.5, A\'\' 48.0 / B\'\' 77.5 / C\'\' 38.0). 가능(조건부). 논쟁(편차 39.5)' },
-        { rank: 2, name: 'Hotel Nelson', type: '모텔/소형호텔 3.5성', price: '$140~200', couple: '9.6', score: '72.2', parking: '무료', checkin: '14:00', view: '없음(정원)', tags: ['kitchen'], pros: '커플 9.6, 마리나 2분, 키친넷, A\'\'+C\'\' 양 축 1위(81.5+85.0)', cons: '뷰 없음, B\'\' 감성 50.0', platforms: 'Wotif $193~', note: '가성비 전략 시 최적. Marina 대비 $40 절약' },
-        { rank: 3, name: 'Anchorage Hotel & Spa', type: '5성 럭셔리(코를렛)', price: '$250~400', couple: '9.6', score: '68.7', parking: '무료', checkin: '15:00', view: '워터뷰(대부분)', tags: ['view', 'pool'], pros: '성인전용 인피니티풀, B\'\' 단독 1위(85.0), Spa Lucca', cons: '넬슨베이 시내 차 7분(동선 비효율), 예산 초과', platforms: 'KAYAK $173~ / Wotif $314~', note: '투자 옵션이나 외곽 위치가 감점. 시내 식당/오이스터팜 동선 불리' },
-        { rank: 4, name: 'Oaks Lure Suites', type: '서비스드아파트 4성', price: '$160~220', couple: '9.0', score: '62.0', parking: '무료', checkin: '14:00', view: '베이뷰(Bay View룸)', tags: ['view', 'kitchen'], pros: '풀키친+세탁, Bay View 가성비, 마리나 도보 3분', cons: 'TA 4.0/5, 유닛 편차 큼', platforms: 'TripAdvisor $152~ / Wotif $189~', note: '' },
-        { rank: 5, name: 'Port Stephens Motel', type: '모텔 3성', price: '$120~180', couple: '—', score: '61.3', parking: '무료 언더커버', checkin: '14:00', view: '없음(열대 정원)', tags: ['parking', 'kitchen'], pros: '최저가, 지붕주차(넬슨베이 유일), 오너 친절, 워터프론트 1분', cons: '뷰 없음, B\'\' 38.5 감성 최저, 리뷰 적음(386건)', platforms: 'Booking 8.2(386건)', note: '기본평가 5위(61.3). 논쟁(편차 36.0). 초가성비+지붕주차' },
-        { rank: 6, name: 'Landmark Nelson Bay', type: '서비스드아파트 4성', price: '$150~220', couple: '9.1', score: '57.2', parking: '무료(넉넉)', checkin: '14:00', view: '일부 워터뷰', tags: ['kitchen', 'pool'], pros: '온사이트 레스토랑, 주차 넉넉, 키친넷', cons: '시내 도보 15분, 구형 유닛', platforms: 'Wotif $191~ / KAYAK $109~', note: '' }
-      ]
-    },
-    {
-      id: 'blue-mountains', name: '블루마운틴', day: 'Day 5', date: '5/28(목)',
-      role: 'invest', roleLabel: '투자 숙소',
-      center: [-33.7321, 150.3116],
-      budget: '$200~400', nights: 1,
-      summary: '여행의 클라이맥스. 에코포인트 석양(17:15) 후 감성 마무리. 밸리 뷰 vs 벽난로 트레이드오프. Autumn Extras 프로모 활용.',
-      budgetPick: { economy: { name: 'Montblu + Echoes디너', price: 200 }, balance: { name: 'Echoes Deluxe View', price: 300 }, premium: { name: 'Echoes Superior Cliff', price: 500 } },
-      lodgings: [
-        { rank: 1, name: 'Echoes Boutique Hotel', type: '성인전용 부티크 14실', price: '$200~380', couple: '9.8', score: '80.3', parking: '무료', checkin: '15:00(Autumn 12:00)', view: '제임슨밸리 파노라마(최상)', tags: ['view'], pros: 'BM 최고 밸리 뷰(대체 불가), B\'\' 88.0(최고), 에코포인트 도보 7분, Autumn 조기체크인 12시', cons: '벽난로 없음(언더플로어 히팅), 청결 불만 간헐적', platforms: 'Booking $196~594 / KAYAK ~', note: 'CRITIC 평가 1위(80.3). 밸리뷰 디너+도보 동선이 대체 불가' },
-        { rank: 0, name: 'Falls Mountain Retreat', type: '부티크 코티지', price: '$224~380', couple: '9.4', score: '75.7', parking: '무료', checkin: '15:00', view: '부시/가든뷰', tags: ['fireplace', 'pool'], pros: '전실 가스 벽난로 보장! 2인 하이드로테라피 스파바스, Echo Point 10분', cons: '밸리 뷰 없음, 블랙히스/카툼바 사이', platforms: 'Booking $224~380', note: '투자평가 1위(75.7). 벽난로 우선이면 Parklands(67.7) 대체, Echo Point 더 가까움' },
-        { rank: 3, name: 'Montblu at Echo Point', type: '셀프컨테인드 빌라 2BR', price: '$150~200', couple: '—', score: '74.3', parking: '무료 지붕', checkin: '셀프', view: '부분 밸리뷰', tags: ['kitchen', 'selfcheckin'], pros: 'Three Sisters 도보 2분! 풀키친, 넓은 2BR, 가성비 최고', cons: '전기식 벽난로, 호텔 서비스 없음', platforms: 'Booking $128~260', note: '전략적: 숙소비 절약($150) + Echoes 디너($190/2인)로 뷰 확보' },
-        { rank: 4, name: 'The Carrington Hotel', type: '헤리티지(1882년) 65실', price: '$164~300', couple: '9.5', score: '73.8', parking: '무료', checkin: '14:00', view: '없음(산/타운)', tags: ['breakfast'], pros: '커플 9.5, 140년 빅토리안 건축, 무료 조식, 역사 감성', cons: '밸리 뷰 없음, 객실 내 벽난로 없음', platforms: 'Booking $164~300', note: '' },
-        { rank: 5, name: 'Lilianfels (Ardour)', type: '5성 리조트 85실', price: '$169~300', couple: '—', score: '73.7', parking: '무료(지상+지하)', checkin: '15:00', view: '리조트뷰(일부 밸리)', tags: ['fireplace', 'pool'], pros: 'Resort View Studio 가스 벽난로, 에코포인트 250m, 스파, 5성 서비스', cons: '리노 직후(5월) 초기 운영 혼선 리스크', platforms: 'Booking $169~550+', note: '벽난로+5성 예산내 가능. 리노 직후 리스크 감안' },
-        { rank: 6, name: 'Parklands Country Gardens', type: '코티지/로지(블랙히스)', price: '$226~350', couple: '9.3', score: '67.7', parking: '무료', checkin: '15:00', view: '숲/가든뷰', tags: ['fireplace'], pros: '전 스위트 가스 벽난로 보장, 28에이커 정원 5월 단풍, 프라이빗 코티지', cons: 'Echo Pt 차 20분(치명적), 조식 $39/인 추가', platforms: 'Booking 커플 9.3 / TA 4.5/5', note: '기본평가 5위(67.7). 벽난로 보장이나 위치 약점' },
-        { rank: 7, name: 'Mountain Heritage Hotel', type: '헤리티지 4.5성(1908년)', price: '$280~400', couple: '9.2', score: '66.7', parking: '무료', checkin: '14:00', view: '밸리 뷰(Valley View룸)', tags: ['view', 'fireplace'], pros: '뷰+벽난로 동시(유일 호텔), 가스 벽난로, 유럽풍 건축', cons: '에코포인트 차 5~7분, 시설 노후(C\'\' 56.5), 가격 높음', platforms: 'Booking $224~494', note: '논쟁(편차 19.5). 뷰+벽난로는 매력적이나 노후가 치명적' },
-        { rank: 8, name: 'Three Sisters Lodge', type: 'Airbnb 코티지 2BR', price: '$200~350', couple: '—', score: '66.5', parking: '확인 필요', checkin: '셀프', view: 'Three Sisters 도보', tags: ['view', 'fireplace', 'kitchen'], pros: '뷰+장작벽난로 동시! Three Sisters 맞은편, 풀키친, 스파바스', cons: 'Airbnb 불확실성, 조기예약 필수, 장작 관리 필요', platforms: 'Airbnb $200~350', note: '뷰+벽난로+위치 3박자. 예약 가능 여부 확인 필수' },
-        { rank: 0, name: 'Old Leura Dairy', type: '부티크 게스트하우스 14실', price: '$182~300', couple: '9.3', score: '71.7', parking: '무료', checkin: '15:00', view: '가든', tags: ['fireplace', 'breakfast'], pros: '전실 가스 벽난로, 무료 조식(호평), 루라 카페거리 도보 5분, 개인 라운지', cons: '밸리 뷰 없음, Echo Point 차 10분', platforms: 'Booking $182~300', note: '투자평가 2위(71.7, A\'\' 74.0 / B\'\' 65.0 / C\'\' 76.0). 벽난로+조식+카페거리 조합' },
-        { rank: 0, name: 'Hydro Majestic Hotel', track: 'invest', type: '헤리티지 호텔 4성(1904년) 71실', price: '$170~380', couple: '8.8', score: '64.3', parking: '무료', checkin: '15:00', view: '메갈롱밸리 파노라마', tags: ['view'], pros: '120년 아트데코 건축, 메갈롱밸리 뷰, Wintergarden Cafe 조식', cons: '벽난로 없음, 시설 노후 심각, Booking 7.7, Echo Pt 차 15분', platforms: 'Booking 7.7(1108건) / TA 3.5/5', note: '투자평가(64.3, A\'\' 67.5 / B\'\' 71.5 / C\'\' 54.0). 건축 감성 독보적이나 노후 치명적' },
-        { rank: 0, name: 'Kyah Hotel', track: 'invest', type: '부티크 호텔(팜스프링스 리노)', price: '$190~400', couple: '9.1', score: '60.8', parking: '무료', checkin: '15:00', view: '없음', tags: ['pool'], pros: 'Blaq Restaurant(미쉐린 가이드), 야외 핫터브+사우나, 게임룸, e-bike', cons: '밸리 뷰 없음, Echo Pt 차 20분, TA 3.0/5', platforms: 'Booking 8.6(2624건) / TA 3.0/5', note: '비추(60.8). Blaq 디너만 별도 방문 가능' }
-      ]
-    },
-    {
-      id: 'sydney', name: '시드니', day: 'Day 6~7', date: '5/29~31(금~일)',
-      role: 'city', roleLabel: '도시 2박',
-      center: [-33.8568, 151.2153],
-      budget: '$300~900(2박)', nights: 2,
-      summary: '렌터카 반납 후(주차 불필요). Vivid Sydney 성수기. 5/31 07:55 비행 → 04:30 출발. Harbour Rocks 휴업(3/15~9/21).',
-      budgetPick: { economy: { name: 'YHA Harbour', price: 350 }, balance: { name: 'Novotel Wynyard', price: 450 }, premium: { name: 'Four Seasons', price: 850 } },
-      lodgings: [
-        { rank: 0, name: 'Four Seasons Sydney', type: '5성 호텔', price: '$760~900/2박', couple: '—', score: '84.0', label: '투자 1위', parking: '—', checkin: '15:00', view: '옥상 온수풀+하버 파노라마', tags: ['view', 'vivid', 'pool'], pros: 'B\'\' 91.5(전체 최고)! 옥상 온수풀에서 Vivid 감상(대체 불가), CQ 도보 3분, 5성 방음(수면 안전)', cons: '2박 $760~900 예산 부담', platforms: 'Booking / Hotels.com', note: '투자평가 1위(84.0). 옥상 온수풀 Vivid = 전 세계 어디서도 대체 불가' },
-        { rank: 0, name: 'Shangri-La Sydney', type: '5성 호텔 565실', price: '$600~830/2박', couple: '—', score: '78.2', parking: '—', checkin: '15:00', view: '시드니 최대 창문 하버뷰', tags: ['view', 'vivid', 'pool'], pros: '45~50m² 객실에 시드니 최대 창문, 36층 인피니티풀, Vivid 뷰, 레이트체크아웃 12시', cons: 'CQ까지 도보 5분(Four Seasons보다 약간 멀어)', platforms: 'Booking / KAYAK', note: '투자평가 2위(78.2). 시티뷰($600~700)로 5성 시설만 확보하는 전략 가능' },
-        { rank: 3, name: 'YHA Sydney Harbour', type: '호스텔(프라이빗룸)', price: '$300~400/2박', couple: '9.6', score: '77.3', label: '가성비 1위', parking: '—', checkin: '14:00', view: '옥상 오페라하우스+하버브릿지', tags: ['view', 'vivid'], pros: '옥상 Vivid 직접 감상! The Rocks 위치, CQ역 도보 8분, 가성비 최강', cons: '벽 얇음(토요밤 소음 → 일요 새벽 수면 방해), 방 작음', platforms: 'Booking $300~400 / KAYAK $300~380', note: '기본평가 1위(77.3). 가성비 최강. 새벽 공항은 택시 $50~70으로 해결' },
-        { rank: 4, name: 'Meriton Suites Pitt St', type: '아파트호텔 51층', price: '$360~500/2박', couple: '—', score: '68.2', parking: '—', checkin: '14:00', view: '고층 시티뷰', tags: ['kitchen'], pros: '세탁기+풀키친(7일 여행 마무리), 넓은 아파트, 51층 야경', cons: 'CQ까지 도보 20분(Vivid 접근 약)', platforms: 'Wotif $472~ / KAYAK $360~480', note: '3명 편차 최소(균형). 넓은 공간+자취형 편안함' },
-        { rank: 5, name: 'Novotel Sydney City Centre', type: '호텔 4성(리브랜딩+리노)', price: '$400~560/2박', couple: '—', score: '67.8', parking: '—', checkin: '14:00', view: '시티뷰', tags: ['reno'], pros: 'Wynyard역 도보 2분(새벽 공항 최적), 24시간 프론트, 무료 짐보관, 전면 리노 완료', cons: '하버뷰 없음, Vivid까지 도보 15분', platforms: 'Booking $400~560 / KAYAK $350~500', note: '구 Travelodge Wynyard에서 리브랜딩+전면 리노. 공항 이동 안전성 1위' },
-        { rank: 6, name: 'Rendezvous Hotel The Rocks', type: '부티크 4.5성', price: '$390~500/2박', couple: '—', score: '63.7', parking: '—', checkin: '14:00', view: '일부 하버뷰', tags: ['view'], pros: 'Vivid 도보 3분(위치 9.7), MCA 2분, 짐보관 무료', cons: '시설 노후(카펫 얼룩, 낡은 데코), 가격 대비 가치 의문', platforms: 'Booking 7.9(3700건+)', note: '기본평가 4위(63.7). 위치 프리미엄만, 시설 미흡' },
-        { rank: 7, name: 'Amora Hotel Jamison', type: '호텔 5성', price: '$400~650/2박', couple: '—', score: '63.0', parking: '—', checkin: '15:00', view: '시티뷰', tags: ['pool'], pros: '실내 온수풀+사우나+자쿠지+스팀룸+데이스파, Wynyard역 5분', cons: '5성 기대 미달, 조식 $45', platforms: 'Booking 8.5', note: '기본평가 5위(63.0). 5성 시설이나 가격 대비 의문' },
-        { rank: 8, name: 'ibis Sydney World Square', type: '경제형 3성', price: '$300~400/2박', couple: '—', score: '49.2', parking: '—', checkin: '14:00', view: '없음', tags: [], pros: '가성비 양호, Museum역 5분', cons: '야간 바 소음 심각, 벽 얇음, Vivid 도보 25분', platforms: 'Booking $300~400', note: '비추(49.2). 여행 피날레로 부적합' },
-        { rank: 0, name: 'Marriott Circular Quay', type: '5성 호텔', price: '$500~800/2박', couple: '—', score: '72.8', parking: '—', checkin: '15:00', view: '하버/오페라하우스 뷰', tags: ['view', 'vivid'], pros: 'CQ 도보 5분, 오페라하우스 뷰, Vivid 접근 최상, 리노 완료', cons: 'Four Seasons 대비 뷰 열위, 가격 대비 차별점 부족', platforms: 'Booking / Hotels.com', note: '투자평가 4위(72.8, A\'\' 71.5 / B\'\' 71.5 / C\'\' 75.5). Four Seasons/Shangri-La 대안' },
-        { rank: 0, name: 'Pullman Quay Grand', track: 'invest', type: '5성 서비스드 아파트', price: '$700~1100/2박', couple: '—', score: '71.8', parking: '—', checkin: '14:00', view: '하버뷰(브릿지+MCA Vivid)', tags: ['view', 'vivid', 'kitchen'], pros: '풀키친+세탁기+스파배스+프라이빗 발코니, 오페라하우스 옆, CQ 도보 3분', cons: '서비스 불일치, 청결 간헐 이슈, $450~600/박', platforms: 'Booking 8.8 / TA 4.0/5', note: '투자평가(71.8, A\'\' 67.0 / B\'\' 81.0 / C\'\' 67.5). 풀키친+하버뷰이나 가격 과잉' },
-        { rank: 0, name: 'Ovolo Woolloomooloo', track: 'invest', type: '부티크 호텔 5성 100실', price: '$580~750/2박', couple: '—', score: '70.3', parking: '—', checkin: '14:00', view: '요트 항구+시티 스카이라인', tags: ['pool'], pros: '목재 부두 산업유산(에지 감성), 실내 온수풀, 무료 셀프 세탁, 45m\u00B2 객실', cons: 'CQ 15분(Vivid 접근 약), 새벽 이동 복잡', platforms: 'Booking 8.7 / TA 4.5/5', note: '투자평가(70.3, A\'\' 69.0 / B\'\' 78.5 / C\'\' 63.5). 부티크 감성 최강이나 Vivid 접근 약' },
-        { rank: 0, name: 'InterContinental Sydney', track: 'invest', type: '5성 호텔(IHG) 509실', price: '$700~1000/2박', couple: '—', score: '70.3', parking: '—', checkin: '15:00', view: '동쪽 하버뷰(프리미엄=오페라하우스)', tags: ['view', 'vivid'], pros: '32층 Aster Bar Vivid 야경 디너, Vivid 패키지, Martin Place역 5분', cons: '오페라뷰는 프리미엄만, $469/박 예산 초과', platforms: 'Booking 8.5+ / TA 4.5/5', note: '투자평가(70.3, A\'\' 66.5 / B\'\' 72.5 / C\'\' 72.0). Vivid 패키지 포함이면 가치 있음' },
-        { rank: 0, name: 'Pier One Sydney Harbour', track: 'invest', type: '부티크 워터프론트 5성 189실', price: '$600~1000/2박', couple: '—', score: '69.5', parking: '—', checkin: '15:00', view: '하버브릿지 올려다봄(물 위 부두)', tags: ['view', 'vivid'], pros: '부두 위 워터프론트(유일무이), Federation 건축, 하버브릿지 Vivid 발코니 감상', cons: 'CQ역 12~15분(새벽 택시 필수), $400~650/박', platforms: 'Booking 8.5+ / TA 4.5/5', note: '투자평가(69.5, A\'\' 63.5 / B\'\' 82.0 / C\'\' 63.0). 유니크하나 역 거리 치명적' },
-        { rank: 0, name: 'The Langham Sydney', track: 'invest', type: '5성 럭셔리 98실', price: '$500~800/2박', couple: '—', score: '69.0', parking: '—', checkin: '15:00', view: '시티뷰', tags: ['pool'], pros: 'Day Spa by Chuan(수상), 98실 소규모 서비스, Conde Nast 수상', cons: '하버뷰 없음, CQ 도보 12분, Vivid 경험 부재', platforms: 'TA #10/198', note: '투자평가(69.0, A\'\' 68.0 / B\'\' 69.0 / C\'\' 70.0). 스파 최강이나 Vivid 방향 불일치' }
-      ]
-    }
-  ];
-
+  var STOPS = []; // data/lodging/lodging_data.json에서 로드
   /* ══════════════════════════════════════════
      시나리오 정의
      ══════════════════════════════════════════ */
@@ -336,27 +197,15 @@
   /* ══════════════════════════════════════════
      상태
      ══════════════════════════════════════════ */
-  var activeStop = STOPS[0].id;
+  var activeStop = null;
   var activeScenario = 'balance';
   var activeTrack = 'basic';   // 'basic' | 'invest'
   var stopMarkers = {};
   var leafletMap = null;
 
-  /* 투자평가 숙소 이름 매핑 — 이 목록에 있으면 invest, 없으면 basic */
-  var INVEST_NAMES = {
-    'byron-bay': ['Hotel Marvell', 'The Bower Byron Bay', '28 Degrees Byron Bay', 'Swell Hotel Byron', 'Elements of Byron', 'Crystalbrook Byron'],
-    'coffs-harbour': ['The Observatory', 'Smugglers on the Beach', 'Sensom at Sapphire', 'BreakFree Aanuka Beach Resort', 'Aqualuna Beach Resort', 'Pacific Bay Resort'],
-    'port-macquarie': ['Macquarie Waters', 'Sandcastle Apartments', 'Ana Mandara Luxury Retreat', 'Flynns Beach Resort', 'Sails Port Macquarie by Rydges'],
-    'nelson-bay': ['Bannisters Port Stephens', 'Anchorage Garden Room', 'Wanderers Retreat Treehouse'],
-    'blue-mountains': ['Falls Mountain Retreat', 'Old Leura Dairy', 'Hydro Majestic Hotel', 'Kyah Hotel'],
-    'sydney': ['Four Seasons Sydney', 'Shangri-La Sydney', 'Marriott Circular Quay', 'Pullman Quay Grand', 'Ovolo Woolloomooloo', 'InterContinental Sydney', 'Pier One Sydney Harbour', 'The Langham Sydney']
-  };
-
   /* 현재 트랙에 해당하는 숙소 목록 반환 + rank 재부여 */
   function isInvestLodging(stopId, l) {
-    if (l.track === 'invest') return true;
-    var investNames = INVEST_NAMES[stopId] || [];
-    return investNames.indexOf(l.name) !== -1;
+    return l.track === 'invest';
   }
   function getActiveLodgings(stop) {
     var filtered = stop.lodgings.filter(function (l) {
@@ -374,11 +223,24 @@
   /* ══════════════════════════════════════════
      초기화
      ══════════════════════════════════════════ */
-  renderTabs();
-  initBudgetBar();
-  leafletMap = initMap();
-  bindModal();
-  selectStop(activeStop);
+  // 데이터를 fetch로 로드한 후 초기화
+  var base = (window.__BASE_URL__ || '').replace(/\/+$/, '');
+  fetch(base + '/data/lodging/lodging_data.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      STOPS = data.stops;
+      /* subtitle 동적 생성 */
+      var totalLodgings = STOPS.reduce(function(s, st) { return s + st.lodgings.length; }, 0);
+      var sub = document.getElementById('subtitle');
+      if (sub) sub.textContent = '6조 루트 · ' + STOPS.length + '개 거점 · ' + totalLodgings + '개 CRITIC 채점 · 3명 페르소나 평가 · 2026년 5월 기준';
+      activeStop = STOPS[0].id;
+      renderTabs();
+      initBudgetBar();
+      leafletMap = initMap();
+      bindModal();
+      selectStop(activeStop);
+    })
+    .catch(function(err) { console.error('lodging 데이터 로드 실패:', err); });
 
   /* ══════════════════════════════════════════
      지도 초기화 (activities.js 패턴)
@@ -617,15 +479,24 @@
     if (!pick) return;
 
     var matched = findPickLodging(stop, pick.name);
-    var matchedName = matched ? matched.name : '';
+    if (!matched) return;
+    var matchedName = matched.name;
     var label = SCENARIO_LABELS[activeScenario] || '';
+
+    /* 매칭된 숙소가 현재 트랙에 없으면 트랙 자동 전환 */
+    var matchedTrack = matched.track === 'invest' ? 'invest' : 'basic';
+    if (matchedTrack !== activeTrack) {
+      activeTrack = matchedTrack;
+      renderStop(activeStop);
+      return; /* renderStop이 refresh()를 호출하므로 여기서 종료 */
+    }
 
     var cards = document.querySelectorAll('.lodge-card');
     var highlightedCard = null;
     for (var i = 0; i < cards.length; i++) {
       var card = cards[i];
-      var cardName = card.querySelector('.card-name');
-      if (cardName && matchedName && cardName.textContent.trim() === matchedName) {
+      var cardDataName = card.getAttribute('data-name') || '';
+      if (matchedName && cardDataName === matchedName) {
         card.classList.add('budget-pick');
         card.setAttribute('data-pick-label', label);
         highlightedCard = card;
@@ -703,6 +574,7 @@
       return '<span class="lodge-tag tag-' + t + '">' + (TAG_LABELS[t] || t) + '</span>';
     }).join('');
 
+    card.setAttribute('data-name', lodge.name);
     card.innerHTML =
       '<div class="card-rank">' + rankLabel + '</div>' +
       '<div class="card-name">' + lodge.name + (lodge.score ? '<span class="card-score">' + lodge.score + '점</span>' : '') + (lodge.label ? '<span class="card-score" style="background:#e36209">' + lodge.label + '</span>' : '') + '</div>' +

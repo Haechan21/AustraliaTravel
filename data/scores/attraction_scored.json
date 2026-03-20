@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-03-13",
   "category": "attraction",
-  "total_places": 109,
+  "total_places": 110,
   "grading_method": "percentile",
   "grading_note": "grade는 may_adjusted_score(5월 계절 보정) 기준 퍼센타일 등급",
   "grading_cutoffs": {
@@ -9,14 +9,14 @@
     "A": "7~28위",
     "B": "29~66위",
     "C": "67~99위",
-    "D": "100~109위"
+    "D": "100~110위"
   },
   "grade_distribution": {
     "S": 6,
     "A": 22,
     "B": 38,
     "C": 33,
-    "D": 10
+    "D": 11
   },
   "controversial_count": 37,
   "scores": [
@@ -581,6 +581,22 @@
       "grade": "B"
     },
     {
+      "id": "5fad89b9",
+      "name_ko": "도리고 스카이워크",
+      "region": "워터폴웨이/도리고",
+      "scores": {
+        "A": 69.5,
+        "B": 78.0,
+        "C": 71.5
+      },
+      "average_score": 73.0,
+      "spread": 8.5,
+      "controversial": false,
+      "seasonal_adjustment": 2,
+      "may_adjusted_score": 75.0,
+      "grade": "B"
+    },
+    {
       "id": "9ba192a2",
       "name_ko": "엠프레스 폭포",
       "region": "블루마운틴",
@@ -1074,7 +1090,7 @@
       "controversial": false,
       "seasonal_adjustment": 6,
       "may_adjusted_score": 66.8,
-      "grade": "B"
+      "grade": "C"
     },
     {
       "id": "d5fa343f",
@@ -1602,7 +1618,7 @@
       "controversial": false,
       "seasonal_adjustment": -2,
       "may_adjusted_score": 52.5,
-      "grade": "C"
+      "grade": "D"
     },
     {
       "id": "5dc8e4b0",

@@ -192,6 +192,42 @@
       "total_score": 78.5
     },
     {
+      "id": "5fad89b9",
+      "name_ko": "도리고 스카이워크",
+      "region": "워터폴웨이/도리고",
+      "raw_scores": {
+        "google_rating": {
+          "score": 9,
+          "reason": "평점 4.7. 높은 평점이나 리뷰 수 135건으로 표본 한정"
+        },
+        "review_count": {
+          "score": 4,
+          "reason": "135건. 국립공원 시설로 데이터 충분하지 않음"
+        },
+        "scenery": {
+          "score": 7,
+          "reason": "열대우림 위 21m 보드워크 전망. 주차장에서 1분 접근으로 빠르게 감상"
+        },
+        "accessibility": {
+          "score": 5,
+          "reason": "콥스하버에서 1시간, 벨링겐에서 30분 산길. 도착 후 휠체어 접근 가능하나 우회 동선 큼"
+        },
+        "value_for_money": {
+          "score": 9,
+          "reason": "$2 골드코인 + 30분. 세계유산 체험 대비 거의 무료"
+        },
+        "time_efficiency": {
+          "score": 9,
+          "reason": "30분 체류로 스카이워크+전망 핵심 완료. 크리스탈 샤워 폭포와 묶으면 효율 극대"
+        },
+        "uniqueness": {
+          "score": 7,
+          "reason": "곤드와나 세계유산 열대우림. 원주민 문화 해설 포함. 유사 캐노피 워크 있으나 Heritage 가치"
+        }
+      },
+      "total_score": 69.5
+    },
+    {
       "id": "04cc52a2",
       "name_ko": "서블라임 포인트 전망대",
       "region": "블루마운틴",

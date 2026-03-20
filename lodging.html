@@ -5,7 +5,7 @@ title: 숙소 후보
 
 <div class="lodging-page">
   <h1>숙소 후보</h1>
-  <p class="lodging-subtitle">6조 루트 · 6개 거점 · 95개 숙소 조사 · 77개 CRITIC 채점 · CRITIC_LODGING 3명 페르소나 평가 · 2026년 5월 기준</p>
+  <p class="lodging-subtitle" id="subtitle">로딩 중...</p>
 
   <!-- 루트 지도 -->
   <div id="lodgingMap"></div>
@@ -33,4 +33,5 @@ title: 숙소 후보
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>window.__BASE_URL__ = "{{ site.baseurl }}";</script>
 <script src="{{ '/assets/js/lodging.js?v=20260318g' | relative_url }}"></script>

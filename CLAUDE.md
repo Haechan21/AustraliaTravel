@@ -32,10 +32,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 현재 진행 상황
 
-- Phase 1 (전처리): ✅ 완료 — 109개 attraction (중복 2개 제거: `669a240e` 코알라 병원 중복, `7a922fd8` 스탠웰 탑스 빈 stub)
-- Phase 2 (정보 수집): ✅ 완료 — 109개 장소 collected_data 채움, 15개 지역 분류, 주제별·지역별 리서치 30건+
-- Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 109곳 평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:10 (may_adjusted_score 기준 단일 `grade`). 논쟁 장소 37곳
-- Phase 4 (일정 생성): 🔄 진행 중 — 9개 루트 후보 완성 (1~9조), CRITIC_ROUTE v7 재평가 완료. 식사 시간 보완 + 전면 재평가로 순위 변동: 5조 7→5위(▲2), 7조 5→6위(▼1). 상위 3개 유지(6조→2조→8조). 최종 루트 선택 미결정, ITINERARY.md는 5/23~24일만 상세 작성
+- Phase 1 (전처리): ✅ 완료 — 110개 attraction (중복 2개 제거 + 도리고 스카이워크 신규: `5fad89b9`)
+- Phase 2 (정보 수집): ✅ 완료 — 110개 장소 collected_data 채움, 15개 지역 분류, 주제별·지역별 리서치 30건+
+- Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 110곳 평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:11 (may_adjusted_score 기준 단일 `grade`). 논쟁 장소 37곳
+- Phase 4 (일정 생성): ✅ 완료 — **6조 확정** (바이런직행+블루마운틴, v7 1위 78.0점). ITINERARY.md 이동일정 전일 작성 완료 (숙소·식당은 미확정). 9개 루트 후보 비교 → CRITIC_ROUTE v7 재평가 → 6조 최종 선택 (2026-03-20)
 - Phase 5 (일정 리뷰): ⬜ 미시작
 - 액티비티 리서치: ✅ 완료 — 10개 지역 109개 체험 활동 조사 (5개 신규 + 5개 보강: 은하수·우천대안·커플체험 추가)
 - 숙소 평가 프레임워크: ✅ 완료 — CRITIC_LODGING.md 작성 완료 (3명 페르소나 A''/B''/C'', 7개 기준 L1~L7, 거점별 상대 순위 방식). 6조 기준 6개 거점 맥락 정의, scoring.json 동기화 완료
@@ -44,7 +44,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 식당 평가 프레임워크: ✅ 완료 — CRITIC_DINING.md 작성 완료 (3명 페르소나 A''' 동선 미식가 / B''' 미식 큐레이터 / C''' 리뷰 검증자, 6개 기준 F1~F6, 지역별+식사유형별 상대 순위 방식). scoring.json 동기화 완료
 - 식당 리서치: ✅ 완료 — 6개 거점 + 10개 경유지 140개+ 식당/체험 조사 (1차 7팀 + 2차 5팀 병렬 리서치). 호주 공원 BBQ 가이드, 파머스마켓 일정, 호주 고유 음식 체험 포함
 - 식당 평가: ✅ 완료 — CRITIC_DINING.md 프레임워크 기반 6개 거점 126개 식당 3명 페르소나 독립 채점. 거점별 식사유형별 추천/차선/가능/비추 라벨 부여(추천 35·차선 30·가능 47·비추 14). 논쟁 식당 56곳(44%) 식별. 상세 수치는 식당_종합가이드.md(SSOT) 참조
-- 향후: 최종 루트 선택 → ITINERARY.md 전체 작성(식사·숙소 통합), Phase 5(일정 리뷰) 진행, 관광지 추가도 가능
+- 향후: 숙소·식당 확정 → ITINERARY.md 통합, Phase 5(일정 리뷰) 진행
 
 ## 에이전트 작업 체크리스트
 
@@ -52,10 +52,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### 재평가 후 루트 파일 동기화
 1. `python scripts/update_route_scores.py --fix` — 점수 일괄 업데이트 (자동)
-2. `grade` 변경 장소 확인 → 등급 레이블(S/A/B 등) 수동 수정 (에이전트)
-3. 각 루트의 S등급 방문 수 재계산 → 헤더/요약/테이블 수정 (에이전트)
-4. `research/route-plans/README.md` 종합 순위표 S등급 열 수정 (에이전트)
-5. 이 파일(`CLAUDE.md`) 진행 상황 갱신
+2. `python scripts/sync_route_docs.py --fix` — 거리·등급집계·마커 값 자동 동기화
+3. 이 파일(`CLAUDE.md`) 진행 상황 갱신
 
 ### v7 재평가 완료 (2026-03-18)
 - [x] CRITIC_ROUTE v7 식사 시간 보완 + 전면 재평가 (전 루트)
@@ -64,15 +62,20 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - [x] route_data.json 프론트엔드 데이터 동기화
 - [x] CLAUDE.md 진행 상황 갱신
 
-### v6 재평가 완료 (2026-03-17)
-- [x] CRITIC_ROUTE v6 5월 보정 등급 기반 전 루트 재평가
-- [x] 5개 루트 파일 수정 (1조, 3조, 4조, 8조, 9조)
-- [x] README.md 종합 순위표 v6 업데이트
-- [x] route_data.json 프론트엔드 데이터 동기화
-- [x] CLAUDE.md 진행 상황 갱신
+### SSOT 리팩토링 완료 (2026-03-20)
+- [x] v5/v6 과거 평가 기록 삭제 (9개 루트 + README, v7만 유지)
+- [x] SSOT 폴더 구조 생성 (`data/routes/`, `data/lodging/`, `data/dining/`, `data/activities/`)
+- [x] JS 하드코딩 데이터 → JSON 분리 (lodging 77개, dining 126개, activities 109개)
+- [x] JS fetch 전환 (lodging/dining/activities/routes)
+- [x] route_data.json 거리 정합 (day_km = stops 합산, 17건 수정)
+- [x] 인라인 마커 시스템 구축 (`sync_engine.py` + `sync_route_docs.py`)
+- [x] 마커 삽입 Phase 1: 헤더/종합표 51건 마커 삽입
+- [x] 숙소/식당/액티비티 SSOT 리팩토링: JS 하드코딩 완전 제거 (INVEST_NAMES, BUDGET_PICKS, SCENARIOS → JSON)
+- [x] 숙소/식당/액티비티 종합 문서 마커 삽입 (`sync_data_docs.py`, 108건: 숙소 18 + 식당 43 + 액티비티 47)
 
 ### Phase 4→5 전환 시
-- [ ] 9개 루트 중 최종 선택 → `docs/ITINERARY.md`에 반영
+- [x] 9개 루트 중 최종 선택 → 6조 확정 (2026-03-20), `docs/ITINERARY.md`에 이동일정 반영 완료
+- [ ] 숙소·식당 확정 → ITINERARY.md 통합
 - [ ] Phase 5 리뷰 시작 → `research/claude-research/` 근거 저장
 
 ## 스크립트 실행
@@ -90,13 +93,20 @@ python scripts/generate_frontend.py --rescore  # 등급 재계산만
 python scripts/generate_frontend.py --rank     # RANKINGS.md만
 python scripts/generate_frontend.py --data     # place_data.json만
 
-# 루트 파일 점수 정합성 검증/수정
-python scripts/update_route_scores.py            # 불일치 리포트만 (dry-run)
-python scripts/update_route_scores.py --fix      # 실제 수정
-python scripts/update_route_scores.py --fix --verbose  # 상세 로그 포함
+# 인라인 마커 기반 데이터 동기화 (SSOT → 루트 MD + README + route_data.json)
+python scripts/sync_route_docs.py              # dry-run: 불일치 리포트
+python scripts/sync_route_docs.py --fix        # 마커 값 교체 + route_data.json 자동 정합
+python scripts/sync_route_docs.py --init       # 기존 문서에 마커 삽입 (dry-run)
+python scripts/sync_route_docs.py --init --fix # 마커 실제 삽입
+python scripts/sync_route_docs.py --check-only # CI용: 불일치 시 exit 1
+
+# 숙소/식당/액티비티 종합 문서 ↔ data/ JSON 동기화
+python scripts/sync_data_docs.py              # dry-run: 불일치 리포트
+python scripts/sync_data_docs.py --fix        # 마커 값 교체
+python scripts/sync_data_docs.py --check-only # CI용: 불일치 시 exit 1
 
 # 루트 도로 geometry 생성 (OSRM API → encoded polyline)
-python scripts/fetch_route_geometry.py           # route_geometry.json 생성 (~2분, 빌드 타임 전용)
+python scripts/fetch_route_geometry.py           # data/routes/route_geometry.json 생성 (~2분, 빌드 타임 전용)
 ```
 
 외부 의존성 없음. Python 3.11+ 표준 라이브러리만 사용.
@@ -110,6 +120,42 @@ python scripts/fetch_route_geometry.py           # route_geometry.json 생성 (~
 - 좌표 형식: `[lng, lat]` (GeoJSON 표준)
 - **등급은 단일 `grade`**: `may_adjusted_score`(5월 계절 보정 후) 기준 퍼센타일 등급. 프로젝트 전체에서 이 등급만 사용
 - **이동거리는 실제 도로 거리**: OSRM API로 산출한 실제 도로 주행 거리를 사용. 직선거리나 근사값(~) 사용 금지
+- **거리 SSOT 체계**: `stops[].distance_km`(구간별) → `day_km`(일별 합산) → `total_km`(전체 합산) 단방향 집계. `day_km`과 `total_km`은 자동 계산 (`sync_route_docs.py --fix`)
+- **인라인 마커**: 루트 MD/README의 동기화 대상 숫자에 `<!-- sync:NS:KEY -->값<!-- /sync -->` 마커 사용. SSOT 변경 시 `sync_route_docs.py --fix`로 자동 갱신
+
+## SSOT 데이터 구조
+
+```
+data/
+  scores/attraction_scored.json    ← 관광지 점수·등급 SSOT
+  routes/route_data.json           ← 루트 거리·stops SSOT
+  routes/route_geometry.json       ← OSRM 경로 geometry
+  lodging/lodging_data.json        ← 숙소 데이터 SSOT (77개: 기본 44 + 투자 33)
+  dining/dining_data.json          ← 식당 데이터 SSOT (126개, 예산 시나리오 포함)
+  activities/activities_data.json  ← 액티비티 데이터 SSOT (109개, 10개 지역)
+  regions.json                     ← 지역 분류
+  places/attraction/               ← 110개 관광지 raw 데이터
+```
+
+### 데이터 흐름
+
+```
+data/ JSON (SSOT 원본)
+  │
+  ├─→ 프론트엔드 (JS fetch, 자동)
+  │     lodging.js, dining.js, activities.js, routes.js, rankings.js
+  │     → HTML에서 수치·카드·지도 자동 렌더링
+  │
+  ├─→ research/ 종합 문서 (sync_data_docs.py --fix, 자동)
+  │     숙소_종합비교.md, 식당_종합가이드.md, 액티비티_종합가이드.md
+  │     → 인라인 마커 값 자동 교체 (108개 마커)
+  │
+  └─→ 루트 MD + README (sync_route_docs.py --fix, 자동)
+        research/route-plans/*.md
+        → 거리·등급·점수 마커 값 자동 교체
+```
+
+**수동 관리 대상**: `README.md`·`index.md`의 배지/등급표, `CLAUDE.md` 진행 상황, `docs/SPEC.md` 설계서 수치. 이들은 프로젝트 소개/설계 문서 성격이므로 큰 변경 시에만 갱신.
 
 ## 리서치 파일 구조
 
@@ -129,13 +175,14 @@ Jekyll 기반 정적 사이트로 데이터를 시각화한다. `_config.yml`에
 |--------|------|----|-------------|
 | 메인 | `index.md` | — | — |
 | 관광지 랭킹 | `rankings.html` | `assets/js/rankings.js` | `assets/data/place_data.json` |
-| 루트 비교 | `routes.html` | `assets/js/routes.js` | `assets/data/route_data.json` + `assets/data/route_geometry.json` |
-| 액티비티 후보 | `activities.html` | `assets/js/activities.js` | — (JS 내부 데이터, 10개 지역 탭 + 지도 + 5월 적합도) |
-| 숙소 후보 | `lodging.html` | `assets/js/lodging.js` | — (JS 내부 데이터, 기본평가/투자평가 탭 분리) |
-| 식당 후보 | `dining.html` | `assets/js/dining.js` | — (JS 내부 데이터, 거점별 탭 + 식사유형·라벨 필터) |
+| 루트 비교 | `routes.html` | `assets/js/routes.js` | `data/routes/route_data.json` + `data/routes/route_geometry.json` |
+| 액티비티 후보 | `activities.html` | `assets/js/activities.js` | `data/activities/activities_data.json` |
+| 숙소 후보 | `lodging.html` | `assets/js/lodging.js` | `data/lodging/lodging_data.json` |
+| 식당 후보 | `dining.html` | `assets/js/dining.js` | `data/dining/dining_data.json` |
 | 루트 상세 (리다이렉트) | `route-plans.html` | — | — → `routes.html`로 리다이렉트 |
 
-- `place_data.json`은 `scripts/generate_frontend.py`로 자동 생성, `route_data.json`은 수동 작성/관리, `route_geometry.json`은 `scripts/fetch_route_geometry.py`로 OSRM에서 자동 생성
+- `place_data.json`은 `scripts/generate_frontend.py`로 자동 생성, `route_data.json`은 수동 작성/관리 (거리 자동 정합: `sync_route_docs.py --fix`), `route_geometry.json`은 `scripts/fetch_route_geometry.py`로 OSRM에서 자동 생성
+- 숙소/식당/액티비티 데이터는 `data/` 아래 JSON으로 분리 관리, JS는 fetch로 로드
 - 외부 라이브러리: Leaflet.js 1.9.4 (CDN, `routes.html`에서 지도 렌더링용)
 - 레이아웃: `_layouts/default.html`, 스타일: `assets/css/style.scss`
 
