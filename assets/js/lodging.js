@@ -35,6 +35,8 @@
     '.role-view { background: #f1e5ff; color: #6f42c1; }',
     '.role-invest { background: #fff8c5; color: #b08800; }',
     '.role-city { background: #ffeef0; color: #d73a49; }',
+    '.confirmed-badge { display: inline-flex; align-items: center; gap: 5px; background: #22863a; color: #fff; padding: 4px 12px; border-radius: 12px; font-size: 0.82em; font-weight: 700; margin-top: 8px; }',
+    '.confirmed-badge::before { content: "\\2713"; }',
 
     /* 예산 시뮬레이션 바 */
     '.budget-bar { display: flex; gap: 8px; margin-bottom: 1.2em; flex-wrap: wrap; }',
@@ -404,11 +406,16 @@
     /* 요약 */
     var summary = document.getElementById('stopSummary');
     var roleClass = 'role-' + stop.role;
+    var confirmedHtml = '';
+    if (stop.confirmed) {
+      confirmedHtml = '<div class="confirmed-badge">예약 확정: ' + stop.confirmed + '</div>';
+    }
     summary.innerHTML =
       '<div style="margin-bottom:6px">' +
       '<span class="stop-role ' + roleClass + '">' + stop.roleLabel + '</span>' +
       '<strong>' + stop.name + '</strong> — ' + stop.date + ' (' + stop.nights + '박)' +
       '</div>' +
+      confirmedHtml +
       '<div style="margin-bottom:4px">' + stop.summary + '</div>' +
       '<div style="font-size:0.85em;color:#586069">예산 범위: <strong>' + stop.budget + '</strong></div>' +
       '<div id="summaryPick" style="margin-top:6px;font-size:0.88em;color:#157878;font-weight:600"></div>';
