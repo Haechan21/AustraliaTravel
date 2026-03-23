@@ -25,7 +25,7 @@ layout: default
 | 5/30 (토) | 시드니 시내 · Vivid Sydney | ✅ |
 | 5/31 (일) | 시드니 → 인천 | ✅ |
 
-> ✅ 이동일정 확정 (숙소·식당 미확정) — 상세 일정은 <a href="docs/ITINERARY.html">ITINERARY.md</a> 참조
+> ✅ 이동일정 확정 · 숙소 5박 확정 (시드니 미확정 · 식당 미확정) — 상세 일정은 <a href="docs/ITINERARY.html">ITINERARY.md</a> 참조
 
 <br/>
 
@@ -61,7 +61,7 @@ layout: default
 
 > 전체 목록과 상세 점수 → <a href="rankings.html">관광지 랭킹</a>
 
-> 📋 음식점 평가 완료(126개 CRITIC) · 숙소 평가 완료(77개 CRITIC) → <a href="lodging.html">숙소 후보</a>
+> 📋 음식점 평가 완료(126개 CRITIC) · 숙소 평가 완료(77개 CRITIC) · **숙소 5박 예약 확정** → <a href="lodging.html">숙소 후보</a>
 
 > 🧳 비자·운전·안전·환전·보험·패킹·통신 실전 가이드 → <a href="essentials.html">여행 준비</a>
 

@@ -12,6 +12,9 @@ data/scores/temp/
 # Claude Code
 .claude/
 
+# 개인 서류 (예약 확인서, 여권 등)
+private/
+
 # 로컬 프리뷰
 routes-preview.html
 route-plans-preview.html

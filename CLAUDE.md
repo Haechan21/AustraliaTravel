@@ -44,7 +44,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 식당 평가 프레임워크: ✅ 완료 — CRITIC_DINING.md 작성 완료 (3명 페르소나 A''' 동선 미식가 / B''' 미식 큐레이터 / C''' 리뷰 검증자, 6개 기준 F1~F6, 지역별+식사유형별 상대 순위 방식). scoring.json 동기화 완료
 - 식당 리서치: ✅ 완료 — 6개 거점 + 10개 경유지 140개+ 식당/체험 조사 (1차 7팀 + 2차 5팀 병렬 리서치). 호주 공원 BBQ 가이드, 파머스마켓 일정, 호주 고유 음식 체험 포함
 - 식당 평가: ✅ 완료 — CRITIC_DINING.md 프레임워크 기반 6개 거점 126개 식당 3명 페르소나 독립 채점. 거점별 식사유형별 추천/차선/가능/비추 라벨 부여(추천 35·차선 30·가능 47·비추 14). 논쟁 식당 56곳(44%) 식별. 상세 수치는 식당_종합가이드.md(SSOT) 참조
-- 향후: 숙소·식당 확정 → ITINERARY.md 통합, Phase 5(일정 리뷰) 진행
+- 숙소 예약: ✅ 5박 확정 — Discovery Parks(바이런), Park Beach Resort(콥스), Surf Beach Motel(포트맥쿼리), Hotel Nelson(넬슨베이), Farm Tiny Home(블루마운틴). 시드니 2박 미확정
+- 향후: 시드니 숙소 확정 + 식당 확정 → ITINERARY.md 통합, Phase 5(일정 리뷰) 진행
 
 ## 에이전트 작업 체크리스트
 
@@ -75,7 +76,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### Phase 4→5 전환 시
 - [x] 9개 루트 중 최종 선택 → 6조 확정 (2026-03-20), `docs/ITINERARY.md`에 이동일정 반영 완료
-- [ ] 숙소·식당 확정 → ITINERARY.md 통합
+- [x] 숙소 5박 확정 → ITINERARY.md 통합 (2026-03-23)
+- [ ] 시드니 숙소 2박 + 식당 확정 → ITINERARY.md 통합
 - [ ] Phase 5 리뷰 시작 → `research/claude-research/` 근거 저장
 
 ## 스크립트 실행
@@ -131,6 +133,7 @@ data/
   routes/route_data.json           ← 루트 거리·stops SSOT
   routes/route_geometry.json       ← OSRM 경로 geometry
   lodging/lodging_data.json        ← 숙소 데이터 SSOT (77개: 기본 44 + 투자 33)
+  lodging/bookings.json            ← 확정 예약 정보 (5박, 시설·주변관광·조치사항 포함)
   dining/dining_data.json          ← 식당 데이터 SSOT (126개, 예산 시나리오 포함)
   activities/activities_data.json  ← 액티비티 데이터 SSOT (109개, 10개 지역)
   regions.json                     ← 지역 분류

@@ -13,6 +13,7 @@
       ],
       "budget": "$150~420",
       "nights": 1,
+      "confirmed": "Discovery Parks - Byron Bay",
       "summary": "783km 운전 후 20:30 도착. 뷰는 즐길 시간 없음(9.5시간 체류, 대부분 수면). 셀프체크인 + 보안주차가 핵심.",
       "budgetPick": {
         "economy": {
@@ -273,6 +274,7 @@
       ],
       "budget": "$100~222",
       "nights": 1,
+      "confirmed": "Park Beach Resort Motel",
       "summary": "오후 도착, Jetty Strip 저녁 식사 후 휴식. Jetty Strip 도보권 + 가성비+청결이 핵심.",
       "budgetPick": {
         "economy": {
@@ -594,6 +596,7 @@
       ],
       "budget": "$90~230",
       "nights": 1,
+      "confirmed": "Surf Beach Motel Port",
       "summary": "화요일 비수기 최저가. Tacking Point 일몰 후 저녁 식사, 다음날 250km 이동.",
       "budgetPick": {
         "economy": {
@@ -885,6 +888,7 @@
       ],
       "budget": "$140~250",
       "nights": 1,
+      "confirmed": "Hotel Nelson",
       "summary": "정오 도착으로 시설 활용 시간 가장 많음(~20시간). 2025 리노 직후 Marina Resort이 압도적. \"넬슨베이에서는 위치가 럭셔리.\"",
       "budgetPick": {
         "economy": {
@@ -1108,6 +1112,7 @@
       ],
       "budget": "$200~400",
       "nights": 1,
+      "confirmed": "Unique Farm Tiny Home with Sauna",
       "summary": "여행의 클라이맥스. 에코포인트 석양(17:15) 후 감성 마무리. 밸리 뷰 vs 벽난로 트레이드오프. Autumn Extras 프로모 활용.",
       "budgetPick": {
         "economy": {
@@ -1348,6 +1353,7 @@
       ],
       "budget": "$300~900(2박)",
       "nights": 2,
+      "confirmed": null,
       "summary": "렌터카 반납 후(주차 불필요). Vivid Sydney 성수기. 5/31 07:55 비행 → 04:30 출발. Harbour Rocks 휴업(3/15~9/21).",
       "budgetPick": {
         "economy": {

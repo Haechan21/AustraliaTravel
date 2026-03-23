@@ -1,0 +1,484 @@
+{
+  "meta": {
+    "description": "확정 숙소 예약 정보 (5박, 2026-05-24 ~ 2026-05-29)",
+    "total_nights": 5,
+    "total_cost_krw": 958567,
+    "last_updated": "2026-03-23"
+  },
+  "bookings": [
+    {
+      "id": "byron-bay",
+      "day": "Day 1",
+      "date": "2026-05-24",
+      "destination": "바이런베이",
+      "property": {
+        "name": "Discovery Parks - Byron Bay",
+        "name_ko": "디스커버리 파크스 - 바이런 베이",
+        "type": "홀리데이 파크 (캐러밴 파크 기반 캐빈)",
+        "address": "399 Ewingsdale Road, Byron Bay, NSW 2481, Australia",
+        "coords": [-28.6474, 153.602],
+        "distance_to_town": "타운 센터에서 약 2km",
+        "total_rooms": "약 40개 캐빈/사이트",
+        "rating": {
+          "booking_com": "8.7/10 (2,953건)",
+          "tripadvisor": "3.0/5.0 (516건)"
+        }
+      },
+      "reservation": {
+        "platform": "Trip.com",
+        "room_type": "Economy Studio Cabin - Sleeps 2",
+        "room_type_ko": "경제 스튜디오 캐빈 (2인용)",
+        "guests": 2,
+        "check_in": "2026-05-24 14:00~18:00",
+        "check_out": "2026-05-25 08:00~10:00",
+        "price_krw": 144764,
+        "price_breakdown": {
+          "original": 158418,
+          "discount": -13654,
+          "paid": 144764
+        },
+        "cancellation": {
+          "free_before": "2026-05-10 23:59 (현지시간)",
+          "after": "환불 불가"
+        },
+        "confirmation_no": "1400824645578838"
+      },
+      "check_in_guide": {
+        "reception_hours": "08:00~18:00",
+        "late_arrival": "반드시 72시간 전 사전 연락 필수. after-hours 도착 시 게이트 코드 + 캐빈 키 수령 방법 별도 안내",
+        "method": "사전 연락 → 이메일로 도착 지침 수령",
+        "action_required": "20:30 도착 예정 — 예약 후 즉시 숙소에 이메일/전화로 연락 필요"
+      },
+      "room_facilities": {
+        "bed": "더블 베드 1개",
+        "area_sqm": null,
+        "climate": "리버스 사이클 에어컨 (냉난방 겸용)",
+        "tv": "스마트 TV (Netflix 가능, Wi-Fi 불안정 시 스트리밍 어려움)",
+        "kitchen": "키치넷 — 핫플레이트/그릴, 전자레인지, 냉장고, 식기류/조리도구 제공",
+        "coffee_tea": "캐빈 내 미확인 (캠프 키친 또는 입구 카페 이용)",
+        "bathroom": "전용 엔스위트 (샤워, 변기, 세면대. 욕조 없음)",
+        "towels_amenity": "리넨 + 수건 제공",
+        "balcony": "발코니 있음 (일부 유닛 레이크뷰)"
+      },
+      "property_facilities": {
+        "pool": "야외 수영장 2개 (1개 겨울철 온수)",
+        "parking": "무료 (캐빈 앞 주차)",
+        "wifi": "무료 (불안정 — 리뷰에서 빈번한 불만)",
+        "laundry": "코인 세탁기/건조기 (일부 고장 보고)",
+        "bbq": "공용 BBQ 구역 다수",
+        "camp_kitchen": "넓은 공용 주방 (냉장고, 조리시설)",
+        "tennis": "테니스 코트 1면",
+        "bike_rental": "자전거 대여 가능 (타운까지 자전거도로 연결)",
+        "cafe": "입구 Folk 카페 (07:30~14:30)"
+      },
+      "nearby": {
+        "restaurants": [
+          {"name": "Folk Byron Bay", "distance": "파크 입구 바로 앞", "note": "유기농 홀푸드, 07:30~14:30"},
+          {"name": "Three Blue Ducks at The Farm", "distance": "차량 5분", "note": "농장 위 팜투테이블 레스토랑"},
+          {"name": "Stone & Wood Brewery", "distance": "도보 가능", "note": "크래프트 맥주 양조장"}
+        ],
+        "attractions": [
+          {"name": "Cape Byron Lighthouse & Coastal Walk", "distance": "차량 5~8분", "note": "3.7km 루프 트레일, 고래 관측 포인트, 호주 최동단 등대"},
+          {"name": "Main Beach", "distance": "차량 5분", "note": "서핑 초보 적합"},
+          {"name": "Byron Farmers Market", "distance": "차량 5분", "note": "매주 목요일 7~11am"}
+        ]
+      },
+      "may_notes": {
+        "weather": "낮 20~21°C / 밤 15~16°C, 강수 62mm(건조한 편)",
+        "sunset": "~16:56",
+        "seasonal": "고래 시즌 시작 (혹등고래 북상), 비수기 한적, 서핑 컨디션 좋음",
+        "clothing": "가벼운 재킷/긴팔 필수"
+      },
+      "review_summary": {
+        "pros": ["위치 좋음 (타운 2km)", "수영장 2개 + 워터파크", "자전거 대여", "스태프 친절"],
+        "cons": ["Wi-Fi 매우 불안정", "에어컨 소음", "세탁기 고장 빈번", "Economy 캐빈 컨디션 고르지 않음"],
+        "tips": "모바일 데이터 백업 필수. 간단한 아침 식재료 미리 구입(키치넷 활용) 또는 Folk 카페 이용"
+      }
+    },
+    {
+      "id": "coffs-harbour",
+      "day": "Day 2",
+      "date": "2026-05-25",
+      "destination": "코프스 하버",
+      "property": {
+        "name": "Park Beach Resort Motel",
+        "name_ko": "파크 비치 리조트 모텔",
+        "type": "3성급 모텔 (오너 운영)",
+        "address": "111/113 Park Beach Rd, Coffs Harbour, NSW 2450, Australia",
+        "coords": [-30.296, 153.138],
+        "distance_to_town": "Park Beach 도보 3~5분",
+        "total_rooms": "20개 금연 객실 + 2개 아파트",
+        "rating": {
+          "booking_com": "8.7/10 (722건)",
+          "tripadvisor": "높은 평가"
+        }
+      },
+      "reservation": {
+        "platform": "Trip.com",
+        "room_type": "Deluxe Queen Room",
+        "room_type_ko": "디럭스 퀸룸 (퀸침대 1개)",
+        "guests": 2,
+        "check_in": "2026-05-25 14:00 이후",
+        "check_out": "2026-05-26 10:00 이전",
+        "price_krw": 165072,
+        "price_breakdown": {
+          "original": 181404,
+          "discount": -16332,
+          "discount_type": "골드 등급 특가",
+          "paid": 165072
+        },
+        "cancellation": {
+          "free_before": "2026-05-23 14:00 (현지시간)",
+          "after": "환불 불가"
+        },
+        "confirmation_no": "1400824645636709"
+      },
+      "check_in_guide": {
+        "reception_hours": "24시간 프론트 데스크",
+        "late_arrival": "20시 이후 도착 시 사전 연락 필요",
+        "method": "프론트 데스크 체크인",
+        "action_required": "19시 이후 도착 예정 시 사전 연락 권장"
+      },
+      "room_facilities": {
+        "bed": "퀸 사이즈 베드 1개",
+        "area_sqm": 26,
+        "climate": "스플릿 시스템 인버터 에어컨 (냉난방 겸용)",
+        "tv": "40인치 스마트 TV",
+        "kitchen": "키치넷 — 바 프리지/냉동칸, 전자레인지, 싱크대, 식기류/커틀러리",
+        "coffee_tea": "커피/차 메이커 + 토스터 + 주전자",
+        "bathroom": "전용 엔스위트 욕실",
+        "towels_amenity": "수건(부드러움 호평) + 방향제 + 웰컴 쿠키",
+        "balcony": null,
+        "extras": "소파, 테이블+의자 2개, 4포트 USB 충전 허브, 암막 커튼"
+      },
+      "property_facilities": {
+        "pool": "야외 수영장 (리뷰에서 호평)",
+        "parking": "무료 셀프 주차 (객실 앞 주차 가능)",
+        "wifi": "무료 Wi-Fi (객실 + 공용구역)",
+        "laundry": "셀프 세탁 시설",
+        "bbq": "BBQ 구역 (수영장 옆)",
+        "tennis": "하프 테니스 코트",
+        "putt_putt": "미니 퍼트퍼트 골프",
+        "ev_charger": "Tesla Destination Charger (유료)",
+        "garden": "잔디 정원"
+      },
+      "nearby": {
+        "restaurants": [
+          {"name": "Park Beach Bowling Club", "distance": "도보 5분 (350m)", "note": "식사 가능한 클럽"},
+          {"name": "Jetty/Marina 레스토랑", "distance": "차량 5분", "note": "카페·레스토랑 밀집"},
+          {"name": "Nados Lebanese", "distance": "도보 5분", "note": "주변 식당"}
+        ],
+        "attractions": [
+          {"name": "Park Beach", "distance": "도보 3~5분", "note": "숙소에서 가장 가까운 해변"},
+          {"name": "Muttonbird Island", "distance": "도보 25분 / 차량 5분", "note": "해안 산책로, 왕복 5km 트레일"},
+          {"name": "Big Banana Fun Park", "distance": "차량 5~7분", "note": "가족 테마파크"},
+          {"name": "Park Beach Plaza", "distance": "도보 5분", "note": "쇼핑센터, 슈퍼마켓"}
+        ]
+      },
+      "may_notes": {
+        "weather": "낮 20.6°C / 밤 13.8°C, 강수 46mm(건조)",
+        "sunset": "~17:00",
+        "seasonal": "고래 시즌 초입 (5월 말 초기 이동 개체 가능), Muttonbird Island에서 육지 관찰 무료",
+        "clothing": "아침저녁 긴팔/재킷 필요, 낮에는 반팔 가능"
+      },
+      "review_summary": {
+        "pros": ["오너 Arthur의 세심한 호스피탈리티", "청결도 최상 (spotless)", "가성비 우수", "해변 도보 3분"],
+        "cons": ["시설 인테리어 다소 오래됨", "인접 바 야간 음악 소음", "일부 흡연 연기 유입"],
+        "tips": "조식 현장 구매 가능(AU$20/인) 또는 키치넷으로 자체 준비. Arthur가 늦은 도착도 친절히 대응한다는 후기"
+      }
+    },
+    {
+      "id": "port-macquarie",
+      "day": "Day 3",
+      "date": "2026-05-26",
+      "destination": "포트 맥쿼리",
+      "property": {
+        "name": "Surf Beach Motel Port",
+        "name_ko": "서프 비치 모텔 포트",
+        "type": "모텔 (4성급 표기, 리노베이션 완료)",
+        "address": "64 Burrawan St, Port Macquarie, NSW 2444, Australia",
+        "coords": [-31.4333, 152.9089],
+        "distance_to_town": "Town Beach 도보 10분, CBD 도보 10분",
+        "total_rooms": "약 15실 (소규모 모텔)",
+        "rating": {
+          "booking_com": "8.6/10 (2,136건)",
+          "couple_score": "8.7/10"
+        }
+      },
+      "reservation": {
+        "platform": "Agoda",
+        "room_type": "Budget Queen Room - Street Parking",
+        "room_type_ko": "버짓 퀸룸 (도로 주차)",
+        "guests": 2,
+        "check_in": "2026-05-26 14:00",
+        "check_out": "2026-05-27 10:00",
+        "price_krw": 132591,
+        "price_breakdown": {
+          "room_rate": 120541,
+          "tax_service": 12050,
+          "paid": 132591
+        },
+        "cancellation": {
+          "free_before": "2026-05-24 00:00 (현지시간)",
+          "after": "환불 불가 (전액 부과)"
+        },
+        "confirmation_no": "1710705937"
+      },
+      "check_in_guide": {
+        "reception_hours": "08:00~18:30",
+        "late_arrival": "18:30 이후 도착 시 사전 연락 필수 (after-hours 체크인 가능)",
+        "method": "리셉션 체크인 + 익스프레스 체크인 가능",
+        "action_required": "도착 시간 사전 공유 권장"
+      },
+      "room_facilities": {
+        "bed": "킹사이즈 베드 1개 (명칭은 Queen이나 실제 킹 배치 보고)",
+        "area_sqm": 16,
+        "climate": "에어컨 + 천장 선풍기 + 히터",
+        "tv": "플랫스크린 TV (위성 채널 + 주문형 영화)",
+        "kitchen": "키치넷 — 냉장고, 전자레인지, 싱크대",
+        "coffee_tea": "커피/차 메이커 + 미니바",
+        "bathroom": "전용 욕실 (샤워 + 별도 화장실)",
+        "towels_amenity": "바스 시트 제공, 기본 어메니티",
+        "balcony": null
+      },
+      "property_facilities": {
+        "pool": "없음 (인근 200m에 Port Macquarie Swimming Pool)",
+        "parking": "Budget Room은 전용 주차 없음 — 도로 주차 (Burrawan St 무료)",
+        "wifi": "무료 NBN Wi-Fi",
+        "laundry": "세탁 시설 있음",
+        "bbq": "BBQ/피크닉 에어리어",
+        "extras": "짐 보관, 일일 하우스키핑, 다리미/다리미판"
+      },
+      "nearby": {
+        "restaurants": [
+          {"name": "The Stunned Mullet", "distance": "도보권", "note": "수상 경력 시푸드 레스토랑"},
+          {"name": "Little Shack", "distance": "도보권", "note": "강변 와인바"},
+          {"name": "Salty Crew Kiosk", "distance": "Town Beach", "note": "해변 카페"}
+        ],
+        "attractions": [
+          {"name": "Coastal Walk (9km)", "distance": "Town Beach에서 시작", "note": "Town→Flynns→Shelly→Tacking Point Lighthouse"},
+          {"name": "Tacking Point Lighthouse", "distance": "차량 8~10분", "note": "1879년, 호주 13번째 오래된 등대"},
+          {"name": "코알라 병원 (Guulabaa)", "distance": "차량 15분", "note": "임시 이전지 — 8 Guulabaa Way, Lake Innes"},
+          {"name": "Breakwall", "distance": "도보 10분", "note": "알록달록 페인팅된 바위 방파제"}
+        ]
+      },
+      "may_notes": {
+        "weather": "낮 20.2°C / 밤 14.6°C, 해수온 23°C",
+        "sunset": "~17:00",
+        "seasonal": "혹등고래 북상 시작, Port Jet 크루즈 고래 관측 운영(5~11월), 비수기 한적",
+        "clothing": "아침저녁 히터 필요, 가벼운 재킷 필수"
+      },
+      "review_summary": {
+        "pros": ["청결도 최상 (recently renovated)", "킹사이즈 침대 매우 편안", "모던 인테리어", "스태프 친절", "가성비 탁월"],
+        "cons": ["베개 2개만 제공 (추가 요청 필요)", "Budget Room은 전용 주차 없음", "해변 조망 없음"],
+        "tips": "Budget Room 짐 하역 후 도로 주차 이동 필요"
+      }
+    },
+    {
+      "id": "nelson-bay",
+      "day": "Day 4",
+      "date": "2026-05-27",
+      "destination": "넬슨 베이",
+      "property": {
+        "name": "Hotel Nelson",
+        "name_ko": "호텔 넬슨",
+        "type": "4성급 부티크 호텔 (Indi Hotels 그룹)",
+        "address": "3-7 Government Road, Nelson Bay, Port Stephens, NSW 2315, Australia",
+        "coords": [-32.7231, 152.1441],
+        "distance_to_town": "d'Albora Marina 도보 2분, Nelson Bay Beach 도보 5분",
+        "total_rooms": "39실",
+        "rating": {
+          "booking_com": "8.8/10 (1,590건)",
+          "expedia": "9.2/10",
+          "trip_com": "9.0/10 (114건)",
+          "couple_score": "9.6/10"
+        }
+      },
+      "reservation": {
+        "platform": "Agoda",
+        "room_type": "Gardenview Queen",
+        "room_type_ko": "가든뷰 퀸",
+        "guests": 2,
+        "check_in": "2026-05-27 13:00",
+        "check_out": "2026-05-28 10:00",
+        "price_krw": 180705,
+        "price_breakdown": {
+          "room_rate": 170932,
+          "tax_service": 17096,
+          "coupon": -7323,
+          "coupon_type": "아고다 앱 3번째 예약 할인 4.28%",
+          "paid": 180705
+        },
+        "cancellation": {
+          "type": "환불 불가",
+          "details": "수정/변경 불가, 노쇼 시 100% 부과"
+        },
+        "confirmation_no": "1710671584"
+      },
+      "check_in_guide": {
+        "reception_hours": "제한적 운영 (24시간 아님, 정확한 시간 확인 필요)",
+        "late_arrival": "도착 예정 시간 사전 공유 권장",
+        "method": "프론트 데스크 체크인",
+        "action_required": "체크인 13:00부터 가능 — 비교적 이른 체크인"
+      },
+      "room_facilities": {
+        "bed": "퀸사이즈 Sleepyhead Pillowtop 매트리스 1개",
+        "area_sqm": null,
+        "climate": "에어컨 (냉난방)",
+        "tv": "UHD TV + FOXTEL (위성)",
+        "kitchen": "키치넷 — 전자레인지, 싱크대, 전기팬(간단 조리 가능)",
+        "coffee_tea": "전기 주전자 + 토스터 + 차/커피 용품",
+        "bathroom": "샤워 전용 또는 샤워+욕조 (객실 따라 다름)",
+        "towels_amenity": "수건 제공 (풀사이드 수건 별도), 기본 어메니티",
+        "balcony": "발코니 또는 코트야드 (가든 뷰)"
+      },
+      "property_facilities": {
+        "pool": "12m 온수풀 + 선데크/선베드/파라솔",
+        "parking": "무료 지하 주차장 (만차 가능성 있음)",
+        "wifi": "무료 Wi-Fi (전 객실)",
+        "fitness": "에어컨 운동실 (런닝머신, 고정자전거, 프리웨이트)",
+        "steam_room": "스팀룸",
+        "cafe": "The Little Nel Cafe (P&R Coffee, 조식 7:00~11:30)",
+        "bike_rental": "숙박객 전용 자전거 대여",
+        "bbq": "BBQ 시설",
+        "bocce": "보체 코트",
+        "ev_charger": "Tesla Wall Charger (AU$10, 리셉션에서 잠금해제)"
+      },
+      "nearby": {
+        "restaurants": [
+          {"name": "The Little Nel Cafe", "distance": "숙소 내", "note": "P&R Coffee, 조식 + 런치"},
+          {"name": "d'Albora Marina 식당가", "distance": "도보 2분", "note": "카페·레스토랑·아이스크림 밀집"}
+        ],
+        "attractions": [
+          {"name": "돌핀 워칭 크루즈", "distance": "마리나 출발 (도보 2분)", "note": "1.5시간, 140마리+ 병코돌고래 상시 서식"},
+          {"name": "Tomaree Head Summit Walk", "distance": "차량 5~7분", "note": "왕복 2.2km/45분, 360도 파노라마"},
+          {"name": "Shoal Bay Beach", "distance": "차량 5분", "note": "백사장, 카페, 맑은 바다"},
+          {"name": "Stockton Sand Dunes", "distance": "차량 10분", "note": "남반구 최대 사구, 샌드보딩/4WD"},
+          {"name": "웨일 워칭 크루즈", "distance": "마리나 출발", "note": "5~11월 시즌, 5월 말 조기 운항 여부 확인 필요"}
+        ]
+      },
+      "may_notes": {
+        "weather": "낮 19.4°C / 밤 13.6°C, 해수온 22°C",
+        "sunset": "~17:00",
+        "seasonal": "돌핀 연중 관찰 가능, 고래 시즌 직전(5월 초 첫 목격 기록), 비수기 최저가",
+        "clothing": "겉옷 필수, 바람 있을 수 있음"
+      },
+      "review_summary": {
+        "pros": ["위치 최강 (마리나 도보 2분)", "청결도 탁월", "커플 만족도 최상 (9.6/10)", "온수풀 + 스팀룸 + 짐", "Little Nel Cafe 조식 호평"],
+        "cons": ["엘리베이터 작음/간헐 고장", "주차 만차 가능", "가든뷰 (오션뷰 아님)", "키치넷 제한적 (본격 조리 불가)"],
+        "tips": "짐 무거우면 1층 요청. 조식은 Little Nel Cafe 추천"
+      }
+    },
+    {
+      "id": "blue-mountains",
+      "day": "Day 5",
+      "date": "2026-05-28",
+      "destination": "블루 마운틴 (Little Hartley)",
+      "property": {
+        "name": "Unique Farm Tiny Home with Sauna",
+        "name_ko": "유니크 팜 타이니 홈 위드 사우나",
+        "type": "Airbnb 타이니홈 (농장 부지 내 독립형)",
+        "address": "1 Seymour Chase, Little Hartley, NSW 2790, Australia",
+        "coords": [-33.59297, 150.19888],
+        "distance_to_town": "Katoomba 차량 23분, Blackheath 차량 16분, Lithgow 차량 20분",
+        "total_rooms": "1동 (집 전체)",
+        "rating": {
+          "airbnb": "4.99/5.0 (77건, 전 카테고리 5.0 만점)"
+        }
+      },
+      "reservation": {
+        "platform": "Airbnb",
+        "room_type": "집 전체 (Tiny Home)",
+        "room_type_ko": "타이니홈 전체 (1침실/1욕실)",
+        "guests": 2,
+        "check_in": "2026-05-28 15:00 이후",
+        "check_out": "2026-05-29 11:00까지",
+        "price_krw": 335435,
+        "price_breakdown": {
+          "nightly_rate": 293936,
+          "service_fee": 41499,
+          "paid": 335435
+        },
+        "cancellation": {
+          "free_before": "2026-05-27 15:00 (현지시간)",
+          "after": "예약 대금 환불 불가"
+        },
+        "confirmation_no": "HMYJYZ4SRM"
+      },
+      "check_in_guide": {
+        "reception_hours": null,
+        "late_arrival": null,
+        "method": "호스트(Ebony)가 도착 당일 오전에 체크인 세부 정보 발송 예정",
+        "action_required": "도착 당일 오전 호스트 메시지 확인. 가로등 없어 밤 도착 시 손전등 필수"
+      },
+      "room_facilities": {
+        "bed": "로프트 더블 베드 1개 (사다리 접근) + 아래층 소파 베드 1개",
+        "area_sqm": null,
+        "climate": "역순환 에어컨 (스플릿 덕트리스, 냉난방 겸용) + 전기담요 + 두꺼운 이불",
+        "tv": "없음",
+        "kitchen": "풀키친 — 가스 쿡탑(2버너), 풀사이즈 오븐, 전자레인지, 미니 냉장고+냉동실, 식기세척기, 토스터, 전기포트, 조리도구/식기류 완비",
+        "coffee_tea": "에스프레소 머신 + 프렌치프레스 + 커피 원두 제공",
+        "bathroom": "전용 욕실 1개 (온수, 컨디셔너 제공)",
+        "towels_amenity": "에센셜 + 침구 제공",
+        "balcony": null,
+        "special": "전용 사우나, 핸드메이드 세라믹 머그컵, 서적 컬렉션, 보드게임"
+      },
+      "property_facilities": {
+        "sauna": "전용 사우나 (배럴형 야외 사우나)",
+        "parking": "무료 구내 주차 (전용 펜스 마당 내)",
+        "wifi": "없음 (핸드폰 수신은 양호)",
+        "firepit": "소형 파이어핏 (계절별 화재 금지령 시 사용 불가)",
+        "bbq": "BBQ 그릴 (사용 후 청소 필수, 미청소 시 $30 추가)",
+        "farm": "젖소(Molly), 미니 말(Spirit), 오리, 개 2마리 — 창문 너머 관찰 가능, 울타리 안 출입 금지 (전기 와이어)",
+        "laundry": "없음",
+        "house_rules": "반려동물 불가, 파티/이벤트 금지, 퇴실 시 식기 세척 + BBQ 청소 + 사우나 문 닫기"
+      },
+      "nearby": {
+        "restaurants": [
+          {"name": "Hartley Fresh & Cafe", "distance": "차량 3분", "note": "평일 6AM~4PM, 주말 7:30AM. '최고의 베이컨 에그 롤' 평가"},
+          {"name": "Hartley Vale Cafe", "distance": "차량 5분", "note": "1830년대 역사 건물, 로컬 식재료, 수~일 9AM~4PM"},
+          {"name": "Katoomba 카페 거리", "distance": "차량 23분", "note": "다양한 선택지"},
+          {"name": "Blackheath 카페", "distance": "차량 16분", "note": "Anonymous Cafe, Altitude 등 고급 카페"}
+        ],
+        "attractions": [
+          {"name": "Three Sisters / Scenic World", "distance": "차량 23분 (Katoomba)", "note": "블루마운틴 대표 명소"},
+          {"name": "Govetts Leap Lookout", "distance": "차량 16분 (Blackheath)", "note": "절벽 전망대"},
+          {"name": "Hartley Historic Site", "distance": "차량 3분", "note": "1830년대 역사 건물군"},
+          {"name": "Mount York Summit Walk", "distance": "차량 8분", "note": "2.4km 루프, Kanimbla Valley 파노라마"},
+          {"name": "Jenolan Caves", "distance": "차량 1시간~1시간20분", "note": "석회암 동굴 (당일치기 가능하나 거리 있음)"}
+        ]
+      },
+      "may_notes": {
+        "weather": "낮 13~16°C / 밤 2~6°C (해발 650~750m, 시드니보다 10도+ 낮음)",
+        "sunset": "~17:00~17:10",
+        "frost": "아침 서리 빈번 (차량·잔디에 서리)",
+        "seasonal": "단풍 막바지 (일부 참나무/너도밤나무 잔존), 아침 안개 장관, 밤하늘 별 관찰 유리",
+        "clothing": "패딩/다운재킷 필수, 비니/장갑 권장 (새벽 하이킹 시), 우비"
+      },
+      "review_summary": {
+        "pros": ["평점 4.99/5.0 (전 카테고리 만점)", "사우나 + 추운 밤 = 최고 조합", "풀키친 + 에스프레소 머신", "젖소·미니말·오리 농장 분위기", "전용 펜스 마당 + 파이어핏"],
+        "cons": ["Wi-Fi 없음 (모바일 데이터 필수)", "TV 없음", "로프트 침실 사다리 접근", "세탁기 없음", "가로등 없음 (밤 도착 주의)", "식료품 미리 장보기 필요 (마트 20분+)"],
+        "tips": "도착 전 Lithgow/Katoomba에서 식재료 구입. BBQ 사용 후 반드시 청소($30 추가). 야간 운전 시 캥거루 주의. 인근 도로 공사로 우회 시 25~30분 추가 소요 가능"
+      }
+    }
+  ],
+  "summary": {
+    "cost_by_platform": {
+      "trip_com": {"nights": 2, "total_krw": 309836, "bookings": ["바이런베이", "코프스 하버"]},
+      "agoda": {"nights": 2, "total_krw": 313296, "bookings": ["포트 맥쿼리", "넬슨 베이"]},
+      "airbnb": {"nights": 1, "total_krw": 335435, "bookings": ["블루 마운틴"]}
+    },
+    "cancellation_deadlines": [
+      {"day": 1, "destination": "바이런베이", "deadline": "2026-05-10 23:59", "status": "무료취소 가능"},
+      {"day": 2, "destination": "코프스 하버", "deadline": "2026-05-23 14:00", "status": "무료취소 가능"},
+      {"day": 3, "destination": "포트 맥쿼리", "deadline": "2026-05-24 00:00", "status": "무료취소 가능"},
+      {"day": 4, "destination": "넬슨 베이", "deadline": null, "status": "환불 불가"},
+      {"day": 5, "destination": "블루 마운틴", "deadline": "2026-05-27 15:00", "status": "무료취소 가능"}
+    ],
+    "action_items": [
+      "Day 1 바이런베이: 즉시 숙소에 20:30 도착 사전 연락 (after-hours 체크인 지침 수령)",
+      "Day 2 코프스 하버: 19시 이후 도착 시 사전 연락",
+      "Day 5 블루 마운틴: 도착 전 Lithgow/Katoomba에서 식재료 장보기, 도착 당일 호스트 메시지 확인"
+    ]
+  }
+}
