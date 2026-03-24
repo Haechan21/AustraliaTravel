@@ -768,7 +768,8 @@ python scripts/sync_data_docs.py --fix         # 마커 값 교체
 │   │   ├── 6일-로드트립-리서치.md
 │   │   ├── 호주-5월-여행환경.md
 │   │   └── ...
-│   └── route-plans/            #   9개 루트 후보 상세 일정 + CRITIC 토론 문서
+│   ├── route-plans/            #   로드트립 루트 후보 상세 일정 (1~9조) + CRITIC 토론
+│   └── sydney-plans/           #   시드니 Day 7 세부 일정 계획
 │
 ├── GoogleMaps/                 # 구글맵 내보내기 원본 (입력, 수정 금지)
 │   └── {YYYY-MM-DD}.json      # 날짜 기반 파일명, 모든 카테고리 혼합
