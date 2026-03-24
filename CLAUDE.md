@@ -22,13 +22,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - **`research/claude-research/activities/액티비티_종합가이드.md`**: 액티비티 수치의 **Single Source of Truth(SSOT)**. 10개 지역 109개 액티비티 리서치 현황, 5월 적합도 분포, 6조 루트 기준 지역별 핵심 액티비티, 주제별 횡단 가이드(고래·은하수·서핑·커플), 비용 시뮬레이션. 액티비티 숫자 변경 시 이 파일을 먼저 갱신하고 다른 문서에 반영.
 - **`docs/TRAVELER_PROFILE.md`**: 여행자 프로필 및 선호도 설문 결과. 운전 내성, 여행 스타일, 예산 범위 등 개인 선호 정의.
 
-## 워크플로우 (5 Phase)
+## 워크플로우 (4 Phase)
 
 1. **전처리**: `GoogleMaps/*.json` → `data/places/{category}/{id}.json` stub 생성 + `data/regions.json`
 2. **정보 수집**: 웹검색으로 장소별 상세정보·리뷰 수집 → place JSON의 `collected_data` 채움, `research/claude-research/`에 리서치 저장
 3. **평가/등급**: 수집 데이터 기반 S~D 등급 부여 → `data/scores/{category}_scored.json`
 4. **일정 생성**: 대화형으로 일정 구성 → `docs/ITINERARY.md`에 직접 기록
-5. **일정 리뷰**: 확정 일정을 비판적으로 검토 → `research/claude-research/`에 근거 저장, `docs/ITINERARY.md`에 리뷰 반영
 
 ## 현재 진행 상황
 
@@ -36,7 +35,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Phase 2 (정보 수집): ✅ 완료 — 110개 장소 collected_data 채움, 15개 지역 분류, 주제별·지역별 리서치 30건+
 - Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 110곳 평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:11 (may_adjusted_score 기준 단일 `grade`). 논쟁 장소 37곳
 - Phase 4 (일정 생성): ✅ 완료 — **6조 확정** (바이런직행+블루마운틴, v7 1위 78.0점). ITINERARY.md 이동일정 전일 작성 완료 (숙소·식당은 미확정). 9개 루트 후보 비교 → CRITIC_ROUTE v7 재평가 → 6조 최종 선택 (2026-03-20)
-- Phase 5 (일정 리뷰): ⬜ 미시작
 - 액티비티 리서치: ✅ 완료 — 10개 지역 109개 체험 활동 조사 (5개 신규 + 5개 보강: 은하수·우천대안·커플체험 추가)
 - 숙소 평가 프레임워크: ✅ 완료 — CRITIC_LODGING.md 작성 완료 (3명 페르소나 A''/B''/C'', 7개 기준 L1~L7, 거점별 상대 순위 방식). 6조 기준 6개 거점 맥락 정의, scoring.json 동기화 완료
 - 숙소 리서치: ✅ 완료 — 6개 거점 62개 기본후보 + 33개 투자후보 조사, 복수 플랫폼(Booking/TA/Google/공식사이트) 가격·리뷰 수집. 상세는 종합비교.md 참조
@@ -47,7 +45,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 숙소 예약: ✅ 5박 확정 — Discovery Parks(바이런), Park Beach Resort(콥스), Surf Beach Motel(포트맥쿼리), Hotel Nelson(넬슨베이), Farm Tiny Home(블루마운틴). 시드니 2박 미확정
 - 시드니 숙소 추가 리서치: ✅ 완료 (2026-03-23) — 4개 팀 병렬 리서치로 **37개 신규 옵션** 발굴 (뷰 호텔 7 + 에어비앤비 11 + 가성비 12 + 부티크 7). 2박 조합 전략 4가지 분석 (뷰+공항/가성비+뷰/동일숙소/에어비앤비+공항). 3개 시나리오 최종 추천. 상세는 `research/claude-research/accommodation/시드니_추가리서치_2박전략.md`
 - 시드니 특별 체험 리서치: ✅ 완료 (2026-03-23) — 3개 팀 병렬 리서치 + 팩트체크(9/9 확인). Vivid 2026 확정 프로그램(드론쇼 Star-Bound, Fire Kitchen, Saltbush&Starlight), 유니크 체험(BridgeClimb Vivid, 원주민 투어, Icebergs, 피쉬마켓 신축), 호주 특색 음식(록 오이스터, 캥거루 피자, Midden). 3개 시나리오 일정 편입안. 상세는 `research/claude-research/activities/시드니_특별체험_종합가이드.md`, 음식 상세는 `research/claude-research/dining/시드니_호주특색음식_체험_리서치.md`
-- 향후: 시드니 숙소 확정 + 식당 확정 → ITINERARY.md 통합, Phase 5(일정 리뷰) 진행
+- 향후: 시드니 숙소 확정 + 식당 확정 → ITINERARY.md 통합
 
 ## 에이전트 작업 체크리스트
 
@@ -76,11 +74,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - [x] 숙소/식당/액티비티 SSOT 리팩토링: JS 하드코딩 완전 제거 (INVEST_NAMES, BUDGET_PICKS, SCENARIOS → JSON)
 - [x] 숙소/식당/액티비티 종합 문서 마커 삽입 (`sync_data_docs.py`, 108건: 숙소 18 + 식당 43 + 액티비티 47)
 
-### Phase 4→5 전환 시
+### 남은 작업
 - [x] 9개 루트 중 최종 선택 → 6조 확정 (2026-03-20), `docs/ITINERARY.md`에 이동일정 반영 완료
 - [x] 숙소 5박 확정 → ITINERARY.md 통합 (2026-03-23)
 - [ ] 시드니 숙소 2박 + 식당 확정 → ITINERARY.md 통합
-- [ ] Phase 5 리뷰 시작 → `research/claude-research/` 근거 저장
 
 ## 스크립트 실행
 
