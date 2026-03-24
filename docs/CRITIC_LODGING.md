@@ -1,3 +1,8 @@
+---
+layout: default
+title: "CRITIC_LODGING.md — 숙소 평가 워크플로우 & 페르소나 정의"
+---
+
 # CRITIC_LODGING.md — 숙소 평가 워크플로우 & 페르소나 정의
 
 > **이 문서는**: 숙소(accommodation)를 평가하는 전용 프레임워크를 정의한다.

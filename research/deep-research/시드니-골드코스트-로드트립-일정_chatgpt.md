@@ -1,9 +1,10 @@
 ---
+layout: default
+title: "시드니-골드코스트 로드트립 일정 (ChatGPT Deep Research)"
 출처: ChatGPT (Deep Research)
 검색일: 2026-03-12
 프롬프트: 시드니 공항 → 골드코스트 → 시드니 로드트립 6일 일정 계획
 ---
-
 # 시드니-골드코스트 로드트립 일정 (ChatGPT Deep Research)
 
 ## 1일차 (시드니 공항 → 골드코스트)

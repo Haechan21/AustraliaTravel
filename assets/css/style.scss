@@ -67,6 +67,174 @@
   }
 }
 
+// ── Documents index page ──
+.docs-index-page {
+  h1 { margin-bottom: 0.2em; }
+}
+
+.docs-subtitle {
+  color: #586069;
+  font-size: 0.95em;
+  margin-bottom: 1.5em;
+}
+
+.docs-category {
+  margin-bottom: 2em;
+
+  h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.2em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid #e1e4e8;
+  }
+}
+
+.cat-desc {
+  font-size: 0.85em;
+  color: #586069;
+  margin: 0.2em 0 0.8em;
+}
+
+// 핵심 문서 그리드
+.docs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.6em;
+}
+
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8em 1em;
+  border: 1.5px solid #e1e4e8;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s;
+  background: #fff;
+
+  &:hover {
+    border-color: #159957;
+    background: #f0faf4;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  }
+}
+
+.doc-card--core {
+  border-left: 3px solid #159957;
+}
+
+.doc-icon {
+  font-size: 1.4em;
+  margin-bottom: 0.2em;
+}
+
+.doc-title {
+  font-weight: 600;
+  font-size: 0.92em;
+  color: #24292e;
+}
+
+.doc-desc {
+  font-size: 0.78em;
+  color: #586069;
+  margin-top: 0.2em;
+}
+
+// 문서 목록 (리스트 형태)
+.docs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3em;
+}
+
+.doc-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.55em 0.8em;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.15s;
+  background: #fff;
+
+  &:hover {
+    border-color: #159957;
+    background: #f0faf4;
+    transform: translateX(3px);
+  }
+}
+
+.doc-item--highlight {
+  border: 1.5px solid #159957;
+  background: #f0faf4;
+
+  &:hover {
+    background: #e0f5ea;
+  }
+}
+
+.doc-item--selected {
+  border-color: #d4380d;
+  background: #fff7f5;
+
+  &:hover {
+    background: #ffefeb;
+  }
+}
+
+.doc-item-icon {
+  font-size: 1.1em;
+  flex-shrink: 0;
+}
+
+.doc-item-title {
+  flex: 1;
+  font-size: 0.88em;
+  font-weight: 500;
+  color: #24292e;
+}
+
+.doc-item-badge {
+  font-size: 0.7em;
+  font-weight: 700;
+  background: #159957;
+  color: #fff;
+  padding: 0.15em 0.5em;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.badge-selected {
+  background: #d4380d;
+}
+
+.docs-footer {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid #e1e4e8;
+  text-align: center;
+  color: #8c8c8c;
+  font-size: 0.82em;
+}
+
+@media screen and (max-width: 42em) {
+  .docs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-card {
+    padding: 0.6em 0.8em;
+  }
+
+  .doc-item {
+    padding: 0.45em 0.6em;
+  }
+}
+
 // ── Rankings page ──
 .rankings-page {
   h1 {

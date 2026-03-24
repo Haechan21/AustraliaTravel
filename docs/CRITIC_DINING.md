@@ -1,3 +1,8 @@
+---
+layout: default
+title: "CRITIC_DINING.md — 식당 평가 워크플로우 & 페르소나 정의"
+---
+
 # CRITIC_DINING.md — 식당 평가 워크플로우 & 페르소나 정의
 
 > **이 문서는**: 식당(restaurant/cafe/food)을 평가하는 전용 프레임워크를 정의한다.
