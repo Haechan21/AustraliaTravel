@@ -1,3 +1,8 @@
+---
+layout: default
+title: "research/"
+---
+
 # research/
 
 > 리서치 자료와 일정 리뷰 근거를 보관하는 폴더.

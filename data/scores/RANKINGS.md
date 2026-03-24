@@ -1,3 +1,8 @@
+---
+layout: default
+title: "관광지 랭킹 (Attraction Rankings)"
+---
+
 # 관광지 랭킹 (Attraction Rankings)
 
 > 생성일: 2026-03-13 | 평가 대상: 110곳 | 등급: 퍼센타일 기반

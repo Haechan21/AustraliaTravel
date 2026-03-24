@@ -1,0 +1,272 @@
+---
+layout: default
+title: 문서 목록
+---
+
+<div class="docs-index-page">
+  <h1>문서 목록</h1>
+  <p class="docs-subtitle">프로젝트의 모든 리서치 문서와 핵심 자료를 카테고리별로 정리했습니다.</p>
+
+  <!-- 핵심 문서 -->
+  <div class="docs-category">
+    <h2>핵심 문서</h2>
+    <p class="cat-desc">여행 일정, 전제 조건, 설계서, 평가 프레임워크 등 프로젝트의 뼈대가 되는 문서</p>
+    {% comment %}핵심 문서 URL 수집 (순서 보장용){% endcomment %}
+    {% assign core_paths = "docs/ITINERARY.md,docs/META.md,docs/SPEC.md,docs/TRAVELER_PROFILE.md,docs/CRITIC.md,docs/CRITIC_ROUTE.md,docs/CRITIC_LODGING.md,docs/CRITIC_DINING.md,data/scores/RANKINGS.md" | split: "," %}
+    {% assign core_icons = "📋,✈️,⚙️,👤,🎭,🗺️,🏨,🍽️,🏆" | split: "," %}
+    {% assign core_titles = "확정 일정 (ITINERARY),여행 개요 (META),기술 설계서 (SPEC),여행자 프로필,CRITIC — 관광지 평가,CRITIC — 루트 평가,CRITIC — 숙소 평가,CRITIC — 식당 평가,관광지 랭킹" | split: "," %}
+    {% assign core_descs = "날짜별 세부 일정 · Single Source of Truth,항공 렌터카 제약 조건 등 고정 전제,데이터 스키마 워크플로우 평가 기준,운전 내성 여행 스타일 예산 범위,3명 페르소나 · 7개 기준 · 평가 워크플로우,설계/감성/실행 3관점 루트 프레임워크,3명 페르소나 · L1~L7 기준 · 거점별 상대순위,3명 페르소나 · F1~F6 기준 · 지역별 상대순위,110곳 S~D 등급 정적 랭킹" | split: "," %}
+    <div class="docs-grid">
+      {% for core_path in core_paths %}
+        {% for page in site.pages %}
+          {% if page.path == core_path %}
+            <a class="doc-card doc-card--core" href="{{ page.url | relative_url }}">
+              <span class="doc-icon">{{ core_icons[forloop.parentloop.index0] }}</span>
+              <span class="doc-title">{{ core_titles[forloop.parentloop.index0] }}</span>
+              <span class="doc-desc">{{ core_descs[forloop.parentloop.index0] }}</span>
+            </a>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 루트 계획 -->
+  <div class="docs-category">
+    <h2>루트 계획 (9개 후보)</h2>
+    <p class="cat-desc">시드니 출발/반납 6일 로드트립 루트 후보 비교 · 6조 확정</p>
+    <div class="docs-list">
+      {% assign route_pages = "" | split: "" %}
+      {% for page in site.pages %}
+        {% if page.path contains 'research/route-plans/' %}
+          {% assign route_pages = route_pages | push: page %}
+        {% endif %}
+      {% endfor %}
+      {% assign route_sorted = route_pages | sort: 'path' %}
+      {% for page in route_sorted %}
+        {% if page.path == 'research/route-plans/README.md' %}
+          <a class="doc-item doc-item--highlight" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">📊</span>
+            <span class="doc-item-title">종합 비교 (v7)</span>
+            <span class="doc-item-badge">마스터</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+      {% for page in route_sorted %}
+        {% unless page.path == 'research/route-plans/README.md' %}
+          <a class="doc-item {% if page.path contains '6조' %}doc-item--selected{% endif %}" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">🛣️</span>
+            <span class="doc-item-title">{{ page.title | default: page.name | replace: '.md', '' }}</span>
+            {% if page.path contains '6조' %}<span class="doc-item-badge badge-selected">확정</span>{% endif %}
+          </a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 숙소 리서치 -->
+  <div class="docs-category">
+    <h2>숙소 리서치</h2>
+    <p class="cat-desc">6개 거점 77개 숙소 조사 · 기본평가 44개 + 투자평가 33개</p>
+    <div class="docs-list">
+      {% assign accom_pages = "" | split: "" %}
+      {% for page in site.pages %}
+        {% if page.path contains 'research/claude-research/accommodation/' %}
+          {% assign accom_pages = accom_pages | push: page %}
+        {% endif %}
+      {% endfor %}
+      {% assign accom_sorted = accom_pages | sort: 'path' %}
+      <!-- SSOT 먼저 -->
+      {% for page in accom_sorted %}
+        {% if page.path contains '숙소_종합비교' %}
+          <a class="doc-item doc-item--highlight" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">📊</span>
+            <span class="doc-item-title">숙소 종합 비교 (SSOT)</span>
+            <span class="doc-item-badge">SSOT</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+      {% for page in accom_sorted %}
+        {% unless page.path contains '숙소_종합비교' %}
+          <a class="doc-item" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">🏠</span>
+            <span class="doc-item-title">{{ page.title | default: page.name | replace: '.md', '' }}</span>
+          </a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 식당 리서치 -->
+  <div class="docs-category">
+    <h2>식당 리서치</h2>
+    <p class="cat-desc">6개 거점 + 경유지 126개 식당 조사 · 3명 페르소나 독립 채점</p>
+    <div class="docs-list">
+      {% assign dining_pages = "" | split: "" %}
+      {% for page in site.pages %}
+        {% if page.path contains 'research/claude-research/dining/' %}
+          {% assign dining_pages = dining_pages | push: page %}
+        {% endif %}
+      {% endfor %}
+      {% assign dining_sorted = dining_pages | sort: 'path' %}
+      <!-- SSOT 먼저 -->
+      {% for page in dining_sorted %}
+        {% if page.path contains '식당_종합가이드' %}
+          <a class="doc-item doc-item--highlight" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">📊</span>
+            <span class="doc-item-title">식당 종합 가이드 (SSOT)</span>
+            <span class="doc-item-badge">SSOT</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+      {% for page in dining_sorted %}
+        {% unless page.path contains '식당_종합가이드' %}
+          <a class="doc-item" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">🍜</span>
+            <span class="doc-item-title">{{ page.title | default: page.name | replace: '.md', '' }}</span>
+          </a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 액티비티 리서치 -->
+  <div class="docs-category">
+    <h2>액티비티 리서치</h2>
+    <p class="cat-desc">10개 지역 109개 체험 활동 · Vivid Sydney, BridgeClimb 등 특별 체험 포함</p>
+    <div class="docs-list">
+      {% assign act_pages = "" | split: "" %}
+      {% for page in site.pages %}
+        {% if page.path contains 'research/claude-research/activities/' %}
+          {% assign act_pages = act_pages | push: page %}
+        {% endif %}
+      {% endfor %}
+      {% assign act_sorted = act_pages | sort: 'path' %}
+      <!-- SSOT 먼저 -->
+      {% for page in act_sorted %}
+        {% if page.path contains '액티비티_종합가이드' %}
+          <a class="doc-item doc-item--highlight" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">📊</span>
+            <span class="doc-item-title">액티비티 종합 가이드 (SSOT)</span>
+            <span class="doc-item-badge">SSOT</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+      {% for page in act_sorted %}
+        {% unless page.path contains '액티비티_종합가이드' %}
+          <a class="doc-item" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">🎯</span>
+            <span class="doc-item-title">{{ page.title | default: page.name | replace: '.md', '' }}</span>
+          </a>
+        {% endunless %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 지역별 장소 -->
+  <div class="docs-category">
+    <h2>지역별 장소 요약</h2>
+    <p class="cat-desc">110곳 관광지의 지역별 정리 요약</p>
+    <div class="docs-list">
+      {% for page in site.pages %}
+        {% if page.path contains 'research/claude-research/places/' %}
+          <a class="doc-item" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">📍</span>
+            <span class="doc-item-title">{{ page.title | default: page.name | replace: '.md', '' }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 날씨 -->
+  <div class="docs-category">
+    <h2>날씨 리서치</h2>
+    <p class="cat-desc">5월 하순 기준 7개 지역 기후·해수온도·일몰 정보</p>
+    <div class="docs-list">
+      {% assign weather_pages = "" | split: "" %}
+      {% for page in site.pages %}
+        {% if page.path contains 'research/claude-research/weather/' and page.path != 'research/claude-research/weather/_template.md' %}
+          {% assign weather_pages = weather_pages | push: page %}
+        {% endif %}
+      {% endfor %}
+      {% assign weather_sorted = weather_pages | sort: 'path' %}
+      {% for page in weather_sorted %}
+        <a class="doc-item" href="{{ page.url | relative_url }}">
+          <span class="doc-item-icon">🌤️</span>
+          <span class="doc-item-title">{{ page.title | default: page.name | replace: '.md', '' }}</span>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 여행 준비 -->
+  <div class="docs-category">
+    <h2>여행 준비 가이드</h2>
+    <p class="cat-desc">비자, 운전, 안전, 환전, 보험, 패킹, 통신 — 7개 주제 실전 가이드</p>
+    <div class="docs-list">
+      {% for page in site.pages %}
+        {% if page.path contains 'research/claude-research/travel-essentials/' %}
+          <a class="doc-item" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">📦</span>
+            <span class="doc-item-title">{{ page.title | default: page.name | replace: '.md', '' }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 기타 Claude 리서치 -->
+  <div class="docs-category">
+    <h2>기타 리서치</h2>
+    <p class="cat-desc">여행환경, 운전패턴, 계절보정, 지도UI 등 기반 리서치</p>
+    <div class="docs-list">
+      {% for page in site.pages %}
+        {% assign p = page.path %}
+        {% if p contains 'research/claude-research/' %}
+          {% unless p contains '/accommodation/' or p contains '/activities/' or p contains '/dining/' or p contains '/places/' or p contains '/weather/' or p contains '/travel-essentials/' %}
+            <a class="doc-item" href="{{ page.url | relative_url }}">
+              <span class="doc-item-icon">🔍</span>
+              <span class="doc-item-title">{{ page.title | default: page.name | replace: '.md', '' }}</span>
+            </a>
+          {% endunless %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 외부 AI 리서치 -->
+  <div class="docs-category">
+    <h2>외부 AI 딥 리서치</h2>
+    <p class="cat-desc">ChatGPT, Gemini 등 외부 AI의 Deep Research 결과</p>
+    <div class="docs-list">
+      {% for page in site.pages %}
+        {% if page.path contains 'research/deep-research/' %}
+          <a class="doc-item" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">🤖</span>
+            <span class="doc-item-title">{{ page.title | default: page.name | replace: '.md', '' }}</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 리서치 폴더 안내 -->
+  <div class="docs-category">
+    <h2>리서치 폴더 안내</h2>
+    <div class="docs-list">
+      {% for page in site.pages %}
+        {% if page.path == 'research/README.md' %}
+          <a class="doc-item" href="{{ page.url | relative_url }}">
+            <span class="doc-item-icon">📂</span>
+            <span class="doc-item-title">research/ 폴더 구조 가이드</span>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="docs-footer">
+    <p>총 108개 문서 · 자동 생성 인덱스</p>
+  </div>
+</div>
