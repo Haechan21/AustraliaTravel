@@ -91,7 +91,8 @@
 │   │   ├── dining/               #     식당 리서치
 │   │   ├── places/               #     지역별 장소 리서치
 │   │   └── weather/              #     지역별 날씨 조사
-│   └── route-plans/              #   9개 루트 후보 상세 일정
+│   ├── route-plans/              #   로드트립 루트 후보 상세 일정 (1~9조)
+│   └── sydney-plans/             #   시드니 Day 7 세부 일정 계획
 └── scripts/
     ├── parse_googlemaps.py       #   Phase 1: GoogleMaps 전처리
     ├── generate_frontend.py      #   평가 결과 → RANKINGS.md + place_data.json

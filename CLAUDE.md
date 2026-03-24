@@ -44,9 +44,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 식당 리서치: ✅ 완료 — 6개 거점 + 10개 경유지 140개+ 식당/체험 조사 (1차 7팀 + 2차 5팀 병렬 리서치). 호주 공원 BBQ 가이드, 파머스마켓 일정, 호주 고유 음식 체험 포함
 - 식당 평가: ✅ 완료 — CRITIC_DINING.md 프레임워크 기반 6개 거점 126개 식당 3명 페르소나 독립 채점. 거점별 식사유형별 추천/차선/가능/비추 라벨 부여(추천 35·차선 30·가능 47·비추 14). 논쟁 식당 56곳(44%) 식별. 상세 수치는 식당_종합가이드.md(SSOT) 참조
 - 숙소 예약: ✅ 5박 확정 — Discovery Parks(바이런), Park Beach Resort(콥스), Surf Beach Motel(포트맥쿼리), Hotel Nelson(넬슨베이), Farm Tiny Home(블루마운틴). 시드니 2박 미확정
-- 시드니 숙소 추가 리서치: ✅ 완료 (2026-03-23) — 4개 팀 병렬 리서치로 **37개 신규 옵션** 발굴 (뷰 호텔 7 + 에어비앤비 11 + 가성비 12 + 부티크 7). 2박 조합 전략 4가지 분석 (뷰+공항/가성비+뷰/동일숙소/에어비앤비+공항). 3개 시나리오 최종 추천. 상세는 `research/claude-research/accommodation/시드니_추가리서치_2박전략.md`
+- 시드니 숙소: ✅ 전면 재검토 + CRITIC 재평가 완료 (2026-03-24) — 4팀 병렬 리서치 + 추가 검색(Booking/Agoda 등) → **16개** 후보 CRITIC 채점(L1~L7, 3명 페르소나). 19:00 도착·2박 동일·Vivid 도보권·일요 새벽 공항 반영. **추천**: Little National(82.2) / Kimpton Margot(78.5). **차선**: Grace(75.8) / Swissotel(75.7) / Paradox(74.5) 등 7개. 상세는 `research/claude-research/accommodation/시드니_2박_최종검토.md`
 - 시드니 특별 체험 리서치: ✅ 완료 (2026-03-23) — 3개 팀 병렬 리서치 + 팩트체크(9/9 확인). Vivid 2026 확정 프로그램(드론쇼 Star-Bound, Fire Kitchen, Saltbush&Starlight), 유니크 체험(BridgeClimb Vivid, 원주민 투어, Icebergs, 피쉬마켓 신축), 호주 특색 음식(록 오이스터, 캥거루 피자, Midden). 3개 시나리오 일정 편입안. 상세는 `research/claude-research/activities/시드니_특별체험_종합가이드.md`, 음식 상세는 `research/claude-research/dining/시드니_호주특색음식_체험_리서치.md`
-- 향후: Day 7(시드니) 세부 일정 + 시드니 숙소 확정 + 식당 확정 → ITINERARY.md 통합
+- 향후: Day 7(시드니) 세부 일정(`research/sydney-plans/`) + 시드니 숙소 확정 + 식당 확정 → ITINERARY.md 통합
 
 ## 에이전트 작업 체크리스트
 
@@ -79,7 +79,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - [x] 9개 루트 중 최종 선택 → 6조 확정 (2026-03-20)
 - [x] 숙소 5박 확정 (2026-03-23)
 - [x] `docs/ITINERARY_REQUESTS.md`에 유저 요구사항 기입 → Day 2~6 세부 일정 작성 (2026-03-24). Day 6은 REQUESTS 변형안 반영
-- [ ] Day 7(시드니) 세부 일정 작성 (별도)
+- [ ] Day 7(시드니) 세부 일정 작성 → `research/sydney-plans/`에서 작업
 - [ ] 시드니 숙소 2박 + 식당 확정 → ITINERARY.md 통합
 
 ## 스크립트 실행
@@ -170,7 +170,8 @@ data/ JSON (SSOT 원본)
   - `weather/`: 지역별 날씨 조사
   - `activities/`: 지역별 액티비티 리서치
   - 루트(root): 여행환경·계절보정, 루트평가·운전패턴, 장소 심층리뷰, UI 리서치 등
-- `research/route-plans/`: 루트 후보 상세 일정 (1~9조) + 종합 순위표(README.md)
+- `research/route-plans/`: 로드트립 루트 후보 상세 일정 (1~9조) + 종합 순위표(README.md)
+- `research/sydney-plans/`: 시드니 Day 7 세부 일정 계획 (로드트립 루트와 분리)
 
 ## 프론트엔드 구조 (Jekyll + GitHub Pages)
 
