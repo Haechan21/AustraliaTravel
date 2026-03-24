@@ -25,7 +25,7 @@ layout: default
 | 5/30 (토) | 시드니 시내 · Vivid Sydney | ✅ |
 | 5/31 (일) | 시드니 → 인천 | ✅ |
 
-> ✅ 이동일정 확정 · 숙소 5박 확정 (시드니 미확정 · 식당 미확정) — 상세 일정은 <a href="docs/ITINERARY.html">ITINERARY.md</a> 참조
+> 🔄 6조 루트·숙소 5박 확정 · Day 2~7 세부 일정 조정 중 (시드니 숙소·식당 미확정) — 상세는 <a href="docs/ITINERARY.html">ITINERARY.md</a> 참조
 
 <br/>
 
