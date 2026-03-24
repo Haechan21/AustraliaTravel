@@ -648,7 +648,7 @@ python scripts/generate_frontend.py --data     # place_data.json만
 
 여행 일정은 **사용자와 Claude Code의 대화**를 통해 생성된다. 리서치 자료, 평가 결과, 지리적 제약, 사용자 선호를 종합하여 일정을 구성하고, 결과를 `ITINERARY.md`에 직접 기록한다.
 
-> **현재 상태**: ✅ Phase 4 완료. **6조 확정** (바이런직행+블루마운틴, v7 1위 78.0점, 2026-03-20). ITINERARY.md 이동일정 전일 작성 완료 (숙소·식당 미확정). 9개 루트 후보 비교 → CRITIC_ROUTE v7 재평가 → 최종 선택.
+> **현재 상태**: ✅ Phase 4 진행 중. **6조 확정** (바이런직행+블루마운틴, v7 1위 78.0점, 2026-03-20). 루트·숙소 5박 확정, Day 2~7 세부 일정은 유저 요구사항(`ITINERARY_REQUESTS.md`) 반영 후 재작성 예정. 시드니 숙소 2박·식당 미확정.
 
 #### 루트 파일 점수 정합성 유지
 
@@ -736,6 +736,7 @@ python scripts/sync_data_docs.py --fix         # 마커 값 교체
 │   ├── CRITIC_DINING.md        # 식당 평가 전용 페르소나(A'''/B'''/C''') 및 기준(F1~F6)
 │   ├── META.md                 # 여행 전제 조건 (항공, 렌터카, 로드트립 방향, 제약 조건)
 │   ├── ITINERARY.md            # 날짜별 확정 일정 (Single Source of Truth)
+│   ├── ITINERARY_REQUESTS.md   # 유저 요구사항: 6조 기본 일정에 대한 Day별 변형 요청
 │   └── TRAVELER_PROFILE.md     # 여행자 프로필 & 선호도 설문 (운전 내성, 여행 스타일 등)
 ├── CLAUDE.md                   # Claude Code 작업 가이드
 ├── .gitignore
