@@ -730,7 +730,19 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     sydneyRouteData = results[0].routes;
     sydneyGeometryData = results[1];
     buildSydneyLayers();
-    showSydneyAll();
+    // 기본: 1조(1위) 표시 (로드트립 탭의 6조 기본과 동일한 패턴)
+    sActiveRoute = '1';
+    showSydneyRoute('1');
+    updateSydneyInfoPanel('1');
+    // 1조 버튼 활성화
+    var allBtn = document.querySelector('#sydneyRouteButtons .route-btn[data-sydney-route="all"]');
+    var firstBtn = document.querySelector('#sydneyRouteButtons .route-btn[data-sydney-route="1"]');
+    if (allBtn) allBtn.classList.remove('active');
+    if (firstBtn) firstBtn.classList.add('active');
+    // Day 필터 표시
+    var dayFilter = document.getElementById('sydneyDayFilter');
+    if (dayFilter) dayFilter.style.display = '';
+    buildSydneyDayButtons('1');
     bindSydneyControls();
     normalizeSydneyScoreBars();
   });
