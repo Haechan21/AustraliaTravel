@@ -1,7 +1,3 @@
----
-layout: default
-title: "9조: 골드코스트 포함 밸런스 — 4조의 완성형 (GC Balance Grand Loop)"
----
 
 # 9조: 골드코스트 포함 밸런스 — 4조의 완성형 (GC Balance Grand Loop)
 
