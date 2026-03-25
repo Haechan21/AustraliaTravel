@@ -35,7 +35,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Phase 1 (전처리): ✅ 완료 — 110개 attraction (중복 2개 제거 + 도리고 스카이워크 신규: `5fad89b9`)
 - Phase 2 (정보 수집): ✅ 완료 — 110개 장소 collected_data 채움, 15개 지역 분류, 주제별·지역별 리서치 30건+
 - Phase 3 (평가/등급): ✅ 완료 — CRITIC.md 페르소나 기반 110곳 평가. 퍼센타일 등급: S:6 A:22 B:38 C:33 D:11 (may_adjusted_score 기준 단일 `grade`). 논쟁 장소 37곳
-- Phase 4 (일정 생성): 🔄 진행 중 — **6조 확정** (바이런직행+블루마운틴, v7 1위 78.0점). 루트·숙소 5박 확정. **Day 1~6 세부 일정 확정** (Day 6은 ITINERARY_REQUESTS 변형안 반영: 숙소 일출+그랜드퍼시픽 석양 드라이브). Day 7(시드니) 별도 작성 예정. 시드니 숙소 2박·식당 미확정
+- Phase 4 (일정 생성): 🔄 진행 중 — **6조 확정** (바이런직행+블루마운틴, v7 1위 78.0점). 루트·숙소 7박 확정. **Day 1~6 세부 일정 확정** (Day 6은 ITINERARY_REQUESTS 변형안 반영: 숙소 일출+그랜드퍼시픽 석양 드라이브). Day 7(시드니) 별도 작성 예정. 식당 미확정
 - 액티비티 리서치: ✅ 완료 — 10개 지역 109개 체험 활동 조사 (5개 신규 + 5개 보강: 은하수·우천대안·커플체험 추가)
 - 숙소 평가 프레임워크: ✅ 완료 — CRITIC_LODGING.md 작성 완료 (3명 페르소나 A''/B''/C'', 7개 기준 L1~L7, 거점별 상대 순위 방식). 6조 기준 6개 거점 맥락 정의, scoring.json 동기화 완료
 - 숙소 리서치: ✅ 완료 — 6개 거점 62개 기본후보 + 33개 투자후보 조사, 복수 플랫폼(Booking/TA/Google/공식사이트) 가격·리뷰 수집. 상세는 종합비교.md 참조
@@ -43,10 +43,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 식당 평가 프레임워크: ✅ 완료 — CRITIC_DINING.md 작성 완료 (3명 페르소나 A''' 동선 미식가 / B''' 미식 큐레이터 / C''' 리뷰 검증자, 6개 기준 F1~F6, 지역별+식사유형별 상대 순위 방식). scoring.json 동기화 완료
 - 식당 리서치: ✅ 완료 — 6개 거점 + 10개 경유지 140개+ 식당/체험 조사 (1차 7팀 + 2차 5팀 병렬 리서치). 호주 공원 BBQ 가이드, 파머스마켓 일정, 호주 고유 음식 체험 포함
 - 식당 평가: ✅ 완료 — CRITIC_DINING.md 프레임워크 기반 6개 거점 126개 식당 3명 페르소나 독립 채점. 거점별 식사유형별 추천/차선/가능/비추 라벨 부여(추천 35·차선 30·가능 47·비추 14). 논쟁 식당 56곳(44%) 식별. 상세 수치는 식당_종합가이드.md(SSOT) 참조
-- 숙소 예약: ✅ 5박 확정 — Discovery Parks(바이런), Park Beach Resort(콥스), Surf Beach Motel(포트맥쿼리), Hotel Nelson(넬슨베이), Farm Tiny Home(블루마운틴). 시드니 2박 미확정
-- 시드니 숙소: ✅ 전면 재검토 + CRITIC 재평가 완료 (2026-03-24) — 4팀 병렬 리서치 + 추가 검색(Booking/Agoda 등) → **16개** 후보 CRITIC 채점(L1~L7, 3명 페르소나). 19:00 도착·2박 동일·Vivid 도보권·일요 새벽 공항 반영. **추천**: Little National(82.2) / Kimpton Margot(78.5). **차선**: Grace(75.8) / Swissotel(75.7) / Paradox(74.5) 등 7개. 상세는 `research/claude-research/accommodation/시드니_2박_최종검토.md`
+- 숙소 예약: ✅ **7박 전체 확정** (₩1,284,787) — Discovery Parks(바이런), Park Beach Resort(콥스, 재예약 ₩157,614), Surf Beach Motel(포트맥쿼리), Hotel Nelson(넬슨베이), Farm Tiny Home(블루마운틴), **ValueSuites Green Square(시드니 2박, ₩333,678)**
+- 시드니 숙소: ✅ 예약 확정 (2026-03-25) — ValueSuites Green Square (Trip.com, 2박 ₩333,678). Green Square역 도보 1~2분, 공항 전철 8분. 24시간 무료 에스프레소 바, 객실 내 세탁기/건조기. CRITIC 평가 대상 외 (가성비 선택)
 - 시드니 특별 체험 리서치: ✅ 완료 (2026-03-23) — 3개 팀 병렬 리서치 + 팩트체크(9/9 확인). Vivid 2026 확정 프로그램(드론쇼 Star-Bound, Fire Kitchen, Saltbush&Starlight), 유니크 체험(BridgeClimb Vivid, 원주민 투어, Icebergs, 피쉬마켓 신축), 호주 특색 음식(록 오이스터, 캥거루 피자, Midden). 3개 시나리오 일정 편입안. 상세는 `research/claude-research/activities/시드니_특별체험_종합가이드.md`, 음식 상세는 `research/claude-research/dining/시드니_호주특색음식_체험_리서치.md`
-- 향후: Day 7(시드니) 세부 일정(`research/sydney-plans/`) + 시드니 숙소 확정 + 식당 확정 → ITINERARY.md 통합
+- 향후: Day 7(시드니) 세부 일정(`research/sydney-plans/`) + 식당 확정 → ITINERARY.md 통합
 
 ## 에이전트 작업 체크리스트
 
@@ -77,10 +77,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### 남은 작업
 - [x] 9개 루트 중 최종 선택 → 6조 확정 (2026-03-20)
-- [x] 숙소 5박 확정 (2026-03-23)
+- [x] 숙소 5박 확정 (2026-03-23) → 7박 전체 확정 (2026-03-25, 코프스 재예약 + 시드니 ValueSuites)
 - [x] `docs/ITINERARY_REQUESTS.md`에 유저 요구사항 기입 → Day 2~6 세부 일정 작성 (2026-03-24). Day 6은 REQUESTS 변형안 반영
 - [ ] Day 7(시드니) 세부 일정 작성 → `research/sydney-plans/`에서 작업
-- [ ] 시드니 숙소 2박 + 식당 확정 → ITINERARY.md 통합
+- [x] 시드니 숙소 2박 확정 (2026-03-25) — ValueSuites Green Square (Trip.com, ₩333,678)
+- [ ] 식당 확정 → ITINERARY.md 통합
 
 ## 스크립트 실행
 
@@ -135,7 +136,7 @@ data/
   routes/route_data.json           ← 루트 거리·stops SSOT
   routes/route_geometry.json       ← OSRM 경로 geometry
   lodging/lodging_data.json        ← 숙소 데이터 SSOT (77개: 기본 44 + 투자 33)
-  lodging/bookings.json            ← 확정 예약 정보 (5박, 시설·주변관광·조치사항 포함)
+  lodging/bookings.json            ← 확정 예약 정보 (7박, 시설·주변관광·조치사항 포함)
   dining/dining_data.json          ← 식당 데이터 SSOT (126개, 예산 시나리오 포함)
   activities/activities_data.json  ← 액티비티 데이터 SSOT (109개, 10개 지역)
   regions.json                     ← 지역 분류
