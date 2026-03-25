@@ -728,33 +728,31 @@
 // 최상위 탭 (로드트립 / 시드니)
 .main-tabs {
   display: flex;
-  gap: 0;
-  border-bottom: 3px solid #159957;
-  margin-bottom: 1.2em;
+  gap: 4px;
+  margin-bottom: 1em;
 }
 
 .main-tab {
-  padding: 0.8em 1.8em;
-  border: none;
-  border-bottom: 4px solid transparent;
+  padding: 0.45em 1.2em;
+  border: 1.5px solid #d0d7de;
+  border-radius: 6px;
   background: #f6f8fa;
   cursor: pointer;
-  font-size: 1.05em;
-  font-weight: 700;
+  font-size: 0.88em;
+  font-weight: 600;
   color: #586069;
-  transition: all 0.2s;
-  margin-bottom: -3px;
-  border-radius: 8px 8px 0 0;
+  transition: all 0.15s;
 
   &:hover {
     color: #24292e;
-    background: #e8f5e9;
+    border-color: #159957;
+    background: #f0faf4;
   }
 
   &.active {
     color: #fff;
     background: #159957;
-    border-bottom-color: #159957;
+    border-color: #159957;
   }
 }
 
@@ -967,7 +965,7 @@
 }
 
 // Map
-#map {
+#map, #sydneyMap {
   width: 100%;
   height: 500px;
   border-radius: 10px;
@@ -1192,6 +1190,15 @@
   &.marker-stay { background: #34c759; }
 }
 
+.legend-dash {
+  display: inline-block;
+  width: 16px;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  color: #586069;
+  font-weight: bold;
+}
+
 // Leaflet divIcon override
 .custom-marker { background: transparent !important; border: none !important; }
 
@@ -1270,7 +1277,7 @@
 
 // Mobile (routes)
 @media screen and (max-width: 42em) {
-  #map { height: 350px; }
+  #map, #sydneyMap { height: 350px; }
 
   .route-buttons { gap: 0.3em; }
   .route-btn { padding: 0.3em 0.6em; font-size: 0.75em; }

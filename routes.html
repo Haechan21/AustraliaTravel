@@ -252,11 +252,62 @@ title: 루트 비교
   <!-- ═══ 시드니 섹션 ═══ -->
   <div class="main-panel" id="main-sydney">
 
-  <div class="route-tabs">
-    <button class="route-tab active" data-tab="sydney-detail">상세 평가</button>
+  <div class="route-tabs" id="sydneyTabs">
+    <button class="route-tab active" data-tab="sydney-map">지도 비교</button>
+    <button class="route-tab" data-tab="sydney-detail">상세 평가</button>
   </div>
 
-  <div class="tab-panel active" id="tab-sydney-detail">
+  <!-- 시드니 지도 탭 -->
+  <div class="tab-panel active" id="tab-sydney-map">
+
+  <!-- 코스 선택 버튼 -->
+  <div class="route-controls">
+    <div class="route-buttons" id="sydneyRouteButtons">
+      <button class="route-btn active" data-sydney-route="all" style="border-color:#888">전체 보기</button>
+      <button class="route-btn" data-sydney-route="1" style="border-color:#e74c3c">&#x1F947; 1조</button>
+      <button class="route-btn" data-sydney-route="2" style="border-color:#3498db">2조</button>
+      <button class="route-btn" data-sydney-route="3" style="border-color:#2ecc71">3조</button>
+      <button class="route-btn" data-sydney-route="4" style="border-color:#f1c40f">4조</button>
+      <button class="route-btn" data-sydney-route="5" style="border-color:#9b59b6">&#x1F948; 5조</button>
+    </div>
+    <div class="route-day-filter" id="sydneyDayFilter" style="display:none;">
+      <span class="day-label">일별 보기:</span>
+      <div class="day-buttons" id="sydneyDayButtons"></div>
+    </div>
+  </div>
+
+  <!-- 지도 + 정보 패널 -->
+  <div class="map-split">
+    <div class="map-split-left">
+      <div id="sydneyMap"></div>
+      <div class="map-legend">
+        <h4>범례</h4>
+        <div class="legend-row"><span class="legend-icon marker-stay"></span> 숙소</div>
+        <div class="legend-row"><span class="legend-icon marker-s"></span> 핵심 체험</div>
+        <div class="legend-row"><span class="legend-icon marker-a"></span> 관광지</div>
+        <div class="legend-row"><span class="legend-icon marker-b"></span> 식당/카페</div>
+        <div class="legend-row"><span class="legend-dash">- - -</span> 페리 구간</div>
+      </div>
+    </div>
+    <div class="map-split-right">
+      <div class="route-info-panel" id="sydneyRouteInfo">
+        <p class="info-placeholder">코스를 선택하면 일별 동선을 확인할 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="score-bar" id="sydneyMapScoreBar">
+    <div class="score-bar-header"><span>50</span><span style="flex:1"></span><span>점수</span></div>
+    <div class="score-item" data-sydney-map="1"><span class="score-label">1조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#e74c3c"></div></div><span class="score-num">76.3</span></div>
+    <div class="score-item" data-sydney-map="5"><span class="score-label">5조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#9b59b6"></div></div><span class="score-num">74.8</span></div>
+    <div class="score-item" data-sydney-map="3"><span class="score-label">3조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#2ecc71"></div></div><span class="score-num">70.7</span></div>
+    <div class="score-item" data-sydney-map="4"><span class="score-label">4조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#f1c40f"></div></div><span class="score-num">69.8</span></div>
+    <div class="score-item" data-sydney-map="2"><span class="score-label">2조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#3498db"></div></div><span class="score-num">67.5</span></div>
+  </div>
+
+  </div><!-- /tab-sydney-map -->
+
+  <div class="tab-panel" id="tab-sydney-detail">
 
   <div class="route-plans-section" id="sydneyPlans">
     <h2>종합 순위</h2>
@@ -403,6 +454,14 @@ document.querySelectorAll('.main-tab').forEach(function(tab) {
     if (firstTab && !panel.querySelector('.route-tab.active')) {
       firstTab.click();
     }
+    // 시드니 지도 사이즈 보정
+    if (this.dataset.main === 'sydney' && window._sydneyMap) {
+      setTimeout(function() { window._sydneyMap.invalidateSize(); }, 150);
+    }
+    // 로드트립 지도 사이즈 보정
+    if (this.dataset.main === 'roadtrip' && window._routeMap) {
+      setTimeout(function() { window._routeMap.invalidateSize(); }, 150);
+    }
   });
 });
 
@@ -525,20 +584,499 @@ document.querySelectorAll('#sydneyScoreBar .score-item').forEach(function(el) {
   });
 });
 
-// plan-card 클릭 시 지도 연동
-document.querySelectorAll('.plan-card h2').forEach(function(h2) {
+// plan-card 클릭 시 지도 연동 (로드트립)
+document.querySelectorAll('#main-roadtrip .plan-card h2').forEach(function(h2) {
   h2.style.cursor = 'pointer';
   h2.addEventListener('click', function() {
     var card = this.closest('.plan-card');
     var key = card.getAttribute('data-route');
-    // 지도 탭으로 전환
-    var mapTab = document.querySelector('.route-tab[data-tab="map"]');
+    var mapTab = document.querySelector('#main-roadtrip .route-tab[data-tab="map"]');
     if (mapTab) mapTab.click();
-    // 루트 버튼 클릭을 시뮬레이션
     var btn = document.querySelector('.route-btn[data-route="' + key + '"]');
     if (btn) btn.click();
-    // 지도 영역으로 스크롤
     document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' });
   });
 });
+
+// ═══ 시드니 탭 전환 (routes.js의 전역 핸들러 차단) ═══
+document.querySelectorAll('#sydneyTabs .route-tab').forEach(function(tab) {
+  tab.addEventListener('click', function(e) {
+    e.stopImmediatePropagation(); // routes.js의 전역 .route-tab 핸들러 차단
+    var panel = document.getElementById('main-sydney');
+    panel.querySelectorAll('.route-tab').forEach(function(t) { t.classList.remove('active'); });
+    panel.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+    this.classList.add('active');
+    document.getElementById('tab-' + this.dataset.tab).classList.add('active');
+    if (this.dataset.tab === 'sydney-map' && window._sydneyMap) {
+      setTimeout(function() { window._sydneyMap.invalidateSize(); }, 100);
+    }
+  });
+});
+
+// plan-card 클릭 시 시드니 지도 연동
+document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
+  h2.style.cursor = 'pointer';
+  h2.addEventListener('click', function() {
+    var card = this.closest('.plan-card');
+    var key = card.getAttribute('data-sydney');
+    if (!key) return;
+    // 지도 탭으로 전환
+    var mapTab = document.querySelector('#sydneyTabs .route-tab[data-tab="sydney-map"]');
+    if (mapTab) mapTab.click();
+    // 루트 버튼 클릭
+    var btn = document.querySelector('#sydneyRouteButtons .route-btn[data-sydney-route="' + key + '"]');
+    if (btn) btn.click();
+    document.getElementById('sydneyMap').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+});
+
+// ═══ 시드니 지도 코스 비교 ═══
+(function() {
+  'use strict';
+
+  var SYDNEY_COLORS = {
+    '1': '#e74c3c', '2': '#3498db', '3': '#2ecc71',
+    '4': '#f1c40f', '5': '#9b59b6'
+  };
+
+  var TYPE_COLORS = {
+    stay: '#34c759',
+    attraction: '#ff9500',
+    dining: '#007aff'
+  };
+
+  /* ── Google Encoded Polyline 디코더 ── */
+  function decodePolyline(encoded) {
+    var points = [];
+    var index = 0, lat = 0, lng = 0;
+    while (index < encoded.length) {
+      var b, shift = 0, result = 0;
+      do {
+        b = encoded.charCodeAt(index++) - 63;
+        result |= (b & 0x1f) << shift;
+        shift += 5;
+      } while (b >= 0x20);
+      lat += (result & 1) ? ~(result >> 1) : (result >> 1);
+      shift = 0; result = 0;
+      do {
+        b = encoded.charCodeAt(index++) - 63;
+        result |= (b & 0x1f) << shift;
+        shift += 5;
+      } while (b >= 0x20);
+      lng += (result & 1) ? ~(result >> 1) : (result >> 1);
+      points.push([lat / 1e5, lng / 1e5]);
+    }
+    return points;
+  }
+
+  function makeIcon(color, size) {
+    return L.divIcon({
+      className: 'custom-marker',
+      html: '<div style="' +
+        'background:' + color + ';' +
+        'width:' + size + 'px;height:' + size + 'px;' +
+        'border-radius:50%;border:2px solid #fff;' +
+        'box-shadow:0 1px 4px rgba(0,0,0,.4);' +
+        '"></div>',
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2],
+      popupAnchor: [0, -size / 2]
+    });
+  }
+
+  function sydneyMarkerIcon(stop) {
+    if (stop.type === 'stay') return makeIcon(TYPE_COLORS.stay, 11);
+    if (stop.type === 'dining') return makeIcon(TYPE_COLORS.dining, 10);
+    return makeIcon(TYPE_COLORS.attraction, 10);
+  }
+
+  /* ── 지도 초기화 ── */
+  var sMap = L.map('sydneyMap', {
+    center: [-33.87, 151.21],
+    zoom: 13,
+    scrollWheelZoom: true
+  });
+
+  window._sydneyMap = sMap;
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
+    maxZoom: 18
+  }).addTo(sMap);
+
+  /* ── 데이터 로드 ── */
+  var sydneyRouteData = null;
+  var sydneyGeometryData = null;
+  var sLayers = {};
+  var sActiveRoute = 'all';
+
+  var base = (window.__BASE_URL__ || '').replace(/\/+$/, '');
+
+  Promise.all([
+    fetch(base + '/data/routes/sydney_route_data.json').then(function(r) { return r.json(); }),
+    fetch(base + '/data/routes/sydney_route_geometry.json').then(function(r) { return r.json(); }).catch(function() { return null; })
+  ]).then(function(results) {
+    sydneyRouteData = results[0].routes;
+    sydneyGeometryData = results[1];
+    buildSydneyLayers();
+    showSydneyAll();
+    bindSydneyControls();
+    normalizeSydneyScoreBars();
+  });
+
+  function getSydneyGeometry(routeKey, dayNum) {
+    if (!sydneyGeometryData) return null;
+    var key = 'R' + routeKey + 'D' + dayNum;
+    var encoded = sydneyGeometryData.geometries ? sydneyGeometryData.geometries[key] : null;
+    if (!encoded) return null;
+    return decodePolyline(encoded);
+  }
+
+  function getSydneyFerryGeometry(routeKey, dayNum) {
+    if (!sydneyGeometryData || !sydneyGeometryData.ferry_geometries) return null;
+    var key = 'R' + routeKey + 'D' + dayNum;
+    var ferries = sydneyGeometryData.ferry_geometries[key];
+    if (!ferries) return null;
+    return ferries.map(function(enc) { return decodePolyline(enc); });
+  }
+
+  /* ── 레이어 구축 ── */
+  function buildSydneyLayers() {
+    Object.keys(sydneyRouteData).forEach(function(key) {
+      var route = sydneyRouteData[key];
+      var color = SYDNEY_COLORS[key];
+      var routeLayers = { lines: [], markers: [], ferryLines: [], dayLines: {}, dayMarkers: {}, dayFerryLines: {} };
+
+      route.days.forEach(function(day) {
+        var dayMarkers = [];
+        var dayLines = [];
+        var dayFerryLines = [];
+
+        // 마커
+        day.stops.forEach(function(stop) {
+          var ll = [stop.lat, stop.lng];
+          var popupHtml = '<strong>' + stop.name + '</strong>';
+          if (stop.type === 'stay') popupHtml += ' \uD83C\uDFE8';
+          else if (stop.type === 'dining') popupHtml += ' \uD83C\uDF74';
+          else popupHtml += ' \uD83D\uDCCD';
+          popupHtml += '<br><small>' + key + '\uC870 Day ' + day.day + ' (' + day.date + ')</small>';
+          var marker = L.marker(ll, { icon: sydneyMarkerIcon(stop) }).bindPopup(popupHtml);
+          dayMarkers.push(marker);
+        });
+
+        // 경로 polyline
+        var roadCoords = getSydneyGeometry(key, day.day);
+        if (roadCoords && roadCoords.length > 1) {
+          var line = L.polyline(roadCoords, {
+            color: color,
+            weight: 3,
+            opacity: 0.8
+          });
+          dayLines.push(line);
+          routeLayers.lines.push(line);
+        } else {
+          // 폴백: stop 좌표 직선 연결
+          var coords = day.stops.map(function(s) { return [s.lat, s.lng]; });
+          if (coords.length > 1) {
+            var line = L.polyline(coords, { color: color, weight: 3, opacity: 0.8 });
+            dayLines.push(line);
+            routeLayers.lines.push(line);
+          }
+        }
+
+        // 페리 구간 (대시 스타일)
+        var ferryCoords = getSydneyFerryGeometry(key, day.day);
+        if (ferryCoords) {
+          ferryCoords.forEach(function(fc) {
+            var ferryLine = L.polyline(fc, {
+              color: color,
+              weight: 3,
+              opacity: 0.8,
+              dashArray: '8 6'
+            });
+            dayFerryLines.push(ferryLine);
+            routeLayers.ferryLines.push(ferryLine);
+          });
+        }
+
+        routeLayers.markers = routeLayers.markers.concat(dayMarkers);
+        routeLayers.dayLines[day.day] = dayLines;
+        routeLayers.dayMarkers[day.day] = dayMarkers;
+        routeLayers.dayFerryLines[day.day] = dayFerryLines;
+      });
+
+      sLayers[key] = routeLayers;
+    });
+  }
+
+  /* ── 표시 함수 ── */
+  function clearSydneyMap() {
+    Object.keys(sLayers).forEach(function(key) {
+      sLayers[key].lines.forEach(function(l) { sMap.removeLayer(l); });
+      sLayers[key].markers.forEach(function(m) { sMap.removeLayer(m); });
+      sLayers[key].ferryLines.forEach(function(l) { sMap.removeLayer(l); });
+    });
+  }
+
+  function showSydneyAll() {
+    clearSydneyMap();
+    var bounds = [];
+    Object.keys(sLayers).forEach(function(key) {
+      sLayers[key].lines.forEach(function(l) {
+        l.setStyle({ weight: 2.5, opacity: 0.5 });
+        l.addTo(sMap);
+        bounds = bounds.concat(l.getLatLngs());
+      });
+      sLayers[key].ferryLines.forEach(function(l) {
+        l.setStyle({ weight: 2.5, opacity: 0.5 });
+        l.addTo(sMap);
+      });
+    });
+    // 전체 보기에서는 숙소 마커만 (중복 제거)
+    var shownCoords = {};
+    Object.keys(sLayers).forEach(function(key) {
+      var route = sydneyRouteData[key];
+      route.days.forEach(function(day) {
+        day.stops.forEach(function(stop, i) {
+          if (stop.type === 'stay') {
+            var coordKey = stop.lat.toFixed(3) + ',' + stop.lng.toFixed(3);
+            if (!shownCoords[coordKey]) {
+              var dm = sLayers[key].dayMarkers[day.day];
+              if (dm && dm[i]) { dm[i].addTo(sMap); bounds.push(dm[i].getLatLng()); }
+              shownCoords[coordKey] = true;
+            }
+          }
+        });
+      });
+    });
+    if (bounds.length) sMap.fitBounds(L.latLngBounds(bounds).pad(0.05));
+  }
+
+  function showSydneyRoute(key) {
+    clearSydneyMap();
+    var bounds = [];
+    sLayers[key].lines.forEach(function(l) {
+      l.setStyle({ weight: 4, opacity: 0.9 });
+      l.addTo(sMap);
+      bounds = bounds.concat(l.getLatLngs());
+    });
+    sLayers[key].ferryLines.forEach(function(l) {
+      l.setStyle({ weight: 4, opacity: 0.9 });
+      l.addTo(sMap);
+      bounds = bounds.concat(l.getLatLngs());
+    });
+    sLayers[key].markers.forEach(function(m) {
+      m.addTo(sMap);
+      bounds.push(m.getLatLng());
+    });
+    if (bounds.length) sMap.fitBounds(L.latLngBounds(bounds).pad(0.08));
+  }
+
+  function showSydneyRouteDay(key, dayNum) {
+    clearSydneyMap();
+    var bounds = [];
+    var lines = sLayers[key].dayLines[dayNum] || [];
+    var markers = sLayers[key].dayMarkers[dayNum] || [];
+    var ferries = sLayers[key].dayFerryLines[dayNum] || [];
+
+    lines.forEach(function(l) {
+      l.setStyle({ weight: 5, opacity: 1.0 });
+      l.addTo(sMap);
+      bounds = bounds.concat(l.getLatLngs());
+    });
+    ferries.forEach(function(l) {
+      l.setStyle({ weight: 5, opacity: 1.0 });
+      l.addTo(sMap);
+      bounds = bounds.concat(l.getLatLngs());
+    });
+    markers.forEach(function(m) {
+      m.addTo(sMap);
+      bounds.push(m.getLatLng());
+    });
+    if (bounds.length) sMap.fitBounds(L.latLngBounds(bounds).pad(0.15));
+  }
+
+  /* ── 정보 패널 ── */
+  function updateSydneyInfoPanel(key) {
+    var panel = document.getElementById('sydneyRouteInfo');
+    if (!key || key === 'all') {
+      panel.innerHTML = '<p class="info-placeholder">\uCF54\uC2A4\uB97C \uC120\uD0DD\uD558\uBA74 \uC77C\uBCC4 \uB3D9\uC120\uC744 \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.</p>';
+      return;
+    }
+    var route = sydneyRouteData[key];
+    var html = '<h3 style="color:' + SYDNEY_COLORS[key] + '">' + route.name + '</h3>';
+    html += '<div class="route-stats"><span>\uD3C9\uAC00 ' + route.score + '\uC810</span></div>';
+
+    // Day 미니탭
+    html += '<div class="day-mini-tabs" id="sydneyDayMiniTabs">';
+    route.days.forEach(function(day, idx) {
+      var activeClass = idx === 0 ? ' active' : '';
+      html += '<button class="day-mini-tab' + activeClass + '" data-day="' + day.day + '">';
+      html += 'D' + day.day;
+      html += '</button>';
+    });
+    html += '</div>';
+    html += '<div id="sydneyDayContent"></div>';
+
+    panel.innerHTML = html;
+
+    // Day 미니탭 이벤트
+    panel.querySelectorAll('.day-mini-tab').forEach(function(tab) {
+      tab.addEventListener('click', function() {
+        panel.querySelectorAll('.day-mini-tab').forEach(function(t) { t.classList.remove('active'); });
+        this.classList.add('active');
+        var dayNum = parseInt(this.getAttribute('data-day'));
+        renderSydneyDayContent(key, dayNum);
+        showSydneyRouteDay(key, dayNum);
+
+        // 상단 Day 필터 동기화
+        var dayBtns = document.querySelectorAll('#sydneyDayButtons .day-btn');
+        dayBtns.forEach(function(b) { b.classList.remove('active'); });
+        var matchBtn = document.querySelector('#sydneyDayButtons .day-btn[data-day="' + dayNum + '"]');
+        if (matchBtn) matchBtn.classList.add('active');
+      });
+    });
+
+    // 첫 번째 Day 렌더링
+    renderSydneyDayContent(key, route.days[0].day);
+  }
+
+  function renderSydneyDayContent(routeKey, dayNum) {
+    var container = document.getElementById('sydneyDayContent');
+    if (!container) return;
+    var route = sydneyRouteData[routeKey];
+    var day = null;
+    for (var i = 0; i < route.days.length; i++) {
+      if (route.days[i].day === dayNum) { day = route.days[i]; break; }
+    }
+    if (!day) { container.innerHTML = ''; return; }
+
+    var html = '<div class="day-header">';
+    html += 'Day ' + day.day + ' <small>(' + day.date + ')</small> \u2014 ' + day.label;
+    html += '</div>';
+
+    html += '<div class="day-stops">';
+    day.stops.forEach(function(stop, idx) {
+      if (idx > 0) {
+        html += '<div class="stop-connector">\u2193</div>';
+      }
+      var badge = '';
+      if (stop.type === 'stay') badge = '<span class="grade-badge stay-badge">\uC219\uBC15</span> ';
+      else if (stop.type === 'dining') badge = '<span class="grade-badge" style="background:#007aff;color:#fff">\uC2DD\uC0AC</span> ';
+      else badge = '<span class="grade-badge" style="background:#ff9500;color:#fff">\uAD00\uAD11</span> ';
+
+      html += '<div class="stop-row">' + badge + stop.name + '</div>';
+    });
+    html += '</div>';
+
+    container.innerHTML = html;
+  }
+
+  /* ── 일별 필터 ── */
+  function buildSydneyDayButtons(key) {
+    var container = document.getElementById('sydneyDayButtons');
+    var wrapper = document.getElementById('sydneyDayFilter');
+    if (!key || key === 'all') {
+      wrapper.style.display = 'none';
+      return;
+    }
+    wrapper.style.display = 'flex';
+    var route = sydneyRouteData[key];
+    var html = '<button class="day-btn active" data-day="all">\uC804\uCCB4</button>';
+    route.days.forEach(function(day) {
+      html += '<button class="day-btn" data-day="' + day.day + '">Day ' + day.day + '</button>';
+    });
+    container.innerHTML = html;
+    container.querySelectorAll('.day-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        container.querySelectorAll('.day-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var d = this.getAttribute('data-day');
+        if (d === 'all') {
+          showSydneyRoute(key);
+        } else {
+          showSydneyRouteDay(key, parseInt(d));
+        }
+        // 패널 미니탭 동기화
+        var miniTabs = document.querySelectorAll('#sydneyDayMiniTabs .day-mini-tab');
+        miniTabs.forEach(function(t) { t.classList.remove('active'); });
+        if (d !== 'all') {
+          var matchMini = document.querySelector('#sydneyDayMiniTabs .day-mini-tab[data-day="' + d + '"]');
+          if (matchMini) matchMini.classList.add('active');
+          renderSydneyDayContent(sActiveRoute, parseInt(d));
+        } else {
+          var firstMini = document.querySelector('#sydneyDayMiniTabs .day-mini-tab');
+          if (firstMini) firstMini.classList.add('active');
+          renderSydneyDayContent(sActiveRoute, sydneyRouteData[sActiveRoute].days[0].day);
+        }
+      });
+    });
+  }
+
+  /* ── 점수 바 정규화 ── */
+  function normalizeSydneyScoreBars() {
+    var container = document.getElementById('sydneyMapScoreBar');
+    if (!container) return;
+    var items = Array.from(container.querySelectorAll('.score-item'));
+    var SCORE_BASE = 50;
+    var SCORE_MAX = 100;
+
+    items.sort(function(a, b) {
+      var ka = a.getAttribute('data-sydney-map');
+      var kb = b.getAttribute('data-sydney-map');
+      return sydneyRouteData[kb].score - sydneyRouteData[ka].score;
+    });
+
+    var header = container.querySelector('.score-bar-header');
+    items.forEach(function(el) { container.appendChild(el); });
+
+    var medals = ['\uD83E\uDD47', '\uD83E\uDD48', '\uD83E\uDD49'];
+    items.forEach(function(el, idx) {
+      var key = el.getAttribute('data-sydney-map');
+      var score = sydneyRouteData[key].score;
+      var pct = ((score - SCORE_BASE) / (SCORE_MAX - SCORE_BASE)) * 100;
+      el.querySelector('.score-fill').style.width = Math.max(pct, 1) + '%';
+      var numEl = el.querySelector('.score-num');
+      if (numEl) numEl.textContent = score.toFixed(1);
+      var labelEl = el.querySelector('.score-label');
+      if (labelEl) labelEl.textContent = (idx < 3 ? medals[idx] + ' ' : '') + key + '\uC870';
+    });
+  }
+
+  /* ── 컨트롤 바인딩 ── */
+  function bindSydneyControls() {
+    document.querySelectorAll('#sydneyRouteButtons .route-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('#sydneyRouteButtons .route-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var key = this.getAttribute('data-sydney-route');
+        sActiveRoute = key;
+        if (key === 'all') {
+          showSydneyAll();
+          updateSydneyInfoPanel(null);
+          buildSydneyDayButtons(null);
+        } else {
+          showSydneyRoute(key);
+          updateSydneyInfoPanel(key);
+          buildSydneyDayButtons(key);
+        }
+      });
+    });
+
+    // 점수 바 클릭
+    document.querySelectorAll('#sydneyMapScoreBar .score-item').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var key = this.getAttribute('data-sydney-map');
+        sActiveRoute = key;
+        document.querySelectorAll('#sydneyRouteButtons .route-btn').forEach(function(b) { b.classList.remove('active'); });
+        var matchBtn = document.querySelector('#sydneyRouteButtons .route-btn[data-sydney-route="' + key + '"]');
+        if (matchBtn) matchBtn.classList.add('active');
+        showSydneyRoute(key);
+        updateSydneyInfoPanel(key);
+        buildSydneyDayButtons(key);
+      });
+    });
+  }
+
+})();
 </script>
