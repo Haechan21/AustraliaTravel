@@ -454,9 +454,15 @@ document.querySelectorAll('.main-tab').forEach(function(tab) {
     if (firstTab && !panel.querySelector('.route-tab.active')) {
       firstTab.click();
     }
-    // 시드니 지도 사이즈 보정
+    // 시드니 지도 사이즈 보정 + 초기 경로 표시
     if (this.dataset.main === 'sydney' && window._sydneyMap) {
-      setTimeout(function() { window._sydneyMap.invalidateSize(); }, 150);
+      setTimeout(function() {
+        window._sydneyMap.invalidateSize();
+        // 사이즈 보정 후 현재 활성 경로 다시 표시
+        if (window._sydneyActiveRoute && window._sydneyShowRoute) {
+          setTimeout(function() { window._sydneyShowRoute(); }, 50);
+        }
+      }, 150);
     }
     // 로드트립 지도 사이즈 보정
     if (this.dataset.main === 'roadtrip' && window._routeMap) {
@@ -732,7 +738,18 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     buildSydneyLayers();
     // 기본: 1조(1위) 표시 (로드트립 탭의 6조 기본과 동일한 패턴)
     sActiveRoute = '1';
-    showSydneyRoute('1');
+    window._sydneyActiveRoute = '1';
+    window._sydneyShowRoute = function() {
+      var key = window._sydneyActiveRoute || '1';
+      if (key === 'all') { showSydneyAll(); }
+      else { showSydneyRoute(key); }
+    };
+    // 시드니 탭이 보이는 상태인지 확인
+    var sydneyPanel = document.getElementById('main-sydney');
+    if (sydneyPanel && sydneyPanel.classList.contains('active')) {
+      showSydneyRoute('1');
+    }
+    // (숨겨진 상태면 탭 전환 시 _sydneyShowRoute가 호출됨)
     updateSydneyInfoPanel('1');
     // 1조 버튼 활성화
     var allBtn = document.querySelector('#sydneyRouteButtons .route-btn[data-sydney-route="all"]');
@@ -1074,6 +1091,7 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
         this.classList.add('active');
         var key = this.getAttribute('data-sydney-route');
         sActiveRoute = key;
+        window._sydneyActiveRoute = key;
         if (key === 'all') {
           showSydneyAll();
           updateSydneyInfoPanel(null);
@@ -1091,6 +1109,7 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
       el.addEventListener('click', function() {
         var key = this.getAttribute('data-sydney-map');
         sActiveRoute = key;
+        window._sydneyActiveRoute = key;
         document.querySelectorAll('#sydneyRouteButtons .route-btn').forEach(function(b) { b.classList.remove('active'); });
         var matchBtn = document.querySelector('#sydneyRouteButtons .route-btn[data-sydney-route="' + key + '"]');
         if (matchBtn) matchBtn.classList.add('active');
