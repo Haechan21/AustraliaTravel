@@ -1,9 +1,9 @@
 {
   "meta": {
-    "description": "확정 숙소 예약 정보 (5박, 2026-05-24 ~ 2026-05-29)",
-    "total_nights": 5,
-    "total_cost_krw": 958567,
-    "last_updated": "2026-03-23"
+    "description": "확정 숙소 예약 정보 (7박, 2026-05-24 ~ 2026-05-31)",
+    "total_nights": 7,
+    "total_cost_krw": 1284787,
+    "last_updated": "2026-03-25"
   },
   "bookings": [
     {
@@ -120,18 +120,18 @@
         "guests": 2,
         "check_in": "2026-05-25 14:00 이후",
         "check_out": "2026-05-26 10:00 이전",
-        "price_krw": 165072,
+        "price_krw": 157614,
         "price_breakdown": {
-          "original": 181404,
-          "discount": -16332,
-          "discount_type": "골드 등급 특가",
-          "paid": 165072
+          "original": 173178,
+          "discount": -15564,
+          "discount_type": "할인코드",
+          "paid": 157614
         },
         "cancellation": {
-          "free_before": "2026-05-23 14:00 (현지시간)",
+          "free_before": "2026-05-23 23:59 (현지시간)",
           "after": "환불 불가"
         },
-        "confirmation_no": "1400824645636709"
+        "confirmation_no": "1400824671464151"
       },
       "check_in_guide": {
         "reception_hours": "24시간 프론트 데스크",
@@ -460,25 +460,121 @@
         "cons": ["Wi-Fi 없음 (모바일 데이터 필수)", "TV 없음", "로프트 침실 사다리 접근", "세탁기 없음", "가로등 없음 (밤 도착 주의)", "식료품 미리 장보기 필요 (마트 20분+)"],
         "tips": "도착 전 Lithgow/Katoomba에서 식재료 구입. BBQ 사용 후 반드시 청소($30 추가). 야간 운전 시 캥거루 주의. 인근 도로 공사로 우회 시 25~30분 추가 소요 가능"
       }
+    },
+    {
+      "id": "sydney",
+      "day": "Day 6-7",
+      "date": "2026-05-29",
+      "date_end": "2026-05-31",
+      "destination": "시드니 (Alexandria)",
+      "property": {
+        "name": "ValueSuites Green Square",
+        "name_ko": "밸류 스위트 그린 스퀘어",
+        "type": "3.5성급 아파트호텔 (셀프 컨테인드 마이크로 아파트먼트)",
+        "address": "16 O'Riordan St, Alexandria, NSW 2015, Australia",
+        "coords": [-33.907, 151.202],
+        "distance_to_town": "Green Square역 도보 1~2분, Central역 전철 4분, Circular Quay 전철 12~15분",
+        "total_rooms": "101실 (6개 룸타입)",
+        "rating": {
+          "booking_com": "8.2/10 (2,736건)",
+          "tripadvisor": "4.0/5.0 (1,256건)",
+          "trip_com": "4.3/5.0 (341건)"
+        }
+      },
+      "reservation": {
+        "platform": "Trip.com",
+        "room_type": "Modern Queen Suite",
+        "room_type_ko": "모던 퀸 스위트 (퀸침대 1개)",
+        "guests": 2,
+        "check_in": "2026-05-29 14:00 이후",
+        "check_out": "2026-05-31 10:00 이전",
+        "nights": 2,
+        "price_krw": 333678,
+        "price_breakdown": {
+          "original": 446377,
+          "discount": -112699,
+          "paid": 333678
+        },
+        "cancellation": {
+          "free_before": "2026-05-27 14:00 (현지시간)",
+          "after": "환불 불가"
+        },
+        "confirmation_no": "1400824714303377"
+      },
+      "check_in_guide": {
+        "reception_hours": "24시간 프론트 데스크",
+        "late_arrival": "24시간 프론트이므로 심야 도착 대응 가능",
+        "method": "프론트 데스크 대면 체크인 (사진 있는 신분증 + 신용카드 필요, AUD 100 보증금 홀드)",
+        "action_required": "Day 6 렌터카 반납(공항 21:00 마감) 후 전철로 이동 — Green Square역 하차 도보 1~2분"
+      },
+      "room_facilities": {
+        "bed": "퀸 베드 1개",
+        "area_sqm": 18,
+        "climate": "에어컨 (냉난방 겸용)",
+        "tv": "플랫스크린 TV (위성 채널)",
+        "kitchen": "키치넷 — 냉장고, 전자레인지, 싱크대, 식기류/커틀러리",
+        "coffee_tea": "무료 네스프레소 커피 + 차 (객실 내 + 1층 24시간 커피 라운지)",
+        "bathroom": "전용 욕실 (레인폴 샤워헤드, 헤어드라이어)",
+        "towels_amenity": "수건 제공, 기본 어메니티 (바디워시·샴푸·컨디셔너·비누·샤워캡)",
+        "balcony": null,
+        "extras": "객실 내 세탁기+건조기, 무료 시내 전화, 일일 하우스키핑"
+      },
+      "property_facilities": {
+        "pool": "없음",
+        "parking": "숙소 내 주차 불가 (주변 유료 주차: AU$11~33/일). 렌터카 반납 후이므로 불필요",
+        "wifi": "무료 고속 Wi-Fi (전 객실+공용구역)",
+        "laundry": "객실 내 세탁기/건조기 포함 — 여행 마지막 빨래에 매우 유리",
+        "fitness": "24시간 피트니스 센터",
+        "rooftop": "루프탑 라운지 (24시간 개방)",
+        "breakfast": "무료 Grab-n-Go 모닝 바이츠 (크루아상, 스낵) — 1층 커피 라운지",
+        "coffee_lounge": "24시간 에스프레소 바 (8종 커피, 무료)"
+      },
+      "nearby": {
+        "restaurants": [
+          {"name": "The Grounds of Alexandria", "distance": "도보 15분 / 차량 5분", "note": "시드니 유명 카페 복합공간, 주말 브런치 인기"},
+          {"name": "Mecca Coffee", "distance": "도보권", "note": "스페셜티 커피 로스터리"},
+          {"name": "Brazilian Flame", "distance": "도보 8분", "note": "브라질리안 BBQ"}
+        ],
+        "attractions": [
+          {"name": "Green Square역", "distance": "도보 1~2분", "note": "T8 Airport & South Line — 공항·시내 양방향 허브"},
+          {"name": "Sydney Airport (국제선)", "distance": "전철 8분 (3정거장)", "note": "5/31 새벽 이동에 최적. 택시/Uber 10분 AU$15~25"},
+          {"name": "Circular Quay (Vivid 중심지)", "distance": "전철 12~15분 (환승 1회)", "note": "Opera House·The Rocks·Vivid Light Walk"},
+          {"name": "Darling Harbour", "distance": "전철 Town Hall역 하차", "note": "Vivid 드론쇼 (Cockle Bay)"}
+        ]
+      },
+      "may_notes": {
+        "weather": "낮 18~20°C / 밤 12~14°C, 강수 108~130mm",
+        "sunset": "~17:00~17:10",
+        "vivid_sydney": "Vivid Sydney 2026: 5/22~6/13 (매일 18:00~23:00). 5/29(금)·5/30(토) 2일간 Vivid 관람 가능",
+        "clothing": "가벼운 재킷/코트 필수. Vivid 야외 관람 시 방풍 아우터 권장"
+      },
+      "review_summary": {
+        "pros": ["위치 최강 — Green Square역 도보 1~2분, 공항 전철 8분", "24시간 무료 에스프레소 바 + 무료 아침 크루아상", "객실 내 세탁기/건조기 (여행 막바지 빨래)", "청결도 양호, 모던 시설", "루프탑 라운지 24시간", "가성비 우수 (Vivid 기간 2박 ₩333,678)"],
+        "cons": ["객실 18sqm로 다소 좁음 (마이크로 아파트 콘셉트)", "방음 미흡 — 도로 건너편 버스 차고지 소음 (22시~03시)", "Vivid 도보권 아님 — CQ까지 전철 12~15분 + 토요밤 혼잡 리스크", "숙소 내 주차 불가"],
+        "tips": "높은 층 요청 시 버스 차고지 소음 완화. 5/31 귀국 새벽 이동: 택시/Uber 권장 (공항 10분, AU$15~25). T8 첫차 시간 확인 필수 (일요일 04:30~05:00경). 무료 아침 + 커피 활용"
+      }
     }
   ],
   "summary": {
     "cost_by_platform": {
-      "trip_com": {"nights": 2, "total_krw": 309836, "bookings": ["바이런베이", "코프스 하버"]},
+      "trip_com": {"nights": 4, "total_krw": 636056, "bookings": ["바이런베이", "코프스 하버", "시드니 (2박)"]},
       "agoda": {"nights": 2, "total_krw": 313296, "bookings": ["포트 맥쿼리", "넬슨 베이"]},
       "airbnb": {"nights": 1, "total_krw": 335435, "bookings": ["블루 마운틴"]}
     },
     "cancellation_deadlines": [
       {"day": 1, "destination": "바이런베이", "deadline": "2026-05-10 23:59", "status": "무료취소 가능"},
-      {"day": 2, "destination": "코프스 하버", "deadline": "2026-05-23 14:00", "status": "무료취소 가능"},
+      {"day": 2, "destination": "코프스 하버", "deadline": "2026-05-23 23:59", "status": "무료취소 가능"},
       {"day": 3, "destination": "포트 맥쿼리", "deadline": "2026-05-24 00:00", "status": "무료취소 가능"},
       {"day": 4, "destination": "넬슨 베이", "deadline": null, "status": "환불 불가"},
-      {"day": 5, "destination": "블루 마운틴", "deadline": "2026-05-27 15:00", "status": "무료취소 가능"}
+      {"day": 5, "destination": "블루 마운틴", "deadline": "2026-05-27 15:00", "status": "무료취소 가능"},
+      {"day": "6-7", "destination": "시드니", "deadline": "2026-05-27 14:00", "status": "무료취소 가능"}
     ],
     "action_items": [
       "Day 1 바이런베이: 즉시 숙소에 20:30 도착 사전 연락 (after-hours 체크인 지침 수령)",
       "Day 2 코프스 하버: 19시 이후 도착 시 사전 연락",
-      "Day 5 블루 마운틴: 도착 전 Lithgow/Katoomba에서 식재료 장보기, 도착 당일 호스트 메시지 확인"
+      "Day 5 블루 마운틴: 도착 전 Lithgow/Katoomba에서 식재료 장보기, 도착 당일 호스트 메시지 확인",
+      "Day 6 시드니: 렌터카 반납(공항 Sixt, 21:00 마감) 후 T8 전철 → Green Square역 하차 도보 1~2분. 신분증+신용카드(보증금 AUD 100) 준비",
+      "Day 7 시드니: 5/31(일) 귀국 — 04:30~05:00 출발 권장. 택시/Uber 공항 10분(AU$15~25) 또는 T8 첫차(일요일 시간 확인 필수)"
     ]
   }
 }
