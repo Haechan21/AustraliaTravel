@@ -1,11 +1,20 @@
 ---
 layout: default
-title: 로드트립 루트 비교
+title: 루트 비교
 ---
 
 <div class="routes-page">
-  <h1>로드트립 루트 비교</h1>
-  <p class="routes-subtitle">9개 안의 이동 경로를 지도에서 비교하고, 상세 일정과 평가를 확인하세요.</p>
+  <h1>루트 비교</h1>
+  <p class="routes-subtitle">로드트립 9개 안과 시드니 Day 6-7 코스 5개 안을 비교하세요.</p>
+
+  <!-- 최상위 탭: 로드트립 / 시드니 -->
+  <div class="main-tabs">
+    <button class="main-tab active" data-main="roadtrip">🚗 로드트립 (Day 1~6)</button>
+    <button class="main-tab" data-main="sydney">🌃 시드니 (Day 6~7)</button>
+  </div>
+
+  <!-- ═══ 로드트립 섹션 ═══ -->
+  <div class="main-panel active" id="main-roadtrip">
 
   <!-- 탭 네비게이션 -->
   <div class="route-tabs">
@@ -237,6 +246,135 @@ title: 로드트립 루트 비교
   </div>
 
   </div><!-- /tab-detail -->
+
+  </div><!-- /main-roadtrip -->
+
+  <!-- ═══ 시드니 섹션 ═══ -->
+  <div class="main-panel" id="main-sydney">
+
+  <div class="route-tabs">
+    <button class="route-tab active" data-tab="sydney-detail">상세 평가</button>
+  </div>
+
+  <div class="tab-panel active" id="tab-sydney-detail">
+
+  <div class="route-plans-section" id="sydneyPlans">
+    <h2>종합 순위</h2>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align:center">순위</th>
+          <th>안</th>
+          <th style="text-align:center">평균</th>
+          <th style="text-align:center">설계(A')</th>
+          <th style="text-align:center">감성(B')</th>
+          <th style="text-align:center">실행(C')</th>
+          <th style="text-align:center">예산(2인)</th>
+          <th style="text-align:center">논쟁</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff8e1"><td style="text-align:center;font-weight:700;font-size:1.2em">&#x1F947;</td><td><a href="#sydney-plan-1">1조 클래식 하이라이트</a></td><td style="text-align:center;font-weight:700;color:#e74c3c">76.3</td><td style="text-align:center">76.0</td><td style="text-align:center">76.0</td><td style="text-align:center">77.0</td><td style="text-align:center">₩36.5만</td><td style="text-align:center">X</td></tr>
+        <tr style="background:#f5f5f5"><td style="text-align:center;font-weight:700;font-size:1.2em">&#x1F948;</td><td><a href="#sydney-plan-5">5조 로컬 숨은보석</a></td><td style="text-align:center;font-weight:700;color:#9b59b6">74.8</td><td style="text-align:center">73.5</td><td style="text-align:center">78.5</td><td style="text-align:center">72.5</td><td style="text-align:center">₩47.5만</td><td style="text-align:center">X</td></tr>
+        <tr style="background:#fdf5ee"><td style="text-align:center;font-weight:700;font-size:1.2em">&#x1F949;</td><td><a href="#sydney-plan-3">3조 호주정체성 탐험</a></td><td style="text-align:center;font-weight:700;color:#2ecc71">70.7</td><td style="text-align:center">69.5</td><td style="text-align:center">80.0</td><td style="text-align:center">62.5</td><td style="text-align:center">₩60.7만</td><td style="text-align:center">O</td></tr>
+        <tr><td style="text-align:center;font-weight:700">4</td><td><a href="#sydney-plan-4">4조 Vivid 올인</a></td><td style="text-align:center;font-weight:700;color:#f1c40f">69.8</td><td style="text-align:center">74.0</td><td style="text-align:center">76.5</td><td style="text-align:center">59.0</td><td style="text-align:center">₩41~50만</td><td style="text-align:center">O</td></tr>
+        <tr><td style="text-align:center;font-weight:700">5</td><td><a href="#sydney-plan-2">2조 BridgeClimb 프리미엄</a></td><td style="text-align:center;font-weight:700;color:#3498db">67.5</td><td style="text-align:center">65.0</td><td style="text-align:center">78.5</td><td style="text-align:center">59.0</td><td style="text-align:center">₩93.8만</td><td style="text-align:center">O</td></tr>
+      </tbody>
+    </table>
+
+    <br/>
+
+    <h2>선택 가이드</h2>
+
+    <table>
+      <thead><tr><th>여행자 유형</th><th>추천 코스</th></tr></thead>
+      <tbody>
+        <tr><td>첫 시드니, 안전하고 균형 잡힌 경험</td><td><strong>1조 (클래식 하이라이트)</strong></td></tr>
+        <tr><td>커플 감성, 숨은 명소, 충분한 수면</td><td><strong>5조 (로컬 숨은보석)</strong></td></tr>
+        <tr><td>호주 문화 탐구, 체력 자신 있음</td><td><strong>3조 (호주정체성 탐험)</strong></td></tr>
+        <tr><td>Vivid 열정, 야경 사진 최우선</td><td><strong>4조 (Vivid 올인)</strong></td></tr>
+        <tr><td>예산 무제한, 인생 경험 우선</td><td><strong>2조 (BridgeClimb 프리미엄)</strong></td></tr>
+      </tbody>
+    </table>
+
+    <br/>
+
+    <div class="score-bar" id="sydneyScoreBar">
+      <div class="score-bar-header"><span>50</span><span style="flex:1"></span><span>점수</span></div>
+      <div class="score-item" data-sydney="1"><span class="score-label">1조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#e74c3c"></div></div><span class="score-num">76.3</span></div>
+      <div class="score-item" data-sydney="5"><span class="score-label">5조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#9b59b6"></div></div><span class="score-num">74.8</span></div>
+      <div class="score-item" data-sydney="3"><span class="score-label">3조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#2ecc71"></div></div><span class="score-num">70.7</span></div>
+      <div class="score-item" data-sydney="4"><span class="score-label">4조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#f1c40f"></div></div><span class="score-num">69.8</span></div>
+      <div class="score-item" data-sydney="2"><span class="score-label">2조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#3498db"></div></div><span class="score-num">67.5</span></div>
+    </div>
+
+    <br/>
+    <hr/>
+
+    <!-- 시드니 1조 -->
+    <div class="plan-card" id="sydney-plan-1" data-sydney="1" style="border-left:4px solid #e74c3c;background:#fff8e1">
+      <h2 style="color:#e74c3c">1조: 클래식 하이라이트 — 76.3점 (1위)</h2>
+      <p><strong>본다이→왓슨스베이→하버→The Rocks→Vivid</strong>. 시드니 정석 코스. 호주 음식 5종. 만장일치(편차 1.0).</p>
+      <details>
+        <summary><strong>상세 일정 & 평가 보기</strong></summary>
+        <div class="sydney-plan-content" data-sydney-plan="1">로딩 중...</div>
+      </details>
+    </div>
+
+    <hr/>
+
+    <!-- 시드니 2조 -->
+    <div class="plan-card" id="sydney-plan-2" data-sydney="2">
+      <h2 style="color:#3498db">2조: BridgeClimb 프리미엄 — 67.5점</h2>
+      <p><strong>BridgeClimb Vivid Night + 피쉬마켓 + 본다이 석양</strong>. 하버브릿지 정상에서 Vivid 감상. 서사 최강(B' 78.5). 예산 ₩93.8만.</p>
+      <details>
+        <summary><strong>상세 일정 & 평가 보기</strong></summary>
+        <div class="sydney-plan-content" data-sydney-plan="2">로딩 중...</div>
+      </details>
+    </div>
+
+    <hr/>
+
+    <!-- 시드니 3조 -->
+    <div class="plan-card" id="sydney-plan-3" data-sydney="3">
+      <h2 style="color:#2ecc71">3조: 호주정체성 탐험 — 70.7점</h2>
+      <p><strong>피쉬마켓 + 타롱가 동물원 + 원주민 투어 + Midden 디너</strong>. 호주 고유 체험 밀도 최고(B' 80.0 전체 1위). 논쟁 루트.</p>
+      <details>
+        <summary><strong>상세 일정 & 평가 보기</strong></summary>
+        <div class="sydney-plan-content" data-sydney-plan="3">로딩 중...</div>
+      </details>
+    </div>
+
+    <hr/>
+
+    <!-- 시드니 4조 -->
+    <div class="plan-card" id="sydney-plan-4" data-sydney="4">
+      <h2 style="color:#f1c40f">4조: Vivid 올인 — 69.8점</h2>
+      <p><strong>Vivid 2일 완벽 분할(Day 6 서쪽/Day 7 동쪽) + 크루즈 + Opera Bar 석양</strong>. Vivid 설계 최고(A' 74.0). 수면 5시간 리스크.</p>
+      <details>
+        <summary><strong>상세 일정 & 평가 보기</strong></summary>
+        <div class="sydney-plan-content" data-sydney-plan="4">로딩 중...</div>
+      </details>
+    </div>
+
+    <hr/>
+
+    <!-- 시드니 5조 -->
+    <div class="plan-card" id="sydney-plan-5" data-sydney="5" style="border-left:4px solid #9b59b6;background:#f5f5f5">
+      <h2 style="color:#9b59b6">5조: 로컬 숨은보석 — 74.8점 (2위)</h2>
+      <p><strong>Wendy's Garden + 비엔날레 + Blues Point 석양 + 빛의 3단 전환</strong>. 커플 로맨스 5곳 최다. 수면 7시간+. 비논쟁(편차 6.0).</p>
+      <details>
+        <summary><strong>상세 일정 & 평가 보기</strong></summary>
+        <div class="sydney-plan-content" data-sydney-plan="5">로딩 중...</div>
+      </details>
+    </div>
+  </div>
+
+  </div><!-- /tab-sydney-detail -->
+
+  </div><!-- /main-sydney -->
+
 </div>
 
 <!-- 장소 상세 모달 -->
@@ -252,6 +390,22 @@ title: 로드트립 루트 비교
 <script>window.__BASE_URL__ = "{{ site.baseurl }}";</script>
 <script src="{{ '/assets/js/routes.js' | relative_url }}"></script>
 <script>
+// ═══ 최상위 탭 (로드트립 / 시드니) 전환 ═══
+document.querySelectorAll('.main-tab').forEach(function(tab) {
+  tab.addEventListener('click', function() {
+    document.querySelectorAll('.main-tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.main-panel').forEach(function(p) { p.classList.remove('active'); });
+    this.classList.add('active');
+    document.getElementById('main-' + this.dataset.main).classList.add('active');
+    // 시드니 탭의 내부 탭도 활성화
+    var panel = document.getElementById('main-' + this.dataset.main);
+    var firstTab = panel.querySelector('.route-tab');
+    if (firstTab && !panel.querySelector('.route-tab.active')) {
+      firstTab.click();
+    }
+  });
+});
+
 // 마크다운 파일 로딩
 var routeBase = (window.__BASE_URL__ || '').replace(/\/+$/, '');
 var planFiles = {
@@ -326,6 +480,48 @@ document.querySelectorAll('.route-btn').forEach(function(btn) {
 document.querySelectorAll('.score-item').forEach(function(el) {
   el.addEventListener('click', function() {
     highlightPlanCard(this.getAttribute('data-route'));
+  });
+});
+
+// ═══ 시드니 코스 마크다운 로딩 ═══
+var sydneyPlanFiles = {
+  '1': 'research/sydney-plans/1조_클래식_하이라이트.md',
+  '2': 'research/sydney-plans/2조_BridgeClimb_프리미엄.md',
+  '3': 'research/sydney-plans/3조_호주정체성_탐험.md',
+  '4': 'research/sydney-plans/4조_Vivid_올인.md',
+  '5': 'research/sydney-plans/5조_로컬_숨은보석.md'
+};
+
+document.querySelectorAll('#main-sydney details').forEach(function(el) {
+  el.addEventListener('toggle', function() {
+    if (!this.open) return;
+    var div = this.querySelector('.sydney-plan-content');
+    if (div.dataset.loaded) return;
+    var key = div.dataset.sydneyPlan;
+    var url = sydneyPlanFiles[key];
+    if (!url) return;
+    fetch(routeBase + '/' + url)
+      .then(function(r) { return r.text(); })
+      .then(function(text) {
+        div.innerHTML = simpleMarkdown(text);
+        div.dataset.loaded = 'true';
+      })
+      .catch(function() {
+        div.innerHTML = '<p style="color:#e74c3c">파일을 불러올 수 없습니다.</p>';
+      });
+  });
+});
+
+// 시드니 score-item 클릭 시 plan-card 하이라이트
+document.querySelectorAll('#sydneyScoreBar .score-item').forEach(function(el) {
+  el.addEventListener('click', function() {
+    var key = this.getAttribute('data-sydney');
+    document.querySelectorAll('#main-sydney .plan-card').forEach(function(c) { c.classList.remove('active'); });
+    var card = document.getElementById('sydney-plan-' + key);
+    if (card) {
+      card.classList.add('active');
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
   });
 });
 

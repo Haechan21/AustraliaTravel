@@ -725,6 +725,47 @@
   h1 { margin-bottom: 0.2em; }
 }
 
+// 최상위 탭 (로드트립 / 시드니)
+.main-tabs {
+  display: flex;
+  gap: 0;
+  border-bottom: 3px solid #159957;
+  margin-bottom: 1.2em;
+}
+
+.main-tab {
+  padding: 0.8em 1.8em;
+  border: none;
+  border-bottom: 4px solid transparent;
+  background: #f6f8fa;
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: #586069;
+  transition: all 0.2s;
+  margin-bottom: -3px;
+  border-radius: 8px 8px 0 0;
+
+  &:hover {
+    color: #24292e;
+    background: #e8f5e9;
+  }
+
+  &.active {
+    color: #fff;
+    background: #159957;
+    border-bottom-color: #159957;
+  }
+}
+
+.main-panel {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
 // 탭 네비게이션
 .route-tabs {
   display: flex;
