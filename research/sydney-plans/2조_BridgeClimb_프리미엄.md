@@ -1,7 +1,3 @@
----
-layout: default
-title: "시드니 2조: BridgeClimb 프리미엄 — 하버브릿지 꼭대기에서 Vivid를 보다"
----
 
 # 시드니 2조: BridgeClimb 프리미엄
 

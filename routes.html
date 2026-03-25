@@ -198,7 +198,7 @@ title: 루트 비교
 
     <hr/>
 
-    <div class="plan-card" id="plan-6" data-route="6" style="border-left:4px solid #e67e22;background:#fff8e1">
+    <div class="plan-card" id="plan-6" data-route="6">
       <h2 style="color:#e67e22">6조: 바이런직행 + 블루마운틴 — 78.0점 (1위)</h2>
       <p><strong>시드니 → 바이런베이(직행) → 콥스/Waterfall Way → 포트스테판스 → 뉴캐슬 → 블루마운틴(뷰숙소) → 그랜드퍼시픽 → 시드니</strong></p>
       <p>GC 포기 → S등급 6곳 올클리어 + 3인 합의 최고. 총 2,234km.</p>
@@ -210,7 +210,7 @@ title: 루트 비교
 
     <hr/>
 
-    <div class="plan-card" id="plan-7" data-route="7" style="border-left:4px solid #1abc9c">
+    <div class="plan-card" id="plan-7" data-route="7">
       <h2 style="color:#1abc9c">7조: 안전 첫날 + S등급 올클리어 — 59.5점</h2>
       <p><strong>시드니 → 포트맥쿼리(410km) → 도리고/콥스하버 → 바이런(왕복) → 포트스테판스 → 뉴캐슬 → 블루마운틴 → GP → 시드니</strong></p>
       <p>첫날 410km 안전 시작 + 야간운전 0h. S등급 6곳 올클리어. 골든아워 3회. 2,249km.</p>
@@ -222,7 +222,7 @@ title: 루트 비교
 
     <hr/>
 
-    <div class="plan-card" id="plan-8" data-route="8" style="border-left:4px solid #16a085">
+    <div class="plan-card" id="plan-8" data-route="8">
       <h2 style="color:#16a085">8조: 바이런 연박 감성 루트 — 73.0점</h2>
       <p><strong>시드니 → 바이런(직행, 2박) → 콥스/도리고 → 벨링겐 → 포트스테판스 → 뉴캐슬 → 블루마운틴 → GP → 시드니</strong></p>
       <p>바이런 2박으로 일출+서핑+마을+일몰. S등급 6곳 올클리어. 골든아워 4회. 2,254km.</p>
@@ -234,7 +234,7 @@ title: 루트 비교
 
     <hr/>
 
-    <div class="plan-card" id="plan-9" data-route="9" style="border-left:4px solid #c0392b">
+    <div class="plan-card" id="plan-9" data-route="9">
       <h2 style="color:#c0392b">9조: GC포함 밸런스 (4조 완성형) — 59.5점</h2>
       <p><strong>시드니 → GC(직행) → 바이런 → 콥스/Waterfall Way → 포트맥쿼리 → 포트스테판스 → 뉴캐슬 → 블루마운틴 → GP → 시드니</strong></p>
       <p>4조의 야심(S6 올클리어+GC)을 유지하면서 Day 5 540km 해소. 토마리·고벳츠에서 골든아워 확보. 2,468km.</p>
@@ -364,7 +364,7 @@ title: 루트 비교
     <hr/>
 
     <!-- 시드니 1조 -->
-    <div class="plan-card" id="sydney-plan-1" data-sydney="1" style="border-left:4px solid #e74c3c;background:#fff8e1">
+    <div class="plan-card" id="sydney-plan-1" data-sydney="1">
       <h2 style="color:#e74c3c">1조: 클래식 하이라이트 — 76.3점 (1위)</h2>
       <p><strong>본다이→왓슨스베이→하버→The Rocks→Vivid</strong>. 시드니 정석 코스. 호주 음식 5종. 만장일치(편차 1.0).</p>
       <details>
@@ -412,7 +412,7 @@ title: 루트 비교
     <hr/>
 
     <!-- 시드니 5조 -->
-    <div class="plan-card" id="sydney-plan-5" data-sydney="5" style="border-left:4px solid #9b59b6;background:#f5f5f5">
+    <div class="plan-card" id="sydney-plan-5" data-sydney="5">
       <h2 style="color:#9b59b6">5조: 로컬 숨은보석 — 74.8점 (2위)</h2>
       <p><strong>Wendy's Garden + 비엔날레 + Blues Point 석양 + 빛의 3단 전환</strong>. 커플 로맨스 5곳 최다. 수면 7시간+. 비논쟁(편차 6.0).</p>
       <details>
@@ -569,6 +569,17 @@ document.querySelectorAll('#main-sydney details').forEach(function(el) {
         div.innerHTML = '<p style="color:#e74c3c">파일을 불러올 수 없습니다.</p>';
       });
   });
+});
+
+// ═══ 시드니 점수 바 width 자동 계산 ═══
+document.querySelectorAll('#sydneyScoreBar .score-item, #sydneyMapScoreBar .score-item').forEach(function(el) {
+  var numEl = el.querySelector('.score-num');
+  var fillEl = el.querySelector('.score-fill');
+  if (numEl && fillEl) {
+    var score = parseFloat(numEl.textContent);
+    var pct = Math.max(0, Math.min(100, (score - 50) / 50 * 100));
+    fillEl.style.width = pct + '%';
+  }
 });
 
 // 시드니 score-item 클릭 시 plan-card 하이라이트
