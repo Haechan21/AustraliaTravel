@@ -21,7 +21,163 @@
         "dispute": false,
         "desc": "Day 6 휴식 + Day 7 Vivid CQ+DH 한 밤 압축. Mrs Macquaries 골든아워. 호주 음식 5종 유지.",
         "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (11시간 수면)",
-        "day7_label": "Day 7 종일 — 시드니의 모든 맛과 빛 (Vivid 한 밤 집중)"
+        "day7_label": "Day 7 종일 — 시드니의 모든 맛과 빛 (Vivid 한 밤 집중)",
+        "days": [
+          {
+            "day": 6,
+            "date": "5/29",
+            "label": "Day 6 저녁 — 호텔 완전 휴식",
+            "day_km": 0,
+            "stops": [
+              {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            ]
+          },
+          {
+            "day": 7,
+            "date": "5/30",
+            "label": "Day 7 종일 — 시드니의 모든 맛과 빛 (Vivid 한 밤 집중)",
+            "day_km": 34.9,
+            "stops": [
+              {
+                "name": "Bills Bondi",
+                "lng": 151.2749,
+                "lat": -33.8908,
+                "type": "dining",
+                "distance_km": 0
+              },
+              {
+                "name": "Bronte Beach",
+                "lng": 151.2677,
+                "lat": -33.9034,
+                "type": "attraction",
+                "distance_km": 2.0,
+                "transit_mode": "walk",
+                "transit_min": 60,
+                "transit_detail": "코스털워크 3km"
+              },
+              {
+                "name": "The Gap (Watsons Bay)",
+                "lng": 151.2796,
+                "lat": -33.8586,
+                "type": "attraction",
+                "distance_km": 6.6,
+                "transit_mode": "taxi",
+                "transit_min": 15,
+                "transit_detail": "Uber 직행 (버스 환승 시 45분)"
+              },
+              {
+                "name": "Doyles (Watsons Bay)",
+                "lng": 151.2826,
+                "lat": -33.8439,
+                "type": "dining",
+                "distance_km": 1.7,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "해안 절벽 도보"
+              },
+              {
+                "name": "Circular Quay (Ferry)",
+                "lng": 151.2111,
+                "lat": -33.8612,
+                "type": "attraction",
+                "distance_km": 6.9,
+                "transit_mode": "ferry",
+                "transit_min": 18,
+                "transit_detail": "F9 페리 Watsons Bay→CQ"
+              },
+              {
+                "name": "The Rocks (Market+Heritage)",
+                "lng": 151.2085,
+                "lat": -33.8594,
+                "type": "attraction",
+                "distance_km": 0.3,
+                "transit_mode": "walk",
+                "transit_min": 5,
+                "transit_detail": "CQ에서 도보"
+              },
+              {
+                "name": "Royal Botanic Garden",
+                "lng": 151.2168,
+                "lat": -33.8641,
+                "type": "attraction",
+                "distance_km": 1.2,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "오페라하우스 경유 도보"
+              },
+              {
+                "name": "Mrs Macquaries Chair",
+                "lng": 151.2224,
+                "lat": -33.86,
+                "type": "attraction",
+                "distance_km": 0.9,
+                "transit_mode": "walk",
+                "transit_min": 15,
+                "transit_detail": "정원 산책로"
+              },
+              {
+                "name": "Harry's Cafe de Wheels",
+                "lng": 151.2048,
+                "lat": -33.8795,
+                "type": "dining",
+                "distance_km": 3.5,
+                "transit_mode": "mixed",
+                "transit_min": 25,
+                "transit_detail": "도보 CQ역 15분 + T8 전철 10분"
+              },
+              {
+                "name": "Circular Quay (Vivid CQ)",
+                "lng": 151.2111,
+                "lat": -33.8612,
+                "type": "attraction",
+                "distance_km": 3.5,
+                "transit_mode": "train",
+                "transit_min": 15,
+                "transit_detail": "T8 전철 15분"
+              },
+              {
+                "name": "The Rocks (Vivid Walk)",
+                "lng": 151.2085,
+                "lat": -33.8594,
+                "type": "attraction",
+                "distance_km": 0.5,
+                "transit_mode": "walk",
+                "transit_min": 5,
+                "transit_detail": "CQ 도보"
+              },
+              {
+                "name": "Barangaroo (Fire Kitchen)",
+                "lng": 151.2018,
+                "lat": -33.8588,
+                "type": "attraction",
+                "distance_km": 0.8,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "The Rocks 도보"
+              },
+              {
+                "name": "Darling Harbour (Laser)",
+                "lng": 151.1985,
+                "lat": -33.8722,
+                "type": "attraction",
+                "distance_km": 2.0,
+                "transit_mode": "walk",
+                "transit_min": 18,
+                "transit_detail": "하버사이드 프롬나드"
+              },
+              {
+                "name": "ValueSuites Green Square",
+                "lng": 151.202,
+                "lat": -33.907,
+                "type": "stay",
+                "distance_km": 5.0,
+                "transit_mode": "train",
+                "transit_min": 18,
+                "transit_detail": "도보 Town Hall역 8분 + T8 전철 10분"
+              }
+            ]
+          }
+        ]
       },
       "days": [
         {
@@ -217,7 +373,123 @@
         "dispute": false,
         "desc": "Day 6 휴식 + Day 7 저녁 BridgeClimb 19:30 세션. 정상에서 Vivid 360° 파노라마 = 별도 Light Walk 불필요.",
         "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (9.5시간 수면)",
-        "day7_label": "Day 7 종일 — 피쉬마켓+본다이 석양+BridgeClimb Vivid"
+        "day7_label": "Day 7 종일 — 피쉬마켓+본다이 석양+BridgeClimb Vivid",
+        "days": [
+          {
+            "day": 6,
+            "date": "5/29",
+            "label": "Day 6 저녁 — 호텔 완전 휴식",
+            "day_km": 0,
+            "stops": [
+              {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            ]
+          },
+          {
+            "day": 7,
+            "date": "5/30",
+            "label": "Day 7 종일 — 피쉬마켓+본다이 석양+BridgeClimb Vivid",
+            "day_km": 38.3,
+            "stops": [
+              {
+                "name": "Sydney Fish Market",
+                "lng": 151.1896,
+                "lat": -33.8714,
+                "type": "dining",
+                "distance_km": 0
+              },
+              {
+                "name": "Royal Botanic Garden",
+                "lng": 151.2168,
+                "lat": -33.8641,
+                "type": "attraction",
+                "distance_km": 3.4,
+                "transit_mode": "mixed",
+                "transit_min": 30,
+                "transit_detail": "L1 라이트레일 + Central 환승 T4→CQ + 도보"
+              },
+              {
+                "name": "Mrs Macquaries Chair",
+                "lng": 151.2224,
+                "lat": -33.86,
+                "type": "attraction",
+                "distance_km": 0.9,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "정원 산책로"
+              },
+              {
+                "name": "The Rocks (Market+Heritage)",
+                "lng": 151.2085,
+                "lat": -33.8594,
+                "type": "attraction",
+                "distance_km": 1.7,
+                "transit_mode": "walk",
+                "transit_min": 20,
+                "transit_detail": "도보 또는 버스 311"
+              },
+              {
+                "name": "Barangaroo (원주민투어)",
+                "lng": 151.2018,
+                "lat": -33.8588,
+                "type": "attraction",
+                "distance_km": 0.8,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "Munn St 방면 도보"
+              },
+              {
+                "name": "Bondi Beach",
+                "lng": 151.2749,
+                "lat": -33.8908,
+                "type": "attraction",
+                "distance_km": 9.9,
+                "transit_mode": "bus",
+                "transit_min": 45,
+                "transit_detail": "CQ 도보 5분 + 버스 333 본다이행 40분"
+              },
+              {
+                "name": "Bondi Icebergs Pool",
+                "lng": 151.274,
+                "lat": -33.8938,
+                "type": "attraction",
+                "distance_km": 0.4,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "비치 사우스 끝 도보"
+              },
+              {
+                "name": "ValueSuites Green Square",
+                "lng": 151.202,
+                "lat": -33.907,
+                "type": "stay",
+                "distance_km": 9.0,
+                "transit_mode": "bus",
+                "transit_min": 35,
+                "transit_detail": "버스 333 → T4 → T8 환승"
+              },
+              {
+                "name": "BridgeClimb",
+                "lng": 151.2102,
+                "lat": -33.8527,
+                "type": "attraction",
+                "distance_km": 6.1,
+                "transit_mode": "train",
+                "transit_min": 22,
+                "transit_detail": "T8 전철 12분 + 도보 10분"
+              },
+              {
+                "name": "ValueSuites Green Square",
+                "lng": 151.202,
+                "lat": -33.907,
+                "type": "stay",
+                "distance_km": 6.1,
+                "transit_mode": "train",
+                "transit_min": 22,
+                "transit_detail": "도보 BridgeClimb 10분 + T8 전철 12분"
+              }
+            ]
+          }
+        ]
       },
       "days": [
         {
@@ -423,7 +695,153 @@
         "dispute": true,
         "desc": "Day 6 휴식 + Day 7 호주 정체성 풀코스. 서사 최고(B' 79.6)이나 16시간 풀가동으로 실행 위험(C' 57.5).",
         "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (8.5시간 수면)",
-        "day7_label": "Day 7 종일 — 타롱가+원주민+Harry's+Midden+Vivid+브릿지"
+        "day7_label": "Day 7 종일 — 타롱가+원주민+Harry's+Midden+Vivid+브릿지",
+        "days": [
+          {
+            "day": 6,
+            "date": "5/29",
+            "label": "Day 6 저녁 — 호텔 완전 휴식",
+            "day_km": 0,
+            "stops": [
+              {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            ]
+          },
+          {
+            "day": 7,
+            "date": "5/30",
+            "label": "Day 7 종일 — 타롱가+원주민+Harry's+Midden+Vivid+브릿지",
+            "day_km": 27.3,
+            "stops": [
+              {
+                "name": "Sydney Fish Market",
+                "lng": 151.1896,
+                "lat": -33.8714,
+                "type": "dining",
+                "distance_km": 0
+              },
+              {
+                "name": "Circular Quay",
+                "lng": 151.2111,
+                "lat": -33.8612,
+                "type": "attraction",
+                "distance_km": 3.0,
+                "transit_mode": "mixed",
+                "transit_min": 27,
+                "transit_detail": "L1 라이트레일 + Central 환승 T4→CQ"
+              },
+              {
+                "name": "Taronga Zoo (Ferry)",
+                "lng": 151.2414,
+                "lat": -33.843,
+                "type": "attraction",
+                "distance_km": 3.5,
+                "transit_mode": "ferry",
+                "transit_min": 12,
+                "transit_detail": "F2 페리 CQ→Taronga"
+              },
+              {
+                "name": "Circular Quay (Return)",
+                "lng": 151.2111,
+                "lat": -33.8612,
+                "type": "attraction",
+                "distance_km": 3.5,
+                "transit_mode": "ferry",
+                "transit_min": 12,
+                "transit_detail": "F2 페리 Taronga→CQ"
+              },
+              {
+                "name": "Barangaroo (원주민투어)",
+                "lng": 151.2018,
+                "lat": -33.8588,
+                "type": "attraction",
+                "distance_km": 0.8,
+                "transit_mode": "walk",
+                "transit_min": 12,
+                "transit_detail": "Argyle Cut 경유 도보"
+              },
+              {
+                "name": "The Rocks (Market)",
+                "lng": 151.2085,
+                "lat": -33.8594,
+                "type": "attraction",
+                "distance_km": 0.8,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "도보"
+              },
+              {
+                "name": "Heritage Hotel",
+                "lng": 151.2085,
+                "lat": -33.8594,
+                "type": "dining",
+                "distance_km": 0.1,
+                "transit_mode": "walk",
+                "transit_min": 2,
+                "transit_detail": "인접 도보"
+              },
+              {
+                "name": "Harry's Cafe de Wheels",
+                "lng": 151.2048,
+                "lat": -33.8795,
+                "type": "dining",
+                "distance_km": 3.2,
+                "transit_mode": "mixed",
+                "transit_min": 16,
+                "transit_detail": "전철 CQ→Central + 도보 7분"
+              },
+              {
+                "name": "Midden (Opera House)",
+                "lng": 151.2153,
+                "lat": -33.8568,
+                "type": "dining",
+                "distance_km": 3.2,
+                "transit_mode": "mixed",
+                "transit_min": 18,
+                "transit_detail": "도보 Central + 전철→CQ + 도보"
+              },
+              {
+                "name": "Vivid Light Walk",
+                "lng": 151.213,
+                "lat": -33.858,
+                "type": "attraction",
+                "distance_km": 0.3,
+                "transit_mode": "walk",
+                "transit_min": 5,
+                "transit_detail": "Vivid 설치물 산책"
+              },
+              {
+                "name": "Harbour Bridge Walk",
+                "lng": 151.211,
+                "lat": -33.8525,
+                "type": "attraction",
+                "distance_km": 0.6,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "The Rocks 경유 계단"
+              },
+              {
+                "name": "Milsons Point",
+                "lng": 151.2115,
+                "lat": -33.8476,
+                "type": "attraction",
+                "distance_km": 1.6,
+                "transit_mode": "walk",
+                "transit_min": 30,
+                "transit_detail": "하버브릿지 1.6km 도보 횡단"
+              },
+              {
+                "name": "ValueSuites Green Square",
+                "lng": 151.202,
+                "lat": -33.907,
+                "type": "stay",
+                "distance_km": 6.7,
+                "transit_mode": "train",
+                "transit_min": 25,
+                "transit_detail": "T1 전철 Milsons Pt→Town Hall + T8 환승"
+              }
+            ]
+          }
+        ]
       },
       "days": [
         {
@@ -639,7 +1057,113 @@
         "dispute": false,
         "desc": "Day 6 휴식 → Vivid 2Night→1Night 전환. 정체성 약화되나 Opera Bar 골든아워+크루즈는 유지.",
         "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (10.5시간 수면)",
-        "day7_label": "Day 7 종일 — 본다이+Vivid 동쪽+크루즈 (1Night 집중)"
+        "day7_label": "Day 7 종일 — 본다이+Vivid 동쪽+크루즈 (1Night 집중)",
+        "days": [
+          {
+            "day": 6,
+            "date": "5/29",
+            "label": "Day 6 저녁 — 호텔 완전 휴식",
+            "day_km": 0,
+            "stops": [
+              {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            ]
+          },
+          {
+            "day": 7,
+            "date": "5/30",
+            "label": "Day 7 종일 — 본다이+Vivid 동쪽+크루즈 (1Night 집중)",
+            "day_km": 23.0,
+            "stops": [
+              {
+                "name": "Bondi Icebergs",
+                "lng": 151.274,
+                "lat": -33.8938,
+                "type": "dining",
+                "distance_km": 0
+              },
+              {
+                "name": "Bronte Beach (Walk)",
+                "lng": 151.2677,
+                "lat": -33.9034,
+                "type": "attraction",
+                "distance_km": 1.6,
+                "transit_mode": "walk",
+                "transit_min": 30,
+                "transit_detail": "코스털워크 1.6km"
+              },
+              {
+                "name": "The Rocks (Market+Heritage)",
+                "lng": 151.2085,
+                "lat": -33.8594,
+                "type": "attraction",
+                "distance_km": 9.5,
+                "transit_mode": "bus",
+                "transit_min": 45,
+                "transit_detail": "버스 333 Bondi Jct 환승 T4 시내행"
+              },
+              {
+                "name": "Harbour Bridge Walk",
+                "lng": 151.211,
+                "lat": -33.8525,
+                "type": "attraction",
+                "distance_km": 0.8,
+                "transit_mode": "walk",
+                "transit_min": 5,
+                "transit_detail": "Cumberland St 입구 도보"
+              },
+              {
+                "name": "Milsons Point",
+                "lng": 151.2115,
+                "lat": -33.8476,
+                "type": "attraction",
+                "distance_km": 0.7,
+                "transit_mode": "walk",
+                "transit_min": 20,
+                "transit_detail": "하버브릿지 1.6km 도보 횡단"
+              },
+              {
+                "name": "Circular Quay (Ferry)",
+                "lng": 151.2111,
+                "lat": -33.8612,
+                "type": "attraction",
+                "distance_km": 2.5,
+                "transit_mode": "ferry",
+                "transit_min": 12,
+                "transit_detail": "F4 페리 Milsons Pt→CQ"
+              },
+              {
+                "name": "Opera Bar (석양)",
+                "lng": 151.2153,
+                "lat": -33.8568,
+                "type": "dining",
+                "distance_km": 0.4,
+                "transit_mode": "walk",
+                "transit_min": 5,
+                "transit_detail": "CQ 도보"
+              },
+              {
+                "name": "Circular Quay (Vivid+크루즈)",
+                "lng": 151.2111,
+                "lat": -33.8612,
+                "type": "attraction",
+                "distance_km": 0.8,
+                "transit_mode": "walk",
+                "transit_min": 5,
+                "transit_detail": "인접 도보"
+              },
+              {
+                "name": "ValueSuites Green Square",
+                "lng": 151.202,
+                "lat": -33.907,
+                "type": "stay",
+                "distance_km": 6.7,
+                "transit_mode": "taxi",
+                "transit_min": 15,
+                "transit_detail": "Uber CQ→Green Square $20~30"
+              }
+            ]
+          }
+        ]
       },
       "days": [
         {
@@ -815,7 +1339,193 @@
         "dispute": false,
         "desc": "Day 6 휴식 → Day 7 핵심 동선 100% 유지. Blues Point 골든아워 + Vivid 1Night 집중. 만장일치 1위.",
         "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (9.5시간 수면)",
-        "day7_label": "Day 7 종일 — 비엔날레+Blues Point 석양+Vivid 집중"
+        "day7_label": "Day 7 종일 — 비엔날레+Blues Point 석양+Vivid 집중",
+        "days": [
+          {
+            "day": 6,
+            "date": "5/29",
+            "label": "Day 6 저녁 — 호텔 완전 휴식",
+            "day_km": 0,
+            "stops": [
+              {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            ]
+          },
+          {
+            "day": 7,
+            "date": "5/30",
+            "label": "Day 7 종일 — 비엔날레+Blues Point 석양+Vivid 집중",
+            "day_km": 30.0,
+            "stops": [
+              {
+                "name": "The Grounds of Alexandria",
+                "lng": 151.1944,
+                "lat": -33.9102,
+                "type": "dining",
+                "distance_km": 0
+              },
+              {
+                "name": "Art Gallery of NSW (비엔날레)",
+                "lng": 151.217,
+                "lat": -33.869,
+                "type": "attraction",
+                "distance_km": 6.5,
+                "transit_mode": "mixed",
+                "transit_min": 28,
+                "transit_detail": "Metro Waterloo역 도보 4분 + M2 + T4 환승"
+              },
+              {
+                "name": "Royal Botanic Garden",
+                "lng": 151.2168,
+                "lat": -33.8641,
+                "type": "attraction",
+                "distance_km": 0.7,
+                "transit_mode": "walk",
+                "transit_min": 7,
+                "transit_detail": "인접 도보"
+              },
+              {
+                "name": "Mrs Macquaries Chair",
+                "lng": 151.2224,
+                "lat": -33.86,
+                "type": "attraction",
+                "distance_km": 0.9,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "정원 산책로"
+              },
+              {
+                "name": "Opera Bar",
+                "lng": 151.2153,
+                "lat": -33.8568,
+                "type": "dining",
+                "distance_km": 1.0,
+                "transit_mode": "walk",
+                "transit_min": 10,
+                "transit_detail": "Bennelong Point 도보"
+              },
+              {
+                "name": "The Rocks (Market+Heritage)",
+                "lng": 151.2085,
+                "lat": -33.8594,
+                "type": "attraction",
+                "distance_km": 0.9,
+                "transit_mode": "walk",
+                "transit_min": 8,
+                "transit_detail": "CQ → George St 도보"
+              },
+              {
+                "name": "Paddington Reservoir",
+                "lng": 151.2263,
+                "lat": -33.8845,
+                "type": "attraction",
+                "distance_km": 4.2,
+                "transit_mode": "bus",
+                "transit_min": 18,
+                "transit_detail": "버스 333 또는 389 Paddington행"
+              },
+              {
+                "name": "Paddington Markets",
+                "lng": 151.227,
+                "lat": -33.886,
+                "type": "attraction",
+                "distance_km": 0.2,
+                "transit_mode": "walk",
+                "transit_min": 2,
+                "transit_detail": "인접 도보"
+              },
+              {
+                "name": "Wendy's Secret Garden",
+                "lng": 151.2079,
+                "lat": -33.8459,
+                "type": "attraction",
+                "distance_km": 4.8,
+                "transit_mode": "bus",
+                "transit_min": 25,
+                "transit_detail": "버스 333 시내행 + T1 전철 Milsons Pt"
+              },
+              {
+                "name": "Luna Park",
+                "lng": 151.2095,
+                "lat": -33.848,
+                "type": "attraction",
+                "distance_km": 0.4,
+                "transit_mode": "walk",
+                "transit_min": 5,
+                "transit_detail": "인접 도보"
+              },
+              {
+                "name": "Blues Point Reserve",
+                "lng": 151.2058,
+                "lat": -33.8441,
+                "type": "attraction",
+                "distance_km": 0.7,
+                "transit_mode": "walk",
+                "transit_min": 8,
+                "transit_detail": "해안 도보"
+              },
+              {
+                "name": "McMahons Point Ferry",
+                "lng": 151.2034,
+                "lat": -33.8445,
+                "type": "attraction",
+                "distance_km": 0.2,
+                "transit_mode": "walk",
+                "transit_min": 3,
+                "transit_detail": "선착장 도보"
+              },
+              {
+                "name": "Circular Quay (Ferry)",
+                "lng": 151.2111,
+                "lat": -33.8612,
+                "type": "attraction",
+                "distance_km": 2.0,
+                "transit_mode": "ferry",
+                "transit_min": 10,
+                "transit_detail": "F4 페리 McMahons Pt→CQ"
+              },
+              {
+                "name": "The Glenmore 루프탑",
+                "lng": 151.2084,
+                "lat": -33.8593,
+                "type": "dining",
+                "distance_km": 0.4,
+                "transit_mode": "walk",
+                "transit_min": 5,
+                "transit_detail": "The Rocks 도보"
+              },
+              {
+                "name": "Vivid Light Walk",
+                "lng": 151.213,
+                "lat": -33.858,
+                "type": "attraction",
+                "distance_km": 0.3,
+                "transit_mode": "walk",
+                "transit_min": 5,
+                "transit_detail": "CQ→The Rocks→Barangaroo"
+              },
+              {
+                "name": "Laser Lightfall (Darling Harbour)",
+                "lng": 151.1985,
+                "lat": -33.8722,
+                "type": "attraction",
+                "distance_km": 1.8,
+                "transit_mode": "walk",
+                "transit_min": 18,
+                "transit_detail": "Barangaroo→DH 도보"
+              },
+              {
+                "name": "ValueSuites Green Square",
+                "lng": 151.202,
+                "lat": -33.907,
+                "type": "stay",
+                "distance_km": 5.0,
+                "transit_mode": "train",
+                "transit_min": 16,
+                "transit_detail": "도보 Town Hall역 10분 + T8 전철"
+              }
+            ]
+          }
+        ]
       },
       "days": [
         {

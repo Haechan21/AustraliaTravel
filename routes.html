@@ -804,6 +804,7 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
   var sydneyRouteData = null;
   var sydneyGeometryData = null;
   var sLayers = {};
+  var sLayersAlt = {};
   var sActiveRoute = 'all';
 
   var base = (window.__BASE_URL__ || '').replace(/\/+$/, '');
@@ -843,17 +844,17 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     normalizeSydneyScoreBars();
   });
 
-  function getSydneyGeometry(routeKey, dayNum) {
+  function getSydneyGeometry(routeKey, dayNum, isAlt) {
     if (!sydneyGeometryData) return null;
-    var key = 'R' + routeKey + 'D' + dayNum;
+    var key = 'R' + routeKey + 'D' + dayNum + (isAlt ? '_alt' : '');
     var encoded = sydneyGeometryData.geometries ? sydneyGeometryData.geometries[key] : null;
     if (!encoded) return null;
     return decodePolyline(encoded);
   }
 
-  function getSydneyFerryGeometry(routeKey, dayNum) {
+  function getSydneyFerryGeometry(routeKey, dayNum, isAlt) {
     if (!sydneyGeometryData || !sydneyGeometryData.ferry_geometries) return null;
-    var key = 'R' + routeKey + 'D' + dayNum;
+    var key = 'R' + routeKey + 'D' + dayNum + (isAlt ? '_alt' : '');
     var ferries = sydneyGeometryData.ferry_geometries[key];
     if (!ferries) return null;
     return ferries.map(function(enc) { return decodePolyline(enc); });
@@ -884,7 +885,7 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
         });
 
         // 경로 polyline
-        var roadCoords = getSydneyGeometry(key, day.day);
+        var roadCoords = getSydneyGeometry(key, day.day, false);
         if (roadCoords && roadCoords.length > 1) {
           var line = L.polyline(roadCoords, {
             color: color,
@@ -904,7 +905,7 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
         }
 
         // 페리 구간 (대시 스타일)
-        var ferryCoords = getSydneyFerryGeometry(key, day.day);
+        var ferryCoords = getSydneyFerryGeometry(key, day.day, false);
         if (ferryCoords) {
           ferryCoords.forEach(function(fc) {
             // 흰색 테두리 레이어 (가시성 향상)
@@ -935,41 +936,137 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
 
       sLayers[key] = routeLayers;
     });
+
+    // 대체계획 레이어 빌드
+    Object.keys(sydneyRouteData).forEach(function(key) {
+      var route = sydneyRouteData[key];
+      if (!route.alt || !route.alt.days) { sLayersAlt[key] = sLayers[key]; return; }
+      var color = SYDNEY_COLORS[key];
+      var routeLayers = { lines: [], markers: [], ferryLines: [], dayLines: {}, dayMarkers: {}, dayFerryLines: {} };
+
+      route.alt.days.forEach(function(day) {
+        var dayMarkers = [];
+        var dayLines = [];
+        var dayFerryLines = [];
+
+        day.stops.forEach(function(stop) {
+          var ll = [stop.lat, stop.lng];
+          var popupHtml = '<strong>' + stop.name + '</strong>';
+          if (stop.type === 'stay') popupHtml += ' \uD83C\uDFE8';
+          else if (stop.type === 'dining') popupHtml += ' \uD83C\uDF74';
+          else popupHtml += ' \uD83D\uDCCD';
+          popupHtml += '<br><small>' + key + '\uC870 Day ' + day.day + ' (' + day.date + ') [\uB300\uCCB4]</small>';
+          var marker = L.marker(ll, { icon: sydneyMarkerIcon(stop) }).bindPopup(popupHtml);
+          dayMarkers.push(marker);
+        });
+
+        // OSRM geometry 우선, 없으면 stops 직선 연결
+        var roadCoords = getSydneyGeometry(key, day.day, true);
+        if (roadCoords && roadCoords.length > 1) {
+          var line = L.polyline(roadCoords, { color: color, weight: 3, opacity: 0.8 });
+          dayLines.push(line);
+          routeLayers.lines.push(line);
+        } else {
+          var coords = day.stops.map(function(s) { return [s.lat, s.lng]; });
+          if (coords.length > 1) {
+            // 페리 구간 분리
+            var segments = [];
+            var currentSeg = { coords: [coords[0]], isFerry: false };
+            for (var i = 1; i < day.stops.length; i++) {
+              var isFerry = (day.stops[i].transit_mode === 'ferry');
+              if (isFerry !== currentSeg.isFerry) {
+                currentSeg.coords.push(coords[i]);
+                segments.push(currentSeg);
+                currentSeg = { coords: [coords[i]], isFerry: isFerry };
+              } else {
+                currentSeg.coords.push(coords[i]);
+              }
+            }
+            segments.push(currentSeg);
+
+            segments.forEach(function(seg) {
+              if (seg.coords.length < 2) return;
+              if (seg.isFerry) {
+                var ferryOutline = L.polyline(seg.coords, { color: '#ffffff', weight: 7, opacity: 0.9 });
+                dayFerryLines.push(ferryOutline);
+                routeLayers.ferryLines.push(ferryOutline);
+                var ferryLine = L.polyline(seg.coords, { color: '#0077be', weight: 4, opacity: 1, dashArray: '10 8', lineCap: 'round' });
+                dayFerryLines.push(ferryLine);
+                routeLayers.ferryLines.push(ferryLine);
+              } else {
+                var line = L.polyline(seg.coords, { color: color, weight: 3, opacity: 0.8 });
+                dayLines.push(line);
+                routeLayers.lines.push(line);
+              }
+            });
+          }
+        }
+
+        // 페리 geometry (OSRM 별도)
+        var ferryCoords = getSydneyFerryGeometry(key, day.day, true);
+        if (ferryCoords) {
+          ferryCoords.forEach(function(fc) {
+            var ferryOutline = L.polyline(fc, { color: '#ffffff', weight: 7, opacity: 0.9 });
+            dayFerryLines.push(ferryOutline);
+            routeLayers.ferryLines.push(ferryOutline);
+            var ferryLine = L.polyline(fc, { color: '#0077be', weight: 4, opacity: 1, dashArray: '10 8', lineCap: 'round' });
+            dayFerryLines.push(ferryLine);
+            routeLayers.ferryLines.push(ferryLine);
+          });
+        }
+
+        routeLayers.markers = routeLayers.markers.concat(dayMarkers);
+        routeLayers.dayLines[day.day] = dayLines;
+        routeLayers.dayMarkers[day.day] = dayMarkers;
+        routeLayers.dayFerryLines[day.day] = dayFerryLines;
+      });
+
+      sLayersAlt[key] = routeLayers;
+    });
+  }
+
+  function getActiveSydneyLayers() {
+    return (typeof sydneyPlanType !== 'undefined' && sydneyPlanType === 'alt') ? sLayersAlt : sLayers;
   }
 
   /* ── 표시 함수 ── */
   function clearSydneyMap() {
-    Object.keys(sLayers).forEach(function(key) {
-      sLayers[key].lines.forEach(function(l) { sMap.removeLayer(l); });
-      sLayers[key].markers.forEach(function(m) { sMap.removeLayer(m); });
-      sLayers[key].ferryLines.forEach(function(l) { sMap.removeLayer(l); });
+    [sLayers, sLayersAlt].forEach(function(layerSet) {
+      Object.keys(layerSet).forEach(function(key) {
+        layerSet[key].lines.forEach(function(l) { sMap.removeLayer(l); });
+        layerSet[key].markers.forEach(function(m) { sMap.removeLayer(m); });
+        layerSet[key].ferryLines.forEach(function(l) { sMap.removeLayer(l); });
+      });
     });
   }
 
   function showSydneyAll() {
     clearSydneyMap();
+    var layers = getActiveSydneyLayers();
     var bounds = [];
-    Object.keys(sLayers).forEach(function(key) {
-      sLayers[key].lines.forEach(function(l) {
+    Object.keys(layers).forEach(function(key) {
+      layers[key].lines.forEach(function(l) {
         l.setStyle({ weight: 2.5, opacity: 0.5 });
         l.addTo(sMap);
         bounds = bounds.concat(l.getLatLngs());
       });
-      sLayers[key].ferryLines.forEach(function(l) {
+      layers[key].ferryLines.forEach(function(l) {
         l.setStyle({ weight: 2.5, opacity: 0.5 });
         l.addTo(sMap);
       });
     });
     // 전체 보기에서는 숙소 마커만 (중복 제거)
     var shownCoords = {};
-    Object.keys(sLayers).forEach(function(key) {
+    var useAlt = (typeof sydneyPlanType !== 'undefined' && sydneyPlanType === 'alt');
+    Object.keys(layers).forEach(function(key) {
       var route = sydneyRouteData[key];
-      route.days.forEach(function(day) {
+      var days = (useAlt && route.alt && route.alt.days) ? route.alt.days : route.days;
+      days.forEach(function(day) {
         day.stops.forEach(function(stop, i) {
           if (stop.type === 'stay') {
             var coordKey = stop.lat.toFixed(3) + ',' + stop.lng.toFixed(3);
             if (!shownCoords[coordKey]) {
-              var dm = sLayers[key].dayMarkers[day.day];
+              var dm = layers[key].dayMarkers[day.day];
               if (dm && dm[i]) { dm[i].addTo(sMap); bounds.push(dm[i].getLatLng()); }
               shownCoords[coordKey] = true;
             }
@@ -982,18 +1079,19 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
 
   function showSydneyRoute(key) {
     clearSydneyMap();
+    var layers = getActiveSydneyLayers();
     var bounds = [];
-    sLayers[key].lines.forEach(function(l) {
+    layers[key].lines.forEach(function(l) {
       l.setStyle({ weight: 4, opacity: 0.9 });
       l.addTo(sMap);
       bounds = bounds.concat(l.getLatLngs());
     });
-    sLayers[key].ferryLines.forEach(function(l) {
+    layers[key].ferryLines.forEach(function(l) {
       l.setStyle({ weight: 4, opacity: 0.9 });
       l.addTo(sMap);
       bounds = bounds.concat(l.getLatLngs());
     });
-    sLayers[key].markers.forEach(function(m) {
+    layers[key].markers.forEach(function(m) {
       m.addTo(sMap);
       bounds.push(m.getLatLng());
     });
@@ -1002,10 +1100,11 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
 
   function showSydneyRouteDay(key, dayNum) {
     clearSydneyMap();
+    var layers = getActiveSydneyLayers();
     var bounds = [];
-    var lines = sLayers[key].dayLines[dayNum] || [];
-    var markers = sLayers[key].dayMarkers[dayNum] || [];
-    var ferries = sLayers[key].dayFerryLines[dayNum] || [];
+    var lines = layers[key].dayLines[dayNum] || [];
+    var markers = layers[key].dayMarkers[dayNum] || [];
+    var ferries = layers[key].dayFerryLines[dayNum] || [];
 
     lines.forEach(function(l) {
       l.setStyle({ weight: 5, opacity: 1.0 });
@@ -1039,8 +1138,9 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     html += '<div class="route-stats"><span>\uD3C9\uAC00 ' + displayScore.toFixed(1) + '\uC810</span></div>';
 
     // Day 미니탭
+    var days = (useAlt && route.alt && route.alt.days) ? route.alt.days : route.days;
     html += '<div class="day-mini-tabs" id="sydneyDayMiniTabs">';
-    route.days.forEach(function(day, idx) {
+    days.forEach(function(day, idx) {
       var activeClass = idx === 0 ? ' active' : '';
       html += '<button class="day-mini-tab' + activeClass + '" data-day="' + day.day + '">';
       html += 'D' + day.day;
@@ -1069,7 +1169,7 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     });
 
     // 첫 번째 Day 렌더링
-    renderSydneyDayContent(key, route.days[0].day);
+    renderSydneyDayContent(key, days[0].day);
   }
 
   var TRANSIT_ICONS = {
@@ -1087,9 +1187,11 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     var container = document.getElementById('sydneyDayContent');
     if (!container) return;
     var route = sydneyRouteData[routeKey];
+    var useAlt = (typeof sydneyPlanType !== 'undefined' && sydneyPlanType === 'alt');
+    var days = (useAlt && route.alt && route.alt.days) ? route.alt.days : route.days;
     var day = null;
-    for (var i = 0; i < route.days.length; i++) {
-      if (route.days[i].day === dayNum) { day = route.days[i]; break; }
+    for (var i = 0; i < days.length; i++) {
+      if (days[i].day === dayNum) { day = days[i]; break; }
     }
     if (!day) { container.innerHTML = ''; return; }
 
@@ -1103,13 +1205,7 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
       }
     });
 
-    // 대체계획 모드일 때 day label 전환
-    var useAlt = (typeof sydneyPlanType !== 'undefined' && sydneyPlanType === 'alt');
     var dayLabel = day.label;
-    if (useAlt && route.alt) {
-      if (dayNum === 6 && route.alt.day6_label) dayLabel = route.alt.day6_label;
-      if (dayNum === 7 && route.alt.day7_label) dayLabel = route.alt.day7_label;
-    }
 
     var html = '<div class="day-header">';
     html += 'Day ' + day.day + ' <small>(' + day.date + ')</small> \u2014 ' + dayLabel;
@@ -1166,8 +1262,10 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     }
     wrapper.style.display = 'flex';
     var route = sydneyRouteData[key];
+    var useAlt = (typeof sydneyPlanType !== 'undefined' && sydneyPlanType === 'alt');
+    var days = (useAlt && route.alt && route.alt.days) ? route.alt.days : route.days;
     var html = '<button class="day-btn active" data-day="all">\uC804\uCCB4</button>';
-    route.days.forEach(function(day) {
+    days.forEach(function(day) {
       html += '<button class="day-btn" data-day="' + day.day + '">Day ' + day.day + '</button>';
     });
     container.innerHTML = html;
@@ -1191,7 +1289,8 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
         } else {
           var firstMini = document.querySelector('#sydneyDayMiniTabs .day-mini-tab');
           if (firstMini) firstMini.classList.add('active');
-          renderSydneyDayContent(sActiveRoute, sydneyRouteData[sActiveRoute].days[0].day);
+          var currentDays = (useAlt && sydneyRouteData[sActiveRoute].alt && sydneyRouteData[sActiveRoute].alt.days) ? sydneyRouteData[sActiveRoute].alt.days : sydneyRouteData[sActiveRoute].days;
+          renderSydneyDayContent(sActiveRoute, currentDays[0].day);
         }
       });
     });
@@ -1331,9 +1430,13 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
       // details 모두 닫기
       document.querySelectorAll('#main-sydney details').forEach(function(d) { d.open = false; });
     }
-    // 지도 인포패널 갱신
+    // 지도 갱신
     if (sActiveRoute && sActiveRoute !== 'all') {
+      showSydneyRoute(sActiveRoute);
       updateSydneyInfoPanel(sActiveRoute);
+      buildSydneyDayButtons(sActiveRoute);
+    } else {
+      showSydneyAll();
     }
   }
 
