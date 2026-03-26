@@ -188,7 +188,7 @@ Jekyll 기반 정적 사이트로 데이터를 시각화한다. `_config.yml`에
 
 | 페이지 | 파일 | JS | 데이터 소스 |
 |--------|------|----|-------------|
-| 메인 | `index.md` | — | — |
+| 메인 | `index.md` | `assets/js/index.js` | `data/lodging/bookings.json` |
 | 관광지 랭킹 | `rankings.html` | `assets/js/rankings.js` | `assets/data/place_data.json` |
 | 루트 비교 (로드트립+시드니) | `routes.html` | `assets/js/routes.js` | 로드트립: `data/routes/route_data.json` + `route_geometry.json` / 시드니: `data/routes/sydney_route_data.json` + `sydney_route_geometry.json` |
 | 액티비티 후보 | `activities.html` | `assets/js/activities.js` | `data/activities/activities_data.json` |
