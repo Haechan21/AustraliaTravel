@@ -16,7 +16,7 @@ layout: default
       <span class="stat-label">로드트립</span>
     </div>
     <div class="hero-stat">
-      <span class="stat-number" id="booking-total">7박 확정</span>
+      <span class="stat-number">7박</span>
       <span class="stat-label">숙소 예약</span>
     </div>
   </div>
