@@ -318,6 +318,12 @@ title: 루트 비교
   <div class="tab-panel" id="tab-sydney-detail">
 
   <div class="route-plans-section" id="sydneyPlans">
+    <!-- 원안/대체계획 토글 (상세탭) -->
+    <div class="plan-type-toggle" id="sydneyDetailPlanToggle" style="margin-bottom:12px;display:flex;gap:6px;align-items:center;">
+      <span style="font-size:0.85em;color:#666;margin-right:4px;">계획:</span>
+      <button class="detail-plan-toggle-btn active" data-plan-type="original" style="padding:4px 12px;border-radius:14px;border:1.5px solid #555;background:#555;color:#fff;font-size:0.82em;cursor:pointer;">원안</button>
+      <button class="detail-plan-toggle-btn" data-plan-type="alt" style="padding:4px 12px;border-radius:14px;border:1.5px solid #555;background:transparent;color:#555;font-size:0.82em;cursor:pointer;">대체계획 (Day 6 휴식)</button>
+    </div>
     <h2>종합 순위</h2>
 
     <div id="sydneyRankTable">로딩 중...</div>
@@ -359,11 +365,7 @@ title: 루트 비교
       <p class="sydney-plan-desc" data-sydney-key="1"></p>
       <details>
         <summary><strong>상세 일정 & 평가 보기</strong></summary>
-        <div class="sydney-detail-tabs" data-sydney-key="1">
-          <div class="detail-tab-bar" style="display:flex;gap:6px;margin:8px 0 12px 0;">
-            <button class="detail-tab-btn active" data-tab="original" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:#555;color:#fff;font-size:0.82em;cursor:pointer;">원안</button>
-            <button class="detail-tab-btn" data-tab="alt" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:transparent;color:#555;font-size:0.82em;cursor:pointer;">대체계획</button>
-          </div>
+        <div class="sydney-detail-wrapper" data-sydney-key="1">
           <div class="sydney-plan-content" data-sydney-plan="1" data-plan-type="original">로딩 중...</div>
           <div class="sydney-plan-content" data-sydney-plan="1" data-plan-type="alt" style="display:none">로딩 중...</div>
         </div>
@@ -378,11 +380,7 @@ title: 루트 비교
       <p class="sydney-plan-desc" data-sydney-key="2"></p>
       <details>
         <summary><strong>상세 일정 & 평가 보기</strong></summary>
-        <div class="sydney-detail-tabs" data-sydney-key="2">
-          <div class="detail-tab-bar" style="display:flex;gap:6px;margin:8px 0 12px 0;">
-            <button class="detail-tab-btn active" data-tab="original" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:#555;color:#fff;font-size:0.82em;cursor:pointer;">원안</button>
-            <button class="detail-tab-btn" data-tab="alt" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:transparent;color:#555;font-size:0.82em;cursor:pointer;">대체계획</button>
-          </div>
+        <div class="sydney-detail-wrapper" data-sydney-key="2">
           <div class="sydney-plan-content" data-sydney-plan="2" data-plan-type="original">로딩 중...</div>
           <div class="sydney-plan-content" data-sydney-plan="2" data-plan-type="alt" style="display:none">로딩 중...</div>
         </div>
@@ -397,11 +395,7 @@ title: 루트 비교
       <p class="sydney-plan-desc" data-sydney-key="3"></p>
       <details>
         <summary><strong>상세 일정 & 평가 보기</strong></summary>
-        <div class="sydney-detail-tabs" data-sydney-key="3">
-          <div class="detail-tab-bar" style="display:flex;gap:6px;margin:8px 0 12px 0;">
-            <button class="detail-tab-btn active" data-tab="original" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:#555;color:#fff;font-size:0.82em;cursor:pointer;">원안</button>
-            <button class="detail-tab-btn" data-tab="alt" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:transparent;color:#555;font-size:0.82em;cursor:pointer;">대체계획</button>
-          </div>
+        <div class="sydney-detail-wrapper" data-sydney-key="3">
           <div class="sydney-plan-content" data-sydney-plan="3" data-plan-type="original">로딩 중...</div>
           <div class="sydney-plan-content" data-sydney-plan="3" data-plan-type="alt" style="display:none">로딩 중...</div>
         </div>
@@ -416,11 +410,7 @@ title: 루트 비교
       <p class="sydney-plan-desc" data-sydney-key="4"></p>
       <details>
         <summary><strong>상세 일정 & 평가 보기</strong></summary>
-        <div class="sydney-detail-tabs" data-sydney-key="4">
-          <div class="detail-tab-bar" style="display:flex;gap:6px;margin:8px 0 12px 0;">
-            <button class="detail-tab-btn active" data-tab="original" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:#555;color:#fff;font-size:0.82em;cursor:pointer;">원안</button>
-            <button class="detail-tab-btn" data-tab="alt" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:transparent;color:#555;font-size:0.82em;cursor:pointer;">대체계획</button>
-          </div>
+        <div class="sydney-detail-wrapper" data-sydney-key="4">
           <div class="sydney-plan-content" data-sydney-plan="4" data-plan-type="original">로딩 중...</div>
           <div class="sydney-plan-content" data-sydney-plan="4" data-plan-type="alt" style="display:none">로딩 중...</div>
         </div>
@@ -435,11 +425,7 @@ title: 루트 비교
       <p class="sydney-plan-desc" data-sydney-key="5"></p>
       <details>
         <summary><strong>상세 일정 & 평가 보기</strong></summary>
-        <div class="sydney-detail-tabs" data-sydney-key="5">
-          <div class="detail-tab-bar" style="display:flex;gap:6px;margin:8px 0 12px 0;">
-            <button class="detail-tab-btn active" data-tab="original" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:#555;color:#fff;font-size:0.82em;cursor:pointer;">원안</button>
-            <button class="detail-tab-btn" data-tab="alt" style="padding:4px 14px;border-radius:14px;border:1.5px solid #555;background:transparent;color:#555;font-size:0.82em;cursor:pointer;">대체계획</button>
-          </div>
+        <div class="sydney-detail-wrapper" data-sydney-key="5">
           <div class="sydney-plan-content" data-sydney-plan="5" data-plan-type="original">로딩 중...</div>
           <div class="sydney-plan-content" data-sydney-plan="5" data-plan-type="alt" style="display:none">로딩 중...</div>
         </div>
@@ -627,39 +613,45 @@ function loadSydneyPlanContent(div) {
 document.querySelectorAll('#main-sydney details').forEach(function(el) {
   el.addEventListener('toggle', function() {
     if (!this.open) return;
-    // 현재 보이는 탭의 콘텐츠 로드
-    var visibleDiv = this.querySelector('.sydney-plan-content[style=""]') ||
-                     this.querySelector('.sydney-plan-content:not([style*="display:none"])');
-    if (visibleDiv) loadSydneyPlanContent(visibleDiv);
+    // 현재 plan type에 맞는 콘텐츠 로드
+    var currentType = (typeof sydneyPlanType !== 'undefined') ? sydneyPlanType : 'original';
+    var targetDiv = this.querySelector('.sydney-plan-content[data-plan-type="' + currentType + '"]');
+    if (targetDiv) loadSydneyPlanContent(targetDiv);
   });
 });
 
-// 상세평가 원안/대체 탭 전환
-document.querySelectorAll('.sydney-detail-tabs').forEach(function(tabsContainer) {
-  tabsContainer.querySelectorAll('.detail-tab-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      var tabType = this.getAttribute('data-tab');
-      // 버튼 활성화
-      tabsContainer.querySelectorAll('.detail-tab-btn').forEach(function(b) {
-        b.classList.remove('active');
-        b.style.background = 'transparent';
-        b.style.color = '#555';
-      });
-      this.classList.add('active');
-      this.style.background = '#555';
-      this.style.color = '#fff';
-      // 콘텐츠 전환
-      tabsContainer.querySelectorAll('.sydney-plan-content').forEach(function(div) {
-        div.style.display = (div.dataset.planType === tabType) ? '' : 'none';
-      });
-      // 지연 로딩
-      var targetDiv = tabsContainer.querySelector('.sydney-plan-content[data-plan-type="' + tabType + '"]');
-      if (targetDiv) loadSydneyPlanContent(targetDiv);
-    });
+// 상세탭 원안/대체 토글 — 지도탭 토글과 동기화
+function syncDetailPlanToggle(type) {
+  // 상세탭 토글 버튼 스타일 갱신
+  document.querySelectorAll('#sydneyDetailPlanToggle .detail-plan-toggle-btn').forEach(function(b) {
+    if (b.getAttribute('data-plan-type') === type) {
+      b.classList.add('active');
+      b.style.background = '#555'; b.style.color = '#fff';
+    } else {
+      b.classList.remove('active');
+      b.style.background = 'transparent'; b.style.color = '#555';
+    }
   });
-  // 초기 스타일 적용
-  var activeBtn = tabsContainer.querySelector('.detail-tab-btn.active');
-  if (activeBtn) { activeBtn.style.background = '#555'; activeBtn.style.color = '#fff'; }
+  // 마크다운 콘텐츠 원안/대체 전환 + 열린 details의 콘텐츠 로딩
+  document.querySelectorAll('.sydney-detail-wrapper').forEach(function(wrapper) {
+    wrapper.querySelectorAll('.sydney-plan-content').forEach(function(div) {
+      div.style.display = (div.dataset.planType === type) ? '' : 'none';
+    });
+    var details = wrapper.closest('details');
+    if (details && details.open) {
+      var targetDiv = wrapper.querySelector('.sydney-plan-content[data-plan-type="' + type + '"]');
+      if (targetDiv) loadSydneyPlanContent(targetDiv);
+    }
+  });
+}
+
+document.querySelectorAll('#sydneyDetailPlanToggle .detail-plan-toggle-btn').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var type = this.getAttribute('data-plan-type');
+    // switchSydneyPlanType 호출 → 점수바·순위표·제목·지도 모두 갱신
+    if (typeof switchSydneyPlanType === 'function') switchSydneyPlanType(type);
+    syncDetailPlanToggle(type);
+  });
 });
 
 // ═══ 시드니 상세탭: JSON SSOT에서 동적 생성 ═══
@@ -1508,6 +1500,8 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     } else {
       showSydneyAll();
     }
+    // 상세탭 토글 동기화
+    if (typeof syncDetailPlanToggle === 'function') syncDetailPlanToggle(type);
   }
 
   /* ── 컨트롤 바인딩 ── */
