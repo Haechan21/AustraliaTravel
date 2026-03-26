@@ -1041,6 +1041,17 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     renderSydneyDayContent(key, route.days[0].day);
   }
 
+  var TRANSIT_ICONS = {
+    walk: '\uD83D\uDEB6', train: '\uD83D\uDE86', bus: '\uD83D\uDE8C',
+    ferry: '\u26F4\uFE0F', taxi: '\uD83D\uDE95', mixed: '\uD83D\uDD00',
+    light_rail: '\uD83D\uDE8A'
+  };
+  var TRANSIT_LABELS = {
+    walk: '\uB3C4\uBCF4', train: '\uC804\uCCA0', bus: '\uBC84\uC2A4',
+    ferry: '\uD398\uB9AC', taxi: '\uD0DD\uC2DC', mixed: '\uD658\uC2B9',
+    light_rail: '\uB77C\uC774\uD2B8\uB808\uC77C'
+  };
+
   function renderSydneyDayContent(routeKey, dayNum) {
     var container = document.getElementById('sydneyDayContent');
     if (!container) return;
@@ -1051,14 +1062,48 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     }
     if (!day) { container.innerHTML = ''; return; }
 
+    // 이동시간 집계
+    var totalMin = 0, walkMin = 0, transitMin = 0;
+    day.stops.forEach(function(s) {
+      if (s.transit_min) {
+        totalMin += s.transit_min;
+        if (s.transit_mode === 'walk') walkMin += s.transit_min;
+        else transitMin += s.transit_min;
+      }
+    });
+
     var html = '<div class="day-header">';
     html += 'Day ' + day.day + ' <small>(' + day.date + ')</small> \u2014 ' + day.label;
+    if (day.day_km) html += ' <span class="day-km">' + day.day_km + 'km</span>';
     html += '</div>';
+
+    // 이동 요약 바
+    if (totalMin > 0) {
+      var totalH = Math.floor(totalMin / 60);
+      var totalM = totalMin % 60;
+      var timeStr = totalH > 0 ? totalH + '\uC2DC\uAC04 ' + totalM + '\uBD84' : totalM + '\uBD84';
+      html += '<div class="sydney-transit-summary">';
+      html += '<span class="transit-total">\uD83D\uDCCD \uC774\uB3D9 ' + timeStr + '</span>';
+      if (walkMin > 0) html += '<span class="transit-break">\uD83D\uDEB6 \uB3C4\uBCF4 ' + walkMin + '\uBD84</span>';
+      if (transitMin > 0) html += '<span class="transit-break">\uD83D\uDE86 \uB300\uC911\uAD50\uD1B5 ' + transitMin + '\uBD84</span>';
+      html += '</div>';
+    }
 
     html += '<div class="day-stops">';
     day.stops.forEach(function(stop, idx) {
       if (idx > 0) {
-        html += '<div class="stop-connector">\u2193</div>';
+        html += '<div class="stop-connector">';
+        var icon = TRANSIT_ICONS[stop.transit_mode] || '\u2193';
+        var label = TRANSIT_LABELS[stop.transit_mode] || '';
+        if (stop.transit_min) {
+          html += icon + ' <span class="connector-time">' + stop.transit_min + '\uBD84</span>';
+          if (stop.transit_detail) {
+            html += ' <span class="connector-detail">' + stop.transit_detail + '</span>';
+          }
+        } else {
+          html += '\u2193';
+        }
+        html += '</div>';
       }
       var badge = '';
       if (stop.type === 'stay') badge = '<span class="grade-badge stay-badge">\uC219\uBC15</span> ';
