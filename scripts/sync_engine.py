@@ -25,6 +25,7 @@ from typing import Optional
 ROOT = Path(__file__).resolve().parent.parent
 SCORED_PATH = ROOT / "data" / "scores" / "attraction_scored.json"
 ROUTE_DATA_PATH = ROOT / "data" / "routes" / "route_data.json"
+SYDNEY_ROUTE_DATA_PATH = ROOT / "data" / "routes" / "sydney_route_data.json"
 ROUTE_DIR = ROOT / "research" / "route-plans"
 LODGING_PATH = ROOT / "data" / "lodging" / "lodging_data.json"
 DINING_PATH = ROOT / "data" / "dining" / "dining_data.json"
