@@ -74,7 +74,7 @@ layout: default
   <a class="quick-link-card" href="routes.html">
     <span class="ql-icon">🗺️</span>
     <span class="ql-title">루트 비교</span>
-    <span class="ql-desc">9개 후보 지도 비교 · 6조 확정</span>
+    <span class="ql-desc">로드트립 9개 + 시드니 5개 · 지도 비교</span>
   </a>
   <a class="quick-link-card" href="rankings.html">
     <span class="ql-icon">🏆</span>
