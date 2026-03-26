@@ -133,8 +133,10 @@ python scripts/fetch_route_geometry.py           # data/routes/route_geometry.js
 ```
 data/
   scores/attraction_scored.json    ← 관광지 점수·등급 SSOT
-  routes/route_data.json           ← 루트 거리·stops SSOT
-  routes/route_geometry.json       ← OSRM 경로 geometry
+  routes/route_data.json           ← 로드트립 루트 거리·stops SSOT
+  routes/route_geometry.json       ← 로드트립 경로 geometry (OSRM)
+  routes/sydney_route_data.json    ← 시드니 Day 6~7 계획 SSOT (5개 조, 점수·예산·경유지)
+  routes/sydney_route_geometry.json ← 시드니 경로 geometry
   lodging/lodging_data.json        ← 숙소 데이터 SSOT (77개: 기본 44 + 투자 33)
   lodging/bookings.json            ← 확정 예약 정보 (7박, 시설·주변관광·조치사항 포함)
   dining/dining_data.json          ← 식당 데이터 SSOT (126개, 예산 시나리오 포함)
@@ -172,7 +174,7 @@ data/ JSON (SSOT 원본)
   - `activities/`: 지역별 액티비티 리서치
   - 루트(root): 여행환경·계절보정, 루트평가·운전패턴, 장소 심층리뷰, UI 리서치 등
 - `research/route-plans/`: 로드트립 루트 후보 상세 일정 (1~9조) + 종합 순위표(README.md)
-- `research/sydney-plans/`: 시드니 Day 7 세부 일정 계획 (로드트립 루트와 분리)
+- `research/sydney-plans/`: 시드니 Day 6~7 세부 일정 계획 5개 조 (1~5조, CRITIC_ROUTE 평가 포함). `sydney_route_data.json`이 SSOT, MD에서 평가 상세 기록
 
 ## 프론트엔드 구조 (Jekyll + GitHub Pages)
 
@@ -182,7 +184,7 @@ Jekyll 기반 정적 사이트로 데이터를 시각화한다. `_config.yml`에
 |--------|------|----|-------------|
 | 메인 | `index.md` | — | — |
 | 관광지 랭킹 | `rankings.html` | `assets/js/rankings.js` | `assets/data/place_data.json` |
-| 루트 비교 | `routes.html` | `assets/js/routes.js` | `data/routes/route_data.json` + `data/routes/route_geometry.json` |
+| 루트 비교 (로드트립+시드니) | `routes.html` | `assets/js/routes.js` | 로드트립: `data/routes/route_data.json` + `route_geometry.json` / 시드니: `data/routes/sydney_route_data.json` + `sydney_route_geometry.json` |
 | 액티비티 후보 | `activities.html` | `assets/js/activities.js` | `data/activities/activities_data.json` |
 | 숙소 후보 | `lodging.html` | `assets/js/lodging.js` | `data/lodging/lodging_data.json` |
 | 식당 후보 | `dining.html` | `assets/js/dining.js` | `data/dining/dining_data.json` |
