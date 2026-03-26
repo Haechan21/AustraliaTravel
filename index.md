@@ -44,14 +44,6 @@ layout: default
 
 ---
 
-## 숙소 예약 현황
-
-<div class="booking-cards" id="booking-cards">
-  <p class="booking-loading">로딩 중...</p>
-</div>
-
----
-
 ## 준비 상태
 
 <ul class="checklist">
@@ -66,9 +58,19 @@ layout: default
 
 ---
 
-## 더 보기
+## 바로가기
 
 <div class="quick-links">
+  <a class="quick-link-card" href="lodging.html">
+    <span class="ql-icon">🏨</span>
+    <span class="ql-title">숙소</span>
+    <span class="ql-desc">7박 예약 확정 · 77개 후보 평가</span>
+  </a>
+  <a class="quick-link-card" href="dining.html">
+    <span class="ql-icon">🍽️</span>
+    <span class="ql-title">식당</span>
+    <span class="ql-desc">126개 CRITIC 평가 · 예약 미확정</span>
+  </a>
   <a class="quick-link-card" href="routes.html">
     <span class="ql-icon">🗺️</span>
     <span class="ql-title">루트 비교</span>
