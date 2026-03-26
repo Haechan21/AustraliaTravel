@@ -5,7 +5,7 @@ layout: default
 <!-- 히어로 -->
 <div class="dashboard-hero">
   <div class="dday-badge" id="dday-count">D-??</div>
-  <p class="hero-tagline">2026년 5월 · 시드니 출발 · NSW 해안 로드트립</p>
+  <p class="hero-tagline">2026년 5월 · 시드니 출발 · 해안 로드트립</p>
   <div class="hero-stats">
     <div class="hero-stat">
       <span class="stat-number">9일</span>
