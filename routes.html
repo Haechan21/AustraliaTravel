@@ -466,20 +466,34 @@ var planFiles = {
 };
 
 function simpleMarkdown(md) {
+  // 테이블 블록을 먼저 처리
+  md = md.replace(/(^\|.+\|$\n?)+/gm, function(block) {
+    var lines = block.trim().split('\n');
+    if (lines.length < 2) return block;
+    var html = '<table>';
+    var headerDone = false;
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i].trim();
+      // 구분선 (|---|---|) 건너뛰기
+      if (/^\|[\s\-:|]+\|$/.test(line)) { headerDone = true; continue; }
+      var cells = line.split('|').slice(1, -1); // 앞뒤 빈 요소 제거
+      if (!headerDone && i === 0) {
+        html += '<thead><tr>' + cells.map(function(c) { return '<th>' + c.trim() + '</th>'; }).join('') + '</tr></thead><tbody>';
+      } else {
+        html += '<tr>' + cells.map(function(c) { return '<td>' + c.trim() + '</td>'; }).join('') + '</tr>';
+      }
+    }
+    html += '</tbody></table>';
+    return html;
+  });
   return md
     .replace(/^### (.+)$/gm, '<h4>$1</h4>')
     .replace(/^## (.+)$/gm, '<h3>$1</h3>')
     .replace(/^# (.+)$/gm, '<h3>$1</h3>')
     .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/^\| (.+)$/gm, function(match) {
-      var cells = match.split('|').filter(function(c) { return c.trim(); });
-      var row = cells.map(function(c) { return '<td>' + c.trim() + '</td>'; }).join('');
-      return '<tr>' + row + '</tr>';
-    })
     .replace(/^- (.+)$/gm, '<li>$1</li>')
     .replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
-    .replace(/(<tr>.*<\/tr>\n?)+/g, '<table>$&</table>')
     .replace(/^---$/gm, '<hr/>')
     .replace(/\n\n/g, '<br/>')
     .replace(/\n/g, '\n');
