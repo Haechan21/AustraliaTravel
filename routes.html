@@ -649,7 +649,7 @@ document.querySelectorAll('#sydneyDetailPlanToggle .detail-plan-toggle-btn').for
   btn.addEventListener('click', function() {
     var type = this.getAttribute('data-plan-type');
     // switchSydneyPlanType 호출 → 점수바·순위표·제목·지도 모두 갱신
-    if (typeof switchSydneyPlanType === 'function') switchSydneyPlanType(type);
+    if (window.switchSydneyPlanType) window.switchSydneyPlanType(type);
     syncDetailPlanToggle(type);
   });
 });
@@ -1400,6 +1400,7 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
   }
 
   /* ── 원안/대체계획 토글 ── */
+  window.switchSydneyPlanType = switchSydneyPlanType;
   function switchSydneyPlanType(type) {
     sydneyPlanType = type;
     // 토글 버튼 스타일 전환
