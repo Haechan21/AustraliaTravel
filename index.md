@@ -2,81 +2,99 @@
 layout: default
 ---
 
-<div align="center">
-<img src="https://img.shields.io/badge/Phase_4-6조_확정_(바이런직행+블루마운틴)-green?style=for-the-badge" alt="Status" />
-<img src="https://img.shields.io/badge/관광지-110곳_평가_완료-blue?style=for-the-badge" alt="Places" />
-<img src="https://img.shields.io/badge/기간-9일_(활동_7일)-green?style=for-the-badge" alt="Duration" />
+<!-- 히어로 -->
+<div class="dashboard-hero">
+  <div class="dday-badge" id="dday-count">D-??</div>
+  <p class="hero-tagline">2026년 5월 · 시드니 출발 · NSW 해안 로드트립</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="stat-number">9일</span>
+      <span class="stat-label">여행 기간</span>
+    </div>
+    <div class="hero-stat">
+      <span class="stat-number">2,234km</span>
+      <span class="stat-label">로드트립</span>
+    </div>
+    <div class="hero-stat">
+      <span class="stat-number" id="booking-total">7박 확정</span>
+      <span class="stat-label">숙소 예약</span>
+    </div>
+  </div>
 </div>
 
-<br/>
+---
 
+## 일정 요약
 
-## 여행 일정
+| 날짜 | 구간 | 이동 | 숙소 | 리듬 |
+|:-----|:-----|-----:|:-----|:----:|
+| 5/23 (토) | 인천 → 시드니 (KE401) | - | 기내 | - |
+| 5/24 (일) | 시드니공항 → 바이런베이 직행 | 783km | Discovery Parks | 이동 |
+| 5/25 (월) | 바이런베이 일출 → 콥스하버 | 251km | Park Beach Resort | 여유 |
+| 5/26 (화) | 콥스하버 → 도리고 폭포 → 포트맥쿼리 | 265km | Surf Beach Motel | 관광 |
+| 5/27 (수) | 포트맥쿼리 → 스톡턴사막 → 넬슨베이 | 272km | Hotel Nelson | 여유 |
+| 5/28 (목) | 넬슨베이 → 뉴캐슬 → 블루마운틴 | 324km | Farm Tiny Home | 빡센 |
+| 5/29 (금) | 블루마운틴 → 그랜드퍼시픽 → 시드니 | 339km | ValueSuites | 피날레 |
+| 5/30 (토) | 시드니 시내 · Vivid Sydney | 도보 | ValueSuites | 여유 |
+| 5/31 (일) | 시드니 → 인천 | - | - | - |
 
-| 날짜 | 구간 | 상태 |
-|:-----|:-----|:----:|
-| 5/23 (토) | 인천 → 시드니 | ✅ |
-| 5/24 (일) | 시드니공항 → 바이런베이 (783km 직행) | ✅ |
-| 5/25 (월) | 바이런베이 일출 → 콥스하버 | ✅ |
-| 5/26 (화) | 콥스하버 → Waterfall Way → 포트맥쿼리 | ✅ |
-| 5/27 (수) | 포트맥쿼리 → 스톡턴 사막 → 넬슨베이 | ✅ |
-| 5/28 (목) | 넬슨베이 → 뉴캐슬 → 블루마운틴 | ✅ |
-| 5/29 (금) | 블루마운틴 → 그랜드퍼시픽 → 시드니공항 반납 | ✅ |
-| 5/30 (토) | 시드니 시내 · 1조 클래식 하이라이트 · Vivid Sydney | ✅ |
-| 5/31 (일) | 시드니 → 인천 | ✅ |
+> *"2,234km를 달려서 도착한 결론 — 호주는 넓고 잠은 부족하고 석양은 매일 아름답다"*
+>
+> 상세 일정 → <a href="docs/ITINERARY.html">확정 일정 (ITINERARY)</a>
 
-> ✅ 6조 루트·숙소 7박 확정 · **Day 1~7 세부 일정 확정** · 시드니 Day 7은 **1조 클래식 하이라이트** (원안/대체계획 모두 1조) · 식당 미확정 — 상세는 <a href="docs/ITINERARY.html">ITINERARY.md</a> 참조
+---
 
-<br/>
+## 숙소 예약 현황
 
-## 루트 후보 (9개 안 — **6조 확정**)
+<div class="booking-cards" id="booking-cards">
+  <p class="booking-loading">로딩 중...</p>
+</div>
 
-| 순위 | 안 | 점수 | 이동거리 | 특징 |
-|:----:|:---|-----:|-------:|:-----|
-| 1 | **6조** 바이런직행+블루마운틴 | **78.0** | 2,234km | 3인 합의 최고, S6 올클리어+GP겨울스웰 |
-| 2 | **2조** 남쪽해안 그랜드루프 | **77.3** | 735km | 실행 점수 1위, Vivid 최대 4일 |
-| 3 | **8조** 바이런 연박 감성 | **73.0** | 2,254km | 바이런 2박+서핑, 골든아워 4회 |
-| 4 | **4조** 오션앤마운틴 그랜드루프 | **69.7** | 2,419km | S6 올클리어 |
-| 5 | **5조** 풀 스윙 | **68.3** | 2,103km | v7 ▲2 (7→5위) |
-| =6 | **7조** 안전첫날+S올클리어 | **59.5** | 2,249km | v7 ▼1 (5→6위) |
-| =6 | **9조** GC포함 밸런스 | **59.5** | 2,468km | 공동 6위 |
-| 8 | **3조** 해안+내륙 폭포 루프 | **58.8** | 2,282km | 실행 51.5 최저 |
-| 9 | **1조** GC직행+남하해안 | **54.7** | 2,293km | 실행 49.0 최저 |
+---
 
-> 상세 비교 → <a href="routes.html">루트 비교 (지도 + 상세)</a>
+## 준비 상태
 
-<br/>
+<ul class="checklist">
+  <li class="done">항공권 — KE401/KE402 대한항공 확정</li>
+  <li class="done">렌터카 — Sixt 시드니공항 픽업/반납 (6일)</li>
+  <li class="done">숙소 — 7박 전체 예약 완료</li>
+  <li class="done">비자 — ETA (subclass 601) 발급</li>
+  <li class="todo">식당 — 추천 목록 있음, 예약 미확정</li>
+</ul>
 
-## 관광지 등급 (110곳, 5월 계절 보정 반영)
+> 비자·운전·안전·환전·보험·패킹·통신 → <a href="essentials.html">여행 준비 가이드</a>
 
-3명의 AI 평가자(효율 전략가 · 감성 탐험가 · 현실주의 비평가)가 독립 채점 후, 5월 방문 계절 보정을 적용했다.
+---
 
-| 등급 | 장소 수 | 기준 | 대표 장소 |
-|:----:|--------:|:-----|:----------|
-| **S** | 6곳 | 상위 ~5% | 케이프 바이런 등대, 뉴캐슬 메모리얼 워크, 그랜드 캐니언 트랙 |
-| **A** | 22곳 | 상위 5~25% | 고벳츠 리프 전망대, 블루마운틴스 국립공원, 시 클리프 브릿지 |
-| **B** | 38곳 | 상위 25~60% | 본다이 투 브론테, 포트 스테판스 캥거루 등 |
-| **C** | 33곳 | 상위 60~90% | 빅 프론, 달링 하버 등 |
-| **D** | 11곳 | 하위 10% | 피겨 에잇 풀스(논쟁), 제놀란 동굴(5월 폐쇄), 루나 파크, 포트맥쿼리 천문대 등 |
+## 더 보기
 
-> 전체 목록과 상세 점수 → <a href="rankings.html">관광지 랭킹</a>
-
-> 📋 음식점 평가 완료(126개 CRITIC) · 숙소 평가 완료(77개 CRITIC) · **숙소 7박 예약 확정** → <a href="lodging.html">숙소 후보</a>
-
-> 🧳 비자·운전·안전·환전·보험·패킹·통신 실전 가이드 → <a href="essentials.html">여행 준비</a>
-
-<br/>
-
-## 이 프로젝트는
-
-구글맵에 저장한 후보지를 AI가 조사·평가·일정 생성·리뷰하는 여행 플래너다.
-
-| 단계 | 작업 | 상태 |
-|:-----|:-----|:----:|
-| 1. 전처리 | 구글맵 → 장소 데이터 변환 | ✅ |
-| 2. 정보 수집 | 웹 리서치로 리뷰·운영정보 수집 | ✅ |
-| 3. 평가 | 3명 독립 평가 → S~D 등급 | ✅ |
-| 4. 일정 생성 | 등급·거리·제약 기반 일정 구성 | ✅ |
+<div class="quick-links">
+  <a class="quick-link-card" href="routes.html">
+    <span class="ql-icon">🗺️</span>
+    <span class="ql-title">루트 비교</span>
+    <span class="ql-desc">9개 후보 지도 비교 · 6조 확정</span>
+  </a>
+  <a class="quick-link-card" href="rankings.html">
+    <span class="ql-icon">🏆</span>
+    <span class="ql-title">관광지 랭킹</span>
+    <span class="ql-desc">110곳 S~D 등급 · 3명 AI 평가</span>
+  </a>
+  <a class="quick-link-card" href="activities.html">
+    <span class="ql-icon">🎯</span>
+    <span class="ql-title">액티비티</span>
+    <span class="ql-desc">10개 지역 109개 체험 활동</span>
+  </a>
+  <a class="quick-link-card" href="documents.html">
+    <span class="ql-icon">📂</span>
+    <span class="ql-title">문서 목록</span>
+    <span class="ql-desc">108개 리서치 · 평가 문서 인덱스</span>
+  </a>
+  <a class="quick-link-card" href="docs/META.html">
+    <span class="ql-icon">✈️</span>
+    <span class="ql-title">여행 개요</span>
+    <span class="ql-desc">항공·렌터카·제약 조건</span>
+  </a>
+</div>
 
 <br/>
 
@@ -85,3 +103,6 @@ Built mainly with <img src="https://img.shields.io/badge/Claude_Code-191919?styl
 <br/>
 Supported by <img src="https://img.shields.io/badge/Gemini-4285F4?style=flat&logo=google&logoColor=white" alt="Gemini" valign="middle" /> <img src="https://img.shields.io/badge/ChatGPT-74aa9c?style=flat&logo=openai&logoColor=white" alt="ChatGPT" valign="middle" />
 </div>
+
+<script>window.__BASE_URL__ = "{{ site.baseurl }}";</script>
+<script src="{{ '/assets/js/index.js' | relative_url }}"></script>
