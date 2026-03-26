@@ -14,6 +14,7 @@ sydney_route_data.json → OSRM API (foot) → sydney_route_geometry.json
 import json
 import math
 import os
+import ssl
 import sys
 import time
 import urllib.error
@@ -127,8 +128,11 @@ def fetch_osrm_foot_route(coords_lnglat):
 
     for attempt in range(MAX_RETRIES):
         try:
+            ctx = ssl.create_default_context()
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
             req = urllib.request.Request(url, headers={"User-Agent": "AusTripPlanner/1.0"})
-            with urllib.request.urlopen(req, timeout=30) as resp:
+            with urllib.request.urlopen(req, timeout=30, context=ctx) as resp:
                 data = json.loads(resp.read().decode("utf-8"))
 
             if data.get("code") != "Ok":
@@ -224,45 +228,55 @@ def main():
         print(f"Route {route_id}: {route['name']}")
         print(f"{'='*50}")
 
-        for day_info in route["days"]:
-            day_num = day_info["day"]
-            key = f"R{route_id}D{day_num}"
-            coords = [[stop["lng"], stop["lat"]] for stop in day_info["stops"]]
-            num_stops = len(coords)
+        # 원안 + 대체계획 days 모두 처리
+        day_sets = [("", route["days"])]
+        if route.get("alt") and route["alt"].get("days"):
+            day_sets.append(("_alt", route["alt"]["days"]))
 
-            print(f"\n  {key} ({num_stops} stops):")
+        for suffix, days in day_sets:
+            for day_info in days:
+                day_num = day_info["day"]
+                key = f"R{route_id}D{day_num}{suffix}"
+                coords = [[stop["lng"], stop["lat"]] for stop in day_info["stops"]]
+                num_stops = len(coords)
 
-            if num_stops < 2:
-                print("    SKIP (1 stop)")
-                geometries[key] = ""
-                continue
+                label = " [대체]" if suffix else ""
+                print(f"\n  {key} ({num_stops} stops){label}:")
 
-            try:
-                all_coords, ferry_indices = fetch_day_route(coords)
+                if num_stops < 2:
+                    print("    SKIP (1 stop)")
+                    geometries[key] = ""
+                    continue
 
-                # 간소화
-                simplified = douglas_peucker(all_coords, SIMPLIFY_TOLERANCE)
-                encoded = encode_polyline(simplified)
-                geometries[key] = encoded
+                try:
+                    all_coords, ferry_indices = fetch_day_route(coords)
 
-                if ferry_indices:
-                    ferry_map[key] = ferry_indices
+                    # 간소화
+                    simplified = douglas_peucker(all_coords, SIMPLIFY_TOLERANCE)
+                    encoded = encode_polyline(simplified)
+                    geometries[key] = encoded
 
-                print(f"    OK ({len(all_coords)} → {len(simplified)} points"
-                      f"{', 페리 ' + str(len(ferry_indices)) + '구간' if ferry_indices else ''})")
+                    if ferry_indices:
+                        ferry_map[key] = ferry_indices
 
-            except RuntimeError as e:
-                print(f"    FAIL: {e}")
-                geometries[key] = ""
+                    print(f"    OK ({len(all_coords)} → {len(simplified)} points"
+                          f"{', 페리 ' + str(len(ferry_indices)) + '구간' if ferry_indices else ''})")
+
+                except RuntimeError as e:
+                    print(f"    FAIL: {e}")
+                    geometries[key] = ""
 
     # 페리 구간 직선 geometry를 별도 저장 (프론트에서 대시 스타일 적용용)
     ferry_geometries = {}
     for key, indices in ferry_map.items():
         # 원본 좌표에서 페리 구간 추출
-        route_id = key.split("D")[0][1:]
-        day_num = int(key.split("D")[1])
+        is_alt = key.endswith("_alt")
+        clean_key = key.replace("_alt", "")
+        route_id = clean_key.split("D")[0][1:]
+        day_num = int(clean_key.split("D")[1])
         route = routes[route_id]
-        for day_info in route["days"]:
+        days = route["alt"]["days"] if is_alt and route.get("alt") and route["alt"].get("days") else route["days"]
+        for day_info in days:
             if day_info["day"] == day_num:
                 coords = [[stop["lng"], stop["lat"]] for stop in day_info["stops"]]
                 ferry_lines = []
