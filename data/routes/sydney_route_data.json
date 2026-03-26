@@ -12,6 +12,17 @@
       "budget": "₩36.5만",
       "dispute": false,
       "desc": "본다이→왓슨스베이→하버→The Rocks→Vivid. 시드니 정석 코스. 호주 음식 5종.",
+      "alt": {
+        "score": 74.4,
+        "score_a": 74.0,
+        "score_b": 74.4,
+        "score_c": 74.8,
+        "budget": "₩35.4만",
+        "dispute": false,
+        "desc": "Day 6 휴식 + Day 7 Vivid CQ+DH 한 밤 압축. Mrs Macquaries 골든아워. 호주 음식 5종 유지.",
+        "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (11시간 수면)",
+        "day7_label": "Day 7 종일 — 시드니의 모든 맛과 빛 (Vivid 한 밤 집중)"
+      },
       "days": [
         {
           "day": 6,
@@ -197,6 +208,17 @@
       "budget": "₩93.8만",
       "dispute": true,
       "desc": "BridgeClimb Vivid Night + 피쉬마켓 + 본다이 석양. 하버브릿지 정상에서 Vivid 감상.",
+      "alt": {
+        "score": 69.2,
+        "score_a": 66.0,
+        "score_b": 75.8,
+        "score_c": 65.8,
+        "budget": "₩74.6만",
+        "dispute": false,
+        "desc": "Day 6 휴식 + Day 7 저녁 BridgeClimb 19:30 세션. 정상에서 Vivid 360° 파노라마 = 별도 Light Walk 불필요.",
+        "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (9.5시간 수면)",
+        "day7_label": "Day 7 종일 — 피쉬마켓+본다이 석양+BridgeClimb Vivid"
+      },
       "days": [
         {
           "day": 6,
@@ -392,6 +414,17 @@
       "budget": "₩60.7만",
       "dispute": false,
       "desc": "피쉬마켓 + 타롱가 동물원 + 원주민 투어 + Midden 디너. 호주 고유 체험 밀도 최고.",
+      "alt": {
+        "score": 67.4,
+        "score_a": 65.0,
+        "score_b": 79.6,
+        "score_c": 57.5,
+        "budget": "₩62.4만",
+        "dispute": true,
+        "desc": "Day 6 휴식 + Day 7 호주 정체성 풀코스. 서사 최고(B' 79.6)이나 16시간 풀가동으로 실행 위험(C' 57.5).",
+        "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (8.5시간 수면)",
+        "day7_label": "Day 7 종일 — 타롱가+원주민+Harry's+Midden+Vivid+브릿지"
+      },
       "days": [
         {
           "day": 6,
@@ -597,6 +630,17 @@
       "budget": "₩41~51만",
       "dispute": true,
       "desc": "Vivid 2일 완벽 분할 + 크루즈 + Opera Bar 석양. Vivid 설계 최고.",
+      "alt": {
+        "score": 70.3,
+        "score_a": 69.0,
+        "score_b": 72.8,
+        "score_c": 69.0,
+        "budget": "₩40~49만",
+        "dispute": false,
+        "desc": "Day 6 휴식 → Vivid 2Night→1Night 전환. 정체성 약화되나 Opera Bar 골든아워+크루즈는 유지.",
+        "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (10.5시간 수면)",
+        "day7_label": "Day 7 종일 — 본다이+Vivid 동쪽+크루즈 (1Night 집중)"
+      },
       "days": [
         {
           "day": 6,
@@ -762,6 +806,17 @@
       "budget": "₩47.5만",
       "dispute": false,
       "desc": "Wendy's Garden + 비엔날레 + Blues Point 석양 + 빛의 3단 전환. 커플 로맨스 최다.",
+      "alt": {
+        "score": 80.0,
+        "score_a": 80.0,
+        "score_b": 80.8,
+        "score_c": 79.3,
+        "budget": "₩47.7만",
+        "dispute": false,
+        "desc": "Day 6 휴식 → Day 7 핵심 동선 100% 유지. Blues Point 골든아워 + Vivid 1Night 집중. 만장일치 1위.",
+        "day6_label": "Day 6 저녁 — 호텔 완전 휴식 (9.5시간 수면)",
+        "day7_label": "Day 7 종일 — 비엔날레+Blues Point 석양+Vivid 집중"
+      },
       "days": [
         {
           "day": 6,
