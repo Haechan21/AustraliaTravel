@@ -67,16 +67,11 @@
     return str.length > 6 ? str.slice(0, 6) + '...' : str;
   }
 
-  function formatPrice(krw) {
-    return '\u20A9' + Number(krw).toLocaleString('ko-KR');
-  }
-
   /* ══════════════════════════════════════════
      숙소 예약 카드 렌더링
      ══════════════════════════════════════════ */
   function renderBookings() {
     var container = document.getElementById('booking-cards');
-    var totalEl = document.getElementById('booking-total');
     if (!container) return;
 
     var base = (window.__BASE_URL__ || '').replace(/\/+$/, '');
@@ -100,7 +95,6 @@
           card.innerHTML = [
             '<div class="booking-day">' + escHtml(b.day) + ' · ' + escHtml(formatDate(b.date)) + ' · ' + escHtml(b.destination) + '</div>',
             '<div class="booking-name">' + escHtml(b.property.name) + '</div>',
-            '<div class="booking-price">' + escHtml(formatPrice(res.price_krw)) + '</div>',
             '<div class="booking-meta">' + escHtml(res.platform || '') + ' / 체크인 ' + escHtml(extractTime(res.check_in)) + '</div>',
             cancel.free_before ? '<div class="booking-cancel">무료취소 ' + escHtml(cancel.free_before) + '</div>' : ''
           ].join('\n');
@@ -108,10 +102,6 @@
           container.appendChild(card);
         });
 
-        // 총액
-        if (totalEl && meta.total_cost_krw) {
-          totalEl.textContent = meta.total_nights + '박 합계 ' + formatPrice(meta.total_cost_krw);
-        }
       })
       .catch(function (err) {
         console.error('[index.js] bookings fetch failed:', err);
