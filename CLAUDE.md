@@ -54,7 +54,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ### 재평가 후 루트 파일 동기화
 1. `python scripts/update_route_scores.py --fix` — 점수 일괄 업데이트 (자동)
-2. `python scripts/sync_route_docs.py --fix` — 거리·등급집계·마커 값 자동 동기화
+2. `python scripts/sync_route_docs.py --fix` — 거리·등급집계·마커 값 자동 동기화 + 시드니 루트 정합성 검증·보정
 3. 이 파일(`CLAUDE.md`) 진행 상황 갱신
 
 ### v7 재평가 완료 (2026-03-18)
@@ -99,8 +99,9 @@ python scripts/generate_frontend.py --rank     # RANKINGS.md만
 python scripts/generate_frontend.py --data     # place_data.json만
 
 # 인라인 마커 기반 데이터 동기화 (SSOT → 루트 MD + README + route_data.json)
+# 시드니 루트 정합성 검증도 포함 (sydney_route_data.json 내부 + routes.html 점수)
 python scripts/sync_route_docs.py              # dry-run: 불일치 리포트
-python scripts/sync_route_docs.py --fix        # 마커 값 교체 + route_data.json 자동 정합
+python scripts/sync_route_docs.py --fix        # 마커 값 교체 + route_data.json/sydney 자동 정합
 python scripts/sync_route_docs.py --init       # 기존 문서에 마커 삽입 (dry-run)
 python scripts/sync_route_docs.py --init --fix # 마커 실제 삽입
 python scripts/sync_route_docs.py --check-only # CI용: 불일치 시 exit 1

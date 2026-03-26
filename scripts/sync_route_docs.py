@@ -2,6 +2,9 @@
 """
 인라인 마커 기반 루트 문서 동기화 CLI.
 
+로드트립 루트: 마커 기반 동기화 (route_data.json ↔ route-plans/ MD)
+시드니 루트: 내부 정합성 검증 (sydney_route_data.json + routes.html 점수)
+
 Usage:
     python scripts/sync_route_docs.py              # dry-run: 불일치 리포트
     python scripts/sync_route_docs.py --fix        # 마커 값 교체 + route_data.json 정합
@@ -10,6 +13,7 @@ Usage:
     python scripts/sync_route_docs.py --check-only # CI용: 불일치 시 exit 1
 """
 
+import json
 import re
 import sys
 from pathlib import Path
@@ -21,6 +25,8 @@ from sync_engine import (
     SyncEngine,
     MarkerInserter,
     ROUTE_DIR,
+    SYDNEY_ROUTE_DATA_PATH,
+    ROOT,
 )
 
 
@@ -126,6 +132,118 @@ def run_init(fix: bool = False) -> int:
     return total_changes
 
 
+def validate_sydney_routes(fix: bool = False) -> int:
+    """sydney_route_data.json 내부 정합성 검증 (+ --fix 시 자동 보정).
+
+    검증 항목:
+    1. stops distance_km 합산 == day_km
+    2. day_km 합산 == total_km
+    3. (score_a + score_b + score_c) / 3 ≈ score
+    """
+    if not SYDNEY_ROUTE_DATA_PATH.exists():
+        return 0
+
+    with open(SYDNEY_ROUTE_DATA_PATH, encoding="utf-8") as f:
+        data = json.load(f)
+
+    issues = 0
+    fixed = False
+
+    for key in sorted(data["routes"]):
+        route = data["routes"][key]
+
+        # 1. stops distance_km 합산 == day_km, day_km 합산 == total_km
+        recalc_total = 0.0
+        for day in route["days"]:
+            stops_sum = round(
+                sum(s.get("distance_km", 0) for s in day["stops"]), 1
+            )
+            day_km = day["day_km"]
+            if abs(stops_sum - day_km) > 0.05:
+                print(
+                    f"  [시드니] {key}조 Day {day['day']} "
+                    f"stops 합산({stops_sum}) ≠ day_km({day_km})"
+                )
+                if fix:
+                    day["day_km"] = stops_sum
+                    print(f"    → day_km을 {stops_sum}으로 보정")
+                    fixed = True
+                issues += 1
+            recalc_total += day["day_km"]
+
+        recalc_total = round(recalc_total, 1)
+        if abs(recalc_total - route["total_km"]) > 0.05:
+            print(
+                f"  [시드니] {key}조 "
+                f"day_km 합산({recalc_total}) ≠ total_km({route['total_km']})"
+            )
+            if fix:
+                route["total_km"] = recalc_total
+                print(f"    → total_km을 {recalc_total}으로 보정")
+                fixed = True
+            issues += 1
+
+        # 2. score == (score_a + score_b + score_c) / 3
+        score_avg = round(
+            (route["score_a"] + route["score_b"] + route["score_c"]) / 3, 1
+        )
+        if abs(score_avg - route["score"]) > 0.05:
+            print(
+                f"  [시드니] {key}조 "
+                f"score 평균({score_avg}) ≠ score({route['score']})"
+            )
+            if fix:
+                route["score"] = score_avg
+                print(f"    → score를 {score_avg}으로 보정")
+                fixed = True
+            issues += 1
+
+    # HTML 점수 바 하드코딩 검증
+    routes_html = ROOT / "routes.html"
+    if routes_html.exists():
+        html = routes_html.read_text(encoding="utf-8")
+        for key, route in data["routes"].items():
+            # data-sydney-map="N" ... score-num">XX.X 패턴
+            pattern = (
+                rf'data-sydney-map="{key}".*?'
+                rf'class="score-num">([\d.]+)<'
+            )
+            m = re.search(pattern, html, re.DOTALL)
+            if m:
+                html_score = float(m.group(1))
+                json_score = route["score"]
+                if abs(html_score - json_score) > 0.05:
+                    print(
+                        f"  [시드니 HTML] {key}조 지도탭 점수 "
+                        f"HTML({html_score}) ≠ JSON({json_score})"
+                    )
+                    issues += 1
+
+            # 상세탭: data-sydney="N"
+            pattern2 = (
+                rf'data-sydney="{key}".*?'
+                rf'class="score-num">([\d.]+)<'
+            )
+            m2 = re.search(pattern2, html, re.DOTALL)
+            if m2:
+                html_score2 = float(m2.group(1))
+                json_score = route["score"]
+                if abs(html_score2 - json_score) > 0.05:
+                    print(
+                        f"  [시드니 HTML] {key}조 상세탭 점수 "
+                        f"HTML({html_score2}) ≠ JSON({json_score})"
+                    )
+                    issues += 1
+
+    if fix and fixed:
+        with open(SYDNEY_ROUTE_DATA_PATH, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+        print("  → sydney_route_data.json 저장 완료")
+
+    return issues
+
+
 def main():
     args = set(sys.argv[1:])
     fix = "--fix" in args
@@ -148,6 +266,12 @@ def main():
         # 검사/교체 모드
         registry = SSOTRegistry()
         total = run_check(registry, fix=fix)
+
+        # 시드니 루트 내부 정합성 검증
+        print("\n--- 시드니 루트 검증 ---")
+        sydney_issues = validate_sydney_routes(fix=fix)
+        total += sydney_issues
+
         print(f"\n{'=' * 40}")
         if total == 0:
             print("불일치 없음 ✅")

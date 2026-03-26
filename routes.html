@@ -296,6 +296,8 @@ title: 루트 비교
     </div>
   </div>
 
+  <!-- 점수·색상·순서는 sydney_route_data.json에서 JS로 동적 갱신됨 (normalizeSydneyScoreBars).
+       아래 하드코딩 값은 JS 로드 전 초기 렌더링용 fallback. JSON 변경 시 함께 갱신 필요. -->
   <div class="score-bar" id="sydneyMapScoreBar">
     <div class="score-bar-header"><span>50</span><span style="flex:1"></span><span>점수</span></div>
     <div class="score-item" data-sydney-map="1"><span class="score-label">1조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#e74c3c"></div></div><span class="score-num">77.7</span></div>
@@ -331,6 +333,8 @@ title: 루트 비교
 
     <br/>
 
+    <!-- 점수·색상·순서는 sydney_route_data.json에서 JS로 동적 갱신됨.
+         아래 하드코딩 값은 JS 로드 전 초기 렌더링용 fallback. -->
     <div class="score-bar" id="sydneyScoreBar">
       <div class="score-bar-header"><span>50</span><span style="flex:1"></span><span>점수</span></div>
       <div class="score-item" data-sydney="1"><span class="score-label">1조</span><div class="score-break"><svg viewBox="0 0 18 18"><path d="M0,0 L8,0 Q12,4.5 8,9 Q4,13.5 8,18 L0,18 Z" fill="#e9ecef"/><path d="M8,0 L18,0 L18,18 L8,18 Q4,13.5 8,9 Q12,4.5 8,0 Z" fill="#e9ecef"/><path d="M8,0 Q12,4.5 8,9 Q4,13.5 8,18" fill="none" stroke="#c9cdd1" stroke-width="1.5"/></svg></div><div class="score-track"><div class="score-fill" style="width:50%;background:#e74c3c"></div></div><span class="score-num">77.7</span></div>
