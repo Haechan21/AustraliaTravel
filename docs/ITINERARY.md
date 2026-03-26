@@ -241,12 +241,21 @@ layout: default
 | 19:30~20:30 | 샤워 + 에스프레소 바 휴식 | 디카페인/허브티. Day 7 일정 확인, 카메라 충전 |
 | 21:00 | 취침 | **11시간 수면** → 08:00 기상. 누적 피로 완전 회복 |
 
-**Day 7 변경점**: 원안 Day 7과 동일하되, 18:20 이후 동선 변경:
-- Harry's → **CQ로 이동** (T8 전철 15분) → **Vivid CQ 구간 50분 감상** (Opera House Sails + Customs House + MCA 외벽)
-- CQ → The Rocks → 바랑가루 도보 15분 → Fire Kitchen → DH Laser Lightfall
-- 숙소 도착 21:40 (원안 대비 +20분). 총 도보 약 9.5km (+1.5km)
-- Doyles에서 **록 오이스터 반다즌 추가** ($19.90, Opera Bar 대체)
-- 예산: 2인 ₩353,949 (원안 대비 ₩10,569 절약)
+**Day 7 변경점**: 원안 Day 7과 동일하되, 18:20 이후 동선 변경. Doyles에서 **록 오이스터 반다즌 추가** ($19.90, Opera Bar 대체).
+
+| 시간 | 내용 | 이동 | 비고 |
+|------|------|------|------|
+| 18:05~18:20 | Harry's Cafe de Wheels 미트파이 | — | Tiger Pie $8.90 |
+| 18:20~18:45 | Harry's → CQ 이동 | 도보 10분 + T8 전철 3분 | 원안은 바랑가루 직행, 대체는 CQ 경유 |
+| 18:50~19:20 | **Vivid CQ — Opera House Sails** | 도보 | Opera Mundi 프로젝션. 점등 직후라 인파 적음 |
+| 19:20~19:40 | **Vivid CQ — Customs House + MCA** | 도보 | The Fringe of Infinity + Vaiola |
+| 19:40~20:00 | The Rocks → 바랑가루 이동 | 도보 15분 | Light Walk 연장선 |
+| 20:00~20:30 | **Fire Kitchen** (바랑가루) | — | 셰프 오픈파이어 요리 $15 |
+| 20:30~20:50 | 바랑가루 → Darling Harbour | 도보 18분 | Wulugul Walk 워터프론트 |
+| 20:50~21:10 | **Laser Lightfall** (Cockle Bay) | — | 21:00 정시 회차 감상 |
+| 21:10~21:40 | DH → Town Hall역 → 숙소 | 도보 8분 + T8 8분 | **21:40 도착** (원안 대비 +20분) |
+
+- 예산: 2인 ₩353,949 (원안 대비 ₩10,569 절약). 총 도보 약 9.5km (+1.5km)
 
 > **핵심 트레이드오프**: Opera Bar에서 Vivid 점등 속 오이스터+와인이라는 감성적 피크를 포기하는 대신, 11시간 수면으로 Day 7을 최상의 컨디션으로 시작. 당일 체력 상태에 따라 선택.
 
