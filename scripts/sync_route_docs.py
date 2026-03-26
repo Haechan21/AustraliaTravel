@@ -198,6 +198,23 @@ def validate_sydney_routes(fix: bool = False) -> int:
                 fixed = True
             issues += 1
 
+        # 3. alt 점수 정합성: alt.score == (alt.score_a + alt.score_b + alt.score_c) / 3
+        alt = route.get("alt")
+        if alt and all(k in alt for k in ("score", "score_a", "score_b", "score_c")):
+            alt_avg = round(
+                (alt["score_a"] + alt["score_b"] + alt["score_c"]) / 3, 1
+            )
+            if abs(alt_avg - alt["score"]) > 0.05:
+                print(
+                    f"  [시드니] {key}조 대체계획 "
+                    f"alt score 평균({alt_avg}) ≠ alt score({alt['score']})"
+                )
+                if fix:
+                    alt["score"] = alt_avg
+                    print(f"    → alt score를 {alt_avg}으로 보정")
+                    fixed = True
+                issues += 1
+
     # HTML 점수 바 하드코딩 검증
     routes_html = ROOT / "routes.html"
     if routes_html.exists():

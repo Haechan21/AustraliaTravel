@@ -262,6 +262,12 @@ title: 루트 비교
 
   <!-- 코스 선택 버튼 -->
   <div class="route-controls">
+    <!-- 원안/대체계획 토글 -->
+    <div class="plan-type-toggle" id="sydneyPlanToggle" style="margin-bottom:8px;display:flex;gap:6px;align-items:center;">
+      <span style="font-size:0.85em;color:#666;margin-right:4px;">계획:</span>
+      <button class="plan-toggle-btn active" data-plan-type="original" style="padding:4px 12px;border-radius:14px;border:1.5px solid #555;background:#555;color:#fff;font-size:0.82em;cursor:pointer;">원안</button>
+      <button class="plan-toggle-btn" data-plan-type="alt" style="padding:4px 12px;border-radius:14px;border:1.5px solid #555;background:transparent;color:#555;font-size:0.82em;cursor:pointer;">대체계획 (Day 6 휴식)</button>
+    </div>
     <div class="route-buttons" id="sydneyRouteButtons">
       <button class="route-btn active" data-sydney-route="all" style="border-color:#888">전체 보기</button>
       <button class="route-btn" data-sydney-route="1" style="border-color:#e74c3c">&#x1F947; 1조</button>
@@ -547,13 +553,22 @@ document.querySelectorAll('.score-item').forEach(function(el) {
 });
 
 // ═══ 시드니 코스 마크다운 로딩 ═══
-var sydneyPlanFiles = {
+var sydneyPlanFilesOriginal = {
   '1': 'research/sydney-plans/1조_클래식_하이라이트.md',
   '2': 'research/sydney-plans/2조_BridgeClimb_프리미엄.md',
   '3': 'research/sydney-plans/3조_호주정체성_탐험.md',
   '4': 'research/sydney-plans/4조_Vivid_올인.md',
   '5': 'research/sydney-plans/5조_로컬_숨은보석.md'
 };
+var sydneyPlanFilesAlt = {
+  '1': 'research/sydney-plans/대체계획/1조_클래식_하이라이트_Day6휴식.md',
+  '2': 'research/sydney-plans/대체계획/2조_BridgeClimb_프리미엄_Day6휴식.md',
+  '3': 'research/sydney-plans/대체계획/3조_호주정체성_탐험_Day6휴식.md',
+  '4': 'research/sydney-plans/대체계획/4조_Vivid_올인_Day6휴식.md',
+  '5': 'research/sydney-plans/대체계획/5조_로컬_숨은보석_Day6휴식.md'
+};
+var sydneyPlanType = 'original'; // 'original' or 'alt'
+var sydneyPlanFiles = sydneyPlanFilesOriginal;
 
 document.querySelectorAll('#main-sydney details').forEach(function(el) {
   el.addEventListener('toggle', function() {
@@ -1017,8 +1032,11 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
       return;
     }
     var route = sydneyRouteData[key];
-    var html = '<h3 style="color:' + SYDNEY_COLORS[key] + '">' + route.name + '</h3>';
-    html += '<div class="route-stats"><span>\uD3C9\uAC00 ' + route.score + '\uC810</span></div>';
+    var useAlt = (typeof sydneyPlanType !== 'undefined' && sydneyPlanType === 'alt');
+    var displayScore = (useAlt && route.alt) ? route.alt.score : route.score;
+    var planLabel = useAlt ? ' <span style="font-size:0.7em;background:#f0ad4e;color:#fff;padding:1px 6px;border-radius:8px;">대체</span>' : '';
+    var html = '<h3 style="color:' + SYDNEY_COLORS[key] + '">' + route.name + planLabel + '</h3>';
+    html += '<div class="route-stats"><span>\uD3C9\uAC00 ' + displayScore.toFixed(1) + '\uC810</span></div>';
 
     // Day 미니탭
     html += '<div class="day-mini-tabs" id="sydneyDayMiniTabs">';
@@ -1085,8 +1103,16 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
       }
     });
 
+    // 대체계획 모드일 때 day label 전환
+    var useAlt = (typeof sydneyPlanType !== 'undefined' && sydneyPlanType === 'alt');
+    var dayLabel = day.label;
+    if (useAlt && route.alt) {
+      if (dayNum === 6 && route.alt.day6_label) dayLabel = route.alt.day6_label;
+      if (dayNum === 7 && route.alt.day7_label) dayLabel = route.alt.day7_label;
+    }
+
     var html = '<div class="day-header">';
-    html += 'Day ' + day.day + ' <small>(' + day.date + ')</small> \u2014 ' + day.label;
+    html += 'Day ' + day.day + ' <small>(' + day.date + ')</small> \u2014 ' + dayLabel;
     if (day.day_km) html += ' <span class="day-km">' + day.day_km + 'km</span>';
     html += '</div>';
 
@@ -1179,10 +1205,13 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     var SCORE_BASE = 50;
     var SCORE_MAX = 100;
 
+    var useAlt = (typeof sydneyPlanType !== 'undefined' && sydneyPlanType === 'alt');
     items.sort(function(a, b) {
       var ka = a.getAttribute('data-sydney-map');
       var kb = b.getAttribute('data-sydney-map');
-      return sydneyRouteData[kb].score - sydneyRouteData[ka].score;
+      var sa = (useAlt && sydneyRouteData[ka].alt) ? sydneyRouteData[ka].alt.score : sydneyRouteData[ka].score;
+      var sb = (useAlt && sydneyRouteData[kb].alt) ? sydneyRouteData[kb].alt.score : sydneyRouteData[kb].score;
+      return sb - sa;
     });
 
     var header = container.querySelector('.score-bar-header');
@@ -1191,7 +1220,7 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     var medals = ['\uD83E\uDD47', '\uD83E\uDD48', '\uD83E\uDD49'];
     items.forEach(function(el, idx) {
       var key = el.getAttribute('data-sydney-map');
-      var score = sydneyRouteData[key].score;
+      var score = (useAlt && sydneyRouteData[key].alt) ? sydneyRouteData[key].alt.score : sydneyRouteData[key].score;
       var pct = ((score - SCORE_BASE) / (SCORE_MAX - SCORE_BASE)) * 100;
       el.querySelector('.score-fill').style.width = Math.max(pct, 1) + '%';
       var numEl = el.querySelector('.score-num');
@@ -1201,8 +1230,121 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
     });
   }
 
+  /* ── 원안/대체계획 토글 ── */
+  function switchSydneyPlanType(type) {
+    sydneyPlanType = type;
+    sydneyPlanFiles = (type === 'alt') ? sydneyPlanFilesAlt : sydneyPlanFilesOriginal;
+    // 토글 버튼 스타일 전환
+    document.querySelectorAll('#sydneyPlanToggle .plan-toggle-btn').forEach(function(b) {
+      if (b.getAttribute('data-plan-type') === type) {
+        b.classList.add('active');
+        b.style.background = '#555'; b.style.color = '#fff';
+      } else {
+        b.classList.remove('active');
+        b.style.background = 'transparent'; b.style.color = '#555';
+      }
+    });
+    // 점수바·카드 갱신
+    if (sydneyRouteData) {
+      var routes = sydneyRouteData;
+      var keys = Object.keys(routes);
+      // 점수·설명 전환
+      keys.forEach(function(key) {
+        var r = routes[key];
+        var score = (type === 'alt' && r.alt) ? r.alt.score : r.score;
+        var desc = (type === 'alt' && r.alt) ? r.alt.desc : r.desc;
+        var budget = (type === 'alt' && r.alt) ? r.alt.budget : r.budget;
+        document.querySelectorAll('.sydney-plan-title[data-sydney-key="' + key + '"]').forEach(function(el) {
+          el.style.color = r.color;
+          el.textContent = r.name + ' \u2014 ' + score.toFixed(1) + '점';
+        });
+        document.querySelectorAll('.sydney-plan-desc[data-sydney-key="' + key + '"]').forEach(function(el) {
+          el.innerHTML = '<strong>' + desc + '</strong><br><span style="font-size:0.85em;color:#888;">예산: ' + budget + '</span>';
+        });
+      });
+      // 상세탭 점수바 재정렬
+      var sorted = keys.slice().sort(function(a, b) {
+        var sa = (type === 'alt' && routes[a].alt) ? routes[a].alt.score : routes[a].score;
+        var sb = (type === 'alt' && routes[b].alt) ? routes[b].alt.score : routes[b].score;
+        return sb - sa;
+      });
+      var scoreBar = document.getElementById('sydneyScoreBar');
+      if (scoreBar) {
+        var items = sorted.map(function(key) {
+          return scoreBar.querySelector('.score-item[data-sydney="' + key + '"]');
+        }).filter(Boolean);
+        items.forEach(function(el) { scoreBar.appendChild(el); });
+        var medals = ['\uD83E\uDD47', '\uD83E\uDD48', '\uD83E\uDD49'];
+        items.forEach(function(el, idx) {
+          var key = el.getAttribute('data-sydney');
+          var score = (type === 'alt' && routes[key].alt) ? routes[key].alt.score : routes[key].score;
+          var pct = ((score - 50) / 50) * 100;
+          el.querySelector('.score-fill').style.width = Math.max(pct, 1) + '%';
+          var numEl = el.querySelector('.score-num');
+          if (numEl) numEl.textContent = score.toFixed(1);
+          var labelEl = el.querySelector('.score-label');
+          if (labelEl) labelEl.textContent = (idx < 3 ? medals[idx] + ' ' : '') + key + '\uC870';
+        });
+      }
+      // 지도탭 점수바도 갱신
+      normalizeSydneyScoreBars();
+      // 종합 순위표 재생성
+      var tableEl = document.getElementById('sydneyRankTable');
+      if (tableEl) {
+        var medals = ['\uD83E\uDD47', '\uD83E\uDD48', '\uD83E\uDD49'];
+        var bgColors = ['#fff8e1', '#f5f5f5', '#fdf5ee', '', ''];
+        var html = '<table><thead><tr>' +
+          '<th style="text-align:center">순위</th><th>안</th>' +
+          '<th style="text-align:center">평균</th><th style="text-align:center">설계(A\')</th>' +
+          '<th style="text-align:center">감성(B\')</th><th style="text-align:center">실행(C\')</th>' +
+          '<th style="text-align:center">예산(2인)</th><th style="text-align:center">논쟁</th>' +
+          '</tr></thead><tbody>';
+        sorted.forEach(function(key, idx) {
+          var r = routes[key];
+          var sc = (type === 'alt' && r.alt) ? r.alt.score : r.score;
+          var sa = (type === 'alt' && r.alt) ? r.alt.score_a : r.score_a;
+          var sb = (type === 'alt' && r.alt) ? r.alt.score_b : r.score_b;
+          var scc = (type === 'alt' && r.alt) ? r.alt.score_c : r.score_c;
+          var bgt = (type === 'alt' && r.alt) ? r.alt.budget : r.budget;
+          var disp = (type === 'alt' && r.alt) ? r.alt.dispute : r.dispute;
+          var bg = bgColors[idx] ? ' style="background:' + bgColors[idx] + '"' : '';
+          var rank = idx < 3 ? medals[idx] : (idx + 1);
+          var rankStyle = idx < 3 ? 'text-align:center;font-weight:700;font-size:1.2em' : 'text-align:center;font-weight:700';
+          html += '<tr' + bg + '>' +
+            '<td style="' + rankStyle + '">' + rank + '</td>' +
+            '<td><a href="#sydney-plan-' + key + '">' + r.short_name + '</a></td>' +
+            '<td style="text-align:center;font-weight:700;color:' + r.color + '">' + sc.toFixed(1) + '</td>' +
+            '<td style="text-align:center">' + sa.toFixed(1) + '</td>' +
+            '<td style="text-align:center">' + sb.toFixed(1) + '</td>' +
+            '<td style="text-align:center">' + scc.toFixed(1) + '</td>' +
+            '<td style="text-align:center">' + bgt + '</td>' +
+            '<td style="text-align:center">' + (disp ? 'O' : 'X') + '</td></tr>';
+        });
+        html += '</tbody></table>';
+        tableEl.innerHTML = html;
+      }
+      // plan-card 마크다운 캐시 리셋 (파일 경로 변경)
+      document.querySelectorAll('.sydney-plan-content').forEach(function(div) {
+        div.dataset.loaded = '';
+        div.innerHTML = '로딩 중...';
+      });
+      // details 모두 닫기
+      document.querySelectorAll('#main-sydney details').forEach(function(d) { d.open = false; });
+    }
+    // 지도 인포패널 갱신
+    if (sActiveRoute && sActiveRoute !== 'all') {
+      updateSydneyInfoPanel(sActiveRoute);
+    }
+  }
+
   /* ── 컨트롤 바인딩 ── */
   function bindSydneyControls() {
+    // 원안/대체계획 토글
+    document.querySelectorAll('#sydneyPlanToggle .plan-toggle-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        switchSydneyPlanType(this.getAttribute('data-plan-type'));
+      });
+    });
     document.querySelectorAll('#sydneyRouteButtons .route-btn').forEach(function(btn) {
       btn.addEventListener('click', function() {
         document.querySelectorAll('#sydneyRouteButtons .route-btn').forEach(function(b) { b.classList.remove('active'); });
