@@ -1231,6 +1231,15 @@
   font-weight: bold;
 }
 
+.legend-ferry-line {
+  display: inline-block;
+  width: 20px;
+  height: 0;
+  border-top: 3px dashed #0077be;
+  vertical-align: middle;
+  margin-right: 2px;
+}
+
 // Leaflet divIcon override
 .custom-marker { background: transparent !important; border: none !important; }
 

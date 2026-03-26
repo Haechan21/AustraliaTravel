@@ -286,7 +286,7 @@ title: 루트 비교
         <div class="legend-row"><span class="legend-icon marker-s"></span> 핵심 체험</div>
         <div class="legend-row"><span class="legend-icon marker-a"></span> 관광지</div>
         <div class="legend-row"><span class="legend-icon marker-b"></span> 식당/카페</div>
-        <div class="legend-row"><span class="legend-dash">- - -</span> 페리 구간</div>
+        <div class="legend-row"><span class="legend-ferry-line"></span> 페리 구간</div>
       </div>
     </div>
     <div class="map-split-right">
@@ -888,11 +888,20 @@ document.querySelectorAll('#main-sydney .plan-card h2').forEach(function(h2) {
         var ferryCoords = getSydneyFerryGeometry(key, day.day);
         if (ferryCoords) {
           ferryCoords.forEach(function(fc) {
+            // 흰색 테두리 레이어 (가시성 향상)
+            var ferryOutline = L.polyline(fc, {
+              color: '#ffffff',
+              weight: 7,
+              opacity: 0.9
+            });
+            dayFerryLines.push(ferryOutline);
+            routeLayers.ferryLines.push(ferryOutline);
             var ferryLine = L.polyline(fc, {
-              color: color,
-              weight: 3,
-              opacity: 0.8,
-              dashArray: '8 6'
+              color: '#0077be',
+              weight: 4,
+              opacity: 1,
+              dashArray: '10 8',
+              lineCap: 'round'
             });
             dayFerryLines.push(ferryLine);
             routeLayers.ferryLines.push(ferryLine);
