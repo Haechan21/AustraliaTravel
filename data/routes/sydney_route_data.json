@@ -2,207 +2,764 @@
   "routes": {
     "1": {
       "name": "1조: 클래식 하이라이트",
+      "short_name": "1조 클래식 하이라이트",
       "color": "#e74c3c",
-      "total_km": 0,
-      "score": 76.3,
+      "total_km": 48.3,
+      "score": 77.7,
+      "score_a": 75.5,
+      "score_b": 80.5,
+      "score_c": 77.0,
+      "budget": "₩36.5만",
+      "dispute": false,
+      "desc": "본다이→왓슨스베이→하버→The Rocks→Vivid. 시드니 정석 코스. 호주 음식 5종.",
       "days": [
         {
           "day": 6,
           "date": "5/29",
           "label": "Day 6 저녁 — 시드니 Vivid 첫 만남",
-          "day_km": 0,
+          "day_km": 15.2,
           "stops": [
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0},
-            {"name": "Opera Bar", "lng": 151.2153, "lat": -33.8568, "type": "dining", "distance_km": 0},
-            {"name": "The Rocks (Vivid)", "lng": 151.2085, "lat": -33.8594, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 0
+            },
+            {
+              "name": "Opera Bar",
+              "lng": 151.2153,
+              "lat": -33.8568,
+              "type": "dining",
+              "distance_km": 7.4
+            },
+            {
+              "name": "The Rocks (Vivid)",
+              "lng": 151.2085,
+              "lat": -33.8594,
+              "type": "attraction",
+              "distance_km": 0.9
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 6.9
+            }
           ]
         },
         {
           "day": 7,
           "date": "5/30",
           "label": "Day 7 종일 — 시드니의 모든 맛과 빛",
-          "day_km": 0,
+          "day_km": 33.1,
           "stops": [
-            {"name": "Bills Bondi", "lng": 151.2749, "lat": -33.8908, "type": "dining", "distance_km": 0},
-            {"name": "Bronte Beach", "lng": 151.2677, "lat": -33.9034, "type": "attraction", "distance_km": 0},
-            {"name": "The Gap (Watsons Bay)", "lng": 151.2796, "lat": -33.8586, "type": "attraction", "distance_km": 0},
-            {"name": "Doyles (Watsons Bay)", "lng": 151.2826, "lat": -33.8439, "type": "dining", "distance_km": 0},
-            {"name": "Circular Quay (Ferry)", "lng": 151.2111, "lat": -33.8612, "type": "attraction", "distance_km": 0},
-            {"name": "The Rocks (Market+Heritage)", "lng": 151.2085, "lat": -33.8594, "type": "attraction", "distance_km": 0},
-            {"name": "Royal Botanic Garden", "lng": 151.2168, "lat": -33.8641, "type": "attraction", "distance_km": 0},
-            {"name": "Mrs Macquaries Chair", "lng": 151.2224, "lat": -33.8600, "type": "attraction", "distance_km": 0},
-            {"name": "Harry's Cafe de Wheels", "lng": 151.2048, "lat": -33.8795, "type": "dining", "distance_km": 0},
-            {"name": "Barangaroo (Fire Kitchen)", "lng": 151.2018, "lat": -33.8588, "type": "attraction", "distance_km": 0},
-            {"name": "Darling Harbour (Laser)", "lng": 151.1985, "lat": -33.8722, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "Bills Bondi",
+              "lng": 151.2749,
+              "lat": -33.8908,
+              "type": "dining",
+              "distance_km": 0
+            },
+            {
+              "name": "Bronte Beach",
+              "lng": 151.2677,
+              "lat": -33.9034,
+              "type": "attraction",
+              "distance_km": 2.0
+            },
+            {
+              "name": "The Gap (Watsons Bay)",
+              "lng": 151.2796,
+              "lat": -33.8586,
+              "type": "attraction",
+              "distance_km": 6.6
+            },
+            {
+              "name": "Doyles (Watsons Bay)",
+              "lng": 151.2826,
+              "lat": -33.8439,
+              "type": "dining",
+              "distance_km": 1.7
+            },
+            {
+              "name": "Circular Quay (Ferry)",
+              "lng": 151.2111,
+              "lat": -33.8612,
+              "type": "attraction",
+              "distance_km": 6.9
+            },
+            {
+              "name": "The Rocks (Market+Heritage)",
+              "lng": 151.2085,
+              "lat": -33.8594,
+              "type": "attraction",
+              "distance_km": 0.3
+            },
+            {
+              "name": "Royal Botanic Garden",
+              "lng": 151.2168,
+              "lat": -33.8641,
+              "type": "attraction",
+              "distance_km": 1.2
+            },
+            {
+              "name": "Mrs Macquaries Chair",
+              "lng": 151.2224,
+              "lat": -33.86,
+              "type": "attraction",
+              "distance_km": 0.9
+            },
+            {
+              "name": "Harry's Cafe de Wheels",
+              "lng": 151.2048,
+              "lat": -33.8795,
+              "type": "dining",
+              "distance_km": 3.5
+            },
+            {
+              "name": "Barangaroo (Fire Kitchen)",
+              "lng": 151.2018,
+              "lat": -33.8588,
+              "type": "attraction",
+              "distance_km": 3.0
+            },
+            {
+              "name": "Darling Harbour (Laser)",
+              "lng": 151.1985,
+              "lat": -33.8722,
+              "type": "attraction",
+              "distance_km": 2.0
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 5.0
+            }
           ]
         }
       ]
     },
     "2": {
       "name": "2조: BridgeClimb 프리미엄",
+      "short_name": "2조 BridgeClimb 프리미엄",
       "color": "#3498db",
-      "total_km": 0,
-      "score": 67.5,
+      "total_km": 51.4,
+      "score": 70.8,
+      "score_a": 70.0,
+      "score_b": 80.0,
+      "score_c": 62.5,
+      "budget": "₩93.8만",
+      "dispute": true,
+      "desc": "BridgeClimb Vivid Night + 피쉬마켓 + 본다이 석양. 하버브릿지 정상에서 Vivid 감상.",
       "days": [
         {
           "day": 6,
           "date": "5/29",
           "label": "Day 6 저녁 — BridgeClimb + Vivid",
-          "day_km": 0,
+          "day_km": 14.0,
           "stops": [
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0},
-            {"name": "BridgeClimb", "lng": 151.2102, "lat": -33.8527, "type": "attraction", "distance_km": 0},
-            {"name": "The Glenmore", "lng": 151.2084, "lat": -33.8593, "type": "dining", "distance_km": 0},
-            {"name": "Circular Quay (Vivid)", "lng": 151.2111, "lat": -33.8612, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 0
+            },
+            {
+              "name": "BridgeClimb",
+              "lng": 151.2102,
+              "lat": -33.8527,
+              "type": "attraction",
+              "distance_km": 6.1
+            },
+            {
+              "name": "The Glenmore",
+              "lng": 151.2084,
+              "lat": -33.8593,
+              "type": "dining",
+              "distance_km": 0.8
+            },
+            {
+              "name": "Circular Quay (Vivid)",
+              "lng": 151.2111,
+              "lat": -33.8612,
+              "type": "attraction",
+              "distance_km": 0.4
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 6.7
+            }
           ]
         },
         {
           "day": 7,
           "date": "5/30",
           "label": "Day 7 종일 — 피쉬마켓+본다이+Vivid",
-          "day_km": 0,
+          "day_km": 37.4,
           "stops": [
-            {"name": "Sydney Fish Market", "lng": 151.1896, "lat": -33.8714, "type": "dining", "distance_km": 0},
-            {"name": "Royal Botanic Garden", "lng": 151.2168, "lat": -33.8641, "type": "attraction", "distance_km": 0},
-            {"name": "Mrs Macquaries Chair", "lng": 151.2224, "lat": -33.8600, "type": "attraction", "distance_km": 0},
-            {"name": "Art Gallery of NSW", "lng": 151.2170, "lat": -33.8690, "type": "attraction", "distance_km": 0},
-            {"name": "The Rocks (Market+Heritage)", "lng": 151.2085, "lat": -33.8594, "type": "attraction", "distance_km": 0},
-            {"name": "Barangaroo (원주민투어)", "lng": 151.2018, "lat": -33.8588, "type": "attraction", "distance_km": 0},
-            {"name": "Bondi Beach (석양)", "lng": 151.2749, "lat": -33.8908, "type": "attraction", "distance_km": 0},
-            {"name": "Bondi Icebergs", "lng": 151.2740, "lat": -33.8938, "type": "dining", "distance_km": 0},
-            {"name": "Harry's Cafe de Wheels", "lng": 151.2048, "lat": -33.8795, "type": "dining", "distance_km": 0},
-            {"name": "Darling Harbour (Laser+Fire Kitchen)", "lng": 151.1985, "lat": -33.8722, "type": "attraction", "distance_km": 0},
-            {"name": "Circular Quay (Vivid+Opera Bar)", "lng": 151.2111, "lat": -33.8612, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "Sydney Fish Market",
+              "lng": 151.1896,
+              "lat": -33.8714,
+              "type": "dining",
+              "distance_km": 0
+            },
+            {
+              "name": "Royal Botanic Garden",
+              "lng": 151.2168,
+              "lat": -33.8641,
+              "type": "attraction",
+              "distance_km": 3.4
+            },
+            {
+              "name": "Mrs Macquaries Chair",
+              "lng": 151.2224,
+              "lat": -33.86,
+              "type": "attraction",
+              "distance_km": 0.9
+            },
+            {
+              "name": "Art Gallery of NSW",
+              "lng": 151.217,
+              "lat": -33.869,
+              "type": "attraction",
+              "distance_km": 1.5
+            },
+            {
+              "name": "The Rocks (Market+Heritage)",
+              "lng": 151.2085,
+              "lat": -33.8594,
+              "type": "attraction",
+              "distance_km": 1.7
+            },
+            {
+              "name": "Barangaroo (원주민투어)",
+              "lng": 151.2018,
+              "lat": -33.8588,
+              "type": "attraction",
+              "distance_km": 0.8
+            },
+            {
+              "name": "Bondi Beach (석양)",
+              "lng": 151.2749,
+              "lat": -33.8908,
+              "type": "attraction",
+              "distance_km": 9.9
+            },
+            {
+              "name": "Bondi Icebergs",
+              "lng": 151.274,
+              "lat": -33.8938,
+              "type": "dining",
+              "distance_km": 0.4
+            },
+            {
+              "name": "Harry's Cafe de Wheels",
+              "lng": 151.2048,
+              "lat": -33.8795,
+              "type": "dining",
+              "distance_km": 8.6
+            },
+            {
+              "name": "Darling Harbour (Laser+Fire Kitchen)",
+              "lng": 151.1985,
+              "lat": -33.8722,
+              "type": "attraction",
+              "distance_km": 1.3
+            },
+            {
+              "name": "Circular Quay (Vivid+Opera Bar)",
+              "lng": 151.2111,
+              "lat": -33.8612,
+              "type": "attraction",
+              "distance_km": 2.2
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 6.7
+            }
           ]
         }
       ]
     },
     "3": {
       "name": "3조: 호주정체성 탐험",
+      "short_name": "3조 호주정체성 탐험",
       "color": "#2ecc71",
-      "total_km": 0,
-      "score": 70.7,
+      "total_km": 32.4,
+      "score": 72.5,
+      "score_a": 71.0,
+      "score_b": 78.0,
+      "score_c": 68.5,
+      "budget": "₩60.7만",
+      "dispute": false,
+      "desc": "피쉬마켓 + 타롱가 동물원 + 원주민 투어 + Midden 디너. 호주 고유 체험 밀도 최고.",
       "days": [
         {
           "day": 6,
           "date": "5/29",
           "label": "Day 6 저녁 — Darling Harbour Vivid",
-          "day_km": 0,
+          "day_km": 10.3,
           "stops": [
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0},
-            {"name": "Harry's Cafe de Wheels", "lng": 151.2048, "lat": -33.8795, "type": "dining", "distance_km": 0},
-            {"name": "Darling Harbour (Laser+Vivid)", "lng": 151.1985, "lat": -33.8722, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 0
+            },
+            {
+              "name": "Harry's Cafe de Wheels",
+              "lng": 151.2048,
+              "lat": -33.8795,
+              "type": "dining",
+              "distance_km": 4.0
+            },
+            {
+              "name": "Darling Harbour (Laser+Vivid)",
+              "lng": 151.1985,
+              "lat": -33.8722,
+              "type": "attraction",
+              "distance_km": 1.3
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 5.0
+            }
           ]
         },
         {
           "day": 7,
           "date": "5/30",
           "label": "Day 7 종일 — 타롱가+원주민+Midden",
-          "day_km": 0,
+          "day_km": 22.1,
           "stops": [
-            {"name": "Sydney Fish Market", "lng": 151.1896, "lat": -33.8714, "type": "dining", "distance_km": 0},
-            {"name": "Circular Quay", "lng": 151.2111, "lat": -33.8612, "type": "attraction", "distance_km": 0},
-            {"name": "Taronga Zoo (Ferry)", "lng": 151.2414, "lat": -33.8430, "type": "attraction", "distance_km": 0},
-            {"name": "Circular Quay (Return)", "lng": 151.2111, "lat": -33.8612, "type": "attraction", "distance_km": 0},
-            {"name": "The Rocks (Market)", "lng": 151.2085, "lat": -33.8594, "type": "attraction", "distance_km": 0},
-            {"name": "Barangaroo (원주민투어)", "lng": 151.2018, "lat": -33.8588, "type": "attraction", "distance_km": 0},
-            {"name": "Heritage Hotel", "lng": 151.2085, "lat": -33.8594, "type": "dining", "distance_km": 0},
-            {"name": "Midden (Opera House)", "lng": 151.2153, "lat": -33.8568, "type": "dining", "distance_km": 0},
-            {"name": "Vivid Light Walk", "lng": 151.2130, "lat": -33.8580, "type": "attraction", "distance_km": 0},
-            {"name": "Harbour Bridge Walk", "lng": 151.2110, "lat": -33.8525, "type": "attraction", "distance_km": 0},
-            {"name": "Wendy's Secret Garden", "lng": 151.2079, "lat": -33.8459, "type": "attraction", "distance_km": 0},
-            {"name": "Luna Park", "lng": 151.2095, "lat": -33.8480, "type": "attraction", "distance_km": 0},
-            {"name": "Milsons Point", "lng": 151.2115, "lat": -33.8476, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "Sydney Fish Market",
+              "lng": 151.1896,
+              "lat": -33.8714,
+              "type": "dining",
+              "distance_km": 0
+            },
+            {
+              "name": "Circular Quay",
+              "lng": 151.2111,
+              "lat": -33.8612,
+              "type": "attraction",
+              "distance_km": 3.0
+            },
+            {
+              "name": "Taronga Zoo (Ferry)",
+              "lng": 151.2414,
+              "lat": -33.843,
+              "type": "attraction",
+              "distance_km": 3.5
+            },
+            {
+              "name": "Circular Quay (Return)",
+              "lng": 151.2111,
+              "lat": -33.8612,
+              "type": "attraction",
+              "distance_km": 3.5
+            },
+            {
+              "name": "The Rocks (Market)",
+              "lng": 151.2085,
+              "lat": -33.8594,
+              "type": "attraction",
+              "distance_km": 0.4
+            },
+            {
+              "name": "Barangaroo (원주민투어)",
+              "lng": 151.2018,
+              "lat": -33.8588,
+              "type": "attraction",
+              "distance_km": 0.8
+            },
+            {
+              "name": "Heritage Hotel",
+              "lng": 151.2085,
+              "lat": -33.8594,
+              "type": "dining",
+              "distance_km": 0.8
+            },
+            {
+              "name": "Midden (Opera House)",
+              "lng": 151.2153,
+              "lat": -33.8568,
+              "type": "dining",
+              "distance_km": 0.9
+            },
+            {
+              "name": "Vivid Light Walk",
+              "lng": 151.213,
+              "lat": -33.858,
+              "type": "attraction",
+              "distance_km": 0.3
+            },
+            {
+              "name": "Harbour Bridge Walk",
+              "lng": 151.211,
+              "lat": -33.8525,
+              "type": "attraction",
+              "distance_km": 0.6
+            },
+            {
+              "name": "Wendy's Secret Garden",
+              "lng": 151.2079,
+              "lat": -33.8459,
+              "type": "attraction",
+              "distance_km": 1.0
+            },
+            {
+              "name": "Luna Park",
+              "lng": 151.2095,
+              "lat": -33.848,
+              "type": "attraction",
+              "distance_km": 0.4
+            },
+            {
+              "name": "Milsons Point",
+              "lng": 151.2115,
+              "lat": -33.8476,
+              "type": "attraction",
+              "distance_km": 0.2
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 6.7
+            }
           ]
         }
       ]
     },
     "4": {
       "name": "4조: Vivid 올인",
+      "short_name": "4조 Vivid 올인",
       "color": "#f1c40f",
-      "total_km": 0,
-      "score": 69.8,
+      "total_km": 50.1,
+      "score": 74.3,
+      "score_a": 74.5,
+      "score_b": 82.0,
+      "score_c": 66.5,
+      "budget": "₩41~51만",
+      "dispute": true,
+      "desc": "Vivid 2일 완벽 분할 + 크루즈 + Opera Bar 석양. Vivid 설계 최고.",
       "days": [
         {
           "day": 6,
           "date": "5/29",
           "label": "Day 6 저녁 — Vivid 서쪽(Darling Harbour)",
-          "day_km": 0,
+          "day_km": 14.0,
           "stops": [
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0},
-            {"name": "Darling Harbour (Laser+Fire Kitchen+Vivid)", "lng": 151.1985, "lat": -33.8722, "type": "attraction", "distance_km": 0},
-            {"name": "Barangaroo", "lng": 151.2018, "lat": -33.8588, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 0
+            },
+            {
+              "name": "Darling Harbour (Laser+Fire Kitchen+Vivid)",
+              "lng": 151.1985,
+              "lat": -33.8722,
+              "type": "attraction",
+              "distance_km": 5.0
+            },
+            {
+              "name": "Barangaroo",
+              "lng": 151.2018,
+              "lat": -33.8588,
+              "type": "attraction",
+              "distance_km": 2.0
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 7.0
+            }
           ]
         },
         {
           "day": 7,
           "date": "5/30",
           "label": "Day 7 종일 — 본다이+Vivid 동쪽+크루즈",
-          "day_km": 0,
+          "day_km": 36.1,
           "stops": [
-            {"name": "Bondi Icebergs", "lng": 151.2740, "lat": -33.8938, "type": "dining", "distance_km": 0},
-            {"name": "Bronte Beach (Walk)", "lng": 151.2677, "lat": -33.9034, "type": "attraction", "distance_km": 0},
-            {"name": "The Rocks (Market+Heritage)", "lng": 151.2085, "lat": -33.8594, "type": "attraction", "distance_km": 0},
-            {"name": "Harbour Bridge Walk", "lng": 151.2110, "lat": -33.8525, "type": "attraction", "distance_km": 0},
-            {"name": "Milsons Point", "lng": 151.2115, "lat": -33.8476, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square (휴식)", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0},
-            {"name": "Opera Bar (석양)", "lng": 151.2153, "lat": -33.8568, "type": "dining", "distance_km": 0},
-            {"name": "Circular Quay (Vivid+크루즈)", "lng": 151.2111, "lat": -33.8612, "type": "attraction", "distance_km": 0},
-            {"name": "Mrs Macquaries Chair (야경)", "lng": 151.2224, "lat": -33.8600, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "Bondi Icebergs",
+              "lng": 151.274,
+              "lat": -33.8938,
+              "type": "dining",
+              "distance_km": 0
+            },
+            {
+              "name": "Bronte Beach (Walk)",
+              "lng": 151.2677,
+              "lat": -33.9034,
+              "type": "attraction",
+              "distance_km": 1.6
+            },
+            {
+              "name": "The Rocks (Market+Heritage)",
+              "lng": 151.2085,
+              "lat": -33.8594,
+              "type": "attraction",
+              "distance_km": 9.5
+            },
+            {
+              "name": "Harbour Bridge Walk",
+              "lng": 151.211,
+              "lat": -33.8525,
+              "type": "attraction",
+              "distance_km": 0.8
+            },
+            {
+              "name": "Milsons Point",
+              "lng": 151.2115,
+              "lat": -33.8476,
+              "type": "attraction",
+              "distance_km": 0.7
+            },
+            {
+              "name": "ValueSuites Green Square (휴식)",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 6.7
+            },
+            {
+              "name": "Opera Bar (석양)",
+              "lng": 151.2153,
+              "lat": -33.8568,
+              "type": "dining",
+              "distance_km": 7.4
+            },
+            {
+              "name": "Circular Quay (Vivid+크루즈)",
+              "lng": 151.2111,
+              "lat": -33.8612,
+              "type": "attraction",
+              "distance_km": 0.8
+            },
+            {
+              "name": "Mrs Macquaries Chair (야경)",
+              "lng": 151.2224,
+              "lat": -33.86,
+              "type": "attraction",
+              "distance_km": 1.4
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 7.2
+            }
           ]
         }
       ]
     },
     "5": {
       "name": "5조: 로컬 숨은보석",
+      "short_name": "5조 로컬 숨은보석",
       "color": "#9b59b6",
-      "total_km": 0,
-      "score": 74.8,
+      "total_km": 46.5,
+      "score": 76.8,
+      "score_a": 76.5,
+      "score_b": 83.5,
+      "score_c": 70.5,
+      "budget": "₩47.5만",
+      "dispute": false,
+      "desc": "Wendy's Garden + 비엔날레 + Blues Point 석양 + 빛의 3단 전환. 커플 로맨스 최다.",
       "days": [
         {
           "day": 6,
           "date": "5/29",
           "label": "Day 6 저녁 — Darling Harbour+Barangaroo Vivid",
-          "day_km": 0,
+          "day_km": 14.9,
           "stops": [
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0},
-            {"name": "Darling Harbour (Laser+Fire Kitchen)", "lng": 151.1985, "lat": -33.8722, "type": "attraction", "distance_km": 0},
-            {"name": "Barangaroo (Vivid)", "lng": 151.2018, "lat": -33.8588, "type": "attraction", "distance_km": 0},
-            {"name": "Circular Quay (Opera Mundi)", "lng": 151.2111, "lat": -33.8612, "type": "attraction", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 0
+            },
+            {
+              "name": "Darling Harbour (Laser+Fire Kitchen)",
+              "lng": 151.1985,
+              "lat": -33.8722,
+              "type": "attraction",
+              "distance_km": 5.0
+            },
+            {
+              "name": "Barangaroo (Vivid)",
+              "lng": 151.2018,
+              "lat": -33.8588,
+              "type": "attraction",
+              "distance_km": 2.0
+            },
+            {
+              "name": "Circular Quay (Opera Mundi)",
+              "lng": 151.2111,
+              "lat": -33.8612,
+              "type": "attraction",
+              "distance_km": 1.2
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 6.7
+            }
           ]
         },
         {
           "day": 7,
           "date": "5/30",
           "label": "Day 7 종일 — 비엔날레+Blues Point+빛의 전환",
-          "day_km": 0,
+          "day_km": 31.6,
           "stops": [
-            {"name": "The Grounds of Alexandria", "lng": 151.1944, "lat": -33.9102, "type": "dining", "distance_km": 0},
-            {"name": "Art Gallery of NSW (비엔날레)", "lng": 151.2170, "lat": -33.8690, "type": "attraction", "distance_km": 0},
-            {"name": "Royal Botanic Garden", "lng": 151.2168, "lat": -33.8641, "type": "attraction", "distance_km": 0},
-            {"name": "Mrs Macquaries Chair", "lng": 151.2224, "lat": -33.8600, "type": "attraction", "distance_km": 0},
-            {"name": "Opera Bar", "lng": 151.2153, "lat": -33.8568, "type": "dining", "distance_km": 0},
-            {"name": "The Rocks (Market+Heritage)", "lng": 151.2085, "lat": -33.8594, "type": "attraction", "distance_km": 0},
-            {"name": "Paddington Reservoir", "lng": 151.2263, "lat": -33.8845, "type": "attraction", "distance_km": 0},
-            {"name": "Paddington Markets", "lng": 151.2270, "lat": -33.8860, "type": "attraction", "distance_km": 0},
-            {"name": "Wendy's Secret Garden", "lng": 151.2079, "lat": -33.8459, "type": "attraction", "distance_km": 0},
-            {"name": "Luna Park", "lng": 151.2095, "lat": -33.8480, "type": "attraction", "distance_km": 0},
-            {"name": "Blues Point Reserve", "lng": 151.2058, "lat": -33.8441, "type": "attraction", "distance_km": 0},
-            {"name": "McMahons Point Ferry", "lng": 151.2034, "lat": -33.8445, "type": "attraction", "distance_km": 0},
-            {"name": "Circular Quay (Ferry)", "lng": 151.2111, "lat": -33.8612, "type": "attraction", "distance_km": 0},
-            {"name": "Harbour Bridge Walk", "lng": 151.2110, "lat": -33.8525, "type": "attraction", "distance_km": 0},
-            {"name": "Vivid (보충)", "lng": 151.2130, "lat": -33.8580, "type": "attraction", "distance_km": 0},
-            {"name": "Midden / The Glenmore", "lng": 151.2084, "lat": -33.8593, "type": "dining", "distance_km": 0},
-            {"name": "ValueSuites Green Square", "lng": 151.202, "lat": -33.907, "type": "stay", "distance_km": 0}
+            {
+              "name": "The Grounds of Alexandria",
+              "lng": 151.1944,
+              "lat": -33.9102,
+              "type": "dining",
+              "distance_km": 0
+            },
+            {
+              "name": "Art Gallery of NSW (비엔날레)",
+              "lng": 151.217,
+              "lat": -33.869,
+              "type": "attraction",
+              "distance_km": 6.5
+            },
+            {
+              "name": "Royal Botanic Garden",
+              "lng": 151.2168,
+              "lat": -33.8641,
+              "type": "attraction",
+              "distance_km": 0.7
+            },
+            {
+              "name": "Mrs Macquaries Chair",
+              "lng": 151.2224,
+              "lat": -33.86,
+              "type": "attraction",
+              "distance_km": 0.9
+            },
+            {
+              "name": "Opera Bar",
+              "lng": 151.2153,
+              "lat": -33.8568,
+              "type": "dining",
+              "distance_km": 1.0
+            },
+            {
+              "name": "The Rocks (Market+Heritage)",
+              "lng": 151.2085,
+              "lat": -33.8594,
+              "type": "attraction",
+              "distance_km": 0.9
+            },
+            {
+              "name": "Paddington Reservoir",
+              "lng": 151.2263,
+              "lat": -33.8845,
+              "type": "attraction",
+              "distance_km": 4.2
+            },
+            {
+              "name": "Paddington Markets",
+              "lng": 151.227,
+              "lat": -33.886,
+              "type": "attraction",
+              "distance_km": 0.2
+            },
+            {
+              "name": "Wendy's Secret Garden",
+              "lng": 151.2079,
+              "lat": -33.8459,
+              "type": "attraction",
+              "distance_km": 4.8
+            },
+            {
+              "name": "Luna Park",
+              "lng": 151.2095,
+              "lat": -33.848,
+              "type": "attraction",
+              "distance_km": 0.4
+            },
+            {
+              "name": "Blues Point Reserve",
+              "lng": 151.2058,
+              "lat": -33.8441,
+              "type": "attraction",
+              "distance_km": 0.7
+            },
+            {
+              "name": "McMahons Point Ferry",
+              "lng": 151.2034,
+              "lat": -33.8445,
+              "type": "attraction",
+              "distance_km": 0.2
+            },
+            {
+              "name": "Circular Quay (Ferry)",
+              "lng": 151.2111,
+              "lat": -33.8612,
+              "type": "attraction",
+              "distance_km": 2.0
+            },
+            {
+              "name": "Harbour Bridge Walk",
+              "lng": 151.211,
+              "lat": -33.8525,
+              "type": "attraction",
+              "distance_km": 1.0
+            },
+            {
+              "name": "Vivid (보충)",
+              "lng": 151.213,
+              "lat": -33.858,
+              "type": "attraction",
+              "distance_km": 0.6
+            },
+            {
+              "name": "Midden / The Glenmore",
+              "lng": 151.2084,
+              "lat": -33.8593,
+              "type": "dining",
+              "distance_km": 0.6
+            },
+            {
+              "name": "ValueSuites Green Square",
+              "lng": 151.202,
+              "lat": -33.907,
+              "type": "stay",
+              "distance_km": 6.9
+            }
           ]
         }
       ]

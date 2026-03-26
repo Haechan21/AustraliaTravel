@@ -10,7 +10,7 @@
 ![Places](https://img.shields.io/badge/관광지-110곳_평가_완료-blue?style=for-the-badge)
 ![Duration](https://img.shields.io/badge/기간-9일_(활동_7일)-green?style=for-the-badge)
 
-[**GitHub Pages에서 보기**](https://haechan21.github.io/australia-travel/)
+[**GitHub Pages에서 보기**](https://haechan21.github.io/AustraliaTravel/)
 
 </div>
 
@@ -92,7 +92,7 @@
 │   │   ├── places/               #     지역별 장소 리서치
 │   │   └── weather/              #     지역별 날씨 조사
 │   ├── route-plans/              #   로드트립 루트 후보 상세 일정 (1~9조)
-│   └── sydney-plans/             #   시드니 Day 7 세부 일정 계획
+│   └── sydney-plans/             #   시드니 Day 6~7 세부 일정 계획 (5개 조)
 └── scripts/
     ├── parse_googlemaps.py       #   Phase 1: GoogleMaps 전처리
     ├── generate_frontend.py      #   평가 결과 → RANKINGS.md + place_data.json
@@ -163,8 +163,24 @@ Python 3.11+ 표준 라이브러리만 사용. 외부 의존성 없음.
 
 ```bash
 bundle exec jekyll serve
-# → http://localhost:4000/australia-travel/
+# → http://localhost:4000/AustraliaTravel/
 ```
+
+---
+
+## 시드니 Day 6~7 코스 순위
+
+시드니 2일 코스 5개 안에 대한 [CRITIC_ROUTE](docs/CRITIC_ROUTE.md) 평가 결과 (3명 페르소나 독립 채점 평균):
+
+| 순위 | 안 | 평균 | 설계(A') | 감성(B') | 실행(C') | 예산(2인) | 논쟁 |
+|:----:|:---|:----:|:-------:|:-------:|:-------:|:---------:|:----:|
+| 🥇 | 1조 클래식 하이라이트 | **77.7** | 75.5 | 80.5 | 77.0 | ₩36.5만 | |
+| 🥈 | 5조 로컬 숨은보석 | **76.8** | 76.5 | 83.5 | 70.5 | ₩47.5만 | |
+| 🥉 | 4조 Vivid 올인 | **74.3** | 74.5 | 82.0 | 66.5 | ₩41~51만 | O |
+| 4 | 3조 호주정체성 탐험 | **72.5** | 71.0 | 78.0 | 68.5 | ₩60.7만 | |
+| 5 | 2조 BridgeClimb 프리미엄 | **70.8** | 70.0 | 80.0 | 62.5 | ₩93.8만 | O |
+
+> 상세 일정 및 평가 근거: [routes.html 시드니 탭](https://haechan.github.io/AustraliaTravel/routes.html) / `research/sydney-plans/`
 
 ---
 
