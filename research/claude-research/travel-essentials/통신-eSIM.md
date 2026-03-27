@@ -1,7 +1,3 @@
----
-layout: default
-title: "호주 통신·eSIM 가이드"
----
 
 # 호주 통신·eSIM 가이드
 
