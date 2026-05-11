@@ -17,6 +17,7 @@ layout: default
 - 렌터카 6일 (Sixt 시드니공항, 5/24~5/29)
 - 숙소 7박 전체 ₩1,284,787 — [`data/lodging/bookings.json`](../data/lodging/bookings.json)
 - 호주 ETA (Subclass 601) 비자 2인 발급 완료 ([index.md](../index.md) 준비 상태)
+- Quad Bike King ATV 사파리 2인 (5/27 10:00, Williamtown) — 예약 완료. 예약번호는 Quad Bike King 이메일에서 확인. AUD $238/2인 (~₩245,140)
 
 ---
 
@@ -25,12 +26,16 @@ layout: default
 | # | 항목 | 마감 | 처리 방법 | 비고 |
 |---|------|------|----------|------|
 | 1 | Discovery Parks 바이런 after-hours 체크인 사전연락 | 5/21 (수) | Trip.com 예약확인서의 숙소 직통 이메일/전화 | 5/24 20:30 도착 → 게이트 코드+캐빈 키 수령 방법 안내 받기 (숙소 방침: 72시간 전 필수). 예약번호는 Trip.com 앱·이메일에서 확인 |
-| 2 | 스톡턴 사막 4WD 샌드보딩 예약 | 5/20~5/23 (출발 3~7일 전) | Sand Dune Safaris (sanddunesafaris.com.au) 또는 4WD Tours R Us (4wdtoursrus.com.au) 또는 Port Stephens 4WD Tours (portstephens4wd.com.au) | 5/27(수) 11:00~13:00 · AUD $27~40/인 · 4WD 버스+무제한 보딩. 강풍·폭우 시 변경/환불 가능. 워크인도 되나 시간 확보 위해 사전 예약 권장 |
+| 2 | Quad Bike King 웨이버(면책동의서) 사전 작성 (2인 각자) | 출국 전 · 5/26까지 권장 | 링크는 Quad Bike King 예약 확정 이메일의 waiver URL 사용 (안전 영상 시청 + 서명, 1인 약 15분) | 웨이버 미작성 시 라이딩 불가 — 2명 각자 본인 명의로. 모바일·PC 모두 가능 |
 | 3 | F9 페리(왓슨스베이→Circular Quay) 토요일 시간표 캡처 | 5/23 전 | transportnsw.info → "F9" 검색 → 5/30(토) 시간표 스크린샷 | 5/30 12:50 탑승 목표. 토요 배차 45~60분 간격 — 놓치면 1시간 대기 |
 | 4 | 5/31 새벽 공항 Uber 사전 예약 | 5/30 (토) 밤 | Uber 앱에서 04:50 픽업 (Green Square → SYD) | AUD $15~25/2인. KE402 07:55 — 최소 2시간 전 도착 |
 | 5 | 국제면허증(IDP) + 여권 유효기간 최종 확인 | 출국 전 | 보관 위치/유효기간 확인 | 호주에서 IDP+여권 동시 제시 필수. 둘 중 하나만 있으면 무면허 |
 
-> ⚠️ **샌드보딩 운영사 주의**: ITINERARY.md 본문은 "Sand Dune Adventures 등"으로 표기했으나, Sand Dune Adventures는 쿼드바이크(400cc, $110~180/인) 전문이고 4WD+샌드보딩 코스와는 다른 업종. 4WD 버스에 타고 사구 이동+무제한 보딩($27~40/인)을 원한다면 위 3개 업체 중 선택.
+> ⚠️ **Quad Bike King 당일 주의**:
+> - **30분 일찍 도착 필수** (5/27 09:30 도착, 10:00 출발) — 트랜스퍼 차량 정시 출발, 지연 시 환불 불가
+> - 위치: **2130 Nelson Bay Road, Williamtown NSW 2318** (Anna Bay 아님 — 약 12km 남쪽)
+> - 준비물: 발 덮힌 신발(closed-toe), 자외선차단제. 헬멧·장비는 제공
+> - 우천 정상 운영 · 36°C+/낙뢰 시 취소
 
 ---
 
@@ -92,11 +97,12 @@ layout: default
 
 ```
 5/11~5/19  여행자보험 가입 · eSIM 구매(앱 설치) · Sandpipers 예약 · 짐 준비
-5/20~5/22  스톡턴 샌드보딩 예약
+5/20~5/26  Quad Bike King 웨이버 2인 작성 (이메일 링크) · 발 덮힌 신발/자외선차단제 확인
 5/21 (수)  ⏰ Discovery Parks 바이런 after-hours 사전연락 마감
 5/23 (토)  F9 페리 시간표 캡처 · 15:00 신용산 셔틀 · 19:10 KE401 출국
 5/24 (일)  Sixt 픽업 시 톨/주유/보험 확인 · 20:30 바이런 도착
 5/26~5/28  거점 도착 전 다음 숙소에 도착시간 공유
+5/27 (수)  ⏰ 07:00 포트맥쿼리 출발 → 09:30 Williamtown 도착 (10:00 ATV)
 5/30 (토)  Uber 04:50 예약 + ValueSuites 체크아웃 절차 확인
 5/31 (일)  04:30 기상 → KE402 07:55
 ```
@@ -105,3 +111,4 @@ layout: default
 1. ⏰ 5/20 전: 여행자보험 가입 (미처리 시)
 2. ⏰ 5/21 (수): Discovery Parks 바이런 after-hours 사전연락 — 가장 중요한 단일 마감
 3. ⏰ 5/22 전: eSIM 구매·앱 설치 (미처리 시)
+4. ⏰ 5/26 전: Quad Bike King 웨이버 2인 각자 작성 (이메일 링크) — 미작성 시 라이딩 불가
