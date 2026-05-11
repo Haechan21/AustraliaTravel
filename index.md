@@ -54,6 +54,7 @@ layout: default
   <li class="todo">식당 — 추천 목록 있음, 예약 미확정</li>
 </ul>
 
+> 🔔 마감 있는 액션 리스트 → <a href="docs/RESERVATIONS.html">예약·사전조치 체크리스트</a>
 > 비자·운전·안전·환전·보험·패킹·통신 → <a href="essentials.html">여행 준비 가이드</a>
 
 ---

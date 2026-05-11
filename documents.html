@@ -12,10 +12,10 @@ title: 문서 목록
     <h2>핵심 문서</h2>
     <p class="cat-desc">여행 일정, 전제 조건, 설계서, 평가 프레임워크 등 프로젝트의 뼈대가 되는 문서</p>
     {% comment %}핵심 문서 URL 수집 (순서 보장용){% endcomment %}
-    {% assign core_paths = "docs/ITINERARY.md,docs/META.md,docs/SPEC.md,docs/TRAVELER_PROFILE.md,docs/CRITIC.md,docs/CRITIC_ROUTE.md,docs/CRITIC_LODGING.md,docs/CRITIC_DINING.md,data/scores/RANKINGS.md" | split: "," %}
-    {% assign core_icons = "📋,✈️,⚙️,👤,🎭,🗺️,🏨,🍽️,🏆" | split: "," %}
-    {% assign core_titles = "확정 일정 (ITINERARY),여행 개요 (META),기술 설계서 (SPEC),여행자 프로필,CRITIC — 관광지 평가,CRITIC — 루트 평가,CRITIC — 숙소 평가,CRITIC — 식당 평가,관광지 랭킹" | split: "," %}
-    {% assign core_descs = "날짜별 세부 일정 · Single Source of Truth,항공 렌터카 제약 조건 등 고정 전제,데이터 스키마 워크플로우 평가 기준,운전 내성 여행 스타일 예산 범위,3명 페르소나 · 7개 기준 · 평가 워크플로우,설계/감성/실행 3관점 루트 프레임워크,3명 페르소나 · L1~L7 기준 · 거점별 상대순위,3명 페르소나 · F1~F6 기준 · 지역별 상대순위,110곳 S~D 등급 정적 랭킹" | split: "," %}
+    {% assign core_paths = "docs/ITINERARY.md,docs/RESERVATIONS.md,docs/META.md,docs/SPEC.md,docs/TRAVELER_PROFILE.md,docs/CRITIC.md,docs/CRITIC_ROUTE.md,docs/CRITIC_LODGING.md,docs/CRITIC_DINING.md,data/scores/RANKINGS.md" | split: "," %}
+    {% assign core_icons = "📋,🔔,✈️,⚙️,👤,🎭,🗺️,🏨,🍽️,🏆" | split: "," %}
+    {% assign core_titles = "확정 일정 (ITINERARY),예약·사전조치 체크리스트,여행 개요 (META),기술 설계서 (SPEC),여행자 프로필,CRITIC — 관광지 평가,CRITIC — 루트 평가,CRITIC — 숙소 평가,CRITIC — 식당 평가,관광지 랭킹" | split: "," %}
+    {% assign core_descs = "날짜별 세부 일정 · Single Source of Truth,출국 전·여행 중 마감 있는 액션 리스트,항공 렌터카 제약 조건 등 고정 전제,데이터 스키마 워크플로우 평가 기준,운전 내성 여행 스타일 예산 범위,3명 페르소나 · 7개 기준 · 평가 워크플로우,설계/감성/실행 3관점 루트 프레임워크,3명 페르소나 · L1~L7 기준 · 거점별 상대순위,3명 페르소나 · F1~F6 기준 · 지역별 상대순위,110곳 S~D 등급 정적 랭킹" | split: "," %}
     <div class="docs-grid">
       {% for core_path in core_paths %}
         {% for page in site.pages %}

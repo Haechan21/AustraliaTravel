@@ -2,3 +2,12 @@ theme: jekyll-theme-cayman
 title: 호주 로드트립 플래너
 description: 2026년 5월 · 시드니 출발 · AI 기반 여행 계획
 baseurl: /AustraliaTravel
+
+# Jekyll 빌드 제외 (공개 사이트 노출 차단)
+# private/ 는 .gitignore에도 있어 push되지 않지만, 로컬 _site에도 들어가지 않도록 추가
+exclude:
+  - CLAUDE.md          # 개발자 가이드 (Claude Code용, 사용자 페이지 아님)
+  - private/           # 개인 서류 (예약 확인서, 여권 등)
+  - .claude/           # Claude Code 설정
+  - Gemfile
+  - Gemfile.lock
