@@ -32,7 +32,7 @@ layout: default
 | 5/24 (일) | 시드니공항 → 바이런베이 직행 | 783km | Discovery Parks | 이동 |
 | 5/25 (월) | 바이런베이 일출 → 콥스하버 | 251km | Park Beach Resort | 여유 |
 | 5/26 (화) | 콥스하버 → 도리고 폭포 → 포트맥쿼리 | 265km | Surf Beach Motel | 관광 |
-| 5/27 (수) | 포트맥쿼리 → 스톡턴사막 → 넬슨베이 | 272km | Hotel Nelson | 여유 |
+| 5/27 (수) | 포트맥쿼리 → Williamtown(ATV) → 넬슨베이 | 260km | Hotel Nelson | 여유 |
 | 5/28 (목) | 넬슨베이 → 뉴캐슬 → 블루마운틴 | 324km | Farm Tiny Home | 빡센 |
 | 5/29 (금) | 블루마운틴 → 그랜드퍼시픽 → 시드니 | 339km | ValueSuites | 피날레 |
 | 5/30 (토) | 시드니 시내 · Vivid Sydney | 도보 | ValueSuites | 여유 |
