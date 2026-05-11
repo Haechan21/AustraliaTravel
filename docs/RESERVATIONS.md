@@ -24,10 +24,10 @@ layout: default
 
 | # | 항목 | 마감 | 처리 방법 | 비고 |
 |---|------|------|----------|------|
-| 1 | Discovery Parks 바이런 after-hours 체크인 사전연락 | **5/21 (수)** | Trip.com 예약확인서의 숙소 직통 이메일/전화 | 5/24 20:30 도착 → 게이트 코드+캐빈 키 수령 방법 안내 받기 (숙소 방침: 72시간 전 필수). 예약번호는 Trip.com 앱·이메일에서 확인 |
-| 2 | 스톡턴 사막 4WD 샌드보딩 예약 | **5/20~5/23** (출발 3~7일 전) | Sand Dune Safaris (sanddunesafaris.com.au) 또는 4WD Tours R Us (4wdtoursrus.com.au) 또는 Port Stephens 4WD Tours (portstephens4wd.com.au) | 5/27(수) 11:00~13:00 · AUD $27~40/인 · 4WD 버스+무제한 보딩. 강풍·폭우 시 변경/환불 가능. 워크인도 되나 시간 확보 위해 사전 예약 권장 |
-| 3 | F9 페리(왓슨스베이→Circular Quay) 토요일 시간표 캡처 | **5/23 전** | transportnsw.info → "F9" 검색 → 5/30(토) 시간표 스크린샷 | 5/30 12:50 탑승 목표. 토요 배차 45~60분 간격 — 놓치면 1시간 대기 |
-| 4 | 5/31 새벽 공항 Uber 사전 예약 | **5/30 (토) 밤** | Uber 앱에서 04:50 픽업 (Green Square → SYD) | AUD $15~25/2인. KE402 07:55 — 최소 2시간 전 도착 |
+| 1 | Discovery Parks 바이런 after-hours 체크인 사전연락 | 5/21 (수) | Trip.com 예약확인서의 숙소 직통 이메일/전화 | 5/24 20:30 도착 → 게이트 코드+캐빈 키 수령 방법 안내 받기 (숙소 방침: 72시간 전 필수). 예약번호는 Trip.com 앱·이메일에서 확인 |
+| 2 | 스톡턴 사막 4WD 샌드보딩 예약 | 5/20~5/23 (출발 3~7일 전) | Sand Dune Safaris (sanddunesafaris.com.au) 또는 4WD Tours R Us (4wdtoursrus.com.au) 또는 Port Stephens 4WD Tours (portstephens4wd.com.au) | 5/27(수) 11:00~13:00 · AUD $27~40/인 · 4WD 버스+무제한 보딩. 강풍·폭우 시 변경/환불 가능. 워크인도 되나 시간 확보 위해 사전 예약 권장 |
+| 3 | F9 페리(왓슨스베이→Circular Quay) 토요일 시간표 캡처 | 5/23 전 | transportnsw.info → "F9" 검색 → 5/30(토) 시간표 스크린샷 | 5/30 12:50 탑승 목표. 토요 배차 45~60분 간격 — 놓치면 1시간 대기 |
+| 4 | 5/31 새벽 공항 Uber 사전 예약 | 5/30 (토) 밤 | Uber 앱에서 04:50 픽업 (Green Square → SYD) | AUD $15~25/2인. KE402 07:55 — 최소 2시간 전 도착 |
 | 5 | 국제면허증(IDP) + 여권 유효기간 최종 확인 | 출국 전 | 보관 위치/유효기간 확인 | 호주에서 IDP+여권 동시 제시 필수. 둘 중 하나만 있으면 무면허 |
 
 > ⚠️ **샌드보딩 운영사 주의**: ITINERARY.md 본문은 "Sand Dune Adventures 등"으로 표기했으나, Sand Dune Adventures는 쿼드바이크(400cc, $110~180/인) 전문이고 4WD+샌드보딩 코스와는 다른 업종. 4WD 버스에 타고 사구 이동+무제한 보딩($27~40/인)을 원한다면 위 3개 업체 중 선택.
@@ -54,8 +54,8 @@ layout: default
 
 | # | 항목 | 권장 마감 | 가이드 |
 |---|------|---------|--------|
-| 13 | 여행자보험 가입 (2인) | **5/20 전** | [보험-의료.md](../research/claude-research/travel-essentials/보험-의료.md) · 9일 2인 기본 ₩2~4만 / 종합 ₩4~8만 / 레저특약 ₩6~10만 |
-| 14 | eSIM 구매·설치 (2인) | **5/22 전** | [통신-eSIM.md](../research/claude-research/travel-essentials/통신-eSIM.md) · Airalo 5GB $8.50/인 권장. 농장 숙소(Wi-Fi 無)·바이런(Wi-Fi 불안정)에서 데이터 필수. 출국 전 앱 설치만, QR은 호주 도착 후 활성화 |
+| 13 | 여행자보험 가입 (2인) | 5/20 전 | [보험-의료.md](../research/claude-research/travel-essentials/보험-의료.md) · 9일 2인 기본 ₩2~4만 / 종합 ₩4~8만 / 레저특약 ₩6~10만 |
+| 14 | eSIM 구매·설치 (2인) | 5/22 전 | [통신-eSIM.md](../research/claude-research/travel-essentials/통신-eSIM.md) · Airalo 5GB $8.50/인 권장. 농장 숙소(Wi-Fi 無)·바이런(Wi-Fi 불안정)에서 데이터 필수. 출국 전 앱 설치만, QR은 호주 도착 후 활성화 |
 | 15 | 환전 또는 트래블월렛/카드 | 출국 전 | [환전-결제.md](../research/claude-research/travel-essentials/환전-결제.md) · 호주는 카드 사회 — 톨·주유·식당 모두 카드. 현금은 마켓·소액 위주 AUD $100~200 정도면 충분 |
 
 ---
@@ -102,6 +102,6 @@ layout: default
 ```
 
 **가장 임박한 액션** (D-12 기준):
-1. ⏰ **5/20 전**: 여행자보험 가입 (미처리 시)
-2. ⏰ **5/21 (수)**: Discovery Parks 바이런 after-hours 사전연락 — 가장 중요한 단일 마감
-3. ⏰ **5/22 전**: eSIM 구매·앱 설치 (미처리 시)
+1. ⏰ 5/20 전: 여행자보험 가입 (미처리 시)
+2. ⏰ 5/21 (수): Discovery Parks 바이런 after-hours 사전연락 — 가장 중요한 단일 마감
+3. ⏰ 5/22 전: eSIM 구매·앱 설치 (미처리 시)
