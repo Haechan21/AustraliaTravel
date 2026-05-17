@@ -218,6 +218,8 @@ layout: default
 - 반납: 16:10 → **~18:30** (마감 대비 2.5시간 버퍼)
 - 금요일 M1 교통: 17:00 키아마 출발은 남→북 방향이라 정체 영향 제한적 (최대 +30분)
 
+> 🔀 **그랜드퍼시픽 운용**: 내려갈 때 해안도로(Lawrence Hargrave Dr·씨클리프) → 키아마 → 올 때 M1 북상 복귀. 시간 부족 시 **② 단축 코스**(발드힐+씨클리프만, Bulli M1 조기 복귀)로 전환. 실행 상세 → [`ITINERARY.md`](./ITINERARY.md) Day 6 ①/② + 🧭 도로 주의사항, [`research/claude-research/그랜드퍼시픽_단축코스.md`](../research/claude-research/그랜드퍼시픽_단축코스.md)
+
 ---
 
 ## Day 7 — 5/30 (토) 시드니 시내 (차량 없음)
