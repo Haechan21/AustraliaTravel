@@ -22,6 +22,19 @@ layout: default
   </div>
 </div>
 
+<!-- 최종 계획 다운로드 -->
+<div class="final-plan-banner" style="margin:1.5rem 0;padding:1.25rem 1.5rem;border:2px solid #159957;border-radius:10px;background:#f0fbf6;text-align:center;">
+  <div style="font-size:1.15rem;font-weight:700;margin-bottom:.35rem;">📊 최종 확정 일정표 (엑셀)</div>
+  <p style="margin:.25rem 0 .9rem;color:#555;font-size:.92rem;">
+    아래 페이지에 정리된 일정은 <strong>드래프트</strong>입니다.<br/>
+    이걸 직접 보면서 수정·확정한 <strong>최종본</strong>은 이 엑셀 파일이에요.
+  </p>
+  <a href="{{ '/docs/호주여행(05.23-05.31).xlsx' | relative_url }}" download
+     style="display:inline-block;padding:.6rem 1.4rem;background:#159957;color:#fff;font-weight:600;border-radius:8px;text-decoration:none;">
+    ⬇ 최종 일정표 다운로드 (5/23–5/31)
+  </a>
+</div>
+
 ---
 
 ## 일정 요약
